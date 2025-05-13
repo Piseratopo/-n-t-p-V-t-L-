@@ -1,0 +1,120 @@
+\documentclass[a4paper, titlepage, openany]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage[a4paper]{geometry}
+\usepackage{amsmath, hyperref, icomma, tikz}
+
+\geometry{bindingoffset=0.5cm, inner=2cm, outer=2cm, top=2cm, bottom=2cm}
+
+\title{\Huge Ôn tập Vật Lí}
+\author{Bùi Nhật Minh}
+\date{\today}
+
+% Tạo bài tập
+\newcounter{exercise}
+\newcommand{\exercise}{
+   \refstepcounter{exercise}
+   \noindent\textbf{Bài \arabic{exercise}:\label{ex\arabic{exercise}}}
+}
+
+% Tạo lời giải
+\newcounter{solution}
+\newcommand{\solution}{
+   \refstepcounter{solution}
+   \noindent\textbf{Lời giải \ref{ex\arabic{solution}}:\label{sol\arabic{solution}}}
+}
+
+\begin{document}
+{
+   \newgeometry{bindingoffset=0cm, inner=0cm, outer=0cm, top=0cm, bottom=0cm}
+   \maketitle
+   \restoregeometry
+}
+\maketitle
+
+\chapter{Giới thiệu}
+\exercise Khoảng cách trung bình từ trái đất đến mặt trời là $1,5 \cdot 10^8$ km. Giả sử quỹ đạo của trái đất quanh mặt trời là tròn và mặt trời được đặt tại gốc của hệ quy chiếu.
+\begin{enumerate}
+   \item Tính tốc độ di chuyển trung bình của trái đất quanh mặt trời dưới dạng dặm trên giờ ($1 \;\text{dặm}=1,6093\;\text{km}$).
+   \item Ước lượng góc $\theta$ giữa véc-tơ vị trí của trái đất bây giờ và vị trí sau đó $4$ tháng.
+   \item Tính khoảng cách giữa hai vị trí đó.
+\end{enumerate}
+\solution
+\begin{enumerate}
+   \item Giả sử trái đất quay quanh mặt trời trong $365,25$ ngày. Quãng đường mà trái đất đi được trong thời gian này là chu vi của quỹ đạo tròn $2 \pi \cdot 1,5 \cdot 10^8$ km. Từ đó, ta có thể tính được tốc độ trung bình của trái đất quanh mặt trời là $\frac{2 \pi \cdot 1,5 \cdot 10^8\ \text{km}}{365,25\ \text{ngày}}$. Thực hiện quy đổi để được:
+      \[
+         \frac{2 \pi \cdot 1,5 \cdot 10^8\ \text{km}}{365,25\ \text{ngày}}
+         \cdot \frac{1\ \text{dặm}}{1,6903\ \text{km}}
+         \cdot \frac{1\ \text{ngày}}{24\ \text{h}}
+         = \boxed{6,4\cdot 10^4\ \frac{\text{dặm}}{\text{h}}}.
+      \]
+   \item Trái đất quay quanh mặt trời trong $12$ tháng, tương đương với một góc quay $360^{\circ}$ so với gốc là mặt trời. Coi như các tháng có độ dài như nhau. Ta có $\theta$ chính là góc quay của trái đất trong $4$ tháng, tương đương với:
+   \[
+      \theta = \frac{360^{\circ}}{12\ \text{tháng}} \cdot 4\ \text{tháng}= \boxed{120^{\circ}}.
+   \]
+   \item 
+\end{enumerate}
+\begin{minipage}{0.5\textwidth}
+   Gọi $A$ là vị trí của trái đất bây giờ, $B$ là vị trí của trái đất sau $4$ tháng. Coi một đơn vị trên tọa độ bằng độ dài bán kính của quỹ đạo tròn, tức là $r=1,5\cdot10^8$ km. Ta có tọa độ điểm $A$ là $(1;0)$. Tọa độ điểm $B$ là $\left(\cos(120^{\circ}); \sin(120^{\circ})\right)=\left(-\frac{1}{2}; \frac{\sqrt{3}}{2}\right)$. Từ đó, ta có khoảng cách giữa hai vị trí đó là: $$d = r\cdot \sqrt{\left(1-\left(-\frac{1}{2}\right)\right)^2 + \left(\frac{\sqrt{3}}{2}\right)^2}=\boxed{2,6\cdot10^8\ \text{km}}.$$ 
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+   \begin{center}
+      \begin{tikzpicture}
+         \draw[thick] (0,0) circle (2cm);
+         \filldraw[black] (0,0) circle (2pt) node[anchor=north] {O};
+         \draw[->, thick, >=latex, line width=0.5mm] (0,0) -- (0:2cm) node[midway, below] {$r$};
+         \draw[->, thick, >=latex, line width=0.5mm] (0,0) -- (120:2cm);
+         \draw[thick, line width=0.5mm] (0:2cm) -- (120:2cm) node[midway, above] {$d$};
+         \filldraw[black] (0:2cm) circle (2pt) node[anchor=west] {A};
+         \filldraw[black] (120:2cm) circle (2pt) node[anchor=south] {B};
+         \node at (60:0.3cm) {$\theta$};
+         \draw[thick] (0:0.5cm) arc[start angle=0, end angle=120, radius=0.5cm];
+      \end{tikzpicture}
+   \end{center}
+\end{minipage}
+
+\exercise Khối lượng riêng (bằng khối lượng của vật chia cho thể tích của vật đó) của nước là $1,00 \frac{\text{g}}{\text{cm}^3}$.
+\begin{enumerate}
+   \item Tính giá trị này theo ki-lô-gam trên mét khối.
+   \item $1,00$ lít nước nặng bao nhiêu ki-lô-gam, bao nhiêu pao (lb)? Biết $1\ \text{lb} = 0,45\ \text{kg}$ (chính xác).
+\end{enumerate}
+\newpage
+\solution
+\begin{enumerate}
+   \item Thực hiện quy đổi, ta có:
+   \begin{align*}
+      1,00 \frac{\text{g}}{\text{cm}^3} &= \left(1,00 \frac{\text{g}}{\text{cm}^3}\right)\cdot\frac{1\ \text{kg}}{1000\ \text{g}}\cdot\left(\frac{100\ \text{cm}}{1\ \text{m}}\right)^3 \\
+      &= \boxed{1,00\cdot 10^3\ \frac{\text{kg}}{\text{m}^3}}.
+   \end{align*}
+   \item Khối lượng của $1,00$ lít nước là 
+   \begin{align*}
+      1,00\ \text{L} \cdot \left(1,00\cdot 10^3\ \frac{\text{kg}}{\text{m}^3}\right)&= 1,00\ \text{L} \cdot \left(1,00\cdot 10^3\ \frac{\text{kg}}{\text{m}^3}\right) \cdot \frac{1\ \text{m}^3}{1000\ \text{L}} \\
+      &= \boxed{1,00\cdot 10^0\ \text{kg}}.
+   \end{align*}
+   Theo đơn vị pao (lb), ta có:
+   \[
+      1,00\cdot 10^0\ \text{kg} = 1,00\cdot 10^0\ \text{kg} \cdot \frac{1\ \text{lb}}{0,45\ \text{kg}} = \boxed{2,22\cdot 10^0\ \text{lb}}.
+   \]
+\end{enumerate}
+
+\exercise Trong hệ thời gian cổ Trung Hoa, từ triều đại Thanh trở về trước (trừ một số năm), một ngày được chia thành $100$ khắc. Sau triều đại này (trừ một số năm), một ngày được chia thành $96$ khắc. Coi một ngày có $24$ giờ và mọi số liệu là chính xác tuyệt đối.
+\begin{enumerate}
+   \item Tính số giây (hệ đo lường hiện đại) trong một khắc trong cả hai thời kì.
+   \item Tính tỉ lệ về độ dài của hai khắc trong hai thời kì.
+\end{enumerate}
+
+\solution
+\begin{enumerate}
+   \item Số giây trong một ngày là $$24\ \text{h} \cdot \frac{60\ \text{phút}}{1\ \text{h}} \cdot \frac{60\ \text{giây}}{1\ \text{phút}} = 86400\ \text{giây}.$$
+\end{enumerate}
+Từ triều đại Thanh trở về trước, số giây trong một khắc là $$\frac{86400\ \text{giây}}{100\ \text{khắc}_{\text{trước}}} = \boxed{864 \frac{\text{giây}}{\text{khắc}_{\text{trước}}}}.$$
+Sau triều đại Thanh, số giây trong một khắc là $$\frac{86400\ \text{giây}}{96\ \text{khắc}_{\text{sau}}} = \boxed{900 \frac{\text{giây}}{\text{khắc}_{\text{sau}}}}.$$
+\begin{enumerate}
+   \item[2] Tỉ lệ độ dài thời gian một khắc trước và sau là $$\frac{1\ \text{khắc}_{\text{trước}}}{1\ \text{khắc}_{\text{sau}}} = \frac{1\ \text{khắc}_{\text{trước}}}{1\ \text{khắc}_{\text{sau}}}\cdot \frac{864\ \text{giây}}{1\ \text{khắc}_{\text{trước}}}\cdot\frac{1\ \text{khắc}_{\text{sau}}}{900\ \text{giây}}=\boxed{0,96}.$$
+\end{enumerate}
+
+\chapter{Chuyển động trên một đường thẳng}
+\exercise 
+
+\end{document}
