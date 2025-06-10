@@ -3,7 +3,8 @@
 \usepackage[T5]{fontenc}
 \usepackage[vietnamese]{babel}
 \usepackage[a4paper]{geometry}
-\usepackage{amsmath, hyperref, icomma, tikz}
+\usepackage{amsmath, amssymb, hyperref, icomma, tikz, xcolor}
+\usetikzlibrary{shadings}
 
 \geometry{bindingoffset=0.5cm, inner=2cm, outer=2cm, top=2cm, bottom=2cm}
 
@@ -33,7 +34,7 @@
 }
 \maketitle
 
-\chapter{Giới thiệu}
+\chapter{Cơ bản của xử lí số liệu trong vật lí}
 \exercise Khoảng cách trung bình từ trái đất đến mặt trời là $1,5 \cdot 10^8$ km. Giả sử quỹ đạo của trái đất quanh mặt trời là tròn và mặt trời được đặt tại gốc của hệ quy chiếu.
 \begin{enumerate}
    \item Tính tốc độ di chuyển trung bình của trái đất quanh mặt trời dưới dạng dặm trên giờ ($1 \;\text{dặm}=1,6093\;\text{km}$).
@@ -113,6 +114,51 @@ Sau triều đại Thanh, số giây trong một khắc là $$\frac{86400\ \text
 \begin{enumerate}
    \item[2] Tỉ lệ độ dài thời gian một khắc trước và sau là $$\frac{1\ \text{khắc}_{\text{trước}}}{1\ \text{khắc}_{\text{sau}}} = \frac{1\ \text{khắc}_{\text{trước}}}{1\ \text{khắc}_{\text{sau}}}\cdot \frac{864\ \text{giây}}{1\ \text{khắc}_{\text{trước}}}\cdot\frac{1\ \text{khắc}_{\text{sau}}}{900\ \text{giây}}=\boxed{0,96}.$$
 \end{enumerate}
+
+\exercise Một vòng đĩa tròn có đường kính $4,50$ cm rỗng ở giữa một lỗ đường kính $1,25$ cm. Đĩa dày $1,50$ mm. Biết rằng đĩa được làm từ chất liệu có khối lượng riêng là $8600 \frac{\text{kg}}{\text{m}^3}$. Tính khôi lượng vòng đĩa theo gram.
+
+\begin{center}
+   \begin{tikzpicture}
+      % Draw the shape
+      \draw[bottom color=gray!20] (-2.25, 0) arc[start angle=180, end angle=360, x radius = 2.25cm, y radius = 2.4cm];
+      \draw[bottom color=gray!70, top color=gray!20] (0, 0) circle (2.25cm);
+      \draw[fill=white] (0, 0) circle (0.625cm);
+      \draw[bottom color = gray!20] (-0.625, 0) arc[start angle=180, end angle=0, radius = 0.625cm];
+      \draw[fill=white] (-0.625, 0) arc[start angle=180, end angle=0, x radius = 0.625cm, y radius = 0.5cm];
+      % Draw the dimension
+      \draw[<->] (-2.25,-2.5) -- (2.25,-2.5);
+      \node at (0, -2.7) {$4.50$ cm};
+      \draw[<->] (-0.625,0) -- (0.625,0);
+      \node at (0, -0.2) {$1.25$ cm};
+      \draw[<->] (0,0.5) -- (0,0.625);
+      \node[anchor=west] at (-0.05, 0.7) {$1.50$ mm};
+   \end{tikzpicture}
+\end{center}
+
+\solution
+
+Đặt $D=4,50\ \text{cm}=4,50\times 10^{-2}\ \text{m}$, $d=1,25\ \text{cm}=1,25\times 10^{-2}\ \text{m}$, $h=1,50\ \text{mm}=1,50\times 10^{-3}\ \text{m}$ và $\mathcal{D}=8600 \frac{\text{kg}}{\text{m}^3}=8,6\times 10^3 \frac{\text{kg}}{\text{m}^3}\cdot \frac{10^3 \text{g}}{\text{kg}}=8,6\times 10^6 \frac{\text{g}}{\text{m}^3}$.
+
+Nhận thấy rằng đĩa có dạng trụ, diện tích mặt đáy là $$S=\pi\cdot \left(\frac{D}{2}\right)^2-\pi\cdot \left(\frac{d}{2}\right)^2=\frac{\pi \left(D^2-d^2\right)}{4}.$$
+
+Thể tích của đĩa là $V=S\cdot h=\frac{\pi \cdot h\cdot \left(D^2-d^2\right)}{4}.$ Nhân với khối lượng riêng, ta có khối lượng của đĩa là $$m=\mathcal{D}\cdot V=\frac{\pi \cdot h\cdot \mathcal{D}\cdot \left(D^2-d^2\right)}{4}.$$ Thay số trực tiếp với sự để ý đến số chữ số có nghĩa, ta có kết quả $m=\boxed{1,89\times 10^1\ \text{kg}}$.
+
+\exercise Khối lượng của một chất lỏng được mô hình hóa bởi phương trình $m=A\cdot t^{0,8}-B\cdot t$. Nếu như $t$ được tính bằng giây và $m$ được tính bằng ki-lô-gram, thì đơn vị của $A$ và $B$ là gì?
+
+\solution
+
+Để có thể cộng trừ các phần tử, chúng cần phải có cùng đơn vị. Do vậy, đơn vị của $A\cdot t^{0,8}$ và $B\cdot t$ là kg. Từ quy tắc nhân chia các đơn vị, ta có:
+\begin{equation}
+   \begin{cases}
+     A\cdot \text{s}^{0,8} &=\text{kg} \\
+     B\cdot\text{s} &=\text{kg}
+   \end{cases}
+   \iff
+   \begin{cases}
+      A &=\frac{\text{kg}}{\text{s}^{0,8}} \\
+      B&=\frac{\text{kg}}{\text{s}} 
+    \end{cases}
+\end{equation}
 
 \chapter{Chuyển động trên một đường thẳng}
 \exercise 
