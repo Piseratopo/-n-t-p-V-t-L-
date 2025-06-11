@@ -27,11 +27,7 @@
 }
 
 \begin{document}
-{
-   \newgeometry{bindingoffset=0cm, inner=0cm, outer=0cm, top=0cm, bottom=0cm}
-   \maketitle
-   \restoregeometry
-}
+
 \maketitle
 
 \chapter{Cơ bản của xử lí số liệu trong vật lí}
@@ -54,33 +50,33 @@
    \[
       \theta = \frac{360^{\circ}}{12\ \text{tháng}} \cdot 4\ \text{tháng}= \boxed{120^{\circ}}.
    \]
-   \item 
+   \item
 \end{enumerate}
-\begin{minipage}{0.5\textwidth}
-   Gọi $A$ là vị trí của trái đất bây giờ, $B$ là vị trí của trái đất sau $4$ tháng. Coi một đơn vị trên tọa độ bằng độ dài bán kính của quỹ đạo tròn, tức là $r=1,5\cdot10^8$ km. Ta có tọa độ điểm $A$ là $(1;0)$. Tọa độ điểm $B$ là $\left(\cos(120^{\circ}); \sin(120^{\circ})\right)=\left(-\frac{1}{2}; \frac{\sqrt{3}}{2}\right)$. Từ đó, ta có khoảng cách giữa hai vị trí đó là: $$d = r\cdot \sqrt{\left(1-\left(-\frac{1}{2}\right)\right)^2 + \left(\frac{\sqrt{3}}{2}\right)^2}=\boxed{2,6\cdot10^8\ \text{km}}.$$ 
-\end{minipage}
-\begin{minipage}{0.4\textwidth}
-   \begin{center}
-      \begin{tikzpicture}
-         \draw[thick] (0,0) circle (2cm);
-         \filldraw[black] (0,0) circle (2pt) node[anchor=north] {O};
-         \draw[->, thick, >=latex, line width=0.5mm] (0,0) -- (0:2cm) node[midway, below] {$r$};
-         \draw[->, thick, >=latex, line width=0.5mm] (0,0) -- (120:2cm);
-         \draw[thick, line width=0.5mm] (0:2cm) -- (120:2cm) node[midway, above] {$d$};
-         \filldraw[black] (0:2cm) circle (2pt) node[anchor=west] {A};
-         \filldraw[black] (120:2cm) circle (2pt) node[anchor=south] {B};
-         \node at (60:0.3cm) {$\theta$};
-         \draw[thick] (0:0.5cm) arc[start angle=0, end angle=120, radius=0.5cm];
-      \end{tikzpicture}
-   \end{center}
-\end{minipage}
+
+\begin{tabular}{p{0.5\textwidth} p{0.4\textwidth}}
+   Gọi $A$ là vị trí của trái đất bây giờ, $B$ là vị trí của trái đất sau $4$ tháng. Coi một đơn vị trên tọa độ bằng độ dài bán kính của quỹ đạo tròn, tức là $r=1,5\cdot10^8$ km. Ta có tọa độ điểm $A$ là $(1;0)$. Tọa độ điểm $B$ là $\left(\cos(120^{\circ}); \sin(120^{\circ})\right)=\left(-\frac{1}{2}; \frac{\sqrt{3}}{2}\right)$. Từ đó, ta có khoảng cách giữa hai vị trí đó là: $$d = r\cdot \sqrt{\left(1-\left(-\frac{1}{2}\right)\right)^2 + \left(\frac{\sqrt{3}}{2}\right)^2}=\boxed{2,6\cdot10^8\ \text{km}}.$$
+&
+\begin{center}
+   \begin{tikzpicture}
+      \draw[thick] (0,0) circle (2cm);
+      \filldraw[black] (0,0) circle (2pt) node[anchor=north] {O};
+      \draw[->, thick, >=latex, line width=0.5mm] (0,0) -- (0:2cm) node[midway, below] {$r$};
+      \draw[->, thick, >=latex, line width=0.5mm] (0,0) -- (120:2cm);
+      \draw[thick, line width=0.5mm] (0:2cm) -- (120:2cm) node[midway, above] {$d$};
+      \filldraw[black] (0:2cm) circle (2pt) node[anchor=west] {A};
+      \filldraw[black] (120:2cm) circle (2pt) node[anchor=south] {B};
+      \node at (60:0.3cm) {$\theta$};
+      \draw[thick] (0:0.5cm) arc[start angle=0, end angle=120, radius=0.5cm];
+   \end{tikzpicture}
+\end{center}
+\end{tabular}
 
 \exercise Khối lượng riêng (bằng khối lượng của vật chia cho thể tích của vật đó) của nước là $1,00 \frac{\text{g}}{\text{cm}^3}$.
 \begin{enumerate}
    \item Tính giá trị này theo ki-lô-gam trên mét khối.
    \item $1,00$ lít nước nặng bao nhiêu ki-lô-gam, bao nhiêu pao (lb)? Biết $1\ \text{lb} = 0,45\ \text{kg}$ (chính xác).
 \end{enumerate}
-\newpage
+
 \solution
 \begin{enumerate}
    \item Thực hiện quy đổi, ta có:
@@ -88,7 +84,7 @@
       1,00 \frac{\text{g}}{\text{cm}^3} &= \left(1,00 \frac{\text{g}}{\text{cm}^3}\right)\cdot\frac{1\ \text{kg}}{1000\ \text{g}}\cdot\left(\frac{100\ \text{cm}}{1\ \text{m}}\right)^3 \\
       &= \boxed{1,00\cdot 10^3\ \frac{\text{kg}}{\text{m}^3}}.
    \end{align*}
-   \item Khối lượng của $1,00$ lít nước là 
+   \item Khối lượng của $1,00$ lít nước là
    \begin{align*}
       1,00\ \text{L} \cdot \left(1,00\cdot 10^3\ \frac{\text{kg}}{\text{m}^3}\right)&= 1,00\ \text{L} \cdot \left(1,00\cdot 10^3\ \frac{\text{kg}}{\text{m}^3}\right) \cdot \frac{1\ \text{m}^3}{1000\ \text{L}} \\
       &= \boxed{1,00\cdot 10^0\ \text{kg}}.
@@ -148,7 +144,7 @@ Thể tích của đĩa là $V=S\cdot h=\frac{\pi \cdot h\cdot \left(D^2-d^2\rig
 \solution
 
 Để có thể cộng trừ các phần tử, chúng cần phải có cùng đơn vị. Do vậy, đơn vị của $A\cdot t^{0,8}$ và $B\cdot t$ là kg. Từ quy tắc nhân chia các đơn vị, ta có:
-\begin{equation}
+\begin{equation*}
    \begin{cases}
      A\cdot \text{s}^{0,8} &=\text{kg} \\
      B\cdot\text{s} &=\text{kg}
@@ -156,13 +152,32 @@ Thể tích của đĩa là $V=S\cdot h=\frac{\pi \cdot h\cdot \left(D^2-d^2\rig
    \iff
    \begin{cases}
       A &=\frac{\text{kg}}{\text{s}^{0,8}} \\
-      B&=\frac{\text{kg}}{\text{s}} 
-    \end{cases}
-\end{equation}
+      B&=\frac{\text{kg}}{\text{s}}
+   \end{cases}.
+\end{equation*}
 
-Vậy đơn vị của $A$ là $\frac{\text{kg}}{\text{s}^{0,8}}$ và đơn vị của $B$ là $\frac{\text{kg}}{\text{s}}$.
+Vậy đơn vị của $A$ là $\boxed{\frac{\text{kg}}{\text{s}^{0,8}}}$ và đơn vị của $B$ là $\boxed{\frac{\text{kg}}{\text{s}}}$.
+
+\exercise Hai bạn Pi-chê-ra-tô-pô (Pi) và Ê-mô-ri-ô (Ê-mô) thi xem ai chạy nhanh hơn. Cả hai bạn bấm giờ chạy $1$ km trên đường chạy riêng biệt với nhau. Bạn Pi đo được $5$ phút $45$ giây. Bạn Ê-mô đo được $5$ phút $15$ giây. Biết rằng khi đo quãng đường đi chạy thì có sai số nhưng đo thời gian thì chính xác. Hãy cho biết sai số tối đa tính bằng mét của một đường chạy cho với chuẩn $1$ km để có thể khẳng định rằng bạn Pi chạy với tốc độ trung bình chậm hơn. (Gợi nhớ: tốc độ chạy trung bình bằng tổng độ dài quãng đường chạy chia thời gian chạy.)
+
+\solution
+
+Gọi độ dài đường chạy của hai bạn Pi và Ê-mô lần lượt là $s_p = 1000 + p$ mét và $s_e = 1000 + e$ mét với $p$ và $e$ là hai số thực lơn hơn $-1000$ (bởi vì độ dài đường luôn dương).
+
+Thời gian chạy của Pi và Ê-mô lần lượt là $t_p = 5\ \text{phút}\ 45\ \text{giây} =
+345\ \text{giây}$ vả $t_e = 5\ \text{phút}\ 15\ \text{giây} =
+315\ \text{giây}$. Qua đó, ta tính được tốc độ trung bình của hai bạn là
+
+\begin{equation*}
+   \begin{cases}
+      v_p = \displaystyle\frac{s_p}{t_p} = \frac{1000 + p}{345}\frac{\text{mét}}{\text{giây}} \\
+      v_e = \displaystyle\frac{s_e}{t_e} = \frac{1000 + e}{315}\frac{\text{mét}}{\text{giây}}
+   \end{cases}.
+\end{equation*}
+
+Để có thể khẳng định rằng bạn Pi chạy với tốc độ trung bình chậm hơn, ta cần có $v_p < v_e$. Từ đó, ta có bất đẳng thức $$\frac{1000 + p}{345} < \frac{1000 + e}{315}$$
 
 \chapter{Chuyển động trên một đường thẳng}
-\exercise 
+\exercise
 
 \end{document}
