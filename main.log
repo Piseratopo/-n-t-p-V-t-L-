@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.16)  11 JUN 2025 21:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.16)  23 JUN 2025 23:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -638,7 +638,9 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \tikz@expandcount=\count320
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshadings.code.tex
+))) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshadings.code.tex
 File: tikzlibraryshadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryshadings.code.tex
 File: pgflibraryshadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
@@ -758,14 +760,18 @@ Ch\uhorn \ohorn ng 1.
 [3]
 
 Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
-(babel)             Reported  on input line 180.
+(babel)             Reported  on input line 165.
 [4]
 Ch\uhorn \ohorn ng 2.
 
 
 [5
 
-] (main.aux)
+]
+
+[6]
+
+[7] (main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -774,17 +780,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: FF2C1448F511459745AB8C8EB19ABEB8;527.
  ) 
 Here is how much of TeX's memory you used:
- 22653 strings out of 473523
- 419276 string characters out of 5714630
- 806288 words of memory out of 5000000
- 45468 multiletter control sequences out of 15000+600000
+ 22784 strings out of 473523
+ 421990 string characters out of 5714630
+ 811450 words of memory out of 5000000
+ 45582 multiletter control sequences out of 15000+600000
  576318 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,14n,107p,864b,775s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,13n,107p,754b,729s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx10.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr10.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr17.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr7.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnsl10.pfb>
-Output written on main.pdf (5 pages, 210204 bytes).
+Output written on main.pdf (7 pages, 221968 bytes).
 PDF statistics:
- 161 PDF objects out of 1000 (max. 8388607)
- 34 named destinations out of 1000 (max. 500000)
+ 193 PDF objects out of 1000 (max. 8388607)
+ 48 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

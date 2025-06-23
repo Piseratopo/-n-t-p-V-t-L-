@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1749653869.74262 "d:/OneDrive - Hanoi University of Science and Technology/Documents/Physics/-n-t-p-V-t-L-/main.tex" "main.pdf" "main" 1749653870.61677 0
+["pdflatex"] 1750697174.10265 "d:/OneDrive - Hanoi University of Science and Technology/Documents/Physics/-n-t-p-V-t-L-/main.tex" "main.pdf" "main" 1750697175.08292 0
   "C:/Users/buinh/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1749653042 88371 b965f57369ed322039596060d18f4416 ""
   "C:/Users/buinh/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1744802655 12036089 4a9b9ab29a083bb1488c5ea0bc7b81cd ""
   "C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -80,6 +80,7 @@
   "C:/Users/buinh/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex" 1673775190 35249 abd4adf948f960299a4b3d27c5dddf46 ""
   "C:/Users/buinh/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex" 1673775190 22012 81b34a0aa8fa1a6158cc6220b00e4f10 ""
   "C:/Users/buinh/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex" 1673775190 8893 e851de2175338fdf7c17f3e091d94618 ""
+  "C:/Users/buinh/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex" 1673775190 15929 463535aa2c4268fead6674a75c0e8266 ""
   "C:/Users/buinh/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshadings.code.tex" 1673775190 708 3f4ac0241dc6483fff94fef35e321383 ""
   "C:/Users/buinh/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex" 1673775190 11518 738408f795261b70ce8dd47459171309 ""
   "C:/Users/buinh/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex" 1673775190 186782 af500404a9edec4d362912fe762ded92 ""
@@ -176,10 +177,10 @@
   "C:/Users/buinh/AppData/Local/Programs/MiKTeX/tex/latex/vntex/t5enc.dfu" 1368738347 13949 387dd4fa58aea5f873839c93430fffed ""
   "C:/Users/buinh/AppData/Local/Programs/MiKTeX/tex/latex/was/icomma.sty" 1665850770 1018 df058db1896806f044e2233bb506d425 ""
   "C:/Users/buinh/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "d:/OneDrive - Hanoi University of Science and Technology/Documents/Physics/-n-t-p-V-t-L-/main.tex" 1749653869 11806 9270748fa68d311e044b11cd5f7a3c99 ""
-  "main.aux" 1749653870 1930 a610b0156294d500e6511cea613897c1 "pdflatex"
-  "main.out" 1749653870 527 ff2c1448f511459745ab8c8eb19abeb8 "pdflatex"
-  "main.tex" 1749653869 11806 9270748fa68d311e044b11cd5f7a3c99 ""
+  "d:/OneDrive - Hanoi University of Science and Technology/Documents/Physics/-n-t-p-V-t-L-/main.tex" 1750697173 15807 f9af9e47cac906d80836fe900d349204 ""
+  "main.aux" 1750697174 3088 455033f27227319a1be472965ec61973 "pdflatex"
+  "main.out" 1750697174 527 ff2c1448f511459745ab8c8eb19abeb8 "pdflatex"
+  "main.tex" 1750697173 15807 f9af9e47cac906d80836fe900d349204 ""
   (generated)
   "main.aux"
   "main.log"

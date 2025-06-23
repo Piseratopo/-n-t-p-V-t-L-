@@ -4,7 +4,7 @@
 \usepackage[vietnamese]{babel}
 \usepackage[a4paper]{geometry}
 \usepackage{amsmath, amssymb, hyperref, icomma, tikz, xcolor}
-\usetikzlibrary{shadings}
+\usetikzlibrary{calc, shadings}
 
 \geometry{bindingoffset=0.5cm, inner=2cm, outer=2cm, top=2cm, bottom=2cm}
 
@@ -53,10 +53,8 @@
    \item
 \end{enumerate}
 
-\begin{tabular}{p{0.5\textwidth} p{0.4\textwidth}}
-   Gọi $A$ là vị trí của trái đất bây giờ, $B$ là vị trí của trái đất sau $4$ tháng. Coi một đơn vị trên tọa độ bằng độ dài bán kính của quỹ đạo tròn, tức là $r=1,5\cdot10^8$ km. Ta có tọa độ điểm $A$ là $(1;0)$. Tọa độ điểm $B$ là $\left(\cos(120^{\circ}); \sin(120^{\circ})\right)=\left(-\frac{1}{2}; \frac{\sqrt{3}}{2}\right)$. Từ đó, ta có khoảng cách giữa hai vị trí đó là: $$d = r\cdot \sqrt{\left(1-\left(-\frac{1}{2}\right)\right)^2 + \left(\frac{\sqrt{3}}{2}\right)^2}=\boxed{2,6\cdot10^8\ \text{km}}.$$
-&
-\begin{center}
+\begin{figure}[h!]
+   \centering
    \begin{tikzpicture}
       \draw[thick] (0,0) circle (2cm);
       \filldraw[black] (0,0) circle (2pt) node[anchor=north] {O};
@@ -68,8 +66,11 @@
       \node at (60:0.3cm) {$\theta$};
       \draw[thick] (0:0.5cm) arc[start angle=0, end angle=120, radius=0.5cm];
    \end{tikzpicture}
-\end{center}
-\end{tabular}
+   \caption{Quỹ đạo trái đất}
+   \label{fig:earth}
+\end{figure}
+
+Gọi $A$ là vị trí của trái đất bây giờ, $B$ là vị trí của trái đất sau $4$ tháng theo như hình \ref{fig:earth}. Coi một đơn vị trên tọa độ bằng độ dài bán kính của quỹ đạo tròn, tức là $r=1,5\cdot10^8$ km. Ta có tọa độ điểm $A$ là $(1;0)$. Tọa độ điểm $B$ là $\left(\cos(120^{\circ}); \sin(120^{\circ})\right)=\left(-\frac{1}{2}; \frac{\sqrt{3}}{2}\right)$. Từ đó, ta có khoảng cách giữa hai vị trí đó là: $$d = r\cdot \sqrt{\left(1-\left(-\frac{1}{2}\right)\right)^2 + \left(\frac{\sqrt{3}}{2}\right)^2}=\boxed{2,6\cdot10^8\ \text{km}}.$$
 
 \exercise Khối lượng riêng (bằng khối lượng của vật chia cho thể tích của vật đó) của nước là $1,00 \frac{\text{g}}{\text{cm}^3}$.
 \begin{enumerate}
@@ -111,9 +112,10 @@ Sau triều đại Thanh, số giây trong một khắc là $$\frac{86400\ \text
    \item[2] Tỉ lệ độ dài thời gian một khắc trước và sau là $$\frac{1\ \text{khắc}_{\text{trước}}}{1\ \text{khắc}_{\text{sau}}} = \frac{1\ \text{khắc}_{\text{trước}}}{1\ \text{khắc}_{\text{sau}}}\cdot \frac{864\ \text{giây}}{1\ \text{khắc}_{\text{trước}}}\cdot\frac{1\ \text{khắc}_{\text{sau}}}{900\ \text{giây}}=\boxed{0,96}.$$
 \end{enumerate}
 
-\exercise Một vòng đĩa tròn có đường kính $4,50$ cm rỗng ở giữa một lỗ đường kính $1,25$ cm. Đĩa dày $1,50$ mm. Biết rằng đĩa được làm từ chất liệu có khối lượng riêng là $8600 \frac{\text{kg}}{\text{m}^3}$. Tính khôi lượng vòng đĩa theo gram.
+\exercise Một vòng đĩa tròn như trong hình \ref{fig:vong_dia} có đường kính $4,50$ cm rỗng ở giữa một lỗ đường kính $1,25$ cm. Đĩa dày $1,50$ mm. Biết rằng đĩa được làm từ chất liệu có khối lượng riêng là $8600 \frac{\text{kg}}{\text{m}^3}$. Tính khôi lượng vòng đĩa theo gram.
 
-\begin{center}
+\begin{figure}
+   \centering
    \begin{tikzpicture}
       % Draw the shape
       \draw[bottom color=gray!20] (-2.25, 0) arc[start angle=180, end angle=360, x radius = 2.25cm, y radius = 2.4cm];
@@ -129,7 +131,9 @@ Sau triều đại Thanh, số giây trong một khắc là $$\frac{86400\ \text
       \draw[<->] (0,0.5) -- (0,0.625);
       \node[anchor=west] at (-0.05, 0.7) {$1.50$ mm};
    \end{tikzpicture}
-\end{center}
+   \caption{Vòng đĩa tròn}
+   \label{fig:vong_dia}
+\end{figure}
 
 \solution
 
@@ -158,26 +162,99 @@ Thể tích của đĩa là $V=S\cdot h=\frac{\pi \cdot h\cdot \left(D^2-d^2\rig
 
 Vậy đơn vị của $A$ là $\boxed{\frac{\text{kg}}{\text{s}^{0,8}}}$ và đơn vị của $B$ là $\boxed{\frac{\text{kg}}{\text{s}}}$.
 
-\exercise Hai bạn Pi-chê-ra-tô-pô (Pi) và Ê-mô-ri-ô (Ê-mô) thi xem ai chạy nhanh hơn. Cả hai bạn bấm giờ chạy $1$ km trên đường chạy riêng biệt với nhau. Bạn Pi đo được $5$ phút $45$ giây. Bạn Ê-mô đo được $5$ phút $15$ giây. Biết rằng khi đo quãng đường đi chạy thì có sai số nhưng đo thời gian thì chính xác. Hãy cho biết sai số tối đa tính bằng mét của một đường chạy cho với chuẩn $1$ km để có thể khẳng định rằng bạn Pi chạy với tốc độ trung bình chậm hơn. (Gợi nhớ: tốc độ chạy trung bình bằng tổng độ dài quãng đường chạy chia thời gian chạy.)
+\chapter{Chuyển động trên một đường thẳng}
+\exercise Một ô tô đi $40$ km trên một đường thẳng với tốc độ không đổi $40\ \frac{\text{km}}{\text{h}}$. Sau đó, nó đi thêm theo chiều đó $60$ km với tốc độ không đổi $50 \frac{\text{km}}{\text{h}}$. Các giá trị đo được tính đến hai chữ số có nghĩa.
+\begin{enumerate}
+   \item Tính vận tốc trung bình trên cả quãng đường.
+   \item Tính tốc độ trung bình trên cả quãng đường.
+   \item Nếu xe quay đầu trước khi đi $50$ km lúc sau, giữ nguyên các số liệu khác, thì vận tốc trung bình và tốc độ trung bình có thay đổi không. Tại sao?
+   \item Vẽ đồ thị vị trí $x$ theo thời gian $t$ và từ đó chỉ ra cách tính vận tốc trung bình.
+\end{enumerate}
+\solution
+
+Coi chiều chuyển động ban đầu là chiều dương.
+
+\begin{enumerate}
+   \item Thời gian đi $40$ km đầu là $$40\ \text{km}\div 40\ \frac{\text{km}}{\text{h}}=1,0\ \text{h}.$$
+\end{enumerate}
+
+Thời gian đi $50$ km sau là $$60\ \text{km}\div 50\ \frac{\text{km}}{\text{h}}=1,2\ \text{h}.$$
+
+Do hai quãng đường là cùng chiều nên ta có độ dịch chuyển của xe tổng cộng là $$\Delta x=40\ \text{km} + 60\ \text{km} = 100\ \text{km}$$ và tổng thời gian đi là $$\Delta t =1,0\ \text{h}+1,2\ \text{h}=2,2\ \text{h}.$$
+
+Từ đó, ta có vận tốc trung bình là $$\bar{v} = \frac{\Delta x}{\Delta t} =\boxed{4,5\times10^1\ \frac{\text{km}}{\text{h}}}.$$
+
+\begin{enumerate}
+   \item[2.] Dễ thấy tổng quãng đường đi là $d=100\ \text{km}$. Tốc độ trung bình là $\bar{s} = \frac{d}{\Delta t}=\boxed{4,5\times10^1\ \frac{\text{km}}{\text{h}}}.$
+   \item[3.] Thời gian không thay đổi. Có độ dịch chuyển thay đổi còn $\Delta x = 40\ \text{km} - 60\ \text{km} = -20\ \text{km}$ nhưng tổng quãng đường thì không. Do đó, $\boxed{\text{tốc độ trung bình giữ nguyên}}$ nhưng $\boxed{\text{vận tốc trung bình thay đổi}}$.
+   \item[4.] Ta có đồ thị ở hình \ref{fig:do_thi_xe} bằng việc vẽ mối quan hệ $x(t)$ xong nối điểm đầu và điểm cuối. Vận tốc trung bình là độ dốc của đường thẳng nối hai điểm này.
+\end{enumerate}
+
+\begin{figure}
+   \centering
+   \begin{tikzpicture}[scale=1.2]
+      \draw[->] (0,0) -- (7,0) node[right] {$t$ (h)};
+      \draw[->] (0,0) -- (0,5.5) node[above] {$x$ (km)};
+      \draw (0,0) -- (3,2);
+      \draw (3,2) -- (6.6,5);
+      \filldraw (0,0) circle (1.5pt);
+      \filldraw (3,2) circle (1.5pt);
+      \filldraw (6.6,5) circle (1.5pt);
+      \draw (0,0) -- (-0.08,0) node[left] {$0$};
+      \draw (0,2) -- (-0.08,2) node[left] {$40$};
+      \draw (0,5) -- (-0.08,5) node[left] {$100$};
+      \draw (0,0) -- (0,-0.08) node[below] {$0$};
+      \draw (3,0) -- (3,-0.08) node[below] {$1{,}0$};
+      \draw (6.6,0) -- (6.6,-0.08) node[below] {$2{,}2$};
+
+      \draw[dashed] (6.6,5) -- (6.6,0);
+      \node[left] at (6.6,2.5) {$\Delta x = 100\ \text{km}$};
+      \draw[dashed] (0,0) -- (6.6,0);
+      \node[above] at (3.3,0) {$\Delta t = 2,2\ \text{h}$};
+      \draw[ultra thick] (0,0) -- (6.6,5);
+   \end{tikzpicture}
+   \caption{Đồ thị vị trí xe-thời gian chạy}
+   \label{fig:do_thi_xe}
+\end{figure}
+
+\exercise Một máy bay phản lực đang bay ngang ở độ cao $h=42$ mét. Đột nhiên nó bay vào vùng đất dốc lên góc $\theta=4,2^\circ$ (xem hình \ref{fig:may_bay_doc}). Với tốc độ bay là $v=1300\ \frac{\text{km}}{\text{h}}$, thời gian tính từ lúc bay vào vùng đất dốc mà người phi công có để điều chỉnh máy bay là bao nhiêu? Tất cả các số liệu được đo đến hai chữ số có nghĩa.
+
+\begin{figure}
+   \centering
+   \begin{tikzpicture}[scale=1.2]
+      \draw (0,{7*sin(4.2)}) -- (7, 0);
+      \draw (7, 0) -- (11, 0);
+      \draw[dashed] (0, 0) -- (7, 0);
+      \draw (5,0) arc[start angle=180, end angle=175.8, radius=2];
+
+      \draw[->] (5.2,0.5) -- ({7+2*cos(175.8)},{2*sin(175.8)});
+      \node[anchor=west] at (5.2,0.5) {$\theta=4,2^\circ$};
+
+      \draw (7,2.5) -- (7.5,2.5) -- (7.5,2.7) -- (7,2.5);
+      \filldraw[fill=black] (7.5,2.5) -- (8.1,2.5) -- (7.5,2.7) -- cycle;
+      \draw (8.1,2.5) -- (8.3, 2.5) -- (8.3, 2.7) -- cycle;
+
+      \draw[<->, dashed] (7,0) -- (7,2.5);
+      \node[anchor=west] at (7,1.25) {$h = 42$ m};
+      \draw[->] (7,2.5) -- (4,2.5);
+      \node[anchor=south] at (5,2.5) {$v=1300\ \frac{\text{km}}{\text{h}}$};
+   \end{tikzpicture}
+   \caption{Vị trí máy bay trong vùng dốc lên}
+   \label{fig:may_bay_doc}
+\end{figure}
 
 \solution
 
-Gọi độ dài đường chạy của hai bạn Pi và Ê-mô lần lượt là $s_p = 1000 + p$ mét và $s_e = 1000 + e$ mét với $p$ và $e$ là hai số thực lơn hơn $-1000$ (bởi vì độ dài đường luôn dương).
+Khoảng cách từ máy bay đến điểm va chạm với mặt đất là $$d=\frac{h}{\tan{(\theta)}}.$$ Từ đó, ta có được thời gian cho phép là $$t=\frac{d}{v}=\frac{h}{v\tan{(\theta)}}.$$
 
-Thời gian chạy của Pi và Ê-mô lần lượt là $t_p = 5\ \text{phút}\ 45\ \text{giây} =
-345\ \text{giây}$ vả $t_e = 5\ \text{phút}\ 15\ \text{giây} =
-315\ \text{giây}$. Qua đó, ta tính được tốc độ trung bình của hai bạn là
+Thay số trực tiếp, với để ý đến sự quy đổi $v=1300\ \frac{\text{km}}{\text{h}}=1300\ \frac{\text{km}}{\text{h}}\frac{1000\ \text{m}}{1\ \text{km}}\frac{1\ \text{h}}{3600\ \text{s}}=361\ \frac{\text{m}}{\text{s}}$, ta có $$t=\boxed{1,6\times 10^0\ s}.$$
 
-\begin{equation*}
-   \begin{cases}
-      v_p = \displaystyle\frac{s_p}{t_p} = \frac{1000 + p}{345}\frac{\text{mét}}{\text{giây}} \\
-      v_e = \displaystyle\frac{s_e}{t_e} = \frac{1000 + e}{315}\frac{\text{mét}}{\text{giây}}
-   \end{cases}.
-\end{equation*}
+\exercise Cho biết vị trí của một vật chuyển động thẳng được xác định bằng $x(t) = a\cdot t^2+b\cdot t+c$. Xác định vị trí, vận tốc và gia tốc của vật tại thời điểm $t=t_0$.
 
-Để có thể khẳng định rằng bạn Pi chạy với tốc độ trung bình chậm hơn, ta cần có $v_p < v_e$. Từ đó, ta có bất đẳng thức $$\frac{1000 + p}{345} < \frac{1000 + e}{315}$$
+\solution
 
-\chapter{Chuyển động trên một đường thẳng}
-\exercise
+Vị trí của vật tại $t=t_0$ là $x\left(t_0\right)=\boxed{a\cdot t_0^2+b\cdot t_0+c}$.
+
+
 
 \end{document}
