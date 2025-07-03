@@ -475,27 +475,7 @@ và ta vẽ được đồ thị ở hình \ref{fig:vttgxxp2}.
    \end{minipage}
 \end{figure}
 
-Trong thực tiễn, chúng ta hay xấp xỉ những quá trình không tuyến tính qua hữu hạn những điểm đo rồi nội suy tuyến tính (nối các điểm bằng các đoạn thẳng) như đã làm. Còn nhiều phương pháp nội suy nữa còn có thể được tìm thấy trong những tài liệu về phương pháp tính và giải tích số. Thông thường, với càng nhiều điểm thì độ chính xác càng lớn.
-
-Trong trường hợp mà bạn nhận ra phương trình vận tốc - thời gian được cho là
-\begin{equation*}
-   v(t) =
-   \begin{cases}
-      \displaystyle \frac{\displaystyle -t\left(4\ \frac{\text{m}}{\text{s}^5}\cdot t^3-31\ \frac{\text{m}}{\text{s}^4}\cdot t^2+77\ \frac{\text{m}}{\text{s}^3}\cdot t-68\ \frac{\text{m}}{\text{s}^2}\right)}{6} &\quad \text{với } 0 \leq t < 4 \\
-      0&\quad \text{với } 4 \leq t \leq 5
-   \end{cases}
-\end{equation*}
-thì bạn có thể thực hiện nguyên hàm trên hàm này để tính được vị trí vật là
-\begin{equation*}
-   \displaystyle 
-   x(t) =
-   \begin{cases}
-      \displaystyle \frac{\displaystyle -t^2\left(48\ \frac{\text{m}}{\text{s}^5}\cdot t^3-465\ \frac{\text{m}}{\text{s}^4}\cdot t^2+1540\ \frac{\text{m}}{\text{s}^3}\cdot t-2040\ \frac{\text{m}}{\text{s}^2}\right)}{360} &\quad \text{với } 0 \leq t < 4 \\
-      \frac{496}{45}\ \text{m}&\quad \text{với } 4 \leq t \leq 5
-   \end{cases}
-\end{equation*}
-và ta có đồ thị như hình \ref{fig:vttgp2}.
-\begin{figure}[h]
+\begin{figure}[h!]
    \centering
    \fbox{
       \begin{tikzpicture}
@@ -521,6 +501,27 @@ và ta có đồ thị như hình \ref{fig:vttgp2}.
    \caption{Đồ thị vị trí - thời gian cho phần 2}
    \label{fig:vttgp2}
 \end{figure}
+
+Trong thực tiễn, chúng ta hay xấp xỉ những quá trình không tuyến tính qua hữu hạn những điểm đo rồi nội suy tuyến tính (nối các điểm bằng các đoạn thẳng) như đã làm. Còn nhiều phương pháp nội suy nữa còn có thể được tìm thấy trong những tài liệu về phương pháp tính và giải tích số. Thông thường, với càng nhiều điểm thì độ chính xác càng lớn.
+
+Trong trường hợp mà bạn nhận ra phương trình vận tốc - thời gian được cho là
+\begin{equation*}
+   v(t) =
+   \begin{cases}
+      \displaystyle \frac{\displaystyle -t\left(4\ \frac{\text{m}}{\text{s}^5}\cdot t^3-31\ \frac{\text{m}}{\text{s}^4}\cdot t^2+77\ \frac{\text{m}}{\text{s}^3}\cdot t-68\ \frac{\text{m}}{\text{s}^2}\right)}{6} &\quad \text{với } 0 \leq t < 4 \\
+      0&\quad \text{với } 4 \leq t \leq 5
+   \end{cases}
+\end{equation*}
+thì bạn có thể thực hiện nguyên hàm trên hàm này để tính được vị trí vật là
+\begin{equation*}
+   \displaystyle 
+   x(t) =
+   \begin{cases}
+      \displaystyle \frac{\displaystyle -t^2\left(48\ \frac{\text{m}}{\text{s}^5}\cdot t^3-465\ \frac{\text{m}}{\text{s}^4}\cdot t^2+1540\ \frac{\text{m}}{\text{s}^3}\cdot t-2040\ \frac{\text{m}}{\text{s}^2}\right)}{360} &\quad \text{với } 0 \leq t < 4 \\
+      \frac{496}{45}\ \text{m}&\quad \text{với } 4 \leq t \leq 5
+   \end{cases}
+\end{equation*}
+và ta có đồ thị như hình \ref{fig:vttgp2}.
 
 \exercise Hai xe hơi có tốc độ lần lượt là $v_1 = 50,0\ \frac{\text{km}}{\text{h}}$ và $v_2 = 60,0\ \frac{\text{km}}{\text{h}}$ đi ngược chiều với nhau trên một con đường hẹp. Hai xe phát hiện lẫn nhau khi khoảng cách giữa hai xe là $d = 400\ \text{m}$. Cả hai xe đồng thời giảm tốc với cùng một gia tốc hãm đều là $a$. Tính giá trị tối thiểu của $a$ nếu biết hai xe không xảy ra va chạm. Số liệu được đo tới $3$ chữ số có nghĩa.
 
