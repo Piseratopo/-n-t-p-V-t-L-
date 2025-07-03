@@ -162,7 +162,7 @@ Thể tích của đĩa là $V=S\cdot h=\frac{\pi \cdot h\cdot \left(D^2-d^2\rig
 
 Vậy đơn vị của $A$ là $\boxed{\frac{\text{kg}}{\text{s}^{0,8}}}$ và đơn vị của $B$ là $\boxed{\frac{\text{kg}}{\text{s}}}$.
 
-\chapter{Chuyển động trên một đường thẳng}
+\chapter{Chuyển động một chiều}
 \exercise Một ô tô đi $40$ km trên một đường thẳng với tốc độ không đổi $40\ \frac{\text{km}}{\text{h}}$. Sau đó, nó đi thêm theo chiều đó $60$ km với tốc độ không đổi $50 \frac{\text{km}}{\text{h}}$. Các giá trị đo được tính đến hai chữ số có nghĩa.
 \begin{enumerate}
    \item Tính vận tốc trung bình trên cả quãng đường.
@@ -190,11 +190,13 @@ Từ đó, ta có vận tốc trung bình là $$\bar{v} = \frac{\Delta x}{\Delta
    \item[4.] Ta có đồ thị ở hình \ref{fig:do_thi_xe} bằng việc vẽ mối quan hệ $x(t)$ xong nối điểm đầu và điểm cuối. Vận tốc trung bình là độ dốc của đường thẳng nối hai điểm này.
 \end{enumerate}
 
-\begin{figure}
+\begin{figure}[h]
    \centering
    \begin{tikzpicture}[scale=1.2]
       \draw[->] (0,0) -- (7,0) node[right] {$t$ (h)};
       \draw[->] (0,0) -- (0,5.5) node[above] {$x$ (km)};
+      \node[below] at (3.5,-0.5) {Thời gian};
+      \node[rotate=90, above] at (-0.6,2.75) {Vận tốc};
       \draw (0,0) -- (3,2);
       \draw (3,2) -- (6.6,5);
       \filldraw (0,0) circle (1.5pt);
@@ -219,7 +221,7 @@ Từ đó, ta có vận tốc trung bình là $$\bar{v} = \frac{\Delta x}{\Delta
 
 \exercise Một máy bay phản lực đang bay ngang ở độ cao $h=42$ mét. Đột nhiên nó bay vào vùng đất dốc lên góc $\theta=4,2^\circ$ (xem hình \ref{fig:may_bay_doc}). Với tốc độ bay là $v=1300\ \frac{\text{km}}{\text{h}}$, thời gian tính từ lúc bay vào vùng đất dốc mà người phi công có để điều chỉnh máy bay là bao nhiêu? Tất cả các số liệu được đo đến hai chữ số có nghĩa.
 
-\begin{figure}
+\begin{figure}[h]
    \centering
    \begin{tikzpicture}[scale=1.2]
       \draw (0,{7*sin(4.2)}) -- (7, 0);
@@ -253,8 +255,286 @@ Thay số trực tiếp, với để ý đến sự quy đổi $v=1300\ \frac{\t
 
 \solution
 
-Vị trí của vật tại $t=t_0$ là $x\left(t_0\right)=\boxed{a\cdot t_0^2+b\cdot t_0+c}$.
+Vị trí của vật tại $t=t_0$ là $$x\left(t_0\right)=\boxed{a\cdot t_0^2+b\cdot t_0+c}.$$
 
+Vận tốc của vật tại $t=t_0$ là $$v\left(t_0\right)=\left.\frac{\mathrm{d}x(t)}{\mathrm{d}t}\right|_{t=t_0}=\boxed{2a\cdot t_0+b}.$$
 
+Gia tốc của vật tại $t=t_0$ là $$a\left(t_0\right)=\left.\frac{\mathrm{d}v(t)}{\mathrm{d}t}\right|_{t=t_0}=\boxed{2a}.$$
+
+\exercise Phác họa đồ thị vị trí - thời gian và gia tốc thời gian của một người chạy bộ nếu đồ thị vận tốc - thời gian của người đó được biểu diễn trên đồ thị
+\begin{enumerate}
+   \item hình \ref{fig:chay_phan_a};
+   \item hình \ref{fig:chay_phan_b}.
+\end{enumerate}
+Các số liệu được coi như chính xác tuyệt đối. Bạn có thể giả sử người đó bắt đầu chạy từ vị trí $x = 0$.
+
+\begin{figure}[h]
+   \centering
+   \begin{minipage}[t]{0.48\textwidth}
+      \centering
+      \begin{tikzpicture}
+         \draw[->] (0,0) -- (5.5,0) node[right] {$t$ (s)};
+         \draw[->] (0,0) -- (0,4.5) node[above] {$v\left(\frac{\text{m}}{\text{s}}\right)$};
+         \node[below] at (2.75,-0.5) {Thời gian};
+         \node[rotate=90, above] at (-0.5,2.25) {Vận tốc};
+         
+         \draw[thick] (0,0) -- (1, 4);
+         \draw[thick] (1,4) -- (2, 4);
+         \draw[thick] (2,4) -- (4,3);
+         \draw[thick] (4,3) -- (5, 0);
+
+         \foreach \x/\y in {1/4, 2/4, 4/3} {
+            \draw[dashed] (\x,0) -- (\x,\y);
+         }
+         \draw[dashed] (0,4) -- (1,4);
+         \draw[dashed] (4,3) -- (0,3);
+         \foreach \x in {0,1,2,4,5} {
+            \draw (\x,0) -- (\x,-0.08) node[below] {$\x$};
+         }
+         \foreach \y in {0, 3, 4} {
+            \draw (0,\y) -- (-0.08,\y) node[left] {$\y$};
+         }
+      \end{tikzpicture}
+      \caption{Phần 1}
+      \label{fig:chay_phan_a}
+   \end{minipage}
+   \hfill
+   \begin{minipage}[t]{0.48\textwidth}
+      \centering
+      \begin{tikzpicture}
+         \draw[->] (0,0) -- (5.5,0) node[right] {$t$ (s)};
+         \draw[->] (0,0) -- (0,4.5) node[above] {$v\left(\frac{\text{m}}{\text{s}}\right)$};
+
+         \node[below] at (2.75,-0.5) {Thời gian};
+         \node[rotate=90, above] at (-0.5,2.25) {Vận tốc};
+         
+         \draw[domain=0:4, smooth, variable=\x, thick] plot ({\x}, {-\x*(4*\x^3-31*\x^2+77*\x-68)/6});
+         \draw[thick] (4,0) -- (5,0);
+         \foreach \x in {0,1,2,3,4,5} {
+            \draw (\x,0) -- (\x,-0.080) node[below] {$\x$};
+         }
+         \foreach \y in {0,2,3,4} {
+            \draw (0,\y) -- (-0.08,\y) node[left] {$\y$};
+         }
+
+         \foreach \x/\y in {1/3, 2/2, 3/4} {
+            \draw[dashed] (\x,0) -- (\x,\y);
+            \draw[dashed] (0,\y) -- (\x,\y);
+         }
+         
+      \end{tikzpicture}
+      \caption{Phần 2}
+      \label{fig:chay_phan_b}
+   \end{minipage}
+\end{figure}
+
+\solution
+\begin{enumerate}
+   \item Ta chia quá trình chạy làm $4$ phần.
+\end{enumerate}
+
+\begin{itemize}
+   \item Phần 1 $\left(0\ \text{s}\leq t \leq 1\ \text{s}\right)$: Vận tốc tăng đều từ $0$ đến $4\ \frac{\text{m}}{\text{s}}$. Chuyển động là nhanh dần với gia tốc không đổi là $\left.a(t)\right|_{t\in\left[0\ \text{s};1\ \text{s}\right]}=\frac{v(1\ \text{s})-v(0\ \text{s})}{1\ \text{s}-0\ \text{s}}=4\ \frac{\text{m}}{\text{s}^2}$.
+   
+Sau khoảng thời gian $t$, độ dịch chuyển là $\left.x(t)\right|_{t\in\left[0\ \text{s};1\ \text{s}\right]} - x(0\ \text{s}) = \frac{\left.a(t)\right|_{t\in\left[0\ \text{s};1\ \text{s}\right]}\cdot t^2}{2} + \left.v(t)\right|_{t\in\left[0\ \text{s};1\ \text{s}\right]}\cdot t$. Từ đó ta có $x(t) = 2\ \frac{\text{m}}{\text{s}^2}\cdot t^2$ với $0\ \text{s}\leq t \leq 1\ \text{s}$ và $x(1\ \text{s}) = 2\ \text{m}$.
+   
+   \item Phần 2 $\left(1\ \text{s}\leq t \leq 2\ \text{s}\right)$: Vận tốc không đổi ở $\left.v(t)\right|_{t\in\left[1\ \text{s};2\ \text{s}\right]} = 4\ \frac{\text{m}}{\text{s}}$ (chuyển động thẳng đều). 
+   
+Qua đó, ta có $\left.x(t)\right|_{t\in\left[1\ \text{s};2\ \text{s}\right]} = x(1\ \text{s}) + \left.v(t)\right|_{t\in\left[1\ \text{s};2\ \text{s}\right]}\cdot\left(t - 1\ \text{s}\right) = 4\ \frac{\text{m}}{\text{s}}\cdot t - 2\ \text{m}$ và $x(2\ \text{s}) = 6\ \text{m}$.
+\end{itemize}
+
+Phần 3 $\left(2\ \text{s}\leq t \leq 4\ \text{s}\right)$ và phần 4 $\left(4\ \text{s}\leq t \leq 5\ \text{s}\right)$ làm tương tự như phần 1. Ta được
+\begin{equation*}
+   \begin{cases}
+     \left.a(t)\right|_{t\in\left[2\ \text{s};4\ \text{s}\right]} &= -\frac{1}{2}\ \frac{\text{m}}{\text{s}^2}\\
+     \left.a(t)\right|_{t\in\left[4\ \text{s};5\ \text{s}\right]} &= -3\ \frac{\text{m}}{\text{s}^2}\\
+   \end{cases}
+\end{equation*}
+và qua đó
+\begin{equation*}
+   \begin{cases}
+     \left.x(t)\right|_{t\in\left[2\ \text{s};4\ \text{s}\right]} &= -\frac{1}{4}\ \frac{\text{m}}{\text{s}^2}\cdot\left(t - 2\ \text{s}\right)^2 + 4\ \frac{\text{m}}{\text{s}}\cdot \left(t - 2\ \text{s}\right) + 6\ \text{m}\\
+     \left.x(t)\right|_{t\in\left[4\ \text{s};5\ \text{s}\right]} &= -\frac{3}{2}\ \frac{\text{m}}{\text{s}^2}\cdot\left(t - 4\ \text{s}\right)^2 + 3\ \frac{\text{m}}{\text{s}}\cdot \left(t - 4\ \text{s}\right) + 13\ \text{m}\\
+   \end{cases}
+\end{equation*}
+
+\begin{equation*}
+         \iff
+   \begin{cases}
+     \left.x(t)\right|_{t\in\left[2\ \text{s};4\ \text{s}\right]} &= -\frac{1}{4}\ \frac{\text{m}}{\text{s}^2}\cdot t^2 + 5\ \frac{\text{m}}{\text{s}}\cdot t - 3\ \text{m}\\
+     \left.x(t)\right|_{t\in\left[4\ \text{s};5\ \text{s}\right]} &= -\frac{3}{2}\ \frac{\text{m}}{\text{s}^2}\cdot t^2 + 15\ \frac{\text{m}}{\text{s}}\cdot t - 23\ \text{m}\\
+   \end{cases}.
+\end{equation*}
+
+Cuối cùng, chúng ta có thể biểu diễn vị trí của người chạy trên đồ thị như hình \ref{fig:vt_tg1}.
+
+\begin{figure}[h]
+   \centering
+   \fbox{
+      \begin{tikzpicture}
+         \draw[->] (0,0) -- (5.5,0) node[right] {$t$ (s)};
+         \draw[->] (0,0) -- (0,4.5) node[above] {$x\left(\text{m}\right)$};
+         \node[below] at (2.75,-0.5) {Thời gian};
+         \node[rotate=90, above] at (-0.5,2.25) {Vị trí};
+         
+         \draw[domain=0:1, smooth, variable=\t, thick] plot ({\t}, {\t^2 / 2});
+         \draw[domain=1:2, smooth, variable=\t, thick] plot ({\t}, {\t-1/2});
+         \draw[domain=2:4, smooth, variable=\t, thick] plot ({\t}, {-1/16*(\t-2)^2+(\t-2)+3/2});
+         \draw[domain=4:5, smooth, variable=\t, thick] plot ({\t}, {-3/8*\t^2+15/4*\t-23/4});
+         \foreach \x/\y in {1/2, 2/6, 4/13, 5/14.5} {
+            \draw[dashed] (\x,0) -- (\x,\y/4);
+            \draw[dashed] (0,\y/4) -- (\x,\y/4);
+         }
+         \foreach \x in {0,1,2,4,5} {
+            \draw (\x,0) -- (\x,-0.08) node[below] {$\x$};
+         }
+         \foreach \y in {0, 2, 6, 13, 14.5} {
+            \draw (0,\y/4) -- (-0.08,\y/4) node[left] {$\y$};
+         }
+      \end{tikzpicture}
+   }
+   \caption{Đồ thị vị trí - thời gian cho phần 1}
+   \label{fig:vt_tg1}
+\end{figure}
+
+\begin{enumerate}
+   \item[2.] 
+\end{enumerate}
+Chúng ta có thể phác họa đồ thị vị trí - thời gian bằng việc xấp xỉ đồ thị vận tốc - thời gian dưới dạng đường gấp khúc nối các điểm đã biết thể hiện ở \ref{fig:xx_p2}.
+
+Từ đây, thực hiện tương tự như phần 1 để có phương trình vị trí - thời gian
+\begin{equation*}
+   x(t) = \begin{cases}
+      \frac{3}{2}\ \frac{\text{m}}{\text{s}^2}\cdot t^2 &\quad \text{với } 0 \leq t < 1\ \text{s}\\
+      -\frac{1}{2}\ \frac{\text{m}}{\text{s}^2}\cdot t^2 + 4\ \frac{\text{m}}{\text{s}}\cdot t - 2\ \text{m}&\quad \text{với } 1\ \text{s} \leq t < 2\ \text{s}\\
+      1\ \frac{\text{m}}{\text{s}^2}\cdot t^2 - 2\ \frac{\text{m}}{\text{s}}\cdot t + 4\ \text{m}&\quad \text{với } 2\ \text{s} \leq t < 3\ \text{s}\\
+      -2\ \frac{\text{m}}{\text{s}^2}\cdot t^2+16\ \frac{\text{m}}{\text{s}}\cdot t-23\ \text{m}&\quad \text{với } 3\ \text{s} \leq t < 4\ \text{s}\\
+      9\ \text{m}&\quad \text{với } 4\ \text{s} \leq t \leq 5\ \text{s}
+   \end{cases}
+\end{equation*}
+và ta vẽ được đồ thị ở hình \ref{fig:vttgxxp2}.
+
+\begin{figure}[h]
+   \centering
+   \begin{minipage}[t]{0.48\textwidth}
+      \centering
+      \begin{tikzpicture}
+         \draw[->] (0,0) -- (5.5,0) node[right] {$t$ (s)};
+         \draw[->] (0,0) -- (0,5) node[above] {$v\left(\frac{\text{m}}{\text{s}}\right)$};
+
+         \node[below] at (2.75,-0.5) {Thời gian};
+         \node[rotate=90, above] at (-0.5,2.25) {Vận tốc};
+         
+         \draw[thick] (0,0) -- (1,3) -- (2,2) -- (3,4) -- (4,0) -- (5,0);
+         \foreach \x in {0,1,2,3,4,5} {
+            \draw (\x,0) -- (\x,-0.080) node[below] {$\x$};
+         }
+         \foreach \y in {0,2,3,4} {
+            \draw (0,\y) -- (-0.08,\y) node[left] {$\y$};
+         }
+
+         \foreach \x/\y in {1/3, 2/2, 3/4} {
+            \draw[dashed] (\x,0) -- (\x,\y);
+            \draw[dashed] (0,\y) -- (\x,\y);
+         }
+      \end{tikzpicture}
+      \caption{Vận tốc - thời gian xấp xỉ của phần 2}
+      \label{fig:xx_p2}
+   \end{minipage}
+   \hfill
+   \begin{minipage}[t]{0.48\textwidth}
+      \centering
+      \fbox{
+         \begin{tikzpicture}
+            \draw[->] (0,0) -- (5.5,0) node[right] {$t$ (s)};
+            \draw[->] (0,0) -- (0,5) node[above] {$x\left(\text{m}\right)$};
+            \node[below] at (2.75,-0.5) {Thời gian};
+            \node[rotate=90, above] at (-0.5,2.25) {Vị trí};
+            
+            \draw[domain=0:1, smooth, variable=\t, thick] plot ({\t}, {(3*\t^2 / 2) / 2});
+            \draw[domain=1:2, smooth, variable=\t, thick] plot ({\t}, {(-\t^2 / 2 + 4*\t - 2)/2});
+            \draw[domain=2:3, smooth, variable=\t, thick] plot ({\t}, {(\t^2 -2*\t +4)/2});
+            \draw[domain=3:4, smooth, variable=\t, thick] plot ({\t}, {(-2*\t^2+16*\t-23)/2});
+            \draw[thick] (4,4.5) -- (5,4.5);
+
+            \foreach \x/\y in {1/1.5, 2/4, 3/7, 4/9} {
+               \draw[dashed] (\x,0) -- (\x,\y/2);
+               \draw[dashed] (0,\y/2) -- (\x,\y/2);
+            }
+            \draw[dashed] (5,0) -- (5,4.5);
+            \foreach \x in {0,1,2,3,4,5} {
+               \draw (\x,0) -- (\x,-0.08) node[below] {$\x$};
+            }
+            \foreach \y in {0, 1.5, 4, 7, 9} {
+               \draw (0,\y/2) -- (-0.08,\y/2) node[left] {$\y$};
+            }
+         \end{tikzpicture}
+      }
+      \caption{Vị trí - thời gian (xấp xỉ) cho phần 2}
+      \label{fig:vttgxxp2}
+   \end{minipage}
+\end{figure}
+
+Trong thực tiễn, chúng ta hay xấp xỉ những quá trình không tuyến tính qua hữu hạn những điểm đo rồi nội suy tuyến tính (nối các điểm bằng các đoạn thẳng) như đã làm. Còn nhiều phương pháp nội suy nữa còn có thể được tìm thấy trong những tài liệu về phương pháp tính và giải tích số. Thông thường, với càng nhiều điểm thì độ chính xác càng lớn.
+
+Trong trường hợp mà bạn nhận ra phương trình vận tốc - thời gian được cho là
+\begin{equation*}
+   v(t) =
+   \begin{cases}
+      \displaystyle \frac{\displaystyle -t\left(4\ \frac{\text{m}}{\text{s}^5}\cdot t^3-31\ \frac{\text{m}}{\text{s}^4}\cdot t^2+77\ \frac{\text{m}}{\text{s}^3}\cdot t-68\ \frac{\text{m}}{\text{s}^2}\right)}{6} &\quad \text{với } 0 \leq t < 4 \\
+      0&\quad \text{với } 4 \leq t \leq 5
+   \end{cases}
+\end{equation*}
+thì bạn có thể thực hiện nguyên hàm trên hàm này để tính được vị trí vật là
+\begin{equation*}
+   \displaystyle 
+   x(t) =
+   \begin{cases}
+      \displaystyle \frac{\displaystyle -t^2\left(48\ \frac{\text{m}}{\text{s}^5}\cdot t^3-465\ \frac{\text{m}}{\text{s}^4}\cdot t^2+1540\ \frac{\text{m}}{\text{s}^3}\cdot t-2040\ \frac{\text{m}}{\text{s}^2}\right)}{360} &\quad \text{với } 0 \leq t < 4 \\
+      \frac{496}{45}\ \text{m}&\quad \text{với } 4 \leq t \leq 5
+   \end{cases}
+\end{equation*}
+và ta có đồ thị như hình \ref{fig:vttgp2}.
+\begin{figure}[h]
+   \centering
+   \fbox{
+      \begin{tikzpicture}
+         \draw[->] (0,0) -- (5.5,0) node[right] {$t$ (s)};
+         \draw[->] (0,0) -- (0,6) node[above] {$v\left(\frac{\text{m}}{\text{s}}\right)$};
+
+         \node[below] at (2.75,-0.5) {Thời gian};
+         \node[rotate=90, above] at (-0.5,2.25) {Vận tốc};
+         
+         \draw[domain=0:4, smooth, variable=\x, thick] plot ({\x}, {-\x^2*(48*\x^3-465*\x^2+1540*\x-2040)/720});
+         \draw[thick] (4,{496/90}) -- (5,{496/90});
+         \foreach \x in {0,1,2,3,4,5} {
+            \draw (\x,0) -- (\x,-0.080) node[below] {$\x$};
+         }
+         \draw (0,{496/90}) -- (-0.08,{496/90}) node[left] {$\approx 11$};
+
+         \foreach \x/\y in {4/{496/45}, 5/{496/45}} {
+            \draw[dashed] (\x,0) -- (\x,{\y/2});
+         }
+         \draw[dashed] (0,{496/90}) -- (4,{496/90});
+      \end{tikzpicture}
+   }
+   \caption{Đồ thị vị trí - thời gian cho phần 2}
+   \label{fig:vttgp2}
+\end{figure}
+
+\exercise Hai xe hơi có tốc độ lần lượt là $v_1 = 50,0\ \frac{\text{km}}{\text{h}}$ và $v_2 = 60,0\ \frac{\text{km}}{\text{h}}$ đi ngược chiều với nhau trên một con đường hẹp. Hai xe phát hiện lẫn nhau khi khoảng cách giữa hai xe là $d = 400\ \text{m}$. Cả hai xe đồng thời giảm tốc với cùng một gia tốc hãm đều là $a$. Tính giá trị tối thiểu của $a$ nếu biết hai xe không xảy ra va chạm. Số liệu được đo tới $3$ chữ số có nghĩa.
+
+\solution
+
+Gọi quãng đường đi được trong khi hãm phanh của hai xe lần lượt là $d_1$ và $d_2$.
+
+Trong quá trình hãm đến vận tốc bằng $0$, tổng quãng đường đi của cả hai xe phải không vượt quá khoảng cách $d$. Vì vậy, ta có bất đẳng thức $$d_1 + d_2 \leq d.$$
+
+Trong khi đó, quãng đường xe thứ nhất đã di chuyển là $d_1 = \frac{0^2 - v_1^2}{2(-a)} = \frac{v_1^2}{2a}$. Tương tự, ta có quãng đường mà xe thứ hai di chuyển trong khoảng thời gian này là $d_2 = \frac{v_2^2}{2a}$. Từ đó, thay vào phương trình ở trên để được $$
+   \frac{v_1^2}{2a} + \frac{v_2^2}{2a} \le d
+   \iff a \geq \frac{v_1^2+v_2^2}{2d}.
+$$
+
+Thay số trực tiếp, ta có gia tốc hãm tối thiểu phải là $\boxed{7,63 \times 10^3 \frac{\text{km}}{\text{h}^2}}$.
 
 \end{document}
