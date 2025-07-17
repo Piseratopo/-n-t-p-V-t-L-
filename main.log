@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.16)  4 JUL 2025 01:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.16)  17 JUL 2025 01:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -638,19 +638,26 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \tikz@expandcount=\count320
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarycalc.code.tex
+))) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/wrapfig\wrapfig.sty
+\wrapoverhang=\dimen272
+\WF@size=\dimen273
+\c@WF@wrappedlines=\count321
+\WF@box=\box65
+\WF@everypar=\toks38
+Package: wrapfig 2003/01/31  v 3.6
+) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshadings.code.tex
 File: tikzlibraryshadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryshadings.code.tex
 File: pgflibraryshadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))
-\c@exercise=\count321
-\c@solution=\count322
+\c@exercise=\count322
+\c@solution=\count323
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count323
-\l__pdf_internal_box=\box65
+\l__color_backend_stack_int=\count324
+\l__pdf_internal_box=\box66
 ) (main.aux
 Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
 (babel)             Reported  on input line 8.
@@ -720,17 +727,17 @@ Package hyperref Info: Link coloring OFF on input line 29.
 
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count324
-\scratchdimen=\dimen272
-\scratchbox=\box66
-\nofMPsegments=\count325
-\nofMParguments=\count326
-\everyMPshowfont=\toks38
-\MPscratchCnt=\count327
-\MPscratchDim=\dimen273
-\MPnumerator=\count328
-\makeMPintoPDFobject=\count329
-\everyMPtoPDFconversion=\toks39
+\scratchcounter=\count325
+\scratchdimen=\dimen274
+\scratchbox=\box67
+\nofMPsegments=\count326
+\nofMParguments=\count327
+\everyMPshowfont=\toks39
+\MPscratchCnt=\count328
+\MPscratchDim=\dimen275
+\MPnumerator=\count329
+\makeMPintoPDFobject=\count330
+\everyMPtoPDFconversion=\toks40
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -749,19 +756,33 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [1
 
 
-{C:/Users/buinh/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-Ch\uhorn \ohorn ng 1.
+{C:/Users/buinh/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (main.toc)
+\tf@toc=\write5
+\openout5 = `main.toc'.
+
 
 
 [2
 
 ]
+Ch\uhorn \ohorn ng 0.
 
-[3]
+
+[3
+
+]
+Ch\uhorn \ohorn ng 1.
+
+
+[4
+
+]
+
+[5]
 
 Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
-(babel)             Reported  on input line 165.
-[4]
+(babel)             Reported  on input line 183.
+[6]
 Ch\uhorn \ohorn ng 2.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -771,16 +792,16 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[5
+[7
 
 ]
 
-[6]
+[8]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (1.61557pt too wide) in paragraph at lines 472--473
+Overfull \hbox (1.61557pt too wide) in paragraph at lines 491--492
  [][] 
  []
 
@@ -792,34 +813,36 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[7]
+[9]
 
-LaTeX Warning: Text page 8 contains only floats.
+LaTeX Warning: Text page 10 contains only floats.
 
 
 
-[8]
+[10]
 
-[9] (main.aux)
+[11]
+
+[12] (main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C9198B5F4E61040F616AD04390260D6F;454.
+(rerunfilecheck)             Checksum: 9DB6216E85B4054E5F1A0F6067867645;809.
  ) 
 Here is how much of TeX's memory you used:
- 23305 strings out of 473523
- 432426 string characters out of 5714630
- 855919 words of memory out of 5000000
- 46087 multiletter control sequences out of 15000+600000
- 576653 words of font info for 75 fonts, out of 8000000 for 9000
+ 23473 strings out of 473523
+ 435169 string characters out of 5714630
+ 857456 words of memory out of 5000000
+ 46229 multiletter control sequences out of 15000+600000
+ 579533 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,13n,107p,754b,761s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\buinh\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx10.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr10.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr17.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr5.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr7.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnsl10.pfb>
-Output written on main.pdf (9 pages, 263025 bytes).
+ 102i,13n,107p,1047b,761s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\buinh\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx10.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr10.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr17.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr5.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr7.pfb><C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnsl10.pfb>
+Output written on main.pdf (12 pages, 305208 bytes).
 PDF statistics:
- 240 PDF objects out of 1000 (max. 8388607)
- 63 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 298 PDF objects out of 1000 (max. 8388607)
+ 79 named destinations out of 1000 (max. 500000)
+ 65 words of extra memory for PDF output out of 10000 (max. 10000000)
 

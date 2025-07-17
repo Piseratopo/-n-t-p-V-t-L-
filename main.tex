@@ -3,7 +3,7 @@
 \usepackage[T5]{fontenc}
 \usepackage[vietnamese]{babel}
 \usepackage[a4paper]{geometry}
-\usepackage{amsmath, amssymb, hyperref, icomma, tikz, xcolor}
+\usepackage{amsmath, amssymb, hyperref, icomma, tikz, wrapfig, xcolor}
 \usetikzlibrary{calc, shadings}
 
 \geometry{bindingoffset=0.5cm, inner=2cm, outer=2cm, top=2cm, bottom=2cm}
@@ -29,6 +29,24 @@
 \begin{document}
 
 \maketitle
+
+\setcounter{chapter}{-1}
+\tableofcontents
+
+\chapter{Kiến thức toán học nền tảng}
+
+\ % Lùi đầu dòng
+
+Phần này bao gồm các kiến thức toán học cần thiết để xây dựng lí thuyết của môn vật lí, giả sử rằng bạn đọc đã có kiến thức đại số và một chút hình học từ ghế nhà trường. Chương này sẽ bao hàm những phần không nằm trong chương trình trung học phổ thông và có thể cả chương trình đại học. Bạn đọc có thể tìm hiểu một cách sơ cấp hay gợi nhớ lại về các khái niệm toán học mà không cần tập trung vào việc chứng minh chặt chẽ các tính chất toán học. Tác giả mong muốn thông qua chương này, bạn đọc có thể có một cảm nhận và từ đó có kĩ năng để áp dụng các khái niệm toán giải quyết các yêu cầu thực tế. Hơn thế nữa, có một niềm cảm hứng để tìm hiểu chuyên sâu các phân môn của toán học.
+
+\section{Giải tích}
+
+\ % Lùi đầu dòng
+
+
+
+\section{Bài tập}
+\exercise Cho hai véc-tơ $\mathbf{a}, \mathbf{b}$
 
 \chapter{Cơ bản của xử lí số liệu trong vật lí}
 \exercise Khoảng cách trung bình từ trái đất đến mặt trời là $1,5 \cdot 10^8$ km. Giả sử quỹ đạo của trái đất quanh mặt trời là tròn và mặt trời được đặt tại gốc của hệ quy chiếu.
@@ -162,7 +180,8 @@ Thể tích của đĩa là $V=S\cdot h=\frac{\pi \cdot h\cdot \left(D^2-d^2\rig
 
 Vậy đơn vị của $A$ là $\boxed{\frac{\text{kg}}{\text{s}^{0,8}}}$ và đơn vị của $B$ là $\boxed{\frac{\text{kg}}{\text{s}}}$.
 
-\chapter{Chuyển động một chiều}
+\chapter{Chuyển động}
+
 \exercise Một ô tô đi $40$ km trên một đường thẳng với tốc độ không đổi $40\ \frac{\text{km}}{\text{h}}$. Sau đó, nó đi thêm theo chiều đó $60$ km với tốc độ không đổi $50 \frac{\text{km}}{\text{h}}$. Các giá trị đo được tính đến hai chữ số có nghĩa.
 \begin{enumerate}
    \item Tính vận tốc trung bình trên cả quãng đường.
@@ -518,7 +537,7 @@ thì bạn có thể thực hiện nguyên hàm trên hàm này để tính đư
    x(t) =
    \begin{cases}
       \displaystyle \frac{\displaystyle -t^2\left(48\ \frac{\text{m}}{\text{s}^5}\cdot t^3-465\ \frac{\text{m}}{\text{s}^4}\cdot t^2+1540\ \frac{\text{m}}{\text{s}^3}\cdot t-2040\ \frac{\text{m}}{\text{s}^2}\right)}{360} &\quad \text{với } 0 \leq t < 4 \\
-      \frac{496}{45}\ \text{m}&\quad \text{với } 4 \leq t \leq 5
+      \displaystyle \frac{496}{45}\ \text{m}&\quad \text{với } 4 \leq t \leq 5
    \end{cases}
 \end{equation*}
 và ta có đồ thị như hình \ref{fig:vttgp2}.
@@ -538,4 +557,90 @@ $$
 
 Thay số trực tiếp, ta có gia tốc hãm tối thiểu phải là $\boxed{7,63 \times 10^3 \frac{\text{km}}{\text{h}^2}}$.
 
+\exercise Để dừng xe ban đầu bạn cần một thời gian phản ứng để bắt đầu phanh, rồi xe mới đi chậm dần nhờ có một gia tốc hãm không đổi. Giả sử quãng được đi được trong hai pha này là $186$ ft nếu vận tốc ban đầu là $50\ \frac{\text{dặm}}{\text{h}}$. Còn trong một trường hợp khác, quãng được đi được trong hai pha này là $80$ ft nếu vận tốc ban đầu là $30\ \frac{\text{dặm}}{\text{h}}$. Biết thời gian phản ứng là cố định và $1$ dặm $= 5280$ ft, tính thời gian phản ứng và độ lớn của gia tốc hãm.
+
+\solution
+
+Gọi thời gian phản ứng là $t_p$, vận tốc đầu là $v_0$, gia tốc hãm là $a$.
+
+Trong khoảng thời gian phản ứng, xe đi được $v_0t_p$. Và trong khoảng thời gian hãm, xe đi được $\frac{0^2-v_0^2}{2(-a)}=\frac{v_0^2}{2a}$. Cho nên, tổng quãng đượt đi được trong hai pha là 
+\begin{equation}
+\Delta x = v_0 t + \frac{v_0^2}{2a}
+\label{eq:stopping_distance}
+\end{equation}
+
+Trước khi thay số ta thực hiện quy đổi $$50\ \frac{\text{dặm}}{\text{h}}=50\ \frac{\text{dặm}}{\text{h}}\cdot\frac{5280\ \text{ft}}{1\ \text{dặm}}\cdot\frac{1\ \text{h}}{3600\ \text{s}}\approx 73\ \frac{\text{ft}}{\text{s}},$$ tương tự, $30\ \frac{\text{dặm}}{\text{h}}=44\ \frac{\text{ft}}{\text{s}}$. Từ đó, thay số vào phương trình \ref{eq:stopping_distance} để có hệ
+\begin{equation*}
+   \begin{cases}
+      186\ \text{ft} = 73\ \frac{\text{ft}}{\text{s}}\cdot t_p + \frac{\left(73\ \frac{\text{ft}}{\text{s}}\right)^2}{2a} \\
+      80\ \text{ft} = 44\ \frac{\text{ft}}{\text{s}}\cdot t_p + \frac{\left(44\ \frac{\text{ft}}{\text{s}}\right)^2}{2a} 
+   \end{cases}.
+\end{equation*}
+Giải hệ phương trình, ta có thời gian phản ứng là $t_p=0,97\ \text{s}$ và gia tốc hãm là $a = 26\ \frac{\text{ft}}{\text{s}^2}$.
+
+\begin{wrapfigure}{r}{0.6\textwidth} % 'r' for right, 'l' for left, width of the figure
+    \centering
+    \begin{tikzpicture}
+      \draw[->] (0,0) -- (8,0) node[right] {$t$};
+      \draw[->] (0,0) -- (0,6) node[above] {$h$};
+
+      \node[below] at (4,-0.25) {Thời gian};
+      \node[rotate=90, above] at (-0.25,3) {Độ cao};
+
+      \draw[domain=0.8:7.2, smooth, variable=\x, thick] plot ({\x}, {-4 * (\x - 1) * (\x - 7)/9 + 1});
+      \draw[<->] (1,1) -- (7,1);
+      \node[anchor=south] at (4,1) {$\Delta T_t$};
+      \draw[<->] (3,41/9) -- (5,41/9);
+      \node[anchor=north] at (4,41/9) {$\Delta T_c$};
+      \draw[<->] (0.5,1) -- (0.5,41/9);
+      \node[anchor=west] at (0.5,25/9) {$H$};
+
+      \draw[dashed] (0,1) -- (1,1);
+      \draw[dashed] (7,1) -- (8,1);
+      \draw[dashed] (0,41/9) -- (3,41/9);
+      \draw[dashed] (5,41/9) -- (8,41/9);
+
+   \end{tikzpicture}
+
+   \caption{Đồ thị thời gian - độ cao của quả bóng thủy tinh}
+   \label{fig:tgdcqbtt}
+\end{wrapfigure}
+
+\exercise Tại Phòng Thí nghiệm Vật lí Quốc gia ở Anh, người ta thực hiện xác định gia tốc trọng trường $g$ theo thí nghiệm sau: Ném một quả bóng thủy tinh lên theo chiều thẳng đứng trong ống chân không và cho nó rơi xuống. Gọi $\Delta T_t$ trên hình \ref{fig:tgdcqbtt} là thời gian khoảng giữa hai lần quả bóng đi qua một điểm thấp nào đó. $\Delta T_c$ là khoảng thời gian giữa hai lần quả bóng đi qua một điểm cao hơn và $H$ là khoảng cách giữa hai điểm. Chứng minh rằng $$g=\frac{8H}{\Delta T_t^2 - \Delta T_c^2}.$$
+
+\solution
+
+Gọi vận tốc khi bóng bắt đầu bay lên từ vị trị thấp là $v_0$. Sau một khoảng thời gian $\Delta T_t$, quả bóng quay lại vị trí cũ, do vậy, ta có phương trình $0 = -\frac{g \Delta T_t^2}{2} + v_0 \Delta T_t$. Thực hiện biến đổi tương đương để có $$v_0=\frac{g \Delta T_t}{2}.$$
+
+Nhận thấy rằng đồ thị có tính đối xứng. Sử dụng điều đó, ta tính được khoảng thời gian quả bóng lên một độ cao $H$ là $t=\frac{\Delta T_t-\Delta T_c}{2}$. Qua đó, ta có phương trình thứ hai là $$H = -\frac{g t^2}{2} + v_0 t=-\frac{g \left(\frac{\Delta T_t-\Delta T_c}{2}\right)^2}{2} + v_0 \left(\frac{\Delta T_t-\Delta T_c}{2}\right).$$
+
+Thế giá trị của $v_0$ vào phương trình và tiếp tục thực hiện biến đổi, ta có:
+\begin{align*}
+   H &= -\frac{g \left(\Delta T_t-\Delta T_c\right)^2}{8} + \frac{g \Delta T_t}{2} \left(\frac{\Delta T_t-\Delta T_c}{2}\right) \\
+   &= -g\left(\frac{\Delta T_t^2}{8} - \frac{\Delta T_t\Delta T_c}{4} + \frac{\Delta T_c^2}{8}\right) + g\left(\frac{\Delta T_t^2}{4} - \frac{\Delta T_t\Delta T_c}{4}\right) \\
+   &= g\cdot \frac{\Delta T_t^2 - \Delta T_c^2}{8} \\
+   \iff g &= \frac{8H}{\Delta T_t^2 - \Delta T_c^2}.
+\end{align*}
+
+Ta có điều phải chứng minh.
+
+\exercise Một nghệ sĩ tung hứng các quả bóng lên theo phương thẳng đứng. Quả bóng sẽ lên cao hơn bao nhiêu nếu thời gian bóng trong không khí tăng gấp $n$ lần ($n \in \mathbb{R}^+$)?
+
+\solution
+
+Có thời gian để quả bóng bay từ tay lên trên vị trí cao nhất bằng một nửa thời gian bóng trong không khí. Nếu thời gian bóng trong không khí tăng gấp $n$ lần so với thời gian trong không khí gốc, thì cùng chia cho $2$, ta cũng sẽ có thời gian bóng bay từ tay lên trên vị trí cao nhất cũng tăng gấp $n$ lần so với thời gian gốc để bay lên vị trí cao nhất.
+
+Gọi $t_1$ là thời gian gốc để bóng bay từ tay lên vị trí cao nhất, $t_2 = n t_1$ là thời gian bay khi đã tăng $n$ lần. Gọi $h_1, h_2$ lần lượt là độ cao bóng đi được tương ứng với hai khoảng thời gian $t_1, t_2$. Để ý rằng khi lên vị trí cao nhất thì vận tốc bóng là $0$; ta có hệ phương trình
+
+\begin{equation*}
+   \begin{cases}
+      h_1 &= \frac{gt_1^2}{2} \\
+      h_2 &= \frac{gt_2^2}{2} = \frac{g\left(nt_1\right)^2}{2}
+   \end{cases}
+   \implies h_2 = n^2 h_1.
+\end{equation*}
+
+Từ đó, ta có quả bóng cao lên $\boxed{n^2 - 1 \text{ lần độ cao gốc}}$.
+
 \end{document}
+
