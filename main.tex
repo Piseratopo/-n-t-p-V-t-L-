@@ -3,7 +3,7 @@
 \usepackage[T5]{fontenc}
 \usepackage[vietnamese]{babel}
 \usepackage[a4paper]{geometry}
-\usepackage{amsmath, amssymb, hyperref, icomma, tikz, wrapfig, xcolor}
+\usepackage{amsmath, amssymb, blindtext, hyperref, icomma, multicol, tikz, wrapfig, xcolor}
 \usetikzlibrary{calc, shadings}
 
 \geometry{bindingoffset=0.5cm, inner=2cm, outer=2cm, top=2cm, bottom=2cm}
@@ -41,12 +41,51 @@ Phần này bao gồm các kiến thức toán học cần thiết để xây d�
 
 \section{Giải tích}
 
+\subsection{Những hàm cơ bản}
+
+\ % Lùi đầu dòng
+
+Trong phần này, các hàm số quen thuộc sẽ được nhắc lại. Đây là những hàm hay thấy nhất trong quá trình học phần lớn các môn khoa học tự nhiên.
+
+Đầu tiên, chúng ta có hàm \textit{đa thức}, thông thường được biểu diễn dưới dạng $$f(x)=P_n(x)=\sum_{i = 0}^n a_i x^i = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0$$ với $n$ là một số nguyên không âm, $a_i$ là các số thực, gọi là các \textit{hệ số}, với mọi $i$ nguyên nằm trong đoạn $[0, n]$ và $a_n \neq 0$. Khi này, $n$ được gọi là \textit{bậc} của đa thức. Khi đa thức có bậc bằng $0$, hay $f(x) = P_0(x) = a_0$, thì được gọi là \textit{đa thức hằng} hay \textit{hàm hằng}. Một trường hợp đặc biệt là khi $f(x) = 0$ \footnote{Sẽ có nhiều sách viết "$f(x) \equiv 0$"\/ thay vì "$f(x) = 0$"\/ để phân biệt giữa khẳng định hai hàm là như nhau so với một phương trình. Tôi không muốn bạn đọc bị vướng víu với nhiều kí hiệu lạ, cho nên tôi sẽ cố gắng dùng những kí hiệu cũ. Bạn đọc có thể tự suy luận ý nghĩa thông qua ngữ cảnh.}, khi này hàm không có bậc nhưng vẫn được gọi là hàm hằng \footnote{Đa số những nhà toán học không coi $f(x) = 0$ là đa thức bậc $0$ do nhiều tính chất của đa thức bị phá vỡ khi gặp trường hợp này. Do đó, $f(x) = 0$ chỉ được coi là "hàm hằng"\/ chứ không phải "\emph{đa thức} hằng". Trong cuốn sách này, trở về sau sẽ chỉ có thuật ngữ "hàm hằng"\/ được sử dụng.}.
+
+Mỗi số hạng của đa thức có dạng $x^n$ với $n$ nguyên.
+
+\subsection{Số ảo và số phức}
+
+\ % Lùi đầu dòng
+
+Trước khi đến với sô thực với số phức, chúng ta bắt đầu tiếp cận với định nghĩa đơn vị ảo. Cụ thể, đơn vị ảo được kí hiệu là $\mathbf{i}$ \footnote{Phần lớn các sách sẽ kí hiệu số ảo là chữ $i$ thông thường. Tôi kí hiệu thành chữ $\mathbf{i}$ đứng in đậm để, thứ nhất, bảo toàn chữ $i$ cho nhiệm vụ khác, và thứ hai, nhấn mạnh rằng nó mang tính chiều.} và thỏa mãn $$\mathbf{i}^2 = -1 \text{ hay } \mathbf{i} = \sqrt{-1}.$$
+
+Để có số ảo, ta nhân một số thực $b \neq 0$ với đơn vị ảo để thành $\mathbf{i}b$. Một số phức bao gồm thành phần thực và thành phẩn ảo cộng vào. Viết dưới dạng kí hiệu, một số phức có dạng là $$z=a+\mathbf{i}b$$ với $a, b$ thực.
+
+Thật sự, qua định nghĩa trên, rất khó cho nhiều người không thường xuyên thường thức về toán ngay lập tức tìm ra và cảm nhận được ý nghĩa thực tiễn của số ảo. Chúng ta không thể tưởng tượng được số ảo một cách trực quan như các số mà chúng ta thường thấy ở ngoài cuộc sống như $5$ cái bút hay $\frac{1}{3}$ giờ. Đi kèm với đó, kể cả trên lí thuyết toán của ghế nhà trường, cũng sẽ không xảy ra trường hợp nào để cho một số nhân với chính nó ra một số âm.
+
+Theo quan điểm cá nhân, số âm trong đời xuống ít khi được sử dụng. Chẳng mấy ai ưa nói "lãi $-500000$ đồng"\/ so với "lỗ $500000$ đồng". Một cách tương tự, trong phần lớn quá trình phát triển của toán học, các nhà toán học xưa thường có mặc cảm với những số âm. Các phương trình sẽ luôn được viết lại thành nhiều trường hợp để tránh chúng. Ví dụ, nếu phương trình bậc hai được viết dưới dạng hiện đại là $x^2 + ax+b=0$ với $a,b$ là hai số thực (có thể âm), thì trong quá khữ, phương trình này được chia ra làm ba trường hợp
+\begin{align*}
+   &x^2+ax = b;\\
+   &x^2+b =ax;\\
+   &x^2 =ax+b
+\end{align*}
+với $a,b$ là hai số thực luôn dương. Và cũng từ sự mặc cảm với số âm, họ cho rằng nghiệm của phương trình cũng phải là một số dương. Tương tự với Các-đa-nô \footnote{Gerolamo Cardano (1501-1576).}, khi giải phương trình bậc ba, ông cũng đưa về các trường hợp như trên. Cụ thể, chúng ta xem xét một trường hợp của bài toán: $$x^3 = ax+b.$$ Giải phương trình, chúng ta có được nghiệm $$x=\sqrt[3]{\frac{b}{2} + \sqrt{\frac{b^2}{4}-\frac{a^3}{27}}}+\sqrt[3]{\frac{b}{2} - \sqrt{\frac{b^2}{4}-\frac{a^3}{27}}}.$$ Tuy nhiên, sau khi thay những giá trị cụ thể vào $a$ và $b$, Các-đa-nô đã phát hiện ra một vấn đề. Khi $a=15$ và $b=4$, nghiệm trả ra cho phương trình $x^3 = 15x+4$ theo công thức vừa trên là $$x=\sqrt[3]{2+\sqrt{-121}}+\sqrt[3]{2-\sqrt{-121}}$$ mặc dù phương trình có một nghiệm bình thường là $x=4$ (với kiến thức toán học hiện đại, chúng ta có thể giải ra hai nghiệm cũng thực khác là $-2 \pm \sqrt{3}$). Nhận ra điều đó, Các-đa-nô đã khẳng định rằng công thức này của ông không áp dụng được trong trường hợp xảy ra căn của một số âm. Tuy nhiên, một học trò của ông, Bom-be-li \footnote{Rafael Bombelli (1526-1572).}, lại phủ nhận điều trên. Bom-be-li nhận định rằng tồn tại một kiểu số khác số thực sẽ có giá trị bằng "căn âm". Ông phân tích rõ cách nhân số thực với số ảo, và sau đó là phương pháp cộng và trừ các số phức với nhau. Sau khi xây dựng một nền tảng đại số cho kiểu số mới này, ông đã tính được căn bậc ba của hai số phức lần lượt là $\sqrt[3]{2+\sqrt{-121}}=2+\sqrt{-1}$ và $\sqrt[3]{2-\sqrt{-121}}=2-\sqrt{-1}$. Cộng hai số vào, hiển nhiên sẽ có được nghiệm $4$ như mong muốn.
+
+\subsection{Giới hạn}
 \ % Lùi đầu dòng
 
 
 
 \section{Bài tập}
-\exercise Cho hai véc-tơ $\mathbf{a}, \mathbf{b}$
+\exercise Phác thảo đồ thị của những hàm sau:
+\begin{multicols}{3}
+\begin{enumerate}
+   \item $f(x) = x + 2$; 
+   \item $f(x) = x^2 + 2x + 1$;
+   \item $f(x) = x^3 - 9x^2 + 24x - 16$;
+   \item $f(x) = 2$
+\end{enumerate}
+\end{multicols}
+
+\solution
 
 \chapter{Cơ bản của xử lí số liệu trong vật lí}
 \exercise Khoảng cách trung bình từ trái đất đến mặt trời là $1,5 \cdot 10^8$ km. Giả sử quỹ đạo của trái đất quanh mặt trời là tròn và mặt trời được đặt tại gốc của hệ quy chiếu.
@@ -641,6 +680,11 @@ Gọi $t_1$ là thời gian gốc để bóng bay từ tay lên vị trí cao nh
 \end{equation*}
 
 Từ đó, ta có quả bóng cao lên $\boxed{n^2 - 1 \text{ lần độ cao gốc}}$.
+
+\begin{thebibliography}{1}
+\bibitem{Agarwal2011}
+Agarwal, R.P., Perera, K., Pinelas, S. (2011). \textit{History of Complex Numbers}. In: An Introduction to Complex Analysis. Springer, Boston, MA. \url{https://doi.org/10.1007/978-1-4614-0195-7_50}
+\end{thebibliography}
 
 \end{document}
 
