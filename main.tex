@@ -59,9 +59,26 @@ Trước khi đến với sô thực với số phức, chúng ta bắt đầu t
 
 Để có số ảo, ta nhân một số thực $b \neq 0$ với đơn vị ảo để thành $\mathbf{i}b$. Một số phức bao gồm thành phần thực và thành phẩn ảo cộng vào. Viết dưới dạng kí hiệu, một số phức có dạng là $$z=a+\mathbf{i}b$$ với $a, b$ thực.
 
-Thật sự, rất khó cho nhiều người không thường xuyên thường thức về toán ngay lập tức tìm ra và cảm nhận được ý nghĩa thực tiễn của số ảo. Chúng ta không thể tưởng tượng được số ảo một cách trực quan như các số mà chúng ta thường thấy ở ngoài cuộc sống như $5$ cái bút hay $\frac{1}{3}$ giờ. Đi kèm với đó, kể cả trên lí thuyết toán của ghế nhà trường, cũng sẽ không xảy ra trường hợp nào để cho một số nhân với chính nó ra một số âm.
+Chúng ta sẽ coi như có thể thực hiện các định luật đại số thông thường trên tập số phức. Coi $\mathbf{i}$ là một biến với $\mathbf{i}^2 = -1$. Để cộng (hay trừ) hai số phức $v = a + \mathbf{i}b$ và $w = c + \mathbf{i}d$, ta thực hiện cộng (hay trừ) các thành phần tương đương (phần thực với phần thực, phần ảo với phần ảo). Viết dưới dạng toán học:
+\begin{equation*}
+   \begin{cases}
+      v + w = (a + c) + \mathbf{i}(b + d) \\ 
+      v - w = (a - c) + \mathbf{i}(b - d) 
+   \end{cases}.
+\end{equation*}
 
-Theo quan điểm cá nhân, số âm trong đời xuống ít khi được sử dụng. Chẳng mấy ai ưa nói "lãi $-500000$ đồng"\/ so với "lỗ $500000$ đồng". Một cách tương tự, trong phần lớn quá trình phát triển của toán học, các nhà toán học xưa thường có mặc cảm với những số âm. Các phương trình sẽ luôn được viết lại thành nhiều trường hợp để tránh chúng. Ví dụ, nếu phương trình bậc hai được viết dưới dạng hiện đại là $x^2 + ax+b=0$ với $a,b$ là hai số thực (có thể âm), thì trong quá khữ, phương trình này được chia ra làm ba trường hợp
+Nhân hai số phức sẽ yêu cầu sử dụng tính chất phân phối giữa phép nhân với phép cộng, được thực hiện như sau
+\begin{align*}
+   v\cdot w&=\left(a + \mathbf{i}b\right)\cdot\left(c + \mathbf{i}d\right) \\
+      &= ac + \mathbf{i}ad + \mathbf{i}bc + \mathbf{i}^2 bd \\
+      &= (ac - bd) + \mathbf{i}(ad + bc).
+\end{align*}
+
+Trước khi chia hai số phức, chúng ta cần phải biết đến khái niệm số phức liên hợp và tính chất đặc biệt của nó. Một số phức $z = a+\mathbf{i}b$ sẽ có số phức liên hợp là $$\bar{z} = z^* = a - \mathbf{i}b.$$ Khi này, thực hiện phép nhân số phức $z$ với liên hợp của nó để có $$z\bar{z} = (a+\mathbf{i}b)(a-\mathbf{i}b) = a^2 + b^2.$$ Để ý rằng $a^2 + b^2$ là một số thực do $a, b$ đã là số thực từ định nghĩa, và cũng cần phải nhớ lại rằng khi nhân cả số bị chia và số chia với một số thì thương không đổi. Cho nên, để chia hai số phức, chúng ta nhân cả tử và mẫu với liên hợp của số chia $$\frac{v}{w} = \frac{a + \mathbf{i}b}{c + \mathbf{i}d} = \frac{\left(a + \mathbf{i}b\right)\left(c - \mathbf{i}d\right)}{\left(c + \mathbf{i}d\right)\left(c - \mathbf{i}d\right)} = \frac{\left(ac+bd\right) + \mathbf{i}\left(bc - ad\right)}{c^2+d^2}.$$ Từ đó, chúng ta đưa phép chia hai số phức thành phép chia số phức với số thực và có kết quả là $$\frac{v}{w} = \frac{a + \mathbf{i}b}{c + \mathbf{i}d} = \frac{ac+bd}{c^2+d^2}+\mathbf{i}\cdot\frac{bc - ad}{c^2+d^2}.$$
+
+Thật sự, rất khó cho nhiều người không thường xuyên thường thức về toán ngay lập tức tìm ra và cảm nhận được ý nghĩa thực tiễn của số ảo. Chúng ta không thể tưởng tượng được số ảo một cách trực quan như các số mà chúng ta thường thấy ở ngoài cuộc sống như $5$ cái bút hay $\frac{1}{3}$ giờ. Đi kèm với đó, kể cả trên lí thuyết toán của ghế nhà trường, cũng sẽ không xảy ra trường hợp nào để cho một số nhân với chính nó ra một số âm. 
+
+Nhắc về số âm, theo quan điểm cá nhân, số âm trong đời xuống vốn đã ít khi được sử dụng. Chẳng mấy ai ưa nói "lãi $-500000$ đồng"\/ so với "lỗ $500000$ đồng". Một cách tương tự, nhìn về phương diện lịch sử, trong phần lớn quá trình phát triển của toán học, các nhà toán học xưa thường có mặc cảm với những số âm. Các phương trình sẽ luôn được viết lại thành nhiều trường hợp để tránh chúng. Ví dụ, nếu phương trình bậc hai được viết dưới dạng hiện đại là $x^2 + ax+b=0$ với $a,b$ là hai số thực (có thể âm), thì trong quá khữ, phương trình này được chia ra làm ba trường hợp
 \begin{align*}
    &x^2+ax = b;\\
    &x^2+b =ax;\\
