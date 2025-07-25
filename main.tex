@@ -57,7 +57,7 @@ Mỗi số hạng của đa thức có dạng $x^n$ với $n$ nguyên.
 
 Trước khi đến với sô thực với số phức, chúng ta bắt đầu tiếp cận với định nghĩa đơn vị ảo. Cụ thể, đơn vị ảo được kí hiệu là $\mathbf{i}$ \footnote{Phần lớn các sách sẽ kí hiệu số ảo là chữ $i$ thông thường. Tôi kí hiệu thành chữ $\mathbf{i}$ đứng in đậm để, thứ nhất, bảo toàn chữ $i$ cho nhiệm vụ khác, và thứ hai, nhấn mạnh rằng nó mang tính chiều.} và thỏa mãn $$\mathbf{i}^2 = -1 \text{ hay } \mathbf{i} = \sqrt{-1}.$$
 
-Để có số ảo, ta nhân một số thực $b \neq 0$ với đơn vị ảo để thành $\mathbf{i}b$. Một số phức bao gồm thành phần thực và thành phẩn ảo cộng vào. Viết dưới dạng kí hiệu, một số phức có dạng là $$z=a+\mathbf{i}b$$ với $a, b$ thực.
+Để có số ảo, ta nhân một số thực $b \neq 0$ với đơn vị ảo để thành $\mathbf{i}b$. Một số phức bao gồm thành phần thực và thành phẩn ảo cộng vào. Viết dưới \textit{dạng chính tắc}, một số phức có dạng là $$z=a+\mathbf{i}b$$ với $a, b$ thực.
 
 Chúng ta sẽ coi như có thể thực hiện các định luật đại số thông thường trên tập số phức. Coi $\mathbf{i}$ là một biến với $\mathbf{i}^2 = -1$. Để cộng (hay trừ) hai số phức $v = a + \mathbf{i}b$ và $w = c + \mathbf{i}d$, ta thực hiện cộng (hay trừ) các thành phần tương đương (phần thực với phần thực, phần ảo với phần ảo). Viết dưới dạng toán học:
 \begin{equation*}
@@ -75,6 +75,51 @@ Nhân hai số phức sẽ yêu cầu sử dụng tính chất phân phối gi�
 \end{align*}
 
 Trước khi chia hai số phức, chúng ta cần phải biết đến khái niệm số phức liên hợp và tính chất đặc biệt của nó. Một số phức $z = a+\mathbf{i}b$ sẽ có số phức liên hợp là $$\bar{z} = z^* = a - \mathbf{i}b.$$ Khi này, thực hiện phép nhân số phức $z$ với liên hợp của nó để có $$z\bar{z} = (a+\mathbf{i}b)(a-\mathbf{i}b) = a^2 + b^2.$$ Để ý rằng $a^2 + b^2$ là một số thực do $a, b$ đã là số thực từ định nghĩa, và cũng cần phải nhớ lại rằng khi nhân cả số bị chia và số chia với một số thì thương không đổi. Cho nên, để chia hai số phức, chúng ta nhân cả tử và mẫu với liên hợp của số chia $$\frac{v}{w} = \frac{a + \mathbf{i}b}{c + \mathbf{i}d} = \frac{\left(a + \mathbf{i}b\right)\left(c - \mathbf{i}d\right)}{\left(c + \mathbf{i}d\right)\left(c - \mathbf{i}d\right)} = \frac{\left(ac+bd\right) + \mathbf{i}\left(bc - ad\right)}{c^2+d^2}.$$ Từ đó, chúng ta đưa phép chia hai số phức thành phép chia số phức với số thực và có kết quả là $$\frac{v}{w} = \frac{a + \mathbf{i}b}{c + \mathbf{i}d} = \frac{ac+bd}{c^2+d^2}+\mathbf{i}\cdot\frac{bc - ad}{c^2+d^2}.$$
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+    \centering
+    \begin{tikzpicture}
+      \draw[->] (-2,0) -- (4,0) node[right] {$\operatorname*{Re}(z)$};
+      \draw[->] (0,-1) -- (0,3) node[above] {$\operatorname*{Im}(z)$};
+      \filldraw (3,2) circle (1pt) node[anchor=west] {$z = 3 + 2\mathbf{i}$};
+      \filldraw (0, 0) circle (1pt);
+      \node[above] at (3,2) {$Z(3, 2)$};
+      \draw[dashed, thick] (0, 0) -- (3, 2);
+      \draw (0,0) -- (0.1, -0.15);
+      \draw (3, 2) -- (3.1, 1.85);
+      \draw[<->] (0.05, -0.075) -- (3.05, 1.925);
+      \node[right] at ($(0.1, -0.1)!0.5!(3.1, 1.9)$) {$|z| = \sqrt{3^2 + 2^2} = \sqrt{13}$};
+   \end{tikzpicture}
+
+   \caption{Biểu diễn $z = 3 + 2\mathbf{i}$ trên mặt phẳng tọa độ}
+   \label{fig:bieu_dien_so_phuc}
+\end{wrapfigure}
+
+Ngoài cách biểu diễn đại số, còn có cách biểu diễn hình học trên mặt phẳng tọa độ của số phức qua việc coi trục hoành và trục tung lần lượt biểu diễn phần thực và phần ảo của số phức. Cụ thể, số phức $z = a + \mathbf{i}b$ được biểu diễn bởi một điểm $Z(a,b)$ trên hệ tọa độ vuông góc. Khi này, $Z$ là \textit{ảnh} (hay đơn giản là \textit{điểm biểu diễn}) của $z$ và $(a,b)$ được gọi là \textit{tọa vị} (hay \textit{tọa độ phức}) của $z$.
+
+Hình \ref{fig:bieu_dien_so_phuc} đã biểu diễn số phức $z = 3 + 2\mathbf{i}$ trên mặt phẳng tọa độ. Từ đây, chúng ta có thể phát hiện ra những đặc tính khác của $z$ khác tọa vị. Đầu tiên, chúng ta có thể đo khoảng cách từ ảnh $Z$ đến gốc $(0;0)$, và từ đó, chúng ta sẽ nhận được \textit{mô-đun (module)} của $z$, kí hiệu: $|z|$. Bạn đọc có thể để ý rằng kí hiệu giống như kí hiệu giá trị tuyệt đối của số thực. Cũng có thể hiểu được tại sao lại vậy nếu như bạn đọc nhớ cách biểu diễn khoảng cách hình học của giá trị tuyệt đối trên trục số thực. Khi chúng ta có một điểm biểu diễn một số thực $x$ trên một trục thì giá trị tuyệt đối của $x$ chính là khoảng cách từ $x$ đến điểm $0$.
+
+\begin{figure}[h]
+   \centering
+   \begin{tikzpicture}
+      \draw[<->] (-5, 0) -- (5, 0);
+
+      \foreach \pt/\lbl in {0/0, 4/x, -2.5/y} {
+         \filldraw (\pt, 0) circle (1pt);
+         \draw (\pt, 0) -- (\pt, -0.2);
+         \node[above] at (\pt, 0) {$\lbl$};
+      }
+      
+      \draw[<->] (-2.5, -0.1) -- (0, -0.1);
+      \node[below] at (-1.25, -0.1) {$|y|$};
+      \draw[<->] (4, -0.1) -- (0, -0.1);
+      \node[below] at (2, -0.1) {$|x|$};
+   \end{tikzpicture}
+   \caption{Giá trị tuyệt đối trên trục thực}
+   \label{fig:gia_tri_tuyet_doi_thuc}
+\end{figure}
+
+Một cách tương tự, $|z|$ là khoảng cách từ $Z$ đến gốc tọa độ. Công thức Pi-ta-go được sử dụng để tính khoảng cách này: $$|z| = \sqrt{a^2+b^2}.$$
 
 Thật sự, rất khó cho nhiều người không thường xuyên thường thức về toán ngay lập tức tìm ra và cảm nhận được ý nghĩa thực tiễn của số ảo. Chúng ta không thể tưởng tượng được số ảo một cách trực quan như các số mà chúng ta thường thấy ở ngoài cuộc sống như $5$ cái bút hay $\frac{1}{3}$ giờ. Đi kèm với đó, kể cả trên lí thuyết toán của ghế nhà trường, cũng sẽ không xảy ra trường hợp nào để cho một số nhân với chính nó ra một số âm. 
 
@@ -129,7 +174,7 @@ Với sự xây dựng ban đầu của Bom-be-li làm gốc, trong những th�
    \item
 \end{enumerate}
 
-\begin{figure}[h!]
+\begin{wrapfigure}{r}{0.3\textwidth}
    \centering
    \begin{tikzpicture}
       \draw[thick] (0,0) circle (2cm);
@@ -144,7 +189,7 @@ Với sự xây dựng ban đầu của Bom-be-li làm gốc, trong những th�
    \end{tikzpicture}
    \caption{Quỹ đạo trái đất}
    \label{fig:earth}
-\end{figure}
+\end{wrapfigure}
 
 Gọi $A$ là vị trí của trái đất bây giờ, $B$ là vị trí của trái đất sau $4$ tháng theo như hình \ref{fig:earth}. Coi một đơn vị trên tọa độ bằng độ dài bán kính của quỹ đạo tròn, tức là $r=1,5\cdot10^8$ km. Ta có tọa độ điểm $A$ là $(1;0)$. Tọa độ điểm $B$ là $\left(\cos(120^{\circ}); \sin(120^{\circ})\right)=\left(-\frac{1}{2}; \frac{\sqrt{3}}{2}\right)$. Từ đó, ta có khoảng cách giữa hai vị trí đó là: $$d = r\cdot \sqrt{\left(1-\left(-\frac{1}{2}\right)\right)^2 + \left(\frac{\sqrt{3}}{2}\right)^2}=\boxed{2,6\cdot10^8\ \text{km}}.$$
 
