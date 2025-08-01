@@ -3,10 +3,12 @@
 \usepackage[T5]{fontenc}
 \usepackage[vietnamese]{babel}
 \usepackage[a4paper]{geometry}
-\usepackage{amsmath, amssymb, blindtext, hyperref, icomma, multicol, tikz, wrapfig, xcolor}
+\usepackage{amsmath, amssymb, blindtext, hyperref, icomma, multicol, steinmetz, tikz, wrapfig, xcolor}
 \usetikzlibrary{calc, shadings}
 
 \geometry{bindingoffset=0.5cm, inner=2cm, outer=2cm, top=2cm, bottom=2cm}
+
+\DeclareMathOperator{\Arg}{Arg}
 
 \title{\Huge Ôn tập Vật Lí}
 \author{Bùi Nhật Minh}
@@ -39,25 +41,23 @@
 
 Phần này bao gồm các kiến thức toán học cần thiết để xây dựng lí thuyết của môn vật lí, giả sử rằng bạn đọc đã có kiến thức đại số và một chút hình học từ ghế nhà trường. Chương này sẽ bao hàm những phần không nằm trong chương trình trung học phổ thông và có thể cả chương trình đại học. Bạn đọc có thể tìm hiểu một cách sơ cấp hay gợi nhớ lại về các khái niệm toán học mà không cần tập trung vào việc chứng minh chặt chẽ các tính chất toán học. Tác giả mong muốn thông qua chương này, bạn đọc có thể có một cảm nhận và từ đó có kĩ năng để áp dụng các khái niệm toán giải quyết các yêu cầu thực tế. Hơn thế nữa, có một niềm cảm hứng để tìm hiểu chuyên sâu các phân môn của toán học.
 
-\section{Giải tích}
-
-\subsection{Những hàm cơ bản}
+\section{Những hàm cơ bản}
 
 \ % Lùi đầu dòng
 
 Trong phần này, các hàm số quen thuộc sẽ được nhắc lại. Đây là những hàm hay thấy nhất trong quá trình học phần lớn các môn khoa học tự nhiên.
 
-Đầu tiên, chúng ta có hàm \textit{đa thức}, thông thường được biểu diễn dưới dạng $$f(x)=P_n(x)=\sum_{i = 0}^n a_i x^i = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0$$ với $n$ là một số nguyên không âm, $a_i$ là các số thực, gọi là các \textit{hệ số}, với mọi $i$ nguyên nằm trong đoạn $[0, n]$ và $a_n \neq 0$. Khi này, $n$ được gọi là \textit{bậc} của đa thức. Khi đa thức có bậc bằng $0$, hay $f(x) = P_0(x) = a_0$, thì được gọi là \textit{đa thức hằng} hay \textit{hàm hằng}. Một trường hợp đặc biệt là khi $f(x) = 0$ \footnote{Sẽ có nhiều sách viết "$f(x) \equiv 0$"\/ thay vì "$f(x) = 0$"\/ để phân biệt giữa khẳng định hai hàm là như nhau so với một phương trình. Tôi không muốn bạn đọc bị vướng víu với nhiều kí hiệu lạ, cho nên tôi sẽ cố gắng dùng những kí hiệu cũ. Bạn đọc có thể tự suy luận ý nghĩa thông qua ngữ cảnh.}, khi này hàm không có bậc nhưng vẫn được gọi là hàm hằng \footnote{Đa số những nhà toán học không coi $f(x) = 0$ là đa thức bậc $0$ do nhiều tính chất của đa thức bị phá vỡ khi gặp trường hợp này. Do đó, $f(x) = 0$ chỉ được coi là "hàm hằng"\/ chứ không phải "\emph{đa thức} hằng". Trong cuốn sách này, trở về sau sẽ chỉ có thuật ngữ "hàm hằng"\/ được sử dụng.}.
+Đầu tiên, chúng ta có hàm \emph{đa thức}, thông thường được biểu diễn dưới dạng $$f(x)=P_n(x)=\sum_{i = 0}^n a_i x^i = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0$$ với $n$ là một số nguyên không âm, $a_i$ là các số thực, gọi là các \emph{hệ số}, với mọi $i$ nguyên nằm trong đoạn $[0, n]$ và $a_n \neq 0$. Khi này, $n$ được gọi là \emph{bậc} của đa thức. Khi đa thức có bậc bằng $0$, hay $f(x) = P_0(x) = a_0$, thì được gọi là \emph{đa thức hằng} hay \emph{hàm hằng}. Một trường hợp đặc biệt là khi $f(x) = 0$ \footnote{Sẽ có nhiều sách viết "$f(x) \equiv 0$"\/ thay vì "$f(x) = 0$"\/ để phân biệt giữa khẳng định hai hàm là như nhau so với một phương trình. Tôi không muốn bạn đọc bị vướng víu với nhiều kí hiệu lạ, cho nên tôi sẽ cố gắng dùng những kí hiệu cũ. Bạn đọc có thể tự suy luận ý nghĩa thông qua ngữ cảnh.}, khi này hàm không có bậc nhưng vẫn được gọi là hàm hằng \footnote{Đa số những nhà toán học không coi $f(x) = 0$ là đa thức bậc $0$ do nhiều tính chất của đa thức bị phá vỡ khi gặp trường hợp này. Do đó, $f(x) = 0$ chỉ được coi là "hàm hằng"\/ chứ không phải "\textit{đa thức} hằng". Trong cuốn sách này, trở về sau sẽ chỉ có thuật ngữ "hàm hằng"\/ được sử dụng.}.
 
 Mỗi số hạng của đa thức có dạng $x^n$ với $n$ nguyên.
 
-\subsection{Số ảo và số phức}
+\section{Số ảo và số phức}
 
 \ % Lùi đầu dòng
 
-Trước khi đến với sô thực với số phức, chúng ta bắt đầu tiếp cận với định nghĩa đơn vị ảo. Cụ thể, đơn vị ảo được kí hiệu là $\mathbf{i}$ \footnote{Phần lớn các sách sẽ kí hiệu số ảo là chữ $i$ thông thường. Tôi kí hiệu thành chữ $\mathbf{i}$ đứng in đậm để, thứ nhất, bảo toàn chữ $i$ cho nhiệm vụ khác, và thứ hai, nhấn mạnh rằng nó mang tính chiều.} và thỏa mãn $$\mathbf{i}^2 = -1 \text{ hay } \mathbf{i} = \sqrt{-1}.$$
+Trước khi đến với sô thực với số phức, chúng ta bắt đầu tiếp cận với định nghĩa đơn vị ảo. Cụ thể, \emph{đơn vị ảo} được kí hiệu là $\mathbf{i}$ \footnote{Phần lớn các sách sẽ kí hiệu số ảo là chữ $i$ thông thường. Tôi kí hiệu thành chữ $\mathbf{i}$ đứng in đậm để bảo toàn chữ $i$ cho nhiệm vụ khác.} và thỏa mãn $$\mathbf{i}^2 = -1 \text{ hay } \mathbf{i} = \sqrt{-1}.$$
 
-Để có số ảo, ta nhân một số thực $b \neq 0$ với đơn vị ảo để thành $\mathbf{i}b$. Một số phức bao gồm thành phần thực và thành phẩn ảo cộng vào. Viết dưới \textit{dạng chính tắc}, một số phức có dạng là $$z=a+\mathbf{i}b$$ với $a, b$ thực.
+Để có số ảo, ta nhân một số thực $b \neq 0$ với đơn vị ảo để thành $\mathbf{i}b$. Một số phức bao gồm thành phần thực và $\mathbf{i}$ lần phẩn ảo cộng vào. Viết dưới \emph{dạng chính tắc}, một số phức có dạng là $$z=a+\mathbf{i}b$$ với $a, b$ thực. Từ một số phức, chúng ta cũng có thể lấy ngược lại giá trị phần thực và phần ảo của nó lần lượt qua hai hàm $\Re{(z)}$ và $\Im{(z)}$ (hoặc $\operatorname*{Re}{(z)}$ và $\operatorname*{Im}{(z)}$). Cụ thể, với $z=a+\mathbf{i}b$ thì $\Re{(z)} = a$ và $\Im{(z)}=b$\footnote{Tại sao không gọi cả $\mathbf{i}b$ là phần ảo? Khi nói đến phần ảo, chúng ta đã ngầm định nó sẽ thuộc về số hạng mà có thừa số $\mathbf{i}$. Viết lại đơn vị ảo trở nên thừa thãi. Hơn nữa, sẽ dễ làm việc hơn khi mà cả $\Re{(z)}$ và $\Im{(z)}$ đều thực và ta không phải chia $\Im{(z)}$ cho $\mathbf{i}$ liên tục.}.
 
 Chúng ta sẽ coi như có thể thực hiện các định luật đại số thông thường trên tập số phức. Coi $\mathbf{i}$ là một biến với $\mathbf{i}^2 = -1$. Để cộng (hay trừ) hai số phức $v = a + \mathbf{i}b$ và $w = c + \mathbf{i}d$, ta thực hiện cộng (hay trừ) các thành phần tương đương (phần thực với phần thực, phần ảo với phần ảo). Viết dưới dạng toán học:
 \begin{equation*}
@@ -95,9 +95,9 @@ Trước khi chia hai số phức, chúng ta cần phải biết đến khái ni
    \label{fig:bieu_dien_so_phuc}
 \end{wrapfigure}
 
-Ngoài cách biểu diễn đại số, còn có cách biểu diễn hình học trên mặt phẳng tọa độ của số phức qua việc coi trục hoành và trục tung lần lượt biểu diễn phần thực và phần ảo của số phức. Cụ thể, số phức $z = a + \mathbf{i}b$ được biểu diễn bởi một điểm $Z(a,b)$ trên hệ tọa độ vuông góc. Khi này, $Z$ là \textit{ảnh} (hay đơn giản là \textit{điểm biểu diễn}) của $z$ và $(a,b)$ được gọi là \textit{tọa vị} (hay \textit{tọa độ phức}) của $z$.
+Ngoài cách biểu diễn đại số, còn có cách biểu diễn hình học trên mặt phẳng tọa độ của số phức qua việc coi trục hoành và trục tung lần lượt biểu diễn phần thực và phần ảo của số phức. Cụ thể, số phức $z = a + \mathbf{i}b$ được biểu diễn bởi một điểm $Z(a,b)$ trên hệ tọa độ vuông góc. Khi này, $Z$ là \emph{ảnh} (hay đơn giản là \emph{điểm biểu diễn}) của $z$ và $(a,b)$ được gọi là \emph{tọa vị} (hay \emph{tọa độ phức}) của $z$.
 
-Hình \ref{fig:bieu_dien_so_phuc} đã biểu diễn số phức $z = 3 + 2\mathbf{i}$ trên mặt phẳng tọa độ. Từ đây, chúng ta có thể phát hiện ra những đặc tính khác của $z$ khác tọa vị. Đầu tiên, chúng ta có thể đo khoảng cách từ ảnh $Z$ đến gốc $(0;0)$, và từ đó, chúng ta sẽ nhận được \textit{mô-đun (module)} của $z$, kí hiệu: $|z|$. Bạn đọc có thể để ý rằng kí hiệu giống như kí hiệu giá trị tuyệt đối của số thực. Cũng có thể hiểu được tại sao lại vậy nếu như bạn đọc nhớ cách biểu diễn khoảng cách hình học của giá trị tuyệt đối trên trục số thực. Khi chúng ta có một điểm biểu diễn một số thực $x$ trên một trục thì giá trị tuyệt đối của $x$ chính là khoảng cách từ $x$ đến điểm $0$.
+Hình \ref{fig:bieu_dien_so_phuc} đã biểu diễn số phức $z = 3 + 2\mathbf{i}$ trên mặt phẳng tọa độ. Từ đây, chúng ta có thể phát hiện ra những đặc tính khác của $z$ khác tọa vị. Đầu tiên, chúng ta có thể đo khoảng cách từ ảnh $Z$ đến gốc $(0;0)$, và từ đó, chúng ta sẽ nhận được \emph{mô-đun (module)} của $z$, kí hiệu: $|z|$. Bạn đọc có thể để ý rằng kí hiệu giống như kí hiệu giá trị tuyệt đối của số thực. Cũng có thể hiểu được tại sao lại vậy nếu như bạn đọc nhớ cách biểu diễn khoảng cách hình học của giá trị tuyệt đối trên trục số thực. Khi chúng ta có một điểm biểu diễn một số thực $x$ trên một trục thì giá trị tuyệt đối của $x$ chính là khoảng cách từ $x$ đến điểm $0$.
 
 \begin{figure}[h]
    \centering
@@ -120,6 +120,74 @@ Hình \ref{fig:bieu_dien_so_phuc} đã biểu diễn số phức $z = 3 + 2\math
 \end{figure}
 
 Một cách tương tự, $|z|$ là khoảng cách từ $Z$ đến gốc tọa độ. Công thức Pi-ta-go được sử dụng để tính khoảng cách này: $$|z| = \sqrt{a^2+b^2}.$$ Cũng là vì lí do đó nên trong một số tài liệu, $|z|$ vẫn được gọi là giá trị tuyệt đối để đảm bảo tính nhất quán.
+
+Trên trục số thực, mốt số cụ thể thì giá trị tuyệt đối của nó chỉ có một giá trị, nhưng nếu đầu ra là một giá trị tuyệt đối thì đầu vào có thể là $2$ số khác nhau. Để biết chính xác là số nào thì cần biết thêm dấu của số đó, hay nói một cách khác, hướng của số đó nếu nhìn từ vị trí gốc $0$. Một cách tương tự, một số phức $z$ chỉ ra được một giá trị mô-đun $|z|$ của nó, nhưng với một $|z|$ thì có thể có nhiều $z$ thỏa mãn. Để biết chính xác được giá trị của $z$ thì chúng ta cần phải biết thêm hướng của $z$. Tuy nhiên, việc xác định hướng này không chỉ đơn giản là nằm trái hay phải trên trục một chiều nữa, mà cần phải xác định vị trí trong mặt phẳng hai chiều. Một cách để thực hiện điều này là xác định \emph{góc} (hay \emph{a-gu-men}) của $z$.
+
+Để xác định góc, chúng ta cần phải có $2$ tia. Một tia có thể được nối từ gốc đến điểm biểu diễn. Một tia còn lại có thể bám theo một trục cố định. Về quy ước, phía dương trục hoành, hay trục thực, được sử dụng làm bờ còn lại. Bạn đọc có thể nghĩ rằng là khi này ta đã có đủ điều kiện để xác định góc. Cũng đũng, đã đủ để từ số phức $z$ ra được góc của $z$. Nhưng từ góc của $z$ vẫn chưa đủ để ra được $z$. Hãy nhìn vào hình \ref{fig:hai_truong_hop_goc}:
+\begin{figure}[h]
+   \centering
+   \begin{tikzpicture}
+      \draw[->] (-1, 0) -- (5, 0);
+      \draw[->] (0, -3) -- (0, 3);
+
+      \filldraw (4,2) circle (1pt) node[anchor=west] {$z = 4 + 2\mathbf{i}$};
+      \filldraw (4,-2) circle (1pt) node[anchor=west] {$z = 4 - 2\mathbf{i}$};
+
+      \draw[dashed, ->, thick] (0, 0) -- (4, 2);
+      \draw[dashed, ->, thick] (0, 0) -- (4, -2);
+
+      \draw (0.5,0) arc[start angle=0, end angle={atan(2/4)}, radius=0.5];
+      \node at (0.75,0.18) {$\theta$};
+
+      \draw (0.75,0) arc[start angle=0, end angle={-atan(2/4)}, radius=0.75];
+      \node at (0.9,-0.2) {$\theta$};
+   \end{tikzpicture}
+   \caption{$4+2\mathbf{i}$ và $4-2\mathbf{i}$ có độ lớn góc bằng nhau.}
+   \label{fig:hai_truong_hop_goc}
+\end{figure}
+
+
+Để phân biệt hai góc này, người ta sử dụng khái niệm \emph{góc định hướng}. Một cách đơn giản, quay trục hoành ngược chiều kim đồng hồ cho đến khi chạm vào cạnh còn lại. Góc đã quay là độ lớn của góc định hướng. Khi quay thuận chiều kim đồng hồ thì góc đó quy ước là quay góc âm. Từ đó, chúng ta có thể phân biệt góc nhìn như hình \ref{fig:hai_truong_hop_goc_dinh_huong}:
+
+\begin{figure}[h]
+   \centering
+   \begin{tikzpicture}
+      \draw[->] (-2, 0) -- (5, 0);
+      \draw[->] (0, -3) -- (0, 3);
+
+      \filldraw (4,2) circle (1pt) node[anchor=west] {$z = 4 + 2\mathbf{i}$};
+      \filldraw (4,-2) circle (1pt) node[anchor=west] {$z = 4 - 2\mathbf{i}$};
+
+      \draw[dashed, ->, thick] (0, 0) -- (4, 2);
+      \draw[dashed, ->, thick] (0, 0) -- (4, -2);
+
+      \draw[->] (0.5,0) arc[start angle=0, end angle={atan(2/4)}, radius=0.5];
+      \node at (0.75,0.18) {$\theta$};
+
+      \draw[->] (0.75,0) arc[start angle=0, end angle={-atan(2/4)}, radius=0.75];
+      \node at (1,-0.22) {$-\theta$};
+
+      \draw[->] (1,0) arc[start angle=0, end angle={360-atan(2/4)}, radius=1];
+      \node at (-1.5,0.7) {$2\pi - \theta$};
+   \end{tikzpicture}
+   \caption{$4+2\mathbf{i}$ và $4-2\mathbf{i}$ có độ lớn góc bằng nhau.}
+   \label{fig:hai_truong_hop_goc_dinh_huong}
+\end{figure}
+
+Người ta kí hiệu góc của số phức là $\arg{(z)}$ hoặc $\Arg{(z)}$. Cũng giống như góc không định hướng, khi cộng thêm hay bớt đi $2\pi$ ra-đi-an (hay $360$ độ) thì "hướng nhìn"~cũng không thay đổi. Để cho $\arg{(z)}$ chỉ trả ra một giá trị duy nhất, quy ước là lấy góc trong nửa đoạn $\left(-\pi;\pi\right]$ (hay $\left(-180^\circ;180^\circ\right]$). Như ví dụ trong hình \ref{fig:hai_truong_hop_goc_dinh_huong}, $\arg{(4+2\mathbf{i})} = \theta = \arctan\left(\frac{2}{4}\right) \approx 0,464~\text{rad}$ (hay $26,565^\circ$) và $\arg{(4-2\mathbf{i})} = -\theta = -\arctan\left(\frac{2}{4}\right) \approx -0,464~\text{rad}$ (cũng có thể được viết lại là $-26,565^\circ$).
+
+Như đã viết, có khoảng cách và hướng nhìn thì chúng ta sẽ có được vị trí số phức. Cách biểu diễn này được gọi là \emph{dạng lượng giác} của số phức. Đặt $r = |z|$ và $\varphi = \arg{(z)}$, dạng lượng giác của $z$ được kí hiệu là $z = r \angle \varphi = r \phase{\varphi}$. Quy đổi giữa dạng lượng giác và dạng chính tắc, khi $z = a + \mathbf{i}b = r \phase{\varphi}$ thì
+\[
+\left\{
+\begin{aligned}
+   a &= \Re{(z)} = r \cos{(\varphi)} \\ 
+   b &= \Im{(z)} = r \sin{(\varphi)}
+\end{aligned}
+\right.
+\]
+và từ đó $z = r\left(\cos{(\varphi)} + \mathbf{i}\sin{(\varphi)}\right)$. Liên hợp của $z$ dưới dạng lượng giác là $\bar{z} = r\left(\cos{(\varphi)} - \mathbf{i}\sin{(\varphi)}\right) = r \phase{-\varphi}$.
+
+
 
 Thật sự, rất khó cho nhiều người không thường xuyên thường thức về toán ngay lập tức tìm ra và cảm nhận được ý nghĩa thực tiễn của số ảo. Chúng ta không thể tưởng tượng được số ảo một cách trực quan như các số mà chúng ta thường thấy ở ngoài cuộc sống như $5$ cái bút hay $\frac{1}{3}$ giờ. Đi kèm với đó, kể cả trên lí thuyết toán của ghế nhà trường, cũng sẽ không xảy ra trường hợp nào để cho một số nhân với chính nó ra một số âm. 
 
@@ -743,7 +811,7 @@ Gọi $t_1$ là thời gian gốc để bóng bay từ tay lên vị trí cao nh
    \implies h_2 = n^2 h_1.
 \end{equation*}
 
-Từ đó, ta có quả bóng cao lên $\boxed{n^2 - 1 \text{ lần độ cao gốc}}$.
+Từ đó, ta có quả bóng cao lên hơn được $\boxed{n^2 - 1 \text{ lần độ cao gốc}}$.
 
 \begin{thebibliography}{1}
 \bibitem{Agarwal2011}
