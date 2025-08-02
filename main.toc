@@ -1,8 +1,7 @@
 \babel@toc {vietnamese}{}\relax 
 \contentsline {chapter}{\numberline {0}Kiến thức toán học nền tảng}{3}{chapter.0}%
 \contentsline {section}{\numberline {0.1}Những hàm cơ bản}{3}{section.0.1}%
-\contentsline {section}{\numberline {0.2}Số ảo và số phức}{3}{section.0.2}%
-\contentsline {subsection}{\numberline {0.2.1}Giới hạn}{6}{subsection.0.2.1}%
-\contentsline {section}{\numberline {0.3}Bài tập}{6}{section.0.3}%
-\contentsline {chapter}{\numberline {1}Cơ bản của xử lí số liệu trong vật lí}{8}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Chuyển động}{11}{chapter.2}%
+\contentsline {section}{\numberline {0.2}Số ảo và số phức}{5}{section.0.2}%
+\contentsline {section}{\numberline {0.3}Bài tập tổng hợp}{8}{section.0.3}%
+\contentsline {chapter}{\numberline {1}Cơ bản của xử lí số liệu trong vật lí}{9}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Chuyển động}{12}{chapter.2}%

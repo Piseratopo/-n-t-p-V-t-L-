@@ -3,8 +3,9 @@
 \usepackage[T5]{fontenc}
 \usepackage[vietnamese]{babel}
 \usepackage[a4paper]{geometry}
-\usepackage{amsmath, amssymb, blindtext, hyperref, icomma, multicol, steinmetz, tikz, wrapfig, xcolor}
+\usepackage{amsmath, amssymb, blindtext, hyperref, icomma, multicol, steinmetz, tikz, wrapfig, xcolor, xeCJK}
 \usetikzlibrary{calc, shadings}
+\setCJKmainfont[AutoFakeSlant=0.15,AutoFakeBold=2.0]{Nom Na Tong}
 
 \geometry{bindingoffset=0.5cm, inner=2cm, outer=2cm, top=2cm, bottom=2cm}
 
@@ -39,7 +40,7 @@
 
 \ % Lùi đầu dòng
 
-Phần này bao gồm các kiến thức toán học cần thiết để xây dựng lí thuyết của môn vật lí, giả sử rằng bạn đọc đã có kiến thức đại số và một chút hình học từ ghế nhà trường. Chương này sẽ bao hàm những phần không nằm trong chương trình trung học phổ thông và có thể cả chương trình đại học. Bạn đọc có thể tìm hiểu một cách sơ cấp hay gợi nhớ lại về các khái niệm toán học mà không cần tập trung vào việc chứng minh chặt chẽ các tính chất toán học. Tác giả mong muốn thông qua chương này, bạn đọc có thể có một cảm nhận và từ đó có kĩ năng để áp dụng các khái niệm toán giải quyết các yêu cầu thực tế. Hơn thế nữa, có một niềm cảm hứng để tìm hiểu chuyên sâu các phân môn của toán học.
+Phần này bao gồm các kiến thức toán học cần thiết để xây dựng lí thuyết của môn vật lí (hoặc ít nhất để đọc tài liệu này), giả sử rằng bạn đọc đã có kiến thức đại số và một chút hình học từ ghế nhà trường. Chương này sẽ bao hàm những phần không nằm trong chương trình trung học phổ thông và có thể cả chương trình đại học. Bạn đọc có thể tìm hiểu một cách sơ cấp hay gợi nhớ lại về các khái niệm toán học mà không cần tập trung vào việc chứng minh chặt chẽ các tính chất toán học. Tác giả mong muốn thông qua chương này, bạn đọc có thể có một cảm nhận và từ đó có kĩ năng để áp dụng các khái niệm toán giải quyết các yêu cầu thực tế. Hơn thế nữa, có một niềm cảm hứng để tìm hiểu chuyên sâu các phân môn của toán học.
 
 \section{Những hàm cơ bản}
 
@@ -47,15 +48,119 @@ Phần này bao gồm các kiến thức toán học cần thiết để xây d�
 
 Trong phần này, các hàm số quen thuộc sẽ được nhắc lại. Đây là những hàm hay thấy nhất trong quá trình học phần lớn các môn khoa học tự nhiên.
 
-Đầu tiên, chúng ta có hàm \emph{đa thức}, thông thường được biểu diễn dưới dạng $$f(x)=P_n(x)=\sum_{i = 0}^n a_i x^i = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0$$ với $n$ là một số nguyên không âm, $a_i$ là các số thực, gọi là các \emph{hệ số}, với mọi $i$ nguyên nằm trong đoạn $[0, n]$ và $a_n \neq 0$. Khi này, $n$ được gọi là \emph{bậc} của đa thức. Khi đa thức có bậc bằng $0$, hay $f(x) = P_0(x) = a_0$, thì được gọi là \emph{đa thức hằng} hay \emph{hàm hằng}. Một trường hợp đặc biệt là khi $f(x) = 0$ \footnote{Sẽ có nhiều sách viết "$f(x) \equiv 0$"\/ thay vì "$f(x) = 0$"\/ để phân biệt giữa khẳng định hai hàm là như nhau so với một phương trình. Tôi không muốn bạn đọc bị vướng víu với nhiều kí hiệu lạ, cho nên tôi sẽ cố gắng dùng những kí hiệu cũ. Bạn đọc có thể tự suy luận ý nghĩa thông qua ngữ cảnh.}, khi này hàm không có bậc nhưng vẫn được gọi là hàm hằng \footnote{Đa số những nhà toán học không coi $f(x) = 0$ là đa thức bậc $0$ do nhiều tính chất của đa thức bị phá vỡ khi gặp trường hợp này. Do đó, $f(x) = 0$ chỉ được coi là "hàm hằng"\/ chứ không phải "\textit{đa thức} hằng". Trong cuốn sách này, trở về sau sẽ chỉ có thuật ngữ "hàm hằng"\/ được sử dụng.}.
+Đầu tiên, chúng ta có hàm \emph{đa thức}, thông thường được biểu diễn dưới dạng $$f(x)=P_n(x)=\sum_{i = 0}^n a_i x^i = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0$$ với $n$ là một số nguyên không âm, $a_i$ là các số thực, gọi là các \emph{hệ số}, với mọi $i$ nguyên nằm trong đoạn $[0, n]$ và $a_n \neq 0$. Khi này, $n$ được gọi là \emph{bậc} của đa thức. Ví dụ:
+\begin{itemize}
+   \item $f(x) = 2x^2 + 3x + 1$ là một đa thức bậc $2$ với các hệ số $a_2 = 2$, $a_1 = 3$, $a_0 = 1$;
+   \item $g(y) = y^3 - 4y$ là một đa thức bậc $3$ với các hệ số $b_3 = 1$, $b_2 = 0$, $b_1 = -4$, $b_0 = 0$;
+   \item $h(z) = 5$ là một đa thức bậc $0$ với hệ số $c_0 = 5$;
+\end{itemize}
+Tính toán một số giá trị mẫu:
+\begin{itemize}
+   \item $p(1) = 7 \cdot 1^4 - 2 \cdot 1^2 + 9 = 14$ với $q(t)= 7t^4 - 2t^2 + 9$ là một đa thức bậc $4$ với các hệ số $d_4 = 7$, $d_3 = 0$, $d_2 = -2$, $d_1 = 0$, $d_0 = 9$;
+   \item $q(2) = -3 \cdot 2 + 8 = 2$ với $q(r) = -3r + 8$ là một đa thức bậc $1$ với các hệ số $e_1 = -3$, $e_0 = 8$.
+\end{itemize}
+Khi đa thức có bậc bằng $0$, hay $f(x) = P_0(x) = a_0$, thì được gọi là \emph{đa thức hằng} hay \emph{hàm hằng}. Một trường hợp đặc biệt là khi $f(x) = 0$ \footnote{Sẽ có nhiều sách viết "$f(x) \equiv 0$"\/ thay vì "$f(x) = 0$"\/ để phân biệt giữa khẳng định hai hàm là như nhau so với một phương trình. Tác giả không muốn bạn đọc bị vướng víu với nhiều kí hiệu lạ, cho nên Tác giả sẽ cố gắng dùng những kí hiệu cũ. Bạn đọc có thể tự suy luận ý nghĩa thông qua ngữ cảnh.}, khi này hàm không có bậc nhưng vẫn được gọi là hàm hằng \footnote{Đa số những nhà toán học không coi $f(x) = 0$ là đa thức bậc $0$ do nhiều tính chất của đa thức bị phá vỡ khi gặp trường hợp này. Do đó, $f(x) = 0$ chỉ được coi là "hàm hằng"\/ chứ không phải "\textit{đa thức} hằng". Trong cuốn sách này, trở về sau sẽ chỉ có thuật ngữ "hàm hằng"\/ được sử dụng.}.
 
-Mỗi số hạng của đa thức có dạng $x^n$ với $n$ nguyên.
+Mỗi số hạng của đa thức có dạng $x^n$ với $n$ nguyên. Tuy nhiên, nếu chúng ta lấy $x$ lũy thừa với một số thực $a$ bất kì, khi đó chúng ta sẽ có \emph{hàm lũy thừa}. Dạng tổng quát của hàm này là $$f(x) = x^a$$ với $a$ thực. Ngoài ra, khi làm việc trên tập số thực, có một vài điều kiện xác định ngặt nghèo cho đầu vào $x$ đi kèm. Cụ thể:
+\begin{itemize}
+   \item Nếu $a$ là số nguyên dương $\left(a \in \mathbb{Z}^+\right)$ thì tập xác định là toàn bộ $\mathbb{R}$;
+   \item Nếu $a$ là số nguyên không dương (âm hoặc bằng $0$, kí hiệu $a \in \mathbb{Z} \setminus\mathbb{Z}^+$) thì tập xác định là tập thực bỏ số $0$ $\left(\mathbb{R} \setminus \{0\}\right)$;
+   \item Nếu $a$ không nguyên ($a \notin \mathbb{Z}$) thì tập xác định là toàn bộ số dương $\mathbb{R}^+$\footnote{Tại sao điều kiện lại phải nhiều trường hợp vậy? Do chúng ta đang làm việc trên tập số thực. Khi sang miền phức thì đầu vào hàm này sẽ có nhiều sự tự do hơn.}.
+\end{itemize}
+Ví dụ:
+\begin{itemize}
+   \item $f(x) = x^{\frac{1}{3}}$ là hàm lũy thừa với $a = \frac{1}{3}$, tập xác định là $\mathbb{R}^+$;
+   \item $g(y) = y^{4}$ là hàm lũy thừa với $a = 4$, tập xác định là $\mathbb{R}$;
+   \item $h(z) = z^{-3}$ là hàm lũy thừa với $a = -3$, tập xác định là $\mathbb{R} \setminus \{0\}$;
+   \item $p(t) = t^{\pi}$ là hàm lũy thừa với $a = \pi$, tập xác định là $\mathbb{R}^+$;
+   \item $q(u) = u^0 = 1$ là hàm lũy thừa với $a = 0$, tập xác định là $\mathbb{R} \setminus \{0\}$;
+\end{itemize}
+Tính toán một số giá trị mẫu:
+\begin{itemize}
+   \item $\textit{日}(-5) = (-5)^2 = 25$ với $\textit{日}\left(\textit{𠶎}\right) = \textit{𠶎}^2$ là hàm lũy thừa với $a = 2$;
+   \item $\textit{月}(16) = 16^{2,5} = 1024$ với $\textit{月}\left(\textit{啛}\right) = \textit{啛}^{2,5}$ là hàm lũy thừa với $a = 2,5$;
+   \item $\textit{丫}(-7) = (-7)^{-1} = -\frac{1}{7}$ với $\textit{丫}\left(\textit{低}\right) = \textit{低}^{-1} = \frac{1}{\textit{低}}$ là hàm lũy thừa với $a = -1$.
+\end{itemize}
+
+Hàm lũy thừa có trong nó những hàm quen thuộc mà có thể bạn đọc đã nhận ra, kể như hàm phân thức $x^{-b} = \frac{1}{x^b}$ hay hàm khai căn $x^{\frac{1}{c}} = \sqrt[n]{x}$. Những hàm này có cùng tập xác định với hàm lũy thừa kể trên\footnote{Ê, nếu hàm khai căn cũng chia sẻ cùng tập xác định với hàm lũy thừa thì $\sqrt[3]{-27} = (-27)^{\frac{1}{3}} = -3$ cũng không xác định à? Nhiều sách vẫn cho phép khai căn mũ lẻ cho số âm, và nếu bạn đọc muốn thực hiện khai căn như vậy thì tác giả cũng không cấm. Tuy nhiên, khai căn là một phép tính đặc biệt. Khi xét đến trường số phức, \textit{hàm khai căn} không còn là một hàm chỉ trả ra một số mà là một tập số. Để muốn nó vẫn là một hàm theo nghĩa thường thì phải có quy ước, và theo quy ước đó, $$\sqrt[3]{-27} = \frac{3}{2} + \mathbf{i}\frac{3\sqrt{3}}{2}.$$}.
+
+Khi tính toán đại số, có một số tính chất quen thuộc mà bạn đọc nên ghi nhớ. Với mọi $a, b$ thực và $x$ thực sao cho mọi tính toán có nghĩa, khi này:
+\begin{itemize}
+   \item $x^a\cdot x^b = x^{a+b}$;
+   \item $\frac{x^a}{x^b} = x^{a - b}$;
+   \item $(x^a)^b = x^{a\cdot b}$.
+\end{itemize}
+
+Một kiểu hàm có tên tương tự mà hay gây nhầm lẫn là \emph{hàm số mũ}. Hàm này có dạng $$f(x) = a^x$$ với $a$ là một số thực dương. Ví dụ:
+\begin{itemize}
+   \item $f(x) = 2^x$ là hàm số mũ với cơ số $a = 2$;
+   \item $g(y) = 10^y$ là hàm số mũ với cơ số $a = 10$;
+   \item $h(z) = e^z$ là hàm số mũ với cơ số $a = e$ (số Ơ-le).
+\end{itemize}
+Tính toán một số giá trị mẫu:
+\begin{itemize}
+   \item $f(3) = 2^3 = 8$ với $f(x) = 2^x$;
+   \item $g(-1) = 10^{-1} = 0,1$ với $g(y) = 10^y$;
+   \item $h(0) = e^0 = 1$ với $h(z) = e^z$.
+\end{itemize}
+Tương tự với hàm lũy thừa, hàm số mũ cũng có những đẳng thức quen thuộc. Với $a, b, x$ là ba số thực sao cho mọi tính toán có nghĩa, chúng ta có:
+\begin{itemize}
+   \item $(a\cdot b)^x=a^x\cdot b^x$;
+   \item $\left(\frac{a}{b}\right)^x = \frac{a^x}{b^x}$.
+\end{itemize}
+
+Để phân biệt giữa hàm lũy thừa và hàm số mũ, mời bạn đọc tham khảo bảng \ref{tab:bảng so sánh lũy thừa số mũ}.
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Đặc điểm} & \textbf{Hàm lũy thừa} & \textbf{Hàm số mũ} \\
+\hline
+Dạng tổng quát & $f(x) = x^a$ & $f(x) = a^x$ \\
+\hline
+Biến số & $x$ ở cơ số & $x$ ở số mũ \\
+\hline
+Tham số & $a$ là số thực bất kỳ & $a$ là số thực dương khác $1$\\
+\hline
+Tập xác định & Phụ thuộc vào $a$ & $x \in \mathbb{R}$ \\
+\hline
+Ví dụ & $f(x) = x^2$, $f(x) = x^{-1}$ & $f(x) = 2^x$, $f(x) = e^x$ \\
+\hline
+\end{tabular}
+\caption{So sánh hàm lũy thừa và hàm số mũ}
+\label{tab:bảng so sánh lũy thừa số mũ}
+\end{table}
+
+Người ta thường nói ngược lại của hàm lũy thừa là hàm khai căn, tỉ như nếu $f(x) = x^a$ thì (có thể) $x = \sqrt[a]{f(x)}$. Thế nếu $f(x) = a^x$ thì $x$ là gì của $f(x)$? Chúng ta bây giờ cần đến \emph{hàm lô-ga-rít (logarithm)} và bắt đầu phải dùng nhiều chữ khi gọi hàm: $$f(x) = \log_a {\left(x\right)}.$$
+
+Chúng ta có mối liên hệ $f(x) = a^x \implies x = \log_a {\left(f(x)\right)}$. Hàm lô-ga-rít cơ số $a$ ($\log_a {\left(x\right)}$) chỉ xác định khi $a > 0$, $a \neq 1$ và $x > 0$. Đặc biệt, khi $a = 10$ thì hàm không cần phải viết cơ số và trở thành $f(x) = \log(x)$. Khi $a = e$, là số Ơ-le vừa được nhắc đến, thì hàm có thể được viết là $f(x) = \ln(x)$. Ví dụ:
+\begin{itemize}
+   \item $f(x) = \log_2 (x)$ là hàm lô-ga-rít với cơ số $a = 2$;
+   \item $g(y) = \log_{10} (y) = \log(y)$ là hàm lô-ga-rít với cơ số $a = 10$;
+   \item $h(z) = \log_e (z)=\ln(z)$ là hàm lô-ga-rít với cơ số $a = e$.
+\end{itemize}
+Tính toán một số giá trị mẫu:
+\begin{itemize}
+   \item $f(2) = \log_2 (8) = 3$ vì $2^3 = 8$;
+   \item $g(100) = \log (100) = 2$ vì $10^2 = 100$;
+   \item $h(e) = \ln (e) = 1$ vì $e^1 = e$.
+\end{itemize} 
+
+\exercise Phác thảo đồ thị của những hàm sau:
+\begin{multicols}{3}
+\begin{enumerate}
+   \item $f(x) = x + 2$; 
+   \item $f(x) = x^2 + 2x + 3$;
+   \item $f(x) = x^3 - 9x^2 + 24x - 16$;
+   \item $f(x) = 2$
+\end{enumerate}
+\end{multicols}
 
 \section{Số ảo và số phức}
 
 \ % Lùi đầu dòng
 
-Trước khi đến với sô thực với số phức, chúng ta bắt đầu tiếp cận với định nghĩa đơn vị ảo. Cụ thể, \emph{đơn vị ảo} được kí hiệu là $\mathbf{i}$ \footnote{Phần lớn các sách sẽ kí hiệu số ảo là chữ $i$ thông thường. Tôi kí hiệu thành chữ $\mathbf{i}$ đứng in đậm để bảo toàn chữ $i$ cho nhiệm vụ khác.} và thỏa mãn $$\mathbf{i}^2 = -1 \text{ hay } \mathbf{i} = \sqrt{-1}.$$
+Trước khi đến với sô thực với số phức, chúng ta bắt đầu tiếp cận với định nghĩa đơn vị ảo. Cụ thể, \emph{đơn vị ảo} được kí hiệu là $\mathbf{i}$ \footnote{Phần lớn các sách sẽ kí hiệu số ảo là chữ $i$ thông thường. Tác giả kí hiệu thành chữ $\mathbf{i}$ đứng in đậm để bảo toàn chữ $i$ cho nhiệm vụ khác.} và thỏa mãn $$\mathbf{i}^2 = -1 \text{ hay } \mathbf{i} = \sqrt{-1}.$$
 
 Để có số ảo, ta nhân một số thực $b \neq 0$ với đơn vị ảo để thành $\mathbf{i}b$. Một số phức bao gồm thành phần thực và $\mathbf{i}$ lần phẩn ảo cộng vào. Viết dưới \emph{dạng chính tắc}, một số phức có dạng là $$z=a+\mathbf{i}b$$ với $a, b$ thực. Từ một số phức, chúng ta cũng có thể lấy ngược lại giá trị phần thực và phần ảo của nó lần lượt qua hai hàm $\Re{(z)}$ và $\Im{(z)}$ (hoặc $\operatorname*{Re}{(z)}$ và $\operatorname*{Im}{(z)}$). Cụ thể, với $z=a+\mathbf{i}b$ thì $\Re{(z)} = a$ và $\Im{(z)}=b$\footnote{Tại sao không gọi cả $\mathbf{i}b$ là phần ảo? Khi nói đến phần ảo, chúng ta đã ngầm định nó sẽ thuộc về số hạng mà có thừa số $\mathbf{i}$. Viết lại đơn vị ảo trở nên thừa thãi. Hơn nữa, sẽ dễ làm việc hơn khi mà cả $\Re{(z)}$ và $\Im{(z)}$ đều thực và ta không phải chia $\Im{(z)}$ cho $\mathbf{i}$ liên tục.}.
 
@@ -201,23 +306,8 @@ với $a,b$ là hai số thực luôn dương. Và cũng từ sự mặc cảm v
 
 Với sự xây dựng ban đầu của Bom-be-li làm gốc, trong những thế kỉ sau, tên gọi và lí thuyết về cách biểu diễn số phức được hình thành.
 
-\subsection{Giới hạn}
-\ % Lùi đầu dòng
+\section{Bài tập tổng hợp}
 
-
-
-\section{Bài tập}
-\exercise Phác thảo đồ thị của những hàm sau:
-\begin{multicols}{3}
-\begin{enumerate}
-   \item $f(x) = x + 2$; 
-   \item $f(x) = x^2 + 2x + 1$;
-   \item $f(x) = x^3 - 9x^2 + 24x - 16$;
-   \item $f(x) = 2$
-\end{enumerate}
-\end{multicols}
-
-\solution
 
 \chapter{Cơ bản của xử lí số liệu trong vật lí}
 \exercise Khoảng cách trung bình từ trái đất đến mặt trời là $1,5 \cdot 10^8$ km. Giả sử quỹ đạo của trái đất quanh mặt trời là tròn và mặt trời được đặt tại gốc của hệ quy chiếu.
