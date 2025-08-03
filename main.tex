@@ -4,7 +4,7 @@
 \usepackage[vietnamese]{babel}
 \usepackage[a4paper]{geometry}
 \usepackage{amsmath, amssymb, blindtext, hyperref, icomma, multicol, steinmetz, tikz, wrapfig, xcolor, xeCJK}
-\usetikzlibrary{calc, shadings}
+\usetikzlibrary{arrows.meta, calc, shadings}
 \setCJKmainfont[AutoFakeSlant=0.15,AutoFakeBold=2.0]{Nom Na Tong}
 
 \geometry{bindingoffset=0.5cm, inner=2cm, outer=2cm, top=2cm, bottom=2cm}
@@ -29,6 +29,8 @@
    \noindent\textbf{Lời giải \ref{ex\arabic{solution}}:\label{sol\arabic{solution}}}
 }
 
+\newcommand\dblquote[1]{\textquotedblleft #1\textquotedblright}
+
 \begin{document}
 
 \maketitle
@@ -40,9 +42,60 @@
 
 \ % Lùi đầu dòng
 
-Phần này bao gồm các kiến thức toán học cần thiết để xây dựng lí thuyết của môn vật lí (hoặc ít nhất để đọc tài liệu này), giả sử rằng bạn đọc đã có kiến thức đại số và một chút hình học từ ghế nhà trường. Chương này sẽ bao hàm những phần không nằm trong chương trình trung học phổ thông và có thể cả chương trình đại học. Bạn đọc có thể tìm hiểu một cách sơ cấp hay gợi nhớ lại về các khái niệm toán học mà không cần tập trung vào việc chứng minh chặt chẽ các tính chất toán học. Tác giả mong muốn thông qua chương này, bạn đọc có thể có một cảm nhận và từ đó có kĩ năng để áp dụng các khái niệm toán giải quyết các yêu cầu thực tế. Hơn thế nữa, có một niềm cảm hứng để tìm hiểu chuyên sâu các phân môn của toán học.
+Phần này bao gồm các kiến thức toán học cần thiết để xây dựng lí thuyết của môn vật lí (hoặc ít nhất để đọc tài liệu này), giả sử rằng bạn đọc đã có kiến thức đại số và một chút hình học từ ghế nhà trường. Chương này sẽ bao hàm những phần không nằm trong chương trình trung học phổ thông và có thể cả chương trình đại học. Bạn đọc có thể tìm hiểu một cách sơ cấp hay gợi nhớ lại về các khái niệm toán học mà không cần tập trung vào việc chứng minh chặt chẽ các tính chất toán học. Tác giả mong muốn thông qua chương này, bạn đọc có thể có một cảm nhận và từ đó có kĩ năng để áp dụng các khái niệm toán giải quyết các yêu cầu thực tế. Hơn thế nữa, có một niềm cảm hứng để tìm hiểu chuyên sâu các phân môn của toán học. Ngoài ra, vì các bạn đọc đang đọc về tài liệu nghiêng về Vật Lí, tác giả sẽ không tập trung nhiều vào chặt chẽ toán học. Các định nghĩa và chứng minh vẫn sẽ được đưa ra, không quá chặt chẽ nhưng đủ ý, nhằm làm bước đệm cho bạn đọc nếu có mong muốn tìm hiểu sâu hơn về toán.
 
-\section{Những hàm cơ bản}
+\section{Đồ thị}
+
+\ % Lùi đầu dòng
+
+\begin{wrapfigure}{r}{0.4\textwidth}
+   \centering
+   \begin{tikzpicture}
+      \draw[-{Latex[width=3mm]}] (-2,0) -- (2,0);
+      \draw[-{Latex[width=3mm]}] (0,-2) -- (0,2);
+      \node[right] at (2,0) {Trục hoành};
+      \node[above] at (0,2) {Trục tung};
+      \filldraw (0, 0) circle (1.5pt);
+      \node[below left] at (0, 0) {$O(0; 0)$};
+
+      \node at (1,1) {$\boxed{\text{I}}$};
+      \node at (-1,1) {$\boxed{\text{II}}$};
+      \node at (1,-1) {$\boxed{\text{IV}}$};
+      \node at (-1,-1) {$\boxed{\text{III}}$};
+
+      \draw (1,0) -- (1,-0.08) node[below] {$a$};
+      \draw (0,1.5) -- (-0.08,1.5) node[left] {$b$};
+
+      \filldraw (1, 1.5) circle (1.5pt);
+      \node[above right] at (1, 1.5) {$P(a; b)$};
+
+      \draw[dashed] (1, 1.5) -- (1, 0);
+      \draw[dashed] (1, 1.5) -- (0, 1.5);
+
+   \end{tikzpicture}
+
+   \caption{Hệ tọa độ vuông góc}
+   \label{fig:toa do vuong goc}
+\end{wrapfigure}
+
+Đồ thị là cầu nối đầu tiên giữa đại số và hình học mà các bạn học sinh được học. Hiểu một cách nôm na, nếu chúng ta đặt hai trục vuông góc với nhau, giao nhau tại gốc $0$ của mỗi trục. Khi đó, chúng ta có thể xác định vị trị của điểm trên mặt phẳng chứa hai trục theo biểu diễn đại số bằng cách dóng điểm đó lên trục mà sau này được gọi là \emph{tọa độ}. Đây được gọi là \emph{hệ tọa độ vuông góc} (hay \emph{hệ tọa độ Đề-các}\footnote{René Descartes (1596-1650)}). Trục nằm ngang được gọi là \emph{trục hoành}, trục dọc được gọi là \emph{trục tung}. Với mỗi điểm, vị trí khi dóng điểm đó vào trục hoành gọi là \emph{hoành độ}, vào trục tung gọi là \emph{tung độ}. Như ở bên hình \ref{fig:toa do vuong goc}, điểm $P$ có tọa độ là $(a;b)$ và được kí hiệu là $P(a;b)$. Thêm vào đó, hai trục chia mặt phẳng thành bốn góc phần tư, từ góc phần tư thứ I đến góc phần tư thứ IV quay ngược chiều kim đồng hồ. Các điểm trên trục không xác định thuộc bất cứ góc phần tư nào.
+
+\section{Hàm số}
+
+\subsection{Định nghĩa hàm số}
+
+\ % Lùi đầu dòng
+
+Chúng ta gọi $f$ là một \emph{hàm số} (hay \emph{hàm}) đi từ tập $X$ đến tập $Y$ khi và chỉ khi với mọi $x\in X$, gọi là \emph{tập xác định}, thông qua mối liên hệ $f$ có một và chỉ một $y\in Y$ tương ứng với $x$. Khi này, chúng ta có thể viết mối liên hệ hàm số này dưới dạng biểu thức giải tích $y=f(x)$. Tuy nhiên, cần phải để ý rằng, thông qua định nghĩa này, mặc dù mọi $x$ trong $X$ phải có đầu ra trong $Y$, không phải mọi $y$ trong $Y$ đều phải có đầu vào trong $X$. Nói cách khác, tập tất cả các giá trị đầu ra có thể của $y=f(x)$, gọi là \emph{tập giá trị}, là tập con của tập $Y$.
+
+Khi chúng ta có định nghĩa hàm số thì chúng ta cũng sẽ có những khái niệm liên quan. Khi $f$ là một hàm số, thì bất cứ giá trị $a$ thuộc tập xác định để $f(a) = 0$ đều được gọi là \emph{nghiệm} của $f$. Mở rộng ra, với $f$ và $g$ là hai hàm số, bất cứ giá trị $a$ thỏa mãn $f(a) = g(a)$ thì $a$ được gọi là nghiệm của \emph{phương trình} $f(x) = g(x)$. Hơn thế nữa, nếu thay dấu $=$ trong câu vừa trước bởi các dấu $<$, $>$, $\leq$, $\geq$, $\neq$ thì ta có định nghĩa cho nghiệm của \emph{bất phương trình}. Lấy ví dụ, với $f$ và $g$ là hai hàm số, giá trị $a$ để $f(a) \neq g(a)$ thì $a$ được gọi là nghiệm của bất phương trình $f(x) \neq g(x)$\footnote{Phần lớn các tại liệu khác quên mất sự tồn tại của dấu $\neq$ rồi. Trong tài liệu này, cũng không có nhiều cơ hội để dùng dấu $\neq$ cho nên tác giả sẽ cho nó nhiều \dblquote{đất diễn} nhất có thể.}.
+
+\exercise
+
+
+\solution
+
+\subsection{Những hàm số sơ cấp}
 
 \ % Lùi đầu dòng
 
@@ -59,7 +112,19 @@ Tính toán một số giá trị mẫu:
    \item $p(1) = 7 \cdot 1^4 - 2 \cdot 1^2 + 9 = 14$ với $q(t)= 7t^4 - 2t^2 + 9$ là một đa thức bậc $4$ với các hệ số $d_4 = 7$, $d_3 = 0$, $d_2 = -2$, $d_1 = 0$, $d_0 = 9$;
    \item $q(2) = -3 \cdot 2 + 8 = 2$ với $q(r) = -3r + 8$ là một đa thức bậc $1$ với các hệ số $e_1 = -3$, $e_0 = 8$.
 \end{itemize}
-Khi đa thức có bậc bằng $0$, hay $f(x) = P_0(x) = a_0$, thì được gọi là \emph{đa thức hằng} hay \emph{hàm hằng}. Một trường hợp đặc biệt là khi $f(x) = 0$ \footnote{Sẽ có nhiều sách viết "$f(x) \equiv 0$"\/ thay vì "$f(x) = 0$"\/ để phân biệt giữa khẳng định hai hàm là như nhau so với một phương trình. Tác giả không muốn bạn đọc bị vướng víu với nhiều kí hiệu lạ, cho nên Tác giả sẽ cố gắng dùng những kí hiệu cũ. Bạn đọc có thể tự suy luận ý nghĩa thông qua ngữ cảnh.}, khi này hàm không có bậc nhưng vẫn được gọi là hàm hằng \footnote{Đa số những nhà toán học không coi $f(x) = 0$ là đa thức bậc $0$ do nhiều tính chất của đa thức bị phá vỡ khi gặp trường hợp này. Do đó, $f(x) = 0$ chỉ được coi là "hàm hằng"\/ chứ không phải "\textit{đa thức} hằng". Trong cuốn sách này, trở về sau sẽ chỉ có thuật ngữ "hàm hằng"\/ được sử dụng.}.
+Khi đa thức có bậc bằng $0$, hay $f(x) = P_0(x) = a_0$, thì được gọi là \emph{đa thức hằng} hay \emph{hàm hằng}. Một trường hợp đặc biệt là khi $f(x) = 0$ \footnote{Sẽ có nhiều tài liệu viết \dblquote{$f(x) \equiv 0$} thay vì \dblquote{$f(x) = 0$} để phân biệt giữa khẳng định hai hàm là như nhau so với một phương trình. Tác giả không muốn bạn đọc bị vướng víu với nhiều kí hiệu lạ, cho nên Tác giả sẽ cố gắng dùng những kí hiệu cũ. Bạn đọc có thể tự suy luận ý nghĩa thông qua ngữ cảnh.}, khi này hàm không có bậc nhưng vẫn được gọi là hàm hằng \footnote{Đa số những nhà toán học không coi $f(x) = 0$ là đa thức bậc $0$ do nhiều tính chất của đa thức bị phá vỡ khi gặp trường hợp này. Do đó, $f(x) = 0$ chỉ được coi là \dblquote{hàm hằng} chứ không phải \dblquote{\textit{đa thức} hằng}. Trong tài liệu này, trở về sau sẽ chỉ có thuật ngữ \dblquote{hàm hằng} được sử dụng.}.
+
+\exercise Phác thảo đồ thị của những hàm sau:
+\begin{multicols}{2}
+\begin{enumerate}
+   \item $f(x) = x + 2$; 
+   \item $f(x) = x^2 + 2x + 3$;
+   \item $f(x) = x^3 - 9x^2 + 24x - 16$;
+   \item $f(x) = 2$.
+\end{enumerate}
+\end{multicols}
+
+\solution
 
 Mỗi số hạng của đa thức có dạng $x^n$ với $n$ nguyên. Tuy nhiên, nếu chúng ta lấy $x$ lũy thừa với một số thực $a$ bất kì, khi đó chúng ta sẽ có \emph{hàm lũy thừa}. Dạng tổng quát của hàm này là $$f(x) = x^a$$ với $a$ thực. Ngoài ra, khi làm việc trên tập số thực, có một vài điều kiện xác định ngặt nghèo cho đầu vào $x$ đi kèm. Cụ thể:
 \begin{itemize}
@@ -82,7 +147,7 @@ Tính toán một số giá trị mẫu:
    \item $\textit{丫}(-7) = (-7)^{-1} = -\frac{1}{7}$ với $\textit{丫}\left(\textit{低}\right) = \textit{低}^{-1} = \frac{1}{\textit{低}}$ là hàm lũy thừa với $a = -1$.
 \end{itemize}
 
-Hàm lũy thừa có trong nó những hàm quen thuộc mà có thể bạn đọc đã nhận ra, kể như hàm phân thức $x^{-b} = \frac{1}{x^b}$ hay hàm khai căn $x^{\frac{1}{c}} = \sqrt[n]{x}$. Những hàm này có cùng tập xác định với hàm lũy thừa kể trên\footnote{Ê, nếu hàm khai căn cũng chia sẻ cùng tập xác định với hàm lũy thừa thì $\sqrt[3]{-27} = (-27)^{\frac{1}{3}} = -3$ cũng không xác định à? Nhiều sách vẫn cho phép khai căn mũ lẻ cho số âm, và nếu bạn đọc muốn thực hiện khai căn như vậy thì tác giả cũng không cấm. Tuy nhiên, khai căn là một phép tính đặc biệt. Khi xét đến trường số phức, \textit{hàm khai căn} không còn là một hàm chỉ trả ra một số mà là một tập số. Để muốn nó vẫn là một hàm theo nghĩa thường thì phải có quy ước, và theo quy ước đó, $$\sqrt[3]{-27} = \frac{3}{2} + \mathbf{i}\frac{3\sqrt{3}}{2}.$$}.
+Hàm lũy thừa có trong nó những hàm quen thuộc mà có thể bạn đọc đã nhận ra, kể như hàm phân thức $x^{-b} = \frac{1}{x^b}$ hay hàm khai căn $x^{\frac{1}{c}} = \sqrt[n]{x}$. Những hàm này có cùng tập xác định với hàm lũy thừa kể trên\footnote{Ê, nếu hàm khai căn cũng chia sẻ cùng tập xác định với hàm lũy thừa thì $\sqrt[3]{-27} = (-27)^{\frac{1}{3}} = -3$ cũng không xác định à? Nhiều tài liệu khác vẫn cho phép khai căn mũ lẻ cho số âm, và nếu bạn đọc muốn thực hiện khai căn như vậy thì tác giả cũng không cấm. Tuy nhiên, khai căn là một phép tính đặc biệt. Khi xét đến trường số phức, \textit{hàm khai căn} không còn là một hàm chỉ trả ra một số mà là một tập số. Để muốn nó vẫn là một hàm theo nghĩa thường thì phải có quy ước, và theo quy ước đó, $$\sqrt[3]{-27} = \frac{3}{2} + \mathbf{i}\frac{3\sqrt{3}}{2}.$$}.
 
 Khi tính toán đại số, có một số tính chất quen thuộc mà bạn đọc nên ghi nhớ. Với mọi $a, b$ thực và $x$ thực sao cho mọi tính toán có nghĩa, khi này:
 \begin{itemize}
@@ -146,21 +211,11 @@ Tính toán một số giá trị mẫu:
    \item $h(e) = \ln (e) = 1$ vì $e^1 = e$.
 \end{itemize} 
 
-\exercise Phác thảo đồ thị của những hàm sau:
-\begin{multicols}{3}
-\begin{enumerate}
-   \item $f(x) = x + 2$; 
-   \item $f(x) = x^2 + 2x + 3$;
-   \item $f(x) = x^3 - 9x^2 + 24x - 16$;
-   \item $f(x) = 2$
-\end{enumerate}
-\end{multicols}
-
 \section{Số ảo và số phức}
 
 \ % Lùi đầu dòng
 
-Trước khi đến với sô thực với số phức, chúng ta bắt đầu tiếp cận với định nghĩa đơn vị ảo. Cụ thể, \emph{đơn vị ảo} được kí hiệu là $\mathbf{i}$ \footnote{Phần lớn các sách sẽ kí hiệu số ảo là chữ $i$ thông thường. Tác giả kí hiệu thành chữ $\mathbf{i}$ đứng in đậm để bảo toàn chữ $i$ cho nhiệm vụ khác.} và thỏa mãn $$\mathbf{i}^2 = -1 \text{ hay } \mathbf{i} = \sqrt{-1}.$$
+Trước khi đến với sô thực với số phức, chúng ta bắt đầu tiếp cận với định nghĩa đơn vị ảo. Cụ thể, \emph{đơn vị ảo} được kí hiệu là $\mathbf{i}$ \footnote{Phần lớn các tài liệu sẽ kí hiệu số ảo là chữ $i$ thông thường. Tác giả kí hiệu thành chữ $\mathbf{i}$ đứng in đậm để bảo toàn chữ $i$ cho nhiệm vụ khác.} và thỏa mãn $$\mathbf{i}^2 = -1 \text{ hay } \mathbf{i} = \sqrt{-1}.$$
 
 Để có số ảo, ta nhân một số thực $b \neq 0$ với đơn vị ảo để thành $\mathbf{i}b$. Một số phức bao gồm thành phần thực và $\mathbf{i}$ lần phẩn ảo cộng vào. Viết dưới \emph{dạng chính tắc}, một số phức có dạng là $$z=a+\mathbf{i}b$$ với $a, b$ thực. Từ một số phức, chúng ta cũng có thể lấy ngược lại giá trị phần thực và phần ảo của nó lần lượt qua hai hàm $\Re{(z)}$ và $\Im{(z)}$ (hoặc $\operatorname*{Re}{(z)}$ và $\operatorname*{Im}{(z)}$). Cụ thể, với $z=a+\mathbf{i}b$ thì $\Re{(z)} = a$ và $\Im{(z)}=b$\footnote{Tại sao không gọi cả $\mathbf{i}b$ là phần ảo? Khi nói đến phần ảo, chúng ta đã ngầm định nó sẽ thuộc về số hạng mà có thừa số $\mathbf{i}$. Viết lại đơn vị ảo trở nên thừa thãi. Hơn nữa, sẽ dễ làm việc hơn khi mà cả $\Re{(z)}$ và $\Im{(z)}$ đều thực và ta không phải chia $\Im{(z)}$ cho $\mathbf{i}$ liên tục.}.
 
@@ -279,7 +334,7 @@ Trên trục số thực, mốt số cụ thể thì giá trị tuyệt đối c
    \label{fig:hai_truong_hop_goc_dinh_huong}
 \end{figure}
 
-Người ta kí hiệu góc của số phức là $\arg{(z)}$ hoặc $\Arg{(z)}$. Cũng giống như góc không định hướng, khi cộng thêm hay bớt đi $2\pi$ ra-đi-an (hay $360$ độ) thì "hướng nhìn"~cũng không thay đổi. Để cho $\arg{(z)}$ chỉ trả ra một giá trị duy nhất, quy ước là lấy góc trong nửa đoạn $\left(-\pi;\pi\right]$ (hay $\left(-180^\circ;180^\circ\right]$). Như ví dụ trong hình \ref{fig:hai_truong_hop_goc_dinh_huong}, $\arg{(4+2\mathbf{i})} = \theta = \arctan\left(\frac{2}{4}\right) \approx 0,464~\text{rad}$ (hay $26,565^\circ$) và $\arg{(4-2\mathbf{i})} = -\theta = -\arctan\left(\frac{2}{4}\right) \approx -0,464~\text{rad}$ (cũng có thể được viết lại là $-26,565^\circ$).
+Người ta kí hiệu góc của số phức là $\arg{(z)}$ hoặc $\Arg{(z)}$. Cũng giống như góc không định hướng, khi cộng thêm hay bớt đi $2\pi$ ra-đi-an (hay $360$ độ) thì \dblquote{hướng nhìn} cũng không thay đổi. Để cho $\arg{(z)}$ chỉ trả ra một giá trị duy nhất, quy ước là lấy góc trong nửa đoạn $\left(-\pi;\pi\right]$ (hay $\left(-180^\circ;180^\circ\right]$). Như ví dụ trong hình \ref{fig:hai_truong_hop_goc_dinh_huong}, $\arg{(4+2\mathbf{i})} = \theta = \arctan\left(\frac{2}{4}\right) \approx 0,464~\text{rad}$ (hay $26,565^\circ$) và $\arg{(4-2\mathbf{i})} = -\theta = -\arctan\left(\frac{2}{4}\right) \approx -0,464~\text{rad}$ (cũng có thể được viết lại là $-26,565^\circ$).
 
 Như đã viết, có khoảng cách và hướng nhìn thì chúng ta sẽ có được vị trí số phức. Cách biểu diễn này được gọi là \emph{dạng lượng giác} của số phức. Đặt $r = |z|$ và $\varphi = \arg{(z)}$, dạng lượng giác của $z$ được kí hiệu là $z = r \angle \varphi = r \phase{\varphi}$. Quy đổi giữa dạng lượng giác và dạng chính tắc, khi $z = a + \mathbf{i}b = r \phase{\varphi}$ thì
 \[
@@ -296,13 +351,13 @@ và từ đó $z = r\left(\cos{(\varphi)} + \mathbf{i}\sin{(\varphi)}\right)$. L
 
 Thật sự, rất khó cho nhiều người không thường xuyên thường thức về toán ngay lập tức tìm ra và cảm nhận được ý nghĩa thực tiễn của số ảo. Chúng ta không thể tưởng tượng được số ảo một cách trực quan như các số mà chúng ta thường thấy ở ngoài cuộc sống như $5$ cái bút hay $\frac{1}{3}$ giờ. Đi kèm với đó, kể cả trên lí thuyết toán của ghế nhà trường, cũng sẽ không xảy ra trường hợp nào để cho một số nhân với chính nó ra một số âm. 
 
-Nhắc về số âm, theo quan điểm cá nhân, số âm trong đời xuống vốn đã ít khi được sử dụng. Chẳng mấy ai ưa nói "lãi $-500000$ đồng"\/ so với "lỗ $500000$ đồng". Một cách tương tự, nhìn về phương diện lịch sử, trong phần lớn quá trình phát triển của toán học, các nhà toán học xưa thường có mặc cảm với những số âm. Các phương trình sẽ luôn được viết lại thành nhiều trường hợp để tránh chúng. Ví dụ, nếu phương trình bậc hai được viết dưới dạng hiện đại là $x^2 + ax+b=0$ với $a,b$ là hai số thực (có thể âm), thì trong quá khữ, phương trình này được chia ra làm ba trường hợp
+Nhắc về số âm, theo quan điểm cá nhân, số âm trong đời xuống vốn đã ít khi được sử dụng. Chẳng mấy ai ưa nói \dblquote{lãi $-500000$ đồng} so với \dblquote{lỗ $500000$ đồng}. Một cách tương tự, nhìn về phương diện lịch sử, trong phần lớn quá trình phát triển của toán học, các nhà toán học xưa thường có mặc cảm với những số âm. Các phương trình sẽ luôn được viết lại thành nhiều trường hợp để tránh chúng. Ví dụ, nếu phương trình bậc hai được viết dưới dạng hiện đại là $x^2 + ax+b=0$ với $a,b$ là hai số thực (có thể âm), thì trong quá khữ, phương trình này được chia ra làm ba trường hợp
 \begin{align*}
    &x^2+ax = b;\\
    &x^2+b =ax;\\
    &x^2 =ax+b
 \end{align*}
-với $a,b$ là hai số thực luôn dương. Và cũng từ sự mặc cảm với số âm, họ cho rằng nghiệm của phương trình cũng phải là một số dương. Tương tự với Các-đa-nô \footnote{Gerolamo Cardano (1501-1576).}, khi giải phương trình bậc ba, ông cũng đưa về các trường hợp như trên. Cụ thể, chúng ta xem xét một trường hợp của bài toán: $$x^3 = ax+b.$$ Giải phương trình, chúng ta có được nghiệm $$x=\sqrt[3]{\frac{b}{2} + \sqrt{\frac{b^2}{4}-\frac{a^3}{27}}}+\sqrt[3]{\frac{b}{2} - \sqrt{\frac{b^2}{4}-\frac{a^3}{27}}}.$$ Tuy nhiên, sau khi thay những giá trị cụ thể vào $a$ và $b$, Các-đa-nô đã phát hiện ra một vấn đề. Khi $a=15$ và $b=4$, nghiệm trả ra cho phương trình $x^3 = 15x+4$ theo công thức vừa trên là $$x=\sqrt[3]{2+\sqrt{-121}}+\sqrt[3]{2-\sqrt{-121}}$$ mặc dù phương trình có một nghiệm bình thường là $x=4$ (với kiến thức toán học hiện đại, chúng ta có thể giải ra hai nghiệm cũng thực khác là $-2 \pm \sqrt{3}$). Nhận ra điều đó, Các-đa-nô đã khẳng định rằng công thức này của ông không áp dụng được trong trường hợp xảy ra căn của một số âm. Tuy nhiên, một học trò của ông, Bom-be-li \footnote{Rafael Bombelli (1526-1572).}, lại phủ nhận điều trên. Bom-be-li nhận định rằng tồn tại một kiểu số khác số thực sẽ có giá trị bằng "căn âm". Ông chỉ rõ sự khác biệt giữa kiểu số mới này và kiểu số thực thông thường, và đi kèm theo là phương pháp thực hiện đại số trên kiểu số mới. Áp dụng những nền tảng đó, ông đã tính được căn bậc ba của hai số phức lần lượt là $\sqrt[3]{2+\sqrt{-121}}=2+\sqrt{-1}$ và $\sqrt[3]{2-\sqrt{-121}}=2-\sqrt{-1}$. Cộng hai số vào, hiển nhiên sẽ có được nghiệm $4$ như mong muốn.
+với $a,b$ là hai số thực luôn dương. Và cũng từ sự mặc cảm với số âm, họ cho rằng nghiệm của phương trình cũng phải là một số dương. Tương tự với Các-đa-nô \footnote{Gerolamo Cardano (1501-1576).}, khi giải phương trình bậc ba, ông cũng đưa về các trường hợp như trên. Cụ thể, chúng ta xem xét một trường hợp của bài toán: $$x^3 = ax+b.$$ Giải phương trình, chúng ta có được nghiệm $$x=\sqrt[3]{\frac{b}{2} + \sqrt{\frac{b^2}{4}-\frac{a^3}{27}}}+\sqrt[3]{\frac{b}{2} - \sqrt{\frac{b^2}{4}-\frac{a^3}{27}}}.$$ Tuy nhiên, sau khi thay những giá trị cụ thể vào $a$ và $b$, Các-đa-nô đã phát hiện ra một vấn đề. Khi $a=15$ và $b=4$, nghiệm trả ra cho phương trình $x^3 = 15x+4$ theo công thức vừa trên là $$x=\sqrt[3]{2+\sqrt{-121}}+\sqrt[3]{2-\sqrt{-121}}$$ mặc dù phương trình có một nghiệm bình thường là $x=4$ (với kiến thức toán học hiện đại, chúng ta có thể giải ra hai nghiệm cũng thực khác là $-2 \pm \sqrt{3}$). Nhận ra điều đó, Các-đa-nô đã khẳng định rằng công thức này của ông không áp dụng được trong trường hợp xảy ra căn của một số âm. Tuy nhiên, một học trò của ông, Bom-be-li \footnote{Rafael Bombelli (1526-1572).}, lại phủ nhận điều trên. Bom-be-li nhận định rằng tồn tại một kiểu số khác số thực sẽ có giá trị bằng \dblquote{căn âm}. Ông chỉ rõ sự khác biệt giữa kiểu số mới này và kiểu số thực thông thường, và đi kèm theo là phương pháp thực hiện đại số trên kiểu số mới. Áp dụng những nền tảng đó, ông đã tính được căn bậc ba của hai số phức lần lượt là $\sqrt[3]{2+\sqrt{-121}}=2+\sqrt{-1}$ và $\sqrt[3]{2-\sqrt{-121}}=2-\sqrt{-1}$. Cộng hai số vào, hiển nhiên sẽ có được nghiệm $4$ như mong muốn.
 
 Với sự xây dựng ban đầu của Bom-be-li làm gốc, trong những thế kỉ sau, tên gọi và lí thuyết về cách biểu diễn số phức được hình thành.
 
