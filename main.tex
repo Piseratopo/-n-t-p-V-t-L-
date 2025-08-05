@@ -3,7 +3,7 @@
 \usepackage[T5]{fontenc}
 \usepackage[vietnamese]{babel}
 \usepackage[a4paper]{geometry}
-\usepackage{amsmath, amssymb, blindtext, hyperref, icomma, multicol, steinmetz, tikz, wrapfig, xcolor, xeCJK}
+\usepackage{amsmath, amssymb, blindtext, calc, hyperref, icomma, multicol,  steinmetz, tikz, unicode-math, wrapfig, xcolor, xparse, xeCJK}
 \usetikzlibrary{arrows.meta, calc, shadings}
 \setCJKmainfont[AutoFakeSlant=0.15,AutoFakeBold=2.0]{Nom Na Tong}
 
@@ -15,18 +15,24 @@
 \author{Bùi Nhật Minh}
 \date{\today}
 
-% Tạo bài tập
 \newcounter{exercise}
-\newcommand{\exercise}{
+
+\NewDocumentCommand{\exercise}{o}{
    \refstepcounter{exercise}
-   \noindent\textbf{Bài \arabic{exercise}:\label{ex\arabic{exercise}}}
+   \noindent\textbf{Bài \arabic{exercise}:}
+   \IfNoValueTF{#1}
+     {\label{ex\arabic{exercise}}}  % Default label
+     {\label{#1}}                   % Custom label
 }
 
-% Tạo lời giải
 \newcounter{solution}
-\newcommand{\solution}{
+
+\NewDocumentCommand{\solution}{o}{
    \refstepcounter{solution}
-   \noindent\textbf{Lời giải \ref{ex\arabic{solution}}:\label{sol\arabic{solution}}}
+   \noindent\textbf{Lời giải cho bài~\ref{ex\arabic{solution}}:}
+   \IfNoValueTF{#1}
+     {\label{sol\arabic{solution}}}  % Default label
+     {\label{#1}}                    % Custom label
 }
 
 \newcommand\dblquote[1]{\textquotedblleft #1\textquotedblright}
@@ -51,8 +57,8 @@ Phần này bao gồm các kiến thức toán học cần thiết để xây d�
 \begin{wrapfigure}{r}{0.4\textwidth}
    \centering
    \begin{tikzpicture}
-      \draw[-{Latex[width=3mm]}] (-2,0) -- (2,0);
-      \draw[-{Latex[width=3mm]}] (0,-2) -- (0,2);
+      \draw[->] (-2,0) -- (2,0);
+      \draw[->] (0,-2) -- (0,2);
       \node[right] at (2,0) {Trục hoành};
       \node[above] at (0,2) {Trục tung};
       \filldraw (0, 0) circle (1.5pt);
@@ -957,6 +963,30 @@ Gọi $t_1$ là thời gian gốc để bóng bay từ tay lên vị trí cao nh
 \end{equation*}
 
 Từ đó, ta có quả bóng cao lên hơn được $\boxed{n^2 - 1 \text{ lần độ cao gốc}}$.
+
+\begin{wrapfigure}{l}{0.4\textwidth} % 'r' for right, 'l' for left, width of the figure
+   \centering
+   \begin{tikzpicture}
+      \draw[->] (-0.5, 0) -- (4,0) node[right] {$x$};
+      \draw[->] (0, -0.5) -- (0, 3) node[above] {$y$};
+      \filldraw (0, 0) circle (1.5pt);
+      \draw[-{Latex[width=1.5mm]}] (0, 0) -- (1.3, 0.8) node[above left] {$\vec{v_1}$};
+      \draw[-{Latex[width=1.5mm]}] (3, 2) -- (2, 2);
+      \node[above] at (2.5,2) {$\vec{u}$};
+      \draw (0.5,0) arc[start angle=0, end angle={atan(8/13)}, radius=0.5];
+      \node at (0.72,0.20) {$\alpha$};
+      
+      \node[below left] at (0, 0) {$O$};
+      
+   \end{tikzpicture}
+
+   \caption{Hình minh họa cho bài \ref{ex:16}}
+   \label{fig:mhb16}
+\end{wrapfigure}
+
+\exercise[ex:16] Như trong hình \ref{fig:mhb16}, một vật nhỏ có khối lượng $m$ chỉ di chuyển từ gốc $O$ trong mặt phẳng $Oxy$ được cung cấp một vận tốc ban đầu $\overrightarrow{v_1}$ trong vùng không gian có gió thổi với vận tốc $\vec{u} = -u \overrightarrow{e_x}$.
+
+
 
 \begin{thebibliography}{1}
 \bibitem{Agarwal2011}
