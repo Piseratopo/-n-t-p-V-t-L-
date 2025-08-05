@@ -3,11 +3,10 @@
 \usepackage[T5]{fontenc}
 \usepackage[vietnamese]{babel}
 \usepackage[a4paper]{geometry}
-\usepackage{amsmath, amssymb, blindtext, calc, hyperref, icomma, multicol,  steinmetz, tikz, unicode-math, wrapfig, xcolor, xparse, xeCJK}
+\usepackage{amsmath, amssymb, blindtext, calc, hyperref, multicol, steinmetz, tikz, unicode-math, wrapfig, xcolor, xparse, xeCJK}
 \usetikzlibrary{arrows.meta, calc, shadings}
-\setCJKmainfont[AutoFakeSlant=0.15,AutoFakeBold=2.0]{Nom Na Tong}
-
 \geometry{bindingoffset=0.5cm, inner=2cm, outer=2cm, top=2cm, bottom=2cm}
+\setCJKmainfont[AutoFakeSlant=0.15,AutoFakeBold=2.0]{Nom Na Tong}
 
 \DeclareMathOperator{\Arg}{Arg}
 
@@ -21,18 +20,21 @@
    \refstepcounter{exercise}
    \noindent\textbf{Bài \arabic{exercise}:}
    \IfNoValueTF{#1}
-     {\label{ex\arabic{exercise}}}  % Default label
-     {\label{#1}}                   % Custom label
+     {\label{ex\arabic{exercise}}}
+     {\label{#1}}
 }
 
+% Counter for solutions
 \newcounter{solution}
 
 \NewDocumentCommand{\solution}{o}{
    \refstepcounter{solution}
-   \noindent\textbf{Lời giải cho bài~\ref{ex\arabic{solution}}:}
    \IfNoValueTF{#1}
-     {\label{sol\arabic{solution}}}  % Default label
-     {\label{#1}}                    % Custom label
+      {\noindent\textbf{Lời giải cho bài~\ref{ex\arabic{solution}}:}}
+      {\noindent\textbf{Lời giải cho bài~\ref{#1}}:}
+   \IfNoValueTF{#1}
+      {\label{sol\arabic{solution}}}
+      {\label{sol-#1}}
 }
 
 \newcommand\dblquote[1]{\textquotedblleft #1\textquotedblright}
@@ -54,6 +56,101 @@ Phần này bao gồm các kiến thức toán học cần thiết để xây d�
 
 \ % Lùi đầu dòng
 
+Đồ thị là cầu nối đầu tiên giữa đại số và hình học mà chắc là bạn đọc đã được họcn Thông thường, nhắc đến đồ thị, chúng thường được dùng để biểu thị mặt phẳng hai chiều hoặc không gian ba chiều. Nhưng, đồ thị cơ bản nhất chỉ có một chiều, hay tên gọi khác là \emph{trục số}. 
+
+\def \pointSize {1.5pt}
+
+\begin{wrapfigure}{r}{0.4\textwidth}
+   \centering
+   \begin{tikzpicture}
+      \draw[->] (-3,0) -- (2,0) node[right] {Trục số};
+      \filldraw (0, 0) circle (\pointSize) node[below] {$O(0)$};
+      \filldraw (1.5, 0) circle (\pointSize) node[below] {$P(x_P)$};
+      \filldraw (-1.5, 0) circle (\pointSize) node[below] {$P_-(-x_P)$};
+   \end{tikzpicture}
+   \caption{Trục số một chiều}
+   \label{fig:truc so mot chieu}
+\end{wrapfigure}
+
+Đặt một điểm trên trục làm gốc tọa độ $0$, từ đó chúng ta có thể biểu diễn mọi số thực trên trục số này. Nói một cách không chính thống, với một số $x_P$ dương bất kì, đánh dấu cách $O$ một đoạn bằng $x_P$ đơn vị độ dài theo hướng trục, ta có điểm $P$ biểu diễn $x_P$. Viết tắt cách biểu diễn, được $P(x_P)$. Ngược lại, nếu chúng ta muốn đánh dấu số $x_{P_-}=-x_P$ mang giá trị âm, chúng ta dịch ngược lại chiều trục như trên hình \ref{fig:truc so mot chieu}.
+
+\begin{wrapfigure}{r}{0.4\textwidth}
+   \centering
+   \begin{tikzpicture}
+      \draw[->] (-3,0) -- (2,0) node[right] {$x$};
+      \filldraw (0, 0) circle (\pointSize) node[below] {$O$};
+      \pgfmathsetmacro{\xP}{1.2}
+      \pgfmathsetmacro{\xQ}{-2}
+      \pgfmathsetmacro{\h}{0.4}
+      \filldraw (\xP, 0) circle (\pointSize) node[below] {$P(x_P)$};
+      \filldraw (\xQ, 0) circle (\pointSize) node[below] {$Q(x_Q)$};
+      \draw[thick] (\xQ,0) -- (\xP,0);
+      \node[above] at ({(\xP+\xQ)/2}, {\h/2}) {$d(P;Q)$};
+      \draw (\xP,0) -- (\xP,\h);
+      \draw (\xQ,0) -- (\xQ,\h);
+      \draw[<->, >=latex, shorten >=\pointSize, shorten <=\pointSize] (\xP,{\h/2}) -- (\xQ,{\h/2});
+   \end{tikzpicture}
+   \caption{Khoảng cách trên trục số}
+   \label{fig:truc so mot chieu}
+\end{wrapfigure}
+
+Khi có nhiều điểm ở trên đồ thị, chúng ta sẽ mong muốn tính những thông số liên quan tới những điểm đó. Do chương này mang tính giới thiệu, chúng ta sẽ chỉ tập trung vào một đặc điểm nhất định, \emph{khoảng cách}. Trên một trục số như hình \ref{fig:toa do vuong goc}, cho hai điểm $P(x_P)$ và $Q(x_Q)$, khoảng cách giữa chúng là $$d(P;Q)=\sqrt{(x_P-x_Q)^2}=|x_P-x_Q|.$$
+
+\exercise[ex:0.1] Biểu diễn nhóm các điểm sau trên trục số. Tính khoảng cách giữa hai điểm phân biệt bất kì trong nhóm đó.
+\begin{enumerate}
+   \item $A(2)$, $B(-3)$, và $C(4)$;
+   \item $D(\pi)$, $E(-\pi)$, $F(0)$, và $G\left(\frac{\pi}{2}\right)$;
+   \item $H(0{,}\bar{3})$ và $I(\sqrt{2})$;
+   \item $J\left(\frac{355}{113}\right)$, $K\left(\frac{9801}{2206\sqrt{2}}\right)$ và $L\left(\sqrt[4]{\frac{2143}{22}}\right)$;
+   \item $M(x)$ và $N(2x)$ với $x\in\mathbb{R}$.
+\end{enumerate}
+
+\solution[ex:0.1] Ta có đồ thị cho các phần từ $1$ đến $4$ như sau:
+\begin{figure}[h]
+   \centering
+   \begin{tikzpicture}[scale=1]
+
+      \begin{scope}[yshift=2cm]
+         \draw[->] (-5,0) -- (5,0) node[right] {$x$};
+         \filldraw (0, 0) circle (\pointSize) node[below] {$O$};
+         \filldraw (2, 0) circle (\pointSize) node[below] {$A(2)$};
+         \filldraw (-3, 0) circle (\pointSize) node[below] {$B(-3)$};
+         \filldraw (4, 0) circle (\pointSize) node[below] {$C(4)$};
+      \end{scope}
+
+      \begin{scope}[yshift=0cm]
+         \draw[->] (-5,0) -- (5,0) node[right] {$x$};
+         \filldraw ({pi}, 0) circle (\pointSize) node[below] {$D(\pi)$};
+         \filldraw ({-pi}, 0) circle (\pointSize) node[below] {$E(-\pi)$};
+         \filldraw (0, 0) circle (\pointSize) node[below] {$F(0)$};
+         \filldraw ({pi/2}, 0) circle (\pointSize) node[below] {$G\left(\frac{\pi}{2}\right)$};
+      \end{scope}
+
+      \begin{scope}[yshift=-2cm, xshift=-5cm]
+         \draw[->] (0,0) -- (10,0) node[right] {$x$};
+         \filldraw (0, 0) circle (\pointSize) node[above] {$O$};
+         \filldraw ({2/3}, 0) circle (\pointSize) node[below] {$H\left(0{,}\bar{3}\right)$};
+         \filldraw ({2*sqrt(2)}, 0) circle (\pointSize) node[below] {$I(\sqrt{2})$};
+         \filldraw (4, 0) circle (\pointSize) node[above] {$C(4)$};
+      \end{scope}
+
+      \begin{scope}[yshift=-4cm, xshift=-5cm]
+
+         \draw[->] (0,0) -- (10,0) node[right] {$x$};
+         \filldraw (0,0) circle (\pointSize) node[above] {$P(3{,}1415926)$};
+         \filldraw (3,0) circle (\pointSize) node[above] {$Q(3{,}1415927)$};
+         \filldraw (6,0) circle (\pointSize) node[above] {$R(3{,}1415928)$};
+         \filldraw (9,0) circle (\pointSize) node[above] {$S(3{,}1415929)$};
+         \filldraw (9.61062, 0) circle (\pointSize) node[below] {$J\left(\frac{355}{113}\right)$};
+         \filldraw (3.9, 0) circle (\pointSize) node[below] {$K\left(\frac{9801}{2206\sqrt{2}}\right)$};
+         \filldraw (1.577475, 0) circle (\pointSize) node[below] {$L\left(\sqrt[4]{\frac{2143}{22}}\right)$};
+      \end{scope}
+
+   \end{tikzpicture}
+   \caption{Bốn trục số cho các phần từ $1$ đến $4$ của bài \ref{ex:0.1}}
+   \label{fig:bon truc}
+\end{figure}
+
 \begin{wrapfigure}{r}{0.4\textwidth}
    \centering
    \begin{tikzpicture}
@@ -72,7 +169,7 @@ Phần này bao gồm các kiến thức toán học cần thiết để xây d�
       \draw (1,0) -- (1,-0.08) node[below] {$x_P$};
       \draw (0,1.5) -- (-0.08,1.5) node[left] {$y_P$};
 
-      \filldraw (1, 1.5) circle (1.5pt);
+      \filldraw (1, 1.5) circle (\pointSize);
       \node[above right] at (1, 1.5) {$P(x_P; y_P)$};
 
       \draw[dashed] (1, 1.5) -- (1, 0);
@@ -84,9 +181,7 @@ Phần này bao gồm các kiến thức toán học cần thiết để xây d�
    \label{fig:toa do vuong goc}
 \end{wrapfigure}
 
-Đồ thị là cầu nối đầu tiên giữa đại số và hình học mà chắc là bạn đọc đã được học. Nhưng nếu bạn đọc chưa
-
-Khi xét về không gian hai chiều, hiểu một cách nôm na, nếu chúng ta đặt hai trục vuông góc với nhau, giao nhau tại gốc $0$ của mỗi trục. Khi đó, chúng ta có thể xác định vị trị của điểm trên mặt phẳng chứa hai trục theo biểu diễn đại số bằng cách dóng điểm đó lên trục mà sau này được gọi là \emph{tọa độ}. Đây được gọi là \emph{hệ tọa độ vuông góc} (hay \emph{hệ tọa độ Đề-các}\footnote{René Descartes (1596-1650)}). Trục nằm ngang được gọi là \emph{trục hoành}, trục dọc được gọi là \emph{trục tung}. Với mỗi điểm, vị trí khi dóng điểm đó vào trục hoành gọi là \emph{hoành độ}, vào trục tung gọi là \emph{tung độ}. Như ở bên hình \ref{fig:toa do vuong goc}, điểm $P$ có tọa độ là $(x_P;y_P)$ và được kí hiệu là $P(x_P;y_P)$. Thêm vào đó, hai trục chia mặt phẳng thành bốn góc phần tư, từ góc phần tư thứ I đến góc phần tư thứ IV quay ngược chiều kim đồng hồ. Các điểm trên trục không xác định thuộc bất cứ góc phần tư nào.
+Mở rộng lên mặt phẳng hai chiều, nếu chúng ta đặt hai trục vuông góc với nhau và giao nhau tại gốc $O(0)$ của mỗi trục, khi đó, chúng ta có thể xác định vị trị của điểm trên mặt phẳng chứa hai trục theo biểu diễn đại số bằng cách dóng điểm đó lên trục mà sau này được gọi là \emph{tọa độ}. Đây được gọi là \emph{hệ tọa độ vuông góc} (hay \emph{hệ tọa độ Đề-các}\footnote{René Descartes (1596-1650)}). Trục nằm ngang được gọi là \emph{trục hoành}, trục dọc được gọi là \emph{trục tung}. Với mỗi điểm, vị trí khi dóng điểm đó vào trục hoành gọi là \emph{hoành độ}, vào trục tung gọi là \emph{tung độ}. Như ở bên hình \ref{fig:toa do vuong goc}, điểm $P$ có tọa độ là $(x_P;y_P)$ và được kí hiệu là $P(x_P;y_P)$. Thêm vào đó, hai trục chia mặt phẳng thành bốn góc phần tư, từ góc phần tư thứ I đến góc phần tư thứ IV quay ngược chiều kim đồng hồ. Các điểm trên trục không xác định thuộc bất cứ góc phần tư nào.
 
 \begin{wrapfigure}{r}{0.4\textwidth}
    \centering
@@ -121,7 +216,7 @@ Khi xét về không gian hai chiều, hiểu một cách nôm na, nếu chúng 
    \label{fig:khoanh cach 2d}
 \end{wrapfigure}
 
-Khi có nhiều điểm ở trên đồ thị, chúng ta sẽ mong muốn tính những thông số liên quan tới những điểm đó. Do chương này mang tính giới thiệu, chúng ta sẽ chỉ tập trung vào một đặc điểm nhất định, \emph{khoảng cách}. Cho hai điểm $P(x_P;y_P)$ và $Q(x_Q;y_Q)$, theo định lí Pi-ta-go, khoảng cách giữa hai điểm đó là $$d(P;Q)=\sqrt{(x_P-x_Q)^2+(y_P-y_Q)^2}.$$
+Cho hai điểm $P(x_P;y_P)$ và $Q(x_Q;y_Q)$, theo định lí Pi-ta-go, khoảng cách giữa hai điểm đó là $$d(P;Q)=\sqrt{(x_P-x_Q)^2+(y_P-y_Q)^2}.$$
 
 \section{Hàm số}
 
@@ -408,20 +503,20 @@ Với sự xây dựng ban đầu của Bom-be-li làm gốc, trong những th�
 
 
 \chapter{Cơ bản của xử lí số liệu trong vật lí}
-\exercise Khoảng cách trung bình từ trái đất đến mặt trời là $1,5 \cdot 10^8$ km. Giả sử quỹ đạo của trái đất quanh mặt trời là tròn và mặt trời được đặt tại gốc của hệ quy chiếu.
+\exercise Khoảng cách trung bình từ trái đất đến mặt trời là $1{,}5 \cdot 10^8$ km. Giả sử quỹ đạo của trái đất quanh mặt trời là tròn và mặt trời được đặt tại gốc của hệ quy chiếu.
 \begin{enumerate}
-   \item Tính tốc độ di chuyển trung bình của trái đất quanh mặt trời dưới dạng dặm trên giờ ($1 \;\text{dặm}=1,6093\;\text{km}$).
+   \item Tính tốc độ di chuyển trung bình của trái đất quanh mặt trời dưới dạng dặm trên giờ ($1 \;\text{dặm}=1{,}6093\;\text{km}$).
    \item Ước lượng góc $\theta$ giữa véc-tơ vị trí của trái đất bây giờ và vị trí sau đó $4$ tháng.
    \item Tính khoảng cách giữa hai vị trí đó.
 \end{enumerate}
 \solution
 \begin{enumerate}
-   \item Giả sử trái đất quay quanh mặt trời trong $365,25$ ngày. Quãng đường mà trái đất đi được trong thời gian này là chu vi của quỹ đạo tròn $2 \pi \cdot 1,5 \cdot 10^8$ km. Từ đó, ta có thể tính được tốc độ trung bình của trái đất quanh mặt trời là $\frac{2 \pi \cdot 1,5 \cdot 10^8\ \text{km}}{365,25\ \text{ngày}}$. Thực hiện quy đổi để được:
+   \item Giả sử trái đất quay quanh mặt trời trong $365{,}25$ ngày. Quãng đường mà trái đất đi được trong thời gian này là chu vi của quỹ đạo tròn $2 \pi \cdot 1{,}5 \cdot 10^8$ km. Từ đó, ta có thể tính được tốc độ trung bình của trái đất quanh mặt trời là $\frac{2 \pi \cdot 1{,}5 \cdot 10^8\ \text{km}}{365{,}25\ \text{ngày}}$. Thực hiện quy đổi để được:
       \[
-         \frac{2 \pi \cdot 1,5 \cdot 10^8\ \text{km}}{365,25\ \text{ngày}}
-         \cdot \frac{1\ \text{dặm}}{1,6903\ \text{km}}
+         \frac{2 \pi \cdot 1{,}5 \cdot 10^8\ \text{km}}{365{,}25\ \text{ngày}}
+         \cdot \frac{1\ \text{dặm}}{1{,}6903\ \text{km}}
          \cdot \frac{1\ \text{ngày}}{24\ \text{h}}
-         = \boxed{6,4\cdot 10^4\ \frac{\text{dặm}}{\text{h}}}.
+         = \boxed{6{,}4\cdot 10^4\ \frac{\text{dặm}}{\text{h}}}.
       \]
    \item Trái đất quay quanh mặt trời trong $12$ tháng, tương đương với một góc quay $360^{\circ}$ so với gốc là mặt trời. Coi như các tháng có độ dài như nhau. Ta có $\theta$ chính là góc quay của trái đất trong $4$ tháng, tương đương với:
    \[
@@ -447,29 +542,29 @@ Với sự xây dựng ban đầu của Bom-be-li làm gốc, trong những th�
    \label{fig:earth}
 \end{wrapfigure}
 
-Gọi $A$ là vị trí của trái đất bây giờ, $B$ là vị trí của trái đất sau $4$ tháng theo như hình \ref{fig:earth}. Coi một đơn vị trên tọa độ bằng độ dài bán kính của quỹ đạo tròn, tức là $r=1,5\cdot10^8$ km. Ta có tọa độ điểm $A$ là $(1;0)$. Tọa độ điểm $B$ là $\left(\cos(120^{\circ}); \sin(120^{\circ})\right)=\left(-\frac{1}{2}; \frac{\sqrt{3}}{2}\right)$. Từ đó, ta có khoảng cách giữa hai vị trí đó là: $$d = r\cdot \sqrt{\left(1-\left(-\frac{1}{2}\right)\right)^2 + \left(\frac{\sqrt{3}}{2}\right)^2}=\boxed{2,6\cdot10^8\ \text{km}}.$$
+Gọi $A$ là vị trí của trái đất bây giờ, $B$ là vị trí của trái đất sau $4$ tháng theo như hình \ref{fig:earth}. Coi một đơn vị trên tọa độ bằng độ dài bán kính của quỹ đạo tròn, tức là $r=1{,}5\cdot10^8$ km. Ta có tọa độ điểm $A$ là $(1;0)$. Tọa độ điểm $B$ là $\left(\cos(120^{\circ}); \sin(120^{\circ})\right)=\left(-\frac{1}{2}; \frac{\sqrt{3}}{2}\right)$. Từ đó, ta có khoảng cách giữa hai vị trí đó là: $$d = r\cdot \sqrt{\left(1-\left(-\frac{1}{2}\right)\right)^2 + \left(\frac{\sqrt{3}}{2}\right)^2}=\boxed{2{,}6\cdot10^8\ \text{km}}.$$
 
-\exercise Khối lượng riêng (bằng khối lượng của vật chia cho thể tích của vật đó) của nước là $1,00 \frac{\text{g}}{\text{cm}^3}$.
+\exercise Khối lượng riêng (bằng khối lượng của vật chia cho thể tích của vật đó) của nước là $1{,}00 \;\frac{\text{g}}{\text{cm}^3}$.
 \begin{enumerate}
    \item Tính giá trị này theo ki-lô-gam trên mét khối.
-   \item $1,00$ lít nước nặng bao nhiêu ki-lô-gam, bao nhiêu pao (lb)? Biết $1\ \text{lb} = 0,45\ \text{kg}$ (chính xác).
+   \item $1{,}00$ lít nước nặng bao nhiêu ki-lô-gam, bao nhiêu pao (lb)? Biết $1\ \text{lb} = 0{,}45\ \text{kg}$ (chính xác).
 \end{enumerate}
 
 \solution
 \begin{enumerate}
    \item Thực hiện quy đổi, ta có:
    \begin{align*}
-      1,00 \frac{\text{g}}{\text{cm}^3} &= \left(1,00 \frac{\text{g}}{\text{cm}^3}\right)\cdot\frac{1\ \text{kg}}{1000\ \text{g}}\cdot\left(\frac{100\ \text{cm}}{1\ \text{m}}\right)^3 \\
-      &= \boxed{1,00\cdot 10^3\ \frac{\text{kg}}{\text{m}^3}}.
+      1{,}00\;\frac{\text{g}}{\text{cm}^3} &= \left(1{,}00\;\frac{\text{g}}{\text{cm}^3}\right)\cdot\frac{1\ \text{kg}}{1000\ \text{g}}\cdot\left(\frac{100\ \text{cm}}{1\ \text{m}}\right)^3 \\
+      &= \boxed{1{,}00\cdot 10^3\ \frac{\text{kg}}{\text{m}^3}}.
    \end{align*}
-   \item Khối lượng của $1,00$ lít nước là
+   \item Khối lượng của $1{,}00$ lít nước là
    \begin{align*}
-      1,00\ \text{L} \cdot \left(1,00\cdot 10^3\ \frac{\text{kg}}{\text{m}^3}\right)&= 1,00\ \text{L} \cdot \left(1,00\cdot 10^3\ \frac{\text{kg}}{\text{m}^3}\right) \cdot \frac{1\ \text{m}^3}{1000\ \text{L}} \\
-      &= \boxed{1,00\cdot 10^0\ \text{kg}}.
+      1{,}00\ \text{L} \cdot \left(1{,}00\cdot 10^3\ \frac{\text{kg}}{\text{m}^3}\right)&= 1{,}00\ \text{L} \cdot \left(1{,}00\cdot 10^3\ \frac{\text{kg}}{\text{m}^3}\right) \cdot \frac{1\ \text{m}^3}{1000\ \text{L}} \\
+      &= \boxed{1{,}00\cdot 10^0\ \text{kg}}.
    \end{align*}
    Theo đơn vị pao (lb), ta có:
    \[
-      1,00\cdot 10^0\ \text{kg} = 1,00\cdot 10^0\ \text{kg} \cdot \frac{1\ \text{lb}}{0,45\ \text{kg}} = \boxed{2,22\cdot 10^0\ \text{lb}}.
+      1{,}00\cdot 10^0\ \text{kg} = 1{,}00\cdot 10^0\ \text{kg} \cdot \frac{1\ \text{lb}}{0{,}45\ \text{kg}} = \boxed{2{,}22\cdot 10^0\ \text{lb}}.
    \]
 \end{enumerate}
 
@@ -486,10 +581,10 @@ Gọi $A$ là vị trí của trái đất bây giờ, $B$ là vị trí của t
 Từ triều đại Thanh trở về trước, số giây trong một khắc là $$\frac{86400\ \text{giây}}{100\ \text{khắc}_{\text{trước}}} = \boxed{864 \frac{\text{giây}}{\text{khắc}_{\text{trước}}}}.$$
 Sau triều đại Thanh, số giây trong một khắc là $$\frac{86400\ \text{giây}}{96\ \text{khắc}_{\text{sau}}} = \boxed{900 \frac{\text{giây}}{\text{khắc}_{\text{sau}}}}.$$
 \begin{enumerate}
-   \item[2] Tỉ lệ độ dài thời gian một khắc trước và sau là $$\frac{1\ \text{khắc}_{\text{trước}}}{1\ \text{khắc}_{\text{sau}}} = \frac{1\ \text{khắc}_{\text{trước}}}{1\ \text{khắc}_{\text{sau}}}\cdot \frac{864\ \text{giây}}{1\ \text{khắc}_{\text{trước}}}\cdot\frac{1\ \text{khắc}_{\text{sau}}}{900\ \text{giây}}=\boxed{0,96}.$$
+   \item[2] Tỉ lệ độ dài thời gian một khắc trước và sau là $$\frac{1\ \text{khắc}_{\text{trước}}}{1\ \text{khắc}_{\text{sau}}} = \frac{1\ \text{khắc}_{\text{trước}}}{1\ \text{khắc}_{\text{sau}}}\cdot \frac{864\ \text{giây}}{1\ \text{khắc}_{\text{trước}}}\cdot\frac{1\ \text{khắc}_{\text{sau}}}{900\ \text{giây}}=\boxed{0{,}96}.$$
 \end{enumerate}
 
-\exercise Một vòng đĩa tròn như trong hình \ref{fig:vong_dia} có đường kính $4,50$ cm rỗng ở giữa một lỗ đường kính $1,25$ cm. Đĩa dày $1,50$ mm. Biết rằng đĩa được làm từ chất liệu có khối lượng riêng là $8600 \frac{\text{kg}}{\text{m}^3}$. Tính khôi lượng vòng đĩa theo gram.
+\exercise Một vòng đĩa tròn như trong hình \ref{fig:vong_dia} có đường kính $4{,}50$ cm rỗng ở giữa một lỗ đường kính $1{,}25$ cm. Đĩa dày $1{,}50$ mm. Biết rằng đĩa được làm từ chất liệu có khối lượng riêng là $8600\;\frac{\text{kg}}{\text{m}^3}$. Tính khôi lượng vòng đĩa theo gram.
 
 \begin{figure}
    \centering
@@ -502,11 +597,11 @@ Sau triều đại Thanh, số giây trong một khắc là $$\frac{86400\ \text
       \draw[fill=white] (-0.625, 0) arc[start angle=180, end angle=0, x radius = 0.625cm, y radius = 0.5cm];
       % Draw the dimension
       \draw[<->] (-2.25,-2.5) -- (2.25,-2.5);
-      \node at (0, -2.7) {$4.50$ cm};
+      \node at (0, -2.7) {$4{,}50$ cm};
       \draw[<->] (-0.625,0) -- (0.625,0);
-      \node at (0, -0.2) {$1.25$ cm};
+      \node at (0, -0.2) {$1{,}25$ cm};
       \draw[<->] (0,0.5) -- (0,0.625);
-      \node[anchor=west] at (-0.05, 0.7) {$1.50$ mm};
+      \node[anchor=west] at (-0.05, 0.7) {$1{,}50$ mm};
    \end{tikzpicture}
    \caption{Vòng đĩa tròn}
    \label{fig:vong_dia}
@@ -514,34 +609,34 @@ Sau triều đại Thanh, số giây trong một khắc là $$\frac{86400\ \text
 
 \solution
 
-Đặt $D=4,50\ \text{cm}=4,50\times 10^{-2}\ \text{m}$, $d=1,25\ \text{cm}=1,25\times 10^{-2}\ \text{m}$, $h=1,50\ \text{mm}=1,50\times 10^{-3}\ \text{m}$ và $\mathcal{D}=8600 \frac{\text{kg}}{\text{m}^3}=8,6\times 10^3 \frac{\text{kg}}{\text{m}^3}\cdot \frac{10^3 \text{g}}{\text{kg}}=8,6\times 10^6 \frac{\text{g}}{\text{m}^3}$.
+Đặt $D=4{,}50\;\text{cm}=4{,}50\times 10^{-2}\ \text{m}$, $d=1{,}25\ \text{cm}=1{,}25\times 10^{-2}\;\text{m}$, $h=1{,}50\ \text{mm}=1{,}50\times 10^{-3}\ \text{m}$ và $\mathcal{D}=8600\;\frac{\text{kg}}{\text{m}^3}=8{,}6\times 10^3\;\frac{\text{kg}}{\text{m}^3}\cdot \frac{10^3\;\text{g}}{\text{kg}}=8{,}6\times 10^6\;\frac{\text{g}}{\text{m}^3}$.
 
 Nhận thấy rằng đĩa có dạng trụ, diện tích mặt đáy là $$S=\pi\cdot \left(\frac{D}{2}\right)^2-\pi\cdot \left(\frac{d}{2}\right)^2=\frac{\pi \left(D^2-d^2\right)}{4}.$$
 
-Thể tích của đĩa là $V=S\cdot h=\frac{\pi \cdot h\cdot \left(D^2-d^2\right)}{4}.$ Nhân với khối lượng riêng, ta có khối lượng của đĩa là $$m=\mathcal{D}\cdot V=\frac{\pi \cdot h\cdot \mathcal{D}\cdot \left(D^2-d^2\right)}{4}.$$ Thay số trực tiếp với sự để ý đến số chữ số có nghĩa, ta có kết quả $m=\boxed{1,89\times 10^1\ \text{kg}}$.
+Thể tích của đĩa là $V=S\cdot h=\frac{\pi \cdot h\cdot \left(D^2-d^2\right)}{4}.$ Nhân với khối lượng riêng, ta có khối lượng của đĩa là $$m=\mathcal{D}\cdot V=\frac{\pi \cdot h\cdot \mathcal{D}\cdot \left(D^2-d^2\right)}{4}.$$ Thay số trực tiếp với sự để ý đến số chữ số có nghĩa, ta có kết quả $m=\boxed{1{,}89\times 10^1\ \text{kg}}$.
 
-\exercise Khối lượng của một chất lỏng được mô hình hóa bởi phương trình $m=A\cdot t^{0,8}-B\cdot t$. Nếu như $t$ được tính bằng giây và $m$ được tính bằng ki-lô-gram, thì đơn vị của $A$ và $B$ là gì?
+\exercise Khối lượng của một chất lỏng được mô hình hóa bởi phương trình $m=A\cdot t^{0{,}8}-B\cdot t$. Nếu như $t$ được tính bằng giây và $m$ được tính bằng ki-lô-gram, thì đơn vị của $A$ và $B$ là gì?
 
 \solution
 
-Để có thể cộng trừ các phần tử, chúng cần phải có cùng đơn vị. Do vậy, đơn vị của $A\cdot t^{0,8}$ và $B\cdot t$ là kg. Từ quy tắc nhân chia các đơn vị, ta có:
+Để có thể cộng trừ các phần tử, chúng cần phải có cùng đơn vị. Do vậy, đơn vị của $A\cdot t^{0{,}8}$ và $B\cdot t$ là kg. Từ quy tắc nhân chia các đơn vị, ta có:
 \begin{equation*}
    \begin{cases}
-     A\cdot \text{s}^{0,8} &=\text{kg} \\
+     A\cdot \text{s}^{0{,}8} &=\text{kg} \\
      B\cdot\text{s} &=\text{kg}
    \end{cases}
    \iff
    \begin{cases}
-      A &=\frac{\text{kg}}{\text{s}^{0,8}} \\
+      A &=\frac{\text{kg}}{\text{s}^{0{,}8}} \\
       B&=\frac{\text{kg}}{\text{s}}
    \end{cases}.
 \end{equation*}
 
-Vậy đơn vị của $A$ là $\boxed{\frac{\text{kg}}{\text{s}^{0,8}}}$ và đơn vị của $B$ là $\boxed{\frac{\text{kg}}{\text{s}}}$.
+Vậy đơn vị của $A$ là $\boxed{\frac{\text{kg}}{\text{s}^{0{,}8}}}$ và đơn vị của $B$ là $\boxed{\frac{\text{kg}}{\text{s}}}$.
 
 \chapter{Chuyển động}
 
-\exercise Một ô tô đi $40$ km trên một đường thẳng với tốc độ không đổi $40\ \frac{\text{km}}{\text{h}}$. Sau đó, nó đi thêm theo chiều đó $60$ km với tốc độ không đổi $50 \frac{\text{km}}{\text{h}}$. Các giá trị đo được tính đến hai chữ số có nghĩa.
+\exercise Một ô tô đi $40$ km trên một đường thẳng với tốc độ không đổi $40\;\frac{\text{km}}{\text{h}}$. Sau đó, nó đi thêm theo chiều đó $60$ km với tốc độ không đổi $50\;\frac{\text{km}}{\text{h}}$. Các giá trị đo được tính đến hai chữ số có nghĩa.
 \begin{enumerate}
    \item Tính vận tốc trung bình trên cả quãng đường.
    \item Tính tốc độ trung bình trên cả quãng đường.
@@ -553,17 +648,17 @@ Vậy đơn vị của $A$ là $\boxed{\frac{\text{kg}}{\text{s}^{0,8}}}$ và đ
 Coi chiều chuyển động ban đầu là chiều dương.
 
 \begin{enumerate}
-   \item Thời gian đi $40$ km đầu là $$40\ \text{km}\div 40\ \frac{\text{km}}{\text{h}}=1,0\ \text{h}.$$
+   \item Thời gian đi $40$ km đầu là $$40\ \text{km}\div 40\ \frac{\text{km}}{\text{h}}=1{,}0\ \text{h}.$$
 \end{enumerate}
 
-Thời gian đi $50$ km sau là $$60\ \text{km}\div 50\ \frac{\text{km}}{\text{h}}=1,2\ \text{h}.$$
+Thời gian đi $50$ km sau là $$60\ \text{km}\div 50\ \frac{\text{km}}{\text{h}}=1{,}2\ \text{h}.$$
 
-Do hai quãng đường là cùng chiều nên ta có độ dịch chuyển của xe tổng cộng là $$\Delta x=40\ \text{km} + 60\ \text{km} = 100\ \text{km}$$ và tổng thời gian đi là $$\Delta t =1,0\ \text{h}+1,2\ \text{h}=2,2\ \text{h}.$$
+Do hai quãng đường là cùng chiều nên ta có độ dịch chuyển của xe tổng cộng là $$\Delta x=40\ \text{km} + 60\ \text{km} = 100\ \text{km}$$ và tổng thời gian đi là $$\Delta t =1{,}0\ \text{h}+1{,}2\ \text{h}=2{,}2\ \text{h}.$$
 
-Từ đó, ta có vận tốc trung bình là $$\bar{v} = \frac{\Delta x}{\Delta t} =\boxed{4,5\times10^1\ \frac{\text{km}}{\text{h}}}.$$
+Từ đó, ta có vận tốc trung bình là $$\bar{v} = \frac{\Delta x}{\Delta t} =\boxed{4{,}5\times10^1\ \frac{\text{km}}{\text{h}}}.$$
 
 \begin{enumerate}
-   \item[2.] Dễ thấy tổng quãng đường đi là $d=100\ \text{km}$. Tốc độ trung bình là $\bar{s} = \frac{d}{\Delta t}=\boxed{4,5\times10^1\ \frac{\text{km}}{\text{h}}}.$
+   \item[2.] Dễ thấy tổng quãng đường đi là $d=100\ \text{km}$. Tốc độ trung bình là $\bar{s} = \frac{d}{\Delta t}=\boxed{4{,}5\times10^1\ \frac{\text{km}}{\text{h}}}.$
    \item[3.] Thời gian không thay đổi. Có độ dịch chuyển thay đổi còn $\Delta x = 40\ \text{km} - 60\ \text{km} = -20\ \text{km}$ nhưng tổng quãng đường thì không. Do đó, $\boxed{\text{tốc độ trung bình giữ nguyên}}$ nhưng $\boxed{\text{vận tốc trung bình thay đổi}}$.
    \item[4.] Ta có đồ thị ở hình \ref{fig:do_thi_xe} bằng việc vẽ mối quan hệ $x(t)$ xong nối điểm đầu và điểm cuối. Vận tốc trung bình là độ dốc của đường thẳng nối hai điểm này.
 \end{enumerate}
@@ -590,14 +685,14 @@ Từ đó, ta có vận tốc trung bình là $$\bar{v} = \frac{\Delta x}{\Delta
       \draw[dashed] (6.6,5) -- (6.6,0);
       \node[left] at (6.6,2.5) {$\Delta x = 100\ \text{km}$};
       \draw[dashed] (0,0) -- (6.6,0);
-      \node[above] at (3.3,0) {$\Delta t = 2,2\ \text{h}$};
+      \node[above] at (3.3,0) {$\Delta t = 2{,}2\ \text{h}$};
       \draw[ultra thick] (0,0) -- (6.6,5);
    \end{tikzpicture}
    \caption{Đồ thị vị trí xe-thời gian chạy}
    \label{fig:do_thi_xe}
 \end{figure}
 
-\exercise Một máy bay phản lực đang bay ngang ở độ cao $h=42$ mét. Đột nhiên nó bay vào vùng đất dốc lên góc $\theta=4,2^\circ$ (xem hình \ref{fig:may_bay_doc}). Với tốc độ bay là $v=1300\ \frac{\text{km}}{\text{h}}$, thời gian tính từ lúc bay vào vùng đất dốc mà người phi công có để điều chỉnh máy bay là bao nhiêu? Tất cả các số liệu được đo đến hai chữ số có nghĩa.
+\exercise Một máy bay phản lực đang bay ngang ở độ cao $h=42$ mét. Đột nhiên nó bay vào vùng đất dốc lên góc $\theta=4{,}2^\circ$ (xem hình \ref{fig:may_bay_doc}). Với tốc độ bay là $v=1300\ \frac{\text{km}}{\text{h}}$, thời gian tính từ lúc bay vào vùng đất dốc mà người phi công có để điều chỉnh máy bay là bao nhiêu? Tất cả các số liệu được đo đến hai chữ số có nghĩa.
 
 \begin{figure}[h]
    \centering
@@ -608,7 +703,7 @@ Từ đó, ta có vận tốc trung bình là $$\bar{v} = \frac{\Delta x}{\Delta
       \draw (5,0) arc[start angle=180, end angle=175.8, radius=2];
 
       \draw[->] (5.2,0.5) -- ({7+2*cos(175.8)},{2*sin(175.8)});
-      \node[anchor=west] at (5.2,0.5) {$\theta=4,2^\circ$};
+      \node[anchor=west] at (5.2,0.5) {$\theta=4{,}2^\circ$};
 
       \draw (7,2.5) -- (7.5,2.5) -- (7.5,2.7) -- (7,2.5);
       \filldraw[fill=black] (7.5,2.5) -- (8.1,2.5) -- (7.5,2.7) -- cycle;
@@ -627,7 +722,7 @@ Từ đó, ta có vận tốc trung bình là $$\bar{v} = \frac{\Delta x}{\Delta
 
 Khoảng cách từ máy bay đến điểm va chạm với mặt đất là $$d=\frac{h}{\tan{(\theta)}}.$$ Từ đó, ta có được thời gian cho phép là $$t=\frac{d}{v}=\frac{h}{v\tan{(\theta)}}.$$
 
-Thay số trực tiếp, với để ý đến sự quy đổi $v=1300\ \frac{\text{km}}{\text{h}}=1300\ \frac{\text{km}}{\text{h}}\frac{1000\ \text{m}}{1\ \text{km}}\frac{1\ \text{h}}{3600\ \text{s}}=361\ \frac{\text{m}}{\text{s}}$, ta có $$t=\boxed{1,6\times 10^0\ s}.$$
+Thay số trực tiếp, với để ý đến sự quy đổi $v=1300\ \frac{\text{km}}{\text{h}}=1300\ \frac{\text{km}}{\text{h}}\frac{1000\ \text{m}}{1\ \text{km}}\frac{1\ \text{h}}{3600\ \text{s}}=361\ \frac{\text{m}}{\text{s}}$, ta có $$t=\boxed{1{,}6\times 10^0\ s}.$$
 
 \exercise Cho biết vị trí của một vật chuyển động thẳng được xác định bằng $x(t) = a\cdot t^2+b\cdot t+c$. Xác định vị trí, vận tốc và gia tốc của vật tại thời điểm $t=t_0$.
 
@@ -901,7 +996,7 @@ thì bạn có thể thực hiện nguyên hàm trên hàm này để tính đư
 \end{equation*}
 và ta có đồ thị như hình \ref{fig:vttgp2}.
 
-\exercise Hai xe hơi có tốc độ lần lượt là $v_1 = 50,0\ \frac{\text{km}}{\text{h}}$ và $v_2 = 60,0\ \frac{\text{km}}{\text{h}}$ đi ngược chiều với nhau trên một con đường hẹp. Hai xe phát hiện lẫn nhau khi khoảng cách giữa hai xe là $d = 400\ \text{m}$. Cả hai xe đồng thời giảm tốc với cùng một gia tốc hãm đều là $a$. Tính giá trị tối thiểu của $a$ nếu biết hai xe không xảy ra va chạm. Số liệu được đo tới $3$ chữ số có nghĩa.
+\exercise Hai xe hơi có tốc độ lần lượt là $v_1 = 50{,}0\ \frac{\text{km}}{\text{h}}$ và $v_2 = 60{,}0\ \frac{\text{km}}{\text{h}}$ đi ngược chiều với nhau trên một con đường hẹp. Hai xe phát hiện lẫn nhau khi khoảng cách giữa hai xe là $d = 400\ \text{m}$. Cả hai xe đồng thời giảm tốc với cùng một gia tốc hãm đều là $a$. Tính giá trị tối thiểu của $a$ nếu biết hai xe không xảy ra va chạm. Số liệu được đo tới $3$ chữ số có nghĩa.
 
 \solution
 
@@ -914,7 +1009,7 @@ Trong khi đó, quãng đường xe thứ nhất đã di chuyển là $d_1 = \fr
    \iff a \geq \frac{v_1^2+v_2^2}{2d}.
 $$
 
-Thay số trực tiếp, ta có gia tốc hãm tối thiểu phải là $\boxed{7,63 \times 10^3 \frac{\text{km}}{\text{h}^2}}$.
+Thay số trực tiếp, ta có gia tốc hãm tối thiểu phải là $\boxed{7{,}63 \times 10^3 \frac{\text{km}}{\text{h}^2}}$.
 
 \exercise Để dừng xe ban đầu bạn cần một thời gian phản ứng để bắt đầu phanh, rồi xe mới đi chậm dần nhờ có một gia tốc hãm không đổi. Giả sử quãng được đi được trong hai pha này là $186$ ft nếu vận tốc ban đầu là $50\ \frac{\text{dặm}}{\text{h}}$. Còn trong một trường hợp khác, quãng được đi được trong hai pha này là $80$ ft nếu vận tốc ban đầu là $30\ \frac{\text{dặm}}{\text{h}}$. Biết thời gian phản ứng là cố định và $1$ dặm $= 5280$ ft, tính thời gian phản ứng và độ lớn của gia tốc hãm.
 
@@ -935,7 +1030,7 @@ Trước khi thay số ta thực hiện quy đổi $$50\ \frac{\text{dặm}}{\te
       80\ \text{ft} = 44\ \frac{\text{ft}}{\text{s}}\cdot t_p + \frac{\left(44\ \frac{\text{ft}}{\text{s}}\right)^2}{2a} 
    \end{cases}.
 \end{equation*}
-Giải hệ phương trình, ta có thời gian phản ứng là $t_p=0,97\ \text{s}$ và gia tốc hãm là $a = 26\ \frac{\text{ft}}{\text{s}^2}$.
+Giải hệ phương trình, ta có thời gian phản ứng là $t_p=\boxed{0{,}97\ \text{s}}$ và gia tốc hãm là $a = \boxed{26\ \frac{\text{ft}}{\text{s}^2}}$.
 
 \begin{wrapfigure}{r}{0.6\textwidth} % 'r' for right, 'l' for left, width of the figure
     \centering
