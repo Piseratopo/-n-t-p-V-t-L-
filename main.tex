@@ -69,11 +69,11 @@ Phần này bao gồm các kiến thức toán học cần thiết để xây d�
       \node at (1,-1) {$\boxed{\text{IV}}$};
       \node at (-1,-1) {$\boxed{\text{III}}$};
 
-      \draw (1,0) -- (1,-0.08) node[below] {$a$};
-      \draw (0,1.5) -- (-0.08,1.5) node[left] {$b$};
+      \draw (1,0) -- (1,-0.08) node[below] {$x_P$};
+      \draw (0,1.5) -- (-0.08,1.5) node[left] {$y_P$};
 
       \filldraw (1, 1.5) circle (1.5pt);
-      \node[above right] at (1, 1.5) {$P(a; b)$};
+      \node[above right] at (1, 1.5) {$P(x_P; y_P)$};
 
       \draw[dashed] (1, 1.5) -- (1, 0);
       \draw[dashed] (1, 1.5) -- (0, 1.5);
@@ -84,7 +84,44 @@ Phần này bao gồm các kiến thức toán học cần thiết để xây d�
    \label{fig:toa do vuong goc}
 \end{wrapfigure}
 
-Đồ thị là cầu nối đầu tiên giữa đại số và hình học mà các bạn học sinh được học. Hiểu một cách nôm na, nếu chúng ta đặt hai trục vuông góc với nhau, giao nhau tại gốc $0$ của mỗi trục. Khi đó, chúng ta có thể xác định vị trị của điểm trên mặt phẳng chứa hai trục theo biểu diễn đại số bằng cách dóng điểm đó lên trục mà sau này được gọi là \emph{tọa độ}. Đây được gọi là \emph{hệ tọa độ vuông góc} (hay \emph{hệ tọa độ Đề-các}\footnote{René Descartes (1596-1650)}). Trục nằm ngang được gọi là \emph{trục hoành}, trục dọc được gọi là \emph{trục tung}. Với mỗi điểm, vị trí khi dóng điểm đó vào trục hoành gọi là \emph{hoành độ}, vào trục tung gọi là \emph{tung độ}. Như ở bên hình \ref{fig:toa do vuong goc}, điểm $P$ có tọa độ là $(a;b)$ và được kí hiệu là $P(a;b)$. Thêm vào đó, hai trục chia mặt phẳng thành bốn góc phần tư, từ góc phần tư thứ I đến góc phần tư thứ IV quay ngược chiều kim đồng hồ. Các điểm trên trục không xác định thuộc bất cứ góc phần tư nào.
+Đồ thị là cầu nối đầu tiên giữa đại số và hình học mà chắc là bạn đọc đã được học. Nhưng nếu bạn đọc chưa
+
+Khi xét về không gian hai chiều, hiểu một cách nôm na, nếu chúng ta đặt hai trục vuông góc với nhau, giao nhau tại gốc $0$ của mỗi trục. Khi đó, chúng ta có thể xác định vị trị của điểm trên mặt phẳng chứa hai trục theo biểu diễn đại số bằng cách dóng điểm đó lên trục mà sau này được gọi là \emph{tọa độ}. Đây được gọi là \emph{hệ tọa độ vuông góc} (hay \emph{hệ tọa độ Đề-các}\footnote{René Descartes (1596-1650)}). Trục nằm ngang được gọi là \emph{trục hoành}, trục dọc được gọi là \emph{trục tung}. Với mỗi điểm, vị trí khi dóng điểm đó vào trục hoành gọi là \emph{hoành độ}, vào trục tung gọi là \emph{tung độ}. Như ở bên hình \ref{fig:toa do vuong goc}, điểm $P$ có tọa độ là $(x_P;y_P)$ và được kí hiệu là $P(x_P;y_P)$. Thêm vào đó, hai trục chia mặt phẳng thành bốn góc phần tư, từ góc phần tư thứ I đến góc phần tư thứ IV quay ngược chiều kim đồng hồ. Các điểm trên trục không xác định thuộc bất cứ góc phần tư nào.
+
+\begin{wrapfigure}{r}{0.4\textwidth}
+   \centering
+   \begin{tikzpicture}
+      \draw[->] (-2,0) -- (2,0);
+      \draw[->] (0,-2) -- (0,2);
+      \node[right] at (2,0) {$x$};
+      \node[above] at (0,2) {$y$};
+      \filldraw (0, 0) circle (1.5pt);
+      \node[below left] at (0, 0) {$O$};
+
+      \pgfmathsetmacro{\xP}{1}
+      \pgfmathsetmacro{\yP}{1.5}
+      \pgfmathsetmacro{\xQ}{-1.2}
+      \pgfmathsetmacro{\yQ}{-1}
+
+      \filldraw (\xP, \yP) circle (1.5pt);
+      \node[above right] at (\xP, \yP) {$P(x_P; y_P)$};
+
+      \filldraw (\xQ, \yQ) circle (1.5pt);
+      \node[below right] at (\xQ, \yQ) {$Q(x_Q; y_Q)$};
+
+      \draw[thick] (\xP, \yP) -- (\xQ, \yQ);
+      \draw[dashed] (\xP, \yP) -- (\xP, \yQ);
+      \draw[dashed] (\xP, \yQ) -- (\xQ, \yQ);
+
+      \node[above left] at ({(\xP+\xQ)/2}, {(\yP+\yQ)/2}) {$d(P;Q)$};
+
+   \end{tikzpicture}
+
+   \caption{Khoảng cách giữa hai điểm}
+   \label{fig:khoanh cach 2d}
+\end{wrapfigure}
+
+Khi có nhiều điểm ở trên đồ thị, chúng ta sẽ mong muốn tính những thông số liên quan tới những điểm đó. Do chương này mang tính giới thiệu, chúng ta sẽ chỉ tập trung vào một đặc điểm nhất định, \emph{khoảng cách}. Cho hai điểm $P(x_P;y_P)$ và $Q(x_Q;y_Q)$, theo định lí Pi-ta-go, khoảng cách giữa hai điểm đó là $$d(P;Q)=\sqrt{(x_P-x_Q)^2+(y_P-y_Q)^2}.$$
 
 \section{Hàm số}
 
