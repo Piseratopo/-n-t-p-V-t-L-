@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.3) (preloaded format=xelatex 2025.8.2)  5 AUG 2025 23:00
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.3) (preloaded format=xelatex 2025.8.2)  7 AUG 2025 08:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1051,35 +1051,28 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ]
 
-Package wrapfig Warning: Collision between wrapping environments on input line 186.
+Package wrapfig Warning: Collision between wrapping environments on input line 207.
 
 
-Package wrapfig Warning: Stationary wrapfigure forced to float on input line 219.
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 240.
 
 
-Package wrapfig Warning: Stationary wrapfigure forced to float on input line 221.
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 242.
 
 
-Package wrapfig Warning: Stationary wrapfigure forced to float on input line 223.
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 244.
 
 
 
 Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
-(babel)             Reported  on input line 235.
+(babel)             Reported  on input line 246.
 [4]
 
 [5]
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
 [6]
 
 [7]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1155,12 +1148,12 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: AC59779D57E18B0CBBD5C7B46C2AA7CF;1461.
  ) 
 Here is how much of TeX's memory you used:
- 31346 strings out of 408640
- 623877 string characters out of 5744799
- 1229369 words of memory out of 5000000
- 53931 multiletter control sequences out of 15000+600000
+ 31348 strings out of 408640
+ 623937 string characters out of 5744799
+ 1228369 words of memory out of 5000000
+ 53933 multiletter control sequences out of 15000+600000
  570161 words of font info for 106 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 92i,13n,107p,1770b,792s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 92i,13n,107p,1753b,792s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (21 pages, 576676 bytes).
+Output written on main.xdv (21 pages, 583588 bytes).

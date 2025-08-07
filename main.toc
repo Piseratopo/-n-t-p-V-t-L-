@@ -1,8 +1,8 @@
 \babel@toc {vietnamese}{}\relax 
 \contentsline {chapter}{\numberline {0}Kiến thức toán học nền tảng}{3}{chapter.0}%
 \contentsline {section}{\numberline {0.1}Đồ thị}{3}{section.0.1}%
-\contentsline {section}{\numberline {0.2}Hàm số}{4}{section.0.2}%
-\contentsline {subsection}{\numberline {0.2.1}Định nghĩa hàm số}{4}{subsection.0.2.1}%
+\contentsline {section}{\numberline {0.2}Hàm số}{5}{section.0.2}%
+\contentsline {subsection}{\numberline {0.2.1}Định nghĩa hàm số}{5}{subsection.0.2.1}%
 \contentsline {subsection}{\numberline {0.2.2}Những hàm số sơ cấp}{5}{subsection.0.2.2}%
 \contentsline {section}{\numberline {0.3}Số ảo và số phức}{7}{section.0.3}%
 \contentsline {section}{\numberline {0.4}Bài tập tổng hợp}{10}{section.0.4}%

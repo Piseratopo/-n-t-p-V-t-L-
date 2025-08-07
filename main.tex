@@ -105,7 +105,7 @@ Khi có nhiều điểm ở trên đồ thị, chúng ta sẽ mong muốn tính 
    \item $M(x)$ và $N(2x)$ với $x\in\mathbb{R}$.
 \end{enumerate}
 
-\solution[ex:0.1] Ta có đồ thị cho các phần từ $1$ đến $4$ như sau:
+\solution[ex:0.1] Ta có đồ thị cho các phần từ $1$ đến $4$ như hình \ref{fig:bon truc}.
 \begin{figure}[h]
    \centering
    \begin{tikzpicture}[scale=1]
@@ -150,6 +150,27 @@ Khi có nhiều điểm ở trên đồ thị, chúng ta sẽ mong muốn tính 
    \caption{Bốn trục số cho các phần từ $1$ đến $4$ của bài \ref{ex:0.1}}
    \label{fig:bon truc}
 \end{figure}
+
+Cần lưu ý rằng, để biểu diễn thuận lợi nhất, các trục số khi biểu diễn sốcần được chọn những tỉ lệ khác nhau và tại những vị trí khác nhau.
+
+Các khoảng cách giữa hai điểm phân biệt đôi một là
+\begin{enumerate}
+   \item \begin{alignat*}{2}
+      &d(A;B) = d(B;A) = \left|2 - (-3)\right| = 5; \\
+      &d(B;C) = d(C;B) = \left|4 - (-3)\right| = 7; \\
+      &d(C;A) = d(A;C) = \left|4 - 2\right| = 2.
+   \end{alignat*}
+   \item \begin{alignat*}{2}
+      &d(D;E) = d(E;D) = \left|\pi - (-\pi)\right| = 2\pi; \\
+      &d(E;F) = d(F;E) = \left|(-\pi) - 0\right| = \pi; \\
+      &d(F;G) = d(G;F) = \left|0 - \frac{\pi}{2}\right| = \frac{\pi}{2}; \\
+      &d(G;D) = d(D;G) = \left|\frac{\pi}{2} - \pi\right| = \frac{\pi}{2}; \\
+      &d(D;F) = d(F;D) = \left|\pi - 0\right| = \pi;\\
+      &d(E;G) = d(G;E) = \left|(-\pi) - \frac{\pi}{2}\right| = \frac{3\pi}{2}.
+   \end{alignat*}
+\end{enumerate}
+
+
 
 \begin{wrapfigure}{r}{0.4\textwidth}
    \centering
