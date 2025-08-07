@@ -1,14 +1,20 @@
 # Fdb version 4
-["xdvipdfmx"] 1754546549.49844 "main.xdv" "main.pdf" "main" 1754546550.0189 0
-  "main.xdv" 1754546793 518768 e9fc466d67660648f49c8dc90e446e80 "xelatex"
+["xdvipdfmx"] 1754546815.37173 "main.xdv" "main.pdf" "main" 1754546815.89813 0
+  "main.xdv" 1754546815 534660 b470d1fc728d96b074dd033b04afc21f "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1754546790.88678 "d:/-n-t-p-V-t-L-/main.tex" "main.xdv" "main" 1754546793.81901 2
+["xelatex"] 1754546812.13033 "d:/-n-t-p-V-t-L-/main.tex" "main.xdv" "main" 1754546815.88859 0
   "C:/Users/Admin/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1754385806 37546046 a3ae461dceb047ab72d09f72cd68ed8f ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136747054 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
+  "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1233951854 916 f87d7c45f9c908e672703b83b72241a3 ""
+  "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1233951854 924 9904cf1d39e9767e7a3622f2a125a565 ""
+  "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1233951854 928 2dc8d444221b7a635bb58038579b861a ""
+  "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1233951854 908 2921f8a10601f252058503cc6570e581 ""
+  "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm5.tfm" 1233951854 940 75ac932a52f80982a9f8ea75d03a34cf ""
+  "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1233951854 940 228d6584342e91276bf566bcf9716b83 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmex10.tfm" 1136765053 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi12.tfm" 1136765053 1524 4414a8315f39513458b80dfc63bff03a ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi6.tfm" 1136765053 1512 f21f83efb36853c0b70002322c1ab3ad ""
@@ -96,6 +102,10 @@
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/generic/pgf/utilities/pgfutil-latex.def" 1673775190 6950 8524a062d82b7afdc4a88a57cb377784 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/generic/stringenc/stringenc.sty" 1575105840 21514 b7557edcee22835ef6b03ede1802dad4 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/generic/uniquecounter/uniquecounter.sty" 1576434012 7008 f92eaa0a3872ed622bbf538217cd2ab7 ""
+  "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/amsfonts.sty" 1358197772 5949 3f3fd50a8cc94c3d4cbf4fc66cd3df1c ""
+  "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/amssymb.sty" 1358197772 13829 94730e64147574077f8ecfea9bb69af4 ""
+  "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsa.fd" 1358197772 961 6518c6525a34feb5e8250ffa91731cff ""
+  "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsb.fd" 1358197772 961 d02606146ba5601b5645f987c92e6193 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsbsy.sty" 1686931788 2222 499d61426192c39efd8f410ee1a52b9c ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsgen.sty" 1686931787 4173 82ac04dfb1256038fad068287fbb4fe6 ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsmath.sty" 1686931788 88371 d84032c0f422c3d1e282266c01bef237 ""
@@ -168,11 +178,11 @@
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/xelatex/xecjk/xeCJK.cfg" 1659726270 408 7369c27beaa819c5f46de3795b22ee3e ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/xelatex/xecjk/xeCJK.sty" 1659726270 183137 ed372550124703b2b73cbcc0b47cb20f ""
   "C:/Users/Admin/AppData/Local/Programs/MiKTeX/tex/xelatex/xecjk/xeCJKfntef.sty" 1659726270 39577 b470f8a1dbecc9c45c9bf05ca7db9188 ""
-  "d:/-n-t-p-V-t-L-/main.tex" 1754546786 81885 ea902d06d352b36b762d5b2476c08e3c ""
-  "main.aux" 1754546793 10325 3cacca3c1f85948f849ad1e4f60afd6a "xelatex"
-  "main.out" 1754546793 1461 ac59779d57e18b0cbbd5c7b46c2aa7cf "xelatex"
-  "main.tex" 1754546786 81885 ea902d06d352b36b762d5b2476c08e3c ""
-  "main.toc" 1754546793 809 043605d250f85fd439ace08791c02859 "xelatex"
+  "d:/-n-t-p-V-t-L-/main.tex" 1754546815 81894 4d14f805225c2ef4467514d02d66e967 ""
+  "main.aux" 1754546815 10325 3cacca3c1f85948f849ad1e4f60afd6a "xelatex"
+  "main.out" 1754546815 1461 ac59779d57e18b0cbbd5c7b46c2aa7cf "xelatex"
+  "main.tex" 1754546815 81894 4d14f805225c2ef4467514d02d66e967 ""
+  "main.toc" 1754546815 809 043605d250f85fd439ace08791c02859 "xelatex"
   (generated)
   "main.aux"
   "main.log"
