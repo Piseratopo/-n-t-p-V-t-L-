@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2025.8.5)  7 AUG 2025 11:13
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2025.8.5)  7 AUG 2025 13:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -616,78 +616,42 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/unicode-math\unicode-math.sty (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/wrapfig\wrapfig.sty
+\wrapoverhang=\dimen290
+\WF@size=\dimen291
+\c@WF@wrappedlines=\count342
+\WF@box=\box112
+\WF@everypar=\toks39
+Package: wrapfig 2003/01/31  v 3.6
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse.sty (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
 Package: expl3 2024-01-04 L3 programming layer (loader) 
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-xetex.def
 File: l3backend-xetex.def 2024-01-04 L3 backend support: XeTeX
-\g__graphics_track_int=\count342
-\l__pdf_internal_box=\box112
-\g__pdf_backend_object_int=\count343
-\g__pdf_backend_annotation_int=\count344
-\g__pdf_backend_link_int=\count345
+\g__graphics_track_int=\count343
+\l__pdf_internal_box=\box113
+\g__pdf_backend_object_int=\count344
+\g__pdf_backend_annotation_int=\count345
+\g__pdf_backend_link_int=\count346
 ))
-Package: unicode-math 2023/08/13 v0.8r Unicode maths in XeLaTeX and LuaLaTeX
- (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/unicode-math\unicode-math-xetex.sty
-Package: unicode-math-xetex 2023/08/13 v0.8r Unicode maths in XeLaTeX and LuaLaTeX
- (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse.sty
 Package: xparse 2023-10-10 L3 Experimental document command parser
-) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3keys2e.sty
-Package: l3keys2e 2023-10-10 LaTeX2e option processing using LaTeX3 keys
-) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.sty
-Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
- (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec-xetex.sty
-Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
-\l__fontspec_script_int=\count346
-\l__fontspec_language_int=\count347
-\l__fontspec_strnum_int=\count348
-\l__fontspec_tmp_int=\count349
-\l__fontspec_tmpa_int=\count350
-\l__fontspec_tmpb_int=\count351
-\l__fontspec_tmpc_int=\count352
-\l__fontspec_em_int=\count353
-\l__fontspec_emdef_int=\count354
-\l__fontspec_strong_int=\count355
-\l__fontspec_strongdef_int=\count356
-\l__fontspec_tmpa_dim=\dimen290
-\l__fontspec_tmpb_dim=\dimen291
-\l__fontspec_tmpc_dim=\dimen292
- (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
-Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.cfg))) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/base\fix-cm.sty
-Package: fix-cm 2020/11/24 v1.1t fixes to LaTeX
- (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1enc.def
-File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
-LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
-))
-\g__um_fam_int=\count357
-\g__um_fonts_used_int=\count358
-\l__um_primecount_int=\count359
-\g__um_primekern_muskip=\muskip18
- (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/unicode-math\unicode-math-table.tex))) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/wrapfig\wrapfig.sty
-\wrapoverhang=\dimen293
-\WF@size=\dimen294
-\c@WF@wrappedlines=\count360
-\WF@box=\box113
-\WF@everypar=\toks39
-Package: wrapfig 2003/01/31  v 3.6
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/xelatex/xecjk\xeCJK.sty
 Package: xeCJK 2022/08/05 v3.9.1 Typesetting CJK scripts with XeLaTeX
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/ctex\ctexhook.sty
 Package: ctexhook 2022/07/14 v2.5.10 Document and package hooks (CTEX)
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xtemplate\xtemplate.sty
 Package: xtemplate 2023-10-10 L3 Experimental prototype document functions
-\l__xtemplate_tmp_dim=\dimen295
-\l__xtemplate_tmp_int=\count361
-\l__xtemplate_tmp_muskip=\muskip19
+\l__xtemplate_tmp_dim=\dimen292
+\l__xtemplate_tmp_int=\count347
+\l__xtemplate_tmp_muskip=\muskip18
 \l__xtemplate_tmp_skip=\skip63
 )
-\l__xeCJK_tmp_int=\count362
+\l__xeCJK_tmp_int=\count348
 \l__xeCJK_tmp_box=\box114
-\l__xeCJK_tmp_dim=\dimen296
+\l__xeCJK_tmp_dim=\dimen293
 \l__xeCJK_tmp_skip=\skip64
-\g__xeCJK_space_factor_int=\count363
-\l__xeCJK_begin_int=\count364
-\l__xeCJK_end_int=\count365
+\g__xeCJK_space_factor_int=\count349
+\l__xeCJK_begin_int=\count350
+\l__xeCJK_end_int=\count351
 \c__xeCJK_CJK_class_int=\XeTeXcharclass4
 \c__xeCJK_FullLeft_class_int=\XeTeXcharclass5
 \c__xeCJK_FullRight_class_int=\XeTeXcharclass6
@@ -697,51 +661,71 @@ Package: xtemplate 2023-10-10 L3 Experimental prototype document functions
 \c__xeCJK_CM_class_int=\XeTeXcharclass10
 \c__xeCJK_HangulJamo_class_int=\XeTeXcharclass11
 \l__xeCJK_last_skip=\skip65
-\c__xeCJK_none_node=\count366
-\g__xeCJK_node_int=\count367
-\c__xeCJK_CJK_node_dim=\dimen297
-\c__xeCJK_CJK-space_node_dim=\dimen298
-\c__xeCJK_default_node_dim=\dimen299
-\c__xeCJK_CJK-widow_node_dim=\dimen300
-\c__xeCJK_normalspace_node_dim=\dimen301
+\c__xeCJK_none_node=\count352
+\g__xeCJK_node_int=\count353
+\c__xeCJK_CJK_node_dim=\dimen294
+\c__xeCJK_CJK-space_node_dim=\dimen295
+\c__xeCJK_default_node_dim=\dimen296
+\c__xeCJK_CJK-widow_node_dim=\dimen297
+\c__xeCJK_normalspace_node_dim=\dimen298
 \c__xeCJK_default-space_node_skip=\skip66
 \l__xeCJK_ccglue_skip=\skip67
 \l__xeCJK_ecglue_skip=\skip68
 \l__xeCJK_punct_kern_skip=\skip69
 \l__xeCJK_indent_box=\box115
-\l__xeCJK_last_penalty_int=\count368
-\l__xeCJK_last_bound_dim=\dimen302
-\l__xeCJK_last_kern_dim=\dimen303
-\l__xeCJK_widow_penalty_int=\count369
+\l__xeCJK_last_penalty_int=\count354
+\l__xeCJK_last_bound_dim=\dimen299
+\l__xeCJK_last_kern_dim=\dimen300
+\l__xeCJK_widow_penalty_int=\count355
 
 Package xtemplate Info: Declaring object type 'xeCJK/punctuation' taking 0
 (xtemplate)             argument(s) on line 2396.
 
-\l__xeCJK_fixed_punct_width_dim=\dimen304
-\l__xeCJK_mixed_punct_width_dim=\dimen305
-\l__xeCJK_middle_punct_width_dim=\dimen306
-\l__xeCJK_fixed_margin_width_dim=\dimen307
-\l__xeCJK_mixed_margin_width_dim=\dimen308
-\l__xeCJK_middle_margin_width_dim=\dimen309
-\l__xeCJK_bound_punct_width_dim=\dimen310
-\l__xeCJK_bound_margin_width_dim=\dimen311
-\l__xeCJK_margin_minimum_dim=\dimen312
-\l__xeCJK_kerning_total_width_dim=\dimen313
-\l__xeCJK_same_align_margin_dim=\dimen314
-\l__xeCJK_different_align_margin_dim=\dimen315
-\l__xeCJK_kerning_margin_width_dim=\dimen316
-\l__xeCJK_kerning_margin_minimum_dim=\dimen317
-\l__xeCJK_bound_dim=\dimen318
-\l__xeCJK_reverse_bound_dim=\dimen319
-\l__xeCJK_margin_dim=\dimen320
-\l__xeCJK_minimum_bound_dim=\dimen321
-\l__xeCJK_kerning_margin_dim=\dimen322
-\g__xeCJK_family_int=\count370
-\l__xeCJK_fam_int=\count371
-\g__xeCJK_fam_allocation_int=\count372
-\l__xeCJK_verb_case_int=\count373
+\l__xeCJK_fixed_punct_width_dim=\dimen301
+\l__xeCJK_mixed_punct_width_dim=\dimen302
+\l__xeCJK_middle_punct_width_dim=\dimen303
+\l__xeCJK_fixed_margin_width_dim=\dimen304
+\l__xeCJK_mixed_margin_width_dim=\dimen305
+\l__xeCJK_middle_margin_width_dim=\dimen306
+\l__xeCJK_bound_punct_width_dim=\dimen307
+\l__xeCJK_bound_margin_width_dim=\dimen308
+\l__xeCJK_margin_minimum_dim=\dimen309
+\l__xeCJK_kerning_total_width_dim=\dimen310
+\l__xeCJK_same_align_margin_dim=\dimen311
+\l__xeCJK_different_align_margin_dim=\dimen312
+\l__xeCJK_kerning_margin_width_dim=\dimen313
+\l__xeCJK_kerning_margin_minimum_dim=\dimen314
+\l__xeCJK_bound_dim=\dimen315
+\l__xeCJK_reverse_bound_dim=\dimen316
+\l__xeCJK_margin_dim=\dimen317
+\l__xeCJK_minimum_bound_dim=\dimen318
+\l__xeCJK_kerning_margin_dim=\dimen319
+\g__xeCJK_family_int=\count356
+\l__xeCJK_fam_int=\count357
+\g__xeCJK_fam_allocation_int=\count358
+\l__xeCJK_verb_case_int=\count359
 \l__xeCJK_verb_exspace_skip=\skip70
- (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/xelatex/xecjk\xeCJK.cfg
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.sty
+Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec-xetex.sty
+Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+\l__fontspec_script_int=\count360
+\l__fontspec_language_int=\count361
+\l__fontspec_strnum_int=\count362
+\l__fontspec_tmp_int=\count363
+\l__fontspec_tmpa_int=\count364
+\l__fontspec_tmpb_int=\count365
+\l__fontspec_tmpc_int=\count366
+\l__fontspec_em_int=\count367
+\l__fontspec_emdef_int=\count368
+\l__fontspec_strong_int=\count369
+\l__fontspec_strongdef_int=\count370
+\l__fontspec_tmpa_dim=\dimen320
+\l__fontspec_tmpb_dim=\dimen321
+\l__fontspec_tmpc_dim=\dimen322
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.cfg))) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/xelatex/xecjk\xeCJK.cfg
 File: xeCJK.cfg 2022/08/05 v3.9.1 Configuration file for xeCJK package
 )) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
@@ -777,8 +761,8 @@ Package fontspec Info: Font family 'NomNaTong(0)' created for font 'Nom Na
 (fontspec)             Tong/OT:script=hani;language=dflt;embolden=2;slant=0.15;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
-\c@exercise=\count374
-\c@solution=\count375
+\c@exercise=\count371
+\c@solution=\count372
  (main.aux
 
 LaTeX Warning: Label `fig:truc so mot chieu' multiply defined.
@@ -795,6 +779,10 @@ LaTeX Font Info:    ... okay on input line 42.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
 LaTeX Font Info:    ... okay on input line 42.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 42.
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmr.fd
+File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
 LaTeX Font Info:    ... okay on input line 42.
 LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 42.
 LaTeX Font Info:    ... okay on input line 42.
@@ -853,286 +841,39 @@ Package hyperref Info: Link coloring OFF on input line 42.
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 42.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 42.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/bx/n on input line 42.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 42.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/bx/n on input line 42.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 42.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/bx/n on input line 42.
 
-Package fontspec Info: Font family 'latinmodern-math.otf(0)' created for font
-(fontspec)             'latinmodern-math.otf' with options
-(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,BoldFont={latinmodern-math.otf}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"[latinmodern-math.otf]/OT:script=math;language=dflt;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"[latinmodern-math.otf]/OT:script=math;language=dflt;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
 
-
-Package fontspec Info: Font family 'latinmodern-math.otf(1)' created for font
-(fontspec)             'latinmodern-math.otf' with options
-(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=8.5-},{Size=6-8.5,Font=latinmodern-math.otf,Style=MathScript},{Size=-6,Font=latinmodern-math.otf,Style=MathScriptScript}},BoldFont={latinmodern-math.otf}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <8.5->"[latinmodern-math.otf]/OT:script=math;language=dflt;"<6-8.5>"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;"<-6>"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"[latinmodern-math.otf]/OT:script=math;language=dflt;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
-
+\symlegacymaths=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 42.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 42.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 42.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 42.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 42.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 42.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 42.
+LaTeX Font Info:    Redeclaring math accent \check on input line 42.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 42.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 42.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 42.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 42.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
 (Font)              `operators' in the math version `normal' on input line 42.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input line 42.
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 42.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 42.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on input line 42.
-
-Package fontspec Info: latinmodern-math scale = 1.0001.
-
-
-Package fontspec Info: latinmodern-math scale = 1.0001.
-
-
-Package fontspec Info: latinmodern-math scale = 1.0001.
-
-
-Package fontspec Info: latinmodern-math scale = 1.0001.
-
-
-Package fontspec Info: latinmodern-math scale = 1.0001.
-
-
-Package fontspec Info: Font family 'latinmodern-math.otf(2)' created for font
-(fontspec)             'latinmodern-math.otf' with options
-(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=8.5-},{Size=6-8.5,Font=latinmodern-math.otf,Style=MathScript},{Size=-6,Font=latinmodern-math.otf,Style=MathScriptScript}},BoldFont={latinmodern-math.otf},ScaleAgain=1.0001,FontAdjustment={\fontdimen
-(fontspec)             8\font =6.77pt\relax \fontdimen 9\font =3.94pt\relax
-(fontspec)             \fontdimen 10\font =4.44pt\relax \fontdimen 11\font
-(fontspec)             =6.86pt\relax \fontdimen 12\font =3.45pt\relax
-(fontspec)             \fontdimen 13\font =3.63pt\relax \fontdimen 14\font
-(fontspec)             =3.63pt\relax \fontdimen 15\font =2.89pt\relax
-(fontspec)             \fontdimen 16\font =2.47pt\relax \fontdimen 17\font
-(fontspec)             =2.47pt\relax \fontdimen 18\font =2.5pt\relax
-(fontspec)             \fontdimen 19\font =2.0pt\relax \fontdimen 22\font
-(fontspec)             =2.5pt\relax \fontdimen 20\font =0pt\relax \fontdimen
-(fontspec)             21\font =0pt\relax }].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <8.5->s*[1.0001]"[latinmodern-math.otf]/OT:script=math;language=dflt;"<6-8.5>s*[1.0001]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;"<-6>s*[1.0001]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
-(fontspec)             and font adjustment code:
-(fontspec)             \fontdimen 8\font =6.77pt\relax \fontdimen 9\font
-(fontspec)             =3.94pt\relax \fontdimen 10\font =4.44pt\relax
-(fontspec)             \fontdimen 11\font =6.86pt\relax \fontdimen 12\font
-(fontspec)             =3.45pt\relax \fontdimen 13\font =3.63pt\relax
-(fontspec)             \fontdimen 14\font =3.63pt\relax \fontdimen 15\font
-(fontspec)             =2.89pt\relax \fontdimen 16\font =2.47pt\relax
-(fontspec)             \fontdimen 17\font =2.47pt\relax \fontdimen 18\font
-(fontspec)             =2.5pt\relax \fontdimen 19\font =2.0pt\relax \fontdimen
-(fontspec)             22\font =2.5pt\relax \fontdimen 20\font =0pt\relax
-(fontspec)             \fontdimen 21\font =0pt\relax 
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[1.0001]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
-(fontspec)             and font adjustment code:
-(fontspec)             \fontdimen 8\font =6.77pt\relax \fontdimen 9\font
-(fontspec)             =3.94pt\relax \fontdimen 10\font =4.44pt\relax
-(fontspec)             \fontdimen 11\font =6.86pt\relax \fontdimen 12\font
-(fontspec)             =3.45pt\relax \fontdimen 13\font =3.63pt\relax
-(fontspec)             \fontdimen 14\font =3.63pt\relax \fontdimen 15\font
-(fontspec)             =2.89pt\relax \fontdimen 16\font =2.47pt\relax
-(fontspec)             \fontdimen 17\font =2.47pt\relax \fontdimen 18\font
-(fontspec)             =2.5pt\relax \fontdimen 19\font =2.0pt\relax \fontdimen
-(fontspec)             22\font =2.5pt\relax \fontdimen 20\font =0pt\relax
-(fontspec)             \fontdimen 21\font =0pt\relax 
-
-LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 42.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/cmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on input line 42.
-LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 42.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/cmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on input line 42.
-
-Package fontspec Info: latinmodern-math scale = 0.9999.
-
-
-Package fontspec Info: latinmodern-math scale = 0.9999.
-
-
-Package fontspec Info: latinmodern-math scale = 0.9999.
-
-
-Package fontspec Info: latinmodern-math scale = 0.9999.
-
-
-Package fontspec Info: latinmodern-math scale = 0.9999.
-
-
-Package fontspec Info: Font family 'latinmodern-math.otf(3)' created for font
-(fontspec)             'latinmodern-math.otf' with options
-(fontspec)             [BoldItalicFont={},ItalicFont={},SmallCapsFont={},Script=Math,SizeFeatures={{Size=8.5-},{Size=6-8.5,Font=latinmodern-math.otf,Style=MathScript},{Size=-6,Font=latinmodern-math.otf,Style=MathScriptScript}},BoldFont={latinmodern-math.otf},ScaleAgain=0.9999,FontAdjustment={\fontdimen
-(fontspec)             8\font =0.4pt\relax \fontdimen 9\font =2.0pt\relax
-(fontspec)             \fontdimen 10\font =1.67pt\relax \fontdimen 11\font
-(fontspec)             =1.11pt\relax \fontdimen 12\font =6.0pt\relax
-(fontspec)             \fontdimen 13\font =0pt\relax }].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <8.5->s*[0.9999]"[latinmodern-math.otf]/OT:script=math;language=dflt;"<6-8.5>s*[0.9999]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;"<-6>s*[0.9999]"[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
-(fontspec)             and font adjustment code:
-(fontspec)             \fontdimen 8\font =0.4pt\relax \fontdimen 9\font
-(fontspec)             =2.0pt\relax \fontdimen 10\font =1.67pt\relax
-(fontspec)             \fontdimen 11\font =1.11pt\relax \fontdimen 12\font
-(fontspec)             =6.0pt\relax \fontdimen 13\font =0pt\relax 
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[0.9999]"[latinmodern-math.otf]/OT:script=math;language=dflt;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
-(fontspec)             and font adjustment code:
-(fontspec)             \fontdimen 8\font =0.4pt\relax \fontdimen 9\font
-(fontspec)             =2.0pt\relax \fontdimen 10\font =1.67pt\relax
-(fontspec)             \fontdimen 11\font =1.11pt\relax \fontdimen 12\font
-(fontspec)             =6.0pt\relax \fontdimen 13\font =0pt\relax 
-
-LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 42.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/m/n on input line 42.
-LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 42.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 42.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.00128pt on input line 45.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.00085pt on input line 45.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.00064pt on input line 45.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.99872pt on input line 45.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.99915pt on input line 45.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 45.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 45.
- (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 45.
- (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
-
-
-] (main.toc
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00107pt on input line 3.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00075pt on input line 3.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00053pt on input line 3.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 3.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 3.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 3.
-)
-\tf@toc=\write5
-\openout5 = `main.toc'.
-
- [2
-
-]
-Chương 0.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[3
-
-]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[4] [5] [6]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[7] [8] [9] [10] [11]
-Chương 1.
-[12
-
-] [13] [14]
-Chương 2.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[15
-
-] [16]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[17]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[18] [19] [20] [21]
-
-Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
-(xeCJK)                
-(xeCJK)                Try to use `\setCJKmonofont[<...>]{<...>}' to define
-(xeCJK)                it.
-
-[22
-
-] (main.aux)
- ***********
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2022/08/05>
- ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: AC59779D57E18B0CBBD5C7B46C2AA7CF;1461.
- ) 
-Here is how much of TeX's memory you used:
- 31675 strings out of 409617
- 632193 string characters out of 5774014
- 1979191 words of memory out of 5000000
- 53295 multiletter control sequences out of 15000+600000
- 569393 words of font info for 106 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
- 92i,14n,114p,1679b,796s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-Output written on main.xdv (22 pages, 613240 bytes).
+(Font)              `operator
