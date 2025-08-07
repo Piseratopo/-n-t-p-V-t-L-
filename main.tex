@@ -105,14 +105,14 @@ Khi có nhiều điểm ở trên đồ thị, chúng ta sẽ mong muốn tính 
    \item $M(x)$ và $N(2x)$ với $x\in\mathbb{R}$.
 \end{enumerate}
 
-\solution[ex:0.1] Ta có đồ thị cho các phần từ $1$ đến $4$ như hình \ref{fig:bon truc}.
+\solution[ex:0.1] 
 \begin{figure}[h]
    \centering
    \begin{tikzpicture}[scale=1]
 
       \begin{scope}[yshift=2cm]
          \draw[->] (-5,0) -- (5,0) node[right] {$x$};
-         \filldraw (0, 0) circle (\pointSize) node[below] {$O$};
+         \filldraw (0, 0) circle (\pointSize) node[above] {$O(0)$};
          \filldraw (2, 0) circle (\pointSize) node[below] {$A(2)$};
          \filldraw (-3, 0) circle (\pointSize) node[below] {$B(-3)$};
          \filldraw (4, 0) circle (\pointSize) node[below] {$C(4)$};
@@ -128,7 +128,7 @@ Khi có nhiều điểm ở trên đồ thị, chúng ta sẽ mong muốn tính 
 
       \begin{scope}[yshift=-2cm, xshift=-5cm]
          \draw[->] (0,0) -- (10,0) node[right] {$x$};
-         \filldraw (0, 0) circle (\pointSize) node[above] {$O$};
+         \filldraw (0, 0) circle (\pointSize) node[above] {$O(0)$};
          \filldraw ({2/3}, 0) circle (\pointSize) node[below] {$H\left(0{,}\bar{3}\right)$};
          \filldraw ({2*sqrt(2)}, 0) circle (\pointSize) node[below] {$I(\sqrt{2})$};
          \filldraw (4, 0) circle (\pointSize) node[above] {$C(4)$};
@@ -151,6 +151,8 @@ Khi có nhiều điểm ở trên đồ thị, chúng ta sẽ mong muốn tính 
    \label{fig:bon truc}
 \end{figure}
 
+Ta có đồ thị cho các phần từ $1$ đến $4$ như hình \ref{fig:bon truc}.
+
 Cần lưu ý rằng, để biểu diễn thuận lợi nhất, các trục số khi biểu diễn sốcần được chọn những tỉ lệ khác nhau và tại những vị trí khác nhau.
 
 Các khoảng cách giữa hai điểm phân biệt đôi một là
@@ -168,76 +170,117 @@ Các khoảng cách giữa hai điểm phân biệt đôi một là
       &d(D;F) = d(F;D) = \left|\pi - 0\right| = \pi;\\
       &d(E;G) = d(G;E) = \left|(-\pi) - \frac{\pi}{2}\right| = \frac{3\pi}{2}.
    \end{alignat*}
+   \item \begin{alignat*}{2}
+      &d(H;I) = d(I;H) = \left|0{,}\bar{3} - \sqrt{2}\right| = \frac{1-3\sqrt{2}}{3}.
+   \end{alignat*}
+   \item \begin{alignat*}{2}
+      &d(J;K) = d(K;J) = \left|\frac{355}{113} - \frac{9801}{2206\sqrt{2}}\right| = \frac{1566260-1107513\sqrt{2}}{498556} \approx 1{,}9034\times 10^{-7}; \\
+      &d(K;L) = d(L;K) = \left|\frac{9801}{2206\sqrt{2}} - \sqrt[4]{\frac{2143}{22}}\right| = \frac{107811\sqrt{2}-2206\sqrt[4]{22818664}}{48532} \approx 7{,}7431\times 10^{-8}; \\
+      &d(L;J) = d(J;L) = \left|\sqrt[4]{\frac{2143}{22}} - \frac{355}{113}\right| = \frac{7810-113\sqrt[4]{22818664}}{2486} \approx 2{,}6777\times 10^{-7}.
+   \end{alignat*}
 \end{enumerate}
 
-
-
-\begin{wrapfigure}{r}{0.4\textwidth}
+\begin{figure}[h]
    \centering
-   \begin{tikzpicture}
-      \draw[->] (-2,0) -- (2,0);
-      \draw[->] (0,-2) -- (0,2);
-      \node[right] at (2,0) {Trục hoành};
-      \node[above] at (0,2) {Trục tung};
-      \filldraw (0, 0) circle (1.5pt);
-      \node[below left] at (0, 0) {$O(0; 0)$};
-
-      \node at (1,1) {$\boxed{\text{I}}$};
-      \node at (-1,1) {$\boxed{\text{II}}$};
-      \node at (1,-1) {$\boxed{\text{IV}}$};
-      \node at (-1,-1) {$\boxed{\text{III}}$};
-
-      \draw (1,0) -- (1,-0.08) node[below] {$x_P$};
-      \draw (0,1.5) -- (-0.08,1.5) node[left] {$y_P$};
-
-      \filldraw (1, 1.5) circle (\pointSize);
-      \node[above right] at (1, 1.5) {$P(x_P; y_P)$};
-
-      \draw[dashed] (1, 1.5) -- (1, 0);
-      \draw[dashed] (1, 1.5) -- (0, 1.5);
-
+   \begin{tikzpicture}[scale=1]
+      \draw[->] (-5,0) -- (5,0) node[right] {$x$};
+      \filldraw (0, 0) circle (\pointSize) node[above] {$O(0)$};
+      \filldraw (pi, 0) circle (\pointSize) node[below] {$J\left(\frac{355}{113}\right)$};
+      \node[below] at (pi, -0.6) {$K\left(\frac{9801}{2206\sqrt{2}}\right)$};
+      \node[below] at (pi, -1.2) {$L\left(\sqrt[4]{\frac{2143}{22}}\right)$};
+      \node[above] at (pi, 0) {$\approx \pi$};
    \end{tikzpicture}
+   \caption{Xấp xỉ vị trí điểm trên trục số cho phần $4$ của bài \ref{ex:0.1}}
+   \label{fig:truc bon xx}
+\end{figure}
 
-   \caption{Hệ tọa độ vuông góc}
-   \label{fig:toa do vuong goc}
-\end{wrapfigure}
+Trong vật lí, việc tính toán chính xác đến như ở phần $4$ là không cần thiết và nhiều khi còn không chính xác. Luôn luôn có sai số khi đo đạc, và trong phần lớn trường hợp, khi kết hợp sai số này vào trong tính toán thì các giá trị khoảng cách như trên gần như vô nghĩa. Cho nên, về mặt thực tiễn, chúng ta hoàn toàn có thể thay thế đồ thị của $4$ như hình \ref{fig:truc bon xx} và khoảng cách chúng ta có thể tính xấp xỉ là $$d(J,K) = d(K,J) \approx d(K,L) = d(L,K) \approx d(L,J) = d(J,L) \approx 0.$$
+
+\begin{figure}[h]
+   \centering
+   \begin{tikzpicture}[scale=1]
+      \draw[->] (-5,0) -- (5,0) node[right] {$x$};
+      \filldraw (0, 0) circle (\pointSize) node[above] {$O(0)$} node[below] {$M_0(x)$};
+      \node[below] at (0, -0.6) {$N_0(2x)$};
+      \filldraw ({e / 2}, 0) circle (\pointSize) node[below] {$M_+\left(x\right)$};
+      \filldraw (e, 0) circle (\pointSize) node[below] {$N_+\left(2x\right)$};
+      \filldraw ({-sqrt(3)}, 0) circle (\pointSize) node[below] {$M_-\left(x\right)$};
+      \filldraw ({-sqrt(3) * 2}, 0) circle (\pointSize) node[below] {$N_-\left(2x\right)$};
+   \end{tikzpicture}
+   \caption{Ba trường hợp cho vị trí tương đối của $M$, $N$, $O$ cho phần $5$ của bài \ref{ex:0.1}}
+   \label{fig:truc phan 5}
+\end{figure}
+
+Để vẽ được đồ thị cho phần $5$, chúng ta sẽ xét vị trí tương đối giữa $M$, $N$ kèm theo gốc $O$ để quy chiếu như biểu diễn ở hình \ref{fig:truc phan 5}. Cụ thể, khi $x>0$, điểm $M$ và $N$ được biểu diễn thành hai điểm $M_+$ và $N_+$. Tương tự, khi $x<0$, $M$ và $N$ biểu diễn hai điểm $M_-$ và $N_-$. Một trường hợp đặc biệt là khi $x=0$, $M$ và $N$ đều có tọa độ là $0$, cho nên hai điểm đó và gốc cùng chia sẻ vị trí với nhau.
+
+Khoảng cách giữa hai điểm $M$ và $N$ luôn là $$d(M;N)=d(N;M)=|x-2x|=|x|.$$
+
+\begin{figure}[h]
+   \centering
+   \begin{minipage}[b]{0.48\textwidth}
+      \centering
+      \begin{tikzpicture}
+         \draw[->] (-2,0) -- (2,0);
+         \draw[->] (0,-2) -- (0,2);
+         \node[right] at (2,0) {Trục hoành};
+         \node[above] at (0,2) {Trục tung};
+         \filldraw (0, 0) circle (1.5pt);
+         \node[below left] at (0, 0) {$O(0; 0)$};
+
+         \node at (1,1) {$\boxed{\text{I}}$};
+         \node at (-1,1) {$\boxed{\text{II}}$};
+         \node at (1,-1) {$\boxed{\text{IV}}$};
+         \node at (-1,-1) {$\boxed{\text{III}}$};
+
+         \draw (1,0) -- (1,-0.08) node[below] {$x_P$};
+         \draw (0,1.5) -- (-0.08,1.5) node[left] {$y_P$};
+
+         \filldraw (1, 1.5) circle (1.5pt);
+         \node[above right] at (1, 1.5) {$P(x_P; y_P)$};
+
+         \draw[dashed] (1, 1.5) -- (1, 0);
+         \draw[dashed] (1, 1.5) -- (0, 1.5);
+      \end{tikzpicture}
+      \caption{Hệ tọa độ vuông góc}
+      \label{fig:toa do vuong goc}
+   \end{minipage}
+   \hfill
+   \begin{minipage}[b]{0.48\textwidth}
+      \centering
+      \begin{tikzpicture}
+         \draw[->] (-2,0) -- (2,0);
+         \draw[->] (0,-2) -- (0,2);
+         \node[right] at (2,0) {$x$};
+         \node[above] at (0,2) {$y$};
+         \filldraw (0, 0) circle (1.5pt);
+         \node[below left] at (0, 0) {$O$};
+
+         \pgfmathsetmacro{\xP}{1}
+         \pgfmathsetmacro{\yP}{1.5}
+         \pgfmathsetmacro{\xQ}{-1.2}
+         \pgfmathsetmacro{\yQ}{-1}
+
+         \filldraw (\xP, \yP) circle (1.5pt);
+         \node[above right] at (\xP, \yP) {$P(x_P; y_P)$};
+
+         \filldraw (\xQ, \yQ) circle (1.5pt);
+         \node[below right] at (\xQ, \yQ) {$Q(x_Q; y_Q)$};
+
+         \draw[thick] (\xP, \yP) -- (\xQ, \yQ);
+         \draw[dashed] (\xP, \yP) -- (\xP, \yQ);
+         \draw[dashed] (\xP, \yQ) -- (\xQ, \yQ);
+
+         \node[above left] at ({(\xP+\xQ)/2}, {(\yP+\yQ)/2}) {$d(P;Q)$};
+      \end{tikzpicture}
+      \caption{Khoảng cách giữa hai điểm}
+      \label{fig:khoang cach 2d}
+   \end{minipage}
+\end{figure}
+
 
 Mở rộng lên mặt phẳng hai chiều, nếu chúng ta đặt hai trục vuông góc với nhau và giao nhau tại gốc $O(0)$ của mỗi trục, khi đó, chúng ta có thể xác định vị trị của điểm trên mặt phẳng chứa hai trục theo biểu diễn đại số bằng cách dóng điểm đó lên trục mà sau này được gọi là \emph{tọa độ}. Đây được gọi là \emph{hệ tọa độ vuông góc} (hay \emph{hệ tọa độ Đề-các}\footnote{René Descartes (1596-1650)}). Trục nằm ngang được gọi là \emph{trục hoành}, trục dọc được gọi là \emph{trục tung}. Với mỗi điểm, vị trí khi dóng điểm đó vào trục hoành gọi là \emph{hoành độ}, vào trục tung gọi là \emph{tung độ}. Như ở bên hình \ref{fig:toa do vuong goc}, điểm $P$ có tọa độ là $(x_P;y_P)$ và được kí hiệu là $P(x_P;y_P)$. Thêm vào đó, hai trục chia mặt phẳng thành bốn góc phần tư, từ góc phần tư thứ I đến góc phần tư thứ IV quay ngược chiều kim đồng hồ. Các điểm trên trục không xác định thuộc bất cứ góc phần tư nào.
 
-\begin{wrapfigure}{r}{0.4\textwidth}
-   \centering
-   \begin{tikzpicture}
-      \draw[->] (-2,0) -- (2,0);
-      \draw[->] (0,-2) -- (0,2);
-      \node[right] at (2,0) {$x$};
-      \node[above] at (0,2) {$y$};
-      \filldraw (0, 0) circle (1.5pt);
-      \node[below left] at (0, 0) {$O$};
-
-      \pgfmathsetmacro{\xP}{1}
-      \pgfmathsetmacro{\yP}{1.5}
-      \pgfmathsetmacro{\xQ}{-1.2}
-      \pgfmathsetmacro{\yQ}{-1}
-
-      \filldraw (\xP, \yP) circle (1.5pt);
-      \node[above right] at (\xP, \yP) {$P(x_P; y_P)$};
-
-      \filldraw (\xQ, \yQ) circle (1.5pt);
-      \node[below right] at (\xQ, \yQ) {$Q(x_Q; y_Q)$};
-
-      \draw[thick] (\xP, \yP) -- (\xQ, \yQ);
-      \draw[dashed] (\xP, \yP) -- (\xP, \yQ);
-      \draw[dashed] (\xP, \yQ) -- (\xQ, \yQ);
-
-      \node[above left] at ({(\xP+\xQ)/2}, {(\yP+\yQ)/2}) {$d(P;Q)$};
-
-   \end{tikzpicture}
-
-   \caption{Khoảng cách giữa hai điểm}
-   \label{fig:khoanh cach 2d}
-\end{wrapfigure}
-
-Cho hai điểm $P(x_P;y_P)$ và $Q(x_Q;y_Q)$, theo định lí Pi-ta-go, khoảng cách giữa hai điểm đó là $$d(P;Q)=\sqrt{(x_P-x_Q)^2+(y_P-y_Q)^2}.$$
+Giống như trên trục một chiều, khi có hai điểm trên mặt phẳng thì chúng ta có thể tính khoảng cách giữa chúng. Một cách chi tiết, cho hai điểm $P(x_P;y_P)$ và $Q(x_Q;y_Q)$, theo định lí Pi-ta-go, khoảng cách giữa hai điểm đó là $$d(P;Q)=\sqrt{(x_P-x_Q)^2+(y_P-y_Q)^2}.$$
 
 \section{Hàm số}
 
