@@ -3,7 +3,7 @@
 \usepackage[T5]{fontenc}
 \usepackage[vietnamese]{babel}
 \usepackage[a4paper]{geometry}
-\usepackage{amsmath, amssymb, blindtext, calc, hyperref, icomma, multicol, steinmetz, tikz, tikz-3dplot, wrapfig, xcolor, xparse, xeCJK}
+\usepackage{amsmath, amssymb, blindtext, calc, float, hyperref, icomma, multicol, steinmetz, tikz, tikz-3dplot, wrapfig, xcolor, xparse, xeCJK}
 \usetikzlibrary{arrows.meta, calc, shadings}
 \geometry{bindingoffset=0.5cm, inner=2cm, outer=2cm, top=2cm, bottom=2cm}
 \setCJKmainfont[AutoFakeSlant=0.15,AutoFakeBold=2.0]{Nom Na Tong}
@@ -53,6 +53,8 @@
 Phần này bao gồm các kiến thức toán học cần thiết để xây dựng lí thuyết của môn vật lí (hoặc ít nhất để đọc tài liệu này), giả sử rằng bạn đọc đã có kiến thức đại số và một chút hình học từ ghế nhà trường. Chương này sẽ bao hàm những phần không nằm trong chương trình trung học phổ thông và có thể cả chương trình đại học. Bạn đọc có thể tìm hiểu một cách sơ cấp hay gợi nhớ lại về các khái niệm toán học mà không cần tập trung vào việc chứng minh chặt chẽ các tính chất toán học. Tác giả mong muốn thông qua chương này, bạn đọc có thể có một cảm nhận và từ đó có kĩ năng để áp dụng các khái niệm toán giải quyết các yêu cầu thực tế. Hơn thế nữa, có một niềm cảm hứng để tìm hiểu chuyên sâu các phân môn của toán học. Ngoài ra, vì các bạn đọc đang đọc về tài liệu nghiêng về Vật Lí, tác giả sẽ không tập trung nhiều vào chặt chẽ toán học. Các định nghĩa và chứng minh vẫn sẽ được đưa ra, không quá chặt chẽ nhưng đủ ý, nhằm làm bước đệm cho bạn đọc nếu có mong muốn tìm hiểu sâu hơn về toán.
 
 \section{Đồ thị}
+
+\subsection{Trục số một chiều}
 
 \ % Lùi đầu dòng
 
@@ -215,6 +217,8 @@ Trong vật lí, việc tính toán chính xác đến như ở phần $4$ là k
 
 Khoảng cách giữa hai điểm $M$ và $N$ luôn là $$d(M;N)=d(N;M)=|x-2x|=|x|.$$
 
+\subsection{Mặt phẳng hai chiều và hệ tọa độ vuông góc}
+
 \begin{figure}[h]
    \centering
    \begin{minipage}[b]{0.48\textwidth}
@@ -278,7 +282,14 @@ Khoảng cách giữa hai điểm $M$ và $N$ luôn là $$d(M;N)=d(N;M)=|x-2x|=|
 \end{figure}
 
 
-Mở rộng lên mặt phẳng hai chiều, nếu chúng ta đặt hai trục vuông góc với nhau và giao nhau tại gốc $O(0)$ của mỗi trục, khi đó, chúng ta có thể xác định vị trị của điểm trên mặt phẳng chứa hai trục theo biểu diễn đại số bằng cách dóng điểm đó lên trục mà sau này được gọi là \emph{tọa độ}. Đây được gọi là \emph{hệ tọa độ vuông góc} (hay \emph{hệ tọa độ Đề-các}\footnote{René Descartes (1596-1650)}). Trục nằm ngang được gọi là \emph{trục hoành}, trục dọc được gọi là \emph{trục tung}. Với mỗi điểm, vị trí khi dóng điểm đó vào trục hoành gọi là \emph{hoành độ}, vào trục tung gọi là \emph{tung độ}. Như ở bên hình \ref{fig:toa do vuong goc}, điểm $P$ có tọa độ là $(x_P;y_P)$ và được kí hiệu là $P(x_P;y_P)$. Thêm vào đó, hai trục chia mặt phẳng thành bốn góc phần tư, từ góc phần tư thứ I đến góc phần tư thứ IV quay ngược chiều kim đồng hồ. Các điểm trên trục không xác định thuộc bất cứ góc phần tư nào.
+Mở rộng lên mặt phẳng hai chiều, nếu chúng ta đặt hai trục vuông góc với nhau và giao nhau tại gốc $O(0)$ của mỗi trục, khi đó, chúng ta có thể xác định vị trị của điểm trên mặt phẳng chứa hai trục theo biểu diễn đại số bằng cách dóng điểm đó lên trục mà sau này được gọi là \emph{tọa độ}. Đây được gọi là \emph{hệ tọa độ vuông góc} (hay \emph{hệ tọa độ Đề-các}\footnote{René Descartes (1596-1650)}). Như ở hình \ref{fig:toa do vuong goc}, trục nằm ngang được gọi là \emph{trục hoành}, trục dọc được gọi là \emph{trục tung}. Tùy trong từng trường hợp, vị trí và hướng chỉ của các trục có thể thay đổi. Với mỗi điểm, vị trí khi dóng điểm đó vào trục hoành gọi là \emph{hoành độ}, vào trục tung gọi là \emph{tung độ}. Tiếp tục lấy ví dụ từ hình \ref{fig:toa do vuong goc}, điểm $P$ có tọa độ là $(x_P;y_P)$ và được kí hiệu là $P(x_P;y_P)$. Thêm vào đó, hai trục chia mặt phẳng thành bốn góc phần tư, từ góc phần tư thứ I đến góc phần tư thứ IV bao gồm các điểm thỏa mãn tính chất sau:
+\begin{itemize}
+   \item Góc phần tư thứ I: $x>0$, $y>0$;
+   \item Góc phần tư thứ II: $x<0$, $y>0$;
+   \item Góc phần tư thứ III: $x<0$, $y<0$;
+   \item Góc phần tư thứ IV: $x>0$, $y<0$.
+\end{itemize}
+Về mặt hình học, khi tọa độ được vẽ thông thường, góc phần tư thứ I nằm ở vị trí trên cùng bên phải, và các góc phần tư còn lại lần lượt được đánh số theo ngược chiều kim đồng hồ. Khi tọa độ bị thay đổi thì vị trí các góc phần tư cũng thay đổi theo, nhưng vẫn thỏa mãn điều kiện đại số ở trên. Các điểm trên trục không xác định thuộc bất cứ góc phần tư nào.
 
 Giống như trên trục một chiều, khi có hai điểm trên mặt phẳng thì chúng ta có thể tính khoảng cách giữa chúng. Một cách chi tiết, cho hai điểm $P(x_P;y_P)$ và $Q(x_Q;y_Q)$, theo định lí Pi-ta-go, khoảng cách giữa hai điểm đó là $$d(P;Q)=\sqrt{(x_P-x_Q)^2+(y_P-y_Q)^2}.$$
 
@@ -352,6 +363,8 @@ Khoảng cách giữa những cặp điểm được yêu cầu là:
    \item $d(P;Q) = \sqrt{\left(12t-20t\right)^2+\left(-3t-12t\right)^2} = 13|t|$.
 \end{itemize}
 
+\subsection{Không gian ba chiều và hướng tam diện}
+
 \begin{figure}[h]
    \centering
    \begin{minipage}[b]{0.48\textwidth}
@@ -364,6 +377,7 @@ Khoảng cách giữa những cặp điểm được yêu cầu là:
          \draw[->] (0,-2.5,0) -- (0,2.5,0) node[anchor=north west]{Trục tung};
          \draw[->] (0,0,-1) -- (0,0,2) node[anchor=south]{Trục cao/Trục đứng/Trục sâu};
          
+         \filldraw (0, 0, 0) circle (1.5pt) node[above left] {$O(0;0;0)$};
          \filldraw (P) circle (1.5pt) node[above] {$P$};
          
          \draw[dashed] (P) -- (1.5, 0, 0) node[above left] {$x_P$};
@@ -373,7 +387,6 @@ Khoảng cách giữa những cặp điểm được yêu cầu là:
          \draw[dashed] (1.5, 2, 0) -- (0, 2, 0);
          \draw[dashed] (1.5, 2, 0) -- (1.5, 0, 0);
 
-         % Vẽ tên các góc phần tám không gian
          
       \end{tikzpicture}
       \caption{Hệ tọa độ vuông góc ba chiều}
@@ -402,10 +415,10 @@ Khoảng cách giữa những cặp điểm được yêu cầu là:
       \label{fig:khoang cach ba chieu}
    \end{minipage}
 \end{figure}
- 
-Mở rộng hơn nữa, chúng ta cũng có thể làm những điều trên không gian ba chiều tương tự với khi ở trục số một chiều hay mặt phẳng hai chiều. Khi đó, chúng ta sẽ có một hệ tọa độ ba chiều với ba trục vuông góc với nhau, được gọi là \emph{hệ tọa độ vuông góc ba chiều}. Mỗi điểm trong không gian sẽ có tọa độ là $(x;y;z)$ với $x$, $y$, $z$ là các hoành độ, tung độ và cao độ tương ứng. Khoảng cách giữa hai điểm trong không gian ba chiều được tính theo công thức $$d(P;Q)=\sqrt{(x_P-x_Q)^2+(y_P-y_Q)^2+(z_P-z_Q)^2}.$$
 
-\begin{figure}[h]
+Đương nhiên sẽ có một vài trường hợp mà biểu diễn hai chiều không thể đủ. Khi này, mở rộng hơn nữa, chúng ta cũng có thể làm những điều trên không gian ba chiều tương tự với khi ở trục số một chiều hay mặt phẳng hai chiều. Khi đó, chúng ta sẽ có một hệ tọa độ ba chiều với ba trục vuông góc với nhau, được gọi là \emph{hệ tọa độ vuông góc ba chiều}. Mỗi điểm trong không gian sẽ có tọa độ là $(x;y;z)$ với $x$, $y$, $z$ là các hoành độ, tung độ và cao độ tương ứng. Khoảng cách giữa hai điểm trong không gian ba chiều được tính theo công thức $$d(P;Q)=\sqrt{(x_P-x_Q)^2+(y_P-y_Q)^2+(z_P-z_Q)^2}.$$
+
+\begin{wrapfigure}{r}{0.5\textwidth}
    \centering
    \tdplotsetmaincoords{20}{10}
    \begin{tikzpicture}[tdplot_main_coords]         
@@ -428,9 +441,9 @@ Mở rộng hơn nữa, chúng ta cũng có thể làm những điều trên kh�
    \end{tikzpicture}
    \caption{Góc phần tám không gian}
    \label{fig:goc phan tam khong gian}
-\end{figure}
+\end{wrapfigure}
 
-Và cũng tương tự như với mặt phẳng hai chiều, ba trục sẽ chia không gian thành tám phần, gọi là \emph{góc phần tám không gian}. Các phần này được đánh số từ I đến VIII như sau: Nhìn từ phía dương của trục đứng, các góc phần tám được đánh dấu ngược chiều kim đồng hồ. Các góc phần tám I, II, III, IV nằm trên mặt phẳng $Oxy$ và được xác định tương tự như các góc phần tư trong mặt phẳng hai chiều. Các góc phần tám V, VI, VII, VIII nằm dưới mặt phẳng $Oxy$ và được xác định tương tự như trên. Các góc phần tám này được biểu diễn trong hình \ref{fig:goc phan tam khong gian}. Về mặt đại số, 
+Và cũng tương tự như với mặt phẳng hai chiều, ba trục sẽ chia không gian thành tám phần, gọi là \emph{góc phần tám không gian}. Các phần này được đánh số từ I đến VIII như sau: Nhìn từ phía dương của trục cao, các góc phần tám được đánh dấu ngược chiều kim đồng hồ. Các góc phần tám I, II, III, IV nằm trên mặt phẳng $Oxy$ và được xác định tương tự như các góc phần tư trong mặt phẳng hai chiều. Các góc phần tám V, VI, VII, VIII nằm dưới mặt phẳng $Oxy$ và được xác định tương tự như trên. Các góc phần tám này được biểu diễn trong hình \ref{fig:goc phan tam khong gian}. Về mặt đại số, 
 
 \begin{itemize}
    \item Góc phần tám I: $x>0$, $y>0$, $z>0$;
@@ -442,6 +455,45 @@ Và cũng tương tự như với mặt phẳng hai chiều, ba trục sẽ chia
    \item Góc phần tám VII: $x<0$, $y<0$, $z<0$;
    \item Góc phần tám VIII: $x>0$, $y<0$, $z<0$.
 \end{itemize}
+
+\begin{figure}[h]
+   \centering
+   \begin{minipage}[b]{0.48\textwidth}
+      \centering
+      \tdplotsetmaincoords{20}{10}
+      \begin{tikzpicture}[tdplot_main_coords]
+         \draw[->] (-2.5,0,0) -- (2.5,0,0) node[anchor=north east]{$x$};
+         \draw[->] (0,-2.5,0) -- (0,2.5,0) node[anchor=north west]{$y$};
+         \draw[->] (0,0,-2.5) -- (0,0,2.5) node[anchor=south]{$z$};
+         
+         \draw[thick,->] (1.5,0,0) arc (0:90:1.5);
+      \end{tikzpicture}
+      \caption{Tam diện thuận}
+      \label{fig:tam dien thuan}
+   \end{minipage}
+   \hfill
+   \begin{minipage}[b]{0.48\textwidth}
+      \centering
+      \tdplotsetmaincoords{20}{10}
+      \begin{tikzpicture}[tdplot_main_coords]
+         \draw[->] (-2.5,0,0) -- (2.5,0,0) node[anchor=north east]{$y$};
+         \draw[->] (0,-2.5,0) -- (0,2.5,0) node[anchor=north west]{$x$};
+         \draw[->] (0,0,-2.5) -- (0,0,2.5) node[anchor=south]{$z$};
+         
+         \draw[thick,->] (0,1.5,0) arc (90:0:1.5);
+      \end{tikzpicture}
+      \caption{Tam diện nghịch}
+      \label{fig:tam dien nghich}
+   \end{minipage}
+\end{figure}
+
+Trên hệ tọa độ không gian, chúng ta cần phải quan tâm thêm xem là ba trục tạo thành \emph{hướng tam diện} nào. Ta nhìn từ phía dương của trục cao, khi này, nếu trục hoành xoay sang trục tung theo hướng ngược chiều kim đồng hồ, thì hướng tam diện được gọi là \emph{hướng tam diện thuận}. Ngược lại, nếu trục hoành xoay sang trục tung theo hướng cùng chiều kim đồng hồ, thì hướng tam diện được gọi là \emph{hướng tam diện nghịch}. Một cách khác là dùng quy tắc bàn tay phải: nắm tay phải vào trục cao, khi này, ngón tay cái chỉ hướng của trục cao. Nếu hướng nắm ngón tay theo hương quay từ trục hoành sang trục tung, thì hướng tam diện là thuận. Ngược lại, nếu hướng nắm ngón tay theo hướng quay từ trục tung sang trục hoành, thì hướng tam diện là nghịch.
+
+Chúng ta đã có phân bổ vị trí của các góc phần tám trong hệ tọa độ tam diện thuận. Lặp lại lập luận với cùng biểu thức đại số, chúng ta có thể phân bổ vị trí của các góc phần tám trong hệ tọa độ tam diện nghịch. Thông thường, hệ tọa độ tam diện thuận được ưa dùng hơn.
+
+\exercise Trung điểm của một đoạn thẳng $AB$ là điểm $M$ trong không gian khi và chỉ khi $M$ thỏa mãn $d(A;M) = d(B;M) = \frac{d(A;B)}{2}$. Chứng minh rằng với tọa độ của $M$ là $$M\left(\frac{x_A+x_B}{2}; \frac{y_A+y_B}{2}; \frac{z_A+z_B}{2}\right)$$ thì $M$ là trung điểm của đoạn thẳng nối hai điểm $A(x_A; y_A; z_A)$ và $B(x_B; y_B; z_B)$. Vẽ ví dụ với $A(1;2;3)$ và $B(-1;0;4)$.
+
+\solution
 
 
 \section{Hàm số}
@@ -1028,9 +1080,9 @@ Các số liệu được coi như chính xác tuyệt đối. Bạn có thể g
 \end{figure}
 
 \solution
-\begin{enumerate}
-   \item Ta chia quá trình chạy làm $4$ phần.
-\end{enumerate}
+
+1. Ta chia quá trình chạy làm $4$ phần.
+
 
 \begin{itemize}
    \item Phần 1 $\left(0\ \text{s}\leq t \leq 1\ \text{s}\right)$: Vận tốc tăng đều từ $0$ đến $4\ \frac{\text{m}}{\text{s}}$. Chuyển động là nhanh dần với gia tốc không đổi là $\left.a(t)\right|_{t\in\left[0\ \text{s};1\ \text{s}\right]}=\frac{v(1\ \text{s})-v(0\ \text{s})}{1\ \text{s}-0\ \text{s}}=4\ \frac{\text{m}}{\text{s}^2}$.
@@ -1096,10 +1148,7 @@ Cuối cùng, chúng ta có thể biểu diễn vị trí của người chạy 
    \label{fig:vt_tg1}
 \end{figure}
 
-\begin{enumerate}
-   \item[2.] 
-\end{enumerate}
-Chúng ta có thể phác họa đồ thị vị trí - thời gian bằng việc xấp xỉ đồ thị vận tốc - thời gian dưới dạng đường gấp khúc nối các điểm đã biết thể hiện ở \ref{fig:xx_p2}.
+2. Chúng ta có thể phác họa đồ thị vị trí - thời gian bằng việc xấp xỉ đồ thị vận tốc - thời gian dưới dạng đường gấp khúc nối các điểm đã biết thể hiện ở \ref{fig:xx_p2}.
 
 Từ đây, thực hiện tương tự như phần 1 để có phương trình vị trí - thời gian
 \begin{equation*}
