@@ -3,11 +3,10 @@
 \usepackage[T5]{fontenc}
 \usepackage[vietnamese]{babel}
 \usepackage[a4paper]{geometry}
-\usepackage{amsmath, amssymb, blindtext, calc, hyperref, icomma, multicol, pgfplots, steinmetz, tikz, wrapfig, xcolor, xparse, xeCJK}
+\usepackage{amsmath, amssymb, blindtext, calc, hyperref, icomma, multicol, steinmetz, tikz, tikz-3dplot, wrapfig, xcolor, xparse, xeCJK}
 \usetikzlibrary{arrows.meta, calc, shadings}
 \geometry{bindingoffset=0.5cm, inner=2cm, outer=2cm, top=2cm, bottom=2cm}
 \setCJKmainfont[AutoFakeSlant=0.15,AutoFakeBold=2.0]{Nom Na Tong}
-\pgfplotsset{compat=1.18}
 
 \DeclareMathOperator{\Arg}{Arg}
 
@@ -354,11 +353,95 @@ Khoảng cách giữa những cặp điểm được yêu cầu là:
 \end{itemize}
 
 \begin{figure}[h]
-   
+   \centering
+   \begin{minipage}[b]{0.48\textwidth}
+      \centering
+      \tdplotsetmaincoords{70}{130}
+      \begin{tikzpicture}[tdplot_main_coords]
+         \coordinate (P) at (1.5,2,1);
+         
+         \draw[->] (-2.5,0,0) -- (2.5,0,0) node[anchor=north east]{Trục hoành};
+         \draw[->] (0,-2.5,0) -- (0,2.5,0) node[anchor=north west]{Trục tung};
+         \draw[->] (0,0,-1) -- (0,0,2) node[anchor=south]{Trục cao/Trục đứng/Trục sâu};
+         
+         \filldraw (P) circle (1.5pt) node[above] {$P$};
+         
+         \draw[dashed] (P) -- (1.5, 0, 0) node[above left] {$x_P$};
+         \draw[dashed] (P) -- (0, 2, 0) node[above] {$y_P$};
+         \draw[dashed] (P) -- (0, 0, 1) node[left] {$z_P$};
+         \draw[dashed] (P) -- (1.5, 2, 0) -- (0, 0, 0);
+         \draw[dashed] (1.5, 2, 0) -- (0, 2, 0);
+         \draw[dashed] (1.5, 2, 0) -- (1.5, 0, 0);
+
+         % Vẽ tên các góc phần tám không gian
+         
+      \end{tikzpicture}
+      \caption{Hệ tọa độ vuông góc ba chiều}
+      \label{fig:toa do vuong goc ba chieu}
+   \end{minipage}
+   \hfill
+   \begin{minipage}[b]{0.48\textwidth}
+      \centering
+      \tdplotsetmaincoords{60}{60}
+      \begin{tikzpicture}[tdplot_main_coords]
+         \coordinate (P) at (1.5,2,1);
+         \coordinate (Q) at (-2,-1,-0.5);
+         
+         \draw[->] (-2.5,0,0) -- (2.5,0,0) node[anchor=north east]{$x$};
+         \draw[->] (0,-2.5,0) -- (0,2.5,0) node[anchor=north west]{$y$};
+         \draw[->] (0,0,-1.5) -- (0,0,1.5) node[anchor=south]{$z$};
+         
+         \filldraw (P) circle (1.5pt) node[above] {$P$};
+         \filldraw (Q) circle (1.5pt) node[below] {$Q$};
+         \draw[thick] (P) -- (Q);
+         \node[above
+         ] at (-0.3, 0.5, 0.3) {$d(P;Q)$};
+
+      \end{tikzpicture}
+      \caption{Khoảng cách giữa hai điểm trong không gian ba chiều}
+      \label{fig:khoang cach ba chieu}
+   \end{minipage}
 \end{figure}
  
 Mở rộng hơn nữa, chúng ta cũng có thể làm những điều trên không gian ba chiều tương tự với khi ở trục số một chiều hay mặt phẳng hai chiều. Khi đó, chúng ta sẽ có một hệ tọa độ ba chiều với ba trục vuông góc với nhau, được gọi là \emph{hệ tọa độ vuông góc ba chiều}. Mỗi điểm trong không gian sẽ có tọa độ là $(x;y;z)$ với $x$, $y$, $z$ là các hoành độ, tung độ và cao độ tương ứng. Khoảng cách giữa hai điểm trong không gian ba chiều được tính theo công thức $$d(P;Q)=\sqrt{(x_P-x_Q)^2+(y_P-y_Q)^2+(z_P-z_Q)^2}.$$
 
+\begin{figure}[h]
+   \centering
+   \tdplotsetmaincoords{20}{10}
+   \begin{tikzpicture}[tdplot_main_coords]         
+      \node at (1.5, 1.5, -1.5) {$\boxed{\text{V}}$};
+      \node at (-1.5, 1.5, -1.5) {$\boxed{\text{VI}}$};
+      \node at (-1.5, -1.5, -1.5) {$\boxed{\text{VII}}$};
+      \node at (1.5, -1.5, -1.5) {$\boxed{\text{VIII}}$};
+      \draw[fill=gray!30, opacity=0.4] (-2.5,-2.5,0) -- (2.5,-2.5,0) -- (2.5,2.5,0) -- (-2.5,2.5,0) -- cycle;
+
+      \draw[->] (-2.5,0,0) -- (2.5,0,0) node[anchor=north east]{$x$};
+      \draw[->] (0,-2.5,0) -- (0,2.5,0) node[anchor=north west]{$y$};
+      \draw[->] (0,0,-2.5) -- (0,0,2.5) node[anchor=south]{$z$};
+      \filldraw (0, 0, 0) circle (\pointSize) node[above right] {$O(0;0;0)$};
+      \node[fill=white, inner sep=2pt] at (1.5, 1.5, 1.5) {$\boxed{\text{I}}$};
+      \node[fill=white, inner sep=2pt] at (-1.5, 1.5, 1.5) {$\boxed{\text{II}}$};
+      \node[fill=white, inner sep=2pt] at (-1.5, -1.5, 1.5) {$\boxed{\text{III}}$};
+      \node[fill=white, inner sep=2pt] at (1.5, -1.5, 1.5) {$\boxed{\text{IV}}$};
+      
+
+   \end{tikzpicture}
+   \caption{Góc phần tám không gian}
+   \label{fig:goc phan tam khong gian}
+\end{figure}
+
+Và cũng tương tự như với mặt phẳng hai chiều, ba trục sẽ chia không gian thành tám phần, gọi là \emph{góc phần tám không gian}. Các phần này được đánh số từ I đến VIII như sau: Nhìn từ phía dương của trục đứng, các góc phần tám được đánh dấu ngược chiều kim đồng hồ. Các góc phần tám I, II, III, IV nằm trên mặt phẳng $Oxy$ và được xác định tương tự như các góc phần tư trong mặt phẳng hai chiều. Các góc phần tám V, VI, VII, VIII nằm dưới mặt phẳng $Oxy$ và được xác định tương tự như trên. Các góc phần tám này được biểu diễn trong hình \ref{fig:goc phan tam khong gian}. Về mặt đại số, 
+
+\begin{itemize}
+   \item Góc phần tám I: $x>0$, $y>0$, $z>0$;
+   \item Góc phần tám II: $x<0$, $y>0$, $z>0$;
+   \item Góc phần tám III: $x<0$, $y<0$, $z>0$;
+   \item Góc phần tám IV: $x>0$, $y<0$, $z>0$;
+   \item Góc phần tám V: $x>0$, $y>0$, $z<0$;
+   \item Góc phần tám VI: $x<0$, $y>0$, $z<0$;
+   \item Góc phần tám VII: $x<0$, $y<0$, $z<0$;
+   \item Góc phần tám VIII: $x>0$, $y<0$, $z<0$.
+\end{itemize}
 
 
 \section{Hàm số}
