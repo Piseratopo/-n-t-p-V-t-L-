@@ -458,9 +458,9 @@ Và cũng tương tự như với mặt phẳng hai chiều, ba trục sẽ chia
 
 \begin{figure}[h]
    \centering
+   \tdplotsetmaincoords{20}{10}
    \begin{minipage}[b]{0.48\textwidth}
       \centering
-      \tdplotsetmaincoords{20}{10}
       \begin{tikzpicture}[tdplot_main_coords]
          \draw[->] (-2.5,0,0) -- (2.5,0,0) node[anchor=north east]{$x$};
          \draw[->] (0,-2.5,0) -- (0,2.5,0) node[anchor=north west]{$y$};
@@ -474,7 +474,6 @@ Và cũng tương tự như với mặt phẳng hai chiều, ba trục sẽ chia
    \hfill
    \begin{minipage}[b]{0.48\textwidth}
       \centering
-      \tdplotsetmaincoords{20}{10}
       \begin{tikzpicture}[tdplot_main_coords]
          \draw[->] (-2.5,0,0) -- (2.5,0,0) node[anchor=north east]{$y$};
          \draw[->] (0,-2.5,0) -- (0,2.5,0) node[anchor=north west]{$x$};
@@ -495,6 +494,36 @@ Chúng ta đã có phân bổ vị trí của các góc phần tám trong hệ t
 
 \solution
 
+Áp dụng công thức khoảng cách để tính khoảng cách giữa hai điểm $A$ và $M$, có:
+
+\begin{align*}
+   d(A;M) &= \sqrt{\left(x_A - \frac{x_A+x_B}{2}\right)^2 + \left(y_A - \frac{y_A+y_B}{2}\right)^2 + \left(z_A - \frac{z_A+z_B}{2}\right)^2} \\
+   &= \sqrt{\left(\frac{x_A-x_B}{2}\right)^2 + \left(\frac{y_A-y_B}{2}\right)^2 + \left(\frac{z_A-z_B}{2}\right)^2} \\
+   &= \frac{1}{2} \sqrt{(x_A-x_B)^2 + (y_A-y_B)^2 + (z_A-z_B)^2} = \frac{d(A;B)}{2}.
+\end{align*}
+
+Một cách tương tự, chúng ta cúng có $d(B;M) = \frac{d(A;B)}{2}$. Như vậy, $M$ là trung điểm của đoạn thẳng nối hai điểm $A$ và $B$.
+
+Vẽ đồ thị ví dụ với $A(1;2;3)$ và $B(-1;0;4)$, chúng ta được đồ thị ở hình \ref{fig:trung diem}.
+
+Công thức về vị trí tọa độ trung điểm được cho trong bài là công thức đơn giản và hữu dụng. Bạn đọc nên học thuộc công thức này.
+
+\begin{figure}[H]
+   \centering
+   \tdplotsetmaincoords{80}{80}
+   \begin{tikzpicture}[tdplot_main_coords]
+      \draw[->] (-2,0,0) -- (2,0,0) node[anchor=north west]{$y$};
+      \draw[->] (0,-1,0) -- (0,3,0) node[anchor=north east]{$x$};
+      \draw[->] (0,0,-1) -- (0,0,5) node[anchor=south]{$z$};
+      
+      \filldraw (1,2,3) circle (2pt) node[anchor=west] {$A(1;2;3)$};
+      \filldraw (-1,0,4) circle (2pt) node[anchor=east] {$B(-1;0;4)$};
+      \filldraw (0,1,3.5) circle (2pt) node[anchor=south west] {$M(0;1;\frac{7}{2})$};
+      \draw[thick] (1,2,3) -- (0,1,3.5) -- (-1,0,4);
+   \end{tikzpicture}
+   \caption{Ví dụ trung điểm với $A(1;2;3)$ và $B(-1;0;4)$}
+   \label{fig:trung diem}
+\end{figure}
 
 \section{Hàm số}
 
@@ -502,11 +531,12 @@ Chúng ta đã có phân bổ vị trí của các góc phần tám trong hệ t
 
 \ % Lùi đầu dòng
 
-Chúng ta gọi $f$ là một \emph{hàm số} (hay \emph{hàm}) đi từ tập $X$ đến tập $Y$ khi và chỉ khi với mọi $x\in X$, gọi là \emph{tập xác định}, thông qua mối liên hệ $f$ có một và chỉ một $y\in Y$ tương ứng với $x$. Khi này, chúng ta có thể viết mối liên hệ hàm số này dưới dạng biểu thức giải tích $y=f(x)$. Tuy nhiên, cần phải để ý rằng, thông qua định nghĩa này, mặc dù mọi $x$ trong $X$ phải có đầu ra trong $Y$, không phải mọi $y$ trong $Y$ đều phải có đầu vào trong $X$. Nói cách khác, tập tất cả các giá trị đầu ra có thể của $y=f(x)$, gọi là \emph{tập giá trị}, là tập con của tập $Y$.
+Chúng ta gọi $f$ là một \emph{hàm số} (hay \emph{hàm}) đi từ tập $X$ đến tập $Y$ khi và chỉ khi với mọi $x\in X$, gọi là \emph{tập xác định}, thông qua mối liên hệ $f$ có một và chỉ một $y\in Y$ tương ứng với $x$. Câu vừa rồi có thể được tóm gọn trong một vài kí hiệu: \begin{align*}f: X &\to Y \\ x &\mapsto y.\end{align*} Khi này, chúng ta có thể viết mối liên hệ hàm số này dưới dạng biểu thức giải tích $y=f(x)$. Tuy nhiên, cần phải để ý rằng, thông qua định nghĩa này, mặc dù mọi $x$ trong $X$ phải có đầu ra trong $Y$, không phải mọi $y$ trong $Y$ đều phải có đầu vào trong $X$. Nói cách khác, tập tất cả các giá trị đầu ra có thể của $y=f(x)$, gọi là \emph{tập giá trị}, là tập con của tập $Y$.
 
 Khi chúng ta có định nghĩa hàm số thì chúng ta cũng sẽ có những khái niệm liên quan. Khi $f$ là một hàm số, thì bất cứ giá trị $a$ thuộc tập xác định để $f(a) = 0$ đều được gọi là \emph{nghiệm} của $f$. Mở rộng ra, với $f$ và $g$ là hai hàm số, bất cứ giá trị $a$ thỏa mãn $f(a) = g(a)$ thì $a$ được gọi là nghiệm của \emph{phương trình} $f(x) = g(x)$. Hơn thế nữa, nếu thay dấu $=$ trong câu vừa trước bởi các dấu $<$, $>$, $\leq$, $\geq$, $\neq$ thì ta có định nghĩa cho nghiệm của \emph{bất phương trình}. Lấy ví dụ, với $f$ và $g$ là hai hàm số, giá trị $a$ để $f(a) \neq g(a)$ thì $a$ được gọi là nghiệm của bất phương trình $f(x) \neq g(x)$\footnote{Phần lớn các tại liệu khác quên mất sự tồn tại của dấu $\neq$ rồi. Trong tài liệu này, cũng không có nhiều cơ hội để dùng dấu $\neq$ cho nên tác giả sẽ cho nó nhiều \dblquote{đất diễn} nhất có thể.}.
 
-\exercise
+      
+\exercise 
 
 
 \solution
@@ -595,7 +625,7 @@ Tương tự với hàm lũy thừa, hàm mũ cũng có những đẳng thức q
 \centering
 \begin{tabular}{|l|c|c|}
 \hline
-\textbf{Đặc điểm} & \textbf{Hàm lũy thừa} & \textbf{hàm mũ} \\
+\textbf{Đặc điểm} & \textbf{Hàm lũy thừa} & \textbf{Hàm mũ} \\
 \hline
 Dạng tổng quát & $f(x) = x^a$ & $f(x) = a^x$ \\
 \hline
