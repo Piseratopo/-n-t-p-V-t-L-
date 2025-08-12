@@ -3,10 +3,12 @@
 \usepackage[T5]{fontenc}
 \usepackage[vietnamese]{babel}
 \usepackage[a4paper]{geometry}
-\usepackage{amsmath, amssymb, blindtext, calc, float, hyperref, icomma, multicol, steinmetz, tikz, tikz-3dplot, wrapfig, xcolor, xparse, xeCJK}
+\usepackage{amsmath, amssymb, blindtext, calc, float, hyperref, icomma, makecell, multicol, steinmetz, tikz, tikz-3dplot, wrapfig, xcolor, xparse, xeCJK}
 \usetikzlibrary{arrows.meta, calc, shadings}
 \geometry{bindingoffset=0.5cm, inner=2cm, outer=2cm, top=2cm, bottom=2cm}
 \setCJKmainfont[AutoFakeSlant=0.15,AutoFakeBold=2.0]{Nom Na Tong}
+\setcellgapes{2pt}
+\makegapedcells
 
 \DeclareMathOperator{\Arg}{Arg}
 
@@ -44,13 +46,21 @@
 \maketitle
 
 \setcounter{chapter}{-1}
+\renewcommand{\thefigure}{\thechapter.\arabic{figure}}
+\renewcommand{\thetable}{\thechapter.\arabic{table}}
 \tableofcontents
+
+\chapter*{Lời giới thiệu}
+\addcontentsline{toc}{chapter}{Lời giới thiệu}
+
 
 \chapter{Kiến thức toán học nền tảng}
 
 \ % Lùi đầu dòng
 
-Phần này bao gồm các kiến thức toán học cần thiết để xây dựng lí thuyết của môn vật lí (hoặc ít nhất để đọc tài liệu này), giả sử rằng bạn đọc đã có kiến thức đại số và một chút hình học từ ghế nhà trường. Chương này sẽ bao hàm những phần không nằm trong chương trình trung học phổ thông và có thể cả chương trình đại học. Bạn đọc có thể tìm hiểu một cách sơ cấp hay gợi nhớ lại về các khái niệm toán học mà không cần tập trung vào việc chứng minh chặt chẽ các tính chất toán học. Tác giả mong muốn thông qua chương này, bạn đọc có thể có một cảm nhận và từ đó có kĩ năng để áp dụng các khái niệm toán giải quyết các yêu cầu thực tế. Hơn thế nữa, có một niềm cảm hứng để tìm hiểu chuyên sâu các phân môn của toán học. Ngoài ra, vì các bạn đọc đang đọc về tài liệu nghiêng về Vật Lí, tác giả sẽ không tập trung nhiều vào chặt chẽ toán học. Các định nghĩa và chứng minh vẫn sẽ được đưa ra, không quá chặt chẽ nhưng đủ ý, nhằm làm bước đệm cho bạn đọc nếu có mong muốn tìm hiểu sâu hơn về toán.
+Phần này bao gồm các kiến thức toán học cần thiết để xây dựng lí thuyết của môn vật lí (hoặc ít nhất để đọc tài liệu này), giả sử rằng bạn đọc đã có kiến thức đại số và một chút hình học từ ghế nhà trường. Chương này sẽ bao hàm những phần không nằm trong chương trình trung học phổ thông và có thể cả chương trình đại học. Bạn đọc có thể tìm hiểu một cách sơ cấp hay gợi nhớ lại về các khái niệm toán học mà không cần tập trung vào việc chứng minh chặt chẽ các tính chất toán học. Tác giả mong muốn thông qua chương này, bạn đọc có thể có một cảm nhận và từ đó có kĩ năng để áp dụng các khái niệm toán giải quyết các yêu cầu thực tế. Suy cho cùng, mấu chốt của nhiều ngành khoa học, bao gồm cả vật lí, là xây dựng những mô hình toán học biểu diễn môi trường để từ đó đưa ra những dự đoán hay xây dựng nhũng công trình cho tương lai.
+
+Và vì bạn đọc đang đọc về tài liệu nghiêng về vật lí, Tác giả sẽ không tập trung nhiều vào chặt chẽ toán học. Các định nghĩa và chứng minh cần thiết vẫn sẽ được đưa ra, tuy nhiên không quá chặt chẽ nhưng đủ để ứng dụng, nhằm làm bước đệm cho bạn đọc nếu có mong muốn tìm hiểu sâu hơn về toán.
 
 \section{Đồ thị}
 
@@ -74,7 +84,7 @@ Phần này bao gồm các kiến thức toán học cần thiết để xây d�
    \label{fig:truc so mot chieu}
 \end{wrapfigure}
 
-Đặt một điểm trên trục làm gốc tọa độ $0$, từ đó chúng ta có thể biểu diễn mọi số thực trên trục số này. Nói một cách không chính thống, với một số $x_P$ dương bất kì, đánh dấu cách $O$ một đoạn bằng $x_P$ đơn vị độ dài theo hướng trục, ta có điểm $P$ biểu diễn $x_P$. Viết tắt cách biểu diễn, được $P(x_P)$. Ngược lại, nếu chúng ta muốn đánh dấu số $x_{P_-}=-x_P$ mang giá trị âm, chúng ta dịch ngược lại chiều trục như trên hình \ref{fig:truc so mot chieu}.
+Đặt một điểm trên trục làm gốc tọa độ $0$, từ đó chúng ta có thể biểu diễn mọi số thực trên trục số này. Nói một cách không chính thống, với một số $x_P$ dương bất kì, đánh dấu cách $O$ một đoạn bằng $x_P$ đơn vị độ dài theo hướng trục, chúng ta có điểm $P$ biểu diễn $x_P$. Viết tắt cách biểu diễn, được $P(x_P)$. Ngược lại, nếu chúng ta muốn đánh dấu số $x_{P_-}=-x_P$ mang giá trị âm, chúng ta dịch ngược lại chiều trục như trên hình \ref{fig:truc so mot chieu}.
 
 \begin{wrapfigure}{r}{0.4\textwidth}
    \centering
@@ -516,9 +526,9 @@ Công thức về vị trí tọa độ trung điểm được cho trong bài l�
       \draw[->] (0,-1,0) -- (0,3,0) node[anchor=north east]{$x$};
       \draw[->] (0,0,-1) -- (0,0,5) node[anchor=south]{$z$};
       
-      \filldraw (1,2,3) circle (2pt) node[anchor=west] {$A(1;2;3)$};
-      \filldraw (-1,0,4) circle (2pt) node[anchor=east] {$B(-1;0;4)$};
-      \filldraw (0,1,3.5) circle (2pt) node[anchor=south west] {$M(0;1;\frac{7}{2})$};
+      \filldraw (1,2,3) circle (\pointSize) node[anchor=west] {$A(1;2;3)$};
+      \filldraw (-1,0,4) circle (\pointSize) node[anchor=east] {$B(-1;0;4)$};
+      \filldraw (0,1,3.5) circle (\pointSize) node[anchor=south west] {$M(0;1;\frac{7}{2})$};
       \draw[thick] (1,2,3) -- (0,1,3.5) -- (-1,0,4);
    \end{tikzpicture}
    \caption{Ví dụ trung điểm với $A(1;2;3)$ và $B(-1;0;4)$}
@@ -533,7 +543,7 @@ Công thức về vị trí tọa độ trung điểm được cho trong bài l�
 
 Chúng ta gọi $f$ là một \emph{hàm số} (hay \emph{hàm}) đi từ tập $X$ đến tập $Y$ khi và chỉ khi với mọi $x\in X$, gọi là \emph{tập xác định}, thông qua mối liên hệ $f$ có một và chỉ một $y\in Y$ tương ứng với $x$. Câu vừa rồi có thể được tóm gọn trong một vài kí hiệu: \begin{align*}f: X &\to Y \\ x &\mapsto y.\end{align*} Khi này, chúng ta có thể viết mối liên hệ hàm số này dưới dạng biểu thức giải tích $y=f(x)$, gọi $y$ là hàm của $x$. Tuy nhiên, cần phải để ý rằng, thông qua định nghĩa này, mặc dù mọi $x$ trong $X$ phải có đầu ra trong $Y$, không phải mọi $y$ trong $Y$ đều phải có đầu vào trong $X$. Nói cách khác, tập tất cả các giá trị đầu ra có thể của $y=f(x)$, gọi là \emph{tập giá trị}, là tập con của tập $Y$.
 
-Khi chúng ta có định nghĩa hàm số thì chúng ta cũng sẽ có những khái niệm liên quan. Khi $f$ là một hàm số, thì bất cứ giá trị $a$ thuộc tập xác định để $f(a) = 0$ đều được gọi là \emph{nghiệm} của $f$. Mở rộng ra, với $f$ và $g$ là hai hàm số, bất cứ giá trị $a$ thỏa mãn $f(a) = g(a)$ thì $a$ được gọi là nghiệm của \emph{phương trình} $f(x) = g(x)$. Hơn thế nữa, nếu thay dấu $=$ trong câu vừa trước bởi các dấu $<$, $>$, $\leq$, $\geq$, $\neq$ thì ta có định nghĩa cho nghiệm của \emph{bất phương trình}. Lấy ví dụ, với $f$ và $g$ là hai hàm số, giá trị $a$ để $f(a) \neq g(a)$ thì $a$ được gọi là nghiệm của bất phương trình $f(x) \neq g(x)$\footnote{Phần lớn các tại liệu khác quên mất sự tồn tại của dấu $\neq$ rồi. Trong tài liệu này, cũng không có nhiều cơ hội để dùng dấu $\neq$ cho nên tác giả sẽ cho nó nhiều \dblquote{đất diễn} nhất có thể.}. Kết hợp nhiều phương trình hay bất phương trình, chúng ta có một \emph{hệ}. Ví dụ 
+Khi chúng ta có định nghĩa hàm số thì chúng ta cũng sẽ có những khái niệm liên quan. Khi $f$ là một hàm số, thì bất cứ giá trị $a$ thuộc tập xác định để $f(a) = 0$ đều được gọi là \emph{nghiệm} của $f$. Mở rộng ra, với $f$ và $g$ là hai hàm số, bất cứ giá trị $a$ thỏa mãn $f(a) = g(a)$ thì $a$ được gọi là nghiệm của \emph{phương trình} $f(x) = g(x)$. Hơn thế nữa, nếu thay dấu $=$ trong câu vừa trước bởi các dấu $<$, $>$, $\leq$, $\geq$, $\neq$ thì chúng ta có định nghĩa cho nghiệm của \emph{bất phương trình}. Lấy ví dụ, với $f$ và $g$ là hai hàm số, giá trị $a$ để $f(a) \neq g(a)$ thì $a$ được gọi là nghiệm của bất phương trình $f(x) \neq g(x)$\footnote{Phần lớn các tại liệu khác quên mất sự tồn tại của dấu $\neq$ rồi. Trong tài liệu này, cũng không có nhiều cơ hội để dùng dấu $\neq$ cho nên tác giả sẽ cho nó nhiều \dblquote{đất diễn} nhất có thể.}. Kết hợp nhiều phương trình hay bất phương trình, chúng ta có một \emph{hệ}. Ví dụ 
 $$
 \begin{cases}
    f(x) = g(x) \\
@@ -542,7 +552,11 @@ $$
 $$
 Để thỏa mãn hệ thì mỗi thành phần trong hệ đều phải thỏa mãn.
 
-Nếu chỉ có số với chữ không thì hàm số sẽ chở nên rất đơn điệu, cho nên người ta đã nghĩ ra phương pháp biểu diễn hàm số qua đồ thị. Để biểu diễn một hàm số $y=f(x)$, chỉ cần vẽ tất cả các cặp tọa độ $(x; y)$ thỏa mãn hàm $f$ trên đồ thị. Một cách tương tự, chúng ta cũng có thể biểu diễn phương trình và bất phương trình. Có bao nhiêu ẩn số trong phương trình/bất phương trình, đồ thị sẽ có bấy nhiêu chiều. Về mặt lợi ích của việc sử dụng đồ thị, biểu diễn hình học các đại lượng đại số là một trong những cách hữu hiệu để mở rộng cảm nhận về đối tượng đang nghiên cứu. 
+Nếu chỉ có số với chữ không thì hàm số sẽ chở nên rất đơn điệu, cho nên người ta đã nghĩ ra phương pháp biểu diễn hàm số qua đồ thị\footnote{\dblquote{Chỉ cần}? Đương nhiên là không đơn giản như vậy. Với hàm có vô số điểm thì thông thường người ta sẽ lấy một số lượng nhất định những điểm rồi nối lại. Mà kể cả như vậy, vẫn có trường hợp không vẽ được một cách thỏa đáng. Ví dụ như hàm Đi-rích-lê: $$f(x) =
+\begin{cases}
+   1 \text{ nếu } x\in \mathbb{Q} \\
+   0 \text{ nếu } x\notin \mathbb{Q}
+\end{cases}$$ với $\mathbb{Q}$ là tập số hữu tỉ. Những hàm như thế này đã mang đến nhiều sự đau đầu cho những nhà toán học. Nhưng vẫn phải có những hàm \dblquote{dị thường} để kiểm chứng định lí, khi đó vật lí mới có niềm tin để áp dụng các định lí đó vào những hàm thông thường khác được.}. Để biểu diễn một hàm số $y=f(x)$, chỉ cần vẽ tất cả các cặp tọa độ $(x; y)$ thỏa mãn hàm $f$ trên đồ thị. Một cách tương tự, chúng ta cũng có thể biểu diễn phương trình và bất phương trình. Có bao nhiêu ẩn số trong phương trình/bất phương trình, đồ thị sẽ có bấy nhiêu chiều. Về mặt lợi ích của việc sử dụng đồ thị, biểu diễn hình học các đại lượng đại số là một trong những cách hữu hiệu để mở rộng cảm nhận về đối tượng đang nghiên cứu. 
       
 \exercise Mỗi phần trong bài tập sau bao gồm mối liên hệ giữa $x$ và $y$. Trong mỗi phần, $y$ có phải là hàm của $x$ hay không? Trong trường hợp $y$ là hàm số của $x$, xác định tập xác định và tập giá trị của hàm số đó. Còn trong trường hợp ngược lại, giải thích tại sao $y$ lại không phải là hàm số của $x$.
 
@@ -596,10 +610,10 @@ Nếu chỉ có số với chữ không thì hàm số sẽ chở nên rất đ�
 
 5. $y$ không là hàm của $x$ do khi $x = 2$ thì $y$ có hai giá trị $28$ và $29$. Mặc dù cách viết có thể ám chỉ $y=f(x)$ với $f$ là hàm \dblquote{số ngày trong tháng}, nhưng $f$ không phải là hàm số do dính trường hợp ngoại lệ.
 
-\exercise[intropt] Vẽ đồ thị của phương trình $\mathcal{P}$, với các định nghĩa được cho. Để ý đến số ẩn trong $\mathcal{P}$ để lựa chọn đồ thị phù hợp.
+\exercise[intropt] Vẽ đồ thị của phương trình $\mathcal{P}$, với các định nghĩa được cho. Hàm có tập xác định là bộ số đầu vào cho ở trong bảng. Để ý số ẩn của phương trình để chọn số chiều của đồ thị cho phù hợp.
 
 \begin{enumerate}
-   \item $\mathcal{P}: x^2 - 1 = 0$ với $x$ là ẩn thực;
+   \item $\mathcal{P}: x^2 - 1 = 0$ với $x \in \mathbb{R}$;
    \item
    \begin{tabular}{|c|c|c|c|c|c|c|}
       \hline
@@ -647,8 +661,183 @@ Nếu chỉ có số với chữ không thì hàm số sẽ chở nên rất đ�
       \hline
       $f(x)$ & $2$ & $3$ & $5$ & $7$ & $11$ & $13$\\
       \hline
-   \end{tabular} và $\mathcal{P}: f(x) = 2b-1$ với $b$ là ẩn thực;
+   \end{tabular} và $\mathcal{P}: f(x) = 2b-1$ với $b \in \mathbb{R}$;
 
+   \item
+   \begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      $x$ & $-1$ & $1$ & $-2$ & $2$ & $-3$ & $3$\\
+      \hline
+      $f(x)$ & $0$ & $0$ & $4$ & $3$ & $7$ & $0$\\
+      \hline
+   \end{tabular} và $\mathcal{P}: f(x) = f(2b - 1)$;
+\end{enumerate}
+
+\solution[intropt]
+
+1. $P$ là phương trình chỉ có một ẩn $x$, do đó đồ thị của $P$ chỉ là đồ thị một chiều trên một trục số biểu diễn cho $x$.
+{
+\begin{wrapfigure}{r}{0.5\textwidth}
+   \centering
+   \begin{tikzpicture}
+      \draw[->] (-2, 0) -- (2, 0) node[right] {$x$};
+      \filldraw (1, 0) circle (\pointSize) node[below] {$1$};
+      \filldraw (-1, 0) circle (\pointSize) node[below] {$-1$};
+   \end{tikzpicture}
+   \caption{Đồ thị phần 1 bài \ref{intropt}}
+   \label{fig:dtp1}
+\end{wrapfigure}
+
+Giải phương trình:
+\begin{align*}
+   &x^2 - 1 = 0 \\
+   \iff &x^2 = 1 \\
+   \iff &x \in \{-1; 1\}
+\end{align*}
+và từ đó, đồ thị của $P$ có được như hình \ref{fig:dtp1}.
+}
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+   \centering
+   \begin{tikzpicture}
+      \draw[->] (-2, 0) -- (4, 0) node[right] {$x$};
+      \filldraw (1, 0) circle (\pointSize) node[below] {$1$};
+      \filldraw (-1, 0) circle (\pointSize) node[below] {$-1$};
+      \filldraw (3, 0) circle (\pointSize) node[below] {$3$};
+      
+   \end{tikzpicture}
+   \caption{Đồ thị phần 2 bài \ref{intropt}}
+   \label{fig:dtp2}
+\end{wrapfigure}
+2. $P$ là phương trình chỉ có một ẩn $x$, do đó đồ thị của $P$ chỉ là đồ thị một chiều trên một trục số biểu diễn cho $x$. 
+
+Có ba giá trị để $f(x)$ bằng $0$: $x\in \{-1; 1; -3\}$. Chúng ta có đồ thị của $P$ ở hình \ref{fig:dtp2}.
+
+3. Tập xác định của $f(x)$ là $\{-1; 1; -2; 2; -3; 3\}$, do đó, để $P$ thỏa mãn thì $x$ chí có thể nhận các giá trị trong vùng tập xác định.
+
+{
+\begin{wrapfigure}{r}{0.5\textwidth}
+   \centering
+   \begin{tikzpicture}
+      \draw[->] (-4, 0) -- (3, 0) node[right] {$x$};
+      \filldraw (1, 0) circle (\pointSize) node[below] {$1$};
+      \filldraw (-1, 0) circle (\pointSize) node[below] {$-1$};
+      \filldraw (-3, 0) circle (\pointSize) node[below] {$-3$};
+      \filldraw (2, 0) circle (\pointSize) node[below] {$2$};
+   \end{tikzpicture}
+   \caption{Đồ thị phần 3 bài \ref{intropt}}
+   \label{fig:dtp3}
+\end{wrapfigure}
+Kẻ bảng so sánh:
+\begin{figure}[h]
+   \begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      $x$ & $-1$ & $1$ & $-2$ & $2$ & $-3$ & $3$\\
+      \hline
+      $f(x)$ & $0$ & $0$ & $4$ & $3$ & $7$ & $0$\\
+      \hline
+      $x^2-1$ & $0$ & $0$ & $3$ & $3$ & $7$ & $7$\\
+      \hline
+   \end{tabular}
+\end{figure}
+
+\noindent và chúng ta có đồ thị là hình \ref{fig:dtp3}.
+}
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+   \centering
+   \begin{tikzpicture}
+      \draw[->] (0, 0) -- (5, 0) node[right] {$x$};
+      \filldraw (2, 0) circle (\pointSize) node[below] {$2$};
+      \filldraw (3, 0) circle (\pointSize) node[below] {$3$};
+      \filldraw (4, 0) circle (\pointSize) node[below] {$4$};
+      
+   \end{tikzpicture}
+   \caption{Đồ thị phần 4 bài \ref{intropt}}
+   \label{fig:dtp4}
+\end{wrapfigure}
+4. Nhìn vào bảng được cho, có $f(x) = g(x)$ khi và chỉ khi $x\in \{2; 3; 4\}$. Do đó, đồ thị của $P$ có được như hình \ref{fig:dtp4}.
+
+5. $P$ là phương trình có hai ẩn $x$ và $y$, do đó đồ thị của $P$ là một mặt phẳng hai chiều. Coi như trục hoành biểu diễn cho $x$ và trục tung biểu diễn cho $y$. 
+
+\begin{wraptable}{r}{0.5\textwidth}
+   \centering
+   \begin{tabular}{|c|c|c|c|c|}
+      \hline
+      $B_n$ & $3$ & $5$ & $7$ & $11$ \\
+      \hline
+      $x$ & $2$ & $3$ & $4$ & $5$ \\
+      \hline
+      $y$ & $2$ & $3$ & $4$ & $6$ \\
+      \hline 
+   \end{tabular}
+   \caption{Giá trị của $x$ và $y$ ứng với $B_n$}
+   \label{tab:bn_values}
+\end{wraptable}
+
+Để có thể vẽ được đồ thị của $P$, hiển nhiên nhìn ra được rằng cần phải có những điểm $(x;y)$ để hai giá trị $f(x)$ và $g(y)$ bằng nhau. Và để làm được điều đó, trước hết, chúng ta sẽ tìm xem giá trị bằng nhau của $f(x)$ với $g(y)$ này bằng bao nhiêu. Gọi chung giá trị bằng nhau này là $B_n$. Kẻ lại bảng so sánh thành bảng \ref{tab:bn_values}, với $B_n$ là ra trị đầu ra và $x$, $y$ là giá trị lần lượt đưa vào hai hàm $f$ và $g$ để có giá trị đầu ra đó. Và từ đó, chúng ta có đồ thị của $P$ là hình \ref{fig:dtp5}.
+
+\begin{figure}[h]
+   \centering
+   \begin{tikzpicture}
+      \draw[->] (0, 0) -- (3.5, 0) node[right] {$x$};
+      \draw[->] (0, 0) -- (0, 3.5) node[above] {$y$};
+      \filldraw (1, 1) circle (\pointSize) node[right] {$(2; 2)$};
+      \filldraw (1.5, 1.5) circle (\pointSize) node[right] {$(3; 3)$};
+      \filldraw (2.5, 3) circle (\pointSize) node[right] {$(5; 6)$};
+      \filldraw (2, 2) circle (\pointSize) node[right] {$(4; 4)$};
+   \end{tikzpicture}
+   \caption{Đồ thị phần 5 bài \ref{intropt}}
+   \label{fig:dtp5}
+\end{figure}
+
+6. $P$ là phương trình có hai ẩn $x$ và $b$, do đó đồ thị của $P$ là một mặt phẳng hai chiều. Coi như trục hoành biểu diễn cho $x$ và trục tung biểu diễn cho $b$.
+
+Giải ngược $b$ từ $f(x)$:
+\begin{align*}
+   f(x) &= 2b - 1 \\
+   \iff b &= \frac{f(x) + 1}{2}.
+\end{align*}
+
+Từ đây, chúng ta có thể thêm giá trị của $b$ vào bảng được cho thành bảng \ref{tab:b_values6}
+
+\begin{table}[h]
+   \centering
+   \begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      $x$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$\\
+      \hline
+      $f(x)$ & $2$ & $3$ & $5$ & $7$ & $11$ & $13$\\
+      \hline
+      $b$ & $\frac{3}{2}$ & $\frac{5}{2}$ & $3$ & $4$ & $6$ & $7$\\
+      \hline
+   \end{tabular}
+   \caption{Giá trị của $b$ ứng với $x$}
+   \label{tab:b_values6}
+\end{table}
+
+Qua bảng đó, vẽ được đồ thị của $P$ như hình \ref{fig:dtp6}
+
+\begin{figure}[h]
+   \centering
+   \begin{tikzpicture}
+      \draw[->] (0, 0) -- (4, 0) node[right] {$x$};
+      \draw[->] (0, 0) -- (0, 4) node[above] {$b$};
+      \filldraw (0.5, 0.75) circle (\pointSize) node[below] {$\left(1; \frac{3}{2}\right)$};
+      \filldraw (1, 1.25) circle (\pointSize) node[below] {$\left(2; \frac{5}{2}\right)$};
+      \filldraw (1.5, 1.5) circle (\pointSize) node[right] {$(3; 3)$};
+      \filldraw (2, 2) circle (\pointSize) node[right] {$(4; 4)$};
+      \filldraw (2.5, 3) circle (\pointSize) node[right] {$(5; 6)$};
+      \filldraw (3, 3.5) circle (\pointSize) node[right] {$(6; 7)$};
+   \end{tikzpicture}
+   \caption{Đồ thị phần 6 bài \ref{intropt}}
+   \label{fig:dtp6}
+\end{figure}
+
+7. 
+
+\exercise[ex:hpt1]
+\begin{enumerate}
    \item 
    \begin{tabular}{|c|c|c|c|c|c|c|}
       \hline
@@ -722,123 +911,7 @@ Nếu chỉ có số với chữ không thì hàm số sẽ chở nên rất đ�
    \end{tabular} và $P:f(a) = g(b) = h(c)$;
 \end{enumerate}
 
-\solution[intropt]
-
-1. $P$ là phương trình chỉ có một ẩn $x$, do đó đồ thị của $P$ chỉ là đồ thị một chiều trên một trục số biểu diễn cho $x$.
-{
-\begin{wrapfigure}{r}{0.5\textwidth}
-   \centering
-   \begin{tikzpicture}
-      \draw[->] (-2, 0) -- (2, 0) node[right] {$x$};
-      \filldraw (1, 0) circle (2pt) node[below] {$1$};
-      \filldraw (-1, 0) circle (2pt) node[below] {$-1$};
-   \end{tikzpicture}
-   \caption{Đồ thị phần 1 bài \ref{intropt}}
-   \label{fig:dtp1}
-\end{wrapfigure}
-
-Giải phương trình:
-\begin{align*}
-   &x^2 - 1 = 0 \\
-   \iff &x^2 = 1 \\
-   \iff &x \in \{-1; 1\}
-\end{align*}
-và từ đó, đồ thị của $P$ có được như hình \ref{fig:dtp1}.
-}
-
-\begin{wrapfigure}{r}{0.5\textwidth}
-   \centering
-   \begin{tikzpicture}
-      \draw[->] (-2, 0) -- (4, 0) node[right] {$x$};
-      \filldraw (1, 0) circle (2pt) node[below] {$1$};
-      \filldraw (-1, 0) circle (2pt) node[below] {$-1$};
-      \filldraw (3, 0) circle (2pt) node[below] {$3$};
-      
-   \end{tikzpicture}
-   \caption{Đồ thị phần 2 bài \ref{intropt}}
-   \label{fig:dtp2}
-\end{wrapfigure}
-2. $P$ là phương trình chỉ có một ẩn $x$, do đó đồ thị của $P$ chỉ là đồ thị một chiều trên một trục số biểu diễn cho $x$. 
-
-Có ba giá trị để $f(x)$ bằng $0$: $x\in \{-1; 1; -3\}$. Chúng ta có đồ thị của $P$ ở hình \ref{fig:dtp2}.
-
-3. Tập xác định của $f(x)$ là $\{-1; 1; -2; 2; -3; 3\}$, do đó, để $P$ thỏa mãn thì $x$ chí có thể nhận các giá trị trong vùng tập xác định.
-
-{
-\begin{wrapfigure}{r}{0.5\textwidth}
-   \centering
-   \begin{tikzpicture}
-      \draw[->] (-4, 0) -- (3, 0) node[right] {$x$};
-      \filldraw (1, 0) circle (2pt) node[below] {$1$};
-      \filldraw (-1, 0) circle (2pt) node[below] {$-1$};
-      \filldraw (-3, 0) circle (2pt) node[below] {$-3$};
-      \filldraw (2, 0) circle (2pt) node[below] {$2$};
-   \end{tikzpicture}
-   \caption{Đồ thị phần 3 bài \ref{intropt}}
-   \label{fig:dtp3}
-\end{wrapfigure}
-Kẻ bảng so sánh:
-\begin{figure}[h]
-   \begin{tabular}{|c|c|c|c|c|c|c|}
-      \hline
-      $x$ & $-1$ & $1$ & $-2$ & $2$ & $-3$ & $3$\\
-      \hline
-      $f(x)$ & $0$ & $0$ & $4$ & $3$ & $7$ & $0$\\
-      \hline
-      $x^2-1$ & $0$ & $0$ & $3$ & $3$ & $7$ & $7$\\
-      \hline
-   \end{tabular}
-\end{figure}
-
-\noindent và chúng ta có đồ thị là hình \ref{fig:dtp3}.
-}
-
-\begin{wrapfigure}{r}{0.5\textwidth}
-   \centering
-   \begin{tikzpicture}
-      \draw[->] (0, 0) -- (5, 0) node[right] {$x$};
-      \filldraw (2, 0) circle (2pt) node[below] {$2$};
-      \filldraw (3, 0) circle (2pt) node[below] {$3$};
-      \filldraw (4, 0) circle (2pt) node[below] {$4$};
-      
-   \end{tikzpicture}
-   \caption{Đồ thị phần 4 bài \ref{intropt}}
-   \label{fig:dtp4}
-\end{wrapfigure}
-4. Nhìn vào bảng được cho, có $f(x) = g(x)$ khi và chỉ khi $x\in \{2; 3; 4\}$. Do đó, đồ thị của $P$ có được như hình \ref{fig:dtp4}.
-
-5. $P$ là phương trình có hai ẩn $x$ và $y$, do đó đồ thị của $P$ là một mặt phẳng hai chiều. Coi như trục hoành biểu diễn cho $x$ và trục tung biểu diễn cho $y$. 
-
-\begin{wraptable}{r}{0.5\textwidth}
-   \centering
-   \begin{tabular}{|c|c|c|c|c|}
-      \hline
-      $B_n$ & $3$ & $5$ & $7$ & $11$ \\
-      \hline
-      $x$ & $2$ & $3$ & $4$ & $5$ \\
-      \hline
-      $y$ & $2$ & $3$ & $4$ & $6$ \\
-      \hline 
-   \end{tabular}
-   \caption{Giá trị của $x$ và $y$ ứng với $B_n$}
-   \label{tab:bn_values}
-\end{wraptable}
-
-Để có thể vẽ được đồ thị của $P$, hiển nhiên nhìn ra được rằng cần phải có những điểm $(x;y)$ để hai giá trị $f(x)$ và $g(y)$ bằng nhau. Và để làm được điều đó, trước hết, chúng ta sẽ tìm xem giá trị bằng nhau của $f(x)$ với $g(y)$ này bằng bao nhiêu. Gọi chung giá trị bằng nhau này là $B_n$. Kẻ lại bảng so sánh thành bảng \ref{tab:bn_values}, với $B_n$ là ra trị đầu ra và $x$, $y$ là giá trị lần lượt đưa vào hai hàm $f$ và $g$ để có giá trị đầu ra đó. Và từ đó, ta có đồ thị của $P$ là hình \ref{fig:dtp5}.
-
-\begin{figure}[h]
-   \centering
-   \begin{tikzpicture}
-      \draw[->] (0, 0) -- (3.5, 0) node[right] {$x$};
-      \draw[->] (0, 0) -- (0, 3.5) node[above] {$y$};
-      \filldraw (1, 1) circle (2pt) node[right] {$(2; 2)$};
-      \filldraw (1.5, 1.5) circle (2pt) node[right] {$(3; 3)$};
-      \filldraw (2.5, 3) circle (2pt) node[right] {$(5; 6)$};
-      \filldraw (2, 2) circle (2pt) node[right] {$(4; 4)$};
-   \end{tikzpicture}
-   \caption{Đồ thị phần 5 bài \ref{intropt}}
-   \label{fig:dtp5}
-\end{figure}
+\solution[ex:hpt1]
 
 \subsection{Những hàm số sơ cấp}
 
@@ -857,7 +930,7 @@ Tính toán một số giá trị mẫu:
    \item $p(1) = 7 \cdot 1^4 - 2 \cdot 1^2 + 9 = 14$ với $q(t)= 7t^4 - 2t^2 + 9$ là một đa thức bậc $4$ với các hệ số $d_4 = 7$, $d_3 = 0$, $d_2 = -2$, $d_1 = 0$, $d_0 = 9$;
    \item $q(2) = -3 \cdot 2 + 8 = 2$ với $q(r) = -3r + 8$ là một đa thức bậc $1$ với các hệ số $e_1 = -3$, $e_0 = 8$.
 \end{itemize}
-Khi đa thức có bậc bằng $0$, hay $f(x) = P_0(x) = a_0$, thì được gọi là \emph{đa thức hằng} hay \emph{hàm hằng}. Một trường hợp đặc biệt là khi $f(x) = 0$ \footnote{Sẽ có nhiều tài liệu viết \dblquote{$f(x) \equiv 0$} thay vì \dblquote{$f(x) = 0$} để phân biệt giữa khẳng định hai hàm là như nhau so với một phương trình. Tác giả không muốn bạn đọc bị vướng víu với nhiều kí hiệu lạ, cho nên Tác giả sẽ cố gắng dùng những kí hiệu cũ. Bạn đọc có thể tự suy luận ý nghĩa thông qua ngữ cảnh.}, khi này hàm không có bậc nhưng vẫn được gọi là hàm hằng \footnote{Đa số những nhà toán học không coi $f(x) = 0$ là đa thức bậc $0$ do nhiều tính chất của đa thức bị phá vỡ khi gặp trường hợp này. Do đó, $f(x) = 0$ chỉ được coi là \dblquote{hàm hằng} chứ không phải \dblquote{\textit{đa thức} hằng}. Trong tài liệu này, trở về sau sẽ chỉ có thuật ngữ \dblquote{hàm hằng} được sử dụng.}.
+Khi đa thức có bậc bằng $0$, hay $f(x) = P_0(x) = a_0$, thì được gọi là \emph{đa thức hằng} hay \emph{hàm hằng}. Một trường hợp đặc biệt là khi $f(x) = 0$ \footnote{Sẽ có nhiều tài liệu viết \dblquote{$f(x) \equiv 0$} thay vì \dblquote{$f(x) = 0$} để phân biệt giữa khẳng định hai hàm là như nhau so với một phương trình. Tác giả không muốn bạn đọc phải bận tâm với nhiều kí hiệu lạ, cho nên tác giả sẽ cố gắng dùng những kí hiệu cũ. Bạn đọc có thể tự suy luận ý nghĩa thông qua ngữ cảnh.}, khi này hàm không có bậc nhưng vẫn được gọi là hàm hằng \footnote{Đa số những nhà toán học không coi $f(x) = 0$ là đa thức bậc $0$ do nhiều tính chất của đa thức bị phá vỡ khi gặp trường hợp này. Do đó, $f(x) = 0$ chỉ được coi là \dblquote{hàm hằng} chứ không phải \dblquote{\textit{đa thức} hằng}. Trong tài liệu này, trở về sau sẽ chỉ có thuật ngữ \dblquote{hàm hằng} được sử dụng.}.
 
 \exercise Phác thảo đồ thị của những hàm sau:
 \begin{multicols}{2}
@@ -892,7 +965,7 @@ Tính toán một số giá trị mẫu:
    \item $\textit{丫}(-7) = (-7)^{-1} = -\frac{1}{7}$ với $\textit{丫}\left(\textit{低}\right) = \textit{低}^{-1} = \frac{1}{\textit{低}}$ là hàm lũy thừa với $a = -1$.
 \end{itemize}
 
-Hàm lũy thừa có trong nó những hàm quen thuộc mà có thể bạn đọc đã nhận ra, kể như hàm phân thức $x^{-b} = \frac{1}{x^b}$ hay hàm khai căn $x^{\frac{1}{c}} = \sqrt[n]{x}$. Những hàm này có cùng tập xác định với hàm lũy thừa kể trên\footnote{Ê, nếu hàm khai căn cũng chia sẻ cùng tập xác định với hàm lũy thừa thì $\sqrt[3]{-27} = (-27)^{\frac{1}{3}} = -3$ cũng không xác định à? Nhiều tài liệu khác vẫn cho phép khai căn mũ lẻ cho số âm, và nếu bạn đọc muốn thực hiện khai căn như vậy thì tác giả cũng không cấm. Tuy nhiên, khai căn là một phép tính đặc biệt. Khi xét đến trường số phức, \textit{hàm khai căn} không còn là một hàm chỉ trả ra một số mà là một tập số. Để muốn nó vẫn là một hàm theo nghĩa thường thì phải có quy ước, và theo quy ước đó, $$\sqrt[3]{-27} = \frac{3}{2} + \mathbf{i}\frac{3\sqrt{3}}{2}.$$}.
+Hàm lũy thừa có trong nó những hàm quen thuộc mà có thể bạn đọc đã nhận ra, kể như hàm phân thức $x^{-b} = \frac{1}{x^b}$ hay hàm khai căn $x^{\frac{1}{c}} = \sqrt[n]{x}$. Những hàm này có cùng tập xác định với hàm lũy thừa kể trên\footnote{Bạn đọc có thể đặt câu hỏi rằng nếu hàm khai căn cũng chia sẻ cùng tập xác định với hàm lũy thừa thì $\sqrt[3]{-27} = (-27)^{\frac{1}{3}} = -3$ cũng không xác định à? Nhiều tài liệu khác vẫn cho phép khai căn mũ lẻ cho số âm, và nếu bạn đọc muốn thực hiện khai căn như vậy thì tác giả cũng không cấm. Tuy nhiên, khai căn là một phép tính đặc biệt. Khi xét đến trường số phức, \textit{hàm khai căn} không còn là một hàm chỉ trả ra một số mà là một tập số. Để muốn nó vẫn là một hàm theo nghĩa thường thì phải có quy ước, và theo một quy ước phổ biến, $$\sqrt[3]{-27} = \frac{3}{2} + \mathbf{i}\frac{3\sqrt{3}}{2}.$$}.
 
 Khi tính toán đại số, có một số tính chất quen thuộc mà bạn đọc nên ghi nhớ. Với mọi $a, b$ thực và $x$ thực sao cho mọi tính toán có nghĩa, khi này:
 \begin{itemize}
@@ -962,9 +1035,9 @@ Tính toán một số giá trị mẫu:
 
 Trước khi đến với sô thực với số phức, chúng ta bắt đầu tiếp cận với định nghĩa đơn vị ảo. Cụ thể, \emph{đơn vị ảo} được kí hiệu là $\mathbf{i}$ \footnote{Phần lớn các tài liệu sẽ kí hiệu số ảo là chữ $i$ thông thường. Tác giả kí hiệu thành chữ $\mathbf{i}$ đứng in đậm để bảo toàn chữ $i$ cho nhiệm vụ khác.} và thỏa mãn $$\mathbf{i}^2 = -1 \text{ hay } \mathbf{i} = \sqrt{-1}.$$
 
-Để có số ảo, ta nhân một số thực $b \neq 0$ với đơn vị ảo để thành $\mathbf{i}b$. Một số phức bao gồm thành phần thực và $\mathbf{i}$ lần phẩn ảo cộng vào. Viết dưới \emph{dạng chính tắc}, một số phức có dạng là $$z=a+\mathbf{i}b$$ với $a, b$ thực. Từ một số phức, chúng ta cũng có thể lấy ngược lại giá trị phần thực và phần ảo của nó lần lượt qua hai hàm $\Re{(z)}$ và $\Im{(z)}$ (hoặc $\operatorname*{Re}{(z)}$ và $\operatorname*{Im}{(z)}$). Cụ thể, với $z=a+\mathbf{i}b$ thì $\Re{(z)} = a$ và $\Im{(z)}=b$\footnote{Tại sao không gọi cả $\mathbf{i}b$ là phần ảo? Khi nói đến phần ảo, chúng ta đã ngầm định nó sẽ thuộc về số hạng mà có thừa số $\mathbf{i}$. Viết lại đơn vị ảo trở nên thừa thãi. Hơn nữa, sẽ dễ làm việc hơn khi mà cả $\Re{(z)}$ và $\Im{(z)}$ đều thực và ta không phải chia $\Im{(z)}$ cho $\mathbf{i}$ liên tục.}.
+Để có số ảo, nhân một số thực $b \neq 0$ với đơn vị ảo để thành $\mathbf{i}b$. Một số phức bao gồm thành phần thực và $\mathbf{i}$ lần phẩn ảo cộng vào. Viết dưới \emph{dạng chính tắc}, một số phức có dạng là $$z=a+\mathbf{i}b$$ với $a, b$ thực. Từ một số phức, chúng ta cũng có thể lấy ngược lại giá trị phần thực và phần ảo của nó lần lượt qua hai hàm $\Re{(z)}$ và $\Im{(z)}$ (hoặc $\operatorname*{Re}{(z)}$ và $\operatorname*{Im}{(z)}$). Cụ thể, với $z=a+\mathbf{i}b$ thì $\Re{(z)} = a$ và $\Im{(z)}=b$\footnote{Tại sao không gọi cả $\mathbf{i}b$ là phần ảo? Khi nói đến phần ảo, chúng ta đã ngầm định nó sẽ thuộc về số hạng mà có thừa số $\mathbf{i}$. Viết lại đơn vị ảo trở nên thừa thãi. Hơn nữa, sẽ dễ làm việc hơn khi mà cả $\Re{(z)}$ và $\Im{(z)}$ đều thực và không phải chia $\Im{(z)}$ cho $\mathbf{i}$ liên tục.}.
 
-Chúng ta sẽ coi như có thể thực hiện các định luật đại số thông thường trên tập số phức. Coi $\mathbf{i}$ là một biến với $\mathbf{i}^2 = -1$. Để cộng (hay trừ) hai số phức $v = a + \mathbf{i}b$ và $w = c + \mathbf{i}d$, ta thực hiện cộng (hay trừ) các thành phần tương đương (phần thực với phần thực, phần ảo với phần ảo). Viết dưới dạng toán học:
+Chúng ta sẽ coi như có thể thực hiện các định luật đại số thông thường trên tập số phức. Coi $\mathbf{i}$ là một biến với $\mathbf{i}^2 = -1$. Để cộng (hay trừ) hai số phức $v = a + \mathbf{i}b$ và $w = c + \mathbf{i}d$, thực hiện cộng (hay trừ) các thành phần tương đương (phần thực với phần thực, phần ảo với phần ảo). Viết dưới dạng toán học:
 \begin{equation*}
    \begin{cases}
       v + w = (a + c) + \mathbf{i}(b + d) \\ 
@@ -1028,7 +1101,7 @@ Một cách tương tự, $|z|$ là khoảng cách từ $Z$ đến gốc tọa �
 
 Trên trục số thực, mốt số cụ thể thì giá trị tuyệt đối của nó chỉ có một giá trị, nhưng nếu đầu ra là một giá trị tuyệt đối thì đầu vào có thể là $2$ số khác nhau. Để biết chính xác là số nào thì cần biết thêm dấu của số đó, hay nói một cách khác, hướng của số đó nếu nhìn từ vị trí gốc $0$. Một cách tương tự, một số phức $z$ chỉ ra được một giá trị mô-đun $|z|$ của nó, nhưng với một $|z|$ thì có thể có nhiều $z$ thỏa mãn. Để biết chính xác được giá trị của $z$ thì chúng ta cần phải biết thêm hướng của $z$. Tuy nhiên, việc xác định hướng này không chỉ đơn giản là nằm trái hay phải trên trục một chiều nữa, mà cần phải xác định vị trí trong mặt phẳng hai chiều. Một cách để thực hiện điều này là xác định \emph{góc} (hay \emph{a-gu-men}) của $z$.
 
-Để xác định góc, chúng ta cần phải có $2$ tia. Một tia có thể được nối từ gốc đến điểm biểu diễn. Một tia còn lại có thể bám theo một trục cố định. Về quy ước, phía dương trục hoành, hay trục thực, được sử dụng làm bờ còn lại. Bạn đọc có thể nghĩ rằng là khi này ta đã có đủ điều kiện để xác định góc. Cũng đũng, đã đủ để từ số phức $z$ ra được góc của $z$. Nhưng từ góc của $z$ vẫn chưa đủ để ra được $z$. Hãy nhìn vào hình \ref{fig:hai_truong_hop_goc}:
+Để xác định góc, chúng ta cần phải có $2$ tia. Một tia có thể được nối từ gốc đến điểm biểu diễn. Một tia còn lại có thể bám theo một trục cố định. Về quy ước, phía dương trục hoành, hay trục thực, được sử dụng làm bờ còn lại. Bạn đọc có thể nghĩ rằng là khi này chúng ta đã có đủ điều kiện để xác định góc. Cũng đũng, đã đủ để từ số phức $z$ ra được góc của $z$. Nhưng từ góc của $z$ vẫn chưa đủ để ra được $z$. Hãy nhìn vào hình \ref{fig:hai_truong_hop_goc}:
 \begin{figure}[h]
    \centering
    \begin{tikzpicture}
@@ -1118,7 +1191,7 @@ Với sự xây dựng ban đầu của Bom-be-li làm gốc, trong những th�
 \end{enumerate}
 \solution
 \begin{enumerate}
-   \item Giả sử trái đất quay quanh mặt trời trong $365{,}25$ ngày. Quãng đường mà trái đất đi được trong thời gian này là chu vi của quỹ đạo tròn $2 \pi \cdot 1{,}5 \cdot 10^8$ km. Từ đó, ta có thể tính được tốc độ trung bình của trái đất quanh mặt trời là $\frac{2 \pi \cdot 1{,}5 \cdot 10^8\ \text{km}}{365{,}25\ \text{ngày}}$. Thực hiện quy đổi để được:
+   \item Giả sử trái đất quay quanh mặt trời trong $365{,}25$ ngày. Quãng đường mà trái đất đi được trong thời gian này là chu vi của quỹ đạo tròn $2 \pi \cdot 1{,}5 \cdot 10^8$ km. Từ đó, chúng ta có thể tính được tốc độ trung bình của trái đất quanh mặt trời là $\frac{2 \pi \cdot 1{,}5 \cdot 10^8\ \text{km}}{365{,}25\ \text{ngày}}$. Thực hiện quy đổi để được:
       \[
          \frac{2 \pi \cdot 1{,}5 \cdot 10^8\ \text{km}}{365{,}25\ \text{ngày}}
          \cdot \frac{1\ \text{dặm}}{1{,}6903\ \text{km}}
@@ -1136,12 +1209,12 @@ Với sự xây dựng ban đầu của Bom-be-li làm gốc, trong những th�
    \centering
    \begin{tikzpicture}
       \draw[thick] (0,0) circle (2cm);
-      \filldraw[black] (0,0) circle (2pt) node[anchor=north] {O};
+      \filldraw[black] (0,0) circle (\pointSize) node[anchor=north] {O};
       \draw[->, thick, >=latex, line width=0.5mm] (0,0) -- (0:2cm) node[midway, below] {$r$};
       \draw[->, thick, >=latex, line width=0.5mm] (0,0) -- (120:2cm);
       \draw[thick, line width=0.5mm] (0:2cm) -- (120:2cm) node[midway, above] {$d$};
-      \filldraw[black] (0:2cm) circle (2pt) node[anchor=west] {A};
-      \filldraw[black] (120:2cm) circle (2pt) node[anchor=south] {B};
+      \filldraw[black] (0:2cm) circle (\pointSize) node[anchor=west] {A};
+      \filldraw[black] (120:2cm) circle (\pointSize) node[anchor=south] {B};
       \node at (60:0.3cm) {$\theta$};
       \draw[thick] (0:0.5cm) arc[start angle=0, end angle=120, radius=0.5cm];
    \end{tikzpicture}
@@ -1149,7 +1222,7 @@ Với sự xây dựng ban đầu của Bom-be-li làm gốc, trong những th�
    \label{fig:earth}
 \end{wrapfigure}
 
-Gọi $A$ là vị trí của trái đất bây giờ, $B$ là vị trí của trái đất sau $4$ tháng theo như hình \ref{fig:earth}. Coi một đơn vị trên tọa độ bằng độ dài bán kính của quỹ đạo tròn, tức là $r=1{,}5\cdot10^8$ km. Ta có tọa độ điểm $A$ là $(1;0)$. Tọa độ điểm $B$ là $\left(\cos(120^{\circ}); \sin(120^{\circ})\right)=\left(-\frac{1}{2}; \frac{\sqrt{3}}{2}\right)$. Từ đó, ta có khoảng cách giữa hai vị trí đó là: $$d = r\cdot \sqrt{\left(1-\left(-\frac{1}{2}\right)\right)^2 + \left(\frac{\sqrt{3}}{2}\right)^2}=\boxed{2{,}6\cdot10^8\ \text{km}}.$$
+Gọi $A$ là vị trí của trái đất bây giờ, $B$ là vị trí của trái đất sau $4$ tháng theo như hình \ref{fig:earth}. Coi một đơn vị trên tọa độ bằng độ dài bán kính của quỹ đạo tròn, tức là $r=1{,}5\cdot10^8$ km. Ta có tọa độ điểm $A$ là $(1;0)$. Tọa độ điểm $B$ là $\left(\cos(120^{\circ}); \sin(120^{\circ})\right)=\left(-\frac{1}{2}; \frac{\sqrt{3}}{2}\right)$. Từ đó, chúng ta có khoảng cách giữa hai vị trí đó là: $$d = r\cdot \sqrt{\left(1-\left(-\frac{1}{2}\right)\right)^2 + \left(\frac{\sqrt{3}}{2}\right)^2}=\boxed{2{,}6\cdot10^8\ \text{km}}.$$
 
 \exercise Khối lượng riêng (bằng khối lượng của vật chia cho thể tích của vật đó) của nước là $1{,}00 \;\frac{\text{g}}{\text{cm}^3}$.
 \begin{enumerate}
@@ -1159,7 +1232,7 @@ Gọi $A$ là vị trí của trái đất bây giờ, $B$ là vị trí của t
 
 \solution
 \begin{enumerate}
-   \item Thực hiện quy đổi, ta có:
+   \item Thực hiện quy đổi, chúng ta có:
    \begin{align*}
       1{,}00\;\frac{\text{g}}{\text{cm}^3} &= \left(1{,}00\;\frac{\text{g}}{\text{cm}^3}\right)\cdot\frac{1\ \text{kg}}{1000\ \text{g}}\cdot\left(\frac{100\ \text{cm}}{1\ \text{m}}\right)^3 \\
       &= \boxed{1{,}00\cdot 10^3\ \frac{\text{kg}}{\text{m}^3}}.
@@ -1169,7 +1242,7 @@ Gọi $A$ là vị trí của trái đất bây giờ, $B$ là vị trí của t
       1{,}00\ \text{L} \cdot \left(1{,}00\cdot 10^3\ \frac{\text{kg}}{\text{m}^3}\right)&= 1{,}00\ \text{L} \cdot \left(1{,}00\cdot 10^3\ \frac{\text{kg}}{\text{m}^3}\right) \cdot \frac{1\ \text{m}^3}{1000\ \text{L}} \\
       &= \boxed{1{,}00\cdot 10^0\ \text{kg}}.
    \end{align*}
-   Theo đơn vị pao (lb), ta có:
+   Theo đơn vị pao (lb), chúng ta có:
    \[
       1{,}00\cdot 10^0\ \text{kg} = 1{,}00\cdot 10^0\ \text{kg} \cdot \frac{1\ \text{lb}}{0{,}45\ \text{kg}} = \boxed{2{,}22\cdot 10^0\ \text{lb}}.
    \]
@@ -1220,13 +1293,13 @@ Sau triều đại Thanh, số giây trong một khắc là $$\frac{86400\ \text
 
 Nhận thấy rằng đĩa có dạng trụ, diện tích mặt đáy là $$S=\pi\cdot \left(\frac{D}{2}\right)^2-\pi\cdot \left(\frac{d}{2}\right)^2=\frac{\pi \left(D^2-d^2\right)}{4}.$$
 
-Thể tích của đĩa là $V=S\cdot h=\frac{\pi \cdot h\cdot \left(D^2-d^2\right)}{4}.$ Nhân với khối lượng riêng, ta có khối lượng của đĩa là $$m=\mathcal{D}\cdot V=\frac{\pi \cdot h\cdot \mathcal{D}\cdot \left(D^2-d^2\right)}{4}.$$ Thay số trực tiếp với sự để ý đến số chữ số có nghĩa, ta có kết quả $m=\boxed{1{,}89\times 10^1\ \text{kg}}$.
+Thể tích của đĩa là $V=S\cdot h=\frac{\pi \cdot h\cdot \left(D^2-d^2\right)}{4}.$ Nhân với khối lượng riêng, chúng ta có khối lượng của đĩa là $$m=\mathcal{D}\cdot V=\frac{\pi \cdot h\cdot \mathcal{D}\cdot \left(D^2-d^2\right)}{4}.$$ Thay số trực tiếp với sự để ý đến số chữ số có nghĩa, chúng ta có kết quả $m=\boxed{1{,}89\times 10^1\ \text{kg}}$.
 
 \exercise Khối lượng của một chất lỏng được mô hình hóa bởi phương trình $m=A\cdot t^{0{,}8}-B\cdot t$. Nếu như $t$ được tính bằng giây và $m$ được tính bằng ki-lô-gram, thì đơn vị của $A$ và $B$ là gì?
 
 \solution
 
-Để có thể cộng trừ các phần tử, chúng cần phải có cùng đơn vị. Do vậy, đơn vị của $A\cdot t^{0{,}8}$ và $B\cdot t$ là kg. Từ quy tắc nhân chia các đơn vị, ta có:
+Để có thể cộng trừ các phần tử, chúng cần phải có cùng đơn vị. Do vậy, đơn vị của $A\cdot t^{0{,}8}$ và $B\cdot t$ là kg. Từ quy tắc nhân chia các đơn vị, chúng ta có:
 \begin{equation*}
    \begin{cases}
      A\cdot \text{s}^{0{,}8} &=\text{kg} \\
@@ -1260,9 +1333,9 @@ Coi chiều chuyển động ban đầu là chiều dương.
 
 Thời gian đi $50$ km sau là $$60\ \text{km}\div 50\ \frac{\text{km}}{\text{h}}=1{,}2\ \text{h}.$$
 
-Do hai quãng đường là cùng chiều nên ta có độ dịch chuyển của xe tổng cộng là $$\Delta x=40\ \text{km} + 60\ \text{km} = 100\ \text{km}$$ và tổng thời gian đi là $$\Delta t =1{,}0\ \text{h}+1{,}2\ \text{h}=2{,}2\ \text{h}.$$
+Do hai quãng đường là cùng chiều nên chúng ta có độ dịch chuyển của xe tổng cộng là $$\Delta x=40\ \text{km} + 60\ \text{km} = 100\ \text{km}$$ và tổng thời gian đi là $$\Delta t =1{,}0\ \text{h}+1{,}2\ \text{h}=2{,}2\ \text{h}.$$
 
-Từ đó, ta có vận tốc trung bình là $$\bar{v} = \frac{\Delta x}{\Delta t} =\boxed{4{,}5\times10^1\ \frac{\text{km}}{\text{h}}}.$$
+Từ đó, chúng ta có vận tốc trung bình là $$\bar{v} = \frac{\Delta x}{\Delta t} =\boxed{4{,}5\times10^1\ \frac{\text{km}}{\text{h}}}.$$
 
 \begin{enumerate}
    \item[2.] Dễ thấy tổng quãng đường đi là $d=100\ \text{km}$. Tốc độ trung bình là $\bar{s} = \frac{d}{\Delta t}=\boxed{4{,}5\times10^1\ \frac{\text{km}}{\text{h}}}.$
@@ -1327,9 +1400,9 @@ Từ đó, ta có vận tốc trung bình là $$\bar{v} = \frac{\Delta x}{\Delta
 
 \solution
 
-Khoảng cách từ máy bay đến điểm va chạm với mặt đất là $$d=\frac{h}{\tan{(\theta)}}.$$ Từ đó, ta có được thời gian cho phép là $$t=\frac{d}{v}=\frac{h}{v\tan{(\theta)}}.$$
+Khoảng cách từ máy bay đến điểm va chạm với mặt đất là $$d=\frac{h}{\tan{(\theta)}}.$$ Từ đó, chúng ta có được thời gian cho phép là $$t=\frac{d}{v}=\frac{h}{v\tan{(\theta)}}.$$
 
-Thay số trực tiếp, với để ý đến sự quy đổi $v=1300\ \frac{\text{km}}{\text{h}}=1300\ \frac{\text{km}}{\text{h}}\frac{1000\ \text{m}}{1\ \text{km}}\frac{1\ \text{h}}{3600\ \text{s}}=361\ \frac{\text{m}}{\text{s}}$, ta có $$t=\boxed{1{,}6\times 10^0\ s}.$$
+Thay số trực tiếp, với để ý đến sự quy đổi $v=1300\ \frac{\text{km}}{\text{h}}=1300\ \frac{\text{km}}{\text{h}}\frac{1000\ \text{m}}{1\ \text{km}}\frac{1\ \text{h}}{3600\ \text{s}}=361\ \frac{\text{m}}{\text{s}}$, chúng ta có $$t=\boxed{1{,}6\times 10^0\ s}.$$
 
 \exercise Cho biết vị trí của một vật chuyển động thẳng được xác định bằng $x(t) = a\cdot t^2+b\cdot t+c$. Xác định vị trí, vận tốc và gia tốc của vật tại thời điểm $t=t_0$.
 
@@ -1416,11 +1489,11 @@ Các số liệu được coi như chính xác tuyệt đối. Bạn có thể g
 \begin{itemize}
    \item Phần 1 $\left(0\ \text{s}\leq t \leq 1\ \text{s}\right)$: Vận tốc tăng đều từ $0$ đến $4\ \frac{\text{m}}{\text{s}}$. Chuyển động là nhanh dần với gia tốc không đổi là $\left.a(t)\right|_{t\in\left[0\ \text{s};1\ \text{s}\right]}=\frac{v(1\ \text{s})-v(0\ \text{s})}{1\ \text{s}-0\ \text{s}}=4\ \frac{\text{m}}{\text{s}^2}$.
    
-Sau khoảng thời gian $t$, độ dịch chuyển là $\left.x(t)\right|_{t\in\left[0\ \text{s};1\ \text{s}\right]} - x(0\ \text{s}) = \frac{\left.a(t)\right|_{t\in\left[0\ \text{s};1\ \text{s}\right]}\cdot t^2}{2} + \left.v(t)\right|_{t\in\left[0\ \text{s};1\ \text{s}\right]}\cdot t$. Từ đó ta có $x(t) = 2\ \frac{\text{m}}{\text{s}^2}\cdot t^2$ với $0\ \text{s}\leq t \leq 1\ \text{s}$ và $x(1\ \text{s}) = 2\ \text{m}$.
+Sau khoảng thời gian $t$, độ dịch chuyển là $\left.x(t)\right|_{t\in\left[0\ \text{s};1\ \text{s}\right]} - x(0\ \text{s}) = \frac{\left.a(t)\right|_{t\in\left[0\ \text{s};1\ \text{s}\right]}\cdot t^2}{2} + \left.v(t)\right|_{t\in\left[0\ \text{s};1\ \text{s}\right]}\cdot t$. Từ đó chúng ta có $x(t) = 2\ \frac{\text{m}}{\text{s}^2}\cdot t^2$ với $0\ \text{s}\leq t \leq 1\ \text{s}$ và $x(1\ \text{s}) = 2\ \text{m}$.
    
    \item Phần 2 $\left(1\ \text{s}\leq t \leq 2\ \text{s}\right)$: Vận tốc không đổi ở $\left.v(t)\right|_{t\in\left[1\ \text{s};2\ \text{s}\right]} = 4\ \frac{\text{m}}{\text{s}}$ (chuyển động thẳng đều). 
    
-Qua đó, ta có $\left.x(t)\right|_{t\in\left[1\ \text{s};2\ \text{s}\right]} = x(1\ \text{s}) + \left.v(t)\right|_{t\in\left[1\ \text{s};2\ \text{s}\right]}\cdot\left(t - 1\ \text{s}\right) = 4\ \frac{\text{m}}{\text{s}}\cdot t - 2\ \text{m}$ và $x(2\ \text{s}) = 6\ \text{m}$.
+Qua đó, chúng ta có $\left.x(t)\right|_{t\in\left[1\ \text{s};2\ \text{s}\right]} = x(1\ \text{s}) + \left.v(t)\right|_{t\in\left[1\ \text{s};2\ \text{s}\right]}\cdot\left(t - 1\ \text{s}\right) = 4\ \frac{\text{m}}{\text{s}}\cdot t - 2\ \text{m}$ và $x(2\ \text{s}) = 6\ \text{m}$.
 \end{itemize}
 
 Phần 3 $\left(2\ \text{s}\leq t \leq 4\ \text{s}\right)$ và phần 4 $\left(4\ \text{s}\leq t \leq 5\ \text{s}\right)$ làm tương tự như phần 1. Ta được
@@ -1489,7 +1562,7 @@ Từ đây, thực hiện tương tự như phần 1 để có phương trình v
       9\ \text{m}&\quad \text{với } 4\ \text{s} \leq t \leq 5\ \text{s}
    \end{cases}
 \end{equation*}
-và ta vẽ được đồ thị ở hình \ref{fig:vttgxxp2}.
+và chúng ta vẽ được đồ thị ở hình \ref{fig:vttgxxp2}.
 
 \begin{figure}[h]
    \centering
@@ -1598,7 +1671,7 @@ thì bạn có thể thực hiện nguyên hàm trên hàm này để tính đư
       \displaystyle \frac{496}{45}\ \text{m}&\quad \text{với } 4 \leq t \leq 5
    \end{cases}
 \end{equation*}
-và ta có đồ thị như hình \ref{fig:vttgp2}.
+và chúng ta có đồ thị như hình \ref{fig:vttgp2}.
 
 \exercise Hai xe hơi có tốc độ lần lượt là $v_1 = 50{,}0\ \frac{\text{km}}{\text{h}}$ và $v_2 = 60{,}0\ \frac{\text{km}}{\text{h}}$ đi ngược chiều với nhau trên một con đường hẹp. Hai xe phát hiện lẫn nhau khi khoảng cách giữa hai xe là $d = 400\ \text{m}$. Cả hai xe đồng thời giảm tốc với cùng một gia tốc hãm đều là $a$. Tính giá trị tối thiểu của $a$ nếu biết hai xe không xảy ra va chạm. Số liệu được đo tới $3$ chữ số có nghĩa.
 
@@ -1606,14 +1679,14 @@ và ta có đồ thị như hình \ref{fig:vttgp2}.
 
 Gọi quãng đường đi được trong khi hãm phanh của hai xe lần lượt là $d_1$ và $d_2$.
 
-Trong quá trình hãm đến vận tốc bằng $0$, tổng quãng đường đi của cả hai xe phải không vượt quá khoảng cách $d$. Vì vậy, ta có bất đẳng thức $$d_1 + d_2 \leq d.$$
+Trong quá trình hãm đến vận tốc bằng $0$, tổng quãng đường đi của cả hai xe phải không vượt quá khoảng cách $d$. Vì vậy, chúng ta có bất đẳng thức $$d_1 + d_2 \leq d.$$
 
-Trong khi đó, quãng đường xe thứ nhất đã di chuyển là $d_1 = \frac{0^2 - v_1^2}{2(-a)} = \frac{v_1^2}{2a}$. Tương tự, ta có quãng đường mà xe thứ hai di chuyển trong khoảng thời gian này là $d_2 = \frac{v_2^2}{2a}$. Từ đó, thay vào phương trình ở trên để được $$
+Trong khi đó, quãng đường xe thứ nhất đã di chuyển là $d_1 = \frac{0^2 - v_1^2}{2(-a)} = \frac{v_1^2}{2a}$. Tương tự, chúng ta có quãng đường mà xe thứ hai di chuyển trong khoảng thời gian này là $d_2 = \frac{v_2^2}{2a}$. Từ đó, thay vào phương trình ở trên để được $$
    \frac{v_1^2}{2a} + \frac{v_2^2}{2a} \le d
    \iff a \geq \frac{v_1^2+v_2^2}{2d}.
 $$
 
-Thay số trực tiếp, ta có gia tốc hãm tối thiểu phải là $\boxed{7{,}63 \times 10^3 \frac{\text{km}}{\text{h}^2}}$.
+Thay số trực tiếp, chúng ta có gia tốc hãm tối thiểu phải là $\boxed{7{,}63 \times 10^3 \frac{\text{km}}{\text{h}^2}}$.
 
 \exercise Để dừng xe ban đầu bạn cần một thời gian phản ứng để bắt đầu phanh, rồi xe mới đi chậm dần nhờ có một gia tốc hãm không đổi. Giả sử quãng được đi được trong hai pha này là $186$ ft nếu vận tốc ban đầu là $50\ \frac{\text{dặm}}{\text{h}}$. Còn trong một trường hợp khác, quãng được đi được trong hai pha này là $80$ ft nếu vận tốc ban đầu là $30\ \frac{\text{dặm}}{\text{h}}$. Biết thời gian phản ứng là cố định và $1$ dặm $= 5280$ ft, tính thời gian phản ứng và độ lớn của gia tốc hãm.
 
@@ -1627,14 +1700,14 @@ Trong khoảng thời gian phản ứng, xe đi được $v_0t_p$. Và trong kho
 \label{eq:stopping_distance}
 \end{equation}
 
-Trước khi thay số ta thực hiện quy đổi $$50\ \frac{\text{dặm}}{\text{h}}=50\ \frac{\text{dặm}}{\text{h}}\cdot\frac{5280\ \text{ft}}{1\ \text{dặm}}\cdot\frac{1\ \text{h}}{3600\ \text{s}}\approx 73\ \frac{\text{ft}}{\text{s}},$$ tương tự, $30\ \frac{\text{dặm}}{\text{h}}=44\ \frac{\text{ft}}{\text{s}}$. Từ đó, thay số vào phương trình \ref{eq:stopping_distance} để có hệ
+Trước khi thay số, thực hiện quy đổi $$50\ \frac{\text{dặm}}{\text{h}}=50\ \frac{\text{dặm}}{\text{h}}\cdot\frac{5280\ \text{ft}}{1\ \text{dặm}}\cdot\frac{1\ \text{h}}{3600\ \text{s}}\approx 73\ \frac{\text{ft}}{\text{s}},$$ tương tự, $30\ \frac{\text{dặm}}{\text{h}}=44\ \frac{\text{ft}}{\text{s}}$. Từ đó, thay số vào phương trình \ref{eq:stopping_distance} để có hệ
 \begin{equation*}
    \begin{cases}
       186\ \text{ft} = 73\ \frac{\text{ft}}{\text{s}}\cdot t_p + \frac{\left(73\ \frac{\text{ft}}{\text{s}}\right)^2}{2a} \\
       80\ \text{ft} = 44\ \frac{\text{ft}}{\text{s}}\cdot t_p + \frac{\left(44\ \frac{\text{ft}}{\text{s}}\right)^2}{2a} 
    \end{cases}.
 \end{equation*}
-Giải hệ phương trình, ta có thời gian phản ứng là $t_p=\boxed{0{,}97\ \text{s}}$ và gia tốc hãm là $a = \boxed{26\ \frac{\text{ft}}{\text{s}^2}}$.
+Giải hệ phương trình, chúng ta có thời gian phản ứng là $t_p=\boxed{0{,}97\ \text{s}}$ và gia tốc hãm là $a = \boxed{26\ \frac{\text{ft}}{\text{s}^2}}$.
 
 \begin{wrapfigure}{r}{0.6\textwidth} % 'r' for right, 'l' for left, width of the figure
     \centering
@@ -1668,11 +1741,11 @@ Giải hệ phương trình, ta có thời gian phản ứng là $t_p=\boxed{0{,
 
 \solution
 
-Gọi vận tốc khi bóng bắt đầu bay lên từ vị trị thấp là $v_0$. Sau một khoảng thời gian $\Delta T_t$, quả bóng quay lại vị trí cũ, do vậy, ta có phương trình $0 = -\frac{g \Delta T_t^2}{2} + v_0 \Delta T_t$. Thực hiện biến đổi tương đương để có $$v_0=\frac{g \Delta T_t}{2}.$$
+Gọi vận tốc khi bóng bắt đầu bay lên từ vị trị thấp là $v_0$. Sau một khoảng thời gian $\Delta T_t$, quả bóng quay lại vị trí cũ, do vậy, chúng ta có phương trình $0 = -\frac{g \Delta T_t^2}{2} + v_0 \Delta T_t$. Thực hiện biến đổi tương đương để có $$v_0=\frac{g \Delta T_t}{2}.$$
 
-Nhận thấy rằng đồ thị có tính đối xứng. Sử dụng điều đó, ta tính được khoảng thời gian quả bóng lên một độ cao $H$ là $t=\frac{\Delta T_t-\Delta T_c}{2}$. Qua đó, ta có phương trình thứ hai là $$H = -\frac{g t^2}{2} + v_0 t=-\frac{g \left(\frac{\Delta T_t-\Delta T_c}{2}\right)^2}{2} + v_0 \left(\frac{\Delta T_t-\Delta T_c}{2}\right).$$
+Nhận thấy rằng đồ thị có tính đối xứng. Sử dụng điều đó, chúng ta tính được khoảng thời gian quả bóng lên một độ cao $H$ là $t=\frac{\Delta T_t-\Delta T_c}{2}$. Qua đó, có được phương trình thứ hai là $$H = -\frac{g t^2}{2} + v_0 t=-\frac{g \left(\frac{\Delta T_t-\Delta T_c}{2}\right)^2}{2} + v_0 \left(\frac{\Delta T_t-\Delta T_c}{2}\right).$$
 
-Thế giá trị của $v_0$ vào phương trình và tiếp tục thực hiện biến đổi, ta có:
+Thế giá trị của $v_0$ vào phương trình và tiếp tục thực hiện biến đổi, chúng ta có:
 \begin{align*}
    H &= -\frac{g \left(\Delta T_t-\Delta T_c\right)^2}{8} + \frac{g \Delta T_t}{2} \left(\frac{\Delta T_t-\Delta T_c}{2}\right) \\
    &= -g\left(\frac{\Delta T_t^2}{8} - \frac{\Delta T_t\Delta T_c}{4} + \frac{\Delta T_c^2}{8}\right) + g\left(\frac{\Delta T_t^2}{4} - \frac{\Delta T_t\Delta T_c}{4}\right) \\
@@ -1686,9 +1759,9 @@ Ta có điều phải chứng minh.
 
 \solution
 
-Có thời gian để quả bóng bay từ tay lên trên vị trí cao nhất bằng một nửa thời gian bóng trong không khí. Nếu thời gian bóng trong không khí tăng gấp $n$ lần so với thời gian trong không khí gốc, thì cùng chia cho $2$, ta cũng sẽ có thời gian bóng bay từ tay lên trên vị trí cao nhất cũng tăng gấp $n$ lần so với thời gian gốc để bay lên vị trí cao nhất.
+Có thời gian để quả bóng bay từ tay lên trên vị trí cao nhất bằng một nửa thời gian bóng trong không khí. Nếu thời gian bóng trong không khí tăng gấp $n$ lần so với thời gian trong không khí gốc, thì cùng chia cho $2$, chúng ta cũng sẽ có thời gian bóng bay từ tay lên trên vị trí cao nhất cũng tăng gấp $n$ lần so với thời gian gốc để bay lên vị trí cao nhất.
 
-Gọi $t_1$ là thời gian gốc để bóng bay từ tay lên vị trí cao nhất, $t_2 = n t_1$ là thời gian bay khi đã tăng $n$ lần. Gọi $h_1, h_2$ lần lượt là độ cao bóng đi được tương ứng với hai khoảng thời gian $t_1, t_2$. Để ý rằng khi lên vị trí cao nhất thì vận tốc bóng là $0$; ta có hệ phương trình
+Gọi $t_1$ là thời gian gốc để bóng bay từ tay lên vị trí cao nhất, $t_2 = n t_1$ là thời gian bay khi đã tăng $n$ lần. Gọi $h_1, h_2$ lần lượt là độ cao bóng đi được tương ứng với hai khoảng thời gian $t_1, t_2$. Để ý rằng khi lên vị trí cao nhất thì vận tốc bóng là $0$; chúng ta có hệ phương trình
 
 \begin{equation*}
    \begin{cases}
@@ -1698,7 +1771,7 @@ Gọi $t_1$ là thời gian gốc để bóng bay từ tay lên vị trí cao nh
    \implies h_2 = n^2 h_1.
 \end{equation*}
 
-Từ đó, ta có quả bóng cao lên hơn được $\boxed{n^2 - 1 \text{ lần độ cao gốc}}$.
+Từ đó, quả bóng cao lên hơn được $\boxed{n^2 - 1 \text{ lần độ cao gốc}}$.
 
 \begin{wrapfigure}{l}{0.4\textwidth} % 'r' for right, 'l' for left, width of the figure
    \centering

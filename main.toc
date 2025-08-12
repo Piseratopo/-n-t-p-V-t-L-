@@ -1,13 +1,14 @@
 \babel@toc {vietnamese}{}\relax 
-\contentsline {chapter}{\numberline {0}Kiến thức toán học nền tảng}{3}{chapter.0}%
-\contentsline {section}{\numberline {0.1}Đồ thị}{3}{section.0.1}%
-\contentsline {subsection}{\numberline {0.1.1}Trục số một chiều}{3}{subsection.0.1.1}%
-\contentsline {subsection}{\numberline {0.1.2}Mặt phẳng hai chiều và hệ tọa độ vuông góc}{5}{subsection.0.1.2}%
-\contentsline {subsection}{\numberline {0.1.3}Không gian ba chiều và hướng tam diện}{7}{subsection.0.1.3}%
-\contentsline {section}{\numberline {0.2}Hàm số}{9}{section.0.2}%
-\contentsline {subsection}{\numberline {0.2.1}Định nghĩa hàm số và đại lượng liên quan đến hàm số}{9}{subsection.0.2.1}%
-\contentsline {subsection}{\numberline {0.2.2}Những hàm số sơ cấp}{11}{subsection.0.2.2}%
-\contentsline {section}{\numberline {0.3}Số ảo và số phức}{14}{section.0.3}%
-\contentsline {section}{\numberline {0.4}Bài tập tổng hợp}{17}{section.0.4}%
-\contentsline {chapter}{\numberline {1}Cơ bản của xử lí số liệu trong vật lí}{18}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Chuyển động}{21}{chapter.2}%
+\contentsline {chapter}{Lời giới thiệu}{3}{chapter*.2}%
+\contentsline {chapter}{\numberline {0}Kiến thức toán học nền tảng}{4}{chapter.0}%
+\contentsline {section}{\numberline {0.1}Đồ thị}{4}{section.0.1}%
+\contentsline {subsection}{\numberline {0.1.1}Trục số một chiều}{4}{subsection.0.1.1}%
+\contentsline {subsection}{\numberline {0.1.2}Mặt phẳng hai chiều và hệ tọa độ vuông góc}{6}{subsection.0.1.2}%
+\contentsline {subsection}{\numberline {0.1.3}Không gian ba chiều và hướng tam diện}{8}{subsection.0.1.3}%
+\contentsline {section}{\numberline {0.2}Hàm số}{10}{section.0.2}%
+\contentsline {subsection}{\numberline {0.2.1}Định nghĩa hàm số và đại lượng liên quan đến hàm số}{10}{subsection.0.2.1}%
+\contentsline {subsection}{\numberline {0.2.2}Những hàm số sơ cấp}{13}{subsection.0.2.2}%
+\contentsline {section}{\numberline {0.3}Số ảo và số phức}{16}{section.0.3}%
+\contentsline {section}{\numberline {0.4}Bài tập tổng hợp}{19}{section.0.4}%
+\contentsline {chapter}{\numberline {1}Cơ bản của xử lí số liệu trong vật lí}{20}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Chuyển động}{23}{chapter.2}%
