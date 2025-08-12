@@ -527,19 +527,318 @@ Công thức về vị trí tọa độ trung điểm được cho trong bài l�
 
 \section{Hàm số}
 
-\subsection{Định nghĩa hàm số}
+\subsection{Định nghĩa hàm số và đại lượng liên quan đến hàm số}
 
 \ % Lùi đầu dòng
 
-Chúng ta gọi $f$ là một \emph{hàm số} (hay \emph{hàm}) đi từ tập $X$ đến tập $Y$ khi và chỉ khi với mọi $x\in X$, gọi là \emph{tập xác định}, thông qua mối liên hệ $f$ có một và chỉ một $y\in Y$ tương ứng với $x$. Câu vừa rồi có thể được tóm gọn trong một vài kí hiệu: \begin{align*}f: X &\to Y \\ x &\mapsto y.\end{align*} Khi này, chúng ta có thể viết mối liên hệ hàm số này dưới dạng biểu thức giải tích $y=f(x)$. Tuy nhiên, cần phải để ý rằng, thông qua định nghĩa này, mặc dù mọi $x$ trong $X$ phải có đầu ra trong $Y$, không phải mọi $y$ trong $Y$ đều phải có đầu vào trong $X$. Nói cách khác, tập tất cả các giá trị đầu ra có thể của $y=f(x)$, gọi là \emph{tập giá trị}, là tập con của tập $Y$.
+Chúng ta gọi $f$ là một \emph{hàm số} (hay \emph{hàm}) đi từ tập $X$ đến tập $Y$ khi và chỉ khi với mọi $x\in X$, gọi là \emph{tập xác định}, thông qua mối liên hệ $f$ có một và chỉ một $y\in Y$ tương ứng với $x$. Câu vừa rồi có thể được tóm gọn trong một vài kí hiệu: \begin{align*}f: X &\to Y \\ x &\mapsto y.\end{align*} Khi này, chúng ta có thể viết mối liên hệ hàm số này dưới dạng biểu thức giải tích $y=f(x)$, gọi $y$ là hàm của $x$. Tuy nhiên, cần phải để ý rằng, thông qua định nghĩa này, mặc dù mọi $x$ trong $X$ phải có đầu ra trong $Y$, không phải mọi $y$ trong $Y$ đều phải có đầu vào trong $X$. Nói cách khác, tập tất cả các giá trị đầu ra có thể của $y=f(x)$, gọi là \emph{tập giá trị}, là tập con của tập $Y$.
 
-Khi chúng ta có định nghĩa hàm số thì chúng ta cũng sẽ có những khái niệm liên quan. Khi $f$ là một hàm số, thì bất cứ giá trị $a$ thuộc tập xác định để $f(a) = 0$ đều được gọi là \emph{nghiệm} của $f$. Mở rộng ra, với $f$ và $g$ là hai hàm số, bất cứ giá trị $a$ thỏa mãn $f(a) = g(a)$ thì $a$ được gọi là nghiệm của \emph{phương trình} $f(x) = g(x)$. Hơn thế nữa, nếu thay dấu $=$ trong câu vừa trước bởi các dấu $<$, $>$, $\leq$, $\geq$, $\neq$ thì ta có định nghĩa cho nghiệm của \emph{bất phương trình}. Lấy ví dụ, với $f$ và $g$ là hai hàm số, giá trị $a$ để $f(a) \neq g(a)$ thì $a$ được gọi là nghiệm của bất phương trình $f(x) \neq g(x)$\footnote{Phần lớn các tại liệu khác quên mất sự tồn tại của dấu $\neq$ rồi. Trong tài liệu này, cũng không có nhiều cơ hội để dùng dấu $\neq$ cho nên tác giả sẽ cho nó nhiều \dblquote{đất diễn} nhất có thể.}.
+Khi chúng ta có định nghĩa hàm số thì chúng ta cũng sẽ có những khái niệm liên quan. Khi $f$ là một hàm số, thì bất cứ giá trị $a$ thuộc tập xác định để $f(a) = 0$ đều được gọi là \emph{nghiệm} của $f$. Mở rộng ra, với $f$ và $g$ là hai hàm số, bất cứ giá trị $a$ thỏa mãn $f(a) = g(a)$ thì $a$ được gọi là nghiệm của \emph{phương trình} $f(x) = g(x)$. Hơn thế nữa, nếu thay dấu $=$ trong câu vừa trước bởi các dấu $<$, $>$, $\leq$, $\geq$, $\neq$ thì ta có định nghĩa cho nghiệm của \emph{bất phương trình}. Lấy ví dụ, với $f$ và $g$ là hai hàm số, giá trị $a$ để $f(a) \neq g(a)$ thì $a$ được gọi là nghiệm của bất phương trình $f(x) \neq g(x)$\footnote{Phần lớn các tại liệu khác quên mất sự tồn tại của dấu $\neq$ rồi. Trong tài liệu này, cũng không có nhiều cơ hội để dùng dấu $\neq$ cho nên tác giả sẽ cho nó nhiều \dblquote{đất diễn} nhất có thể.}. Kết hợp nhiều phương trình hay bất phương trình, chúng ta có một \emph{hệ}. Ví dụ 
+$$
+\begin{cases}
+   f(x) = g(x) \\
+   \alpha(y) \neq \beta(z)
+\end{cases}
+$$
+Để thỏa mãn hệ thì mỗi thành phần trong hệ đều phải thỏa mãn.
 
+Nếu chỉ có số với chữ không thì hàm số sẽ chở nên rất đơn điệu, cho nên người ta đã nghĩ ra phương pháp biểu diễn hàm số qua đồ thị. Để biểu diễn một hàm số $y=f(x)$, chỉ cần vẽ tất cả các cặp tọa độ $(x; y)$ thỏa mãn hàm $f$ trên đồ thị. Một cách tương tự, chúng ta cũng có thể biểu diễn phương trình và bất phương trình. Có bao nhiêu ẩn số trong phương trình/bất phương trình, đồ thị sẽ có bấy nhiêu chiều. Về mặt lợi ích của việc sử dụng đồ thị, biểu diễn hình học các đại lượng đại số là một trong những cách hữu hiệu để mở rộng cảm nhận về đối tượng đang nghiên cứu. 
       
-\exercise 
+\exercise Mỗi phần trong bài tập sau bao gồm mối liên hệ giữa $x$ và $y$. Trong mỗi phần, $y$ có phải là hàm của $x$ hay không? Trong trường hợp $y$ là hàm số của $x$, xác định tập xác định và tập giá trị của hàm số đó. Còn trong trường hợp ngược lại, giải thích tại sao $y$ lại không phải là hàm số của $x$.
 
+1.
+\begin{tabular}{|c|c|c|c|c|c|}
+   \hline
+   $x$ & $1$ & $2$ & $3$ & $4$ & $5$ \\
+   \hline
+   $y$ & $2$ & $3$ & $4$ & $5$ & $6$ \\
+   \hline
+\end{tabular};
+
+2.
+\begin{tabular}{|c|c|c|c|c|c|}
+   \hline
+   $x$ & $0$ & $-1$ & $1$ & $2$ & $-3$ \\
+   \hline
+   $y$ & $0$ & $0$ & $0$ & $0$ & $0$ \\
+   \hline
+\end{tabular};
+
+3.
+\begin{tabular}{|c|c|c|c|c|c|}
+   \hline
+   $x$ & $15$ & $15$ & $16$ & $16$ & $17$ \\
+   \hline
+   $y$ & $123$ & $134$ & $578$ & $426$ & $348$ \\
+   \hline
+\end{tabular};
+
+4.
+\begin{tabular}{|c|c|c|c|c|c|}
+   \hline
+   $x$ & $0$ & $-17$ & $3$ & $55$ & $-17$ \\
+   \hline
+   $y$ & $4586$ & $1024$ & $4586$ & $4586$ & $1024$ \\
+   \hline
+\end{tabular};
+
+5. $x$ là số chỉ tháng và $y$ là số ngày trong tháng $x$.
 
 \solution
+
+1. $y$ là hàm của $x$ với tập xác định $X = \{1; 2; 3; 4; 5\}$ và tập giá trị $Y = \{2; 3; 4; 5; 6\}$.
+
+2. $y$ là hàm của $x$ với tập xác định $X = \{0; -1; 1; 2; -3\}$ và tập giá trị $Y = \{0\}$.
+
+3. $y$ không phải là hàm của $x$ do khi $x$ có giá trị $15$ thì $y$ có hai giá trị $123$ và $134$.
+
+4. $y$ là hàm của $x$ với tập xác định $X = \{0; -17; 3; 55\}$ và tập giá trị $Y = \{4586; 1024\}$. Để ý rằng đầu vào $x=-17$ luôn ứng với đầu ra $y = 1024$.
+
+5. $y$ không là hàm của $x$ do khi $x = 2$ thì $y$ có hai giá trị $28$ và $29$. Mặc dù cách viết có thể ám chỉ $y=f(x)$ với $f$ là hàm \dblquote{số ngày trong tháng}, nhưng $f$ không phải là hàm số do dính trường hợp ngoại lệ.
+
+\exercise[intropt] Vẽ đồ thị của phương trình $\mathcal{P}$, với các định nghĩa được cho. Để ý đến số ẩn trong $\mathcal{P}$ để lựa chọn đồ thị phù hợp.
+
+\begin{enumerate}
+   \item $\mathcal{P}: x^2 - 1 = 0$ với $x$ là ẩn thực;
+   \item
+   \begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      $x$ & $-1$ & $1$ & $-2$ & $2$ & $-3$ & $3$\\
+      \hline
+      $f(x)$ & $0$ & $0$ & $4$ & $3$ & $7$ & $0$\\
+      \hline
+   \end{tabular} và $\mathcal{P}: f(x) = 0$;
+
+   \item
+   \begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      $x$ & $-1$ & $1$ & $-2$ & $2$ & $-3$ & $3$\\
+      \hline
+      $f(x)$ & $0$ & $0$ & $4$ & $3$ & $7$ & $0$\\
+      \hline
+   \end{tabular} và $\mathcal{P}: f(x) = x^2 - 1$;
+
+   \item
+   \begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      $x$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$\\
+      \hline
+      $f(x)$ & $2$ & $3$ & $5$ & $7$ & $11$ & $13$\\
+      \hline
+      $g(x)$ & $1$ & $3$ & $5$ & $7$ & $9$ & $11$\\
+      \hline
+   \end{tabular} và $\mathcal{P}: f(x) = g(x)$;
+
+   \item
+   \begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      $x$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$\\
+      \hline
+      $f(x)$ & $2$ & $3$ & $5$ & $7$ & $11$ & $13$\\
+      \hline
+      $g(x)$ & $1$ & $3$ & $5$ & $7$ & $9$ & $11$\\
+      \hline
+   \end{tabular} và $\mathcal{P}: f(x) = g(y)$;
+
+   \item
+   \begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      $x$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$\\
+      \hline
+      $f(x)$ & $2$ & $3$ & $5$ & $7$ & $11$ & $13$\\
+      \hline
+   \end{tabular} và $\mathcal{P}: f(x) = 2b-1$ với $b$ là ẩn thực;
+
+   \item 
+   \begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      $x$ & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ \\
+      \hline
+      $f(x)$ & $-1$ & $-1$ & $-1$ & $-2$ & $-3$ & $-3$\\
+      \hline
+   \end{tabular},
+   \begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      $y$ & $0$ & $-2$ & $4$ & $-6$ & $8$ & $-10$\\
+      \hline
+      $g(y)$ & $-1$ & $-2$ & $-3$ & $-7$ & $-8$ & $-9$\\
+      \hline
+   \end{tabular},
+
+   \noindent\begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      $z$ & $-1$ & $1$ & $-2$ & $0$ & $-4$ & $4$\\
+      \hline
+      $h(z)$ & $2$ & $1$ & $0$ & $-1$ & $-2$ & $-3$\\
+      \hline
+   \end{tabular} và $P:f(x) = g(x) = h(x)$;
+
+   \item
+   \begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      $x$ & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ \\
+      \hline
+      $f(x)$ & $-1$ & $-1$ & $-1$ & $-2$ & $-3$ & $-3$\\
+      \hline
+   \end{tabular},
+   \begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      $y$ & $0$ & $-2$ & $4$ & $-6$ & $8$ & $-10$\\
+      \hline
+      $g(y)$ & $-1$ & $-2$ & $-3$ & $-7$ & $-8$ & $-9$\\
+      \hline
+   \end{tabular},
+
+   \noindent\begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      $z$ & $-1$ & $1$ & $-2$ & $0$ & $-4$ & $4$\\
+      \hline
+      $h(z)$ & $2$ & $1$ & $0$ & $-1$ & $-2$ & $-3$\\
+      \hline
+   \end{tabular} và $P:f(x) = g(x) = h(z)$;
+
+   \item
+   \begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      $x$ & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ \\
+      \hline
+      $f(x)$ & $-1$ & $-1$ & $-1$ & $-2$ & $-3$ & $-3$\\
+      \hline
+   \end{tabular},
+   \begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      $y$ & $0$ & $-2$ & $4$ & $-6$ & $8$ & $-10$\\
+      \hline
+      $g(y)$ & $-1$ & $-2$ & $-3$ & $-7$ & $-8$ & $-9$\\
+      \hline
+   \end{tabular},
+
+   \noindent\begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      $z$ & $-1$ & $1$ & $-2$ & $0$ & $-4$ & $4$\\
+      \hline
+      $h(z)$ & $2$ & $1$ & $0$ & $-1$ & $-2$ & $-3$\\
+      \hline
+   \end{tabular} và $P:f(a) = g(b) = h(c)$;
+\end{enumerate}
+
+\solution[intropt]
+
+1. $P$ là phương trình chỉ có một ẩn $x$, do đó đồ thị của $P$ chỉ là đồ thị một chiều trên một trục số biểu diễn cho $x$.
+{
+\begin{wrapfigure}{r}{0.5\textwidth}
+   \centering
+   \begin{tikzpicture}
+      \draw[->] (-2, 0) -- (2, 0) node[right] {$x$};
+      \filldraw (1, 0) circle (2pt) node[below] {$1$};
+      \filldraw (-1, 0) circle (2pt) node[below] {$-1$};
+   \end{tikzpicture}
+   \caption{Đồ thị phần 1 bài \ref{intropt}}
+   \label{fig:dtp1}
+\end{wrapfigure}
+
+Giải phương trình:
+\begin{align*}
+   &x^2 - 1 = 0 \\
+   \iff &x^2 = 1 \\
+   \iff &x \in \{-1; 1\}
+\end{align*}
+và từ đó, đồ thị của $P$ có được như hình \ref{fig:dtp1}.
+}
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+   \centering
+   \begin{tikzpicture}
+      \draw[->] (-2, 0) -- (4, 0) node[right] {$x$};
+      \filldraw (1, 0) circle (2pt) node[below] {$1$};
+      \filldraw (-1, 0) circle (2pt) node[below] {$-1$};
+      \filldraw (3, 0) circle (2pt) node[below] {$3$};
+      
+   \end{tikzpicture}
+   \caption{Đồ thị phần 2 bài \ref{intropt}}
+   \label{fig:dtp2}
+\end{wrapfigure}
+2. $P$ là phương trình chỉ có một ẩn $x$, do đó đồ thị của $P$ chỉ là đồ thị một chiều trên một trục số biểu diễn cho $x$. 
+
+Có ba giá trị để $f(x)$ bằng $0$: $x\in \{-1; 1; -3\}$. Chúng ta có đồ thị của $P$ ở hình \ref{fig:dtp2}.
+
+3. Tập xác định của $f(x)$ là $\{-1; 1; -2; 2; -3; 3\}$, do đó, để $P$ thỏa mãn thì $x$ chí có thể nhận các giá trị trong vùng tập xác định.
+
+{
+\begin{wrapfigure}{r}{0.5\textwidth}
+   \centering
+   \begin{tikzpicture}
+      \draw[->] (-4, 0) -- (3, 0) node[right] {$x$};
+      \filldraw (1, 0) circle (2pt) node[below] {$1$};
+      \filldraw (-1, 0) circle (2pt) node[below] {$-1$};
+      \filldraw (-3, 0) circle (2pt) node[below] {$-3$};
+      \filldraw (2, 0) circle (2pt) node[below] {$2$};
+   \end{tikzpicture}
+   \caption{Đồ thị phần 3 bài \ref{intropt}}
+   \label{fig:dtp3}
+\end{wrapfigure}
+Kẻ bảng so sánh:
+\begin{figure}[h]
+   \begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      $x$ & $-1$ & $1$ & $-2$ & $2$ & $-3$ & $3$\\
+      \hline
+      $f(x)$ & $0$ & $0$ & $4$ & $3$ & $7$ & $0$\\
+      \hline
+      $x^2-1$ & $0$ & $0$ & $3$ & $3$ & $7$ & $7$\\
+      \hline
+   \end{tabular}
+\end{figure}
+
+\noindent và chúng ta có đồ thị là hình \ref{fig:dtp3}.
+}
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+   \centering
+   \begin{tikzpicture}
+      \draw[->] (0, 0) -- (5, 0) node[right] {$x$};
+      \filldraw (2, 0) circle (2pt) node[below] {$2$};
+      \filldraw (3, 0) circle (2pt) node[below] {$3$};
+      \filldraw (4, 0) circle (2pt) node[below] {$4$};
+      
+   \end{tikzpicture}
+   \caption{Đồ thị phần 4 bài \ref{intropt}}
+   \label{fig:dtp4}
+\end{wrapfigure}
+4. Nhìn vào bảng được cho, có $f(x) = g(x)$ khi và chỉ khi $x\in \{2; 3; 4\}$. Do đó, đồ thị của $P$ có được như hình \ref{fig:dtp4}.
+
+5. $P$ là phương trình có hai ẩn $x$ và $y$, do đó đồ thị của $P$ là một mặt phẳng hai chiều. Coi như trục hoành biểu diễn cho $x$ và trục tung biểu diễn cho $y$. 
+
+\begin{wraptable}{r}{0.5\textwidth}
+   \centering
+   \begin{tabular}{|c|c|c|c|c|}
+      \hline
+      $B_n$ & $3$ & $5$ & $7$ & $11$ \\
+      \hline
+      $x$ & $2$ & $3$ & $4$ & $5$ \\
+      \hline
+      $y$ & $2$ & $3$ & $4$ & $6$ \\
+      \hline 
+   \end{tabular}
+   \caption{Giá trị của $x$ và $y$ ứng với $B_n$}
+   \label{tab:bn_values}
+\end{wraptable}
+
+Để có thể vẽ được đồ thị của $P$, hiển nhiên nhìn ra được rằng cần phải có những điểm $(x;y)$ để hai giá trị $f(x)$ và $g(y)$ bằng nhau. Và để làm được điều đó, trước hết, chúng ta sẽ tìm xem giá trị bằng nhau của $f(x)$ với $g(y)$ này bằng bao nhiêu. Gọi chung giá trị bằng nhau này là $B_n$. Kẻ lại bảng so sánh thành bảng \ref{tab:bn_values}, với $B_n$ là ra trị đầu ra và $x$, $y$ là giá trị lần lượt đưa vào hai hàm $f$ và $g$ để có giá trị đầu ra đó. Và từ đó, ta có đồ thị của $P$ là hình \ref{fig:dtp5}.
+
+\begin{figure}[h]
+   \centering
+   \begin{tikzpicture}
+      \draw[->] (0, 0) -- (3.5, 0) node[right] {$x$};
+      \draw[->] (0, 0) -- (0, 3.5) node[above] {$y$};
+      \filldraw (1, 1) circle (2pt) node[right] {$(2; 2)$};
+      \filldraw (1.5, 1.5) circle (2pt) node[right] {$(3; 3)$};
+      \filldraw (2.5, 3) circle (2pt) node[right] {$(5; 6)$};
+      \filldraw (2, 2) circle (2pt) node[right] {$(4; 4)$};
+   \end{tikzpicture}
+   \caption{Đồ thị phần 5 bài \ref{intropt}}
+   \label{fig:dtp5}
+\end{figure}
 
 \subsection{Những hàm số sơ cấp}
 
