@@ -367,6 +367,9 @@ INPUT chapter\toan_hoc_nen_tang\do_thi\khong_gian.tex
 INPUT .\chapter\toan_hoc_nen_tang\ham_so.tex
 INPUT .\chapter\toan_hoc_nen_tang\ham_so.tex
 INPUT chapter\toan_hoc_nen_tang\ham_so.tex
+INPUT .\chapter\toan_hoc_nen_tang\ham_so\dinh_nghia.tex
+INPUT .\chapter\toan_hoc_nen_tang\ham_so\dinh_nghia.tex
+INPUT chapter\toan_hoc_nen_tang\ham_so\dinh_nghia.tex
 INPUT main.aux
 INPUT .\main.out
 INPUT .\main.out
