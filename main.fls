@@ -370,6 +370,9 @@ INPUT chapter\toan_hoc_nen_tang\ham_so.tex
 INPUT .\chapter\toan_hoc_nen_tang\ham_so\dinh_nghia.tex
 INPUT .\chapter\toan_hoc_nen_tang\ham_so\dinh_nghia.tex
 INPUT chapter\toan_hoc_nen_tang\ham_so\dinh_nghia.tex
+INPUT .\chapter\toan_hoc_nen_tang\ham_so\ham_so_cap.tex
+INPUT .\chapter\toan_hoc_nen_tang\ham_so\ham_so_cap.tex
+INPUT chapter\toan_hoc_nen_tang\ham_so\ham_so_cap.tex
 INPUT main.aux
 INPUT .\main.out
 INPUT .\main.out

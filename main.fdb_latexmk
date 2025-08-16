@@ -1,10 +1,10 @@
 # Fdb version 4
-["xdvipdfmx"] 1755315667.10313 "main.xdv" "main.pdf" "main" 1755315667.55214 0
-  "main.xdv" 1755315666 808064 1373b4378ff9529c978bc68048ba7a3c "xelatex"
+["xdvipdfmx"] 1755320578.41158 "main.xdv" "main.pdf" "main" 1755320578.79062 0
+  "main.xdv" 1755320578 824420 5462285f2072dcdf8dc99c9c4dbac761 "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1755315664.12048 "d:/OneDrive - Hanoi University of Science and Technology/Documents/Physics/-n-t-p-V-t-L-/main.tex" "main.xdv" "main" 1755315667.54604 0
+["xelatex"] 1755320575.77744 "d:/OneDrive - Hanoi University of Science and Technology/Documents/Physics/-n-t-p-V-t-L-/main.tex" "main.xdv" "main" 1755320578.78585 0
   "C:/Users/buinh/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1754119510 25521434 dbc151c24c532bc323b459e7df668540 ""
   "C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136747054 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -189,14 +189,15 @@
   "chapter/toan_hoc_nen_tang/do_thi.tex" 1755106918 199 5a3c2e9a7fc8492399aa95b194dd62cc ""
   "chapter/toan_hoc_nen_tang/do_thi/khong_gian.tex" 1755224592 9947 2b4449a4475f5f2580925ccddf07df09 ""
   "chapter/toan_hoc_nen_tang/do_thi/mat_phang.tex" 1755105872 8853 6af00d24e13b36b87a83181a6d00cdbd ""
-  "chapter/toan_hoc_nen_tang/do_thi/truc_so.tex" 1755224579 10216 f47f358790c89bf5029c65ac11c8a72c ""
-  "chapter/toan_hoc_nen_tang/ham_so.tex" 1755107163 9753 5e3dcd7319e3aaf3ac512d6bb61d4471 ""
-  "chapter/toan_hoc_nen_tang/ham_so/dinh_nghia.tex" 1755315664 27334 6bc797e870d6bf7251d09defe6748e3a ""
+  "chapter/toan_hoc_nen_tang/do_thi/truc_so.tex" 1755320573 11016 30ac1c805451084028aab3191fb4636d ""
+  "chapter/toan_hoc_nen_tang/ham_so.tex" 1755318616 139 7e9fc2832181d197d575918e55e89ef4 ""
+  "chapter/toan_hoc_nen_tang/ham_so/dinh_nghia.tex" 1755316921 28830 c6aeefe6ca43c491dcc024dbb7c643fb ""
+  "chapter/toan_hoc_nen_tang/ham_so/ham_so_cap.tex" 1755319318 10390 ca8c63a56e37ee3994db91dac7e913cf ""
   "d:/OneDrive - Hanoi University of Science and Technology/Documents/Physics/-n-t-p-V-t-L-/main.tex" 1755224550 57221 382f6b296e0db9a7a22b0d53e3650d2c ""
-  "main.aux" 1755315666 17967 b157035e1106c24554a92617b3cd0630 "xelatex"
-  "main.out" 1755315666 2598 34438f23ffacd7413c20e72af88bd80c "xelatex"
+  "main.aux" 1755320578 19047 33a8365cae51857e5f3eff5abacef388 "xelatex"
+  "main.out" 1755320578 2598 34438f23ffacd7413c20e72af88bd80c "xelatex"
   "main.tex" 1755224550 57221 382f6b296e0db9a7a22b0d53e3650d2c ""
-  "main.toc" 1755315666 1262 32bfff8f74d40e42d400f3e172662914 "xelatex"
+  "main.toc" 1755320578 1262 2c5959a2e1eee852251f74af007a49be "xelatex"
   (generated)
   "main.aux"
   "main.log"
