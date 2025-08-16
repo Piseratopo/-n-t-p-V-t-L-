@@ -148,7 +148,7 @@ Nếu chỉ có số với chữ không thì hàm số sẽ chở nên rất đ�
 1. $P$ là phương trình chỉ có một ẩn $x$, do đó đồ thị của $P$ chỉ là đồ thị một chiều trên một trục số biểu diễn cho $x$.
 
 {
-\begin{wrapfigure}{r}{0.5\textwidth}
+\begin{wrapfigure}{R}{0.5\textwidth}
    \centering
    \begin{tikzpicture}
       \draw[->] (-2, 0) -- (2, 0) node[right] {$x$};
@@ -168,7 +168,7 @@ Giải phương trình:
 và từ đó, đồ thị của $P$ có được như hình \ref{fig:dtp1}.
 }
 
-\begin{wrapfigure}{r}{0.5\textwidth}
+\begin{wrapfigure}{R}{0.5\textwidth}
    \centering
    \begin{tikzpicture}
       \draw[->] (-2, 0) -- (4, 0) node[right] {$x$};
@@ -187,7 +187,7 @@ Có ba giá trị để $f(x)$ bằng $0$: $x\in \{-1; 1; -3\}$. Chúng ta có �
 3. Tập xác định của $f(x)$ là $\{-1; 1; -2; 2; -3; 3\}$, do đó, để $P$ thỏa mãn thì $x$ chí có thể nhận các giá trị trong vùng tập xác định.
 
 {
-\begin{wrapfigure}{r}{0.5\textwidth}
+\begin{wrapfigure}{R}{0.5\textwidth}
    \centering
    \begin{tikzpicture}
       \draw[->] (-4, 0) -- (3, 0) node[right] {$x$};
@@ -221,7 +221,7 @@ Kẻ bảng so sánh:
 \noindent Nhận thấy rằng $\mathcal{P}$ chỉ đúng khi $x\in \{-1; 1; -3; 2\}$ và chúng ta có đồ thị là hình \ref{fig:dtp3}.
 }
 
-\begin{wrapfigure}{r}{0.5\textwidth}
+\begin{wrapfigure}{R}{0.5\textwidth}
    \centering
    \begin{tikzpicture}
       \draw[->] (0, 0) -- (5, 0) node[right] {$x$};
@@ -237,7 +237,7 @@ Kẻ bảng so sánh:
 
 5. $P$ là phương trình có hai ẩn $x$ và $y$, do đó đồ thị của $P$ là một mặt phẳng hai chiều. Coi như trục hoành biểu diễn cho $x$ và trục tung biểu diễn cho $y$. 
 
-\begin{wraptable}{r}{0.5\textwidth}
+\begin{wraptable}{R}{0.5\textwidth}
    \centering
    \begin{tabular}{|c|c|c|c|c|}
       \hline
@@ -394,7 +394,7 @@ Kết hợp hai trường hợp, đồ thị cuối cùng của $P$ sẽ là hì
    \label{fig:dtp8}
 \end{figure}
 
-\exercise[ex:hpt1]
+\exercise[ex:hpt1] Vẽ đồ thị của hệ phương trình $P$, với các định nghĩa đã cho. Hàm có tập xác định là bộ số đầu vào cho ở trong bảng.
 \begin{enumerate}
    \item 
    \begin{tabular}{|c|c|c|c|c|c|c|}
@@ -442,7 +442,7 @@ Kết hợp hai trường hợp, đồ thị cuối cùng của $P$ sẽ là hì
       \hline
       $h(z)$ & $2$ & $1$ & $0$ & $-1$ & $-2$ & $-3$\\
       \hline
-   \end{tabular} và $P:f(x) = g(x) = h(z)$;
+   \end{tabular} và $P:f(a) = g(b) = h(c)$;
 
    \item
    \begin{tabular}{|c|c|c|c|c|c|c|}
@@ -466,7 +466,124 @@ Kết hợp hai trường hợp, đồ thị cuối cùng của $P$ sẽ là hì
       \hline
       $h(z)$ & $2$ & $1$ & $0$ & $-1$ & $-2$ & $-3$\\
       \hline
-   \end{tabular} và $P:f(a) = g(b) = h(c)$;
+   \end{tabular} và $P:\begin{cases}f(o) = g(p)\\f(p + 1) = h(q)\end{cases}$.
+
+   \item
+   \begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      $x$ & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ \\
+      \hline
+      $f(x)$ & $-1$ & $-1$ & $-1$ & $-2$ & $-3$ & $-3$\\
+      \hline
+   \end{tabular},
+   \begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      $y$ & $0$ & $-2$ & $4$ & $-6$ & $8$ & $-10$\\
+      \hline
+      $g(y)$ & $-1$ & $-2$ & $-3$ & $-7$ & $-8$ & $-9$\\
+      \hline
+   \end{tabular},
+
+   \noindent\begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      $z$ & $-1$ & $1$ & $-2$ & $0$ & $-4$ & $4$\\
+      \hline
+      $h(z)$ & $2$ & $1$ & $0$ & $-1$ & $-2$ & $-3$\\
+      \hline
+   \end{tabular} và $P:\begin{cases}f(m) = n\\g(n) = h(w)\end{cases}$.
 \end{enumerate}
 
 \solution[ex:hpt1]
+
+\begin{wrapfigure}{R}{0.5\textwidth}
+   \centering
+   \begin{tikzpicture}
+      \draw[->] (-1, 0) -- (5, 0) node[right] {$x$};
+      \filldraw (0, 0) circle (\pointSize) node[below] {$0$};
+      \filldraw (4, 0) circle (\pointSize) node[below] {$4$};
+   \end{tikzpicture}
+   \caption{Đồ thị phần 1 bài \ref{ex:hpt1}}
+   \label{fig:hpt11}
+\end{wrapfigure}
+
+1. Giá trị đầu vào để $f, g, h$ đều có cùng một đầu ra là $x\in\{0;4\}$. Vậy, chúng ta có đồ thị như hình \ref{fig:hpt11}.
+
+2. Trước hết, cần tìm những giá trị chung trong tập giá trị của $f, g, h$. Nhận thấy rằng, có $-1, -2$ và $-3$ là những giá trị chung trong đó. 
+
+\def \hptFntsize {\scriptsize}
+
+\begin{wrapfigure}{L}{0.4\textwidth}
+   \centering
+   \tdplotsetmaincoords{80}{-10}
+   \begin{tikzpicture}[tdplot_main_coords]
+      \draw[->] (-2, 0, 0) -- (3, 0, 0) node[right] {$a$};
+      \draw[->] (0, -1.5, 0) -- (0, 2.5, 0) node[above] {$b$};
+      \draw[->] (0, 0, -2.5) -- (0, 0, 2.5) node[above] {$c$};
+      \filldraw (0, 0, 0) circle (\pointSize) node[below left,font=\hptFntsize] {$\left(0; 0; 0\right)$};
+      \filldraw (0.5, 0, 0) circle (\pointSize) node[above,font=\hptFntsize] {$\left(1; 0; 0\right)$};
+      \filldraw (1, 0, 0) circle (\pointSize) node[below,font=\hptFntsize] {$\left(2; 0; 0\right)$};
+      \filldraw (-1.5, -1, -2) circle (\pointSize) node[above,font=\hptFntsize] {$\left(-3; -2; -4\right)$};
+      \filldraw (2, 1, 1) circle (\pointSize) node[above,font=\hptFntsize] {$\left(4; 4; 4\right)$};
+      \filldraw (2.5, 1, 1) circle (\pointSize) node[below,font=\hptFntsize] {$\left(5; 4; 4\right)$};
+   \end{tikzpicture}
+   \caption{Đồ thị phần 2 bài \ref{ex:hpt1}}
+   \label{fig:hpt12}
+\end{wrapfigure}
+
+Với đầu ra là $-1$, chúng ta có $f(a) = g(b) = h(c) = -1$. Từ đó, chúng ta có
+$$
+\begin{cases}
+   a \in \{0; 1; 2\}\\
+   b = 0\\
+   c = 0
+\end{cases}.
+$$ 
+
+Trong trường hợp kết quả của hàm là $-2$, $f(a) = g(b) = h(c) = -2$. Từ đó,
+$$
+\begin{cases}
+   a = -3\\
+   b = -2\\
+   c = -4
+\end{cases}.
+$$
+
+Trong trường hợp kết quả của hàm là $-3$, $f(a) = g(b) = h(c) = -3$. Từ đó,
+$$
+\begin{cases}
+   a \in \{4; 5\}\\
+   b = 4\\
+   c = 4
+\end{cases}.
+$$
+
+Kết hợp ba trường hợp, xây dựng không gian tọa độ, chúng ta có hình \ref{fig:hpt12}.
+
+3. Để $f$ và $g$ nhận cùng một giá trị thì giá trị đầu ra đó, theo bảng, phải là $-1$, $-2$ hoặc $-3$.
+
+\begin{wrapfigure}{L}{0.4\textwidth}
+   \tdplotsetmaincoords{80}{-10}
+   \centering
+   \begin{tikzpicture}[scale=0.5, tdplot_main_coords]
+      \draw[->] (-2, 0, 0) -- (6, 0, 0) node[right] {$o$};
+      \draw[->] (0, -2, 0) -- (0, 5, 0) node[above] {$p$};
+      \draw[->] (0, 0, -2) -- (0, 0, 5) node[above] {$q$};
+      \filldraw (0, 0, 0) circle (\pointSize * 2) node[below left,font=\hptFntsize] {$\left(0; 0; 0\right)$};
+      \filldraw (1, 0, 0) circle (\pointSize * 2) node[above,font=\hptFntsize] {$\left(1; 0; 0\right)$};
+      \filldraw (2, 0, 0) circle (\pointSize * 2) node[below,font=\hptFntsize] {$\left(2; 0; 0\right)$};
+      \filldraw (4, 4, 4) circle (\pointSize * 2) node[above,font=\hptFntsize] {$\left(4; 4; 4\right)$};
+      \filldraw (5, 4, 4) circle (\pointSize * 2) node[below,font=\hptFntsize] {$\left(5; 4; 4\right)$};
+   \end{tikzpicture}
+   \caption{Đồ thị phần 3 bài \ref{ex:hpt1}}
+   \label{fig:hpt13}
+\end{wrapfigure}
+
+Tại $f(o) = g(p) = -1$, $o \in \{0; 1; 2\}$ và $p = 0$. Từ đó, $f(p + 1) = f(1) = -1$. Khi này, $h(q) = -1 \iff q = 0$.
+
+Tại $f(o) = g(p) = -2$, sau khi tra bảng, chúng ta thấy được rằng $\begin{cases}o = 3\\p = -2\end{cases}$; suy ra $f(p + 1) = f(-1)$. Tuy nhiên, $-1$ không thuộc tập xác định của $f$. Vậy, chúng ta sẽ loại trường hợp này.
+
+Tại $f(o) = g(p) = -3$, $o \in \{4; 5\}$ và $p = 4$. Từ đó, $f(p + 1) = f(5) = -3$. Khi này, $h(q) = -3 \iff q = 4$.
+
+Cuối cùng, vẽ đồ thị để được hình \ref{fig:hpt13}.
+
+4. 
