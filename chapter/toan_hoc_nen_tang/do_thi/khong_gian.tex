@@ -139,7 +139,7 @@ Chúng ta đã có phân bổ vị trí của các góc phần tám trong hệ t
    &= \frac{1}{2} \sqrt{(x_A-x_B)^2 + (y_A-y_B)^2 + (z_A-z_B)^2} = \frac{d(A;B)}{2}.
 \end{align*}
 
-Một cách tương tự, chúng ta cúng có $d(B;M) = \frac{d(A;B)}{2}$. Như vậy, $M$ là trung điểm của đoạn thẳng nối hai điểm $A$ và $B$.
+Một cách tương tự, chúng ta cúng có $d(B;M) = \frac{d(A;B)}{2}$. Như vậy, $M$ là trung điểm của đoạn thẳng nối hai điểm $A$ và $B$. Qua đó, có được điều phải chứng minh.
 
 Vẽ đồ thị ví dụ với $A(1;2;3)$ và $B(-1;0;4)$, chúng ta được đồ thị ở hình \ref{fig:trung diem}.
 
@@ -148,16 +148,18 @@ Công thức về vị trí tọa độ trung điểm được cho trong bài l�
 \begin{figure}[H]
    \centering
    \tdplotsetmaincoords{80}{80}
-   \begin{tikzpicture}[tdplot_main_coords]
-      \draw[->] (-2,0,0) -- (2,0,0) node[anchor=north west]{$y$};
-      \draw[->] (0,-1,0) -- (0,3,0) node[anchor=north east]{$x$};
-      \draw[->] (0,0,-1) -- (0,0,5) node[anchor=south]{$z$};
-      
-      \filldraw (1,2,3) circle (\pointSize) node[anchor=west] {$A(1;2;3)$};
-      \filldraw (-1,0,4) circle (\pointSize) node[anchor=east] {$B(-1;0;4)$};
-      \filldraw (0,1,3.5) circle (\pointSize) node[anchor=south west] {$M(0;1;\frac{7}{2})$};
-      \draw[thick] (1,2,3) -- (0,1,3.5) -- (-1,0,4);
-   \end{tikzpicture}
+   \fbox{
+      \begin{tikzpicture}[tdplot_main_coords]
+         \draw[->] (-2,0,0) -- (2,0,0) node[anchor=north west]{$y$};
+         \draw[->] (0,-1,0) -- (0,3,0) node[anchor=north east]{$x$};
+         \draw[->] (0,0,-1) -- (0,0,5) node[anchor=south]{$z$};
+         
+         \filldraw (1,2,3) circle (\pointSize) node[anchor=west] {$A(1;2;3)$};
+         \filldraw (-1,0,4) circle (\pointSize) node[anchor=east] {$B(-1;0;4)$};
+         \filldraw (0,1,3.5) circle (\pointSize) node[anchor=south west] {$M(0;1;\frac{7}{2})$};
+         \draw[thick] (1,2,3) -- (0,1,3.5) -- (-1,0,4);
+      \end{tikzpicture}
+   }
    \caption{Ví dụ trung điểm với $A(1;2;3)$ và $B(-1;0;4)$}
    \label{fig:trung diem}
 \end{figure}

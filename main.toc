@@ -7,8 +7,8 @@
 \contentsline {subsection}{\numberline {0.1.3}Không gian ba chiều và hướng tam diện}{8}{subsection.0.1.3}%
 \contentsline {section}{\numberline {0.2}Hàm số}{10}{section.0.2}%
 \contentsline {subsection}{\numberline {0.2.1}Định nghĩa hàm số và đại lượng liên quan đến hàm số}{10}{subsection.0.2.1}%
-\contentsline {subsection}{\numberline {0.2.2}Những hàm số sơ cấp}{15}{subsection.0.2.2}%
-\contentsline {section}{\numberline {0.3}Số ảo và số phức}{18}{section.0.3}%
-\contentsline {section}{\numberline {0.4}Bài tập tổng hợp}{21}{section.0.4}%
-\contentsline {chapter}{\numberline {1}Cơ bản của xử lí số liệu trong vật lí}{22}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Chuyển động}{25}{chapter.2}%
+\contentsline {subsection}{\numberline {0.2.2}Những hàm số sơ cấp}{16}{subsection.0.2.2}%
+\contentsline {section}{\numberline {0.3}Số ảo và số phức}{19}{section.0.3}%
+\contentsline {section}{\numberline {0.4}Bài tập tổng hợp}{22}{section.0.4}%
+\contentsline {chapter}{\numberline {1}Cơ bản của xử lí số liệu trong vật lí}{23}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Chuyển động}{26}{chapter.2}%

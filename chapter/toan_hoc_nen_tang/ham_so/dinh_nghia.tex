@@ -61,15 +61,15 @@ Nếu chỉ có số với chữ không thì hàm số sẽ chở nên rất đ�
 
 \solution
 
-1. $y$ là hàm của $x$ với tập xác định $X = \{1; 2; 3; 4; 5\}$ và tập giá trị $Y = \{2; 3; 4; 5; 6\}$.
+1. \fbox{$y$ là hàm của $x$} với tập xác định $X = \boxed{\{1; 2; 3; 4; 5\}}$ và tập giá trị $Y = \boxed{\{2; 3; 4; 5; 6\}}$.
 
-2. $y$ là hàm của $x$ với tập xác định $X = \{0; -1; 1; 2; -3\}$ và tập giá trị $Y = \{0\}$.
+2. \fbox{$y$ là hàm của $x$} với tập xác định $X = \boxed{\{0; -1; 1; 2; -3\}}$ và tập giá trị $Y = \boxed{\{0\}}$.
 
-3. $y$ không phải là hàm của $x$ do khi $x$ có giá trị $15$ thì $y$ có hai giá trị $123$ và $134$.
+3. \fbox{$y$ không phải là hàm của $x$} do khi $x$ có giá trị $15$ thì $y$ có hai giá trị $123$ và $134$.
 
-4. $y$ là hàm của $x$ với tập xác định $X = \{0; -17; 3; 55\}$ và tập giá trị $Y = \{4586; 1024\}$. Để ý rằng đầu vào $x=-17$ luôn ứng với đầu ra $y = 1024$.
+4. \fbox{$y$ là hàm của $x$} với tập xác định $X = \boxed{\{0; -17; 3; 55\}}$ và tập giá trị $Y = \boxed{\{4586; 1024\}}$. Để ý rằng đầu vào $x=-17$ luôn ứng với đầu ra $y = 1024$.
 
-5. $y$ không là hàm của $x$ do khi $x = 2$ thì $y$ có hai giá trị $28$ và $29$. Mặc dù cách viết có thể ám chỉ $y=f(x)$ với $f$ là hàm \dblquote{số ngày trong tháng}, nhưng $f$ không phải là hàm số do dính trường hợp ngoại lệ.
+5. \fbox{$y$ không là hàm của $x$} do khi $x = 2$ thì $y$ có hai giá trị $28$ và $29$. Mặc dù cách viết có thể ám chỉ $y=f(x)$ với $f$ là hàm \dblquote{số ngày trong tháng}, nhưng $f$ không phải là hàm số do \dblquote{dính} trường hợp ngoại lệ.
 
 \exercise[intropt] Vẽ đồ thị của phương trình $\mathcal{P}$, với các định nghĩa được cho. Hàm có tập xác định là bộ số đầu vào cho ở trong bảng. Để ý số ẩn của phương trình để chọn số chiều của đồ thị cho phù hợp.
 
@@ -150,11 +150,13 @@ Nếu chỉ có số với chữ không thì hàm số sẽ chở nên rất đ�
 {
 \begin{wrapfigure}{R}{0.5\textwidth}
    \centering
-   \begin{tikzpicture}
-      \draw[->] (-2, 0) -- (2, 0) node[right] {$x$};
-      \filldraw (1, 0) circle (\pointSize) node[below] {$1$};
-      \filldraw (-1, 0) circle (\pointSize) node[below] {$-1$};
-   \end{tikzpicture}
+   \fbox{
+      \begin{tikzpicture}
+         \draw[->] (-2, 0) -- (2, 0) node[right] {$x$};
+         \filldraw (1, 0) circle (\pointSize) node[below] {$1$};
+         \filldraw (-1, 0) circle (\pointSize) node[below] {$-1$};
+      \end{tikzpicture}
+   }
    \caption{Đồ thị phần 1 bài \ref{intropt}}
    \label{fig:dtp1}
 \end{wrapfigure}
@@ -170,13 +172,14 @@ và từ đó, đồ thị của $\mathcal{P}$ có được như hình \ref{fig:
 
 \begin{wrapfigure}{R}{0.5\textwidth}
    \centering
-   \begin{tikzpicture}
-      \draw[->] (-2, 0) -- (4, 0) node[right] {$x$};
-      \filldraw (1, 0) circle (\pointSize) node[below] {$1$};
-      \filldraw (-1, 0) circle (\pointSize) node[below] {$-1$};
-      \filldraw (3, 0) circle (\pointSize) node[below] {$3$};
-      
-   \end{tikzpicture}
+   \fbox{
+      \begin{tikzpicture}
+         \draw[->] (-2, 0) -- (4, 0) node[right] {$x$};
+         \filldraw (1, 0) circle (\pointSize) node[below] {$1$};
+         \filldraw (-1, 0) circle (\pointSize) node[below] {$-1$};
+         \filldraw (3, 0) circle (\pointSize) node[below] {$3$};
+      \end{tikzpicture}
+   }
    \caption{Đồ thị phần 2 bài \ref{intropt}}
    \label{fig:dtp2}
 \end{wrapfigure}
@@ -187,49 +190,51 @@ Có ba giá trị để $f(x)$ bằng $0$: $x\in \{-1; 1; -3\}$. Chúng ta có �
 3. Tập xác định của $f(x)$ là $\{-1; 1; -2; 2; -3; 3\}$, do đó, để $\mathcal{P}$ thỏa mãn thì $x$ chí có thể nhận các giá trị trong vùng tập xác định.
 
 {
-\begin{wrapfigure}{R}{0.5\textwidth}
-   \centering
-   \begin{tikzpicture}
-      \draw[->] (-4, 0) -- (3, 0) node[right] {$x$};
-      \filldraw (1, 0) circle (\pointSize) node[below] {$1$};
-      \filldraw (-1, 0) circle (\pointSize) node[below] {$-1$};
-      \filldraw (-3, 0) circle (\pointSize) node[below] {$-3$};
-      \filldraw (2, 0) circle (\pointSize) node[below] {$2$};
-   \end{tikzpicture}
-   \caption{Đồ thị phần 3 bài \ref{intropt}}
-   \label{fig:dtp3}
-\end{wrapfigure}
-Kẻ bảng so sánh:
-   
-\begin{table}[h]
-   \begin{minipage}{0.5\textwidth}
+   \begin{wrapfigure}{R}{0.5\textwidth}
       \centering
-         \begin{tabular}{|c|c|c|c|c|c|c|}
-            \hline
-            $x$ & $-1$ & $1$ & $-2$ & $2$ & $-3$ & $3$\\
-            \hline
-            $f(x)$ & $0$ & $0$ & $4$ & $3$ & $7$ & $0$\\
-            \hline
-            $x^2-1$ & $0$ & $0$ & $3$ & $3$ & $7$ & $7$\\
-            \hline
-         \end{tabular}
-         \caption{Giá trị của $f(x)$ và $x^2-1$ ứng với $x$}
-         \label{tab:values3}
-   \end{minipage}
-\end{table}
+      \fbox{
+         \begin{tikzpicture}
+            \draw[->] (-4, 0) -- (3, 0) node[right] {$x$};
+            \filldraw (1, 0) circle (\pointSize) node[below] {$1$};
+            \filldraw (-1, 0) circle (\pointSize) node[below] {$-1$};
+            \filldraw (-3, 0) circle (\pointSize) node[below] {$-3$};
+            \filldraw (2, 0) circle (\pointSize) node[below] {$2$};
+         \end{tikzpicture}
+      }
+      \caption{Đồ thị phần 3 bài \ref{intropt}}
+      \label{fig:dtp3}
+   \end{wrapfigure}
+   Kẻ bảng so sánh:
+   \begin{table}[h]
+      \begin{minipage}{0.48\textwidth}
+         \centering
+            \begin{tabular}{|c|c|c|c|c|c|c|}
+               \hline
+               $x$ & $-1$ & $1$ & $-2$ & $2$ & $-3$ & $3$\\
+               \hline
+               $f(x)$ & $0$ & $0$ & $4$ & $3$ & $7$ & $0$\\
+               \hline
+               $x^2-1$ & $0$ & $0$ & $3$ & $3$ & $7$ & $7$\\
+               \hline
+            \end{tabular}
+            \caption{Giá trị của $f(x)$ và $x^2-1$ ứng với $x$}
+            \label{tab:values3}
+      \end{minipage}
+   \end{table}
 
-\noindent Nhận thấy rằng $\mathcal{P}$ chỉ đúng khi $x\in \{-1; 1; -3; 2\}$ và chúng ta có đồ thị là hình \ref{fig:dtp3}.
+   Nhận thấy rằng $\mathcal{P}$ chỉ đúng khi $x\in \{-1; 1; -3; 2\}$ và chúng ta có đồ thị là hình \ref{fig:dtp3}.
 }
 
 \begin{wrapfigure}{R}{0.5\textwidth}
    \centering
-   \begin{tikzpicture}
-      \draw[->] (0, 0) -- (5, 0) node[right] {$x$};
-      \filldraw (2, 0) circle (\pointSize) node[below] {$2$};
-      \filldraw (3, 0) circle (\pointSize) node[below] {$3$};
-      \filldraw (4, 0) circle (\pointSize) node[below] {$4$};
-      
-   \end{tikzpicture}
+   \fbox{
+      \begin{tikzpicture}
+         \draw[->] (0, 0) -- (5, 0) node[right] {$x$};
+         \filldraw (2, 0) circle (\pointSize) node[below] {$2$};
+         \filldraw (3, 0) circle (\pointSize) node[below] {$3$};
+         \filldraw (4, 0) circle (\pointSize) node[below] {$4$};
+      \end{tikzpicture}
+   }
    \caption{Đồ thị phần 4 bài \ref{intropt}}
    \label{fig:dtp4}
 \end{wrapfigure}
@@ -256,14 +261,16 @@ Kẻ bảng so sánh:
 
 \begin{figure}[h]
    \centering
-   \begin{tikzpicture}
-      \draw[->] (0, 0) -- (3.5, 0) node[right] {$x$};
-      \draw[->] (0, 0) -- (0, 3.5) node[above] {$y$};
-      \filldraw (1, 1) circle (\pointSize) node[right] {$(2; 2)$};
-      \filldraw (1.5, 1.5) circle (\pointSize) node[right] {$(3; 3)$};
-      \filldraw (2.5, 3) circle (\pointSize) node[right] {$(5; 6)$};
-      \filldraw (2, 2) circle (\pointSize) node[right] {$(4; 4)$};
-   \end{tikzpicture}
+   \fbox{
+      \begin{tikzpicture}
+         \draw[->] (0, 0) -- (3.5, 0) node[right] {$x$};
+         \draw[->] (0, 0) -- (0, 3.5) node[above] {$y$};
+         \filldraw (1, 1) circle (\pointSize) node[right] {$(2; 2)$};
+         \filldraw (1.5, 1.5) circle (\pointSize) node[right] {$(3; 3)$};
+         \filldraw (2.5, 3) circle (\pointSize) node[right] {$(5; 6)$};
+         \filldraw (2, 2) circle (\pointSize) node[right] {$(4; 4)$};
+      \end{tikzpicture}
+   }
    \caption{Đồ thị phần 5 bài \ref{intropt}}
    \label{fig:dtp5}
 \end{figure}
@@ -297,16 +304,18 @@ Qua bảng đó, vẽ được đồ thị của $\mathcal{P}$ như hình \ref{f
 
 \begin{figure}[h]
    \centering
-   \begin{tikzpicture}
-      \draw[->] (0, 0) -- (4, 0) node[right] {$x$};
-      \draw[->] (0, 0) -- (0, 4) node[above] {$b$};
-      \filldraw (0.5, 0.75) circle (\pointSize) node[below] {$\left(1; \frac{3}{2}\right)$};
-      \filldraw (1, 1.25) circle (\pointSize) node[below] {$\left(2; \frac{5}{2}\right)$};
-      \filldraw (1.5, 1.5) circle (\pointSize) node[right] {$(3; 3)$};
-      \filldraw (2, 2) circle (\pointSize) node[right] {$(4; 4)$};
-      \filldraw (2.5, 3) circle (\pointSize) node[right] {$(5; 6)$};
-      \filldraw (3, 3.5) circle (\pointSize) node[right] {$(6; 7)$};
-   \end{tikzpicture}
+   \fbox{
+      \begin{tikzpicture}
+         \draw[->] (0, 0) -- (4, 0) node[right] {$x$};
+         \draw[->] (0, 0) -- (0, 4) node[above] {$b$};
+         \filldraw (0.5, 0.75) circle (\pointSize) node[below] {$\left(1; \frac{3}{2}\right)$};
+         \filldraw (1, 1.25) circle (\pointSize) node[below] {$\left(2; \frac{5}{2}\right)$};
+         \filldraw (1.5, 1.5) circle (\pointSize) node[right] {$(3; 3)$};
+         \filldraw (2, 2) circle (\pointSize) node[right] {$(4; 4)$};
+         \filldraw (2.5, 3) circle (\pointSize) node[right] {$(5; 6)$};
+         \filldraw (3, 3.5) circle (\pointSize) node[right] {$(6; 7)$};
+      \end{tikzpicture}
+   }
    \caption{Đồ thị phần 6 bài \ref{intropt}}
    \label{fig:dtp6}
 \end{figure}
@@ -334,27 +343,29 @@ Cuối cùng, kết hợp hai trường hợp, chúng ta có đồ thị cho $\m
 
 \begin{figure}[H]
    \centering
-   \begin{tikzpicture}
-      \draw[->] (-4, 0) -- (3, 0) node[right] {$x$};
-      \draw[->] (0, -2.5) -- (0, 2.5) node[above] {$b$};
-      
-      % Vẽ phần f(x) khác 0
-      \filldraw (-2, -1.5) circle (\pointSize) node[below] {$\left(-2; -\frac{3}{2}\right)$};
-      \filldraw (2, 2) circle (\pointSize) node[below] {$\left(2; 2\right)$};
-      \filldraw (-3, -1) circle (\pointSize) node[below] {$\left(-3; -1\right)$};
-
-      \filldraw (-1, 0) circle (\pointSize) node[below] {$\left(-1; 0\right)$};
-      \filldraw (1, 0) circle (\pointSize) node[below] {$\left(1; 0\right)$};
-      \filldraw (-3, 0) circle (\pointSize) node[below] {$\left(-3; 0\right)$};
-
-      \filldraw (-1, 1) circle (\pointSize) node[below] {$\left(-1; 1\right)$};
-      \filldraw (1, 1) circle (\pointSize) node[below] {$\left(1; 1\right)$};
-      \filldraw (-3, 1) circle (\pointSize) node[below] {$\left(-3; 1\right)$};
-
-      \filldraw (-1, 2) circle (\pointSize) node[below] {$\left(-1; 2\right)$};
-      \filldraw (1, 2) circle (\pointSize) node[below] {$\left(1; 2\right)$};
-      \filldraw (-3, 2) circle (\pointSize) node[below] {$\left(-3; 2\right)$};
-   \end{tikzpicture}
+   \fbox{
+      \begin{tikzpicture}
+         \draw[->] (-4, 0) -- (3, 0) node[right] {$x$};
+         \draw[->] (0, -2.5) -- (0, 2.5) node[above] {$b$};
+         
+         % Vẽ phần f(x) khác 0
+         \filldraw (-2, -1.5) circle (\pointSize) node[below] {$\left(-2; -\frac{3}{2}\right)$};
+         \filldraw (2, 2) circle (\pointSize) node[below] {$\left(2; 2\right)$};
+         \filldraw (-3, -1) circle (\pointSize) node[below] {$\left(-3; -1\right)$};
+         
+         \filldraw (-1, 0) circle (\pointSize) node[below] {$\left(-1; 0\right)$};
+         \filldraw (1, 0) circle (\pointSize) node[below] {$\left(1; 0\right)$};
+         \filldraw (-3, 0) circle (\pointSize) node[below] {$\left(-3; 0\right)$};
+         
+         \filldraw (-1, 1) circle (\pointSize) node[below] {$\left(-1; 1\right)$};
+         \filldraw (1, 1) circle (\pointSize) node[below] {$\left(1; 1\right)$};
+         \filldraw (-3, 1) circle (\pointSize) node[below] {$\left(-3; 1\right)$};
+         
+         \filldraw (-1, 2) circle (\pointSize) node[below] {$\left(-1; 2\right)$};
+         \filldraw (1, 2) circle (\pointSize) node[below] {$\left(1; 2\right)$};
+         \filldraw (-3, 2) circle (\pointSize) node[below] {$\left(-3; 2\right)$};
+      \end{tikzpicture}
+   }
    \caption{Đồ thị phần 7 bài \ref{intropt}}
    \label{fig:dtp7}
 \end{figure}
@@ -372,24 +383,25 @@ Kết hợp hai trường hợp, đồ thị cuối cùng của $\mathcal{P}$ s�
 \begin{figure}[H]
    \centering
    \tdplotsetmaincoords{80}{30}
-   \begin{tikzpicture}[tdplot_main_coords]
-      \draw[->] (-5, 0, 0) -- (2, 0, 0) node[right] {$a$};
-      \draw[->] (0, -5, 0) -- (0, 4, 0) node[above] {$b$};
-      \draw[->] (0, 0, -4) -- (0, 0, 2) node[above] {$c$};
-      \filldraw (2, -2, -3) circle (\pointSize) node[font=\scriptsize, anchor=north] {$\left(2; -2; -3\right)$};  
-      \filldraw (-2, 2, -3) circle (\pointSize) node[font=\scriptsize, anchor=south] {$\left(-2; 2; -3\right)$};  
-      \foreach \x/\y/\z in {
-         -3/-3/-3, -3/-3/-1, -3/-3/1, 
-         -3/-1/-3, -3/-1/-1, -3/-1/1, -3/1/-3, -3/1/-1, -3/1/1,
-         -1/-3/-3, -1/-3/-1, -1/-3/1, -1/-1/-3, -1/-1/-1, -1/-1/1,
-         -1/1/-3, -1/1/-1, -1/1/1, 1/-3/-3, 1/-3/-1, 1/-3/1,
-         1/-1/-3, 1/-1/-1, 1/-1/1, 1/1/-3, 1/1/-1, 1/1/1
-      } {
-         \filldraw (\x, \y, \z) circle (\pointSize);
-         \node[font=\scriptsize, anchor=east] at (\x, \y, \z) {$\left(\x, \y, \z\right)$};
-      }
-
-   \end{tikzpicture}
+   \fbox{
+      \begin{tikzpicture}[tdplot_main_coords]
+         \draw[->] (-5, 0, 0) -- (2, 0, 0) node[right] {$a$};
+         \draw[->] (0, -5, 0) -- (0, 4, 0) node[above] {$b$};
+         \draw[->] (0, 0, -4) -- (0, 0, 2) node[above] {$c$};
+         \filldraw (2, -2, -3) circle (\pointSize) node[font=\scriptsize, anchor=north] {$\left(2; -2; -3\right)$};  
+         \filldraw (-2, 2, -3) circle (\pointSize) node[font=\scriptsize, anchor=south] {$\left(-2; 2; -3\right)$};  
+         \foreach \x/\y/\z in {
+            -3/-3/-3, -3/-3/-1, -3/-3/1, 
+            -3/-1/-3, -3/-1/-1, -3/-1/1, -3/1/-3, -3/1/-1, -3/1/1,
+            -1/-3/-3, -1/-3/-1, -1/-3/1, -1/-1/-3, -1/-1/-1, -1/-1/1,
+            -1/1/-3, -1/1/-1, -1/1/1, 1/-3/-3, 1/-3/-1, 1/-3/1,
+            1/-1/-3, 1/-1/-1, 1/-1/1, 1/1/-3, 1/1/-1, 1/1/1
+         } {
+            \filldraw (\x, \y, \z) circle (\pointSize);
+            \node[font=\scriptsize, anchor=east] at (\x, \y, \z) {$\left(\x, \y, \z\right)$};
+         }
+      \end{tikzpicture}
+   }
    \caption{Đồ thị phần 8 bài \ref{intropt}}
    \label{fig:dtp8}
 \end{figure}
@@ -495,110 +507,91 @@ Kết hợp hai trường hợp, đồ thị cuối cùng của $\mathcal{P}$ s�
 
 \solution[ex:hpt1]
 
-\begin{wrapfigure}{R}{0.5\textwidth}
-   \centering
-   \begin{tikzpicture}
-      \draw[->] (-1, 0) -- (5, 0) node[right] {$x$};
-      \filldraw (0, 0) circle (\pointSize) node[below] {$0$};
-      \filldraw (4, 0) circle (\pointSize) node[below] {$4$};
-   \end{tikzpicture}
-   \caption{Đồ thị phần 1 bài \ref{ex:hpt1}}
-   \label{fig:hpt11}
-\end{wrapfigure}
-
 1. Giá trị đầu vào để $f, g, h$ đều có cùng một đầu ra là $x\in\{0;4\}$. Vậy, chúng ta có đồ thị như hình \ref{fig:hpt11}.
 
-2. Trước hết, cần tìm những giá trị chung trong tập giá trị của $f, g, h$. Nhận thấy rằng, có $-1, -2$ và $-3$ là những giá trị chung trong đó. 
-
-\def \hptFntsize {\scriptsize}
-
-\begin{wrapfigure}{L}{0.4\textwidth}
+\begin{figure}[H]
    \centering
-   \tdplotsetmaincoords{80}{-10}
-   \begin{tikzpicture}[tdplot_main_coords]
-      \draw[->] (-1.5, 0, 0) -- (3, 0, 0) node[right] {$a$};
-      \draw[->] (0, -1, 0) -- (0, 2.5, 0) node[above] {$b$};
-      \draw[->] (0, 0, -2.5) -- (0, 0, 2.5) node[above] {$c$};
-      \filldraw (0, 0, 0) circle (\pointSize) node[below left,font=\hptFntsize] {$\left(0; 0; 0\right)$};
-      \filldraw (0.5, 0, 0) circle (\pointSize) node[above,font=\hptFntsize] {$\left(1; 0; 0\right)$};
-      \filldraw (1, 0, 0) circle (\pointSize) node[below,font=\hptFntsize] {$\left(2; 0; 0\right)$};
-      \filldraw (1.5, -1, -2) circle (\pointSize) node[above,font=\hptFntsize] {$\left(3; -2; -4\right)$};
-      \filldraw (2, 1, 1) circle (\pointSize) node[above,font=\hptFntsize] {$\left(4; 4; 4\right)$};
-      \filldraw (2.5, 1, 1) circle (\pointSize) node[below,font=\hptFntsize] {$\left(5; 4; 4\right)$};
-   \end{tikzpicture}
-   \caption{Đồ thị phần 2 bài \ref{ex:hpt1}}
-   \label{fig:hpt12}
-\end{wrapfigure}
+   \fbox{
+      \begin{tikzpicture}
+         \draw[->] (-1, 0) -- (5, 0) node[right] {$x$};
+         \filldraw (0, 0) circle (\pointSize) node[below] {$0$};
+         \filldraw (4, 0) circle (\pointSize) node[below] {$4$};
+      \end{tikzpicture}
+   }
+   \caption{Đồ thị phần 1 bài \ref{ex:hpt1}}
+   \label{fig:hpt11}
+\end{figure}
 
-Với đầu ra là $-1$, chúng ta có $f(a) = g(b) = h(c) = -1$. Từ đó, chúng ta có
-$$
-\begin{cases}
-   a \in \{0; 1; 2\}\\
-   b = 0\\
-   c = 0
-\end{cases}.
-$$ 
-
-Trong trường hợp kết quả của hàm là $-2$, $f(a) = g(b) = h(c) = -2$. Từ đó,
-$$
-\begin{cases}
-   a = 3\\
-   b = -2\\
-   c = -4
-\end{cases}.
-$$
-
-Trong trường hợp kết quả của hàm là $-3$, $f(a) = g(b) = h(c) = -3$. Từ đó,
-$$
-\begin{cases}
-   a \in \{4; 5\}\\
-   b = 4\\
-   c = 4
-\end{cases}.
-$$
-
+2. Trước hết, cần tìm những giá trị chung trong tập giá trị của $f, g, h$. Nhận thấy rằng, có $-1, -2$ và $-3$ là những giá trị chung trong đó. 
+\begin{itemize}
+   \item Với đầu ra là $-1$, chúng ta có $f(a) = g(b) = h(c) = -1$. Từ đó, chúng ta có $a \in \{0; 1; 2\}$ và $b = c = 0$.
+   \item Trong trường hợp kết quả của hàm là $-2$, $f(a) = g(b) = h(c) = -2$. Từ đó, bộ ba $\left(a; b; c\right)$ có giá trị là $(3; -2; -4)$.
+   \item Trong trường hợp kết quả của hàm là $-3$, $f(a) = g(b) = h(c) = -3$. Từ đó, $\left(a; b; c\right)$ $\in \left\{\left(4; 4; 4\right); \left(5; 4; 4\right)\right\}$.
+\end{itemize}
 Kết hợp ba trường hợp, xây dựng không gian tọa độ, chúng ta có hình \ref{fig:hpt12}.
 
-3. Để $f$ và $g$ nhận cùng một giá trị thì giá trị đầu ra đó, theo bảng, phải là $-1$, $-2$ hoặc $-3$.
-
-\begin{wrapfigure}{L}{0.4\textwidth}
-   \tdplotsetmaincoords{80}{-10}
+\begin{figure}[H]
    \centering
-   \begin{tikzpicture}[scale=0.5, tdplot_main_coords]
-      \draw[->] (-2, 0, 0) -- (6, 0, 0) node[right] {$o$};
-      \draw[->] (0, -2, 0) -- (0, 5, 0) node[above] {$p$};
-      \draw[->] (0, 0, -2) -- (0, 0, 5) node[above] {$q$};
-      \filldraw (0, 0, 0) circle (\pointSize * 2) node[below left,font=\hptFntsize] {$\left(0; 0; 0\right)$};
-      \filldraw (1, 0, 0) circle (\pointSize * 2) node[above,font=\hptFntsize] {$\left(1; 0; 0\right)$};
-      \filldraw (2, 0, 0) circle (\pointSize * 2) node[below,font=\hptFntsize] {$\left(2; 0; 0\right)$};
-      \filldraw (4, 4, 4) circle (\pointSize * 2) node[above,font=\hptFntsize] {$\left(4; 4; 4\right)$};
-      \filldraw (5, 4, 4) circle (\pointSize * 2) node[below,font=\hptFntsize] {$\left(5; 4; 4\right)$};
-   \end{tikzpicture}
-   \caption{Đồ thị phần 3 bài \ref{ex:hpt1}}
-   \label{fig:hpt13}
-\end{wrapfigure}
+   \fbox{
+      \tdplotsetmaincoords{80}{-10}
+      \begin{tikzpicture}[tdplot_main_coords]
+         \draw[->] (-3, 0, 0) -- (6, 0, 0) node[right] {$a$};
+         \draw[->] (0, -2, 0) -- (0, 5, 0) node[above] {$b$};
+         \draw[->] (0, 0, -5) -- (0, 0, 5) node[above] {$c$};
+         \filldraw (0, 0, 0) circle (\pointSize) node[below left] {$\left(0; 0; 0\right)$};
+         \filldraw (1, 0, 0) circle (\pointSize) node[above] {$\left(1; 0; 0\right)$};
+         \filldraw (2, 0, 0) circle (\pointSize) node[below] {$\left(2; 0; 0\right)$};
+         \filldraw (3, -2, -4) circle (\pointSize) node[above] {$\left(3; -2; -4\right)$};
+         \filldraw (4, 4, 4) circle (\pointSize) node[above] {$\left(4; 4; 4\right)$};
+         \filldraw (5, 4, 4) circle (\pointSize) node[below] {$\left(5; 4; 4\right)$};
+      \end{tikzpicture}
+   }
+   \caption{Đồ thị phần 2 bài \ref{ex:hpt1}}
+   \label{fig:hpt12}
+\end{figure}
 
-Tại $f(o) = g(p) = -1$, $o \in \{0; 1; 2\}$ và $p = 0$. Từ đó, $f(p + 1) = f(1) = -1$. Khi này, $h(q) = -1 \iff q = 0$.
-
-Tại $f(o) = g(p) = -2$, sau khi tra bảng, chúng ta thấy được rằng $\begin{cases}o = 3\\p = -2\end{cases}$; suy ra $f(p + 1) = f(-1)$. Tuy nhiên, $-1$ không thuộc tập xác định của $f$. Vậy, chúng ta sẽ loại trường hợp này.
-
-Tại $f(o) = g(p) = -3$, $o \in \{4; 5\}$ và $p = 4$. Từ đó, $f(p + 1) = f(5) = -3$. Khi này, $h(q) = -3 \iff q = 4$.
-
+3. Để $f$ và $g$ nhận cùng một giá trị thì giá trị đầu ra đó, theo bảng, phải là $-1$, $-2$ hoặc $-3$.
+\begin{itemize}
+   \item Tại $f(o) = g(p) = -1$, $o \in \{0; 1; 2\}$ và $p = 0$. Từ đó, $f(p + 1) = f(1) = -1$. Khi này, $h(q) = -1 \iff q = 0$.
+   \item Tại $f(o) = g(p) = -2$, sau khi tra bảng, chúng ta thấy được rằng $\begin{cases}o = 3\\p = -2\end{cases}$; suy ra $f(p + 1) = f(-1)$, Tuy nhiên, $-1$ không thuộc tập xác định của $f$. Vậy, chúng ta sẽ loại trường hợp này.
+   \item Tại $f(o) = g(p) = -3$, $o \in \{4; 5\}$ và $p = 4$. Từ đó, $f(p + 1) = f(5) = -3$. Khi này, $h(q) = -3 \iff q = 4$.
+\end{itemize}
 Cuối cùng, vẽ đồ thị để được hình \ref{fig:hpt13}.
 
-\begin{wrapfigure}{L}{0.4\textwidth}
-   \tdplotsetmaincoords{80}{20}
+\begin{figure}[H]
+   \tdplotsetmaincoords{80}{-10}
    \centering
-   \begin{tikzpicture}[scale=0.5, tdplot_main_coords]
-      \draw[->] (-1, 0, 0) -- (4, 0, 0) node[right] {$o$};
-      \draw[->] (0, -3, 0) -- (0, 1, 0) node[above] {$p$};
-      \draw[->] (0, 0, -5) -- (0, 0, 1) node[above] {$q$};
-      \filldraw (3, -2, -4) circle (\pointSize * 2) node[above,font=\hptFntsize] {$\left(3; -2; -4\right)$};
-   \end{tikzpicture}
-   \caption{Đồ thị phần 4 bài \ref{ex:hpt1}}
-   \label{fig:hpt14}
-\end{wrapfigure}
+   \fbox{
+      \begin{tikzpicture}[tdplot_main_coords]
+         \draw[->] (-2, 0, 0) -- (6, 0, 0) node[right] {$o$};
+         \draw[->] (0, -2, 0) -- (0, 5, 0) node[above] {$p$};
+         \draw[->] (0, 0, -2) -- (0, 0, 5) node[above] {$q$};
+         \filldraw (0, 0, 0) circle (\pointSize) node[below left] {$\left(0; 0; 0\right)$};
+         \filldraw (1, 0, 0) circle (\pointSize) node[above] {$\left(1; 0; 0\right)$};
+         \filldraw (2, 0, 0) circle (\pointSize) node[below] {$\left(2; 0; 0\right)$};
+         \filldraw (4, 4, 4) circle (\pointSize) node[above] {$\left(4; 4; 4\right)$};
+         \filldraw (5, 4, 4) circle (\pointSize) node[below] {$\left(5; 4; 4\right)$};
+      \end{tikzpicture}
+   }
+   \caption{Đồ thị phần 3 bài \ref{ex:hpt1}}
+   \label{fig:hpt13}
+\end{figure}
 
 4. Theo đề, chúng ta cần tìm những bộ $(m;n;w)$ thỏa mãn $\mathcal{P}$, trong đó có $g(n) = h(w)$. Cho nên, $n$ phải thuộc tập xác định của $g$. Nhìn vào bảng, tập xác định đó là $\{0; -2; 4; -6; 8; -10\}$. Tuy nhiên, cũng có $f(m) = n$, cho nên $n$ vừa phải thuộc tập giá trị của $f$, hay $n \in \{-1; -2; -3\}$. Lấy giao của hai tập đó, chúng ta có $n = -2$. Từ đó, giải $f(m) = -2$ để có $m = 3$. Thêm vào đó, $h(w) = g(-2) = -2 \iff w = -4$.
 
 Bộ số duy nhất thỏa mãn hệ phương trình $\mathcal{P}$ là $\left(m; n; w\right) = \left(3; -2; -4\right)$. Đồ thị của $\mathcal{P}$ là hình \ref{fig:hpt14}.
+
+\begin{figure}[H]
+   \tdplotsetmaincoords{80}{20}
+   \centering
+   \fbox{
+      \begin{tikzpicture}[tdplot_main_coords]
+         \draw[->] (-1, 0, 0) -- (4, 0, 0) node[right] {$m$};
+         \draw[->] (0, -3, 0) -- (0, 1, 0) node[above] {$n$};
+         \draw[->] (0, 0, -5) -- (0, 0, 1) node[above] {$w$};
+         \filldraw (3, -2, -4) circle (\pointSize ) node[above] {$\left(3; -2; -4\right)$};
+      \end{tikzpicture}
+   }
+   \caption{Đồ thị phần 4 bài \ref{ex:hpt1}}
+   \label{fig:hpt14}
+\end{figure}
