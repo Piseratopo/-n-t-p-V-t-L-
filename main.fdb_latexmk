@@ -1,10 +1,10 @@
 # Fdb version 4
-["xdvipdfmx"] 1755455162.04129 "main.xdv" "main.pdf" "main" 1755455162.42922 0
-  "main.xdv" 1755455161 883968 05987934d2a34972e59fa970d94fd4a7 "xelatex"
+["xdvipdfmx"] 1755455537.37628 "main.xdv" "main.pdf" "main" 1755455537.83139 0
+  "main.xdv" 1755455537 883968 79209c2bf6dc8d57704056a176703880 "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1755455159.36505 "d:/OneDrive - Hanoi University of Science and Technology/Documents/Physics/-n-t-p-V-t-L-/main.tex" "main.xdv" "main" 1755455162.42413 0
+["xelatex"] 1755455534.78403 "d:/OneDrive - Hanoi University of Science and Technology/Documents/Physics/-n-t-p-V-t-L-/main.tex" "main.xdv" "main" 1755455537.8262 0
   "C:/Users/buinh/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1754119510 25521434 dbc151c24c532bc323b459e7df668540 ""
   "C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136747054 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -191,13 +191,13 @@
   "chapter/toan_hoc_nen_tang/do_thi/mat_phang.tex" 1755321828 9561 cb85078ebd5ffc60d0bc3160f6f0515e ""
   "chapter/toan_hoc_nen_tang/do_thi/truc_so.tex" 1755320573 11016 30ac1c805451084028aab3191fb4636d ""
   "chapter/toan_hoc_nen_tang/ham_so.tex" 1755453850 170 d157916cfb160c200cee8c6f85319aad ""
-  "chapter/toan_hoc_nen_tang/ham_so_mot_bien/dinh_nghia.tex" 1755455158 33044 1892c6a56b2e5e1308732d2241934e6f ""
+  "chapter/toan_hoc_nen_tang/ham_so_mot_bien/dinh_nghia.tex" 1755455534 33044 1892c6a56b2e5e1308732d2241934e6f ""
   "chapter/toan_hoc_nen_tang/ham_so_mot_bien/ham_so_cap.tex" 1755445776 14110 f000ca2191325cd3c2a6fededf8505fc ""
   "d:/OneDrive - Hanoi University of Science and Technology/Documents/Physics/-n-t-p-V-t-L-/main.tex" 1755224550 57221 382f6b296e0db9a7a22b0d53e3650d2c ""
-  "main.aux" 1755455161 21211 8fd356101c4dadafb0228c429bd46943 "xelatex"
-  "main.out" 1755455161 2609 9f4a797bf7714600eeedba203185348b "xelatex"
+  "main.aux" 1755455537 21211 8fd356101c4dadafb0228c429bd46943 "xelatex"
+  "main.out" 1755455537 2609 9f4a797bf7714600eeedba203185348b "xelatex"
   "main.tex" 1755224550 57221 382f6b296e0db9a7a22b0d53e3650d2c ""
-  "main.toc" 1755455161 1387 68b82cd2fec3d832d9ff75e4b66cf74c "xelatex"
+  "main.toc" 1755455537 1387 68b82cd2fec3d832d9ff75e4b66cf74c "xelatex"
   (generated)
   "main.aux"
   "main.log"

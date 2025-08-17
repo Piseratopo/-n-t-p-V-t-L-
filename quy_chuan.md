@@ -4,7 +4,7 @@ Tài liệu "Ôn tập Vật Lí" cần được viết theo quy chuẩn chính 
 
 ## Viết văn bản
 
-- Văn bản phải đúng quy tắc chính tả và ngữ pháp Việt Nam.
+- Văn bản đúng quy tắc chính tả và ngữ pháp Việt Nam.
 
 - Sử dụng `\dblquote{}` hoặc cặp `\textquotedblleft` và `\textquotedblright` thay cho dấu  " \" " thông thường.
 
@@ -22,7 +22,7 @@ Ví dụ: Tỉ số giữa chu vi và đường kính của một hình tròn l�
 
 - Số thập phân kí hiệu bằng dấu phẩy (","). Để đảm bảo rằng không có khoảng cách giữa phần nguyên và phần thập phân, sử dụng `{,}` để viết số thập phân. Ví dụ: $9{,}34$.
 
-- Kí hiệu tập hợp bằng kiểu liệt kê phần tử thì phân cách các phần tử bằng dấu `;`, kể cả các phần tử có phải là số hay không.
+- Kí hiệu tập hợp bằng kiểu liệt kê phần tử hay viết bộ số thì phân cách các phần tử bằng dấu `;`, kể cả các phần tử có phải là số hay không. Ví dụ: tập hợp $\left\{0; 1; 2\right\}$ hay bộ số $\left(a; b; c\right)$.
 
 ## Đặt tên cho thành phần
 
