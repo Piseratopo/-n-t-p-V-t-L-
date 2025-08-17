@@ -1,10 +1,10 @@
-\subsection{Định nghĩa hàm số và đại lượng liên quan đến hàm số}
+\subsection{Định nghĩa hàm số và những khái niệm liên quan}
 
 \ % Lùi đầu dòng
 
 Chúng ta gọi $f$ là một \emph{hàm số} (hay \emph{hàm}) đi từ tập $X$ đến tập $Y$ khi và chỉ khi với mọi $x\in X$, gọi là \emph{tập xác định}, thông qua mối liên hệ $f$ có một và chỉ một $y\in Y$ tương ứng với $x$. Câu vừa rồi có thể được tóm gọn trong một vài kí hiệu: \begin{align*}f: X &\to Y \\ x &\mapsto y.\end{align*} Khi này, chúng ta có thể viết mối liên hệ hàm số này dưới dạng biểu thức giải tích $y=f(x)$, gọi $y$ là hàm của $x$. Tuy nhiên, cần phải để ý rằng, thông qua định nghĩa này, mặc dù mọi $x$ trong $X$ phải có đầu ra trong $Y$, không phải mọi $y$ trong $Y$ đều phải có đầu vào trong $X$. Nói cách khác, tập tất cả các giá trị đầu ra có thể của $y=f(x)$, gọi là \emph{tập giá trị}, là tập con của tập $Y$.
 
-Khi chúng ta có định nghĩa hàm số thì chúng ta cũng sẽ có những khái niệm liên quan. Khi $f$ là một hàm số, thì bất cứ giá trị $a$ thuộc tập xác định để $f(a) = 0$ đều được gọi là \emph{nghiệm} của $f$. Mở rộng ra, với $f$ và $g$ là hai hàm số, bất cứ giá trị $a$ thỏa mãn $f(a) = g(a)$ thì $a$ được gọi là nghiệm của \emph{phương trình} $f(x) = g(x)$. Hơn thế nữa, nếu thay dấu $=$ trong câu vừa trước bởi các dấu $<$, $>$, $\leq$, $\geq$, $\neq$ thì chúng ta có định nghĩa cho nghiệm của \emph{bất phương trình}. Lấy ví dụ, với $f$ và $g$ là hai hàm số, giá trị $a$ để $f(a) \neq g(a)$ thì $a$ được gọi là nghiệm của bất phương trình $f(x) \neq g(x)$\footnote{Phần lớn các tại liệu khác quên mất sự tồn tại của dấu $\neq$ rồi. Trong tài liệu này, cũng không có nhiều cơ hội để dùng dấu $\neq$ cho nên tác giả sẽ cho nó nhiều \dblquote{đất diễn} nhất có thể.}. Kết hợp nhiều phương trình hay bất phương trình, chúng ta có một \emph{hệ}. Ví dụ:
+Khi chúng ta có định nghĩa hàm số thì chúng ta cũng sẽ có những khái niệm liên quan. Khi $f$ là một hàm số, thì bất cứ giá trị $a$ thuộc tập xác định để $f(a) = 0$ đều được gọi là \emph{nghiệm} của $f$. Mở rộng ra, với $f$ và $g$ là hai hàm số, bất cứ giá trị $a$ thỏa mãn $f(a) = g(a)$ thì $a$ được gọi là nghiệm của \emph{phương trình} $f(x) = g(x)$. Hơn thế nữa, nếu thay dấu $=$ trong câu vừa trước bởi các dấu $<$, $>$, $\leq$\footnote{Còn những kí hiệu khác cho dấu nhỏ hơn hoặc bằng là $\leqq$, $\leqslant$.}, $\geq$\footnote{Còn những kí hiệu khác cho dấu lơn hơn hoặc bằng là $\geqq$, $\geqslant$.}, $\neq$ thì chúng ta có định nghĩa cho nghiệm của \emph{bất phương trình}\footnote{Ngoài những dấu biểu diễn bất phương trình được kể, còn những dấu như $\nless$ (không nhỏ hơn), $\ngtr$ (không lớn hơn), $\nleq$, $\not \leqq$ hay $\nleqslant$ (không nhỏ hơn hoặc bằng), $\ngeq$, $\not \geqq$ hay $\ngeqslant$ (không lớn hơn hoặc bằng), và những dấu bị nguyền rủa $\lessgtr$ (nhỏ hơn hoặc lớn hơn), $\lesseqgtr$ hay $\lesseqqgtr$ (nhỏ hơn, lớn hơn hoặc bằng). Bạn đọc có thể sẽ muốn thêm các dấu $\not \lessgtr$ (không nhỏ hơn hay lớn hơn) và cặp dấu $\not \lesseqgtr$, $\not \lesseqqgtr$ (không nhỏ hơn, lớn hơn hay bằng) làm dấu cho bất phương trình. Tuy nhiên, trên tập số thực, $\not \lesseqgtr$ tương đương với dấu $=$, và bất phương trình với $\not \lesseqgtr$, $\not \lesseqqgtr$ thì không bao giờ thỏa mãn. Về mặt ứng dụng, ngoài những môn nặng về nền tảng của toán như đại số cao cấp, những dấu kể trên gần như không bao giờ được sử dụng.}. Lấy ví dụ, với $f$ và $g$ là hai hàm số, giá trị $a$ để $f(a) \neq g(a)$ thì $a$ được gọi là nghiệm của bất phương trình $f(x) \neq g(x)$. Kết hợp nhiều phương trình hay bất phương trình, chúng ta có một \emph{hệ}. Ví dụ:
 $$
 \begin{cases}
    f(x) = g(x) \\
@@ -13,11 +13,45 @@ $$
 $$
 Để thỏa mãn hệ thì mỗi thành phần trong hệ đều phải thỏa mãn.
 
-Nếu chỉ có số với chữ không thì hàm số sẽ chở nên rất đơn điệu, cho nên người ta đã nghĩ ra phương pháp biểu diễn hàm số qua đồ thị\footnote{\dblquote{Chỉ cần}? Đương nhiên là không đơn giản như vậy. Với hàm có vô số điểm thì thông thường người ta sẽ lấy một số lượng nhất định những điểm rồi nối lại. Mà kể cả như vậy, vẫn có trường hợp không vẽ được một cách thỏa đáng. Ví dụ như hàm Đi-rích-lê: $$f(x) =
+Nếu chỉ có số với chữ không thì hàm số sẽ chở nên rất đơn điệu, cho nên người ta đã nghĩ ra phương pháp biểu diễn hàm số qua đồ thị. Để biểu diễn một hàm số $y=f(x)$ với $x$ và $y$ là hai số thực, chỉ cần vẽ tất cả các cặp tọa độ $(x; y)$ thỏa mãn hàm $f$ trên đồ thị\footnote{\dblquote{Chỉ cần}? Đương nhiên là không đơn giản như vậy. Với hàm có vô số điểm thì thông thường hàm được biểu diễn bằng cách nối một số hữu hạn điểm trên đồ thị trên một khoảng không gian hữu hạn với hi vọng rằng người đọc có thể tự suy luận được hướng đi của đồ thị bên ngoài khu vực vẽ. Mặc dù vậy, vẫn có trường hợp mà cách vẽ này hoàn toàn bất lực. Ví dụ như hàm Đi-rích-lê: $$f(x) =
 \begin{cases}
    1 \text{ nếu } x\in \mathbb{Q} \\
    0 \text{ nếu } x\notin \mathbb{Q}
-\end{cases}$$ với $\mathbb{Q}$ là tập số hữu tỉ. Những hàm như thế này đã mang đến nhiều sự đau đầu cho những nhà toán học. Nhưng vẫn phải có những hàm \dblquote{dị thường} để kiểm chứng định lí, khi đó vật lí mới có niềm tin để áp dụng các định lí đó vào những hàm thông thường khác được.}. Để biểu diễn một hàm số $y=f(x)$, chỉ cần vẽ tất cả các cặp tọa độ $(x; y)$ thỏa mãn hàm $f$ trên đồ thị. Một cách tương tự, chúng ta cũng có thể biểu diễn phương trình và bất phương trình. Có bao nhiêu ẩn số trong phương trình/bất phương trình, đồ thị sẽ có bấy nhiêu chiều. Về mặt lợi ích của việc sử dụng đồ thị, biểu diễn hình học các đại lượng đại số là một trong những cách hữu hiệu để mở rộng cảm nhận về đối tượng đang nghiên cứu. 
+\end{cases}$$ với $\mathbb{Q}$ là tập số hữu tỉ. Hàm này liên tục \dblquote{nhảy múa} từ $0$ đến $1$ và ngược lại, khiến cho việc vẽ đồ thị trở thành một nhiệm vụ bất khả thi.
+
+Những hàm \dblquote{dị thường} như vậy từng khiến không ít nhà toán học phải vò đầu bứt tai. Thế nhưng, chính chúng lại đóng vai trò quan trọng trong việc kiểm tra độ chặt chẽ của các định lý. Nhờ có những ví dụ cực đoan như hàm Đi-rích-lê, chúng ta mới có thể xác định rõ ranh giới của lý thuyết, từ đó giúp vật lý yên tâm áp dụng các định lý ấy vào những hàm số thông thường hơn trong thực tế.}. Do hàm số biểu thị mối liên hệ giữa hai đại lượng, chúng ta dùng đồ thị hai chiều để biểu diễn mối liên hệ giữa chúng. Chúng ta sẽ lấy ví dụ cho hàm sau được cho trong bảng \ref{tab:ham_so_mot_bien:dinh_nghia:vddths} với tập xác định chỉ có $5$ số.
+
+\begin{table}[h]
+   \centering
+   \begin{tabular}{|c|c|c|c|c|c|}
+      \hline
+      $x$ & $1$ & $2$ & $3$ & $4$ & $5$ \\
+      \hline
+      $y$ & $2$ & $3$ & $4$ & $5$ & $6$ \\
+      \hline
+   \end{tabular}
+   \caption{Ví dụ của $y = f(x)$}
+   \label{tab:ham_so_mot_bien:dinh_nghia:vddths}
+\end{table}
+
+\noindent Chúng ta nhìn thấy rằng có $5$ bộ số $(x,y)$ là $(1;2)$, $(2;3)$, $(3;4)$, $(4;5)$, $(5;6)$ thỏa mãn hàm $f$ (theo đúng định nghĩa của hàm). Do đó, chúng ta có đồ thị như hình \ref{fig:ham_so_mot_bien:dinh_nghia:vddths}. 
+
+\begin{figure}[h]
+   \centering
+   \begin{tikzpicture}
+      \draw[->] (-1, 0) -- (5, 0) node[right] {$x$};
+      \draw[->] (0, -1) -- (0, 7) node[above] {$y$};
+      \filldraw (1, 2) circle (\pointSize) node[below] {$1$};
+      \filldraw (2, 3) circle (\pointSize) node[below] {$2$};
+      \filldraw (3, 4) circle (\pointSize) node[below] {$3$};
+      \filldraw (4, 5) circle (\pointSize) node[below] {$4$};
+      \filldraw (5, 6) circle (\pointSize) node[below] {$5$};
+   \end{tikzpicture}
+   \caption{Đồ thị cho ví dụ của $y = f(x)$ được cho ở bảng \ref{tab:ham_so_mot_bien:dinh_nghia:vddths}}
+   \label{fig:ham_so_mot_bien:dinh_nghia:vddths}
+\end{figure}
+
+Một cách tương tự, chúng ta cũng có thể biểu diễn phương trình và bất phương trình. Có bao nhiêu ẩn số trong phương trình/bất phương trình, đồ thị sẽ có bấy nhiêu chiều. Các ví dụ cụ thể sẽ được thể hiện trong phần bài tập của phần này. Về mặt lợi ích của việc sử dụng đồ thị, biểu diễn hình học các đại lượng đại số là một trong những cách hữu hiệu để mở rộng cảm nhận về đối tượng đang nghiên cứu. 
       
 \exercise Mỗi phần trong bài tập sau bao gồm mối liên hệ giữa $x$ và $y$. Trong mỗi phần, $y$ có phải là hàm của $x$ hay không? Trong trường hợp $y$ là hàm số của $x$, xác định tập xác định và tập giá trị của hàm số đó. Còn trong trường hợp ngược lại, giải thích tại sao $y$ lại không phải là hàm số của $x$.
 
@@ -158,7 +192,7 @@ Nếu chỉ có số với chữ không thì hàm số sẽ chở nên rất đ�
       \end{tikzpicture}
    }
    \caption{Đồ thị phần 1 bài \ref{intropt}}
-   \label{fig:dtp1}
+   \label{fig:ham_so_mot_bien:dinh_nghia:dtp1}
 \end{wrapfigure}
 
 Giải phương trình:
@@ -167,7 +201,7 @@ Giải phương trình:
    \iff &x^2 = 1 \\
    \iff &x \in \{-1; 1\}
 \end{align*}
-và từ đó, đồ thị của $\mathcal{P}$ có được như hình \ref{fig:dtp1}.
+và từ đó, đồ thị của $\mathcal{P}$ có được như hình \ref{fig:ham_so_mot_bien:dinh_nghia:dtp1}.
 }
 
 \begin{wrapfigure}{R}{0.5\textwidth}
@@ -181,13 +215,13 @@ và từ đó, đồ thị của $\mathcal{P}$ có được như hình \ref{fig:
       \end{tikzpicture}
    }
    \caption{Đồ thị phần 2 bài \ref{intropt}}
-   \label{fig:dtp2}
+   \label{fig:ham_so_mot_bien:dinh_nghia:dtp2}
 \end{wrapfigure}
 2. $\mathcal{P}$ là phương trình chỉ có một ẩn $x$, do đó đồ thị của $\mathcal{P}$ chỉ là đồ thị một chiều trên một trục số biểu diễn cho $x$. 
 
-Có ba giá trị để $f(x)$ bằng $0$: $x\in \{-1; 1; -3\}$. Chúng ta có đồ thị của $\mathcal{P}$ ở hình \ref{fig:dtp2}.
+Có ba giá trị để $f(x)$ bằng $0$: $x\in \{-1; 1; -3\}$. Chúng ta có đồ thị của $\mathcal{P}$ ở hình \ref{fig:ham_so_mot_bien:dinh_nghia:dtp2}.
 
-3. Tập xác định của $f(x)$ là $\{-1; 1; -2; 2; -3; 3\}$, do đó, để $\mathcal{P}$ thỏa mãn thì $x$ chí có thể nhận các giá trị trong vùng tập xác định.
+3. Tập xác định của $f(x)$ là $\{-1; 1; -2; 2; -3; 3\}$, do đó, để $\mathcal{P}$ thỏa mãn thì $x$ chỉ có thể nhận các giá trị trong vùng tập xác định.
 
 {
    \begin{wrapfigure}{R}{0.5\textwidth}
@@ -202,7 +236,7 @@ Có ba giá trị để $f(x)$ bằng $0$: $x\in \{-1; 1; -3\}$. Chúng ta có �
          \end{tikzpicture}
       }
       \caption{Đồ thị phần 3 bài \ref{intropt}}
-      \label{fig:dtp3}
+      \label{fig:ham_so_mot_bien:dinh_nghia:dtp3}
    \end{wrapfigure}
    Kẻ bảng so sánh:
    \begin{table}[h]
@@ -218,11 +252,11 @@ Có ba giá trị để $f(x)$ bằng $0$: $x\in \{-1; 1; -3\}$. Chúng ta có �
                \hline
             \end{tabular}
             \caption{Giá trị của $f(x)$ và $x^2-1$ ứng với $x$}
-            \label{tab:values3}
+            \label{tab:ham_so_mot_bien:dinh_nghia:values3}
       \end{minipage}
    \end{table}
 
-   Nhận thấy rằng $\mathcal{P}$ chỉ đúng khi $x\in \{-1; 1; -3; 2\}$ và chúng ta có đồ thị là hình \ref{fig:dtp3}.
+   Nhận thấy rằng $\mathcal{P}$ chỉ đúng khi $x\in \{-1; 1; -3; 2\}$ và chúng ta có đồ thị là hình \ref{fig:ham_so_mot_bien:dinh_nghia:dtp3}.
 }
 
 \begin{wrapfigure}{R}{0.5\textwidth}
@@ -236,9 +270,9 @@ Có ba giá trị để $f(x)$ bằng $0$: $x\in \{-1; 1; -3\}$. Chúng ta có �
       \end{tikzpicture}
    }
    \caption{Đồ thị phần 4 bài \ref{intropt}}
-   \label{fig:dtp4}
+   \label{fig:ham_so_mot_bien:dinh_nghia:dtp4}
 \end{wrapfigure}
-4. Nhìn vào bảng được cho, có $f(x) = g(x)$ khi và chỉ khi $x\in \{2; 3; 4\}$. Do đó, đồ thị của $\mathcal{P}$ có được như hình \ref{fig:dtp4}.
+4. Nhìn vào bảng được cho, có $f(x) = g(x)$ khi và chỉ khi $x\in \{2; 3; 4\}$. Do đó, đồ thị của $\mathcal{P}$ có được như hình \ref{fig:ham_so_mot_bien:dinh_nghia:dtp4}.
 
 5. $\mathcal{P}$ là phương trình có hai ẩn $x$ và $y$, do đó đồ thị của $\mathcal{P}$ là một mặt phẳng hai chiều. Coi như trục hoành biểu diễn cho $x$ và trục tung biểu diễn cho $y$. 
 
@@ -254,10 +288,10 @@ Có ba giá trị để $f(x)$ bằng $0$: $x\in \{-1; 1; -3\}$. Chúng ta có �
       \hline 
    \end{tabular}
    \caption{Giá trị của $x$ và $y$ ứng với $B_n$}
-   \label{tab:bn_values}
+   \label{tab:ham_so_mot_bien:dinh_nghia:bn_values}
 \end{wraptable}
 
-Để có thể vẽ được đồ thị của $\mathcal{P}$, hiển nhiên nhìn ra được rằng cần phải có những điểm $(x;y)$ để hai giá trị $f(x)$ và $g(y)$ bằng nhau. Và để làm được điều đó, trước hết, chúng ta sẽ tìm xem giá trị bằng nhau của $f(x)$ với $g(y)$ này bằng bao nhiêu. Gọi chung giá trị bằng nhau này là $B_n$. Kẻ lại bảng so sánh thành bảng \ref{tab:bn_values}, với $B_n$ là ra trị đầu ra và $x$, $y$ là giá trị lần lượt đưa vào hai hàm $f$ và $g$ để có giá trị đầu ra đó. Và từ đó, chúng ta có đồ thị của $\mathcal{P}$ là hình \ref{fig:dtp5}.
+Để có thể vẽ được đồ thị của $\mathcal{P}$, hiển nhiên nhìn ra được rằng cần phải có những điểm $(x;y)$ để hai giá trị $f(x)$ và $g(y)$ bằng nhau. Và để làm được điều đó, trước hết, chúng ta sẽ tìm xem giá trị bằng nhau của $f(x)$ với $g(y)$ này bằng bao nhiêu. Gọi chung giá trị bằng nhau này là $B_n$. Kẻ lại bảng so sánh thành bảng \ref{tab:ham_so_mot_bien:dinh_nghia:bn_values}, với $B_n$ là giá trị đầu ra và $x$, $y$ là giá trị lần lượt đưa vào hai hàm $f$ và $g$ để có giá trị đầu ra đó. Và từ đó, chúng ta có đồ thị của $\mathcal{P}$ là hình \ref{fig:ham_so_mot_bien:dinh_nghia:dtp5}.
 
 \begin{figure}[h]
    \centering
@@ -272,7 +306,7 @@ Có ba giá trị để $f(x)$ bằng $0$: $x\in \{-1; 1; -3\}$. Chúng ta có �
       \end{tikzpicture}
    }
    \caption{Đồ thị phần 5 bài \ref{intropt}}
-   \label{fig:dtp5}
+   \label{fig:ham_so_mot_bien:dinh_nghia:dtp5}
 \end{figure}
 
 6. $\mathcal{P}$ là phương trình có hai ẩn $x$ và $b$, do đó đồ thị của $\mathcal{P}$ là một mặt phẳng hai chiều. Coi như trục hoành biểu diễn cho $x$ và trục tung biểu diễn cho $b$.
@@ -283,7 +317,7 @@ Giải ngược $b$ từ $f(x)$:
    \iff b &= \frac{f(x) + 1}{2}.
 \end{align*}
 
-Từ đây, chúng ta có thể thêm giá trị của $b$ vào bảng được cho thành bảng \ref{tab:b_values6}
+Từ đây, chúng ta có thể thêm giá trị của $b$ vào bảng được cho thành bảng \ref{tab:ham_so_mot_bien:dinh_nghia:b_values6}
 
 \begin{table}[h]
    \centering
@@ -297,10 +331,10 @@ Từ đây, chúng ta có thể thêm giá trị của $b$ vào bảng được 
       \hline
    \end{tabular}
    \caption{Giá trị của $b$ ứng với $x$}
-   \label{tab:b_values6}
+   \label{tab:ham_so_mot_bien:dinh_nghia:b_values6}
 \end{table}
 
-Qua bảng đó, vẽ được đồ thị của $\mathcal{P}$ như hình \ref{fig:dtp6}.
+Qua bảng đó, vẽ được đồ thị của $\mathcal{P}$ như hình \ref{fig:ham_so_mot_bien:dinh_nghia:dtp6}.
 
 \begin{figure}[h]
    \centering
@@ -317,12 +351,12 @@ Qua bảng đó, vẽ được đồ thị của $\mathcal{P}$ như hình \ref{f
       \end{tikzpicture}
    }
    \caption{Đồ thị phần 6 bài \ref{intropt}}
-   \label{fig:dtp6}
+   \label{fig:ham_so_mot_bien:dinh_nghia:dtp6}
 \end{figure}
 
-7. Nhìn vào bảng, $f(x)$ có thể nhận các giá trị là $\{0; 3; 4; 7\}$.
+7. Nhìn vào bảng định nghĩa được cho, $f(x)$ có thể nhận các giá trị là $\{0; 3; 4; 7\}$.
 
-Khi $f(x) \neq 0$, chỉ có một giá trị đầu vào cho $f$ sao cho $f(x)$ đạt được giá trị đầu ra. Ví dụ, chỉ có đầu vào $x = 2$ mới có $f(x) = 3$. Do đó, khi $f(x) \neq 0$, $x = 2b-1$. Biến đổi đại số cơ bản để có $b = \frac{x + 1}{2}$. Kẻ bảng:
+Khi $f(x) \neq 0$, chỉ có một giá trị đầu vào cho $f$ sao cho $f(x)$ đạt được giá trị đầu ra. Ví dụ, chỉ có đầu vào $x = 2$ mới có $f(x) = 3$. Do đó, khi $f(x) \neq 0$, $x = 2b-1$. Biến đổi đại số cơ bản để có $b = \frac{x + 1}{2}$. Lập bảng:
 
 \begin{table}[h]
    \centering
@@ -334,7 +368,7 @@ Khi $f(x) \neq 0$, chỉ có một giá trị đầu vào cho $f$ sao cho $f(x)$
       \hline
    \end{tabular}
    \caption{Giá trị của cặp $(x; b)$ với $f(x) \neq 0$}
-   \label{tab:b_values7}
+   \label{tab:ham_so_mot_bien:dinh_nghia:b_values7}
 \end{table}
 
 Khi $f(x) = 0$, $x$ và $2b-1$ có thể nhận bất cứ giá trị nào trong tập $\{-1; 1; -3\}$. Từ đó, có thể chọn $x \in \{-1; 1; 3\}$ và giải đại số để chọn $b \in \left\{\frac{-1+1}{2}; \frac{1+1}{2}; \frac{3+1}{2}\right\} = \{0; 1; 2\}$. Các cặp $(x; b)$ thỏa mãn là $(x; b) \in \left\{\left(-1; 0\right); \left(-1; 1\right); \left(-1; 2\right); \left(1; 0\right); \left(1; 1\right); \left(1; 2\right); \left(-3; 0\right); \left(-3; 1\right); \left(-3; 2\right)\right\}$.
@@ -367,18 +401,24 @@ Cuối cùng, kết hợp hai trường hợp, chúng ta có đồ thị cho $\m
       \end{tikzpicture}
    }
    \caption{Đồ thị phần 7 bài \ref{intropt}}
-   \label{fig:dtp7}
+   \label{fig:ham_so_mot_bien:dinh_nghia:dtp7}
 \end{figure}
 
-8. $\mathcal{P}$ là phương trình có ba ẩn $a$, $b$ và $c$, do đó đồ thị của $\mathcal{P}$ là một mặt phẳng ba chiều. Coi như trục hoành biểu diễn cho $a$, trục tung biểu diễn cho $b$ và trục cao biểu diễn cho $c$.
+8. $\mathcal{P}$ là phương trình có ba ẩn $a$, $b$ và $c$, do đó đồ thị của $\mathcal{P}$ là một không gian ba chiều với các trục hoành, trục tung và trục cao tương ứng là $a$, $b$ và $c$.
 
 Theo $\mathcal{P}$, chúng ta cần phải chọn ba số trong tập giá trị của $f$ để hai trong ba số có tổng bằng số còn lại. Từ bảng, nhận thấy rằng, chỉ có thể có hai tổng $4 + 3 = 7$ và $0 + 0 = 0$.
 
-Xét trường hợp đầu tiên, chúng ta có $f(c) = 7$ và $\left(f(a); f(b)\right) \in \left\{\left(4; 3\right); \left(3; 4\right)\right\}$. Tìm ngược lại đầu vào để được $(a; b; c) \in \left\{\left(2; -2; -3\right); \left(-2; 2; -3\right)\right\}$.
+Chúng ta cần tìm tất cả các bộ ba $(a, b, c)$ thỏa mãn $f(a) + f(b) = f(c)$. Xét hai trường hợp sau:
 
-Xét trường hợp thứ hai, chúng ta có $f(a) = f(b) = f(c) = 0$. Từ đó, $a$, $b$ và $c$ có thể nhận bất cứ giá trị nào trong tập $\{-3; -1; 1\}$.
+\textbf{Trường hợp 1:} Tổng hai số khác 0. Để $f(a) + f(b) = f(c)$, chỉ có thể xảy ra khi $3 + 4 = 7$. Do đó, $(f(a); f(b); f(c))$ phải là $(3; 4; 7)$ hoặc $(4; 3; 7)$. Tra ngược lại bảng giá trị, chúng ta có hai nghiệm:
+  \begin{itemize}
+     \item $f(a)=3, f(b)=4 \implies a=2, b=-2 \implies c=-3$ (vì $f(-3)=7$)
+     \item $f(a)=4, f(b)=3 \implies a=-2, b=2 \implies c=-3$
+  \end{itemize}
 
-Kết hợp hai trường hợp, đồ thị cuối cùng của $\mathcal{P}$ sẽ là hình \ref{fig:dtp8}.
+\textbf{Trường hợp 2:} Tất cả bằng 0. Khi $f(a) = f(b) = f(c) = 0$, từ bảng định nghĩa, $f(x)=0$ khi $x \in \{-3; -1; 1\}$. Do đó, $a, b, c$ có thể nhận bất kỳ giá trị nào trong tập $\{-3; -1; 1\}$. Có tổng cộng $3^3 = 27$ bộ ba thỏa mãn trong trường hợp này.
+
+Kết hợp hai trường hợp, đồ thị của $\mathcal{P}$ sẽ gồm 29 điểm trong không gian 3 chiều (2 điểm từ trường hợp 1 và 27 điểm từ trường hợp 2), được biểu diễn trong hình \ref{fig:ham_so_mot_bien:dinh_nghia:dtp8}.
 
 \begin{figure}[H]
    \centering
@@ -398,12 +438,12 @@ Kết hợp hai trường hợp, đồ thị cuối cùng của $\mathcal{P}$ s�
             1/-1/-3, 1/-1/-1, 1/-1/1, 1/1/-3, 1/1/-1, 1/1/1
          } {
             \filldraw (\x, \y, \z) circle (\pointSize);
-            \node[font=\scriptsize, anchor=east] at (\x, \y, \z) {$\left(\x, \y, \z\right)$};
+            \node[font=\scriptsize, anchor=east] at (\x, \y, \z) {$\left(\x; \y; \z\right)$};
          }
       \end{tikzpicture}
    }
    \caption{Đồ thị phần 8 bài \ref{intropt}}
-   \label{fig:dtp8}
+   \label{fig:ham_so_mot_bien:dinh_nghia:dtp8}
 \end{figure}
 
 \exercise[ex:hpt1] Vẽ đồ thị của hệ phương trình $\mathcal{P}$, với các định nghĩa đã cho. Hàm có tập xác định là bộ số đầu vào cho ở trong bảng.
@@ -550,7 +590,7 @@ Kết hợp ba trường hợp, xây dựng không gian tọa độ, chúng ta c
    \label{fig:hpt12}
 \end{figure}
 
-3. Để $f$ và $g$ nhận cùng một giá trị thì giá trị đầu ra đó, theo bảng, phải là $-1$, $-2$ hoặc $-3$.
+3. Để $f$ và $g$ nhận cùng một giá trị thì giá trị đầu ra đó, theo bảng định nghĩa được cho, kết quả mà hàm trả ra phải là $-1$, $-2$ hoặc $-3$.
 \begin{itemize}
    \item Tại $f(o) = g(p) = -1$, $o \in \{0; 1; 2\}$ và $p = 0$. Từ đó, $f(p + 1) = f(1) = -1$. Khi này, $h(q) = -1 \iff q = 0$.
    \item Tại $f(o) = g(p) = -2$, sau khi tra bảng, chúng ta thấy được rằng $\begin{cases}o = 3\\p = -2\end{cases}$; suy ra $f(p + 1) = f(-1)$, Tuy nhiên, $-1$ không thuộc tập xác định của $f$. Vậy, chúng ta sẽ loại trường hợp này.

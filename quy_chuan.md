@@ -8,10 +8,6 @@ Tài liệu "Ôn tập Vật Lí" cần được viết theo quy chuẩn chính 
 
 - Sử dụng `\dblquote{}` hoặc cặp `\textquotedblleft` và `\textquotedblright` thay cho dấu  " \" " thông thường.
 
-## Số
-
-- Số thập phân kí hiệu bằng dấu phẩy (","). Để đảm bảo rằng không có khoảng cách giữa phần nguyên và phần thập phân, sử dụng `{,}` để viết số thập phân. Ví dụ: $9{,}34$.
-
 ## Kí hiệu
 
 - Đảm bảo kí hiệu thống nhất trong tài liệu, trong đó bao gồm tên, kiểu hoa/thường, kiểu phông, kích cỡ, ...
@@ -23,3 +19,11 @@ Ví dụ: Tỉ số giữa chu vi và đường kính của một hình tròn l�
 - Khi mà đáp án bị phân mảnh thì nên có một đoạn tóm tắt để vừa tổng gọn lại kết quả, vừa dễ đóng khung.
 
 - Với bài yêu cầu chứng minh, thì viết "Qua đó, có được điều phải chứng minh." hoặc những câu mang ý nghĩa tương đương.
+
+- Số thập phân kí hiệu bằng dấu phẩy (","). Để đảm bảo rằng không có khoảng cách giữa phần nguyên và phần thập phân, sử dụng `{,}` để viết số thập phân. Ví dụ: $9{,}34$.
+
+- Kí hiệu tập hợp bằng kiểu liệt kê phần tử thì phân cách các phần tử bằng dấu `;`, kể cả các phần tử có phải là số hay không.
+
+## Đặt tên cho thành phần
+
+Với những thành phần có `\label{}` thì đặt tên theo quy tắc sau: "Kiểu thành phần"`:`"Đường dẫn đến tệp chứ thành phần"`:`"Tên thành phần". Ví dụ: `fig:ham_so:ham_so_cap:x_2`. Viết thế này để tránh xung đột tên giữa các thành phần có cùng tên ở những tệp khác nhau.
