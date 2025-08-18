@@ -11,9 +11,9 @@ $$
    \alpha(y) \neq \beta(z)
 \end{cases}.
 $$
-Để thỏa mãn hệ thì mỗi thành phần trong hệ đều phải thỏa mãn.
+Để thỏa mãn hệ thì mỗi thành phần trong hệ đều phải thỏa mãn. Một khái niệm liên quan mật thiết là \emph{giải} phương trình, bất phương trình, hay hệ (để ngắn gọn, chúng ta sẽ gọi phương trình, bất phương trình và hệ thành một cụm từ chung là \dblquote{phương bất hệ}). Để làm được việc này, yêu cầu cần tìm tất cả các bộ số đẻ phương bất hệ được cho thỏa mãn.
 
-Nếu chỉ có số với chữ không thì hàm số sẽ chở nên rất đơn điệu, cho nên người ta đã nghĩ ra phương pháp biểu diễn hàm số qua đồ thị. Để biểu diễn một hàm số $y=f(x)$ với $x$ và $y$ là hai số thực, chỉ cần vẽ tất cả các cặp tọa độ $(x; y)$ thỏa mãn hàm $f$ trên đồ thị\footnote{\dblquote{Chỉ cần}? Đương nhiên là không đơn giản như vậy. Với hàm có vô số điểm thì thông thường hàm được biểu diễn bằng cách nối một số hữu hạn điểm trên đồ thị trên một khoảng không gian hữu hạn với hi vọng rằng người đọc có thể tự suy luận được hướng đi của đồ thị bên ngoài khu vực vẽ. Mặc dù vậy, vẫn có trường hợp mà cách vẽ này hoàn toàn bất lực. Ví dụ như hàm Đi-rích-lê: $$f(x) =
+Nếu chỉ có số với chữ không thì hàm số sẽ trở nên rất nhàm chán, cho nên người ta đã nghĩ ra phương pháp biểu diễn hàm số qua đồ thị. Để biểu diễn một hàm số $y=f(x)$ với $x$ và $y$ là hai số thực, chỉ cần vẽ tất cả các cặp tọa độ $(x; y)$ thỏa mãn hàm $f$ trên đồ thị\footnote{\dblquote{Chỉ cần}? Đương nhiên là không đơn giản như vậy. Với hàm có vô số điểm thì thông thường hàm được biểu diễn bằng cách nối một số hữu hạn điểm trên đồ thị trên một khoảng không gian hữu hạn với hi vọng rằng người đọc có thể tự suy luận được hướng đi của đồ thị bên ngoài khu vực vẽ. Mặc dù vậy, vẫn có trường hợp mà cách vẽ này hoàn toàn bất lực. Ví dụ như hàm Đi-rích-lê: $$f(x) =
 \begin{cases}
    1 \text{ nếu } x\in \mathbb{Q} \\
    0 \text{ nếu } x\notin \mathbb{Q}
@@ -27,7 +27,7 @@ Những hàm \dblquote{dị thường} như vậy từng khiến không ít nhà
       \hline
       $x$ & $1$ & $2$ & $3$ & $4$ & $5$ \\
       \hline
-      $y$ & $2$ & $3$ & $4$ & $5$ & $6$ \\
+      $y=f(x)$ & $2$ & $3$ & $4$ & $5$ & $6$ \\
       \hline
    \end{tabular}
    \caption{Ví dụ của $y = f(x)$}
@@ -51,7 +51,7 @@ Những hàm \dblquote{dị thường} như vậy từng khiến không ít nhà
    \label{fig:ham_so_mot_bien:dinh_nghia:vddths}
 \end{figure}
 
-Một cách tương tự, chúng ta cũng có thể biểu diễn phương trình và bất phương trình. Có bao nhiêu ẩn số trong phương trình/bất phương trình, đồ thị sẽ có bấy nhiêu chiều. Các ví dụ cụ thể sẽ được thể hiện trong phần bài tập của phần này. Về mặt lợi ích của việc sử dụng đồ thị, biểu diễn hình học các đại lượng đại số là một trong những cách hữu hiệu để mở rộng cảm nhận về đối tượng đang nghiên cứu. 
+Một cách tương tự, chúng ta cũng có thể biểu diễn phương bất hệ thông qua việc vẽ đồ thị chứa các nghiệm của phương bất hệ đó. Có bao nhiêu ẩn số trong phương bất hệ, đồ thị sẽ có bấy nhiêu chiều. Các ví dụ cụ thể sẽ được thể hiện trong phần bài tập của phần này. Về mặt lợi ích của việc sử dụng đồ thị, biểu diễn hình học các đại lượng đại số là một trong những cách hữu hiệu để mở rộng cảm nhận về đối tượng đang nghiên cứu.
       
 \exercise Mỗi phần trong bài tập sau bao gồm mối liên hệ giữa $x$ và $y$. Trong mỗi phần, $y$ có phải là hàm của $x$ hay không? Trong trường hợp $y$ là hàm số của $x$, xác định tập xác định và tập giá trị của hàm số đó. Còn trong trường hợp ngược lại, giải thích tại sao $y$ lại không phải là hàm số của $x$.
 
@@ -575,15 +575,18 @@ Kết hợp ba trường hợp, xây dựng không gian tọa độ, chúng ta c
    \fbox{
       \tdplotsetmaincoords{80}{-10}
       \begin{tikzpicture}[tdplot_main_coords]
-         \draw[->] (-3, 0, 0) -- (6, 0, 0) node[right] {$a$};
-         \draw[->] (0, -2, 0) -- (0, 5, 0) node[above] {$b$};
-         \draw[->] (0, 0, -5) -- (0, 0, 5) node[above] {$c$};
-         \filldraw (0, 0, 0) circle (\pointSize) node[below left] {$\left(0; 0; 0\right)$};
-         \filldraw (1, 0, 0) circle (\pointSize) node[above] {$\left(1; 0; 0\right)$};
-         \filldraw (2, 0, 0) circle (\pointSize) node[below] {$\left(2; 0; 0\right)$};
-         \filldraw (3, -2, -4) circle (\pointSize) node[above] {$\left(3; -2; -4\right)$};
-         \filldraw (4, 4, 4) circle (\pointSize) node[above] {$\left(4; 4; 4\right)$};
-         \filldraw (5, 4, 4) circle (\pointSize) node[below] {$\left(5; 4; 4\right)$};
+         \draw[->] (-1.5, 0, 0) -- (3, 0, 0) node[right] {$a$};
+         \draw[->] (0, -1, 0) -- (0, 2.5, 0) node[above] {$b$};
+         \draw[->] (0, 0, -2.5) -- (0, 0, 2.5) node[above] {$c$};
+         \foreach \x/\y/\z/\pos [count=\i] in {
+            0/0/0/below left,
+            1/0/0/above,
+            2/0/0/below,
+            3/-2/-4/above,
+            4/4/4/above,
+            5/4/4/below} {
+               \filldraw ({\x/2}, {\y/2}, {\z/2}) circle (\pointSize) node[\pos] {$\left(\x; \y; \z\right)$};
+         }
       \end{tikzpicture}
    }
    \caption{Đồ thị phần 2 bài \ref{ex:hpt1}}
@@ -603,14 +606,17 @@ Cuối cùng, vẽ đồ thị để được hình \ref{fig:hpt13}.
    \centering
    \fbox{
       \begin{tikzpicture}[tdplot_main_coords]
-         \draw[->] (-2, 0, 0) -- (6, 0, 0) node[right] {$o$};
-         \draw[->] (0, -2, 0) -- (0, 5, 0) node[above] {$p$};
-         \draw[->] (0, 0, -2) -- (0, 0, 5) node[above] {$q$};
-         \filldraw (0, 0, 0) circle (\pointSize) node[below left] {$\left(0; 0; 0\right)$};
-         \filldraw (1, 0, 0) circle (\pointSize) node[above] {$\left(1; 0; 0\right)$};
-         \filldraw (2, 0, 0) circle (\pointSize) node[below] {$\left(2; 0; 0\right)$};
-         \filldraw (4, 4, 4) circle (\pointSize) node[above] {$\left(4; 4; 4\right)$};
-         \filldraw (5, 4, 4) circle (\pointSize) node[below] {$\left(5; 4; 4\right)$};
+         \draw[->] (-1, 0, 0) -- (3, 0, 0) node[right] {$o$};
+         \draw[->] (0, -1, 0) -- (0, 2.5, 0) node[above] {$p$};
+         \draw[->] (0, 0, -1) -- (0, 0, 2.5) node[above] {$q$};
+         \foreach \x/\y/\z/\pos in {
+            0/0/0/below left,
+            1/0/0/above,
+            2/0/0/below,
+            4/4/4/above,
+            5/4/4/below} {
+               \filldraw ({\x/2}, {\y/2}, {\z/2}) circle (\pointSize) node[\pos] {$\left(\x; \y; \z\right)$};
+         }
       \end{tikzpicture}
    }
    \caption{Đồ thị phần 3 bài \ref{ex:hpt1}}
@@ -626,10 +632,10 @@ Bộ số duy nhất thỏa mãn hệ phương trình $\mathcal{P}$ là $\left(m
    \centering
    \fbox{
       \begin{tikzpicture}[tdplot_main_coords]
-         \draw[->] (-1, 0, 0) -- (4, 0, 0) node[right] {$m$};
-         \draw[->] (0, -3, 0) -- (0, 1, 0) node[above] {$n$};
-         \draw[->] (0, 0, -5) -- (0, 0, 1) node[above] {$w$};
-         \filldraw (3, -2, -4) circle (\pointSize ) node[above] {$\left(3; -2; -4\right)$};
+         \draw[->] (-0.5, 0, 0) -- (2, 0, 0) node[right] {$m$};
+         \draw[->] (0, -1.5, 0) -- (0, 0.5, 0) node[above] {$n$};
+         \draw[->] (0, 0, -2.5) -- (0, 0, 0.5) node[above] {$w$};
+         \filldraw (1.5, -1, -2) circle (\pointSize ) node[above] {$\left(3; -2; -4\right)$};
       \end{tikzpicture}
    }
    \caption{Đồ thị phần 4 bài \ref{ex:hpt1}}

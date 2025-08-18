@@ -22,8 +22,8 @@
    \refstepcounter{exercise}
    \noindent\textbf{Bài \arabic{exercise}:}
    \IfNoValueTF{#1}
-     {\label{ex\arabic{exercise}}}
-     {\label{#1}}
+      {\label{ex\arabic{exercise}}}
+      {\label{#1}}
 }
 
 % Counter for solutions
@@ -41,14 +41,17 @@
 
 \newcommand\dblquote[1]{\textquotedblleft #1\textquotedblright}
 \newcommand{\chapdir}{chapter/}
+\renewcommand{\thefigure}{\thechapter.\arabic{figure}}
+\renewcommand{\thetable}{\thechapter.\arabic{table}}
+
+\numberwithin{equation}{chapter}
 
 \begin{document}
 
 \maketitle
 
 \setcounter{chapter}{-1}
-\renewcommand{\thefigure}{\thechapter.\arabic{figure}}
-\renewcommand{\thetable}{\thechapter.\arabic{table}}
+
 \tableofcontents
 
 \chapter*{Lời giới thiệu}

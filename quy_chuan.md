@@ -8,6 +8,10 @@ Tài liệu "Ôn tập Vật Lí" cần được viết theo quy chuẩn chính 
 
 - Sử dụng `\dblquote{}` hoặc cặp `\textquotedblleft` và `\textquotedblright` thay cho dấu  " \" " thông thường.
 
+## Đại từ nhân xưng
+
+Khi dùng ngôi thứ nhất mà không chỉ bạn đọc, dùng "tác giả". Khi dùng ngôi thứ hai, dùng "bạn đọc". Khi dùng ngôi thứ nhất số nhiều mà bao gồm cả người đọc, dùng "chúng ta".
+
 ## Kí hiệu
 
 - Đảm bảo kí hiệu thống nhất trong tài liệu, trong đó bao gồm tên, kiểu hoa/thường, kiểu phông, kích cỡ, ...

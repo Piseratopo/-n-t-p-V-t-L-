@@ -103,6 +103,142 @@ Dưới đây là đồ thị của các hàm đa thức trong bài:
    \end{minipage}
 \end{figure}
 
+\exercise Giải những phương trình sau. Các phương trình đều có ẩn là $x \in \mathbb{R}$.
+\begin{multicols}{2}
+   \begin{enumerate}
+      \item $3x - 7 = 0$;
+      \item $x - 9 = 5x + 3$;
+      \item $\frac{1}{v}\cdot x - \frac{1}{v} \cdot x_0 = t$, với $v$, $x_0$, $t$ là những tham số thực;
+      \item $6x^2 - 5x - 21 = 0$;
+      \item $5x^2 - 50x + 125 = 0$;
+      \item $x^2 + 2x + 4 = 0$;
+      \item $x^2 + 2x + 4 = 8$;
+      \item $5x^2 - 20x + 20 = x^2 - 4$;
+      \item $\frac{1}{2}kx^2 + \frac{1}{2}mv^2 = \frac{1}{2}kx_0^2$, với $k$, $m$, $v$, $x_0$ là những tham số thực;
+      \item $x^3 - \frac{11}{6}\cdot x^2 + x - \frac{1}{6} = 0$;
+      \item $2x^3 - 2x^2 + 2x - 2 = 6 + 6x^2$.
+   \end{enumerate}
+\end{multicols}
+
+\solution
+
+1. Biến đổi tương đương phương trình để có:
+\begin{align*}
+   3x - 7 &= 0 \\
+   \iff 3x &= 7\\
+   \iff x &= \frac{7}{3}.
+\end{align*}
+Vậy tập nghiệm của phương trình là $\boxed{\displaystyle\left\{\frac{7}{3}\right\}}$.
+
+2. Chuyển số hạng có thừa số $x$ về một phía, và số hạng tự do về phía còn lại để được:
+\begin{align*}
+   x - 9 &= 5x + 3 \\
+   \iff (x - 9) + (9 - 5x) &= (5x + 3) + (9 - 5x) \\ 
+   \iff -4x &= 12 \\
+   \iff x &= -3.
+\end{align*}
+Vậy tập nghiệm của phương trình là $\boxed{\displaystyle\left\{-3\right\}}$.
+
+3. Để giải phương trình có chứa tham số, chúng ta cần viết lại ẩn $x$ dưới dạng một biểu thức chỉ chứa tham số và hằng số. Cụ thể,
+\begin{align*}
+   \frac{1}{v}\cdot x - \frac{1}{v} \cdot x_0 &= t \\
+   \iff \frac{x}{v} &= t + \frac{x_0}{v} \\
+   \iff x &= vt + x_0.
+\end{align*}
+Vậy nghiệm của phương trình là $\boxed{\displaystyle\left\{vt + x_0\right\}}$.
+
+4. Nếu như bạn đọc chưa biết, nếu như một đa thức $f(x)$ nhận $x = a$ là nghiệm thì $f(x)$ có thể được viết thành tích của $(x - a)$ nhân một đa thức $g(x)$ với bậc nhỏ hơn $1$ so với $f(x)$. Và nếu $g(x)$ lại có nghiệm $x = b$ thì chúng ta có thể viết $g(x) = (x-b)h(x)$ và qua đó có thể viết lại $f(x) = (x-a)(x-b)h(x)$. Một cách tổng quát nhất, nếu như $f(x)$ là phương trình bậc $n$ có $n$ nghiệm $a_1, a_2, \cdots, a_n$ thì có thể viết lại $$f(x) = A \prod_{i=1}^{n} (x - a_i) = A(x - a_1)(x - a_2)\cdots (x - a_n)$$ với $A$ là hệ số của số hạng có bậc lớn nhất trong đa thức $f(x)$.
+
+Nhẩm nghiệm (bằng cách bấm máy tính) phương trình thì có $x = -\frac{3}{2}$ và $x = \frac{7}{3}$. Chúng ta kì vọng có thể viết lại phương trình dưới dạng $6\left(x - \left(-\frac{3}{2}\right)\right)\left(x - \frac{7}{3}\right) = 0$. Thực vậy, thực hiện phân tích nhân tử để có:
+\begin{align*}
+   &6x^2 - 5x - 21 = 0 \\
+   \iff &6x^2 - 14x + 9x - 21 = 0 \\
+   \iff &2x(3x - 7) + 3(3x - 7) = 0 \\
+   \iff &(2x + 3)(3x - 7) = 0 \\
+   \iff &\left[
+      \begin{aligned}
+         2x + 3 &= 0 \\
+         3x - 7 &= 0
+      \end{aligned}
+   \right.
+   \iff \left[
+      \begin{aligned}
+         x &= -\frac{3}{2} \\
+         x &= \frac{7}{3}
+      \end{aligned}
+   \right..
+\end{align*}
+Vậy phương trình có nghiệm là $\boxed{\displaystyle\left\{-\frac{3}{2}; \frac{7}{3}\right\}}$.
+
+5.
+\begin{align*}
+   5x^2 - 50x + 125 &= 0 \\
+   \iff 5\left(x^2 - 10x + 25\right) &= 0 \\
+   \iff 5(x - 5)^2 &= 0 \\
+   \iff x - 5 &= 0 \\
+   \iff x &= 5.
+\end{align*}
+
+Vậy tập nghiệm của phương trình có một phần tử duy nhất $\boxed{\displaystyle\left\{5\right\}}$.
+
+6. Với những phương trình liên quan tới đa thức bậc hai không thể nhẩm ngay được nghiệm, chúng ta sẽ sử dụng phương pháp tách bình phương. Với phương trình được cho:
+\begin{align}
+   x^2 + 2x + 4 &= 0 \nonumber\\ 
+   \iff x^2 + 2x + 1 &= -3 \nonumber\\
+   \iff (x + 1)^2 &= -3. \label{eq:ham_so_mot_bien:ham_so_cap:gptdt6}
+\end{align}
+Một số thực nhân với chính nó sẽ ra một số không âm. Cho nên phương trình \ref{eq:ham_so_mot_bien:ham_so_cap:gptdt6} không thể đúng. Vậy phương trình \fbox{vô nghiệm} trên tập số thực.
+
+7. 
+\begin{align*}
+   &x^2 + 2x + 4 = 8 \\ 
+   \iff &x^2 + 2x + 1 = 5 \\
+   \iff &(x + 1)^2 = 5 \\
+   \iff &\left[
+      \begin{aligned}
+         x + 1 &= \sqrt{5} \\
+         x + 1 &= -\sqrt{5}
+      \end{aligned}
+   \right. \\
+   \iff &\left[
+      \begin{aligned}
+         x &= \sqrt{5} - 1 \\
+         x &= -\sqrt{5} - 1
+      \end{aligned}
+   \right..
+\end{align*}
+Vậy tập nghiệm của phương trình là $\boxed{\displaystyle\left\{\sqrt{5} - 1; -\sqrt{5} - 1\right\}}$.
+
+8. Phần này tác giả làm khác so với phần 2. Chuyển đổi toàn bộ phương trình về một vế để đưa về dạng phương trình $f(x) = 0$:
+\begin{align*}
+   &5x^2 - 20x + 20 = x^2 - 4 \\
+   \iff &4x^2 - 20x + 24 = 0 \\
+   \iff &4\left(x^2 - 5x + 6\right) = 0 \\
+   \iff &4\left(x^2 - 2x - 3x + 6\right) = 0 \\
+   \iff &4\left(x(x - 2) - 3(x - 2)\right) = 0 \\
+   \iff &4(x - 3)(x - 2) = 0 \\
+   \iff &\left[
+      \begin{aligned}
+         x - 3 &= 0 \\
+         x - 2 &= 0
+      \end{aligned}
+   \right. \iff x \in \left\{3; 2\right\}. 
+\end{align*}
+Vậy phương trình có tập nghiệm $\boxed{\left\{3; 2\right\}}$.
+
+9. Nhân cả hai vế với $2$ để khử phân số trong phương trình:
+\begin{align}
+   &\frac{1}{2}kx^2 + \frac{1}{2}mv^2 = \frac{1}{2}kx_0^2 \nonumber \\
+   \iff &kx^2 + mv^2 = kx_0^2. \label{eq:ham_so_mot_bien:ham_so_cap:gptdt9}
+\end{align}
+Xong, thực hiện chuyển vế để giữ thừa số chứa $x^2$ ở một bên, phương trình \ref{eq:ham_so_mot_bien:ham_so_cap:gptdt9} tương đương với
+\begin{align*}
+   (\ref{eq:ham_so_mot_bien:ham_so_cap:gptdt9}) \iff &kx^2 = kx_0^2 - mv^2 \\
+   \iff & x^2 = x_0^2 - \frac{mv^2}{k}
+\end{align*}
+
+
+
 \subsubsection{Hàm lũy thừa}
 
 Mỗi số hạng của đa thức có dạng $x^n$ với $n$ nguyên. Tuy nhiên, nếu chúng ta lấy $x$ lũy thừa với một số thực $a$ bất kì, khi đó chúng ta sẽ có \emph{hàm lũy thừa}. Dạng tổng quát của hàm này là $$f(x) = x^a$$ với $a$ thực. Ngoài ra, khi làm việc trên tập số thực, có một vài điều kiện xác định ngặt nghèo cho đầu vào $x$ đi kèm. Cụ thể:
