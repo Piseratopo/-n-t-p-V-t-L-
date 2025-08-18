@@ -28,6 +28,8 @@ Ví dụ: Tỉ số giữa chu vi và đường kính của một hình tròn l�
 
 - Kí hiệu tập hợp bằng kiểu liệt kê phần tử hay viết bộ số thì phân cách các phần tử bằng dấu `;`, kể cả các phần tử có phải là số hay không. Ví dụ: tập hợp $\left\{0; 1; 2\right\}$ hay bộ số $\left(a; b; c\right)$.
 
+- Không viết dấu $\pm$ (`\pm`).
+
 ## Đặt tên cho thành phần
 
 Với những thành phần có `\label{}` thì đặt tên theo quy tắc sau: "Kiểu thành phần"`:`"Đường dẫn đến tệp chứ thành phần"`:`"Tên thành phần". Ví dụ: `fig:ham_so:ham_so_cap:x_2`. Viết thế này để tránh xung đột tên giữa các thành phần có cùng tên ở những tệp khác nhau.
