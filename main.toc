@@ -10,7 +10,7 @@
 \contentsline {subsection}{\numberline {0.2.2}Đa thức}{17}{subsection.0.2.2}%
 \contentsline {section}{\numberline {0.3}Phép tính trên hàm}{22}{section.0.3}%
 \contentsline {subsection}{\numberline {0.3.1}Phép tính đại số thông thường}{22}{subsection.0.3.1}%
-\contentsline {section}{\numberline {0.4}Số ảo và số phức}{23}{section.0.4}%
-\contentsline {section}{\numberline {0.5}Bài tập tổng hợp}{26}{section.0.5}%
-\contentsline {chapter}{\numberline {1}Cơ bản của xử lí số liệu trong vật lí}{27}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Chuyển động}{30}{chapter.2}%
+\contentsline {section}{\numberline {0.4}Số ảo và số phức}{24}{section.0.4}%
+\contentsline {section}{\numberline {0.5}Bài tập tổng hợp}{27}{section.0.5}%
+\contentsline {chapter}{\numberline {1}Cơ bản của xử lí số liệu trong vật lí}{28}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Chuyển động}{31}{chapter.2}%

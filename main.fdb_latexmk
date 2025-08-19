@@ -1,10 +1,10 @@
 # Fdb version 4
-["xdvipdfmx"] 1755605387.53942 "main.xdv" "main.pdf" "main" 1755605387.99307 0
-  "main.xdv" 1755605387 946464 179f76f5dc4152b1a56e1222045d402d "xelatex"
+["xdvipdfmx"] 1755625742.30797 "main.xdv" "main.pdf" "main" 1755625742.72522 0
+  "main.xdv" 1755625742 967516 3e7120d7ac7cffc2ae9678ca86639be4 "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1755605383.95045 "d:/OneDrive - Hanoi University of Science and Technology/Documents/Physics/-n-t-p-V-t-L-/main.tex" "main.xdv" "main" 1755605387.98656 0
+["xelatex"] 1755625739.21162 "d:/OneDrive - Hanoi University of Science and Technology/Documents/Physics/-n-t-p-V-t-L-/main.tex" "main.xdv" "main" 1755625742.72051 0
   "C:/Users/buinh/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1754119510 25521434 dbc151c24c532bc323b459e7df668540 ""
   "C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136747054 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -193,14 +193,14 @@
   "chapter/toan_hoc_nen_tang/do_thi/mat_phang.tex" 1755321828 9561 cb85078ebd5ffc60d0bc3160f6f0515e ""
   "chapter/toan_hoc_nen_tang/do_thi/truc_so.tex" 1755320573 11016 30ac1c805451084028aab3191fb4636d ""
   "chapter/toan_hoc_nen_tang/ham_so.tex" 1755573977 239 43264fc94ba65b0c5ec7824485e0d912 ""
-  "chapter/toan_hoc_nen_tang/ham_so_mot_bien/da_thuc.tex" 1755605382 20981 facb48aca099ee1d95ed8ff6cf0a356c ""
+  "chapter/toan_hoc_nen_tang/ham_so_mot_bien/da_thuc.tex" 1755624173 21081 a7050086ef262de8c5ac9bc191f358af ""
   "chapter/toan_hoc_nen_tang/ham_so_mot_bien/dinh_nghia.tex" 1755525759 33807 8705813fbe541c711e5d37c098fc5bee ""
-  "chapter/toan_hoc_nen_tang/ham_so_mot_bien/phep_tinh_ham.tex" 1755574504 880 2f34dd9c7c5fc46bbdef2d00aaf80c53 ""
+  "chapter/toan_hoc_nen_tang/ham_so_mot_bien/phep_tinh_ham.tex" 1755625738 5531 4a9c3a65e7ddcdf4ec52941060386f0d ""
   "d:/OneDrive - Hanoi University of Science and Technology/Documents/Physics/-n-t-p-V-t-L-/main.tex" 1755579098 57270 13a9b1ce5d7321a974eb4d76e1432b87 ""
-  "main.aux" 1755605387 22658 f7503d17517584ad8482f82f36f6e5e5 "xelatex"
-  "main.out" 1755605387 2943 b5c63fc93293d4d0628b17538635102b "xelatex"
+  "main.aux" 1755625742 23554 8b5115eb7b682a15ed222545553a9519 "xelatex"
+  "main.out" 1755625742 2943 b5c63fc93293d4d0628b17538635102b "xelatex"
   "main.tex" 1755579098 57270 13a9b1ce5d7321a974eb4d76e1432b87 ""
-  "main.toc" 1755605387 1440 e24cff202a854df8941205b52ffb8101 "xelatex"
+  "main.toc" 1755625742 1440 1237533fae73cbc7b2300748b42ce3b9 "xelatex"
   (generated)
   "main.aux"
   "main.log"
