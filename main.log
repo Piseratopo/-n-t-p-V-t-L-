@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.3) (preloaded format=xelatex 2025.8.2)  18 AUG 2025 23:48
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.3) (preloaded format=xelatex 2025.8.2)  19 AUG 2025 19:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -202,9 +202,25 @@ LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count304
 \calc@Cskip=\skip56
+) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen162
+\captionmargin=\dimen163
+\caption@leftmargin=\dimen164
+\caption@rightmargin=\dimen165
+\caption@width=\dimen166
+\caption@indent=\dimen167
+\caption@parindent=\dimen168
+\caption@hangindent=\dimen169
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count305
+\c@continuedfloat=\count306
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count305
+\c@float@type=\count307
 \float@exts=\toks26
 \float@box=\box54
 \@float@everytoks=\toks27
@@ -238,22 +254,22 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count306
+\c@section@level=\count308
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count307
+\etb@tempcnta=\count309
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
-\@linkdim=\dimen162
-\Hy@linkcounter=\count308
-\Hy@pagecounter=\count309
+\@linkdim=\dimen170
+\Hy@linkcounter=\count310
+\Hy@pagecounter=\count311
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count310
+\Hy@SavedSpaceFactor=\count312
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
 )
@@ -264,21 +280,21 @@ Package hyperref Info: Plain pages OFF on input line 4172.
 Package hyperref Info: Backreferencing OFF on input line 4177.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4424.
-\c@Hy@tempcnt=\count311
+\c@Hy@tempcnt=\count313
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4763.
-\XeTeXLinkMargin=\dimen163
+\XeTeXLinkMargin=\dimen171
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count312
-\Field@Width=\dimen164
-\Fld@charsize=\dimen165
+\Fld@menulength=\count314
+\Field@Width=\dimen172
+\Fld@charsize=\dimen173
 Package hyperref Info: Hyper figures OFF on input line 6042.
 Package hyperref Info: Link nesting OFF on input line 6047.
 Package hyperref Info: Hyper index ON on input line 6050.
@@ -290,18 +306,18 @@ Package hyperref Info: PDF/A mode OFF on input line 6072.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count313
-\c@Item=\count314
-\c@Hfootnote=\count315
+\Hy@abspage=\count315
+\c@Item=\count316
+\c@Hfootnote=\count317
 )
 Package hyperref Info: Driver (autodetected): hxetex.
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hxetex.def
 File: hxetex.def 2024-11-05 v7.01l Hyperref driver for XeTeX
 \pdfm@box=\box56
-\c@Hy@AnnotLevel=\count316
-\HyField@AnnotCount=\count317
-\Fld@listcount=\count318
-\c@bookmark@seq@number=\count319
+\c@Hy@AnnotLevel=\count318
+\HyField@AnnotCount=\count319
+\Fld@listcount=\count320
+\c@bookmark@seq@number=\count321
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty
@@ -319,37 +335,37 @@ Package: icomma 2002/03/10 v2.0 (WaS)
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
 Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
-\col@sep=\dimen166
+\col@sep=\dimen174
 \ar@mcellbox=\box57
-\extrarowheight=\dimen167
+\extrarowheight=\dimen175
 \NC@list=\toks28
 \extratabsurround=\skip58
 \backup@length=\skip59
 \ar@cellbox=\box58
 )
-\rotheadsize=\dimen168
-\c@nlinenum=\count320
+\rotheadsize=\dimen176
+\c@nlinenum=\count322
 \TeXr@lab=\toks29
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
 Package: multicol 2024/09/14 v1.9i multicolumn formatting (FMi)
-\c@tracingmulticols=\count321
+\c@tracingmulticols=\count323
 \mult@box=\box59
-\multicol@leftmargin=\dimen169
-\c@unbalance=\count322
-\c@collectmore=\count323
-\doublecol@number=\count324
-\multicoltolerance=\count325
-\multicolpretolerance=\count326
-\full@width=\dimen170
-\page@free=\dimen171
-\premulticols=\dimen172
-\postmulticols=\dimen173
+\multicol@leftmargin=\dimen177
+\c@unbalance=\count324
+\c@collectmore=\count325
+\doublecol@number=\count326
+\multicoltolerance=\count327
+\multicolpretolerance=\count328
+\full@width=\dimen178
+\page@free=\dimen179
+\premulticols=\dimen180
+\postmulticols=\dimen181
 \multicolsep=\skip60
 \multicolbaselineskip=\skip61
 \partial@page=\box60
 \last@line=\box61
 \mc@boxedresult=\box62
-\maxbalancingoverflow=\dimen174
+\maxbalancingoverflow=\dimen182
 \mult@rightbox=\box63
 \mult@grightbox=\box64
 \mult@firstbox=\box65
@@ -390,15 +406,15 @@ Package: multicol 2024/09/14 v1.9i multicolumn formatting (FMi)
 \@tempa=\box100
 \@tempa=\box101
 \@tempa=\box102
-\c@minrows=\count327
-\c@columnbadness=\count328
-\c@finalcolumnbadness=\count329
-\last@try=\dimen175
-\multicolovershoot=\dimen176
-\multicolundershoot=\dimen177
+\c@minrows=\count329
+\c@columnbadness=\count330
+\c@finalcolumnbadness=\count331
+\last@try=\dimen183
+\multicolovershoot=\dimen184
+\multicolundershoot=\dimen185
 \mult@nat@firstbox=\box103
 \colbreak@box=\box104
-\mc@col@check@num=\count330
+\mc@col@check@num=\count332
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/steinmetz\steinmetz.sty
 Package: steinmetz 2009/06/14 v1.0 Steinmetz symbol for electrotechnics
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/pict2e\pict2e.sty
@@ -417,14 +433,14 @@ File: p2e-xetex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
 )
 \pIIe@GRAPH=\toks30
-\@arclen=\dimen178
-\@arcrad=\dimen179
-\pIIe@tempdima=\dimen180
-\pIIe@tempdimb=\dimen181
-\pIIe@tempdimc=\dimen182
-\pIIe@tempdimd=\dimen183
-\pIIe@tempdime=\dimen184
-\pIIe@tempdimf=\dimen185
+\@arclen=\dimen186
+\@arcrad=\dimen187
+\pIIe@tempdima=\dimen188
+\pIIe@tempdimb=\dimen189
+\pIIe@tempdimc=\dimen190
+\pIIe@tempdimd=\dimen191
+\pIIe@tempdime=\dimen192
+\pIIe@tempdimf=\dimen193
 )
 \stm@phasebox=\box105
 \stm@phasedp=\skip62
@@ -433,8 +449,8 @@ Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
 \stm@phasewd=\skip65
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
 \pgfutil@everybye=\toks31
-\pgfutil@tempdima=\dimen186
-\pgfutil@tempdimb=\dimen187
+\pgfutil@tempdima=\dimen194
+\pgfutil@tempdimb=\dimen195
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
 \pgfutil@abb=\box106
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
@@ -450,8 +466,8 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: xetex.def on input line 106.
 )
-\Gin@req@height=\dimen188
-\Gin@req@width=\dimen189
+\Gin@req@height=\dimen196
+\Gin@req@width=\dimen197
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.sty (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys.code.tex
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex
@@ -460,26 +476,26 @@ Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeyslibraryfiltered.code.tex
 \pgfkeys@tmptoks=\toks34
 ))
-\pgf@x=\dimen190
-\pgf@y=\dimen191
-\pgf@xa=\dimen192
-\pgf@ya=\dimen193
-\pgf@xb=\dimen194
-\pgf@yb=\dimen195
-\pgf@xc=\dimen196
-\pgf@yc=\dimen197
-\pgf@xd=\dimen198
-\pgf@yd=\dimen199
+\pgf@x=\dimen198
+\pgf@y=\dimen199
+\pgf@xa=\dimen256
+\pgf@ya=\dimen257
+\pgf@xb=\dimen258
+\pgf@yb=\dimen259
+\pgf@xc=\dimen260
+\pgf@yc=\dimen261
+\pgf@xd=\dimen262
+\pgf@yd=\dimen263
 \w@pgf@writea=\write3
 \r@pgf@reada=\read3
-\c@pgf@counta=\count331
-\c@pgf@countb=\count332
-\c@pgf@countc=\count333
-\c@pgf@countd=\count334
+\c@pgf@counta=\count333
+\c@pgf@countb=\count334
+\c@pgf@countc=\count335
+\c@pgf@countd=\count336
 \t@pgf@toka=\toks35
 \t@pgf@tokb=\toks36
 \t@pgf@tokc=\toks37
-\pgf@sys@id@count=\count335
+\pgf@sys@id@count=\count337
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
@@ -491,11 +507,11 @@ File: pgfsys-dvipdfmx.def 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def
 File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 )
-\pgfsys@objnum=\count336
+\pgfsys@objnum=\count338
 ))) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count337
-\pgfsyssoftpath@bigbuffer@items=\count338
+\pgfsyssoftpath@smallbuffer@items=\count339
+\pgfsyssoftpath@bigbuffer@items=\count340
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
@@ -516,52 +532,52 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore.code.tex
 Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex
-\pgfmath@dimen=\dimen256
-\pgfmath@count=\count339
+\pgfmath@dimen=\dimen264
+\pgfmath@count=\count341
 \pgfmath@box=\box107
 \pgfmath@toks=\toks38
 \pgfmath@stack@operand=\toks39
 \pgfmath@stack@operation=\toks40
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count340
+\c@pgfmathroundto@lastzeros=\count342
 )) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@picminx=\dimen257
-\pgf@picmaxx=\dimen258
-\pgf@picminy=\dimen259
-\pgf@picmaxy=\dimen260
-\pgf@pathminx=\dimen261
-\pgf@pathmaxx=\dimen262
-\pgf@pathminy=\dimen263
-\pgf@pathmaxy=\dimen264
-\pgf@xx=\dimen265
-\pgf@xy=\dimen266
-\pgf@yx=\dimen267
-\pgf@yy=\dimen268
-\pgf@zx=\dimen269
-\pgf@zy=\dimen270
+\pgf@picminx=\dimen265
+\pgf@picmaxx=\dimen266
+\pgf@picminy=\dimen267
+\pgf@picmaxy=\dimen268
+\pgf@pathminx=\dimen269
+\pgf@pathmaxx=\dimen270
+\pgf@pathminy=\dimen271
+\pgf@pathmaxy=\dimen272
+\pgf@xx=\dimen273
+\pgf@xy=\dimen274
+\pgf@yx=\dimen275
+\pgf@yy=\dimen276
+\pgf@zx=\dimen277
+\pgf@zy=\dimen278
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@path@lastx=\dimen271
-\pgf@path@lasty=\dimen272
+\pgf@path@lastx=\dimen279
+\pgf@path@lasty=\dimen280
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@shorten@end@additional=\dimen273
-\pgf@shorten@start@additional=\dimen274
+\pgf@shorten@end@additional=\dimen281
+\pgf@shorten@start@additional=\dimen282
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfpic=\box108
 \pgf@hbox=\box109
 \pgf@layerbox@main=\box110
-\pgf@picture@serial@count=\count341
+\pgf@picture@serial@count=\count343
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgflinewidth=\dimen275
+\pgflinewidth=\dimen283
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@pt@x=\dimen276
-\pgf@pt@y=\dimen277
-\pgf@pt@temp=\dimen278
+\pgf@pt@x=\dimen284
+\pgf@pt@y=\dimen285
+\pgf@pt@temp=\dimen286
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex
@@ -570,12 +586,12 @@ File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowsep=\dimen279
+\pgfarrowsep=\dimen287
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@max=\dimen280
-\pgf@sys@shading@range@num=\count342
-\pgf@shadingcount=\count343
+\pgf@max=\dimen288
+\pgf@sys@shading@range@num=\count344
+\pgf@shadingcount=\count345
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
@@ -596,47 +612,47 @@ File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
-\pgf@nodesepstart=\dimen281
-\pgf@nodesepend=\dimen282
+\pgf@nodesepstart=\dimen289
+\pgf@nodesepend=\dimen290
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
 )) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.sty (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.sty (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex)) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex)) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
-\pgffor@iter=\dimen283
-\pgffor@skip=\dimen284
+\pgffor@iter=\dimen291
+\pgffor@skip=\dimen292
 \pgffor@stack=\toks41
 \pgffor@toks=\toks42
-)) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
+))
+(C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
 Package: tikz 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count344
-\pgfplotmarksize=\dimen285
+\pgf@plot@mark@count=\count346
+\pgfplotmarksize=\dimen293
 )
-\tikz@lastx=\dimen286
-\tikz@lasty=\dimen287
-\tikz@lastxsaved=\dimen288
-\tikz@lastysaved=\dimen289
-\tikz@lastmovetox=\dimen290
-\tikz@lastmovetoy=\dimen291
-\tikzleveldistance=\dimen292
-\tikzsiblingdistance=\dimen293
+\tikz@lastx=\dimen294
+\tikz@lasty=\dimen295
+\tikz@lastxsaved=\dimen296
+\tikz@lastysaved=\dimen297
+\tikz@lastmovetox=\dimen298
+\tikz@lastmovetoy=\dimen299
+\tikzleveldistance=\dimen300
+\tikzsiblingdistance=\dimen301
 \tikz@figbox=\box113
 \tikz@figbox@bg=\box114
 \tikz@tempbox=\box115
 \tikz@tempbox@bg=\box116
-\tikztreelevel=\count345
-\tikznumberofchildren=\count346
-\tikznumberofcurrentchild=\count347
-\tikz@fig@count=\count348
-
-(C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex
+\tikztreelevel=\count347
+\tikznumberofchildren=\count348
+\tikznumberofcurrentchild=\count349
+\tikz@fig@count=\count350
+ (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count349
-\pgfmatrixcurrentcolumn=\count350
-\pgf@matrix@numberofcolumns=\count351
+\pgfmatrixcurrentrow=\count351
+\pgfmatrixcurrentcolumn=\count352
+\pgf@matrix@numberofcolumns=\count353
 )
-\tikz@expandcount=\count352
+\tikz@expandcount=\count354
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/tikz-3dplot\tikz-3dplot.sty (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
@@ -649,11 +665,11 @@ File: tikzlibrary3d.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\arrowsize=\dimen294
+\arrowsize=\dimen302
 ))) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/wrapfig\wrapfig.sty
-\wrapoverhang=\dimen295
-\WF@size=\dimen296
-\c@WF@wrappedlines=\count353
+\wrapoverhang=\dimen303
+\WF@size=\dimen304
+\c@WF@wrappedlines=\count355
 \WF@box=\box117
 \WF@everypar=\toks43
 Package: wrapfig 2003/01/31  v 3.6
@@ -661,10 +677,10 @@ Package: wrapfig 2003/01/31  v 3.6
 Package: expl3 2025-01-18 L3 programming layer (loader) 
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-xetex.def
 File: l3backend-xetex.def 2024-05-08 L3 backend support: XeTeX
-\g__graphics_track_int=\count354
+\g__graphics_track_int=\count356
 \l__pdf_internal_box=\box118
-\g__pdf_backend_annotation_int=\count355
-\g__pdf_backend_link_int=\count356
+\g__pdf_backend_annotation_int=\count357
+\g__pdf_backend_link_int=\count358
 ))
 Package: xparse 2024-08-16 L3 Experimental document command parser
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/xelatex/xecjk\xeCJK.sty
@@ -674,13 +690,13 @@ Package: ctexhook 2022/07/14 v2.5.10 Document and package hooks (CTEX)
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xtemplate\xtemplate.sty
 Package: xtemplate 2024-08-16 L3 Experimental prototype document functions
 )
-\l__xeCJK_tmp_int=\count357
+\l__xeCJK_tmp_int=\count359
 \l__xeCJK_tmp_box=\box119
-\l__xeCJK_tmp_dim=\dimen297
+\l__xeCJK_tmp_dim=\dimen305
 \l__xeCJK_tmp_skip=\skip66
-\g__xeCJK_space_factor_int=\count358
-\l__xeCJK_begin_int=\count359
-\l__xeCJK_end_int=\count360
+\g__xeCJK_space_factor_int=\count360
+\l__xeCJK_begin_int=\count361
+\l__xeCJK_end_int=\count362
 \c__xeCJK_CJK_class_int=\XeTeXcharclass4
 \c__xeCJK_FullLeft_class_int=\XeTeXcharclass5
 \c__xeCJK_FullRight_class_int=\XeTeXcharclass6
@@ -690,78 +706,78 @@ Package: xtemplate 2024-08-16 L3 Experimental prototype document functions
 \c__xeCJK_CM_class_int=\XeTeXcharclass10
 \c__xeCJK_HangulJamo_class_int=\XeTeXcharclass11
 \l__xeCJK_last_skip=\skip67
-\c__xeCJK_none_node=\count361
-\g__xeCJK_node_int=\count362
-\c__xeCJK_CJK_node_dim=\dimen298
-\c__xeCJK_CJK-space_node_dim=\dimen299
-\c__xeCJK_default_node_dim=\dimen300
-\c__xeCJK_CJK-widow_node_dim=\dimen301
-\c__xeCJK_normalspace_node_dim=\dimen302
+\c__xeCJK_none_node=\count363
+\g__xeCJK_node_int=\count364
+\c__xeCJK_CJK_node_dim=\dimen306
+\c__xeCJK_CJK-space_node_dim=\dimen307
+\c__xeCJK_default_node_dim=\dimen308
+\c__xeCJK_CJK-widow_node_dim=\dimen309
+\c__xeCJK_normalspace_node_dim=\dimen310
 \c__xeCJK_default-space_node_skip=\skip68
 \l__xeCJK_ccglue_skip=\skip69
 \l__xeCJK_ecglue_skip=\skip70
 \l__xeCJK_punct_kern_skip=\skip71
 \l__xeCJK_indent_box=\box120
-\l__xeCJK_last_penalty_int=\count363
-\l__xeCJK_last_bound_dim=\dimen303
-\l__xeCJK_last_kern_dim=\dimen304
-\l__xeCJK_widow_penalty_int=\count364
+\l__xeCJK_last_penalty_int=\count365
+\l__xeCJK_last_bound_dim=\dimen311
+\l__xeCJK_last_kern_dim=\dimen312
+\l__xeCJK_widow_penalty_int=\count366
 
 LaTeX template Info: Declaring template type 'xeCJK/punctuation' taking 0
 (template)           argument(s) on line 2396.
 
-\l__xeCJK_fixed_punct_width_dim=\dimen305
-\l__xeCJK_mixed_punct_width_dim=\dimen306
-\l__xeCJK_middle_punct_width_dim=\dimen307
-\l__xeCJK_fixed_margin_width_dim=\dimen308
-\l__xeCJK_mixed_margin_width_dim=\dimen309
-\l__xeCJK_middle_margin_width_dim=\dimen310
-\l__xeCJK_bound_punct_width_dim=\dimen311
-\l__xeCJK_bound_margin_width_dim=\dimen312
-\l__xeCJK_margin_minimum_dim=\dimen313
-\l__xeCJK_kerning_total_width_dim=\dimen314
-\l__xeCJK_same_align_margin_dim=\dimen315
-\l__xeCJK_different_align_margin_dim=\dimen316
-\l__xeCJK_kerning_margin_width_dim=\dimen317
-\l__xeCJK_kerning_margin_minimum_dim=\dimen318
-\l__xeCJK_bound_dim=\dimen319
-\l__xeCJK_reverse_bound_dim=\dimen320
-\l__xeCJK_margin_dim=\dimen321
-\l__xeCJK_minimum_bound_dim=\dimen322
-\l__xeCJK_kerning_margin_dim=\dimen323
-\g__xeCJK_family_int=\count365
-\l__xeCJK_fam_int=\count366
-\g__xeCJK_fam_allocation_int=\count367
-\l__xeCJK_verb_case_int=\count368
+\l__xeCJK_fixed_punct_width_dim=\dimen313
+\l__xeCJK_mixed_punct_width_dim=\dimen314
+\l__xeCJK_middle_punct_width_dim=\dimen315
+\l__xeCJK_fixed_margin_width_dim=\dimen316
+\l__xeCJK_mixed_margin_width_dim=\dimen317
+\l__xeCJK_middle_margin_width_dim=\dimen318
+\l__xeCJK_bound_punct_width_dim=\dimen319
+\l__xeCJK_bound_margin_width_dim=\dimen320
+\l__xeCJK_margin_minimum_dim=\dimen321
+\l__xeCJK_kerning_total_width_dim=\dimen322
+\l__xeCJK_same_align_margin_dim=\dimen323
+\l__xeCJK_different_align_margin_dim=\dimen324
+\l__xeCJK_kerning_margin_width_dim=\dimen325
+\l__xeCJK_kerning_margin_minimum_dim=\dimen326
+\l__xeCJK_bound_dim=\dimen327
+\l__xeCJK_reverse_bound_dim=\dimen328
+\l__xeCJK_margin_dim=\dimen329
+\l__xeCJK_minimum_bound_dim=\dimen330
+\l__xeCJK_kerning_margin_dim=\dimen331
+\g__xeCJK_family_int=\count367
+\l__xeCJK_fam_int=\count368
+\g__xeCJK_fam_allocation_int=\count369
+\l__xeCJK_verb_case_int=\count370
 \l__xeCJK_verb_exspace_skip=\skip72
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.sty
 Package: fontspec 2024/05/11 v2.9e Font selection for XeLaTeX and LuaLaTeX
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec-xetex.sty
 Package: fontspec-xetex 2024/05/11 v2.9e Font selection for XeLaTeX and LuaLaTeX
-\l__fontspec_script_int=\count369
-\l__fontspec_language_int=\count370
-\l__fontspec_strnum_int=\count371
-\l__fontspec_tmp_int=\count372
-\l__fontspec_tmpa_int=\count373
-\l__fontspec_tmpb_int=\count374
-\l__fontspec_tmpc_int=\count375
-\l__fontspec_em_int=\count376
-\l__fontspec_emdef_int=\count377
-\l__fontspec_strong_int=\count378
-\l__fontspec_strongdef_int=\count379
-\l__fontspec_tmpa_dim=\dimen324
-\l__fontspec_tmpb_dim=\dimen325
-\l__fontspec_tmpc_dim=\dimen326
+\l__fontspec_script_int=\count371
+\l__fontspec_language_int=\count372
+\l__fontspec_strnum_int=\count373
+\l__fontspec_tmp_int=\count374
+\l__fontspec_tmpa_int=\count375
+\l__fontspec_tmpb_int=\count376
+\l__fontspec_tmpc_int=\count377
+\l__fontspec_em_int=\count378
+\l__fontspec_emdef_int=\count379
+\l__fontspec_strong_int=\count380
+\l__fontspec_strongdef_int=\count381
+\l__fontspec_tmpa_dim=\dimen332
+\l__fontspec_tmpb_dim=\dimen333
+\l__fontspec_tmpc_dim=\dimen334
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.cfg))) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/xelatex/xecjk\xeCJK.cfg
 File: xeCJK.cfg 2022/08/05 v3.9.1 Configuration file for xeCJK package
 )) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowinset=\dimen327
-\pgfarrowlength=\dimen328
-\pgfarrowwidth=\dimen329
-\pgfarrowlinewidth=\dimen330
+\pgfarrowinset=\dimen335
+\pgfarrowlength=\dimen336
+\pgfarrowwidth=\dimen337
+\pgfarrowlinewidth=\dimen338
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshadings.code.tex
 File: tikzlibraryshadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryshadings.code.tex
@@ -785,8 +801,8 @@ Package fontspec Info:
 (fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Nom Na
 (fontspec)             Tong/OT:script=hani;language=dflt;embolden=2;slant=0.15;"
 
-\c@exercise=\count380
-\c@solution=\count381
+\c@exercise=\count382
+\c@solution=\count383
  (main.aux
 Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
 (babel)             Reported  on input line 8.
@@ -855,6 +871,11 @@ LaTeX Font Info:    ... okay on input line 49.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: wrapfig package is loaded.
+Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring OFF on input line 49.
 (main.out) (main.out)
 \@outlinefile=\write4
@@ -995,10 +1016,10 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [15])
 
-[16] (chapter/toan_hoc_nen_tang/ham_so_mot_bien/ham_so_cap.tex
+[16] (chapter/toan_hoc_nen_tang/ham_so_mot_bien/da_thuc.tex
 
 [17]
-Underfull \vbox (badness 1931) has occurred while \output is active []
+Underfull \vbox (badness 1701) has occurred while \output is active []
 
 
 
@@ -1006,33 +1027,29 @@ Underfull \vbox (badness 1931) has occurred while \output is active []
 
 [19]
 
-[20]))
+[20]
 
-[21]
+[21]) (chapter/toan_hoc_nen_tang/ham_so_mot_bien/phep_tinh_ham.tex
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
-[22]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
+[22]))
 
 [23]
 
 [24]
+
+[25]
+
+[26]
 Chương 1.
 
 
-[25
+[27
 
 ]
 
-[26]
+[28]
 
-[27]
+[29]
 Chương 2.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1042,11 +1059,11 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[28
+[30
 
 ]
 
-[29]
+[31]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1058,15 +1075,19 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[30]
-
-[31]
-
 [32]
+
+LaTeX Warning: Text page 33 contains only floats.
+
+
 
 [33]
 
 [34]
+
+[35]
+
+[36]
 
 Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
 (xeCJK)                
@@ -1075,7 +1096,7 @@ Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
 
 
 
-[35
+[37
 
 ] (main.aux)
  ***********
@@ -1083,15 +1104,15 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/08/05>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 957345BA3528E5336BE269989094445A;2531.
+(rerunfilecheck)             Checksum: B5C63FC93293D4D0628B17538635102B;2943.
  ) 
 Here is how much of TeX's memory you used:
- 29074 strings out of 408640
- 597583 string characters out of 5744799
- 1106902 words of memory out of 5000000
- 51654 multiletter control sequences out of 15000+600000
+ 30603 strings out of 408640
+ 627884 string characters out of 5744799
+ 1122044 words of memory out of 5000000
+ 53175 multiletter control sequences out of 15000+600000
  571558 words of font info for 92 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 92i,16n,93p,2020b,815s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 92i,16n,93p,2020b,817s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (35 pages, 885780 bytes).
+Output written on main.xdv (37 pages, 946464 bytes).

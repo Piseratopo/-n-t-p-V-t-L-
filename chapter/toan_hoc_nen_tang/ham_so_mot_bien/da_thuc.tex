@@ -56,14 +56,14 @@ Dưới đây là đồ thị của các hàm đa thức trong bài:
          \begin{tikzpicture}
             \draw[->] (-3, 0) -- (2, 0) node[right] {$x$};
             \draw[->] (0, 0) -- (0, 6) node[above] {$y$};
-            \draw[thick] plot[domain=-3:1] (\x, {(\x + 1)^2 + 2});
+            \draw[thick, smooth, samples=100] plot[domain=-3:1] (\x, {(\x + 1)^2 + 2});
             \filldraw (-1, 2) circle (\pointSize) node[below] {$\left(-1; 2\right)$};
             \filldraw (0, 3) circle (\pointSize) node[below right] {$\left(0; 3\right)$};
             \filldraw (-2, 3) circle (\pointSize) node[left] {$\left(-2; 3\right)$};
          \end{tikzpicture}
       }
       \caption{Đồ thị của hàm $f(x) = x^2 + 2x + 3$}
-      \label{fig:ham_so:ham_da_thuc:x2_2x_3}
+      \label{fig:ham_so_mot_bien:da_thuc:x2_2x_3}
    \end{minipage}
 \end{figure}
 \begin{figure}[H]
@@ -74,7 +74,7 @@ Dưới đây là đồ thị của các hàm đa thức trong bài:
          \begin{tikzpicture}
             \draw[->] (0, 0) -- (6, 0) node[right] {$x$};
             \draw[->] (0, -3) -- (0, 5) node[above] {$y$};
-            \draw[thick] plot[domain=0.508:5.492] (\x, {((\x)^3 - 9*(\x)^2 + 24*(\x) - 16) / 2});
+            \draw[thick, smooth, samples=100] plot[domain=0.508:5.492] (\x, {((\x)^3 - 9*(\x)^2 + 24*(\x) - 16) / 2});
             \filldraw (2, 2) circle (\pointSize) node[above] {$\left(2; 4\right)$};
             \filldraw (4, 0) circle (\pointSize) node[below] {$\left(4; 0\right)$};
             \filldraw (1, 0) circle (\pointSize) node[below right] {$\left(1; 0\right)$};
@@ -82,7 +82,7 @@ Dưới đây là đồ thị của các hàm đa thức trong bài:
          \end{tikzpicture}
       }
       \caption{Đồ thị của hàm $f(x) = x^3 - 9x^2 + 24x - 16$}
-      \label{fig:ham_so:ham_da_thuc:x3_t9x2_24x_t16}
+      \label{fig:ham_so_mot_bien:da_thuc:x3_t9x2_24x_t16}
    \end{minipage}
    \hfill
    \begin{minipage}[t]{0.48\textwidth}
@@ -285,3 +285,67 @@ Cuối cùng, như chúng ta đã dự đoán, phương trình có nghiệm là 
    \iff x &= 4.
 \end{align*}
 Vậy phương trình có nghiệm là $\boxed{\displaystyle\left\{4\right\}}$.
+
+\exercise Xác định tập giá trị của những hàm sau thông qua đại số hoặc đồ thị:
+\begin{multicols}{2}
+   \begin{enumerate}
+      \item $f(x) = 2$;
+      \item $f(x) = x + 2$;
+      \item $f(x) = x^2 + 2x + 3$;
+      \item $f(x) = x^3 - 9x^2 + 24x - 16$.
+   \end{enumerate}
+\end{multicols}
+\solution
+
+1. Theo định nghĩa, do hàm chỉ trả về kết quả là $2$ nên tập giá trị của $f$ là $\boxed{\left\{2\right\}}$.
+
+2. Nhận thấy mọi giá trị $y \in \mathbb{R}$ đều có thể là kết quả của $f$ do:
+$$f(y - 2) = (y - 2) + 2 = y.$$
+Vậy tập giá trị của $f$ là $\boxed{\mathbb{R}}$.
+
+3. Theo đồ thị \ref{fig:ham_so_mot_bien:da_thuc:x2_2x_3}, chúng ta thấy được $f$ nhận mọi giá trị trong khoảng $\left[2; \infty\right)$. Về mặt đại số, biến đổi $f$ để có:
+$$f(x) = x^2 + 2x + 3 = (x + 1)^2 + 2 \geq 2.$$
+
+Điều này khẳng định là nếu $y = f(x)$ thì $y \geq 2$. Tuy nhiên, nó chưa khẳng định là $y \geq 2$ là đủ để có $x$ thỏa mãn $y = f(x)$. Để làm được điểu này, chúng ta phải viết phương trình $y = f(x)$ và tìm một $x$ là nghiệm của phương trình đó. Với $y\geq 2$, chúng ta đặt $x = -1 + \sqrt{y - 2}$ và thực hiện tính $f(x)$:
+\begin{align*}
+   f\left(-1 + \sqrt{y - 2}\right) &= \left(-1 + \sqrt{y - 2}\right)^2 + 2\left(-1 + \sqrt{y - 2}\right) + 3 \\
+   &= \left(1 - 2\sqrt{y - 2} + y - 2\right) + \left(- 2 + 2\sqrt{y - 2}\right) + 3 \\
+   &= y.
+\end{align*}
+Qua đó, chúng ta kết luận với $y \geq 2$ thì tồn tại $x$ để $y = f(x)$.
+
+Vậy tập giá trị của $f$ là $\boxed{\left[2; \infty\right)}$.
+
+
+\begin{wrapfigure}{L}{0.42\textwidth}
+   \centering
+   \begin{tikzpicture}
+      \draw[->] (0, 0) -- (6, 0) node[right] {$x$};
+      \draw[->] (0, -3) -- (0, 5) node[above] {$y$};
+      \draw[thick, smooth, samples=100] plot[domain=0.508:5.492] (\x, {((\x)^3 - 9*(\x)^2 + 24*(\x) - 16) / 2});
+      \foreach \x/\y/\z in {2/4/above, 4/0/below, 1/0/below left, 5/4/right, 0/2/above right,
+      3/2/above right} {
+         \filldraw (\x, {\y / 2}) circle (\pointSize) node[\z] {$\left(\x;\y\right)$};
+      }
+      \foreach \x\y in {1.268/2, 3/2, 4.732/2} {
+         \filldraw (\x, {\y / 2}) circle (\pointSize);
+         \draw[dashed] (\x, {\y / 2}) -- (\x, 0);
+         \filldraw (\x, 0) circle (\pointSize);
+      }
+      \draw[dashed] (0, 1) -- (6, 1);
+   \end{tikzpicture}
+   \captionsetup{justification=centering}
+   \caption{Dóng điểm để tìm nghiệm với ví dụ $y = 2$}
+   \label{fig:ham_so_mot_bien:da_thuc:ddtn}
+\end{wrapfigure}
+
+4. Theo đồ thị \ref{fig:ham_so_mot_bien:da_thuc:ddtn} hoặc đồ thị trước đó \ref{fig:ham_so_mot_bien:da_thuc:x3_t9x2_24x_t16}, chúng ta thấy $f$ nhận toàn bộ giá trị trên tập số thực. 
+
+Nếu bạn đọc chỉ vừa mới bước chân vào toán cao cấp, thì để giải bài này bằng đại số có lẽ là một điều khó khăn. Với mọi $y$ thuộc $\mathbb{R}$ thì có \begin{equation}x = \sqrt[3]{\frac{y + \sqrt{y(y-4)}-2}{2}} + \sqrt[3]{\frac{2}{y + \sqrt{y(y-4)}-2}} + 3 \label{eq:ham_so_mot_bien:da_thuc:ddtn}\end{equation}
+thỏa mãn $f(x) = y$.
+
+Bạn đọc có thể đã để ý rằng trong công thức tính nghiệm, có căn bậc hai của $\sqrt{y(y-4)}$. Trên tập số thực, $y(y-4) \geq 0$ khi và chỉ khi $y\in\left(-\infty; 0\right]\cup\left[4; \infty\right)$. Viết bằng ngôn ngữ đời thường, $y$ không lớn hơn $0$ hoặc $y$ không nhỏ hơn $4$. Tuy nhiên, mở rộng sang trường số phức thì $\sqrt{y(y-4)}$ vẫn có giá trị, kể cả bên trong dấu khai căn mang dấu âm. Điều hay ở đây là phương trình \ref{eq:ham_so_mot_bien:da_thuc:ddtn} vẫn luôn trả về số thực, tùy theo cách chọn khai căn bậc hai và bậc ba. Để hiểu rõ hơn thì mời bạn đọc tìm hiểu thêm về số phức, giải tích số phức và những vấn đề liên quan.
+
+Về mặt vật lí, thông thường chúng ta sẽ dùng đồ thị để kiểm chứng và cắt giảm phần tính toán đại số. Ví dụ như bài này, chúng ta có thể khẳng định là $f$ nhận toàn bộ giá trị trên tập số thực do nếu lấy một điểm $\left(0; y\right)$ bất kì trên trục tung, dóng ngang tới đồ thị, cắt tại điểm nào thì hoành độ của điểm cắt chính là $x$ để $f(x) = y$. Ở hình \ref{fig:ham_so_mot_bien:da_thuc:ddtn} là ví dụ cho $f(x) = y = 2$.
+
+Trong tương lai, đến khi bạn đọc học về giải tích thì bạn đọc sẽ có cho mình một lập luận xác đáng cho bài tập này.
