@@ -1,8 +1,8 @@
-\subsection{Đa thức}
+\subsection{Hàm đa thức}
 
 \ % Lùi đầu dòng
 
-Một dạng hàm quen thuộc, được giới thiệu trong chương trình học trung học phổ thông, là đa thức, thông thường được biểu diễn dưới dạng $$f(x)=P_n(x)=\sum_{i = 0}^n a_i x^i = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0$$ với $n$ là một số nguyên không âm, $a_i$ là các số thực, gọi là các \emph{hệ số}, với mọi $i$ nguyên nằm trong đoạn $[0, n]$ và $a_n \neq 0$. Khi này, $n$ được gọi là \emph{bậc} của đa thức. Mọi giá trị $x \in \mathbb{R}$ đều thuộc tập xác định của hàm đa thức $f(x)$. Ví dụ:
+Một dạng hàm quen thuộc, được giới thiệu trong chương trình học trung học phổ thông, là đa thức, thông thường được biểu diễn dưới dạng $$f(x)=P_n(x)=\sum_{i = 0}^n a_i x^i = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0$$ với $n$ là một số nguyên không âm, $a_i$ là các số thực, gọi là các \emph{hệ số}, với mọi $i$ nguyên nằm trong đoạn $[0, n]$ và $a_n \neq 0$. Khi này, $n$ được gọi là \emph{bậc} của đa thức\label{def:ham_so_mot_bien:da_thuc:da_thuc}. Mọi giá trị $x \in \mathbb{R}$ đều thuộc tập xác định của hàm đa thức $f(x)$. Ví dụ:
 \begin{itemize}
    \item $f(x) = 2x^2 + 3x + 1$ là một đa thức bậc $2$ với các hệ số $a_2 = 2$, $a_1 = 3$, $a_0 = 1$;
    \item $g(y) = y^3 - 4y$ là một đa thức bậc $3$ với các hệ số $b_3 = 1$, $b_2 = 0$, $b_1 = -4$, $b_0 = 0$;
@@ -13,7 +13,7 @@ Tính toán một số giá trị mẫu:
    \item $p(1) = 7 \cdot 1^4 - 2 \cdot 1^2 + 9 = 14$ với $q(t)= 7t^4 - 2t^2 + 9$ là một đa thức bậc $4$ với các hệ số $d_4 = 7$, $d_3 = 0$, $d_2 = -2$, $d_1 = 0$, $d_0 = 9$;
    \item $q(2) = -3 \cdot 2 + 8 = 2$ với $q(r) = -3r + 8$ là một đa thức bậc $1$ với các hệ số $e_1 = -3$, $e_0 = 8$.
 \end{itemize}
-Khi đa thức có bậc bằng $0$, hay $f(x) = P_0(x) = a_0$, thì được gọi là \emph{đa thức hằng} hay \emph{hàm hằng}. Một trường hợp đặc biệt là khi $f(x) = 0$ \footnote{Sẽ có nhiều tài liệu viết \dblquote{$f(x) \equiv 0$} thay vì \dblquote{$f(x) = 0$} để phân biệt giữa khẳng định hai hàm là như nhau so với một phương trình. Tác giả không muốn bạn đọc phải bận tâm với nhiều kí hiệu lạ, cho nên tác giả sẽ cố gắng dùng những kí hiệu cũ. Bạn đọc có thể tự suy luận ý nghĩa thông qua ngữ cảnh.}. Nếu hàm này là đa thức, theo định nghĩa, hàm này có bậc là $0$ và hệ số $a_0 = 0$. Tuy nhiên, cũng theo định nghĩa thì hệ số đầu phải khác $0$. Vì vậy, hàm không có bậc và không được gọi là đa thức. Nhưng, do hàm nhận giá trị cố định với mọi $x$ nên vẫn được gọi là hàm hằng \footnote{Đa số những nhà toán học không coi $f(x) = 0$ là đa thức bậc $0$ do nhiều tính chất của đa thức bị phá vỡ khi gặp trường hợp này. Do đó, $f(x) = 0$ chỉ được coi là \dblquote{hàm hằng} chứ không phải \dblquote{\textit{đa thức} hằng}. Trong tài liệu này, trở về sau sẽ chỉ có thuật ngữ \dblquote{hàm hằng} được sử dụng.}.
+Khi đa thức có bậc bằng $0$, hay $f = P_0 = a_0$, thì được gọi là \emph{đa thức hằng} hay \emph{hàm hằng}. Một trường hợp đặc biệt là khi $f = 0$ (hay $f(x) = 0$ với mọi $x$). Nếu hàm này là đa thức, theo định nghĩa, hàm này chỉ có duy nhất hệ số đầu $a_0 = 0$. Tuy nhiên, cũng theo định nghĩa thì hệ số đầu phải khác $0$. Vì vậy, hàm không có bậc và không được gọi là đa thức. Nhưng, do hàm nhận giá trị cố định với mọi $x$ nên vẫn được gọi là hàm hằng \footnote{Đa số những nhà toán học không coi $f = 0$ là đa thức bậc $0$ do nhiều tính chất của đa thức bị phá vỡ khi gặp trường hợp này. Tuy nhiên, nhiều người vẫn coi $f = 0$ là đa thức không có bậc. Trong tài liệu này, tác giả không coi $0$ là đa thức, nhưng vẫn coi là hàm hằng.}.
 
 \exercise Phác thảo đồ thị của những hàm sau:
 \begin{multicols}{2}
@@ -27,20 +27,20 @@ Khi đa thức có bậc bằng $0$, hay $f(x) = P_0(x) = a_0$, thì được g�
 
 \solution
 
-Khả năng rất cao là bạn đọc có kết nối với mạng; vì vậy, bạn đọc có thể dùng những phần mềm vẽ đồ thị để nhanh chóng có hình vẽ. Tuy nhiên, nếu không có thiết bị điện tử thì bạn đọc vẫn có thể vẽ đồ thị bằng giấy và bút bằng cách lấy nhiều điểm ví dụ cho $x$ và tính toán giá trị $f(x)$ và sau đó nối chúng lại với nhau.
+Bạn đọc có thể dùng những phần mềm vẽ đồ thị để nhanh chóng có hình vẽ. Tuy nhiên, nếu không có thiết bị điện tử thì bạn đọc vẫn có thể vẽ đồ thị bằng giấy và bút bằng cách lấy nhiều điểm ví dụ cho $x$ và tính toán giá trị $f(x)$ và sau đó nối chúng lại với nhau.
 
-Bạn đọc có thể để ý rằng là không phải lúc nào cũng đặt gốc tọa độ ở vị trí chính giữa. Trong nhiều trường hợp việc đặt chính giữa sẽ làm mất đi đồ thị và làm cho đồ thị lệch ra khỏi khu vực vẽ. Hơn nữa, hai trục sẽ có tỉ lệ khác nhau. Điều quan trọng nhất của những bài vẽ đồ thị trong vật lí không phải là căn ke chính xác vị trí từng điểm, mà là nhận ra được dáng điệu của đồ thị và vị trí tương đối giữa các điểm trên đồ thị đó. Qua đó, chúng ta rút ra được những tính chất toán học cần thiết để phục vụ những yêu cầu cụ thể trong bài toán.
+Bạn đọc có thể để ý rằng là không phải lúc nào cũng đặt gốc tọa độ ở vị trí chính giữa. Trong nhiều trường hợp việc đặt chính giữa sẽ làm mất đi đồ thị và làm cho đồ thị lệch ra khỏi khu vực vẽ. Hơn nữa, hai trục sẽ có tỉ lệ khác nhau. Điều quan trọng nhất của những bài vẽ đồ thị trong vật lí không phải là căn ke chính xác vị trí từng điểm, mà là nhận ra được dáng điệu của đồ thị và vị trí tương đối giữa các điểm trên đồ thị đó. Qua đó, chúng ta rút ra được những tính chất toán học cần thiết để phục vụ những yêu cầu cụ thể trong bài tập ứng dụng.
 
 Dưới đây là đồ thị của các hàm đa thức trong bài:
 
 \begin{figure}[H]
    \centering
-   \begin{minipage}[t]{0.48\textwidth}
+   \begin{minipage}[b]{0.48\textwidth}
       \centering
       \fbox{
          \begin{tikzpicture}
             \draw[->] (-5, 0) -- (1, 0) node[right] {$x$};
-            \draw[->] (0, -3) -- (0, 3) node[above] {$y$};
+            \draw[->] (0, -3) -- (0, 3) node[above] {$f(x)$};
             \draw[thick] plot[domain=-5:1] (\x, {\x + 2});
             \filldraw (0, 2) circle (\pointSize) node[below right] {$\left(0; 2\right)$};
             \filldraw (-2, 0) circle (\pointSize) node[below right] {$\left(-2; 0\right)$};
@@ -50,12 +50,12 @@ Dưới đây là đồ thị của các hàm đa thức trong bài:
       \label{fig:ham_so:ham_da_thuc:x_2}
    \end{minipage}
    \hfill
-   \begin{minipage}[t]{0.48\textwidth}
+   \begin{minipage}[b]{0.48\textwidth}
       \centering
       \fbox{
          \begin{tikzpicture}
             \draw[->] (-3, 0) -- (2, 0) node[right] {$x$};
-            \draw[->] (0, 0) -- (0, 6) node[above] {$y$};
+            \draw[->] (0, 0) -- (0, 6) node[above] {$f(x)$};
             \draw[thick, smooth, samples=100] plot[domain=-3:1] (\x, {(\x + 1)^2 + 2});
             \filldraw (-1, 2) circle (\pointSize) node[below] {$\left(-1; 2\right)$};
             \filldraw (0, 3) circle (\pointSize) node[below right] {$\left(0; 3\right)$};
@@ -73,7 +73,7 @@ Dưới đây là đồ thị của các hàm đa thức trong bài:
       \fbox{
          \begin{tikzpicture}
             \draw[->] (0, 0) -- (6, 0) node[right] {$x$};
-            \draw[->] (0, -3) -- (0, 5) node[above] {$y$};
+            \draw[->] (0, -3) -- (0, 5) node[above] {$f(x)$};
             \draw[thick, smooth, samples=100] plot[domain=0.508:5.492] (\x, {((\x)^3 - 9*(\x)^2 + 24*(\x) - 16) / 2});
             \filldraw (2, 2) circle (\pointSize) node[above] {$\left(2; 4\right)$};
             \filldraw (4, 0) circle (\pointSize) node[below] {$\left(4; 0\right)$};
@@ -90,7 +90,7 @@ Dưới đây là đồ thị của các hàm đa thức trong bài:
       \fbox{
          \begin{tikzpicture}
             \draw[->] (-3, 0) -- (3, 0) node[right] {$x$};
-            \draw[->] (0, -3) -- (0, 3) node[above] {$y$};
+            \draw[->] (0, -3) -- (0, 3) node[above] {$f(x)$};
             \draw[thick] plot[domain=-3:3] (\x, {2});
             \filldraw (0, 2) circle (\pointSize) node[above left] {$\left(0; 2\right)$};
          \end{tikzpicture}
@@ -321,7 +321,7 @@ Vậy tập giá trị của $f$ là $\boxed{\left[2; \infty\right)}$.
    \centering
    \begin{tikzpicture}
       \draw[->] (0, 0) -- (6, 0) node[right] {$x$};
-      \draw[->] (0, -3) -- (0, 5) node[above] {$y$};
+      \draw[->] (0, -3) -- (0, 5) node[above] {$f(x)$};
       \draw[thick, smooth, samples=100] plot[domain=0.508:5.492] (\x, {((\x)^3 - 9*(\x)^2 + 24*(\x) - 16) / 2});
       \foreach \x/\y/\z in {2/4/above, 4/0/below, 1/0/below left, 5/4/right, 0/2/above right,
       3/2/above right} {

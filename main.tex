@@ -3,11 +3,12 @@
 \usepackage[T5]{fontenc}
 \usepackage[vietnamese]{babel}
 \usepackage[a4paper]{geometry}
-\usepackage{amsmath, amssymb, blindtext, calc, caption, float, hyperref, icomma, makecell, multicol, steinmetz, tikz, tikz-3dplot, wrapfig, xcolor, xparse, xeCJK}
+\usepackage{amsmath, amssymb, blindtext, calc, caption, float, hyperref, icomma, makecell, multicol, steinmetz, tikz, tikz-3dplot, wrapfig2, xcolor, xparse, xeCJK}
 \usetikzlibrary{arrows.meta, calc, shadings}
 \geometry{bindingoffset=0.5cm, inner=2cm, outer=2cm, top=2cm, bottom=2cm}
 \setCJKmainfont[AutoFakeSlant=0.15,AutoFakeBold=2.0]{Nom Na Tong}
 \setcellgapes{2pt}
+
 \makegapedcells
 
 \DeclareMathOperator{\Arg}{Arg}
@@ -16,6 +17,7 @@
 \author{Bùi Nhật Minh}
 \date{\today}
 
+% Xử lí số đếm của bài tập
 \newcounter{exercise}
 
 \NewDocumentCommand{\exercise}{o}{
@@ -26,25 +28,38 @@
       {\label{#1}}
 }
 
-% Counter for solutions
+% Xử lí số đếm lời giải
 \newcounter{solution}
 
 \NewDocumentCommand{\solution}{o}{
    \refstepcounter{solution}
    \IfNoValueTF{#1}
-      {\noindent\textbf{Lời giải cho bài~\ref{ex\arabic{solution}}:}}
-      {\noindent\textbf{Lời giải cho bài~\ref{#1}}:}
+      {\noindent\textbf{Lời giải bài~\ref{ex\arabic{solution}}:}}
+      {\noindent\textbf{Lời giải bài~\ref{#1}}:}
    \IfNoValueTF{#1}
       {\label{sol\arabic{solution}}}
       {\label{sol-#1}}
 }
 
+% Xử lí đánh số
 \newcommand\dblquote[1]{\textquotedblleft #1\textquotedblright}
 \newcommand{\chapdir}{chapter/}
 \renewcommand{\thefigure}{\thechapter.\arabic{figure}}
 \renewcommand{\thetable}{\thechapter.\arabic{table}}
-
 \numberwithin{equation}{chapter}
+
+% Thêm khoảng cách giữa các đoạn trong minipage
+\newlength{\recordparindent}
+\newenvironment{minipageindent}[1]{
+   \setlength{\recordparindent}{\parindent}
+   \setlength{\parindent}{0em}
+   \begin{minipage}{#1}
+   \setlength{\parindent}{\recordparindent}
+}{
+   \end{minipage}
+   \setlength{\parindent}{\recordparindent}
+}
+
 
 \begin{document}
 
@@ -61,20 +76,21 @@
 
 \ % Lùi đầu dòng
 
-Phần này bao gồm các kiến thức toán học cần thiết để xây dựng lí thuyết của môn vật lí (hoặc ít nhất để đọc tài liệu này), giả sử rằng bạn đọc đã có kiến thức đại số và một chút hình học từ ghế nhà trường. Chương này sẽ bao hàm những phần không nằm trong chương trình trung học phổ thông và có thể cả chương trình đại học. Bạn đọc có thể tìm hiểu một cách sơ cấp hay gợi nhớ lại về các khái niệm toán học mà không cần tập trung vào việc chứng minh chặt chẽ các tính chất toán học. Tác giả mong muốn thông qua chương này, bạn đọc có thể có một cảm nhận và từ đó có kĩ năng để áp dụng các khái niệm toán giải quyết các yêu cầu thực tế. Suy cho cùng, mấu chốt của nhiều ngành khoa học, bao gồm cả vật lí, là xây dựng những mô hình toán học biểu diễn môi trường để từ đó đưa ra những dự đoán hay xây dựng nhũng công trình cho tương lai.
+Chương này bao gồm các kiến thức toán học cần thiết để xây dựng lí thuyết của môn vật lí (hoặc ít nhất để đọc tài liệu này), giả sử rằng bạn đọc đã có kiến thức đại số và một chút hình học từ ghế nhà trường. Một điều cần lưu ý là chương này sẽ bao hàm những phần không nằm trong chương trình trung học phổ thông và có thể cả chương trình đại học. Mặc dù rằng là tác giả đã bao hàm rất nhiều toán trong chương, nhưng tác giả không có ý định viết để thay thế toàn bộ giáo trình toán. Các cuốn giải tích, đại số tuyến tính, hình học phẳng, hình học không gian, xác suất, và các cuốn giáo trình toán khác đều có vị trí đứng của chúng. Điều mà tác giả mong muốn tài liệu này có được chính là sự tổng hợp của kiến thức toán sao cho phù hợp với các ngành vật lí và sự bù đắp cho những lỗ hổng mà tác giả còn thấy ở tài liệu toán hiện hành ở Việt Nam. Kể như, trong tài liệu này, khi nhắc về hàm số, không có phần về đơn ánh hay toàn ánh. Những khái niệm này là vô cùng quan trọng nếu tập trung chứng minh chặt chẽ các tính chất liên quan đến hàm số, nhưng không phục vụ nhiều trong ứng dụng thực tiễn. Thay vào đó, tài liệu được đưa thêm những dạng bài tập, như các dạng bài liên quan đến hàm số rời rạc được cho dưới dạng bảng, mà bạn đọc ít khả năng nhìn thấy ở trong những tài liệu khác. Không phải là dạng bài tập mới là để bạn đọc trở nên hứng thú hơn. Tác giả khi soạn đáp án còn thấy chán cơ mà. Điều quan trọng là tìm ra nguyên nhân từ cái chán đó, và tìm cách chấm dứt triệt để cái chán bằng việc kết nối các bài toán lại với nhau, và rút ra một quy luật tổng quát giữa chúng. Suy cho cùng, sau khi bạn đọc làm nhiều bài tập, tác giả kì vọng, hơn cả việc bạn đọc tính toán nhanh và thành thạo (đương nhiên điều này cũng rất tốt), chính là việc hiểu rõ bản chất của các mảng lí thuyết và từ đó ứng dụng vào các trường hợp khác nhau.
 
-Và vì bạn đọc đang đọc về tài liệu nghiêng về vật lí, Tác giả sẽ không tập trung nhiều vào chặt chẽ toán học. Các định nghĩa và chứng minh cần thiết vẫn sẽ được đưa ra, tuy nhiên không quá chặt chẽ nhưng đủ để ứng dụng, nhằm làm bước đệm cho bạn đọc nếu có mong muốn tìm hiểu sâu hơn về toán.
+Thông thường, các tài liệu vật lí sẽ lược qua hay tối giản phần toán, với ba ngầm định. Thứ nhất, sẽ có tài liệu toán ứng dụng đi kèm với tài liệu vật lí. Thứ hai, vật lí không dùng nhiều đến lí thuyết toán chuyên sâu hay chứng minh chặt chẽ. Và thứ ba, vật lí không nên dùng đến các tính toán phức tạp mà nên tập trung nhiều vào phần thông hiểu lí thuyết và ứng dụng đời sống. Tuy nhiên, tác giả lại không định hướng tài liệu đi theo những quan điểm này. Các mô hình vật lí đều có toán học phụ trợ đằng sau. Lấy ví dụ, biến đổi Phu-ri-ê\footnote{Jean-Baptiste Joseph Fourier (1768 - 1830)}. Biến đổi này khẳng định rằng một tín hiệu có thể biến đổi thành các dạng sóng hình sin ở các tần số khác nhau. Đây là một phát hiện vĩ đại, mang tính ứng dụng mạnh mẽ. Nếu bạn đọc đã từng sử dụng các công cụ pha chế âm thanh thì chắc chắn là đã sử dụng phép biến đổi Phu-ri-ê. Ở thời kì của Phu-ri-ê, vật lí đi trong việc ứng dụng trước khi toán xây dựng đầy đủ lí thuyết cho nó. Thật may mắn khi các nhà toán học đã hoàn thành lí thuyết làm nền móng cho biến đổi này, nhưng, ở hiện tại, vẫn còn nhiều mảng ở những phạm trù khác của toán học vẫn chưa hoàn thiện. Những người làm vật lí vẫn áp dụng, nhưng do thiếu công cụ toán cho nên họ phải kiểm chứng bằng thí nghiệm, khiến cho việc phát kiến trở nên chậm hơn. Cho nên, trong tài liệu này, tác giả không chỉ đưa nhiều toán, mà còn đưa ra toán theo con đường khác với con đường thông thường. Các lí thuyết bình thường được đặt ở cùng chỗ thì sẽ tách nhau ra, không phải là cố tình phức tạp hóa, mà là để nhấn mạnh tính chặt chẽ của toán. Tác giả vẫn đưa một số lí thuyết dựa trên ngôn ngữ đời thường, nhưng nếu có thể, tác giả sẽ đưa định nghĩa hay chứng minh theo toán học thuần túy, dựa trên những lí thuyết đã có trước đó.
+
+Cuối cùng, lựa chọn cuối cùng là ở bạn đọc. Có thể những kiến thức này đã cũ và bạn đọc chỉ muốn làm nóng lại kiến thức ở những phần cần thiết, thì bạn đọc có thể bỏ qua một vài phần của chương này. Nhưng nếu bạn đọc thấy những kiến thức này còn mới, còn nhiều lỗ hổng, thì bạn đọc nên đọc kĩ lưỡng. Hi vọng từ lí thuyết và bài tập, bạn đọc có thể hiểu được góc nhìn của tác giả về toán, và tự xây dựng cho mình một ma trận kiến thức riêng để phục vụ sau này.
 
 \input{\chapdir toan_hoc_nen_tang/do_thi.tex}
 
-
-\input{\chapdir toan_hoc_nen_tang/ham_so.tex} 
+\input{\chapdir toan_hoc_nen_tang/ham_so_mot_bien.tex}
 
 \section{Số ảo và số phức}
 
 \ % Lùi đầu dòng
 
-Trước khi đến với sô thực với số phức, chúng ta bắt đầu tiếp cận với định nghĩa đơn vị ảo. Cụ thể, \emph{đơn vị ảo} được kí hiệu là $\mathbf{i}$ \footnote{Phần lớn các tài liệu sẽ kí hiệu số ảo là chữ $i$ thông thường. Tác giả kí hiệu thành chữ $\mathbf{i}$ đứng in đậm để bảo toàn chữ $i$ cho nhiệm vụ khác.} và thỏa mãn $$\mathbf{i}^2 = -1 \text{ hay } \mathbf{i} = \sqrt{-1}.$$
+Trước khi đến với số phức, chúng ta bắt đầu tiếp cận với định nghĩa đơn vị ảo. Cụ thể, \emph{đơn vị ảo} được kí hiệu là $\mathbf{i}$ \footnote{Phần lớn các tài liệu sẽ kí hiệu số ảo là chữ $i$ thông thường. Tác giả kí hiệu thành chữ $\mathbf{i}$ đứng in đậm để bảo toàn chữ $i$ cho nhiệm vụ khác.} và thỏa mãn $$\mathbf{i}^2 = -1 \text{ hay } \mathbf{i} = \sqrt{-1}.$$
 
 Để có số ảo, nhân một số thực $b \neq 0$ với đơn vị ảo để thành $\mathbf{i}b$. Một số phức bao gồm thành phần thực và $\mathbf{i}$ lần phẩn ảo cộng vào. Viết dưới \emph{dạng chính tắc}, một số phức có dạng là $$z=a+\mathbf{i}b$$ với $a, b$ thực. Từ một số phức, chúng ta cũng có thể lấy ngược lại giá trị phần thực và phần ảo của nó lần lượt qua hai hàm $\Re{(z)}$ và $\Im{(z)}$ (hoặc $\operatorname*{Re}{(z)}$ và $\operatorname*{Im}{(z)}$). Cụ thể, với $z=a+\mathbf{i}b$ thì $\Re{(z)} = a$ và $\Im{(z)}=b$\footnote{Tại sao không gọi cả $\mathbf{i}b$ là phần ảo? Khi nói đến phần ảo, chúng ta đã ngầm định nó sẽ thuộc về số hạng mà có thừa số $\mathbf{i}$. Viết lại đơn vị ảo trở nên thừa thãi. Hơn nữa, sẽ dễ làm việc hơn khi mà cả $\Re{(z)}$ và $\Im{(z)}$ đều thực và không phải chia $\Im{(z)}$ cho $\mathbf{i}$ liên tục.}.
 
@@ -96,8 +112,8 @@ Nhân hai số phức sẽ yêu cầu sử dụng tính chất phân phối gi�
 Trước khi chia hai số phức, chúng ta cần phải biết đến khái niệm số phức liên hợp và tính chất đặc biệt của nó. Một số phức $z = a+\mathbf{i}b$ sẽ có số phức liên hợp là $$\bar{z} = z^* = a - \mathbf{i}b.$$ Khi này, thực hiện phép nhân số phức $z$ với liên hợp của nó để có $$z\bar{z} = (a+\mathbf{i}b)(a-\mathbf{i}b) = a^2 + b^2.$$ Để ý rằng $a^2 + b^2$ là một số thực do $a, b$ đã là số thực từ định nghĩa, và cũng cần phải nhớ lại rằng khi nhân cả số bị chia và số chia với một số thì thương không đổi. Cho nên, để chia hai số phức, chúng ta nhân cả tử và mẫu với liên hợp của số chia $$\frac{v}{w} = \frac{a + \mathbf{i}b}{c + \mathbf{i}d} = \frac{\left(a + \mathbf{i}b\right)\left(c - \mathbf{i}d\right)}{\left(c + \mathbf{i}d\right)\left(c - \mathbf{i}d\right)} = \frac{\left(ac+bd\right) + \mathbf{i}\left(bc - ad\right)}{c^2+d^2}.$$ Từ đó, chúng ta đưa phép chia hai số phức thành phép chia số phức với số thực và có kết quả là $$\frac{v}{w} = \frac{a + \mathbf{i}b}{c + \mathbf{i}d} = \frac{ac+bd}{c^2+d^2}+\mathbf{i}\cdot\frac{bc - ad}{c^2+d^2}.$$
 
 \begin{wrapfigure}{R}{0.5\textwidth}
-    \centering
-    \begin{tikzpicture}
+   \centering
+   \begin{tikzpicture}
       \draw[->] (-2,0) -- (4,0) node[right] {$\operatorname*{Re}(z)$};
       \draw[->] (0,-1) -- (0,3) node[above] {$\operatorname*{Im}(z)$};
       \filldraw (3,2) circle (1pt) node[anchor=west] {$z = 3 + 2\mathbf{i}$};
@@ -118,7 +134,7 @@ Ngoài cách biểu diễn đại số, còn có cách biểu diễn hình học
 
 Hình \ref{fig:bieu_dien_so_phuc} đã biểu diễn số phức $z = 3 + 2\mathbf{i}$ trên mặt phẳng tọa độ. Từ đây, chúng ta có thể phát hiện ra những đặc tính khác của $z$ khác tọa vị. Đầu tiên, chúng ta có thể đo khoảng cách từ ảnh $Z$ đến gốc $(0;0)$, và từ đó, chúng ta sẽ nhận được \emph{mô-đun (module)} của $z$, kí hiệu: $|z|$. Bạn đọc có thể để ý rằng kí hiệu giống như kí hiệu giá trị tuyệt đối của số thực. Cũng có thể hiểu được tại sao lại vậy nếu như bạn đọc nhớ cách biểu diễn khoảng cách hình học của giá trị tuyệt đối trên trục số thực. Khi chúng ta có một điểm biểu diễn một số thực $x$ trên một trục thì giá trị tuyệt đối của $x$ chính là khoảng cách từ $x$ đến điểm $0$.
 
-\begin{figure}[h]
+\begin{figure}[H]
    \centering
    \begin{tikzpicture}
       \draw[<->] (-5, 0) -- (5, 0);

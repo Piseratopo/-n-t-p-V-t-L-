@@ -1,4 +1,4 @@
-\subsection{Định nghĩa hàm số và những khái niệm liên quan}
+\subsection{Định nghĩa hàm số, phương trình, bất phương trình và hệ}
 
 \ % Lùi đầu dòng
 
@@ -41,11 +41,9 @@ Những hàm \dblquote{dị thường} như vậy từng khiến không ít nhà
    \begin{tikzpicture}
       \draw[->] (-1, 0) -- (5, 0) node[right] {$x$};
       \draw[->] (0, -1) -- (0, 7) node[above] {$y$};
-      \filldraw (1, 2) circle (\pointSize) node[below] {$1$};
-      \filldraw (2, 3) circle (\pointSize) node[below] {$2$};
-      \filldraw (3, 4) circle (\pointSize) node[below] {$3$};
-      \filldraw (4, 5) circle (\pointSize) node[below] {$4$};
-      \filldraw (5, 6) circle (\pointSize) node[below] {$5$};
+      \foreach \x/\y in {1/2, 2/3, 3/4, 4/5, 5/6} {
+         \filldraw (\x, \y) circle (\pointSize) node[below] {$(\x; \y)$};
+      }
    \end{tikzpicture}
    \caption{Đồ thị cho ví dụ của $y = f(x)$ được cho ở bảng \ref{tab:ham_so_mot_bien:dinh_nghia:vddths}}
    \label{fig:ham_so_mot_bien:dinh_nghia:vddths}
@@ -105,10 +103,9 @@ Một cách tương tự, chúng ta cũng có thể biểu diễn phương bất
 
 5. \fbox{$y$ không là hàm của $x$} do khi $x = 2$ thì $y$ có hai giá trị $28$ và $29$. Mặc dù cách viết có thể ám chỉ $y=f(x)$ với $f$ là hàm \dblquote{số ngày trong tháng}, nhưng $f$ không phải là hàm số do \dblquote{dính} trường hợp ngoại lệ.
 
-\exercise[intropt] Vẽ đồ thị của phương trình $\mathcal{P}$, với các định nghĩa được cho. Hàm có tập xác định là bộ số đầu vào cho ở trong bảng. Để ý số ẩn của phương trình để chọn số chiều của đồ thị cho phù hợp.
+\exercise[ex:ham_so_mot_bien:dinh_nghia:intropt] Vẽ đồ thị của phương trình $\mathcal{P}$, với các định nghĩa được cho. Hàm có tập xác định là bộ số đầu vào cho ở trong bảng. Để ý số ẩn của phương trình để chọn số chiều của đồ thị cho phù hợp.
 
 \begin{enumerate}
-   \item $\mathcal{P}: x^2 - 1 = 0$ với $x \in \mathbb{R}$;
    \item
    \begin{tabular}{|c|c|c|c|c|c|c|}
       \hline
@@ -177,123 +174,121 @@ Một cách tương tự, chúng ta cũng có thể biểu diễn phương bất
    \end{tabular} và $\mathcal{P}: f(a) + f(b) = f(c)$;
 \end{enumerate}
 
-\solution[intropt]
-
-1. $\mathcal{P}$ là phương trình chỉ có một ẩn $x$, do đó đồ thị của $\mathcal{P}$ chỉ là đồ thị một chiều trên một trục số biểu diễn cho $x$.
+\solution[ex:ham_so_mot_bien:dinh_nghia:intropt]
 
 {
-\begin{wrapfigure}{R}{0.5\textwidth}
-   \centering
-   \fbox{
-      \begin{tikzpicture}
-         \draw[->] (-2, 0) -- (2, 0) node[right] {$x$};
-         \filldraw (1, 0) circle (\pointSize) node[below] {$1$};
-         \filldraw (-1, 0) circle (\pointSize) node[below] {$-1$};
-      \end{tikzpicture}
-   }
-   \caption{Đồ thị phần 1 bài \ref{intropt}}
-   \label{fig:ham_so_mot_bien:dinh_nghia:dtp1}
-\end{wrapfigure}
+   \begin{minipageindent}{0.48\textwidth}
+      \indent 1. $\mathcal{P}$ là phương trình chỉ có một ẩn $x$, do đó đồ thị của $\mathcal{P}$ chỉ là đồ thị một chiều trên một trục số biểu diễn cho $x$.
 
-Giải phương trình:
-\begin{align*}
-   &x^2 - 1 = 0 \\
-   \iff &x^2 = 1 \\
-   \iff &x \in \{-1; 1\}
-\end{align*}
-và từ đó, đồ thị của $\mathcal{P}$ có được như hình \ref{fig:ham_so_mot_bien:dinh_nghia:dtp1}.
-}
-
-\begin{wrapfigure}{R}{0.5\textwidth}
-   \centering
-   \fbox{
-      \begin{tikzpicture}
-         \draw[->] (-2, 0) -- (4, 0) node[right] {$x$};
-         \filldraw (1, 0) circle (\pointSize) node[below] {$1$};
-         \filldraw (-1, 0) circle (\pointSize) node[below] {$-1$};
-         \filldraw (3, 0) circle (\pointSize) node[below] {$3$};
-      \end{tikzpicture}
-   }
-   \caption{Đồ thị phần 2 bài \ref{intropt}}
-   \label{fig:ham_so_mot_bien:dinh_nghia:dtp2}
-\end{wrapfigure}
-2. $\mathcal{P}$ là phương trình chỉ có một ẩn $x$, do đó đồ thị của $\mathcal{P}$ chỉ là đồ thị một chiều trên một trục số biểu diễn cho $x$. 
-
-Có ba giá trị để $f(x)$ bằng $0$: $x\in \{-1; 1; -3\}$. Chúng ta có đồ thị của $\mathcal{P}$ ở hình \ref{fig:ham_so_mot_bien:dinh_nghia:dtp2}.
-
-3. Tập xác định của $f(x)$ là $\{-1; 1; -2; 2; -3; 3\}$, do đó, để $\mathcal{P}$ thỏa mãn thì $x$ chỉ có thể nhận các giá trị trong vùng tập xác định.
-
-{
-   \begin{wrapfigure}{R}{0.5\textwidth}
-      \centering
-      \fbox{
-         \begin{tikzpicture}
-            \draw[->] (-4, 0) -- (3, 0) node[right] {$x$};
-            \filldraw (1, 0) circle (\pointSize) node[below] {$1$};
-            \filldraw (-1, 0) circle (\pointSize) node[below] {$-1$};
-            \filldraw (-3, 0) circle (\pointSize) node[below] {$-3$};
-            \filldraw (2, 0) circle (\pointSize) node[below] {$2$};
-         \end{tikzpicture}
-      }
-      \caption{Đồ thị phần 3 bài \ref{intropt}}
-      \label{fig:ham_so_mot_bien:dinh_nghia:dtp3}
-   \end{wrapfigure}
-   Kẻ bảng so sánh:
-   \begin{table}[h]
-      \begin{minipage}{0.48\textwidth}
+      Có ba giá trị để $f(x)$ bằng $0$: $x\in \{-1; 1; -3\}$. Chúng ta có đồ thị của $\mathcal{P}$ ở hình \ref{fig:ham_so_mot_bien:dinh_nghia:dtp1}.
+   \end{minipageindent}
+   \hfill
+   \begin{minipageindent}{0.48\textwidth}
+      \begin{figure}[H]
          \centering
-            \begin{tabular}{|c|c|c|c|c|c|c|}
-               \hline
-               $x$ & $-1$ & $1$ & $-2$ & $2$ & $-3$ & $3$\\
-               \hline
-               $f(x)$ & $0$ & $0$ & $4$ & $3$ & $7$ & $0$\\
-               \hline
-               $x^2-1$ & $0$ & $0$ & $3$ & $3$ & $7$ & $7$\\
-               \hline
-            \end{tabular}
-            \caption{Giá trị của $f(x)$ và $x^2-1$ ứng với $x$}
-            \label{tab:ham_so_mot_bien:dinh_nghia:values3}
-      \end{minipage}
-   \end{table}
-
-   Nhận thấy rằng $\mathcal{P}$ chỉ đúng khi $x\in \{-1; 1; -3; 2\}$ và chúng ta có đồ thị là hình \ref{fig:ham_so_mot_bien:dinh_nghia:dtp3}.
+         \fbox{
+            \begin{tikzpicture}
+               \draw[->] (-2, 0) -- (4, 0) node[right] {$x$};
+               \foreach \x in {1, -1, 3} {
+                  \filldraw (\x, 0) circle (\pointSize) node[below] {$(\x)$};
+               }
+            \end{tikzpicture}
+         }
+         \caption{Đồ thị phần 1 bài \ref{ex:ham_so_mot_bien:dinh_nghia:intropt}}
+         \label{fig:ham_so_mot_bien:dinh_nghia:dtp1}
+      \end{figure}
+   \end{minipageindent}
 }
 
-\begin{wrapfigure}{R}{0.5\textwidth}
-   \centering
-   \fbox{
-      \begin{tikzpicture}
-         \draw[->] (0, 0) -- (5, 0) node[right] {$x$};
-         \filldraw (2, 0) circle (\pointSize) node[below] {$2$};
-         \filldraw (3, 0) circle (\pointSize) node[below] {$3$};
-         \filldraw (4, 0) circle (\pointSize) node[below] {$4$};
-      \end{tikzpicture}
-   }
-   \caption{Đồ thị phần 4 bài \ref{intropt}}
-   \label{fig:ham_so_mot_bien:dinh_nghia:dtp4}
-\end{wrapfigure}
-4. Nhìn vào bảng được cho, có $f(x) = g(x)$ khi và chỉ khi $x\in \{2; 3; 4\}$. Do đó, đồ thị của $\mathcal{P}$ có được như hình \ref{fig:ham_so_mot_bien:dinh_nghia:dtp4}.
 
-5. $\mathcal{P}$ là phương trình có hai ẩn $x$ và $y$, do đó đồ thị của $\mathcal{P}$ là một mặt phẳng hai chiều. Coi như trục hoành biểu diễn cho $x$ và trục tung biểu diễn cho $y$. 
+{
+   \begin{minipageindent}{0.48\textwidth}
+      2. Tập xác định của $f(x)$ là $\{-1; 1; -2; 2; -3; 3\}$, do đó, để $\mathcal{P}$ thỏa mãn thì $x$ chỉ có thể nhận các giá trị trong vùng tập xác định.
 
-\begin{wraptable}{R}{0.5\textwidth}
-   \centering
-   \begin{tabular}{|c|c|c|c|c|}
-      \hline
-      $B_n$ & $3$ & $5$ & $7$ & $11$ \\
-      \hline
-      $x$ & $2$ & $3$ & $4$ & $5$ \\
-      \hline
-      $y$ & $2$ & $3$ & $4$ & $6$ \\
-      \hline 
-   \end{tabular}
-   \caption{Giá trị của $x$ và $y$ ứng với $B_n$}
-   \label{tab:ham_so_mot_bien:dinh_nghia:bn_values}
-\end{wraptable}
+      Kẻ bảng so sánh:
+      \begin{table}[H]
+         \centering
+         \begin{tabular}{|c|c|c|c|c|c|c|}
+            \hline
+            $x$ & $-1$ & $1$ & $-2$ & $2$ & $-3$ & $3$\\
+            \hline
+            $f(x)$ & $0$ & $0$ & $4$ & $3$ & $7$ & $0$\\
+            \hline
+            $x^2-1$ & $0$ & $0$ & $3$ & $3$ & $7$ & $7$\\
+            \hline
+         \end{tabular}
+         \caption{Giá trị của $f(x)$ và $x^2-1$ ứng với $x$}
+         \label{tab:ham_so_mot_bien:dinh_nghia:values3}
+      \end{table}
 
-Để có thể vẽ được đồ thị của $\mathcal{P}$, hiển nhiên nhìn ra được rằng cần phải có những điểm $(x;y)$ để hai giá trị $f(x)$ và $g(y)$ bằng nhau. Và để làm được điều đó, trước hết, chúng ta sẽ tìm xem giá trị bằng nhau của $f(x)$ với $g(y)$ này bằng bao nhiêu. Gọi chung giá trị bằng nhau này là $B_n$. Kẻ lại bảng so sánh thành bảng \ref{tab:ham_so_mot_bien:dinh_nghia:bn_values}, với $B_n$ là giá trị đầu ra và $x$, $y$ là giá trị lần lượt đưa vào hai hàm $f$ và $g$ để có giá trị đầu ra đó. Và từ đó, chúng ta có đồ thị của $\mathcal{P}$ là hình \ref{fig:ham_so_mot_bien:dinh_nghia:dtp5}.
+      Nhận thấy rằng $\mathcal{P}$ chỉ đúng khi $x\in \{-1; 1; -3; 2\}$ và chúng ta có đồ thị là hình \ref{fig:ham_so_mot_bien:dinh_nghia:dtp2}.
+   \end{minipageindent}
+   \hfill
+   \begin{minipageindent}{0.48\textwidth}
+      \begin{figure}[H]
+         \centering
+         \fbox{
+            \begin{tikzpicture}
+               \draw[->] (-3.5, 0) -- (2.5, 0) node[right] {$x$};
+               \foreach \x in {1, -1, -3, 2} {
+                  \filldraw (\x, 0) circle (\pointSize) node[below] {$(\x)$};
+               }
+            \end{tikzpicture}
+         }
+         \caption{Đồ thị phần 2 bài \ref{ex:ham_so_mot_bien:dinh_nghia:intropt}}
+         \label{fig:ham_so_mot_bien:dinh_nghia:dtp2}
+      \end{figure}
+   \end{minipageindent}
+}
 
-\begin{figure}[h]
+{
+   \begin{minipageindent}{0.48\textwidth}
+      3. Nhìn vào bảng được cho, có $f(x) = g(x)$ khi và chỉ khi $x\in \{2; 3; 4\}$. Do đó, đồ thị của $\mathcal{P}$ có được như hình \ref{fig:ham_so_mot_bien:dinh_nghia:dtp3}.
+   \end{minipageindent}
+   \hfill
+   \begin{minipageindent}{0.48\textwidth}
+      \begin{figure}[H]
+         \centering
+         \fbox{
+            \begin{tikzpicture}
+               \draw[->] (0, 0) -- (5, 0) node[right] {$x$};
+               \foreach \x in {2, 3, 4} {
+                  \filldraw (\x, 0) circle (\pointSize) node[below] {$(\x)$};
+               }
+            \end{tikzpicture}
+         }
+         \caption{Đồ thị phần 4 bài \ref{ex:ham_so_mot_bien:dinh_nghia:intropt}}
+         \label{fig:ham_so_mot_bien:dinh_nghia:dtp3}
+      \end{figure}
+   \end{minipageindent}
+}
+
+{
+   \begin{minipageindent}{0.48\textwidth}
+      4. $\mathcal{P}$ là phương trình có hai ẩn $x$ và $y$, do đó đồ thị của $\mathcal{P}$ là một mặt phẳng hai chiều. Coi như trục hoành biểu diễn cho $x$ và trục tung biểu diễn cho $y$. 
+
+      Để có thể vẽ được đồ thị của $\mathcal{P}$, hiển nhiên nhìn ra được rằng cần phải có những điểm $(x;y)$ để hai giá trị $f(x)$ và $g(y)$ bằng nhau. Và để làm được điều đó, trước hết, chúng ta sẽ tìm xem giá trị bằng nhau của $f(x)$ với $g(y)$ này bằng bao nhiêu. Gọi chung giá trị bằng nhau này là $B_n$. Kẻ lại bảng so sánh thành bảng \ref{tab:ham_so_mot_bien:dinh_nghia:bn_values}, với $B_n$ là giá trị đầu ra và $x$, $y$ là giá trị lần lượt đưa vào hai hàm $f$ và $g$ để có giá trị đầu ra đó. Và từ đó, chúng ta có đồ thị của $\mathcal{P}$ là hình \ref{fig:ham_so_mot_bien:dinh_nghia:dtp4}.
+   \end{minipageindent}
+   \hfill
+   \begin{minipageindent}{0.48\textwidth}
+      \begin{table}[H]
+         \centering
+         \begin{tabular}{|c|c|c|c|c|}
+            \hline
+            $B_n$ & $3$ & $5$ & $7$ & $11$ \\
+            \hline
+            $x$ & $2$ & $3$ & $4$ & $5$ \\
+            \hline
+            $y$ & $2$ & $3$ & $4$ & $6$ \\
+            \hline 
+         \end{tabular}
+         \caption{Giá trị của $x$ và $y$ ứng với $B_n$}
+         \label{tab:ham_so_mot_bien:dinh_nghia:bn_values}
+      \end{table}
+   \end{minipageindent}
+}
+
+\begin{figure}[H]
    \centering
    \fbox{
       \begin{tikzpicture}
@@ -305,38 +300,44 @@ Có ba giá trị để $f(x)$ bằng $0$: $x\in \{-1; 1; -3\}$. Chúng ta có �
          \filldraw (2, 2) circle (\pointSize) node[right] {$(4; 4)$};
       \end{tikzpicture}
    }
-   \caption{Đồ thị phần 5 bài \ref{intropt}}
-   \label{fig:ham_so_mot_bien:dinh_nghia:dtp5}
+   \caption{Đồ thị phần 4 bài \ref{ex:ham_so_mot_bien:dinh_nghia:intropt}}
+   \label{fig:ham_so_mot_bien:dinh_nghia:dtp4}
 \end{figure}
 
-6. $\mathcal{P}$ là phương trình có hai ẩn $x$ và $b$, do đó đồ thị của $\mathcal{P}$ là một mặt phẳng hai chiều. Coi như trục hoành biểu diễn cho $x$ và trục tung biểu diễn cho $b$.
+{
+   \begin{minipageindent}{0.48\textwidth}
+      5. $\mathcal{P}$ là phương trình có hai ẩn $x$ và $b$, do đó đồ thị của $\mathcal{P}$ là một mặt phẳng hai chiều. Coi như trục hoành biểu diễn cho $x$ và trục tung biểu diễn cho $b$.
 
-Giải ngược $b$ từ $f(x)$:
-\begin{align*}
-   f(x) &= 2b - 1 \\
-   \iff b &= \frac{f(x) + 1}{2}.
-\end{align*}
+      Tính giá trị của $b$ từ $f(x)$:
+      \begin{align*}
+         f(x) &= 2b - 1 \\
+         \iff b &= \frac{f(x) + 1}{2}.
+      \end{align*}
+   \end{minipageindent}
+   \hfill
+   \begin{minipageindent}{0.48\textwidth}
+      \begin{table}[H]
+         \centering
+         \begin{tabular}{|c|c|c|c|c|c|c|}
+            \hline
+            $x$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$\\
+            \hline
+            $f(x)$ & $2$ & $3$ & $5$ & $7$ & $11$ & $13$\\
+            \hline
+            $b$ & $\frac{3}{2}$ & $\frac{5}{2}$ & $3$ & $4$ & $6$ & $7$\\
+            \hline
+         \end{tabular}
+         \caption{Giá trị của $b$ ứng với $x$}
+         \label{tab:ham_so_mot_bien:dinh_nghia:b_values6}
+      \end{table}
+   \end{minipageindent}
+}
+Từ đây, chúng ta có thể thêm giá trị của $b$ vào bảng được cho thành bảng \ref{tab:ham_so_mot_bien:dinh_nghia:b_values6}. 
 
-Từ đây, chúng ta có thể thêm giá trị của $b$ vào bảng được cho thành bảng \ref{tab:ham_so_mot_bien:dinh_nghia:b_values6}
+Qua bảng đó, vẽ được đồ thị của $\mathcal{P}$ như hình \ref{fig:ham_so_mot_bien:dinh_nghia:dtp5}.
 
-\begin{table}[h]
-   \centering
-   \begin{tabular}{|c|c|c|c|c|c|c|}
-      \hline
-      $x$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$\\
-      \hline
-      $f(x)$ & $2$ & $3$ & $5$ & $7$ & $11$ & $13$\\
-      \hline
-      $b$ & $\frac{3}{2}$ & $\frac{5}{2}$ & $3$ & $4$ & $6$ & $7$\\
-      \hline
-   \end{tabular}
-   \caption{Giá trị của $b$ ứng với $x$}
-   \label{tab:ham_so_mot_bien:dinh_nghia:b_values6}
-\end{table}
 
-Qua bảng đó, vẽ được đồ thị của $\mathcal{P}$ như hình \ref{fig:ham_so_mot_bien:dinh_nghia:dtp6}.
-
-\begin{figure}[h]
+\begin{figure}[H]
    \centering
    \fbox{
       \begin{tikzpicture}
@@ -350,31 +351,37 @@ Qua bảng đó, vẽ được đồ thị của $\mathcal{P}$ như hình \ref{f
          \filldraw (3, 3.5) circle (\pointSize) node[right] {$(6; 7)$};
       \end{tikzpicture}
    }
-   \caption{Đồ thị phần 6 bài \ref{intropt}}
-   \label{fig:ham_so_mot_bien:dinh_nghia:dtp6}
+   \caption{Đồ thị phần 5 bài \ref{ex:ham_so_mot_bien:dinh_nghia:intropt}}
+   \label{fig:ham_so_mot_bien:dinh_nghia:dtp5}
 \end{figure}
 
-7. Nhìn vào bảng định nghĩa được cho, $f(x)$ có thể nhận các giá trị là $\{0; 3; 4; 7\}$.
+{
+   \begin{minipageindent}{0.48\textwidth}
+      6. Nhìn vào bảng định nghĩa được cho, $f(x)$ có thể nhận các giá trị là $\{0; 3; 4; 7\}$.
 
-Khi $f(x) \neq 0$, chỉ có một giá trị đầu vào cho $f$ sao cho $f(x)$ đạt được giá trị đầu ra. Ví dụ, chỉ có đầu vào $x = 2$ mới có $f(x) = 3$. Do đó, khi $f(x) \neq 0$, $x = 2b-1$. Biến đổi đại số cơ bản để có $b = \frac{x + 1}{2}$. Lập bảng:
+      Khi $f(x) \neq 0$, chỉ có một giá trị đầu vào cho $f$ sao cho $f(x)$ đạt được giá trị đầu ra. Ví dụ, chỉ có đầu vào $x = 2$ mới có $f(x) = 3$. Do đó, khi $f(x) \neq 0$, $x = 2b-1$. Biến đổi đại số cơ bản để có $b = \frac{x + 1}{2}$. Lập bảng \ref{tab:ham_so_mot_bien:dinh_nghia:b_values7} để thấy được mối quan hệ giữa $x$ và $b$.
 
-\begin{table}[h]
-   \centering
-   \begin{tabular}{|c|c|c|c|}
-      \hline
-      $x$ & $-2$ & $2$ & $-3$\\
-      \hline
-      $b = \frac{x+1}{2}$ & $-\frac{3}{2}$ & $2$ & $-1$\\
-      \hline
-   \end{tabular}
-   \caption{Giá trị của cặp $(x; b)$ với $f(x) \neq 0$}
-   \label{tab:ham_so_mot_bien:dinh_nghia:b_values7}
-\end{table}
+   \end{minipageindent}
+   \hfill
+   \begin{minipageindent}{0.48\textwidth}
+      \begin{table}[H]
+         \centering
+         \begin{tabular}{|c|c|c|c|}
+            \hline
+            $x$ & $-2$ & $2$ & $-3$\\
+            \hline
+            $b = \frac{x+1}{2}$ & $-\frac{3}{2}$ & $2$ & $-1$\\
+            \hline
+         \end{tabular}
+         \caption{Giá trị của cặp $(x; b)$ với $f(x) \neq 0$}
+         \label{tab:ham_so_mot_bien:dinh_nghia:b_values7}
+      \end{table}
+   \end{minipageindent}
+}
 
-Khi $f(x) = 0$, $x$ và $2b-1$ có thể nhận bất cứ giá trị nào trong tập $\{-1; 1; -3\}$. Từ đó, có thể chọn $x \in \{-1; 1; 3\}$ và giải đại số để chọn $b \in \left\{\frac{-1+1}{2}; \frac{1+1}{2}; \frac{3+1}{2}\right\} = \{0; 1; 2\}$. Các cặp $(x; b)$ thỏa mãn là $(x; b) \in \left\{\left(-1; 0\right); \left(-1; 1\right); \left(-1; 2\right); \left(1; 0\right); \left(1; 1\right); \left(1; 2\right); \left(-3; 0\right); \left(-3; 1\right); \left(-3; 2\right)\right\}$.
+Khi $f(x) = 0$, $x$ và $2b-1$ có thể nhận bất cứ giá trị nào trong tập $\{-1; 1; -3\}$. Từ đó, có thể chọn $x \in \{-1; 1; 3\}$ và giải đại số để chọn $b \in \left\{\frac{-1+1}{2}; \frac{1+1}{2}; \frac{3+1}{2}\right\} = \{0; 1; 2\}$. Các cặp $(x; b)$ thỏa mãn là $(x; b)$ $\in$ $\{\left(-1; 0\right); \left(-1; 1\right); \left(-1; 2\right); \left(1; 0\right); \left(1; 1\right); \left(1; 2\right); \left(-3; 0\right); \left(-3; 1\right); \left(-3; 2\right)\}$.
 
 Cuối cùng, kết hợp hai trường hợp, chúng ta có đồ thị cho $\mathcal{P}$:
-
 \begin{figure}[H]
    \centering
    \fbox{
@@ -400,21 +407,23 @@ Cuối cùng, kết hợp hai trường hợp, chúng ta có đồ thị cho $\m
          \filldraw (-3, 2) circle (\pointSize) node[below] {$\left(-3; 2\right)$};
       \end{tikzpicture}
    }
-   \caption{Đồ thị phần 7 bài \ref{intropt}}
+   \caption{Đồ thị phần 6 bài \ref{ex:ham_so_mot_bien:dinh_nghia:intropt}}
    \label{fig:ham_so_mot_bien:dinh_nghia:dtp7}
 \end{figure}
 
-8. $\mathcal{P}$ là phương trình có ba ẩn $a$, $b$ và $c$, do đó đồ thị của $\mathcal{P}$ là một không gian ba chiều với các trục hoành, trục tung và trục cao tương ứng là $a$, $b$ và $c$.
+7. $\mathcal{P}$ là phương trình có ba ẩn $a$, $b$ và $c$, do đó đồ thị của $\mathcal{P}$ là một không gian ba chiều với các trục hoành, trục tung và trục cao tương ứng là $a$, $b$ và $c$.
 
 Theo $\mathcal{P}$, chúng ta cần phải chọn ba số trong tập giá trị của $f$ để hai trong ba số có tổng bằng số còn lại. Từ bảng, nhận thấy rằng, chỉ có thể có hai tổng $4 + 3 = 7$ và $0 + 0 = 0$.
 
 Chúng ta cần tìm tất cả các bộ ba $(a, b, c)$ thỏa mãn $f(a) + f(b) = f(c)$. Xét hai trường hợp sau:
 
 \textbf{Trường hợp 1:} Tổng hai số khác 0. Để $f(a) + f(b) = f(c)$, chỉ có thể xảy ra khi $3 + 4 = 7$. Do đó, $(f(a); f(b); f(c))$ phải là $(3; 4; 7)$ hoặc $(4; 3; 7)$. Tra ngược lại bảng giá trị, chúng ta có hai nghiệm:
-  \begin{itemize}
-     \item $f(a)=3, f(b)=4 \implies a=2, b=-2 \implies c=-3$ (vì $f(-3)=7$)
-     \item $f(a)=4, f(b)=3 \implies a=-2, b=2 \implies c=-3$
-  \end{itemize}
+   \begin{itemize}
+      \item $f(a)=3, f(b)=4 \implies a=2, b=-2$. Và
+      \item $f(a)=4, f(b)=3 \implies a=-2, b=2$.
+   \end{itemize}
+
+Chỉ có $f(-3) = 7$ nên $c = -3$.
 
 \textbf{Trường hợp 2:} Tất cả bằng 0. Khi $f(a) = f(b) = f(c) = 0$, từ bảng định nghĩa, $f(x)=0$ khi $x \in \{-3; -1; 1\}$. Do đó, $a, b, c$ có thể nhận bất kỳ giá trị nào trong tập $\{-3; -1; 1\}$. Có tổng cộng $3^3 = 27$ bộ ba thỏa mãn trong trường hợp này.
 
@@ -442,11 +451,121 @@ Kết hợp hai trường hợp, đồ thị của $\mathcal{P}$ sẽ gồm 29 �
          }
       \end{tikzpicture}
    }
-   \caption{Đồ thị phần 8 bài \ref{intropt}}
+   \caption{Đồ thị phần 7 bài \ref{ex:ham_so_mot_bien:dinh_nghia:intropt}}
    \label{fig:ham_so_mot_bien:dinh_nghia:dtp8}
 \end{figure}
 
-\exercise[ex:hpt1] Vẽ đồ thị của hệ phương trình $\mathcal{P}$, với các định nghĩa đã cho. Hàm có tập xác định là bộ số đầu vào cho ở trong bảng.
+\exercise[ex:ham_so_mot_bien:dinh_nghia:bpt1] Vẽ đồ thị của bất phương trình $\mathcal{P}$, với các định nghĩa đã cho. Hàm có tập xác định là bộ số đầu vào cho ở trong bảng.
+\begin{enumerate}
+   \item 
+   \begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      $x$ & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ \\
+      \hline
+      $f(x)$ & $-1$ & $-3$ & $-4$ & $-2$ & $-1$ & $-3$\\
+      \hline
+   \end{tabular} và $\mathcal{P}:f(x) \neq -3$;
+
+   \item 
+   \begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      $x$ & $-10$ & $-8$ & $-2$ & $2$ & $8$ & $10$ \\
+      \hline
+      $\alpha(x)$ & $4$ & $8$ & $0$ & $1$ & $4$ & $8$\\
+      \hline
+   \end{tabular} và $\mathcal{P}:\alpha(x) < 0$;
+
+   \item 
+   \begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      $x$ & $0$ & $6$ & $2$ & $-7$ & $-6$ & $3$ \\
+      \hline
+      $\beta(x)$ & $4$ & $7$ & $10$ & $3$ & $10$ & $9$\\
+      \hline
+   \end{tabular} và $\mathcal{P}:\beta(x) > x$;
+
+   \item 
+   \begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      $x$ & $-10$ & $-8$ & $-2$ & $2$ & $8$ & $10$ \\
+      \hline
+      $\alpha(x)$ & $4$ & $8$ & $0$ & $1$ & $4$ & $8$\\
+      \hline
+   \end{tabular},
+   \begin{tabular}{|c|c|c|c|c|c|c|}
+      \hline
+      $x$ & $0$ & $6$ & $2$ & $-7$ & $-6$ & $3$ \\
+      \hline
+      $\beta(x)$ & $4$ & $7$ & $10$ & $3$ & $10$ & $9$\\
+      \hline
+   \end{tabular}, và $\mathcal{P}:\alpha(x) \geq 2\beta(y)$.
+\end{enumerate}
+
+\solution[ex:ham_so_mot_bien:dinh_nghia:bpt1]
+
+{
+   \begin{minipageindent}{0.48\textwidth}
+      1. Phần này tương đối đơn giản. Kiểm tra trên bảng, chúng ta thấy $f(x) = -3$ khi $x \in \{2; 5\}$. Thêm vào đó, tập xác định của $f$ là $\{0; 1; 2; 3; 4; 5\}$. Do đó, $f(x) \neq -3$ khi $x \in \{0; 1; 3; 4\}$. 
+
+      Đồ thị của $\mathcal{P}$ là hình \ref{fig:ham_so_mot_bien:dinh_nghia:bpt1} ở bên.
+   \end{minipageindent}
+   \begin{minipageindent}{0.48\textwidth}
+      \begin{figure}[H]
+         \centering
+         \begin{tikzpicture}
+            \draw[->] (-1, 0) -- (5, 0) node[right] {$x$};
+            \foreach \x in {0, 1, 3, 4} {
+               \filldraw (\x, 0) circle (\pointSize) node[below] {$\left(\x\right)$};
+            }
+         \end{tikzpicture}
+         \caption{Đồ thị phần 1 bài \ref{ex:ham_so_mot_bien:dinh_nghia:bpt1}}
+         \label{fig:ham_so_mot_bien:dinh_nghia:bpt1}
+      \end{figure}
+   \end{minipageindent}
+}
+
+{
+   \begin{minipageindent}{0.48\textwidth}
+      2. Tra bảng trực tiếp, các giá trị $\alpha(x)$ không bao giờ nhỏ hơn $0$. Chúng ta không xét giá trị $x$ ngoài bảng do không thuộc tập xác định của hàm $\alpha$. Do đó, $\alpha(x) < 0$ là bất phương trình vô nghiệm.
+
+      Và qua đó, vẽ được đồ thị của $\mathcal{P}$ là trục không đánh dấu như hình \ref{fig:ham_so_mot_bien:dinh_nghia:bpt2}.
+   \end{minipageindent}
+   \begin{minipageindent}{0.48\textwidth}
+      \begin{figure}[H]
+         \centering
+         \begin{tikzpicture}
+            \draw[->] (-1, 0) -- (5, 0) node[right] {$x$};
+         \end{tikzpicture}
+         \caption{Đồ thị phần 2 bài \ref{ex:ham_so_mot_bien:dinh_nghia:bpt1}}
+         \label{fig:ham_so_mot_bien:dinh_nghia:bpt2}
+      \end{figure}
+   \end{minipageindent}
+}
+
+3. Xét trên tập xác định của $\beta$, chúng ta có $\beta(x) > x$ với mọi $x$ nằm trên bảng được cho. Một cách đơn giản, chúng ta có đồ thị là hình \ref{fig:ham_so_mot_bien:dinh_nghia:bpt3}.
+
+\begin{figure}[H]
+   \centering
+   \begin{tikzpicture}
+      \draw[->] (-8, 0) -- (8, 0) node[right] {$x$};
+      \foreach \x in {0, 6, 2, -7, -6, 3} {
+         \filldraw (\x, 0) circle (\pointSize) node[below] {$\left(\x\right)$};
+      }
+   \end{tikzpicture}
+   \caption{Đồ thị phần 3 bài \ref{ex:ham_so_mot_bien:dinh_nghia:bpt1}}
+   \label{fig:ham_so_mot_bien:dinh_nghia:bpt3}
+\end{figure}
+
+4. Chúng ta có thể kiểm tra trực tiếp $36$ cặp $(x; y)$ và sau đó vẽ đồ thị. Sau đây, tác giả sẽ chỉ những góc nhìn để có thể giảm số trường hợp cần kiểm tra.
+
+Để ý rằng, giá trị lớn nhất có thể của $\alpha(x)$ là $8$. Mặt khác, để $\mathcal{P}$ thỏa mãn thì
+\begin{align*}
+   \alpha(x) &\geq 2\beta(y) \\
+   \iff \beta(y) &\leq \frac{\alpha(x)}{2}. \\
+\end{align*}
+Qua đó, giá trị lớn nhất có thể của $\beta(y)$ là $4$. Theo bảng định nghĩa, $\beta(y)$ chỉ có thể nhận hai giá trị là $3$ hoặc $4$. 
+
+\exercise[ex:ham_so_mot_bien:dinh_nghia:hpt1] Vẽ đồ thị của hệ $\mathcal{P}$, với các định nghĩa đã cho. Hàm có tập xác định là bộ số đầu vào cho ở trong bảng.
 \begin{enumerate}
    \item 
    \begin{tabular}{|c|c|c|c|c|c|c|}
@@ -545,7 +664,7 @@ Kết hợp hai trường hợp, đồ thị của $\mathcal{P}$ sẽ gồm 29 �
    \end{tabular} và $\mathcal{P}:\begin{cases}f(m) = n\\g(n) = h(w)\end{cases}$.
 \end{enumerate}
 
-\solution[ex:hpt1]
+\solution[ex:ham_so_mot_bien:dinh_nghia:hpt1]
 
 1. Giá trị đầu vào để $f, g, h$ đều có cùng một đầu ra là $x\in\{0;4\}$. Vậy, chúng ta có đồ thị như hình \ref{fig:hpt11}.
 
@@ -554,11 +673,11 @@ Kết hợp hai trường hợp, đồ thị của $\mathcal{P}$ sẽ gồm 29 �
    \fbox{
       \begin{tikzpicture}
          \draw[->] (-1, 0) -- (5, 0) node[right] {$x$};
-         \filldraw (0, 0) circle (\pointSize) node[below] {$0$};
-         \filldraw (4, 0) circle (\pointSize) node[below] {$4$};
+         \filldraw (0, 0) circle (\pointSize) node[below] {$(0)$};
+         \filldraw (4, 0) circle (\pointSize) node[below] {$(4)$};
       \end{tikzpicture}
    }
-   \caption{Đồ thị phần 1 bài \ref{ex:hpt1}}
+   \caption{Đồ thị phần 1 bài \ref{ex:ham_so_mot_bien:dinh_nghia:hpt1}}
    \label{fig:hpt11}
 \end{figure}
 
@@ -589,7 +708,7 @@ Kết hợp ba trường hợp, xây dựng không gian tọa độ, chúng ta c
          }
       \end{tikzpicture}
    }
-   \caption{Đồ thị phần 2 bài \ref{ex:hpt1}}
+   \caption{Đồ thị phần 2 bài \ref{ex:ham_so_mot_bien:dinh_nghia:hpt1}}
    \label{fig:hpt12}
 \end{figure}
 
@@ -619,7 +738,7 @@ Cuối cùng, vẽ đồ thị để được hình \ref{fig:hpt13}.
          }
       \end{tikzpicture}
    }
-   \caption{Đồ thị phần 3 bài \ref{ex:hpt1}}
+   \caption{Đồ thị phần 3 bài \ref{ex:ham_so_mot_bien:dinh_nghia:hpt1}}
    \label{fig:hpt13}
 \end{figure}
 
@@ -638,6 +757,6 @@ Bộ số duy nhất thỏa mãn hệ phương trình $\mathcal{P}$ là $\left(m
          \filldraw (1.5, -1, -2) circle (\pointSize ) node[above] {$\left(3; -2; -4\right)$};
       \end{tikzpicture}
    }
-   \caption{Đồ thị phần 4 bài \ref{ex:hpt1}}
+   \caption{Đồ thị phần 4 bài \ref{ex:ham_so_mot_bien:dinh_nghia:hpt1}}
    \label{fig:hpt14}
 \end{figure}
