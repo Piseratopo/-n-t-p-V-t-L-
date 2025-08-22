@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.3) (preloaded format=xelatex 2025.8.2)  21 AUG 2025 01:15
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.3) (preloaded format=xelatex 2025.8.2)  22 AUG 2025 23:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -415,86 +415,60 @@ Package: multicol 2024/09/14 v1.9i multicolumn formatting (FMi)
 \mult@nat@firstbox=\box103
 \colbreak@box=\box104
 \mc@col@check@num=\count332
-) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/steinmetz\steinmetz.sty
-Package: steinmetz 2009/06/14 v1.0 Steinmetz symbol for electrotechnics
- (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/pict2e\pict2e.sty
-Package: pict2e 2020/09/30 v0.4b Improved picture commands (HjG,RN,JT)
- (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/pict2e\pict2e.cfg
-File: pict2e.cfg 2016/02/05 v0.1u pict2e configuration for teTeX/TeXLive
+) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/pgfplots\pgfplots.sty (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.revision.tex)
+Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
+ (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+ (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package pict2e Info: Driver file: xetex.def on input line 112.
+Package graphics Info: Driver file: xetex.def on input line 106.
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\xetex.def
 File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
-)
-Package pict2e Info: Driver file for pict2e: p2e-xetex.def on input line 114.
- (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/pict2e\p2e-xetex.def
-File: p2e-xetex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
-) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
-Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-)
-\pIIe@GRAPH=\toks30
-\@arclen=\dimen186
-\@arcrad=\dimen187
-\pIIe@tempdima=\dimen188
-\pIIe@tempdimb=\dimen189
-\pIIe@tempdimc=\dimen190
-\pIIe@tempdimd=\dimen191
-\pIIe@tempdime=\dimen192
-\pIIe@tempdimf=\dimen193
-)
-\stm@phasebox=\box105
-\stm@phasedp=\skip62
-\stm@phaseht=\skip63
-\stm@phasetot=\skip64
-\stm@phasewd=\skip65
+))
+\Gin@req@height=\dimen186
+\Gin@req@width=\dimen187
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
-\pgfutil@everybye=\toks31
-\pgfutil@tempdima=\dimen194
-\pgfutil@tempdimb=\dimen195
+\pgfutil@everybye=\toks30
+\pgfutil@tempdima=\dimen188
+\pgfutil@tempdimb=\dimen189
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
-\pgfutil@abb=\box106
+\pgfutil@abb=\box105
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
 Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
 ))
 Package: pgf 2023-01-15 v3.1.10 (3.1.10)
- (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.sty (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
-Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
- (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
-Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
- (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
-File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
-)
-Package graphics Info: Driver file: xetex.def on input line 106.
-)
-\Gin@req@height=\dimen196
-\Gin@req@width=\dimen197
-) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.sty (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys.code.tex
+ (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.sty (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.sty (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys.code.tex
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks32
-\pgfkeys@temptoks=\toks33
+\pgfkeys@pathtoks=\toks31
+\pgfkeys@temptoks=\toks32
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeyslibraryfiltered.code.tex
-\pgfkeys@tmptoks=\toks34
+\pgfkeys@tmptoks=\toks33
 ))
-\pgf@x=\dimen198
-\pgf@y=\dimen199
-\pgf@xa=\dimen256
-\pgf@ya=\dimen257
-\pgf@xb=\dimen258
-\pgf@yb=\dimen259
-\pgf@xc=\dimen260
-\pgf@yc=\dimen261
-\pgf@xd=\dimen262
-\pgf@yd=\dimen263
+\pgf@x=\dimen190
+\pgf@y=\dimen191
+\pgf@xa=\dimen192
+\pgf@ya=\dimen193
+\pgf@xb=\dimen194
+\pgf@yb=\dimen195
+\pgf@xc=\dimen196
+\pgf@yc=\dimen197
+\pgf@xd=\dimen198
+\pgf@yd=\dimen199
 \w@pgf@writea=\write3
 \r@pgf@reada=\read3
 \c@pgf@counta=\count333
 \c@pgf@countb=\count334
 \c@pgf@countc=\count335
 \c@pgf@countd=\count336
-\t@pgf@toka=\toks35
-\t@pgf@tokb=\toks36
-\t@pgf@tokc=\toks37
+\t@pgf@toka=\toks34
+\t@pgf@tokb=\toks35
+\t@pgf@tokc=\toks36
 \pgf@sys@id@count=\count337
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
@@ -532,52 +506,52 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore.code.tex
 Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex
-\pgfmath@dimen=\dimen264
+\pgfmath@dimen=\dimen256
 \pgfmath@count=\count341
-\pgfmath@box=\box107
-\pgfmath@toks=\toks38
-\pgfmath@stack@operand=\toks39
-\pgfmath@stack@operation=\toks40
+\pgfmath@box=\box106
+\pgfmath@toks=\toks37
+\pgfmath@stack@operand=\toks38
+\pgfmath@stack@operation=\toks39
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count342
 )) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@picminx=\dimen265
-\pgf@picmaxx=\dimen266
-\pgf@picminy=\dimen267
-\pgf@picmaxy=\dimen268
-\pgf@pathminx=\dimen269
-\pgf@pathmaxx=\dimen270
-\pgf@pathminy=\dimen271
-\pgf@pathmaxy=\dimen272
-\pgf@xx=\dimen273
-\pgf@xy=\dimen274
-\pgf@yx=\dimen275
-\pgf@yy=\dimen276
-\pgf@zx=\dimen277
-\pgf@zy=\dimen278
+\pgf@picminx=\dimen257
+\pgf@picmaxx=\dimen258
+\pgf@picminy=\dimen259
+\pgf@picmaxy=\dimen260
+\pgf@pathminx=\dimen261
+\pgf@pathmaxx=\dimen262
+\pgf@pathminy=\dimen263
+\pgf@pathmaxy=\dimen264
+\pgf@xx=\dimen265
+\pgf@xy=\dimen266
+\pgf@yx=\dimen267
+\pgf@yy=\dimen268
+\pgf@zx=\dimen269
+\pgf@zy=\dimen270
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@path@lastx=\dimen279
-\pgf@path@lasty=\dimen280
+\pgf@path@lastx=\dimen271
+\pgf@path@lasty=\dimen272
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@shorten@end@additional=\dimen281
-\pgf@shorten@start@additional=\dimen282
+\pgf@shorten@end@additional=\dimen273
+\pgf@shorten@start@additional=\dimen274
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfpic=\box108
-\pgf@hbox=\box109
-\pgf@layerbox@main=\box110
+\pgfpic=\box107
+\pgf@hbox=\box108
+\pgf@layerbox@main=\box109
 \pgf@picture@serial@count=\count343
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgflinewidth=\dimen283
+\pgflinewidth=\dimen275
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@pt@x=\dimen284
-\pgf@pt@y=\dimen285
-\pgf@pt@temp=\dimen286
+\pgf@pt@x=\dimen276
+\pgf@pt@y=\dimen277
+\pgf@pt@temp=\dimen278
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex
@@ -586,17 +560,17 @@ File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowsep=\dimen287
+\pgfarrowsep=\dimen279
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@max=\dimen288
+\pgf@max=\dimen280
 \pgf@sys@shading@range@num=\count344
 \pgf@shadingcount=\count345
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfexternal@startupbox=\box111
+\pgfexternal@startupbox=\box110
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransparency.code.tex
@@ -607,46 +581,46 @@ File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodeparttextbox=\box112
+\pgfnodeparttextbox=\box111
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
-\pgf@nodesepstart=\dimen289
-\pgf@nodesepend=\dimen290
+\pgf@nodesepstart=\dimen281
+\pgf@nodesepend=\dimen282
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
 )) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.sty (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.sty (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex)) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex)) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
-\pgffor@iter=\dimen291
-\pgffor@skip=\dimen292
-\pgffor@stack=\toks41
-\pgffor@toks=\toks42
-))
-(C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
+\pgffor@iter=\dimen283
+\pgffor@skip=\dimen284
+\pgffor@stack=\toks40
+\pgffor@toks=\toks41
+)) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
 Package: tikz 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@plot@mark@count=\count346
-\pgfplotmarksize=\dimen293
+\pgfplotmarksize=\dimen285
 )
-\tikz@lastx=\dimen294
-\tikz@lasty=\dimen295
-\tikz@lastxsaved=\dimen296
-\tikz@lastysaved=\dimen297
-\tikz@lastmovetox=\dimen298
-\tikz@lastmovetoy=\dimen299
-\tikzleveldistance=\dimen300
-\tikzsiblingdistance=\dimen301
-\tikz@figbox=\box113
-\tikz@figbox@bg=\box114
-\tikz@tempbox=\box115
-\tikz@tempbox@bg=\box116
+\tikz@lastx=\dimen286
+\tikz@lasty=\dimen287
+\tikz@lastxsaved=\dimen288
+\tikz@lastysaved=\dimen289
+\tikz@lastmovetox=\dimen290
+\tikz@lastmovetoy=\dimen291
+\tikzleveldistance=\dimen292
+\tikzsiblingdistance=\dimen293
+\tikz@figbox=\box112
+\tikz@figbox@bg=\box113
+\tikz@tempbox=\box114
+\tikz@tempbox@bg=\box115
 \tikztreelevel=\count347
 \tikznumberofchildren=\count348
 \tikznumberofcurrentchild=\count349
 \tikz@fig@count=\count350
- (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex
+
+(C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfmatrixcurrentrow=\count351
 \pgfmatrixcurrentcolumn=\count352
@@ -655,7 +629,78 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \tikz@expandcount=\count354
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/tikz-3dplot\tikz-3dplot.sty (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+))) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.code.tex (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscore.code.tex
+\t@pgfplots@toka=\toks42
+\t@pgfplots@tokb=\toks43
+\t@pgfplots@tokc=\toks44
+\pgfplots@tmpa=\dimen294
+\c@pgfplots@coordindex=\count355
+\c@pgfplots@scanlineindex=\count356
+ (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgfplotssysgeneric.code.tex)) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgfplotslibrary.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpgfcompatib\pgfplotsoldpgfsupp_loader.code.tex (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryfpu.code.tex)
+Package pgfplots: loading complementary utilities for your pgf version...
+\t@pgf@toka=\toks45
+\t@pgf@tokb=\toks46
+\t@pgf@tokc=\toks47
+(C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpgfcompatib\pgfplotsoldpgfsupp_pgfutil-common-lists.tex)) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsutil.code.tex (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsliststructure.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsliststructureext.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsarray.code.tex
+\c@pgfplotsarray@tmp=\count357
+) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsmatrix.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numtable\pgfplotstableshared.code.tex
+\c@pgfplotstable@counta=\count358
+\t@pgfplotstable@a=\toks48
+) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure\pgfplotsdeque.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsbinary.code.tex (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsbinary.data.code.tex)) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotsutil.verb.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgflibrarypgfplots.surfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count359
+ (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflibrarypgfplots.surfshading.pgfsys-xetex.def (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflibrarypgfplots.surfshading.pgfsys-dvipdfmx.def
+\c@pgfplotslibrarysurf@streamlen=\count360
+)))) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotscolormap.code.tex (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplotscolor.code.tex)) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsstackedplots.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsplothandlers.code.tex (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsmeshplothandler.code.tex (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsmeshplotimage.code.tex))) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.scaling.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscoordprocessing.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.errorbars.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.markers.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsticks.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.paths.code.tex) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.code.tex (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen295
+\pgfdecoratedremainingdistance=\dimen296
+\pgfdecoratedinputsegmentcompleteddistance=\dimen297
+\pgfdecoratedinputsegmentremainingdistance=\dimen298
+\pgf@decorate@distancetomove=\dimen299
+\pgf@decorate@repeatstate=\count361
+\pgfdecorationsegmentamplitude=\dimen300
+\pgfdecorationsegmentlength=\dimen301
+)
+\tikz@lib@dec@box=\box116
+) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.pathmorphing.code.tex (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorations\pgflibrarydecorations.pathmorphing.code.tex)) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.pathreplacing.code.tex (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorations\pgflibrarydecorations.pathreplacing.code.tex)) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlibrarypgfplots.contourlua.code.tex)
+\pgfplots@numplots=\count362
+\pgfplots@xmin@reg=\dimen302
+\pgfplots@xmax@reg=\dimen303
+\pgfplots@ymin@reg=\dimen304
+\pgfplots@ymax@reg=\dimen305
+\pgfplots@zmin@reg=\dimen306
+\pgfplots@zmax@reg=\dimen307
+) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryplotmarks.code.tex
+File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/steinmetz\steinmetz.sty
+Package: steinmetz 2009/06/14 v1.0 Steinmetz symbol for electrotechnics
+ (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/pict2e\pict2e.sty
+Package: pict2e 2020/09/30 v0.4b Improved picture commands (HjG,RN,JT)
+ (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/pict2e\pict2e.cfg
+File: pict2e.cfg 2016/02/05 v0.1u pict2e configuration for teTeX/TeXLive
+)
+Package pict2e Info: Driver file: xetex.def on input line 112.
+Package pict2e Info: Driver file for pict2e: p2e-xetex.def on input line 114.
+ (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/pict2e\p2e-xetex.def
+File: p2e-xetex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
+)
+\pIIe@GRAPH=\toks49
+\@arclen=\dimen308
+\@arcrad=\dimen309
+\pIIe@tempdima=\dimen310
+\pIIe@tempdimb=\dimen311
+\pIIe@tempdimc=\dimen312
+\pIIe@tempdimd=\dimen313
+\pIIe@tempdime=\dimen314
+\pIIe@tempdimf=\dimen315
+)
+\stm@phasebox=\box117
+\stm@phasedp=\skip62
+\stm@phaseht=\skip63
+\stm@phasetot=\skip64
+\stm@phasewd=\skip65
+) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/tikz-3dplot\tikz-3dplot.sty (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
@@ -665,17 +710,17 @@ File: tikzlibrary3d.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\arrowsize=\dimen302
+\arrowsize=\dimen316
 ))) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/wrapfig2\wrapfig2.sty
 Package: wrapfig2 2025-03-01 v.7.0.2 Wrap text around figures, tables, framed text blocks
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse.sty (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
 Package: expl3 2025-01-18 L3 programming layer (loader) 
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-xetex.def
 File: l3backend-xetex.def 2024-05-08 L3 backend support: XeTeX
-\g__graphics_track_int=\count355
-\l__pdf_internal_box=\box117
-\g__pdf_backend_annotation_int=\count356
-\g__pdf_backend_link_int=\count357
+\g__graphics_track_int=\count363
+\l__pdf_internal_box=\box118
+\g__pdf_backend_annotation_int=\count364
+\g__pdf_backend_link_int=\count365
 ))
 Package: xparse 2024-08-16 L3 Experimental document command parser
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xfp\xfp.sty
@@ -683,33 +728,33 @@ Package: xfp 2024-08-16 L3 Floating point unit
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
-\XKV@toks=\toks43
-\XKV@tempa@toks=\toks44
+\XKV@toks=\toks50
+\XKV@tempa@toks=\toks51
 )
-\XKV@depth=\count358
+\XKV@depth=\count366
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-\@float@every@text=\toks45
-\c@text=\count359
-\wrapoverhang=\dimen303
-\WF@size=\dimen304
-\c@WF@wrappedlines=\count360
-\WF@box=\box118
-\NWF@box=\box119
-\WF@everypar=\toks46
-\WF@correctlines@switch=\count361
+\@float@every@text=\toks52
+\c@text=\count367
+\wrapoverhang=\dimen317
+\WF@size=\dimen318
+\c@WF@wrappedlines=\count368
+\WF@box=\box119
+\NWF@box=\box120
+\WF@everypar=\toks53
+\WF@correctlines@switch=\count369
 \WFfrthick=\skip66
 \WFfrgap=\skip67
 \WFfrwidth=\skip68
 \WFfrheight=\skip69
-\insertwidth=\dimen305
+\insertwidth=\dimen319
 \WFXR=\skip70
 \WFYD=\skip71
 \WFXL=\skip72
 \WFYU=\skip73
-\radius=\dimen306
-\WFinsertwidthL=\dimen307
-\WFinsertwidthH=\dimen308
+\radius=\dimen320
+\WFinsertwidthL=\dimen321
+\WFinsertwidthH=\dimen322
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/xelatex/xecjk\xeCJK.sty
 Package: xeCJK 2022/08/05 v3.9.1 Typesetting CJK scripts with XeLaTeX
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/ctex\ctexhook.sty
@@ -717,13 +762,13 @@ Package: ctexhook 2022/07/14 v2.5.10 Document and package hooks (CTEX)
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xtemplate\xtemplate.sty
 Package: xtemplate 2024-08-16 L3 Experimental prototype document functions
 )
-\l__xeCJK_tmp_int=\count362
-\l__xeCJK_tmp_box=\box120
-\l__xeCJK_tmp_dim=\dimen309
+\l__xeCJK_tmp_int=\count370
+\l__xeCJK_tmp_box=\box121
+\l__xeCJK_tmp_dim=\dimen323
 \l__xeCJK_tmp_skip=\skip74
-\g__xeCJK_space_factor_int=\count363
-\l__xeCJK_begin_int=\count364
-\l__xeCJK_end_int=\count365
+\g__xeCJK_space_factor_int=\count371
+\l__xeCJK_begin_int=\count372
+\l__xeCJK_end_int=\count373
 \c__xeCJK_CJK_class_int=\XeTeXcharclass4
 \c__xeCJK_FullLeft_class_int=\XeTeXcharclass5
 \c__xeCJK_FullRight_class_int=\XeTeXcharclass6
@@ -733,79 +778,81 @@ Package: xtemplate 2024-08-16 L3 Experimental prototype document functions
 \c__xeCJK_CM_class_int=\XeTeXcharclass10
 \c__xeCJK_HangulJamo_class_int=\XeTeXcharclass11
 \l__xeCJK_last_skip=\skip75
-\c__xeCJK_none_node=\count366
-\g__xeCJK_node_int=\count367
-\c__xeCJK_CJK_node_dim=\dimen310
-\c__xeCJK_CJK-space_node_dim=\dimen311
-\c__xeCJK_default_node_dim=\dimen312
-\c__xeCJK_CJK-widow_node_dim=\dimen313
-\c__xeCJK_normalspace_node_dim=\dimen314
+\c__xeCJK_none_node=\count374
+\g__xeCJK_node_int=\count375
+\c__xeCJK_CJK_node_dim=\dimen324
+\c__xeCJK_CJK-space_node_dim=\dimen325
+\c__xeCJK_default_node_dim=\dimen326
+\c__xeCJK_CJK-widow_node_dim=\dimen327
+\c__xeCJK_normalspace_node_dim=\dimen328
 \c__xeCJK_default-space_node_skip=\skip76
 \l__xeCJK_ccglue_skip=\skip77
 \l__xeCJK_ecglue_skip=\skip78
 \l__xeCJK_punct_kern_skip=\skip79
-\l__xeCJK_indent_box=\box121
-\l__xeCJK_last_penalty_int=\count368
-\l__xeCJK_last_bound_dim=\dimen315
-\l__xeCJK_last_kern_dim=\dimen316
-\l__xeCJK_widow_penalty_int=\count369
+\l__xeCJK_indent_box=\box122
+\l__xeCJK_last_penalty_int=\count376
+\l__xeCJK_last_bound_dim=\dimen329
+\l__xeCJK_last_kern_dim=\dimen330
+\l__xeCJK_widow_penalty_int=\count377
 
 LaTeX template Info: Declaring template type 'xeCJK/punctuation' taking 0
 (template)           argument(s) on line 2396.
 
-\l__xeCJK_fixed_punct_width_dim=\dimen317
-\l__xeCJK_mixed_punct_width_dim=\dimen318
-\l__xeCJK_middle_punct_width_dim=\dimen319
-\l__xeCJK_fixed_margin_width_dim=\dimen320
-\l__xeCJK_mixed_margin_width_dim=\dimen321
-\l__xeCJK_middle_margin_width_dim=\dimen322
-\l__xeCJK_bound_punct_width_dim=\dimen323
-\l__xeCJK_bound_margin_width_dim=\dimen324
-\l__xeCJK_margin_minimum_dim=\dimen325
-\l__xeCJK_kerning_total_width_dim=\dimen326
-\l__xeCJK_same_align_margin_dim=\dimen327
-\l__xeCJK_different_align_margin_dim=\dimen328
-\l__xeCJK_kerning_margin_width_dim=\dimen329
-\l__xeCJK_kerning_margin_minimum_dim=\dimen330
-\l__xeCJK_bound_dim=\dimen331
-\l__xeCJK_reverse_bound_dim=\dimen332
-\l__xeCJK_margin_dim=\dimen333
-\l__xeCJK_minimum_bound_dim=\dimen334
-\l__xeCJK_kerning_margin_dim=\dimen335
-\g__xeCJK_family_int=\count370
-\l__xeCJK_fam_int=\count371
-\g__xeCJK_fam_allocation_int=\count372
-\l__xeCJK_verb_case_int=\count373
+\l__xeCJK_fixed_punct_width_dim=\dimen331
+\l__xeCJK_mixed_punct_width_dim=\dimen332
+\l__xeCJK_middle_punct_width_dim=\dimen333
+\l__xeCJK_fixed_margin_width_dim=\dimen334
+\l__xeCJK_mixed_margin_width_dim=\dimen335
+\l__xeCJK_middle_margin_width_dim=\dimen336
+\l__xeCJK_bound_punct_width_dim=\dimen337
+\l__xeCJK_bound_margin_width_dim=\dimen338
+\l__xeCJK_margin_minimum_dim=\dimen339
+\l__xeCJK_kerning_total_width_dim=\dimen340
+\l__xeCJK_same_align_margin_dim=\dimen341
+\l__xeCJK_different_align_margin_dim=\dimen342
+\l__xeCJK_kerning_margin_width_dim=\dimen343
+\l__xeCJK_kerning_margin_minimum_dim=\dimen344
+\l__xeCJK_bound_dim=\dimen345
+\l__xeCJK_reverse_bound_dim=\dimen346
+\l__xeCJK_margin_dim=\dimen347
+\l__xeCJK_minimum_bound_dim=\dimen348
+\l__xeCJK_kerning_margin_dim=\dimen349
+\g__xeCJK_family_int=\count378
+\l__xeCJK_fam_int=\count379
+\g__xeCJK_fam_allocation_int=\count380
+\l__xeCJK_verb_case_int=\count381
 \l__xeCJK_verb_exspace_skip=\skip80
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.sty
 Package: fontspec 2024/05/11 v2.9e Font selection for XeLaTeX and LuaLaTeX
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec-xetex.sty
 Package: fontspec-xetex 2024/05/11 v2.9e Font selection for XeLaTeX and LuaLaTeX
-\l__fontspec_script_int=\count374
-\l__fontspec_language_int=\count375
-\l__fontspec_strnum_int=\count376
-\l__fontspec_tmp_int=\count377
-\l__fontspec_tmpa_int=\count378
-\l__fontspec_tmpb_int=\count379
-\l__fontspec_tmpc_int=\count380
-\l__fontspec_em_int=\count381
-\l__fontspec_emdef_int=\count382
-\l__fontspec_strong_int=\count383
-\l__fontspec_strongdef_int=\count384
-\l__fontspec_tmpa_dim=\dimen336
-\l__fontspec_tmpb_dim=\dimen337
-\l__fontspec_tmpc_dim=\dimen338
+\l__fontspec_script_int=\count382
+\l__fontspec_language_int=\count383
+\l__fontspec_strnum_int=\count384
+\l__fontspec_tmp_int=\count385
+\l__fontspec_tmpa_int=\count386
+\l__fontspec_tmpb_int=\count387
+\l__fontspec_tmpc_int=\count388
+\l__fontspec_em_int=\count389
+\l__fontspec_emdef_int=\count390
+\l__fontspec_strong_int=\count391
+\l__fontspec_strongdef_int=\count392
+\l__fontspec_tmpa_dim=\dimen350
+\l__fontspec_tmpb_dim=\dimen351
+\l__fontspec_tmpc_dim=\dimen352
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.cfg))) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/xelatex/xecjk\xeCJK.cfg
 File: xeCJK.cfg 2022/08/05 v3.9.1 Configuration file for xeCJK package
 )) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowinset=\dimen339
-\pgfarrowlength=\dimen340
-\pgfarrowwidth=\dimen341
-\pgfarrowlinewidth=\dimen342
-) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshadings.code.tex
+\pgfarrowinset=\dimen353
+\pgfarrowlength=\dimen354
+\pgfarrowwidth=\dimen355
+\pgfarrowlinewidth=\dimen356
+) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryintersections.code.tex (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryintersections.code.tex
+\pgf@intersect@solutions=\count393
+)) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlibrarypgfplots.fillbetween.code.tex (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/pgfcontrib\tikzlibraryfillbetween.code.tex (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/pgfcontrib\tikzlibrarydecorations.softclip.code.tex (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/pgfcontrib\pgflibraryfillbetween.code.tex))) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlibrarypgfplots.decorations.softclip.code.tex)) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshadings.code.tex
 File: tikzlibraryshadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryshadings.code.tex
 File: pgflibraryshadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
@@ -828,8 +875,8 @@ Package fontspec Info:
 (fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Nom Na
 (fontspec)             Tong/OT:script=hani;language=dflt;embolden=2;slant=0.15;"
 
-\c@exercise=\count385
-\c@solution=\count386
+\c@exercise=\count394
+\c@solution=\count395
 \recordparindent=\skip81
  (main.aux
 Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
@@ -837,32 +884,32 @@ Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 64.
-LaTeX Font Info:    Trying to load font information for T5+cmr on input line 64.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 68.
+LaTeX Font Info:    Trying to load font information for T5+cmr on input line 68.
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5cmr.fd
 File: t5cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -903,10 +950,15 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 64.
+Package hyperref Info: Link coloring OFF on input line 68.
 (main.out) (main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
+
+
+
+Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into your preamble.
+ on input line 68.
 
 
 Package fontspec Info: 
@@ -915,61 +967,61 @@ Package fontspec Info:
 
 \symlegacymaths=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 64.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 64.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 64.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 64.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 64.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 64.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 64.
-LaTeX Font Info:    Redeclaring math accent \check on input line 64.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 64.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 64.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 64.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 64.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 64.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 64.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 64.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 64.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 64.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 64.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 64.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 64.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 64.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 64.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 64.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 64.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 68.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 68.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 68.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 68.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 68.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 68.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 68.
+LaTeX Font Info:    Redeclaring math accent \check on input line 68.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 68.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 68.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 68.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 68.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 68.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 68.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 68.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 68.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 68.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 68.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 68.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 68.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 68.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 68.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 68.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 68.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 64.
+(Font)              `operators' in the math version `normal' on input line 68.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 64.
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 68.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 64.
+(Font)              `operators' in the math version `bold' on input line 68.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 64.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 68.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 64.
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 68.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 64.
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 68.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 64.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 68.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 64.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 68.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 64.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 68.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 64.
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 68.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 64.
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 68.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 64.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 68.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 64.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 67.
- (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 68.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 71.
+(C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 67.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 71.
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -992,9 +1044,6 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ]
 Chương 0.
 (chapter/toan_hoc_nen_tang/do_thi.tex (chapter/toan_hoc_nen_tang/do_thi/truc_so.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [4
 
@@ -1015,10 +1064,18 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
-(babel)             Reported  on input line 130.
+(babel)             Reported  on input line 138.
 [5]
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
 [6]) (chapter/toan_hoc_nen_tang/do_thi/mat_phang.tex
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 
 [7]
 
@@ -1029,42 +1086,43 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 
 [9]))
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [10] (chapter/toan_hoc_nen_tang/ham_so_mot_bien.tex (chapter/toan_hoc_nen_tang/ham_so_mot_bien/dinh_nghia.tex
 
 [11]
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 180--202
+Underfull \hbox (badness 10000) in paragraph at lines 198--220
 
  []
 
 
-Underfull \hbox (badness 5161) in paragraph at lines 224--225
+Underfull \hbox (badness 5161) in paragraph at lines 242--243
 []\TU/lmr/m/n/10 Nhận thấy rằng $\OMS/cmsy/m/n/10 P$ \TU/lmr/m/n/10 chỉ đúng khi $\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 2
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 205--243
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 245--265
+Underfull \hbox (badness 10000) in paragraph at lines 223--261
 
  []
 
 
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 267--290
+Underfull \hbox (badness 10000) in paragraph at lines 263--283
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 359--381
+Underfull \hbox (badness 10000) in paragraph at lines 285--308
 
  []
 
@@ -1074,17 +1132,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [14]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 507--526
+Underfull \hbox (badness 10000) in paragraph at lines 377--399
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 528--544
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 525--544
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 546--562
 
  []
 
@@ -1092,67 +1152,65 @@ Underfull \hbox (badness 10000) in paragraph at lines 528--544
 
 [16]
 
-[17]) (chapter/toan_hoc_nen_tang/ham_so_mot_bien/da_thuc.tex
+[17])
 
-[18]
-Underfull \vbox (badness 8113) has occurred while \output is active []
-
-
+[18] (chapter/toan_hoc_nen_tang/ham_so_mot_bien/da_thuc.tex
 
 [19]
 
+Package pgfplots Warning: 'fill between': Could not activate graphics layer 'pre main'. Filled path will be on top of the other ones. Please ensure that 'pre main' is somewhere in the layer list (or set '/tikz/fill between/on layer='). on input line 86.
+
+Missing character: There is no ; in font nullfont!
 [20]
-Underfull \vbox (badness 2680) has occurred while \output is active []
-
-
 
 [21]
-Underfull \vbox (badness 1152) has occurred while \output is active []
-
-
 
 [22]
 
 [23]
 
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 338.
-See the caption package documentation for explanation.
-
-) (chapter/toan_hoc_nen_tang/ham_so_mot_bien/phep_tinh_ham.tex
-
 [24]
 
-[25]) (chapter/toan_hoc_nen_tang/ham_so_mot_bien/phan_thuc.tex) (chapter/toan_hoc_nen_tang/ham_so_mot_bien/phep_hop_ham.tex))
+[25]) (chapter/toan_hoc_nen_tang/ham_so_mot_bien/phep_tinh_ham.tex
 
-[26]
+[26]) (chapter/toan_hoc_nen_tang/ham_so_mot_bien/phan_thuc.tex
 
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 129.
-See the caption package documentation for explanation.
-
-
-
-[27]
+[27]) (chapter/toan_hoc_nen_tang/ham_so_mot_bien/phep_hop_ham.tex))
 
 [28]
 
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 133.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
 [29]
+
+[30]
+
+[31]
 Chương 1.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 278.
+(caption)                particular \caption on input line 282.
 See the caption package documentation for explanation.
 
 
 
-[30
+[32
 
 ]
 
-[31]
+[33]
 
-[32]
+[34]
 Chương 2.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1162,16 +1220,16 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[33
+[35
 
 ]
 
-[34]
+[36]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (4.0166pt too wide) in paragraph at lines 679--680
+Overfull \hbox (4.0166pt too wide) in paragraph at lines 683--684
  [][] 
  []
 
@@ -1183,31 +1241,31 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[35]
-
-LaTeX Warning: Text page 36 contains only floats.
-
-
-
-[36]
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 793.
-See the caption package documentation for explanation.
-
-
-
 [37]
 
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 849.
-See the caption package documentation for explanation.
+LaTeX Warning: Text page 38 contains only floats.
 
 
 
 [38]
 
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 797.
+See the caption package documentation for explanation.
+
+
+
 [39]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 853.
+See the caption package documentation for explanation.
+
+
+
+[40]
+
+[41]
 
 Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
 (xeCJK)                
@@ -1216,7 +1274,7 @@ Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
 
 
 
-[40
+[42
 
 ] (main.aux)
  ***********
@@ -1227,12 +1285,12 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 1BAA90FB43FBDECCDC22DE4B98C1C279;3163.
  ) 
 Here is how much of TeX's memory you used:
- 30980 strings out of 408640
- 634548 string characters out of 5744799
- 1130219 words of memory out of 5000000
- 53529 multiletter control sequences out of 15000+600000
+ 42109 strings out of 408640
+ 1001078 string characters out of 5744799
+ 1643356 words of memory out of 5000000
+ 64507 multiletter control sequences out of 15000+600000
  571590 words of font info for 96 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 92i,16n,93p,2029b,817s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,16n,105p,2029b,853s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (40 pages, 1026796 bytes).
+Output written on main.xdv (42 pages, 1094836 bytes).

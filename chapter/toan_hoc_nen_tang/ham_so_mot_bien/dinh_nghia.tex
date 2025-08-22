@@ -13,13 +13,11 @@ $$
 $$
 Để thỏa mãn hệ thì mỗi thành phần trong hệ đều phải thỏa mãn. Một khái niệm liên quan mật thiết là \emph{giải} phương trình, bất phương trình, hay hệ (để ngắn gọn, chúng ta sẽ gọi phương trình, bất phương trình và hệ thành một cụm từ chung là \dblquote{phương bất hệ}). Để làm được việc này, yêu cầu cần tìm tất cả các bộ số đẻ phương bất hệ được cho thỏa mãn.
 
-Nếu chỉ có số với chữ không thì hàm số sẽ trở nên rất nhàm chán, cho nên người ta đã nghĩ ra phương pháp biểu diễn hàm số qua đồ thị. Để biểu diễn một hàm số $y=f(x)$ với $x$ và $y$ là hai số thực, chỉ cần vẽ tất cả các cặp tọa độ $(x; y)$ thỏa mãn hàm $f$ trên đồ thị\footnote{\dblquote{Chỉ cần}? Đương nhiên là không đơn giản như vậy. Với hàm có vô số điểm thì thông thường hàm được biểu diễn bằng cách nối một số hữu hạn điểm trên đồ thị trên một khoảng không gian hữu hạn với hi vọng rằng người đọc có thể tự suy luận được hướng đi của đồ thị bên ngoài khu vực vẽ. Mặc dù vậy, vẫn có trường hợp mà cách vẽ này hoàn toàn bất lực. Ví dụ như hàm Đi-rích-lê: $$f(x) =
+Nếu chỉ có số với chữ không thì hàm số sẽ trở nên rất nhàm chán, cho nên người ta đã nghĩ ra phương pháp biểu diễn hàm số qua đồ thị. Để biểu diễn một hàm số $y=f(x)$ với $x$ và $y$ là hai số thực, cần vẽ tất cả các cặp tọa độ $(x; y)$ thỏa mãn hàm $f$ trên đồ thị. Trong trường hợp hàm có vô số điểm, chúng ta lấy một số giá trị để định hướng hình dạng của đồ thị và rồi sau đó nối các điểm lại\footnote{Mặc dù vậy, vẫn có trường hợp mà cách vẽ này hoàn toàn bất lực. Ví dụ như hàm Đi-rích-lê: $$f(x) =
 \begin{cases}
    1 \text{ nếu } x\in \mathbb{Q} \\
    0 \text{ nếu } x\notin \mathbb{Q}
-\end{cases}$$ với $\mathbb{Q}$ là tập số hữu tỉ. Hàm này liên tục \dblquote{nhảy múa} từ $0$ đến $1$ và ngược lại, khiến cho việc vẽ đồ thị trở thành một nhiệm vụ bất khả thi.
-
-Những hàm \dblquote{dị thường} như vậy từng khiến không ít nhà toán học phải vò đầu bứt tai. Thế nhưng, chính chúng lại đóng vai trò quan trọng trong việc kiểm tra độ chặt chẽ của các định lý. Nhờ có những ví dụ cực đoan như hàm Đi-rích-lê, chúng ta mới có thể xác định rõ ranh giới của lý thuyết, từ đó giúp vật lý yên tâm áp dụng các định lý ấy vào những hàm số thông thường hơn trong thực tế.}. Do hàm số biểu thị mối liên hệ giữa hai đại lượng, chúng ta dùng đồ thị hai chiều để biểu diễn mối liên hệ giữa chúng. Chúng ta sẽ lấy ví dụ cho hàm sau được cho trong bảng \ref{tab:ham_so_mot_bien:dinh_nghia:vddths} với tập xác định chỉ có $5$ số.
+\end{cases}$$ với $\mathbb{Q}$ là tập số hữu tỉ. Hàm này liên tục nhảy bật từ $0$ đến $1$ và ngược lại, khiến cho việc vẽ đồ thị trở nên bất khả thi.}. Do hàm số biểu thị mối liên hệ giữa hai đại lượng, chúng ta dùng đồ thị hai chiều để biểu diễn mối liên hệ giữa chúng. Chúng ta sẽ lấy ví dụ cho hàm sau được cho trong bảng \ref{tab:ham_so_mot_bien:dinh_nghia:vddths} với tập xác định chỉ có $5$ số.
 
 \begin{table}[h]
    \centering
@@ -27,7 +25,7 @@ Những hàm \dblquote{dị thường} như vậy từng khiến không ít nhà
       \hline
       $x$ & $1$ & $2$ & $3$ & $4$ & $5$ \\
       \hline
-      $y=f(x)$ & $2$ & $3$ & $4$ & $5$ & $6$ \\
+      $y=f(x)$ & $1$ & $2$ & $5$ & $2$ & $3$ \\
       \hline
    \end{tabular}
    \caption{Ví dụ của $y = f(x)$}
@@ -39,9 +37,9 @@ Những hàm \dblquote{dị thường} như vậy từng khiến không ít nhà
 \begin{figure}[h]
    \centering
    \begin{tikzpicture}
-      \draw[->] (-1, 0) -- (5, 0) node[right] {$x$};
-      \draw[->] (0, -1) -- (0, 7) node[above] {$y$};
-      \foreach \x/\y in {1/2, 2/3, 3/4, 4/5, 5/6} {
+      \draw[->] (-1, 0) -- (6, 0) node[right] {$x$};
+      \draw[->] (0, -1) -- (0, 6) node[above] {$y$};
+      \foreach \x/\y in {1/1, 2/2, 3/5, 4/2, 5/3} {
          \filldraw (\x, \y) circle (\pointSize) node[below] {$(\x; \y)$};
       }
    \end{tikzpicture}
@@ -49,7 +47,27 @@ Những hàm \dblquote{dị thường} như vậy từng khiến không ít nhà
    \label{fig:ham_so_mot_bien:dinh_nghia:vddths}
 \end{figure}
 
-Một cách tương tự, chúng ta cũng có thể biểu diễn phương bất hệ thông qua việc vẽ đồ thị chứa các nghiệm của phương bất hệ đó. Có bao nhiêu ẩn số trong phương bất hệ, đồ thị sẽ có bấy nhiêu chiều. Các ví dụ cụ thể sẽ được thể hiện trong phần bài tập của phần này. Về mặt lợi ích của việc sử dụng đồ thị, biểu diễn hình học các đại lượng đại số là một trong những cách hữu hiệu để mở rộng cảm nhận về đối tượng đang nghiên cứu.
+Một cách tương tự, chúng ta cũng có thể biểu diễn phương bất hệ thông qua việc vẽ đồ thị chứa các nghiệm của phương bất hệ đó. Có bao nhiêu ẩn số trong phương bất hệ, đồ thị sẽ có bấy nhiêu chiều. Giả sử như bạn đọc cần biểu diễn phương trình $x^2 - 1 = 0$ với $x$ xác định trên tập số thực. Để biểu diễn được phương trình này, trước hết cần phải thực hiện giải nó. Tác giả kì vọng bạn đọc có thể thực hiện được những biến đổi sau:
+\begin{align*}
+   x^2 - 1 &= 0 \\
+   \iff x^2 &= 1 \\
+   \iff x &\in \{-1; 1\}.
+\end{align*}
+Do phương trình chỉ có một ẩn nên chúng ta sẽ chọn trục số một chiều biểu diễn $x$ để thể hiện nghiệm của phương trình này, như hình \ref{fig:ham_so_mot_bien:dinh_nghia:vdgpt}.
+
+\begin{figure}[h]
+   \centering
+   \begin{tikzpicture}
+      \draw[->] (-3, 0) -- (3, 0) node[right] {$x$};
+      \foreach \x in {-1, 1} {
+         \filldraw (\x, 0) circle (\pointSize) node[below] {$(\x)$};
+      }
+   \end{tikzpicture}
+   \caption{Biểu diễn nghiệm của $x^2 - 1 = 0$}
+   \label{fig:ham_so_mot_bien:dinh_nghia:vdgpt}
+\end{figure}
+
+Về mặt lợi ích của việc sử dụng đồ thị, biểu diễn hình học các đại lượng đại số là một trong những cách hữu hiệu để mở rộng cảm nhận về đối tượng đang nghiên cứu.
       
 \exercise Mỗi phần trong bài tập sau bao gồm mối liên hệ giữa $x$ và $y$. Trong mỗi phần, $y$ có phải là hàm của $x$ hay không? Trong trường hợp $y$ là hàm số của $x$, xác định tập xác định và tập giá trị của hàm số đó. Còn trong trường hợp ngược lại, giải thích tại sao $y$ lại không phải là hàm số của $x$.
 
@@ -471,7 +489,7 @@ Kết hợp hai trường hợp, đồ thị của $\mathcal{P}$ sẽ gồm 29 �
       \hline
       $x$ & $-10$ & $-8$ & $-2$ & $2$ & $8$ & $10$ \\
       \hline
-      $\alpha(x)$ & $4$ & $8$ & $0$ & $1$ & $4$ & $8$\\
+      $\alpha(x)$ & $4$ & $8$ & $0$ & $1$ & $6$ & $8$\\
       \hline
    \end{tabular} và $\mathcal{P}:\alpha(x) < 0$;
 
@@ -489,7 +507,7 @@ Kết hợp hai trường hợp, đồ thị của $\mathcal{P}$ sẽ gồm 29 �
       \hline
       $x$ & $-10$ & $-8$ & $-2$ & $2$ & $8$ & $10$ \\
       \hline
-      $\alpha(x)$ & $4$ & $8$ & $0$ & $1$ & $4$ & $8$\\
+      $\alpha(x)$ & $4$ & $8$ & $0$ & $1$ & $6$ & $8$\\
       \hline
    \end{tabular},
    \begin{tabular}{|c|c|c|c|c|c|c|}
@@ -565,7 +583,30 @@ Kết hợp hai trường hợp, đồ thị của $\mathcal{P}$ sẽ gồm 29 �
 \end{align*}
 Qua đó, giá trị lớn nhất có thể của $\beta(y)$ là $4$. Theo bảng định nghĩa, $\beta(y)$ chỉ có thể nhận hai giá trị là $3$ hoặc $4$. 
 
-\exercise[ex:ham_so_mot_bien:dinh_nghia:hpt1] Vẽ đồ thị của hệ $\mathcal{P}$, với các định nghĩa đã cho. Hàm có tập xác định là bộ số đầu vào cho ở trong bảng.
+\textbf{Trường hợp 1}: $\beta(y) = 3 \iff y = -7$. Khi này, để $\alpha(x) \geq 2\beta(x)$ hay $\alpha(x) \geq 6$ thì $\alpha(x)$ có thể nhận giá trị $8$ hoặc $6$. Do đó,
+\begin{align*}
+   &\alpha(x) = 6 \implies x = 8;\\
+   &\alpha(x) = 8 \implies x \in \{-8; 10\}.
+\end{align*}
+
+\textbf{Trường hợp 2}: $\beta(y) = 4 \iff y = 0$. Khi này, để $\alpha(x) \geq 8$ thì $\alpha(x)$ chỉ có thể nhận bằng $8$. Do đó, $x \in \{-8; 10\}$.
+
+Từ đây, chúng ta có đồ thị \ref{fig:ham_so_mot_bien:dinh_nghia:bpt4}.
+
+\begin{figure}[H]
+   \centering
+   \begin{tikzpicture}
+      \draw[->] (-4, 0) -- (4, 0) node[right] {$x$};
+      \draw[->] (0, -3) -- (0, 0.5) node[above] {$y$};
+      \foreach \x/\y/\pos in {8/-7/above, -8/-7/below, 10/-7/below, -8/0/below, 10/0/below} {
+         \filldraw({\x/3}, {\y/3}) circle (\pointSize) node [\pos] {$\left(\x; \y\right)$};
+      }
+   \end{tikzpicture}
+   \caption{Đồ thị phần 4 bài \ref{ex:ham_so_mot_bien:dinh_nghia:bpt1}}
+   \label{fig:ham_so_mot_bien:dinh_nghia:bpt4}
+\end{figure}
+
+\exercise[ex:ham_so_mot_bien:dinh_nghia:hpt1] Vẽ đồ thị của hệ phương trình $\mathcal{P}$, với các định nghĩa đã cho. Hàm có tập xác định là bộ số đầu vào cho ở trong bảng.
 \begin{enumerate}
    \item 
    \begin{tabular}{|c|c|c|c|c|c|c|}

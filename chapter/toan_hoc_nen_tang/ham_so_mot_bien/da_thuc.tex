@@ -17,25 +17,28 @@ Khi đa thức có bậc bằng $0$, hay $f = P_0 = a_0$, thì được gọi l�
 
 \exercise Phác thảo đồ thị của những hàm sau:
 \begin{multicols}{2}
-\begin{enumerate}
-   \item $f(x) = x + 2$; 
-   \item $f(x) = x^2 + 2x + 3$;
-   \item $f(x) = x^3 - 9x^2 + 24x - 16$;
-   \item $f(x) = 2$.
-\end{enumerate}
+   \begin{enumerate}
+      \item $f(x) = x + 2$; 
+      \item $f(x) = x^2 + 2x + 3$;
+      \item $f(x) = -2x^2 + 5x - 6$;
+      \item $f(x) = x^3 - 9x^2 + 24x - 16$;
+      \item $f(x) = 2$;
+      \item $f(x) = 36x^4 + 28x^3 - 3x^2 - 6x - 1$;
+      \item $f(x) = -x^6 + x^2 - 4x - 2$;
+      \item $f(x) = -x^7 + x$.
+   \end{enumerate}
 \end{multicols}
 
 \solution
 
 Bạn đọc có thể dùng những phần mềm vẽ đồ thị để nhanh chóng có hình vẽ. Tuy nhiên, nếu không có thiết bị điện tử thì bạn đọc vẫn có thể vẽ đồ thị bằng giấy và bút bằng cách lấy nhiều điểm ví dụ cho $x$ và tính toán giá trị $f(x)$ và sau đó nối chúng lại với nhau.
 
-Bạn đọc có thể để ý rằng là không phải lúc nào cũng đặt gốc tọa độ ở vị trí chính giữa. Trong nhiều trường hợp việc đặt chính giữa sẽ làm mất đi đồ thị và làm cho đồ thị lệch ra khỏi khu vực vẽ. Hơn nữa, hai trục sẽ có tỉ lệ khác nhau. Điều quan trọng nhất của những bài vẽ đồ thị trong vật lí không phải là căn ke chính xác vị trí từng điểm, mà là nhận ra được dáng điệu của đồ thị và vị trí tương đối giữa các điểm trên đồ thị đó. Qua đó, chúng ta rút ra được những tính chất toán học cần thiết để phục vụ những yêu cầu cụ thể trong bài tập ứng dụng.
+Bạn đọc có thể để ý rằng là không phải lúc nào cũng đặt gốc tọa độ ở vị trí chính giữa và tỉ lệ xích trên hai trục không phải là giống nhau. Trong nhiều trường hợp, việc ép đặt gốc ở giữa và giữ tỉ lệ giống nhau trên các trục sẽ làm cho đồ thị lệch ra khỏi khu vực vẽ. Điều quan trọng nhất của những bài vẽ đồ thị trong vật lí không chỉ là căn ke chính xác vị trí từng điểm, mà còn là nhận ra được dáng điệu của đồ thị và vị trí tương đối giữa các điểm trên đồ thị đó. Qua đó, chúng ta rút ra được những tính chất toán học cần thiết để phục vụ những yêu cầu cụ thể trong bài tập ứng dụng.
 
 Dưới đây là đồ thị của các hàm đa thức trong bài:
 
-\begin{figure}[H]
-   \centering
-   \begin{minipage}[b]{0.48\textwidth}
+\begin{multicols}{2}
+   \begin{figure}[H]
       \centering
       \fbox{
          \begin{tikzpicture}
@@ -48,13 +51,13 @@ Dưới đây là đồ thị của các hàm đa thức trong bài:
       }
       \caption{Đồ thị của hàm $f(x) = x + 2$}
       \label{fig:ham_so:ham_da_thuc:x_2}
-   \end{minipage}
-   \hfill
-   \begin{minipage}[b]{0.48\textwidth}
+   \end{figure}
+   
+   \begin{figure}[H]
       \centering
       \fbox{
          \begin{tikzpicture}
-            \draw[->] (-3, 0) -- (2, 0) node[right] {$x$};
+            \draw[->] (-4, 0) -- (2, 0) node[right] {$x$};
             \draw[->] (0, 0) -- (0, 6) node[above] {$f(x)$};
             \draw[thick, smooth, samples=100] plot[domain=-3:1] (\x, {(\x + 1)^2 + 2});
             \filldraw (-1, 2) circle (\pointSize) node[below] {$\left(-1; 2\right)$};
@@ -64,11 +67,28 @@ Dưới đây là đồ thị của các hàm đa thức trong bài:
       }
       \caption{Đồ thị của hàm $f(x) = x^2 + 2x + 3$}
       \label{fig:ham_so_mot_bien:da_thuc:x2_2x_3}
-   \end{minipage}
-\end{figure}
-\begin{figure}[H]
-   \centering
-   \begin{minipage}[t]{0.48\textwidth}
+   \end{figure}
+
+   \begin{figure}[H]
+      \centering
+      \fbox{
+         \begin{tikzpicture}
+            \draw[->] (-2, 0) -- (4, 0) node[right] {$x$};
+            \draw[->] (0, -5) -- (0, 1) node[above] {$f(x)$};
+            \draw[thick, smooth, samples=100] plot[domain=-0.186:2.686] (\x, {(-2*(\x)^2 + 5*(\x) - 4)});
+            \draw[snake it, name path=A] (-2, -0.25) -- (4, -0.25);
+            \draw[snake it, name path=B] (-2, -0.35) -- (4, -0.35);
+            \foreach \x/\y/\yy/\pos in {0/-4/-6/right, 1/-1/-3/above, 2/-2/-4/right} {
+               \filldraw (\x, \y) circle (\pointSize) node[\pos] {$\left(\x; {\yy}\right)$};
+            }
+            \tikzfillbetween[of=A and B]{white};
+         \end{tikzpicture}
+      }
+      \caption{Đồ thị của hàm $f(x) = -2x^2 + 5x - 6$}
+      \label{fig:ham_so_mot_bien:da_thuc:t2x2_5x_t6}
+   \end{figure}
+
+   \begin{figure}[H]
       \centering
       \fbox{
          \begin{tikzpicture}
@@ -83,22 +103,86 @@ Dưới đây là đồ thị của các hàm đa thức trong bài:
       }
       \caption{Đồ thị của hàm $f(x) = x^3 - 9x^2 + 24x - 16$}
       \label{fig:ham_so_mot_bien:da_thuc:x3_t9x2_24x_t16}
-   \end{minipage}
-   \hfill
-   \begin{minipage}[t]{0.48\textwidth}
+   \end{figure}
+
+   \begin{figure}[H]
       \centering
       \fbox{
          \begin{tikzpicture}
             \draw[->] (-3, 0) -- (3, 0) node[right] {$x$};
-            \draw[->] (0, -3) -- (0, 3) node[above] {$f(x)$};
+            \draw[->] (0, -1) -- (0, 3) node[above] {$f(x)$};
             \draw[thick] plot[domain=-3:3] (\x, {2});
             \filldraw (0, 2) circle (\pointSize) node[above left] {$\left(0; 2\right)$};
          \end{tikzpicture}
       }
       \caption{Đồ thị của hàm $f(x) = 2$}
       \label{fig:ham_so:ham_da_thuc:2}
-   \end{minipage}
-\end{figure}
+   \end{figure}
+
+   \begin{figure}[H]
+      \centering
+      \fbox{
+         \begin{tikzpicture}
+            \draw[->] (-3, 0) -- (3, 0) node[right] {$x$};
+            \draw[->] (0, -3) -- (0, 3) node[above] {$f(x)$};
+            \draw[thick, smooth, samples=100] plot[domain=-2.491:1.669] (\x, {36*(\x/3)^4 + 28*(\x/3)^3 - 3*(\x/3)^2 - 6*(\x/3) - 1});
+            \foreach \x/\y/\xlabel/\ylabel/\pos in {
+               -1.5/0/{-0,5}/0/below,
+               -0.721/0/{-0,24}/0/above,
+               0/-1/0/-1/left,
+               0.75/-2.109/{0,25}/{-2,11}/below,
+               1.387/0/{0,462}/0/below right,
+               -2.357/2/{-0,79}/2/right,
+               1.5/1/{0,5}/1/right} {
+               \filldraw (\x, \y) circle (\pointSize) node[\pos] {$\left(\xlabel;\ylabel\right)$};
+            }
+         \end{tikzpicture}
+      }
+      \caption{Đồ thị của hàm $f(x) = 36x^4 + 28x^3 - 3x^2 - 6x - 1$}
+      \label{fig:ham_so:ham_da_thuc:36x4_28x3_t3x2_t6x_t1}
+   \end{figure}
+
+   \begin{figure}[H]
+      \centering
+      \fbox{
+         \begin{tikzpicture}
+            \draw[->] (-3, 0) -- (3, 0) node[right] {$x$};
+            \draw[->] (0, -4) -- (0, 2) node[above] {$f(x)$};
+            \draw[thick, smooth, samples=80] plot[domain=-3:2.356] (\x, {(-(\x / 2)^6 + (\x / 2)^2 - 2*(\x) - 2)/2});
+            \foreach \x/\y/\xlabel/\ylabel/\pos in {
+               -3/-2.570/{-1,5}/{-5,14}/right,
+               -2/1/-1/2/above,
+               0/-1/0/-1/below left,
+               2.356/-4/{1,18}/-8/left} {
+               \filldraw (\x, \y) circle (\pointSize) node[\pos] {$\left(\xlabel;\ylabel\right)$};
+            }
+         \end{tikzpicture}
+      }
+      \caption{Đồ thị của hàm $f(x) = -x^6 + x^2 - 4x - 2$}
+      \label{fig:ham_so:ham_da_thuc:tx6_x2_t4x_t2}
+   \end{figure}
+
+   \begin{figure}[H]
+      \centering
+      \fbox{
+         \begin{tikzpicture}
+            \draw[->] (-3, 0) -- (3, 0) node[right] {$x$};
+            \draw[->] (0, -3) -- (0, 3) node[above] {$f(x)$};
+            \draw[thick, smooth, samples=80] plot[domain=-1.229:1.229] (\x, {-(\x)^7 + (\x)});
+            \foreach \x/\y/\xlabel/\ylabel/\pos in {
+               -1/0/-1/0/above left,
+               0/0/0/0/below right,
+               1/0/1/0/above right,
+               0.723/0.62/{0,72}/{0,62}/above,
+               -0.723/-0.62/{-0,72}/{-0,62}/below left}{
+                  \filldraw (\x, \y) circle (\pointSize) node[\pos] {$\left(\xlabel;\ylabel\right)$};
+            }
+         \end{tikzpicture}
+      }
+      \caption{Đồ thị của hàm $f(x) = -x^7 + x$}
+      \label{fig:ham_so:ham_da_thuc:tx7_x}
+   \end{figure}
+\end{multicols}
 
 \exercise Giải những phương trình sau. Các phương trình đều có ẩn là $x \in \mathbb{R}$.
 \begin{multicols}{2}
@@ -113,7 +197,10 @@ Dưới đây là đồ thị của các hàm đa thức trong bài:
       \item $5x^2 - 20x + 20 = x^2 - 4$;
       \item $\frac{1}{2}kx^2 + \frac{1}{2}mv^2 = \frac{1}{2}kx_0^2$, với $k$, $m$, $v$, $x_0$ là những tham số thực;
       \item $x^3 - \frac{11}{6}\cdot x^2 + x - \frac{1}{6} = 0$;
-      \item $2x^3 - 2x^2 + 2x - 2 = 6 + 6x^2$.
+      \item $2x^3 - 2x^2 + 2x - 2 = 6 + 6x^2$;
+      \item $x^4+2x^3-x^2-2x=0$;
+      \item $-x^4 -3x^2 = -5$;
+      \item $x^4 + 1 = 3x^3 + x^2 + 3x$.
    \end{enumerate}
 \end{multicols}
 
@@ -231,7 +318,7 @@ Vậy phương trình có tập nghiệm $\boxed{\left\{3; 2\right\}}$.
 Xong, thực hiện chuyển vế để giữ thừa số chứa $x^2$ ở một bên, phương trình \ref{eq:ham_so_mot_bien:ham_da_thuc:gptdt9} tương đương với
 \begin{align*}
    (\ref{eq:ham_so_mot_bien:ham_da_thuc:gptdt9}) \iff &kx^2 = kx_0^2 - mv^2 \\
-   \iff & x^2 = x_0^2 - \frac{mv^2}{k}
+   \iff & x^2 = x_0^2 - \frac{mv^2}{k}.
 \end{align*}
 
 Với trường hợp $x_0^2 - \frac{mv^2}{k} < 0$ thì phương trình vô nghiệm do $x^2$ không thể âm. Trong trường hợp còn lại, lấy căn bậc hai hai vế để có $$x\in\left\{\sqrt{x_0^2 - \frac{mv^2}{k}}; -\sqrt{x_0^2 - \frac{mv^2}{k}}\right\}.$$ Tại giá trị đặc biệt mà khi $x_0^2 = \frac{mv^2}{k}$ thì tập nghiệm suy biến thành $\left\{0\right\}$.
@@ -254,7 +341,9 @@ $$
    \iff &\left(x - 1\right)\left(x^2 - \frac{5}{6}x + \frac{1}{6}\right) = 0 \\
    \iff &\left(x - 1\right)\left(x^2 - \frac{1}{2}x - \frac{1}{3}x + \frac{1}{6}\right) = 0 \\
    \iff &\left(x - 1\right)\left(x\left(x - \frac{1}{2}\right) - \frac{1}{3}\left(x - \frac{1}{2}\right)\right) = 0 \\
-   \iff &\left(x - 1\right)\left(x - \frac{1}{2}\right)\left(x - \frac{1}{3}\right) = 0 \\
+   \iff &\left(x - 1\right)\left(x - \frac{1}{2}\right)\left(x - \frac{1}{3}\right) = 0
+\end{align*}
+\begin{align*}
    \iff &\left[
       \begin{aligned}
          x - 1 &= 0 \\
@@ -286,21 +375,106 @@ Cuối cùng, như chúng ta đã dự đoán, phương trình có nghiệm là 
 \end{align*}
 Vậy phương trình có nghiệm là $\boxed{\displaystyle\left\{4\right\}}$.
 
-\exercise Xác định tập giá trị của những hàm sau thông qua đại số hoặc đồ thị:
+12. Dễ dàng thấy được có thể phân tích thừa số của đa thức được cho như sau:
+\begin{align*}
+   x^4 + 2x^3 - x^2 -2x &= 0 \\
+   \iff x(x^3 + 2x^2 - x - 2) &= 0 \\
+   \iff x(x + 2)(x^2 - 1) &= 0 \\
+   \iff x(x + 2)(x - 1)(x + 1) &= 0.
+\end{align*}
+
+Chia làm $4$ trường hợp: $\left[
+   \begin{aligned}
+      x &= 0 \\
+      x + 2&= 0 \\
+      x - 1 &= 0 \\
+      x + 1 &= 0
+   \end{aligned}
+\right.$ và giải từng trường hợp một để có $x \in \left\{0; -2; 1; -1\right\}$.
+
+Vậy phương trình có bộ nghiệm là $\boxed{\displaystyle\left\{0; -2; 1; -1\right\}}$.
+
+\def\varPhu {\textit{付}}
+
+13. Đặt $\varPhu = x^2$ để đưa từ đa thức bậc bốn về đa thức bậc hai như sau:
+\begin{align*}
+   -x^4 - 3x^2 &= -5 \\
+   \iff -\varPhu^2 - 3\varPhu &= -5 \\
+   \iff \varPhu^2 + 3\varPhu - 5 &= 0.
+\end{align*}
+
+Giải phương trình bậc hai này bằng công thức nghiệm, chúng ta có:
+$$
+\left[
+   \begin{aligned}
+      \varPhu &= \frac{-3 + \sqrt{3^2 - 4 \cdot (-5)}}{2} = \frac{-3 + \sqrt{29}}{2} \\
+      \varPhu &= \frac{-3 - \sqrt{3^2 - 4 \cdot (-5)}}{2} = \frac{-3 - \sqrt{29}}{2}
+   \end{aligned}
+\right..
+$$ Tuy nhiên, do $\varPhu = x^2 \geq 0$ nên $\varPhu$ chỉ có thể nhận giá trị $\frac{-3 + \sqrt{29}}{2}$, và qua đó $x^2 = \frac{-3 + \sqrt{29}}{2}$. Vậy phương trình có nghiệm là $x \in \boxed{\left\{\sqrt{\frac{-3 + \sqrt{29}}{2}}; -\sqrt{\frac{-3 + \sqrt{29}}{2}}\right\}}$.
+
+14. Bài tập này dành cho những bạn chuyên toán thuần hơn là về ứng dụng. Nhận thấy rằng $x = 0$ không là nghiệm của phương trình. Chia cả hai vế của phương trình cho $x^2 \neq 0$ để có 
+\begin{equation}
+   x^2 + \frac{1}{x^2} = 3x + 1 + \frac{3}{x}. 
+   \label{eq:ham_so_mot_bien:da_thuc:gptdt14}
+\end{equation}
+Đặt $y = x + \frac{1}{x}$, bình phương hai vế để có $y^2 = \left(x + \frac{1}{x}\right)^2 = x^2 + \frac{1}{x^2} + 2$ hay $x^2 + \frac{1}{x^2} = y^2 - 2$. Thay vào \ref{eq:ham_so_mot_bien:da_thuc:gptdt14}, chúng ta có:
+\begin{align*}
+   y^2 - 2 &= 3y + 1 \\
+   \iff y^2 - 3y - 3 &= 0.
+\end{align*}
+Giải phương trình này bằng công thức nghiệm:
+\begin{equation}   
+   \left[
+      \begin{aligned}
+         y &= \frac{3 + \sqrt{3^2 - 4 \cdot (-3)}}{2} = \frac{3 + \sqrt{21}}{2} \\
+         y &= \frac{3 - \sqrt{3^2 - 4 \cdot (-3)}}{2} = \frac{3 - \sqrt{21}}{2}
+      \end{aligned}
+   \right..\label{eq:ham_so_mot_bien:da_thuc:gpt14y}
+\end{equation}
+
+Giải phương trình $x + \frac{1}{x} = y$. Nếu chúng ta nhân cả tử và mẫu với $x$, chúng ta sẽ có phương trình với đa thức bậc hai theo ẩn $x$: $$x^2 - yx + 1 = 0.$$ Cũng dùng công thức nghiệm để giải phương trình này để được:
+$$
+\left[
+   \begin{aligned}
+      x &= \frac{y + \sqrt{y^2 - 4}}{2} \\
+      x &= \frac{y - \sqrt{y^2 - 4}}{2}
+   \end{aligned}
+\right..
+$$
+
+Do $x \in \mathbb{R}$ nên giá trị trong dấu khai căn $y^2 - 4$ phải không nhỏ hơn $0$. Kiểm tra hai giá trị $y$ tìm được từ \ref{eq:ham_so_mot_bien:da_thuc:gpt14y}, chúng ta thấy $y = \frac{3 + \sqrt{21}}{2}$ thỏa mãn điều kiện này. Thay thế trực tiếp để tìm được tập nghiệm của phương trình.
+
+Cuối cùng, chúng ta có được $x \in$ \fbox{$\displaystyle\left\{\frac{3+\sqrt{21}+\sqrt{14 + 6\sqrt{21}}}{2}; \frac{3+\sqrt{21}-\sqrt{14 + 6\sqrt{21}}}{2}\right\}$}.
+
+\exercise Giải các bất phương trình sau. Các bất phương trình đều có ẩn là $x \in \mathbb{R}$.
+
 \begin{multicols}{2}
    \begin{enumerate}
-      \item $f(x) = 2$;
-      \item $f(x) = x + 2$;
-      \item $f(x) = x^2 + 2x + 3$;
-      \item $f(x) = x^3 - 9x^2 + 24x - 16$.
+      \item $4x + 7 < 0$;
+      \item $-8x - 16 > 0$;
    \end{enumerate}
 \end{multicols}
+
 \solution
 
-1. Theo định nghĩa, do hàm chỉ trả về kết quả là $2$ nên tập giá trị của $f$ là $\boxed{\left\{2\right\}}$.
+
+\exercise Xác định tập giá trị của những hàm sau:
+\begin{multicols}{2}
+   \begin{enumerate}
+      \item $f(x) = 0$;
+      \item $f(x) = 10x - 20$;
+      \item $f(x) = x^2 + 2x + 3$;
+      \item $f(x) = x^4 + 2x^2 + 3$.
+   \end{enumerate}
+\end{multicols}
+
+\solution
+
+1. Theo định nghĩa, do hàm chỉ trả về kết quả là $0$ nên tập giá trị của $f$ là $\boxed{\left\{0\right\}}$.
 
 2. Nhận thấy mọi giá trị $y \in \mathbb{R}$ đều có thể là kết quả của $f$ do:
-$$f(y - 2) = (y - 2) + 2 = y.$$
+$$f\left(\frac{y}{10} + 2\right) = 10 \left(\frac{y}{10} + 2\right) - 20 = y.$$
 Vậy tập giá trị của $f$ là $\boxed{\mathbb{R}}$.
 
 3. Theo đồ thị \ref{fig:ham_so_mot_bien:da_thuc:x2_2x_3}, chúng ta thấy được $f$ nhận mọi giá trị trong khoảng $\left[2; \infty\right)$. Về mặt đại số, biến đổi $f$ để có:
@@ -316,36 +490,14 @@ Qua đó, chúng ta kết luận với $y \geq 2$ thì tồn tại $x$ để $y 
 
 Vậy tập giá trị của $f$ là $\boxed{\left[2; \infty\right)}$.
 
+4. Bình phương của một số thì luôn không âm. Cho nên $x^2 \geq 0$ và $x^4 = x^2 \times x^2$ là tích của hai số không âm thì là một số không âm. Do đó $x^4 + 2x^2 + 3 \geq 3$.
 
-\begin{wrapfigure}{L}{0.42\textwidth}
-   \centering
-   \begin{tikzpicture}
-      \draw[->] (0, 0) -- (6, 0) node[right] {$x$};
-      \draw[->] (0, -3) -- (0, 5) node[above] {$f(x)$};
-      \draw[thick, smooth, samples=100] plot[domain=0.508:5.492] (\x, {((\x)^3 - 9*(\x)^2 + 24*(\x) - 16) / 2});
-      \foreach \x/\y/\z in {2/4/above, 4/0/below, 1/0/below left, 5/4/right, 0/2/above right,
-      3/2/above right} {
-         \filldraw (\x, {\y / 2}) circle (\pointSize) node[\z] {$\left(\x;\y\right)$};
-      }
-      \foreach \x\y in {1.268/2, 3/2, 4.732/2} {
-         \filldraw (\x, {\y / 2}) circle (\pointSize);
-         \draw[dashed] (\x, {\y / 2}) -- (\x, 0);
-         \filldraw (\x, 0) circle (\pointSize);
-      }
-      \draw[dashed] (0, 1) -- (6, 1);
-   \end{tikzpicture}
-   \captionsetup{justification=centering}
-   \caption{Dóng điểm để tìm nghiệm với ví dụ $y = 2$}
-   \label{fig:ham_so_mot_bien:da_thuc:ddtn}
-\end{wrapfigure}
+Ngược lại, mọi số thực $y$ từ $3$ trở lên đều có thể có một giá trị $x$ sao cho $x^4 + 2x^2 + 3 = y$. Do $y \geq 3$ nên
+\begin{align*}
+   y - 2 &\geq 1 \\
+   \iff \sqrt{y - 2} &\geq 1 \\
+   \iff \sqrt{y - 2} - 1 &\geq 0.
+\end{align*}
+Qua đó, chúng ta có thể lấy khai căn và đặt $x = \sqrt{\sqrt{y - 2} - 1}$. Khi này, thực hiện tương tự như đã làm ở phần 3 để có $f(x) = y$. Vậy tập giá trị của $f$ là $\boxed{\left[3; \infty\right)}$.
 
-4. Theo đồ thị \ref{fig:ham_so_mot_bien:da_thuc:ddtn} hoặc đồ thị trước đó \ref{fig:ham_so_mot_bien:da_thuc:x3_t9x2_24x_t16}, chúng ta thấy $f$ nhận toàn bộ giá trị trên tập số thực. 
 
-Nếu bạn đọc chỉ vừa mới bước chân vào toán cao cấp, thì để giải bài này bằng đại số có lẽ là một điều khó khăn. Với mọi $y$ thuộc $\mathbb{R}$ thì có \begin{equation}x = \sqrt[3]{\frac{y + \sqrt{y(y-4)}-2}{2}} + \sqrt[3]{\frac{2}{y + \sqrt{y(y-4)}-2}} + 3 \label{eq:ham_so_mot_bien:da_thuc:ddtn}\end{equation}
-thỏa mãn $f(x) = y$.
-
-Bạn đọc có thể đã để ý rằng trong công thức tính nghiệm, có căn bậc hai của $\sqrt{y(y-4)}$. Trên tập số thực, $y(y-4) \geq 0$ khi và chỉ khi $y\in\left(-\infty; 0\right]\cup\left[4; \infty\right)$. Viết bằng ngôn ngữ đời thường, $y$ không lớn hơn $0$ hoặc $y$ không nhỏ hơn $4$. Tuy nhiên, mở rộng sang trường số phức thì $\sqrt{y(y-4)}$ vẫn có giá trị, kể cả bên trong dấu khai căn mang dấu âm. Điều hay ở đây là phương trình \ref{eq:ham_so_mot_bien:da_thuc:ddtn} vẫn luôn trả về số thực, tùy theo cách chọn khai căn bậc hai và bậc ba. Để hiểu rõ hơn thì mời bạn đọc tìm hiểu thêm về số phức, giải tích số phức và những vấn đề liên quan.
-
-Về mặt vật lí, thông thường chúng ta sẽ dùng đồ thị để kiểm chứng và cắt giảm phần tính toán đại số. Ví dụ như bài này, chúng ta có thể khẳng định là $f$ nhận toàn bộ giá trị trên tập số thực do nếu lấy một điểm $\left(0; y\right)$ bất kì trên trục tung, dóng ngang tới đồ thị, cắt tại điểm nào thì hoành độ của điểm cắt chính là $x$ để $f(x) = y$. Ở hình \ref{fig:ham_so_mot_bien:da_thuc:ddtn} là ví dụ cho $f(x) = y = 2$.
-
-Trong tương lai, đến khi bạn đọc học về giải tích thì bạn đọc sẽ có cho mình một lập luận xác đáng cho bài tập này.
