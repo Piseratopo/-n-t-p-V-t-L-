@@ -30,14 +30,13 @@
             \draw[->] (-3,0) -- (2,0) node[right] {$x$};
             \pgfmathsetmacro{\xP}{1.2}
             \pgfmathsetmacro{\xQ}{-2}
-            \pgfmathsetmacro{\h}{0.4}
-            \draw[very thin] (\xP,0) -- (\xP,\h);
-            \draw[very thin] (\xQ,0) -- (\xQ,\h);
+            \draw[\guideLineThickness] (\xP,0) -- (\xP,\guideLineLength);
+            \draw[\guideLineThickness] (\xQ,0) -- (\xQ,\guideLineLength);
             \filldraw[color=colorEmphasisCyan] (\xP, 0) circle (\pointSize) node[below, color=colorEmphasisCyan] {$P(x_P)$};
             \filldraw[color=colorEmphasisCyan] (\xQ, 0) circle (\pointSize) node[below, color=colorEmphasisCyan] {$Q(x_Q)$};
-            \draw[very thick,color=colorEmphasisCyan] (\xQ,0) -- (\xP,0);
-            \node[above,color=colorEmphasisCyan] at ({(\xP+\xQ)/2}, {\h/2}) {$d(P;Q)$};
-            \draw[<->, >=latex, shorten >=\pointSize, shorten <=\pointSize, color=colorEmphasisCyan] (\xP,{\h/2}) -- (\xQ,{\h/2});
+            \draw[\graphThickness,color=colorEmphasisCyan] (\xQ,0) -- (\xP,0);
+            \node[above,color=colorEmphasisCyan] at ({(\xP+\xQ)/2}, {\guideLineLength/2}) {$d(P;Q)$};
+            \draw[<->, >=latex, shorten >=\pointSize, shorten <=\pointSize, color=colorEmphasisCyan] (\xP,{\guideLineLength/2}) -- (\xQ,{\guideLineLength/2});
          \end{tikzpicture}
          \caption{Khoảng cách trên trục số}
          \label{fig:do_thi:truc_so:khoang_cach_truc_so}
@@ -175,4 +174,4 @@ Trong vật lí, việc tính toán chính xác đến như ở phần $4$ là k
    \label{fig:truc phan 5}
 \end{figure}
 
-Khoảng cách giữa hai điểm $M$ và $N$ luôn là $$d(M;N)=d(N;M)=|x-2x|=\boxed{|x|}.$$
+Khoảng cách giữa hai điểm $M$ và $N$ luôn là $$d(M;N)=d(N;M)=|x-2x|=|x|.$$

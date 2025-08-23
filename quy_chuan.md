@@ -15,7 +15,6 @@ Tài liệu "Ôn tập Vật Lí" cần được viết theo quy chuẩn chính 
 Khi dùng ngôi thứ nhất mà không chỉ bạn đọc, dùng "tác giả". Khi dùng ngôi thứ hai, dùng "bạn đọc". Khi dùng ngôi thứ nhất số nhiều mà bao gồm cả người đọc, dùng "chúng ta".
 
 ## Toán học
-
 - Khi mà đáp án bị phân mảnh thì nên có một đoạn tóm tắt để vừa tổng gọn lại kết quả, vừa dễ đóng khung.
 - Với bài yêu cầu chứng minh, thì viết "Qua đó, có được điều phải chứng minh." hoặc những câu mang ý nghĩa tương đương.
 - Số thập phân kí hiệu bằng dấu phẩy (","). Để đảm bảo rằng không có khoảng cách giữa phần nguyên và phần thập phân, sử dụng `{,}` để viết số thập phân. Ví dụ: $9{,}34$.

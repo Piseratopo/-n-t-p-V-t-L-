@@ -9,22 +9,21 @@
          \draw[->] (0,-2) -- (0,2);
          \node[right] at (2,0) {Trục hoành};
          \node[above] at (0,2) {Trục tung};
-         \filldraw (0, 0) circle (1.5pt);
+         \filldraw (0, 0) circle (\pointSize);
          \node[below left] at (0, 0) {$O(0; 0)$};
 
-         \node at (1,1) {$\boxed{\text{I}}$};
-         \node at (-1,1) {$\boxed{\text{II}}$};
-         \node at (1,-1) {$\boxed{\text{IV}}$};
-         \node at (-1,-1) {$\boxed{\text{III}}$};
+         \draw[color=colorEmphasisCyan] (1,0) -- (1,-0.08) node[below] {$x_P$};
+         \draw[color=colorEmphasisCyan] (0,1.5) -- (-0.08,1.5) node[left] {$y_P$};
 
-         \draw (1,0) -- (1,-0.08) node[below] {$x_P$};
-         \draw (0,1.5) -- (-0.08,1.5) node[left] {$y_P$};
+         \filldraw[color=colorEmphasisCyan] (1, 1.5) circle (\pointSize) node[above right] {$P(x_P; y_P)$};
 
-         \filldraw (1, 1.5) circle (1.5pt);
-         \node[above right] at (1, 1.5) {$P(x_P; y_P)$};
+         \draw[dashed, color=colorEmphasisCyan] (1, 1.5) -- (1, 0);
+         \draw[dashed, color=colorEmphasisCyan] (1, 1.5) -- (0, 1.5);
 
-         \draw[dashed] (1, 1.5) -- (1, 0);
-         \draw[dashed] (1, 1.5) -- (0, 1.5);
+         \node[color=colorEmphasis] at (1,1) {$\boxed{\text{I}}$};
+         \node[color=colorEmphasis] at (-1,1) {$\boxed{\text{II}}$};
+         \node[color=colorEmphasis] at (1,-1) {$\boxed{\text{IV}}$};
+         \node[color=colorEmphasis] at (-1,-1) {$\boxed{\text{III}}$};
       \end{tikzpicture}
       \caption{Hệ tọa độ vuông góc}
       \label{fig:toa do vuong goc}
@@ -37,25 +36,28 @@
          \draw[->] (0,-2) -- (0,2);
          \node[right] at (2,0) {$x$};
          \node[above] at (0,2) {$y$};
-         \filldraw (0, 0) circle (1.5pt);
+         \filldraw (0, 0) circle (\pointSize);
          \node[below left] at (0, 0) {$O$};
 
          \pgfmathsetmacro{\xP}{1}
          \pgfmathsetmacro{\yP}{1.5}
          \pgfmathsetmacro{\xQ}{-1.2}
          \pgfmathsetmacro{\yQ}{-1}
+         \pgfmathsetmacro{\slope}{(\xP - \xQ)/(\yQ - \yP)}
+         \pgfmathsetmacro{\leftShift}{\guideLineLength*1 / sqrt((\slope)^2+1)}
+         \pgfmathsetmacro{\upShift}{\guideLineLength*(\slope) / sqrt((\slope)^2+1)}
 
-         \filldraw (\xP, \yP) circle (1.5pt);
-         \node[above right] at (\xP, \yP) {$P(x_P; y_P)$};
+         \draw[\guideLineThickness] (\xP, \yP) -- ({\xP - \leftShift}, {\yP - \upShift});
 
-         \filldraw (\xQ, \yQ) circle (1.5pt);
-         \node[below right] at (\xQ, \yQ) {$Q(x_Q; y_Q)$};
-
-         \draw[thick] (\xP, \yP) -- (\xQ, \yQ);
          \draw[dashed] (\xP, \yP) -- (\xP, \yQ);
          \draw[dashed] (\xP, \yQ) -- (\xQ, \yQ);
 
-         \node[above left] at ({(\xP+\xQ)/2}, {(\yP+\yQ)/2}) {$d(P;Q)$};
+         \filldraw[color=colorEmphasisCyan] (\xP, \yP) circle (\pointSize) node[above right] {$P(x_P; y_P)$};
+
+         \filldraw[color=colorEmphasisCyan] (\xQ, \yQ) circle (\pointSize) node[below right] {$Q(x_Q; y_Q)$};
+
+         \draw[\graphThickness, color=colorEmphasisCyan] (\xP, \yP) -- (\xQ, \yQ);
+         \node[above left, color=colorEmphasisCyan] at ({(\xP+\xQ)/2}, {(\yP+\yQ)/2}) {$d(P;Q)$};
       \end{tikzpicture}
       \caption{Khoảng cách giữa hai điểm}
       \label{fig:khoang cach 2d}
@@ -63,16 +65,16 @@
 \end{figure}
 
 
-Mở rộng lên mặt phẳng hai chiều, nếu chúng ta đặt hai trục vuông góc với nhau và giao nhau tại gốc $O(0)$ của mỗi trục, khi đó, chúng ta có thể xác định vị trị của điểm trên mặt phẳng chứa hai trục theo biểu diễn đại số bằng cách dóng điểm đó lên trục mà sau này được gọi là \defText{tọa độ}. Đây được gọi là \defText{hệ tọa độ vuông góc} (hay \defText{hệ tọa độ Đề-các}\footnote{René Descartes (1596-1650)}). Như ở hình \ref{fig:toa do vuong goc}, trục nằm ngang được gọi là \defText{trục hoành}, trục dọc được gọi là \defText{trục tung}. Tùy trong từng trường hợp, vị trí và hướng chỉ của các trục có thể thay đổi. Với mỗi điểm, vị trí khi dóng điểm đó vào trục hoành gọi là \defText{hoành độ}, vào trục tung gọi là \defText{tung độ}. Tiếp tục lấy ví dụ từ hình \ref{fig:toa do vuong goc}, điểm $P$ có tọa độ là $(x_P;y_P)$ và được kí hiệu là $P(x_P;y_P)$. Thêm vào đó, hai trục chia mặt phẳng thành bốn góc phần tư, từ góc phần tư thứ I đến góc phần tư thứ IV bao gồm các điểm thỏa mãn tính chất sau:
+Mở rộng lên mặt phẳng hai chiều, nếu chúng ta đặt hai trục vuông góc với nhau và giao nhau tại gốc $O(0)$ của mỗi trục, khi đó, chúng ta có thể xác định vị trị của điểm trên mặt phẳng chứa hai trục theo biểu diễn đại số bằng cách dóng điểm đó lên trục mà sau này được gọi là \defText{tọa độ}. Đây được gọi là \defText{hệ tọa độ vuông góc} (hay \defText{hệ tọa độ Đề-các}\footnote{René Descartes (1596-1650)}). Như ở hình \ref{fig:toa do vuong goc}, trục nằm ngang được gọi là \defText{trục hoành}, trục dọc được gọi là \defText{trục tung}. Tùy trong từng trường hợp, vị trí và hướng chỉ của các trục có thể thay đổi. Với mỗi điểm, vị trí khi dóng điểm đó vào trục hoành gọi là \defText{hoành độ}, vào trục tung gọi là \defText{tung độ}. Tiếp tục lấy ví dụ từ hình \ref{fig:toa do vuong goc}, điểm $P$ có tọa độ là $(x_P;y_P)$ và được kí hiệu là $\defMath{P(x_P;y_P)}$. Thêm vào đó, hai trục chia mặt phẳng thành bốn \defText{góc phần tư}, từ góc phần tư thứ \defText{I} đến góc phần tư thứ \defText{IV} bao gồm các điểm thỏa mãn tính chất sau:
 \begin{itemize}
-   \item Góc phần tư thứ I: $x>0$, $y>0$;
-   \item Góc phần tư thứ II: $x<0$, $y>0$;
-   \item Góc phần tư thứ III: $x<0$, $y<0$;
-   \item Góc phần tư thứ IV: $x>0$, $y<0$.
+   \item Góc phần tư thứ \defText{I}: $\defMath{x>0 \text{ và } y>0}$;
+   \item Góc phần tư thứ \defText{II}: $\defMath{x<0 \text{ và } y>0}$;
+   \item Góc phần tư thứ \defText{III}: $\defMath{x<0 \text{ và } y<0}$;
+   \item Góc phần tư thứ \defText{IV}: $\defMath{x>0 \text{ và } y<0}$.
 \end{itemize}
-Về mặt hình học, khi tọa độ được vẽ thông thường, góc phần tư thứ I nằm ở vị trí trên cùng bên phải, và các góc phần tư còn lại lần lượt được đánh số theo ngược chiều kim đồng hồ. Khi tọa độ bị thay đổi thì vị trí các góc phần tư cũng thay đổi theo, nhưng vẫn thỏa mãn điều kiện đại số ở trên. Các điểm trên trục không xác định thuộc bất cứ góc phần tư nào.
+Về mặt hình học, khi tọa độ được vẽ thông thường, góc phần tư thứ I nằm ở vị trí trên cùng bên phải, và các góc phần tư còn lại lần lượt được \textcolor{colorEmphasisCyan}{đánh số theo ngược chiều kim đồng hồ}. Khi tọa độ bị thay đổi thì vị trí các góc phần tư cũng thay đổi theo, nhưng vẫn thỏa mãn điều kiện đại số ở trên. \defText{Các điểm trên trục không xác định thuộc bất cứ góc phần tư nào.}
 
-Giống như trên trục một chiều, khi có hai điểm trên mặt phẳng thì chúng ta có thể tính khoảng cách giữa chúng. Một cách chi tiết, cho hai điểm $P(x_P;y_P)$ và $Q(x_Q;y_Q)$, theo định lí Pi-ta-go, khoảng cách giữa hai điểm đó là $$d(P;Q)=\sqrt{(x_P-x_Q)^2+(y_P-y_Q)^2}.$$
+Giống như trên trục một chiều, khi có hai điểm trên mặt phẳng thì chúng ta có thể tính khoảng cách giữa chúng. Một cách chi tiết, cho hai điểm $P(x_P;y_P)$ và $Q(x_Q;y_Q)$, theo định lí Pi-ta-go, khoảng cách giữa hai điểm đó là $$\defMath{d(P;Q)=\sqrt{(x_P-x_Q)^2+(y_P-y_Q)^2}}.$$
 
 \exercise[ex:0.2] Biểu diễn các điểm sau trên hệ tọa độ vuông góc: $A(2;3)$, $B(-1;2)$, $C(-3;0)$, $D(0;4)$, $P(12t;-3t)$, $Q(20t;12t)$ (với $t \in \mathbb{R}$). Xác định góc phần tư hoặc trục tọa độ của mỗi điểm. Sau đó, tính khoảng cách giữa những cặp điểm sau: $A$ và $B$, $C$ và $D$, $P$ và $Q$.
 
@@ -104,10 +106,10 @@ Giống như trên trục một chiều, khi có hai điểm trên mặt phẳng
 
 Các góc phần tư hay trục số mà các điểm thuộc về có thể được xác định như hình \ref{fig:toa do vuong goc bai tap}. Theo một cách khác, về mặt đại số, có:
 \begin{itemize}
-   \item $A(2;3)$: $x>0$, $y>0 \implies$ \fbox{$A$ thuộc góc phần tư thứ I};
-   \item $B(-1;2)$: $x<0$, $y>0 \implies$ \fbox{$B$ thuộc góc phần tư thứ II};
-   \item $C(-3;0)$: $x<0$, $y=0 \implies$ \fbox{$C$ thuộc trục hoành};
-   \item $D(0;4)$: $x=0$, $y>0 \implies$ \fbox{$D$ thuộc trục tung};
+   \item $A(2;3)$: $x>0$, $y>0 \implies A$ thuộc góc phần tư thứ I;
+   \item $B(-1;2)$: $x<0$, $y>0 \implies B$ thuộc góc phần tư thứ II;
+   \item $C(-3;0)$: $x<0$, $y=0 \implies C$ thuộc trục hoành;
+   \item $D(0;4)$: $x=0$, $y>0 \implies D$ thuộc trục tung;
 \end{itemize}
 
 \begin{figure}[h]
@@ -136,26 +138,24 @@ Các góc phần tư hay trục số mà các điểm thuộc về có thể đ�
       \end{tikzpicture}
    }
    \caption{Biểu diễn các điểm $P$, $Q$ trong bài \ref{ex:0.2}} theo các trường hợp
-   \label{fig:toa do vuong goc PQ}
+   \label{fig:do_thi:mat_phang:tdvgPQ}
 \end{figure}
 
 Để xác định được vị trí của hai điểm $P$ và $Q$, cần phải xét giá trị của $t$. Nếu $t$ dương, thì $P$ và $Q$ sẽ có tọa độ là $P_{t_+}(12t;-3t)$ và $Q_{t_+}(20t;12t)$ với $x_{P_{t_+}}>0$, $y_{P_{t_+}}<0$ và $x_{Q_{t_+}}>0$, $y_{Q_{t_+}}>0$. Khi này, chúng ta có thể kết luận rằng $P$ thuộc góc phần tư thứ IV và $Q$ thuộc góc phần tư thứ I. Ngược lại, nếu $t$ âm, thì $P$ và $Q$ sẽ có tọa độ là $P_{t_-}(12t;-3t)$ và $Q_{t_-}(20t;12t)$ với $x_{P_{t_-}}<0$, $y_{P_{t_-}}>0$ và $x_{Q_{t_-}}<0$, $y_{Q_{t_-}}<0$. Khi này, $P$ thuộc góc phần tư thứ II và $Q$ thuộc góc phần tư thứ III. Cuối cùng, nếu $t=0$, thì cả hai điểm đều có tọa độ là $(0;0)$, tức là chúng trùng với gốc tọa độ.
 
-Tóm tắt lại, xét các trường hợp về vị trí tương đối của $P$ và $Q$ như hình \ref{fig:toa do vuong goc PQ}, chúng ta có:
+Tóm tắt lại, xét các trường hợp về vị trí tương đối của $P$ và $Q$ như hình \ref{fig:do_thi:mat_phang:tdvgPQ}, chúng ta có:
 
 $$
-\boxed{ 
    \begin{cases}
       t>0 \implies P \in \text{góc phần tư thứ IV}, Q \in \text{góc phần tư thứ I} \\
       t<0 \implies P \in \text{góc phần tư thứ II}, Q \in \text{góc phần tư thứ III} \\
       t=0 \implies P = \text{gốc tọa độ}, Q = \text{gốc tọa độ}
-   \end{cases}
-}.
+   \end{cases}.
 $$
 
 Khoảng cách giữa những cặp điểm được yêu cầu là:
 \begin{itemize}
-   \item $d(A;B) = \sqrt{\left(2-(-1)\right)^2+\left(3-2\right)^2} = \boxed{\sqrt{10} \approx 3{,}1623}$;
-   \item $d(C;D) = \sqrt{\left(-3-0\right)^2+\left(0-4\right)^2} = \boxed{5}$;
-   \item $d(P;Q) = \sqrt{\left(12t-20t\right)^2+\left(-3t-12t\right)^2} = \boxed{13|t|}$.
+   \item $d(A;B) = \sqrt{\left(2-(-1)\right)^2+\left(3-2\right)^2} = \sqrt{10} \approx 3{,}1623$;
+   \item $d(C;D) = \sqrt{\left(-3-0\right)^2+\left(0-4\right)^2} = 5$;
+   \item $d(P;Q) = \sqrt{\left(12t-20t\right)^2+\left(-3t-12t\right)^2} = 13|t|$.
 \end{itemize}
