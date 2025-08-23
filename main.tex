@@ -3,15 +3,30 @@
 \usepackage[T5]{fontenc}
 \usepackage[vietnamese]{babel}
 \usepackage[a4paper]{geometry}
-\usepackage{amsmath, amssymb, blindtext, calc, caption, float, hyperref, icomma, makecell, multicol, pgfplots, steinmetz, tikz, tikz-3dplot, wrapfig2, xcolor, xparse, xeCJK}
+\usepackage{amsmath, amssymb, blindtext, bm, calc, caption, float, hyperref, icomma, makecell, multicol, pgfplots, steinmetz, tikz, tikz-3dplot, wrapfig2, xcolor, xparse, xeCJK}
 
-% Tikz and PGFPlots configuration
+% Tinh chỉnh Tikz
 \usetikzlibrary{arrows.meta, calc, decorations.pathmorphing, intersections, pgfplots.fillbetween, shadings}
 \tikzset{snake it/.style={decorate, decoration=snake, thick}}
 
+% Căn lề và khoảng cách
 \geometry{bindingoffset=0.5cm, inner=2cm, outer=2cm, top=2cm, bottom=2cm}
-\setCJKmainfont[AutoFakeSlant=0.15,AutoFakeBold=2.0]{Nom Na Tong}
 \setcellgapes{2pt}
+
+% Thêm khoảng cách giữa các đoạn trong minipage
+\newlength{\recordparindent}
+\newenvironment{minipageindent}[1]{
+   \setlength{\recordparindent}{\parindent}
+   \setlength{\parindent}{0em}
+   \begin{minipage}{#1}
+   \setlength{\parindent}{\recordparindent}
+}{
+   \end{minipage}
+   \setlength{\parindent}{\recordparindent}
+}
+
+% Chỉnh phông chữ
+\setCJKmainfont[AutoFakeSlant=0.15,AutoFakeBold=2.0]{Nom Na Tong}
 
 \makegapedcells
 
@@ -52,17 +67,18 @@
 \renewcommand{\thetable}{\thechapter.\arabic{table}}
 \numberwithin{equation}{chapter}
 
-% Thêm khoảng cách giữa các đoạn trong minipage
-\newlength{\recordparindent}
-\newenvironment{minipageindent}[1]{
-   \setlength{\recordparindent}{\parindent}
-   \setlength{\parindent}{0em}
-   \begin{minipage}{#1}
-   \setlength{\parindent}{\recordparindent}
-}{
-   \end{minipage}
-   \setlength{\parindent}{\recordparindent}
-}
+% Định nghĩa tông màu
+\definecolor{colorEmphasisCyan}{RGB}{0, 120, 255}
+\definecolor{colorEmphasis}{RGB}{220, 24, 86}
+\definecolor{colorEmphasisGreen}{RGB}{0, 171, 77}
+
+\def \pointSize {2pt}
+\def \graphThickness {very thick}
+
+
+% Đánh dấu định nghĩa
+\newcommand{\defText}[1]{\textbf{#1}}
+\newcommand{\defMath}[1]{\bm{#1}}
 
 
 \begin{document}

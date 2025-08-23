@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.3) (preloaded format=xelatex 2025.8.2)  22 AUG 2025 23:48
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.3) (preloaded format=xelatex 2025.8.2)  23 AUG 2025 17:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -190,6 +190,15 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 \c@blind@randommax=\count299
 \c@blind@pangramcount=\count300
 \c@blind@pangrammax=\count301
+) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/tools\bm.sty
+Package: bm 2023/12/19 v1.2f Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+Package bm Info: No bold for \OMX/cmex/m/n, using \pmb.
+Package bm Info: No bold for \U/msa/m/n, using \pmb.
+Package bm Info: No bold for \U/msb/m/n, using \pmb.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
 ) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
 Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count302
@@ -598,7 +607,8 @@ Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
 \pgffor@toks=\toks41
 )) (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
 Package: tikz 2023-01-15 v3.1.10 (3.1.10)
- (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
+
+(C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@plot@mark@count=\count346
 \pgfplotmarksize=\dimen285
@@ -619,8 +629,7 @@ File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \tikznumberofchildren=\count348
 \tikznumberofcurrentchild=\count349
 \tikz@fig@count=\count350
-
-(C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex
+ (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfmatrixcurrentrow=\count351
 \pgfmatrixcurrentcolumn=\count352
@@ -857,6 +866,7 @@ File: tikzlibraryshadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryshadings.code.tex
 File: pgflibraryshadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))
+\recordparindent=\skip81
 
 Package fontspec Info: 
 (fontspec)             Font family 'NomNaTong(0)' created for font 'Nom Na
@@ -877,39 +887,38 @@ Package fontspec Info:
 
 \c@exercise=\count394
 \c@solution=\count395
-\recordparindent=\skip81
  (main.aux
 Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
 (babel)             Reported  on input line 8.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 68.
-LaTeX Font Info:    Trying to load font information for T5+cmr on input line 68.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 84.
+LaTeX Font Info:    Trying to load font information for T5+cmr on input line 84.
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5cmr.fd
 File: t5cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -950,7 +959,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 68.
+Package hyperref Info: Link coloring OFF on input line 84.
 (main.out) (main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
@@ -958,70 +967,70 @@ Package hyperref Info: Link coloring OFF on input line 68.
 
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into your preamble.
- on input line 68.
+ on input line 84.
 
 
 Package fontspec Info: 
 (fontspec)             Adjusting the maths setup (use [no-math] to avoid
 (fontspec)             this).
 
-\symlegacymaths=\mathgroup6
+\symlegacymaths=\mathgroup9
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 68.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 68.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 68.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 68.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 68.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 68.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 68.
-LaTeX Font Info:    Redeclaring math accent \check on input line 68.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 68.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 68.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 68.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 68.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 68.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 68.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 68.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 68.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 68.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 68.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 68.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 68.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 68.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 68.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 68.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 68.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 84.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 84.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 84.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 84.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 84.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 84.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 84.
+LaTeX Font Info:    Redeclaring math accent \check on input line 84.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 84.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 84.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 84.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 84.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 84.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 84.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 84.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 84.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 84.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 84.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 84.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 84.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 84.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 84.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 84.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 84.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 68.
+(Font)              `operators' in the math version `normal' on input line 84.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 68.
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 84.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 68.
+(Font)              `operators' in the math version `bold' on input line 84.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 68.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 84.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 68.
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 84.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 68.
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 84.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 68.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 84.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 68.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 84.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 68.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 84.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 68.
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 84.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 68.
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 84.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 68.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 84.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 68.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 71.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 84.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 87.
 (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 71.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 87.
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -1049,27 +1058,9 @@ Chương 0.
 
 ]
 
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 17.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 39.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
 Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
-(babel)             Reported  on input line 138.
+(babel)             Reported  on input line 125.
 [5]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
 
 [6]) (chapter/toan_hoc_nen_tang/do_thi/mat_phang.tex
 
@@ -1090,12 +1081,13 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[9]))
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[9])) (chapter/toan_hoc_nen_tang/ham_so_mot_bien.tex (chapter/toan_hoc_nen_tang/ham_so_mot_bien/dinh_nghia.tex
+
+[10]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-
-[10] (chapter/toan_hoc_nen_tang/ham_so_mot_bien.tex (chapter/toan_hoc_nen_tang/ham_so_mot_bien/dinh_nghia.tex
 
 [11]
 
@@ -1115,8 +1107,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 223--261
  []
 
 
-
-[13]
 Underfull \hbox (badness 10000) in paragraph at lines 263--283
 
  []
@@ -1127,16 +1117,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 285--308
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2486) has occurred while \output is active []
 
 
 
-[14]
+[13]
 Underfull \hbox (badness 10000) in paragraph at lines 377--399
 
  []
 
 
+
+[14]
 
 [15]
 Underfull \hbox (badness 10000) in paragraph at lines 525--544
@@ -1149,14 +1141,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 546--562
  []
 
 
+Underfull \vbox (badness 2932) has occurred while \output is active []
+
+
 
 [16]
 
-[17])
+[17]) (chapter/toan_hoc_nen_tang/ham_so_mot_bien/da_thuc.tex
 
-[18] (chapter/toan_hoc_nen_tang/ham_so_mot_bien/da_thuc.tex
+[18]
+Overfull \vbox (104.80444pt too high) has occurred while \output is active []
 
-[19]
+
+Overfull \vbox (104.80444pt too high) has occurred while \output is active []
+
+ [19]
 
 Package pgfplots Warning: 'fill between': Could not activate graphics layer 'pre main'. Filled path will be on top of the other ones. Please ensure that 'pre main' is somewhere in the layer list (or set '/tikz/fill between/on layer='). on input line 86.
 
@@ -1180,7 +1179,7 @@ Missing character: There is no ; in font nullfont!
 [28]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 133.
+(caption)                particular \caption on input line 149.
 See the caption package documentation for explanation.
 
 
@@ -1199,7 +1198,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Chương 1.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 282.
+(caption)                particular \caption on input line 298.
 See the caption package documentation for explanation.
 
 
@@ -1229,7 +1228,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (4.0166pt too wide) in paragraph at lines 683--684
+Overfull \hbox (4.0166pt too wide) in paragraph at lines 699--700
  [][] 
  []
 
@@ -1250,7 +1249,7 @@ LaTeX Warning: Text page 38 contains only floats.
 [38]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 797.
+(caption)                particular \caption on input line 813.
 See the caption package documentation for explanation.
 
 
@@ -1258,7 +1257,7 @@ See the caption package documentation for explanation.
 [39]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 853.
+(caption)                particular \caption on input line 869.
 See the caption package documentation for explanation.
 
 
@@ -1285,12 +1284,12 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 1BAA90FB43FBDECCDC22DE4B98C1C279;3163.
  ) 
 Here is how much of TeX's memory you used:
- 42109 strings out of 408640
- 1001078 string characters out of 5744799
- 1643356 words of memory out of 5000000
- 64507 multiletter control sequences out of 15000+600000
- 571590 words of font info for 96 fonts, out of 8000000 for 9000
+ 42239 strings out of 408640
+ 1002649 string characters out of 5744799
+ 1640697 words of memory out of 5000000
+ 64618 multiletter control sequences out of 15000+600000
+ 577116 words of font info for 114 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 99i,16n,105p,2029b,853s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,16n,105p,2029b,883s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (42 pages, 1094836 bytes).
+Output written on main.xdv (42 pages, 1098072 bytes).
