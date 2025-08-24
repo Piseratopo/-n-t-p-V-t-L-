@@ -12,17 +12,16 @@
          \draw[->] (0,-2.5,0) -- (0,2.5,0) node[anchor=north west]{Trục tung};
          \draw[->] (0,0,-1) -- (0,0,2) node[anchor=south]{Trục cao/Trục đứng/Trục sâu};
          
-         \filldraw (0, 0, 0) circle (1.5pt) node[above left] {$O(0;0;0)$};
-         \filldraw (P) circle (1.5pt) node[above] {$P$};
+         \filldraw[color=colorEmphasis] (0, 0, 0) circle (\pointSize) node[above left] {$O(0;0;0)$};
+         \filldraw[color=colorEmphasisCyan] (P) circle (\pointSize) node[above] {$P$};
          
-         \draw[dashed] (P) -- (1.5, 0, 0) node[above left] {$x_P$};
-         \draw[dashed] (P) -- (0, 2, 0) node[above] {$y_P$};
-         \draw[dashed] (P) -- (0, 0, 1) node[left] {$z_P$};
-         \draw[dashed] (P) -- (1.5, 2, 0) -- (0, 0, 0);
-         \draw[dashed] (1.5, 2, 0) -- (0, 2, 0);
-         \draw[dashed] (1.5, 2, 0) -- (1.5, 0, 0);
+         \draw[dashed, color=colorEmphasisCyan] (P) -- (1.5, 0, 0) node[above left] {$x_P$};
+         \draw[dashed, color=colorEmphasisCyan] (P) -- (0, 2, 0) node[above] {$y_P$};
+         \draw[dashed, color=colorEmphasisCyan] (P) -- (0, 0, 1) node[left] {$z_P$};
+         \draw[dashed, color=colorEmphasisCyan] (P) -- (1.5, 2, 0) -- (0, 0, 0);
+         \draw[dashed, color=colorEmphasisCyan] (1.5, 2, 0) -- (0, 2, 0);
+         \draw[dashed, color=colorEmphasisCyan] (1.5, 2, 0) -- (1.5, 0, 0);
 
-         
       \end{tikzpicture}
       \caption{Hệ tọa độ vuông góc ba chiều}
       \label{fig:toa do vuong goc ba chieu}
@@ -32,18 +31,27 @@
       \centering
       \tdplotsetmaincoords{60}{60}
       \begin{tikzpicture}[tdplot_main_coords]
-         \coordinate (P) at (1.5,2,1);
-         \coordinate (Q) at (-2,-1,-0.5);
+         \pgfmathsetmacro{\xP}{1.5}
+         \pgfmathsetmacro{\yP}{2}
+         \pgfmathsetmacro{\zP}{1}
+         \pgfmathsetmacro{\xQ}{-2}
+         \pgfmathsetmacro{\yQ}{-1}
+         \pgfmathsetmacro{\zQ}{-0.5}
+         \coordinate (P) at (\xP,\yP,\zP);
+         \coordinate (Q) at (\xQ,\yQ,\zQ);
          
          \draw[->] (-2.5,0,0) -- (2.5,0,0) node[anchor=north east]{$x$};
          \draw[->] (0,-2.5,0) -- (0,2.5,0) node[anchor=north west]{$y$};
          \draw[->] (0,0,-1.5) -- (0,0,1.5) node[anchor=south]{$z$};
+
+         \draw[\guideLineThickness] (P) -- ({\xP}, \yP, {\zP + 0.4});
+         \draw[\guideLineThickness] (Q) -- ({\xQ}, \yQ, {\zQ + 0.4});
          
-         \filldraw (P) circle (1.5pt) node[above] {$P$};
-         \filldraw (Q) circle (1.5pt) node[below] {$Q$};
-         \draw[thick] (P) -- (Q);
-         \node[above
-         ] at (-0.3, 0.5, 0.3) {$d(P;Q)$};
+         \filldraw[color=colorEmphasisCyan] (P) circle (\pointSize) node[right] {$P$};
+         \filldraw[color=colorEmphasisCyan] (Q) circle (\pointSize) node[left] {$Q$};
+         \draw[graph thickness, color=colorEmphasisCyan] (P) -- (Q);
+         \draw[measuring arrow] ({\xP}, {\yP}, {\zP + 0.2}) -- ({\xQ}, {\yQ}, {\zQ + 0.2});
+         \node[above, color=colorEmphasisCyan] at ({(\xP+\xQ)/2}, {(\yP+\yQ)/2}, {(\zP+\zQ)/2 + 0.2}) {$d(P;Q)$};
 
       \end{tikzpicture}
       \caption{Khoảng cách giữa hai điểm trong không gian ba chiều}
@@ -53,57 +61,66 @@
 
 \ % Lùi đầu dòng
 
-Đương nhiên sẽ có một vài trường hợp mà biểu diễn hai chiều không thể đủ. Khi này, mở rộng hơn nữa, chúng ta cũng có thể làm những điều trên không gian ba chiều tương tự với khi ở trục số một chiều hay mặt phẳng hai chiều. Khi đó, chúng ta sẽ có một hệ tọa độ ba chiều với ba trục vuông góc với nhau, được gọi là \emph{hệ tọa độ vuông góc ba chiều}. Mỗi điểm trong không gian sẽ có tọa độ là $(x;y;z)$ với $x$, $y$, $z$ là các hoành độ, tung độ và cao độ tương ứng. Khoảng cách giữa hai điểm trong không gian ba chiều được tính theo công thức $$d(P;Q)=\sqrt{(x_P-x_Q)^2+(y_P-y_Q)^2+(z_P-z_Q)^2}.$$
+Đương nhiên sẽ có một vài trường hợp mà biểu diễn hai chiều không thể đủ. Khi này, mở rộng hơn nữa, chúng ta cũng có thể làm những điều trên không gian ba chiều tương tự với khi ở trục số một chiều hay mặt phẳng hai chiều. Khi đó, chúng ta sẽ có một hệ tọa độ ba chiều với ba trục vuông góc với nhau, được gọi là \defText{hệ tọa độ vuông góc ba chiều}. Mỗi điểm trong không gian sẽ có tọa độ là $\defMath{(x;y;z)}$ với $x$, $y$, $z$ là các hoành độ, tung độ và cao độ tương ứng. Khoảng cách giữa hai điểm trong không gian ba chiều được tính theo công thức $$\defMath{d(P;Q)=\sqrt{(x_P-x_Q)^2+(y_P-y_Q)^2+(z_P-z_Q)^2}}.$$
 
-\begin{wrapfigure}{R}{0.5\textwidth}
-   \centering
-   \tdplotsetmaincoords{20}{10}
-   \begin{tikzpicture}[tdplot_main_coords]         
-      \node at (1.5, 1.5, -1.5) {$\boxed{\text{V}}$};
-      \node at (-1.5, 1.5, -1.5) {$\boxed{\text{VI}}$};
-      \node at (-1.5, -1.5, -1.5) {$\boxed{\text{VII}}$};
-      \node at (1.5, -1.5, -1.5) {$\boxed{\text{VIII}}$};
-      \draw[fill=gray!30, opacity=0.4] (-2.5,-2.5,0) -- (2.5,-2.5,0) -- (2.5,2.5,0) -- (-2.5,2.5,0) -- cycle;
+{
+   \begin{minipageindent}{0.48\textwidth}
+      Và cũng tương tự như với mặt phẳng hai chiều, ba trục sẽ chia không gian thành tám phần, gọi là \defText{góc phần tám không gian}. Các phần này được đánh số từ I đến VIII như sau: Nhìn từ phía dương của trục cao, các góc phần tám được đánh dấu ngược chiều kim đồng hồ như trong mặt phẳng hai chiều. Các góc phần tám I, II, III, IV nằm trên mặt phẳng $Oxy$ và góc phần tám V, VI, VII, VIII nằm dưới mặt phẳng $Oxy$. Các góc phần tám này được biểu diễn trong hình \ref{fig:goc phan tam khong gian}. Về mặt đại số, 
 
-      \draw[->] (-2.5,0,0) -- (2.5,0,0) node[anchor=north east]{$x$};
-      \draw[->] (0,-2.5,0) -- (0,2.5,0) node[anchor=north west]{$y$};
-      \draw[->] (0,0,-2.5) -- (0,0,2.5) node[anchor=south]{$z$};
-      \filldraw (0, 0, 0) circle (\pointSize) node[above right] {$O(0;0;0)$};
-      \node[fill=white, inner sep=2pt] at (1.5, 1.5, 1.5) {$\boxed{\text{I}}$};
-      \node[fill=white, inner sep=2pt] at (-1.5, 1.5, 1.5) {$\boxed{\text{II}}$};
-      \node[fill=white, inner sep=2pt] at (-1.5, -1.5, 1.5) {$\boxed{\text{III}}$};
-      \node[fill=white, inner sep=2pt] at (1.5, -1.5, 1.5) {$\boxed{\text{IV}}$};
-      
+      \begin{itemize}
+         \item Góc phần tám \defText{I}: $\defMath{x>0}$, $\defMath{y>0}$, $\defMath{z>0}$;
+         \item Góc phần tám \defText{II}: $\defMath{x<0}$, $\defMath{y>0}$, $\defMath{z>0}$;
+         \item Góc phần tám \defText{III}: $\defMath{x<0}$, $\defMath{y<0}$, $\defMath{z>0}$;
+         \item Góc phần tám \defText{IV}: $\defMath{x>0}$, $\defMath{y<0}$, $\defMath{z>0}$;
+         \item Góc phần tám \defText{V}: $\defMath{x>0}$, $\defMath{y>0}$, $\defMath{z<0}$;
+         \item Góc phần tám \defText{VI}: $\defMath{x<0}$, $\defMath{y>0}$, $\defMath{z<0}$;
+         \item Góc phần tám \defText{VII}: $\defMath{x<0}$, $\defMath{y<0}$, $\defMath{z<0}$;
+         \item Góc phần tám \defText{VIII}: $\defMath{x>0}$, $\defMath{y<0}$, $\defMath{z<0}$.
+      \end{itemize}
+   \end{minipageindent}
+   \hfill
+   \begin{minipageindent}{0.48\textwidth}
+      \begin{figure}[H]
+         \centering
+         \tdplotsetmaincoords{20}{10}
+         \begin{tikzpicture}[tdplot_main_coords]         
+            \node[color=colorEmphasis] at (1.5, 1.5, -1.5) {$\boxed{\text{V}}$};
+            \node[color=colorEmphasis] at (-1.5, 1.5, -1.5) {$\boxed{\text{VI}}$};
+            \node[color=colorEmphasis] at (-1.5, -1.5, -1.5) {$\boxed{\text{VII}}$};
+            \node[color=colorEmphasis] at (1.5, -1.5, -1.5) {$\boxed{\text{VIII}}$};
+            \draw[fill=gray!30, opacity=0.4] (-2.5,-2.5,0) -- (2.5,-2.5,0) -- (2.5,2.5,0) -- (-2.5,2.5,0) -- cycle;
 
-   \end{tikzpicture}
-   \caption{Góc phần tám không gian}
-   \label{fig:goc phan tam khong gian}
-\end{wrapfigure}
+            \draw[->] (-2.5,0,0) -- (2.5,0,0) node[anchor=north east]{$x$};
+            \draw[->] (0,-2.5,0) -- (0,2.5,0) node[anchor=north west]{$y$};
+            \draw[->] (0,0,-2.5) -- (0,0,2.5) node[anchor=south]{$z$};
+            \filldraw (0, 0, 0) circle (\pointSize) node[above right] {$O(0;0;0)$};
+            \node[fill=white, inner sep=2pt, text=colorEmphasisCyan] at (1.5, 1.5, 1.5) {$\boxed{\text{I}}$};
+            \node[fill=white, inner sep=2pt, text=colorEmphasisCyan] at (-1.5, 1.5, 1.5) {$\boxed{\text{II}}$};
+            \node[fill=white, inner sep=2pt, text=colorEmphasisCyan] at (-1.5, -1.5, 1.5) {$\boxed{\text{III}}$};
+            \node[fill=white, inner sep=2pt, text=colorEmphasisCyan] at (1.5, -1.5, 1.5) {$\boxed{\text{IV}}$};
 
-Và cũng tương tự như với mặt phẳng hai chiều, ba trục sẽ chia không gian thành tám phần, gọi là \emph{góc phần tám không gian}. Các phần này được đánh số từ I đến VIII như sau: Nhìn từ phía dương của trục cao, các góc phần tám được đánh dấu ngược chiều kim đồng hồ. Các góc phần tám I, II, III, IV nằm trên mặt phẳng $Oxy$ và được xác định tương tự như các góc phần tư trong mặt phẳng hai chiều. Các góc phần tám V, VI, VII, VIII nằm dưới mặt phẳng $Oxy$ và được xác định tương tự như trên. Các góc phần tám này được biểu diễn trong hình \ref{fig:goc phan tam khong gian}. Về mặt đại số, 
+         \end{tikzpicture}
+         \caption{Góc phần tám không gian}
+         \label{fig:goc phan tam khong gian}
+      \end{figure}
+   \end{minipageindent}
+}
 
-\begin{itemize}
-   \item Góc phần tám I: $x>0$, $y>0$, $z>0$;
-   \item Góc phần tám II: $x<0$, $y>0$, $z>0$;
-   \item Góc phần tám III: $x<0$, $y<0$, $z>0$;
-   \item Góc phần tám IV: $x>0$, $y<0$, $z>0$;
-   \item Góc phần tám V: $x>0$, $y>0$, $z<0$;
-   \item Góc phần tám VI: $x<0$, $y>0$, $z<0$;
-   \item Góc phần tám VII: $x<0$, $y<0$, $z<0$;
-   \item Góc phần tám VIII: $x>0$, $y<0$, $z<0$.
-\end{itemize}
+Trên hệ tọa độ không gian, chúng ta cần phải quan tâm thêm xem là ba trục tạo thành \defText{hướng tam diện} nào. Nhìn từ phía dương của trục cao, khi này, nếu trục hoành xoay sang trục tung theo hướng ngược chiều kim đồng hồ, thì hướng tam diện được gọi là \defText{hướng tam diện thuận}. Ngược lại, nếu trục hoành xoay sang trục tung theo hướng cùng chiều kim đồng hồ, thì hướng tam diện được gọi là \defText{hướng tam diện nghịch}. Một cách khác là dùng quy tắc bàn tay phải: nắm tay phải vào trục cao, khi này, ngón tay cái chỉ hướng của trục cao. Nếu hướng nắm ngón tay theo hương quay từ trục hoành sang trục tung, thì hướng tam diện là thuận. Ngược lại, nếu hướng nắm ngón tay theo hướng quay từ trục tung sang trục hoành, thì hướng tam diện là nghịch.
 
-\begin{figure}[h]
+Chúng ta đã có phân bổ vị trí của các góc phần tám trong hệ tọa độ tam diện thuận. Lặp lại lập luận với cùng biểu thức đại số, chúng ta có thể phân bổ vị trí của các góc phần tám trong hệ tọa độ tam diện nghịch. Thông thường, hệ tọa độ tam diện thuận được ưa dùng hơn.
+
+\begin{figure}[H]
    \centering
    \tdplotsetmaincoords{20}{10}
    \begin{minipage}[b]{0.48\textwidth}
       \centering
       \begin{tikzpicture}[tdplot_main_coords]
-         \draw[->] (-2.5,0,0) -- (2.5,0,0) node[anchor=north east]{$x$};
-         \draw[->] (0,-2.5,0) -- (0,2.5,0) node[anchor=north west]{$y$};
-         \draw[->] (0,0,-2.5) -- (0,0,2.5) node[anchor=south]{$z$};
+         \draw[color=colorEmphasisCyan,->] (-2.5,0,0) -- (2.5,0,0) node[anchor=north east]{$x$};
+         \draw[color=colorEmphasisCyan,->] (0,-2.5,0) -- (0,2.5,0) node[anchor=north west]{$y$};
+         \draw[color=colorEmphasis,->] (0,0,-2.5) -- (0,0,2.5) node[anchor=south]{$z$};
          
-         \draw[thick,->] (1.5,0,0) arc (0:90:1.5);
+         \draw[color=colorEmphasisCyan,graph thickness,->] (1.5,0,0) arc (0:90:1.5);
       \end{tikzpicture}
       \caption{Tam diện thuận}
       \label{fig:tam dien thuan}
@@ -112,20 +129,16 @@ Và cũng tương tự như với mặt phẳng hai chiều, ba trục sẽ chia
    \begin{minipage}[b]{0.48\textwidth}
       \centering
       \begin{tikzpicture}[tdplot_main_coords]
-         \draw[->] (-2.5,0,0) -- (2.5,0,0) node[anchor=north east]{$y$};
-         \draw[->] (0,-2.5,0) -- (0,2.5,0) node[anchor=north west]{$x$};
-         \draw[->] (0,0,-2.5) -- (0,0,2.5) node[anchor=south]{$z$};
+         \draw[color=colorEmphasisCyan,->] (-2.5,0,0) -- (2.5,0,0) node[anchor=north east]{$y$};
+         \draw[color=colorEmphasisCyan,->] (0,-2.5,0) -- (0,2.5,0) node[anchor=north west]{$x$};
+         \draw[color=colorEmphasis,->] (0,0,-2.5) -- (0,0,2.5) node[anchor=south]{$z$};
          
-         \draw[thick,->] (0,1.5,0) arc (90:0:1.5);
+         \draw[color=colorEmphasisCyan,graph thickness,->] (0,1.5,0) arc (90:0:1.5);
       \end{tikzpicture}
       \caption{Tam diện nghịch}
       \label{fig:tam dien nghich}
    \end{minipage}
 \end{figure}
-
-Trên hệ tọa độ không gian, chúng ta cần phải quan tâm thêm xem là ba trục tạo thành \emph{hướng tam diện} nào. Ta nhìn từ phía dương của trục cao, khi này, nếu trục hoành xoay sang trục tung theo hướng ngược chiều kim đồng hồ, thì hướng tam diện được gọi là \emph{hướng tam diện thuận}. Ngược lại, nếu trục hoành xoay sang trục tung theo hướng cùng chiều kim đồng hồ, thì hướng tam diện được gọi là \emph{hướng tam diện nghịch}. Một cách khác là dùng quy tắc bàn tay phải: nắm tay phải vào trục cao, khi này, ngón tay cái chỉ hướng của trục cao. Nếu hướng nắm ngón tay theo hương quay từ trục hoành sang trục tung, thì hướng tam diện là thuận. Ngược lại, nếu hướng nắm ngón tay theo hướng quay từ trục tung sang trục hoành, thì hướng tam diện là nghịch.
-
-Chúng ta đã có phân bổ vị trí của các góc phần tám trong hệ tọa độ tam diện thuận. Lặp lại lập luận với cùng biểu thức đại số, chúng ta có thể phân bổ vị trí của các góc phần tám trong hệ tọa độ tam diện nghịch. Thông thường, hệ tọa độ tam diện thuận được ưa dùng hơn.
 
 \exercise Trung điểm của một đoạn thẳng $AB$ là điểm $M$ trong không gian khi và chỉ khi $M$ thỏa mãn $d(A;M) = d(B;M) = \frac{d(A;B)}{2}$. Chứng minh rằng với tọa độ của $M$ là $$M\left(\frac{x_A+x_B}{2}; \frac{y_A+y_B}{2}; \frac{z_A+z_B}{2}\right)$$ thì $M$ là trung điểm của đoạn thẳng nối hai điểm $A(x_A; y_A; z_A)$ và $B(x_B; y_B; z_B)$. Vẽ ví dụ với $A(1;2;3)$ và $B(-1;0;4)$.
 
@@ -148,18 +161,16 @@ Công thức về vị trí tọa độ trung điểm được cho trong bài l�
 \begin{figure}[H]
    \centering
    \tdplotsetmaincoords{80}{80}
-   \fbox{
-      \begin{tikzpicture}[tdplot_main_coords]
-         \draw[->] (-2,0,0) -- (2,0,0) node[anchor=north west]{$y$};
-         \draw[->] (0,-1,0) -- (0,3,0) node[anchor=north east]{$x$};
-         \draw[->] (0,0,-1) -- (0,0,5) node[anchor=south]{$z$};
-         
-         \filldraw (1,2,3) circle (\pointSize) node[anchor=west] {$A(1;2;3)$};
-         \filldraw (-1,0,4) circle (\pointSize) node[anchor=east] {$B(-1;0;4)$};
-         \filldraw (0,1,3.5) circle (\pointSize) node[anchor=south west] {$M(0;1;\frac{7}{2})$};
-         \draw[thick] (1,2,3) -- (0,1,3.5) -- (-1,0,4);
-      \end{tikzpicture}
-   }
-   \caption{Ví dụ trung điểm với $A(1;2;3)$ và $B(-1;0;4)$}
+   \begin{tikzpicture}[tdplot_main_coords]
+      \draw[->] (-2,0,0) -- (2,0,0) node[anchor=north west]{$y$};
+      \draw[->] (0,-1,0) -- (0,3,0) node[anchor=north east]{$x$};
+      \draw[->] (0,0,-1) -- (0,0,5) node[anchor=south]{$z$};
+      
+      \filldraw (1,2,3) circle (\pointSize) node[anchor=west] {$A(1;2;3)$};
+      \filldraw (-1,0,4) circle (\pointSize) node[anchor=east] {$B(-1;0;4)$};
+      \draw (1,2,3) -- (0,1,3.5) -- (-1,0,4);
+      \filldraw[color=colorEmphasisCyan] (0,1,3.5) circle (\pointSize) node[anchor=south west] {$M\left(0;1;\frac{7}{2}\right)$};
+   \end{tikzpicture}
+   \caption{Ví dụ với trung điểm $M$ của $A(1;2;3)$ và $B(-1;0;4)$}
    \label{fig:trung diem}
 \end{figure}

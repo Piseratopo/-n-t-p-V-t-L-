@@ -48,15 +48,16 @@
          \pgfmathsetmacro{\upShift}{\guideLineLength*(\slope) / sqrt((\slope)^2+1)}
 
          \draw[\guideLineThickness] (\xP, \yP) -- ({\xP - \leftShift}, {\yP - \upShift});
-
+         \draw[\guideLineThickness] (\xQ, \yQ) -- ({\xQ - \leftShift}, {\yQ - \upShift});
+         
          \draw[dashed] (\xP, \yP) -- (\xP, \yQ);
          \draw[dashed] (\xP, \yQ) -- (\xQ, \yQ);
 
          \filldraw[color=colorEmphasisCyan] (\xP, \yP) circle (\pointSize) node[above right] {$P(x_P; y_P)$};
-
          \filldraw[color=colorEmphasisCyan] (\xQ, \yQ) circle (\pointSize) node[below right] {$Q(x_Q; y_Q)$};
+         \draw[<->, >=latex, shorten >=\pointSize, shorten <=\pointSize, color=colorEmphasisCyan] ({\xP - \leftShift / 2}, {\yP - \upShift / 2}) -- ({\xQ - \leftShift / 2}, {\yQ - \upShift / 2});
 
-         \draw[\graphThickness, color=colorEmphasisCyan] (\xP, \yP) -- (\xQ, \yQ);
+         \draw[graph thickness, color=colorEmphasisCyan] (\xP, \yP) -- (\xQ, \yQ);
          \node[above left, color=colorEmphasisCyan] at ({(\xP+\xQ)/2}, {(\yP+\yQ)/2}) {$d(P;Q)$};
       \end{tikzpicture}
       \caption{Khoảng cách giữa hai điểm}
@@ -72,7 +73,7 @@ Mở rộng lên mặt phẳng hai chiều, nếu chúng ta đặt hai trục vu
    \item Góc phần tư thứ \defText{III}: $\defMath{x<0 \text{ và } y<0}$;
    \item Góc phần tư thứ \defText{IV}: $\defMath{x>0 \text{ và } y<0}$.
 \end{itemize}
-Về mặt hình học, khi tọa độ được vẽ thông thường, góc phần tư thứ I nằm ở vị trí trên cùng bên phải, và các góc phần tư còn lại lần lượt được \textcolor{colorEmphasisCyan}{đánh số theo ngược chiều kim đồng hồ}. Khi tọa độ bị thay đổi thì vị trí các góc phần tư cũng thay đổi theo, nhưng vẫn thỏa mãn điều kiện đại số ở trên. \defText{Các điểm trên trục không xác định thuộc bất cứ góc phần tư nào.}
+Về mặt hình học, khi tọa độ được vẽ thông thường, góc phần tư thứ I nằm ở vị trí trên cùng bên phải, và các góc phần tư còn lại lần lượt được đánh số theo ngược chiều kim đồng hồ. Khi tọa độ bị thay đổi thì vị trí các góc phần tư cũng thay đổi theo, nhưng vẫn thỏa mãn điều kiện đại số ở trên. \defText{Các điểm trên trục không xác định thuộc bất cứ góc phần tư nào.}
 
 Giống như trên trục một chiều, khi có hai điểm trên mặt phẳng thì chúng ta có thể tính khoảng cách giữa chúng. Một cách chi tiết, cho hai điểm $P(x_P;y_P)$ và $Q(x_Q;y_Q)$, theo định lí Pi-ta-go, khoảng cách giữa hai điểm đó là $$\defMath{d(P;Q)=\sqrt{(x_P-x_Q)^2+(y_P-y_Q)^2}}.$$
 
@@ -82,24 +83,22 @@ Giống như trên trục một chiều, khi có hai điểm trên mặt phẳng
 
 \begin{figure}[h]
    \centering
-   \fbox{  
-      \begin{tikzpicture}
-         \draw[->] (-4,0) -- (4,0);
-         \draw[->] (0,-1) -- (0,5);
-         \node[right] at (4,0) {$x$};
-         \node[above] at (0,5) {$y$};
-         \filldraw (0, 0) circle (\pointSize) node[below right] {$O(0;0)$};
-         \filldraw (2, 3) circle (\pointSize) node[above right] {$A(2;3)$};
-         \filldraw (-1, 2) circle (\pointSize) node[below] {$B(-1;2)$};
-         \filldraw (-3, 0) circle (\pointSize) node[below] {$C(-3;0)$};
-         \filldraw (0, 4) circle (\pointSize) node[above right] {$D(0;4)$};
-         \draw[thick] (2, 3) -- (-1, 2);
-         \draw[thick] (-3, 0) -- (0, 4);
-         
-         \node at (1,1) {$\boxed{\text{I}}$};
-         \node at (-1,1) {$\boxed{\text{II}}$};
-      \end{tikzpicture}
-   }
+   \begin{tikzpicture}
+      \draw[->] (-4,0) -- (4,0);
+      \draw[->] (0,-1) -- (0,5);
+      \node[right] at (4,0) {$x$};
+      \node[above] at (0,5) {$y$};
+      \filldraw (0, 0) circle (\pointSize) node[below right] {$O(0;0)$};
+      \filldraw[color=colorEmphasisCyan] (2, 3) circle (\pointSize) node[above right] {$A(2;3)$};
+      \filldraw[color=colorEmphasisCyan] (-1, 2) circle (\pointSize) node[below] {$B(-1;2)$};
+      \filldraw[color=colorEmphasis] (-3, 0) circle (\pointSize) node[below] {$C(-3;0)$};
+      \filldraw[color=colorEmphasis] (0, 4) circle (\pointSize) node[above right] {$D(0;4)$};
+      \draw[graph thickness, color=colorEmphasisCyan] (2, 3) -- (-1, 2);
+      \draw[graph thickness, color=colorEmphasis] (-3, 0) -- (0, 4);
+      
+      \node at (1,1) {$\boxed{\text{I}}$};
+      \node at (-1,1) {$\boxed{\text{II}}$};
+   \end{tikzpicture}
    \caption{Biểu diễn các điểm $A$, $B$, $C$, $D$ trong bài \ref{ex:0.2}}
    \label{fig:toa do vuong goc bai tap}
 \end{figure}
@@ -114,29 +113,27 @@ Các góc phần tư hay trục số mà các điểm thuộc về có thể đ�
 
 \begin{figure}[h]
    \centering
-   \fbox{
-      \begin{tikzpicture}
-         \draw[->] (-4.5,0) -- (4,0);
-         \draw[->] (0,-3.5) -- (0,2);
-         \node[right] at (4,0) {$x$};
-         \node[above] at (0,2) {$y$};
-         \filldraw (0, 0) circle (\pointSize) node[above left] {$O(0;0)$};
-         \filldraw (0, 0) circle (\pointSize) node[below right] {$P_{t=0}$};
-         \filldraw (0, 0) circle (\pointSize) node[above right] {$Q_{t=0}$};
-         
-         \node at (1,1) {$\boxed{\text{I}}$};
-         \node at (-1,-1) {$\boxed{\text{III}}$};
-         \node at (-1,1) {$\boxed{\text{II}}$};
-         \node at (1,-1) {$\boxed{\text{IV}}$};
-         \pgfmathsetmacro{\t}{0.1}
-         \filldraw ({12*\t}, {-3*\t}) circle (\pointSize) node[below right] {$P_{t_+}$};
-         \filldraw ({20*\t}, {12*\t}) circle (\pointSize) node[above right] {$Q_{t_+}$};
-         \draw[thick] ({12*\t}, {-3*\t}) -- ({20*\t}, {12*\t});
-         \filldraw ({12*(-\t-0.1)}, {-3*(-\t-0.1)}) circle (\pointSize) node[below right] {$P_{t_-}$};
-         \filldraw ({20*(-\t-0.1)}, {12*(-\t-0.1)}) circle (\pointSize) node[below left] {$Q_{t_-}$};
-         \draw[thick] ({12*(-\t-0.1)}, {-3*(-\t-0.1)}) -- ({20*(-\t-0.1)}, {12*(-\t-0.1)});
-      \end{tikzpicture}
-   }
+   \begin{tikzpicture}
+      \draw[->] (-4.5,0) -- (4,0);
+      \draw[->] (0,-3.5) -- (0,2);
+      \node[right] at (4,0) {$x$};
+      \node[above] at (0,2) {$y$};
+      \filldraw (0, 0) circle (\pointSize) node[above left] {$O(0;0)$};
+      \filldraw[color=colorEmphasis] (0, 0) circle (\pointSize) node[below right] {$P_{t=0}$};
+      \filldraw[color=colorEmphasis] (0, 0) circle (\pointSize) node[above right] {$Q_{t=0}$};
+      
+      \node at (1,1) {$\boxed{\text{I}}$};
+      \node at (-1,-1) {$\boxed{\text{III}}$};
+      \node at (-1,1) {$\boxed{\text{II}}$};
+      \node at (1,-1) {$\boxed{\text{IV}}$};
+      \pgfmathsetmacro{\t}{0.1}
+      \filldraw[color=colorEmphasisCyan] ({12*\t}, {-3*\t}) circle (\pointSize) node[below right] {$P_{t_+}$};
+      \filldraw[color=colorEmphasisCyan] ({20*\t}, {12*\t}) circle (\pointSize) node[above right] {$Q_{t_+}$};
+      \draw[graph thickness, color=colorEmphasisCyan] ({12*\t}, {-3*\t}) -- ({20*\t}, {12*\t});
+      \filldraw[color=colorEmphasisGreen] ({12*(-\t-0.1)}, {-3*(-\t-0.1)}) circle (\pointSize) node[below right] {$P_{t_-}$};
+      \filldraw[color=colorEmphasisGreen] ({20*(-\t-0.1)}, {12*(-\t-0.1)}) circle (\pointSize) node[below left] {$Q_{t_-}$};
+      \draw[graph thickness, color=colorEmphasisGreen] ({12*(-\t-0.1)}, {-3*(-\t-0.1)}) -- ({20*(-\t-0.1)}, {12*(-\t-0.1)});
+   \end{tikzpicture}
    \caption{Biểu diễn các điểm $P$, $Q$ trong bài \ref{ex:0.2}} theo các trường hợp
    \label{fig:do_thi:mat_phang:tdvgPQ}
 \end{figure}
@@ -155,7 +152,7 @@ $$
 
 Khoảng cách giữa những cặp điểm được yêu cầu là:
 \begin{itemize}
-   \item $d(A;B) = \sqrt{\left(2-(-1)\right)^2+\left(3-2\right)^2} = \sqrt{10} \approx 3{,}1623$;
+   \item $d(A;B) = \sqrt{\left(2-(-1)\right)^2+\left(3-2\right)^2} = \sqrt{10} \textcolor{colorEmphasisCyan}{~\approx 3{,}1623}$;
    \item $d(C;D) = \sqrt{\left(-3-0\right)^2+\left(0-4\right)^2} = 5$;
    \item $d(P;Q) = \sqrt{\left(12t-20t\right)^2+\left(-3t-12t\right)^2} = 13|t|$.
 \end{itemize}

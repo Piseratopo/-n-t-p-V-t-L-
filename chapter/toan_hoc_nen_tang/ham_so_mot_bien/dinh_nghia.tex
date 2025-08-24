@@ -2,16 +2,16 @@
 
 \ % Lùi đầu dòng
 
-Chúng ta gọi $f$ là một \emph{hàm số} (hay \emph{hàm}) đi từ tập $X$ đến tập $Y$ khi và chỉ khi với mọi $x\in X$, gọi là \emph{tập xác định}, thông qua mối liên hệ $f$ có một và chỉ một $y\in Y$ tương ứng với $x$. Câu vừa rồi có thể được tóm gọn trong một vài kí hiệu: \begin{align*}f: X &\to Y \\ x &\mapsto y.\end{align*} Khi này, chúng ta có thể viết mối liên hệ hàm số này dưới dạng biểu thức giải tích $y=f(x)$, gọi $y$ là hàm của $x$. Tuy nhiên, cần phải để ý rằng, thông qua định nghĩa này, mặc dù mọi $x$ trong $X$ phải có đầu ra trong $Y$, không phải mọi $y$ trong $Y$ đều phải có đầu vào trong $X$. Nói cách khác, tập tất cả các giá trị đầu ra có thể của $y=f(x)$, gọi là \emph{tập giá trị}, là tập con của tập $Y$.
+Chúng ta gọi $f$ là một \defText{hàm số} (hay \defText{hàm}) đi từ tập $X$ đến tập $Y$ khi và chỉ khi với mọi $x\in X$, gọi là \defText{tập xác định}, thông qua mối liên hệ $f$ có một và chỉ một $y\in Y$ tương ứng với $x$. Câu vừa rồi có thể được tóm gọn trong một vài kí hiệu: $$\begin{aligned}\defMath{f: X} &\defMath{\to Y} \\ \defMath{x} &\defMath{\mapsto y}\end{aligned}.$$ Khi này, chúng ta có thể viết hàm số này dưới dạng biểu thức giải tích $\defMath{y=f(x)}$, gọi $y$ là hàm của $x$. Ngoài ra, cần phải để ý rằng, thông qua định nghĩa này, mặc dù mọi $x$ trong $X$ phải có đầu ra trong $Y$, không phải mọi $y$ trong $Y$ đều phải có đầu vào trong $X$. Nói cách khác, tập tất cả các giá trị đầu ra có thể của $y=f(x)$, gọi là \defText{tập giá trị}, là tập con của tập $Y$. Nếu $x$ nằm ngoài tập giá trị $x$ thì $f(x)$ là \defText{không xác định} và không nhận bất cứ giá trị nào.
 
-Khi chúng ta có định nghĩa hàm số thì chúng ta cũng sẽ có những khái niệm liên quan. Khi $f$ là một hàm số, thì bất cứ giá trị $a$ thuộc tập xác định để $f(a) = 0$ đều được gọi là \emph{nghiệm} của $f$. Mở rộng ra, với $f$ và $g$ là hai hàm số, bất cứ giá trị $a$ thỏa mãn $f(a) = g(a)$ thì $a$ được gọi là nghiệm của \emph{phương trình} $f(x) = g(x)$. Hơn thế nữa, nếu thay dấu $=$ trong câu vừa trước bởi các dấu $<$, $>$, $\leq$\footnote{Còn những kí hiệu khác cho dấu nhỏ hơn hoặc bằng là $\leqq$, $\leqslant$.}, $\geq$\footnote{Còn những kí hiệu khác cho dấu lơn hơn hoặc bằng là $\geqq$, $\geqslant$.}, $\neq$ thì chúng ta có định nghĩa cho nghiệm của \emph{bất phương trình}\footnote{Ngoài những dấu biểu diễn bất phương trình được kể, còn những dấu như $\nless$ (không nhỏ hơn), $\ngtr$ (không lớn hơn), $\nleq$, $\not \leqq$ hay $\nleqslant$ (không nhỏ hơn hoặc bằng), $\ngeq$, $\not \geqq$ hay $\ngeqslant$ (không lớn hơn hoặc bằng), và những dấu bị nguyền rủa $\lessgtr$ (nhỏ hơn hoặc lớn hơn), $\lesseqgtr$ hay $\lesseqqgtr$ (nhỏ hơn, lớn hơn hoặc bằng). Bạn đọc có thể sẽ muốn thêm các dấu $\not \lessgtr$ (không nhỏ hơn hay lớn hơn) và cặp dấu $\not \lesseqgtr$, $\not \lesseqqgtr$ (không nhỏ hơn, lớn hơn hay bằng) làm dấu cho bất phương trình. Tuy nhiên, trên tập số thực, $\not \lesseqgtr$ tương đương với dấu $=$, và bất phương trình với $\not \lesseqgtr$, $\not \lesseqqgtr$ thì không bao giờ thỏa mãn. Về mặt ứng dụng, ngoài những môn nặng về nền tảng của toán như đại số cao cấp, những dấu kể trên gần như không bao giờ được sử dụng.}. Lấy ví dụ, với $f$ và $g$ là hai hàm số, giá trị $a$ để $f(a) \neq g(a)$ thì $a$ được gọi là nghiệm của bất phương trình $f(x) \neq g(x)$. Kết hợp nhiều phương trình hay bất phương trình, chúng ta có một \emph{hệ}. Ví dụ:
+Khi chúng ta có định nghĩa hàm số thì chúng ta cũng sẽ có những khái niệm liên quan. Khi $f$ là một hàm số, thì bất cứ giá trị $a$ thuộc tập xác định để $f(a) = 0$ đều được gọi là \defText{nghiệm} của $f$. Mở rộng ra, với $f$ và $g$ là hai hàm số, bất cứ giá trị $a$ thỏa mãn $f(a) = g(a)$ thì $a$ được gọi là nghiệm của \defText{phương trình} $f(x) = g(x)$. Hơn thế nữa, nếu thay dấu $=$ trong câu vừa trước bởi các dấu $<$, $>$, $\leq$\footnote{Còn những kí hiệu khác cho dấu nhỏ hơn hoặc bằng là $\leqq$, $\leqslant$.}, $\geq$\footnote{Còn những kí hiệu khác cho dấu lơn hơn hoặc bằng là $\geqq$, $\geqslant$.}, $\neq$ thì chúng ta có định nghĩa cho nghiệm của \defText{bất phương trình}\footnote{Ngoài những dấu biểu diễn bất phương trình được kể, còn những dấu như $\nless$ (không nhỏ hơn), $\ngtr$ (không lớn hơn), $\nleq$, $\not \leqq$ hay $\nleqslant$ (không nhỏ hơn hoặc bằng), $\ngeq$, $\not \geqq$ hay $\ngeqslant$ (không lớn hơn hoặc bằng), và những dấu bị nguyền rủa $\lessgtr$ (nhỏ hơn hoặc lớn hơn), $\lesseqgtr$ hay $\lesseqqgtr$ (nhỏ hơn, lớn hơn hoặc bằng). Bạn đọc có thể sẽ muốn thêm các dấu $\not \lessgtr$ (không nhỏ hơn hay lớn hơn) và cặp dấu $\not \lesseqgtr$, $\not \lesseqqgtr$ (không nhỏ hơn, lớn hơn hay bằng) làm dấu cho bất phương trình. Tuy nhiên, trên tập số thực, $\not \lesseqgtr$ tương đương với dấu $=$, và bất phương trình với $\not \lesseqgtr$, $\not \lesseqqgtr$ thì không bao giờ thỏa mãn. Về mặt ứng dụng, ngoài những môn nặng về nền tảng của toán như đại số cao cấp, những dấu kể trên gần như không bao giờ được sử dụng.}. Lấy ví dụ, với $f$ và $g$ là hai hàm số, giá trị $a$ để $f(a) \neq g(a)$ thì $a$ được gọi là nghiệm của bất phương trình $f(x) \neq g(x)$. Kết hợp nhiều phương trình hay bất phương trình, chúng ta có một \defText{hệ}. Ví dụ:
 $$
 \begin{cases}
    f(x) = g(x) \\
    \alpha(y) \neq \beta(z)
 \end{cases}.
 $$
-Để thỏa mãn hệ thì mỗi thành phần trong hệ đều phải thỏa mãn. Một khái niệm liên quan mật thiết là \emph{giải} phương trình, bất phương trình, hay hệ (để ngắn gọn, chúng ta sẽ gọi phương trình, bất phương trình và hệ thành một cụm từ chung là \dblquote{phương bất hệ}). Để làm được việc này, yêu cầu cần tìm tất cả các bộ số đẻ phương bất hệ được cho thỏa mãn.
+Để thỏa mãn hệ thì mỗi thành phần trong hệ đều phải thỏa mãn. Một khái niệm liên quan mật thiết là \defText{giải} phương trình, bất phương trình, hay hệ (để ngắn gọn, chúng ta sẽ gọi phương trình, bất phương trình và hệ thành một cụm từ chung là \dblquote{phương bất hệ}). Để làm được việc này, yêu cầu cần tìm tất cả các bộ số đẻ phương bất hệ được cho thỏa mãn.
 
 Nếu chỉ có số với chữ không thì hàm số sẽ trở nên rất nhàm chán, cho nên người ta đã nghĩ ra phương pháp biểu diễn hàm số qua đồ thị. Để biểu diễn một hàm số $y=f(x)$ với $x$ và $y$ là hai số thực, cần vẽ tất cả các cặp tọa độ $(x; y)$ thỏa mãn hàm $f$ trên đồ thị. Trong trường hợp hàm có vô số điểm, chúng ta lấy một số giá trị để định hướng hình dạng của đồ thị và rồi sau đó nối các điểm lại\footnote{Mặc dù vậy, vẫn có trường hợp mà cách vẽ này hoàn toàn bất lực. Ví dụ như hàm Đi-rích-lê: $$f(x) =
 \begin{cases}
@@ -19,7 +19,7 @@ Nếu chỉ có số với chữ không thì hàm số sẽ trở nên rất nh�
    0 \text{ nếu } x\notin \mathbb{Q}
 \end{cases}$$ với $\mathbb{Q}$ là tập số hữu tỉ. Hàm này liên tục nhảy bật từ $0$ đến $1$ và ngược lại, khiến cho việc vẽ đồ thị trở nên bất khả thi.}. Do hàm số biểu thị mối liên hệ giữa hai đại lượng, chúng ta dùng đồ thị hai chiều để biểu diễn mối liên hệ giữa chúng. Chúng ta sẽ lấy ví dụ cho hàm sau được cho trong bảng \ref{tab:ham_so_mot_bien:dinh_nghia:vddths} với tập xác định chỉ có $5$ số.
 
-\begin{table}[h]
+\begin{table}[H]
    \centering
    \begin{tabular}{|c|c|c|c|c|c|}
       \hline
@@ -32,9 +32,9 @@ Nếu chỉ có số với chữ không thì hàm số sẽ trở nên rất nh�
    \label{tab:ham_so_mot_bien:dinh_nghia:vddths}
 \end{table}
 
-\noindent Chúng ta nhìn thấy rằng có $5$ bộ số $(x,y)$ là $(1;2)$, $(2;3)$, $(3;4)$, $(4;5)$, $(5;6)$ thỏa mãn hàm $f$ (theo đúng định nghĩa của hàm). Do đó, chúng ta có đồ thị như hình \ref{fig:ham_so_mot_bien:dinh_nghia:vddths}. 
+\noindent Chúng ta nhìn thấy rằng có $5$ bộ số $(x;y)$ là $(1;2)$, $(2;3)$, $(3;4)$, $(4;5)$, $(5;6)$ thỏa mãn hàm $f$ (theo đúng định nghĩa của hàm). Do đó, chúng ta có đồ thị như hình \ref{fig:ham_so_mot_bien:dinh_nghia:vddths}. 
 
-\begin{figure}[h]
+\begin{figure}[H]
    \centering
    \begin{tikzpicture}
       \draw[->] (-1, 0) -- (6, 0) node[right] {$x$};
@@ -60,7 +60,7 @@ Do phương trình chỉ có một ẩn nên chúng ta sẽ chọn trục số m
    \begin{tikzpicture}
       \draw[->] (-3, 0) -- (3, 0) node[right] {$x$};
       \foreach \x in {-1, 1} {
-         \filldraw (\x, 0) circle (\pointSize) node[below] {$(\x)$};
+         \filldraw[color=colorEmphasisCyan] (\x, 0) circle (\pointSize) node[below] {$(\x)$};
       }
    \end{tikzpicture}
    \caption{Biểu diễn nghiệm của $x^2 - 1 = 0$}
@@ -111,15 +111,15 @@ Về mặt lợi ích của việc sử dụng đồ thị, biểu diễn hình 
 
 \solution
 
-1. \fbox{$y$ là hàm của $x$} với tập xác định $X = \boxed{\{1; 2; 3; 4; 5\}}$ và tập giá trị $Y = \boxed{\{2; 3; 4; 5; 6\}}$.
+1. $y$ là hàm của $x$ với tập xác định $X = \{1; 2; 3; 4; 5\}$ và tập giá trị $Y = \{2; 3; 4; 5; 6\}$.
 
-2. \fbox{$y$ là hàm của $x$} với tập xác định $X = \boxed{\{0; -1; 1; 2; -3\}}$ và tập giá trị $Y = \boxed{\{0\}}$.
+2. $y$ là hàm của $x$ với tập xác định $X = \{0; -1; 1; 2; -3\}$ và tập giá trị $Y = \{0\}$.
 
-3. \fbox{$y$ không phải là hàm của $x$} do khi $x$ có giá trị $15$ thì $y$ có hai giá trị $123$ và $134$.
+3. $y$ không phải là hàm của $x$ do khi $x$ có giá trị $15$ thì $y$ có hai giá trị $123$ và $134$.
 
-4. \fbox{$y$ là hàm của $x$} với tập xác định $X = \boxed{\{0; -17; 3; 55\}}$ và tập giá trị $Y = \boxed{\{4586; 1024\}}$. Để ý rằng đầu vào $x=-17$ luôn ứng với đầu ra $y = 1024$.
+4. $y$ là hàm của $x$ với tập xác định $X = \{0; -17; 3; 55\}$ và tập giá trị $Y = \{4586; 1024\}$. Lưu ý rằng bảng có cột bị lặp.
 
-5. \fbox{$y$ không là hàm của $x$} do khi $x = 2$ thì $y$ có hai giá trị $28$ và $29$. Mặc dù cách viết có thể ám chỉ $y=f(x)$ với $f$ là hàm \dblquote{số ngày trong tháng}, nhưng $f$ không phải là hàm số do \dblquote{dính} trường hợp ngoại lệ.
+5. $y$ không là hàm của $x$ do khi $x = 2$ thì $y$ có hai giá trị $28$ và $29$. Mặc dù cách viết có thể ám chỉ $y=f(x)$ với $f$ là hàm số đại diện cho số ngày trong tháng, nhưng $f$ không phải là hàm số do điều ngoại lệ.
 
 \exercise[ex:ham_so_mot_bien:dinh_nghia:intropt] Vẽ đồ thị của phương trình $\mathcal{P}$, với các định nghĩa được cho. Hàm có tập xác định là bộ số đầu vào cho ở trong bảng. Để ý số ẩn của phương trình để chọn số chiều của đồ thị cho phù hợp.
 
@@ -204,14 +204,12 @@ Về mặt lợi ích của việc sử dụng đồ thị, biểu diễn hình 
    \begin{minipageindent}{0.48\textwidth}
       \begin{figure}[H]
          \centering
-         \fbox{
-            \begin{tikzpicture}
-               \draw[->] (-2, 0) -- (4, 0) node[right] {$x$};
-               \foreach \x in {1, -1, 3} {
-                  \filldraw (\x, 0) circle (\pointSize) node[below] {$(\x)$};
-               }
-            \end{tikzpicture}
-         }
+         \begin{tikzpicture}
+            \draw[->] (-2, 0) -- (4, 0) node[right] {$x$};
+            \foreach \x in {1, -1, 3} {
+               \filldraw[color=colorEmphasisCyan] (\x, 0) circle (\pointSize) node[below] {$(\x)$};
+            }
+         \end{tikzpicture}
          \caption{Đồ thị phần 1 bài \ref{ex:ham_so_mot_bien:dinh_nghia:intropt}}
          \label{fig:ham_so_mot_bien:dinh_nghia:dtp1}
       \end{figure}
@@ -245,14 +243,12 @@ Về mặt lợi ích của việc sử dụng đồ thị, biểu diễn hình 
    \begin{minipageindent}{0.48\textwidth}
       \begin{figure}[H]
          \centering
-         \fbox{
-            \begin{tikzpicture}
-               \draw[->] (-3.5, 0) -- (2.5, 0) node[right] {$x$};
-               \foreach \x in {1, -1, -3, 2} {
-                  \filldraw (\x, 0) circle (\pointSize) node[below] {$(\x)$};
-               }
-            \end{tikzpicture}
-         }
+         \begin{tikzpicture}
+            \draw[->] (-3.5, 0) -- (2.5, 0) node[right] {$x$};
+            \foreach \x in {1, -1, -3, 2} {
+               \filldraw[color=colorEmphasisCyan] (\x, 0) circle (\pointSize) node[below] {$(\x)$};
+            }
+         \end{tikzpicture}
          \caption{Đồ thị phần 2 bài \ref{ex:ham_so_mot_bien:dinh_nghia:intropt}}
          \label{fig:ham_so_mot_bien:dinh_nghia:dtp2}
       \end{figure}
@@ -267,15 +263,13 @@ Về mặt lợi ích của việc sử dụng đồ thị, biểu diễn hình 
    \begin{minipageindent}{0.48\textwidth}
       \begin{figure}[H]
          \centering
-         \fbox{
-            \begin{tikzpicture}
-               \draw[->] (0, 0) -- (5, 0) node[right] {$x$};
-               \foreach \x in {2, 3, 4} {
-                  \filldraw (\x, 0) circle (\pointSize) node[below] {$(\x)$};
-               }
-            \end{tikzpicture}
-         }
-         \caption{Đồ thị phần 4 bài \ref{ex:ham_so_mot_bien:dinh_nghia:intropt}}
+         \begin{tikzpicture}
+            \draw[->] (0, 0) -- (5, 0) node[right] {$x$};
+            \foreach \x in {2, 3, 4} {
+               \filldraw[color=colorEmphasisCyan] (\x, 0) circle (\pointSize) node[below] {$(\x)$};
+            }
+         \end{tikzpicture}
+         \caption{Đồ thị phần 3 bài \ref{ex:ham_so_mot_bien:dinh_nghia:intropt}}
          \label{fig:ham_so_mot_bien:dinh_nghia:dtp3}
       \end{figure}
    \end{minipageindent}
@@ -308,16 +302,14 @@ Về mặt lợi ích của việc sử dụng đồ thị, biểu diễn hình 
 
 \begin{figure}[H]
    \centering
-   \fbox{
-      \begin{tikzpicture}
-         \draw[->] (0, 0) -- (3.5, 0) node[right] {$x$};
-         \draw[->] (0, 0) -- (0, 3.5) node[above] {$y$};
-         \filldraw (1, 1) circle (\pointSize) node[right] {$(2; 2)$};
-         \filldraw (1.5, 1.5) circle (\pointSize) node[right] {$(3; 3)$};
-         \filldraw (2.5, 3) circle (\pointSize) node[right] {$(5; 6)$};
-         \filldraw (2, 2) circle (\pointSize) node[right] {$(4; 4)$};
-      \end{tikzpicture}
-   }
+   \begin{tikzpicture}
+      \draw[->] (0, 0) -- (3.5, 0) node[right] {$x$};
+      \draw[->] (0, 0) -- (0, 3.5) node[above] {$y$};
+      \filldraw[color=colorEmphasisCyan] (1, 1) circle (\pointSize) node[right] {$(2; 2)$};
+      \filldraw[color=colorEmphasisCyan] (1.5, 1.5) circle (\pointSize) node[right] {$(3; 3)$};
+      \filldraw[color=colorEmphasisCyan] (2.5, 3) circle (\pointSize) node[right] {$(5; 6)$};
+      \filldraw[color=colorEmphasisCyan] (2, 2) circle (\pointSize) node[right] {$(4; 4)$};
+   \end{tikzpicture}
    \caption{Đồ thị phần 4 bài \ref{ex:ham_so_mot_bien:dinh_nghia:intropt}}
    \label{fig:ham_so_mot_bien:dinh_nghia:dtp4}
 \end{figure}
@@ -357,18 +349,16 @@ Qua bảng đó, vẽ được đồ thị của $\mathcal{P}$ như hình \ref{f
 
 \begin{figure}[H]
    \centering
-   \fbox{
-      \begin{tikzpicture}
-         \draw[->] (0, 0) -- (4, 0) node[right] {$x$};
-         \draw[->] (0, 0) -- (0, 4) node[above] {$b$};
-         \filldraw (0.5, 0.75) circle (\pointSize) node[below] {$\left(1; \frac{3}{2}\right)$};
-         \filldraw (1, 1.25) circle (\pointSize) node[below] {$\left(2; \frac{5}{2}\right)$};
-         \filldraw (1.5, 1.5) circle (\pointSize) node[right] {$(3; 3)$};
-         \filldraw (2, 2) circle (\pointSize) node[right] {$(4; 4)$};
-         \filldraw (2.5, 3) circle (\pointSize) node[right] {$(5; 6)$};
-         \filldraw (3, 3.5) circle (\pointSize) node[right] {$(6; 7)$};
-      \end{tikzpicture}
-   }
+   \begin{tikzpicture}
+      \draw[->] (0, 0) -- (4, 0) node[right] {$x$};
+      \draw[->] (0, 0) -- (0, 4) node[above] {$b$};
+      \filldraw[color=colorEmphasisCyan] (0.5, 0.75) circle (\pointSize) node[below] {$\left(1; \frac{3}{2}\right)$};
+      \filldraw[color=colorEmphasisCyan] (1, 1.25) circle (\pointSize) node[below] {$\left(2; \frac{5}{2}\right)$};
+      \filldraw[color=colorEmphasisCyan] (1.5, 1.5) circle (\pointSize) node[right] {$(3; 3)$};
+      \filldraw[color=colorEmphasisCyan] (2, 2) circle (\pointSize) node[right] {$(4; 4)$};
+      \filldraw[color=colorEmphasisCyan] (2.5, 3) circle (\pointSize) node[right] {$(5; 6)$};
+      \filldraw[color=colorEmphasisCyan] (3, 3.5) circle (\pointSize) node[right] {$(6; 7)$};
+   \end{tikzpicture}
    \caption{Đồ thị phần 5 bài \ref{ex:ham_so_mot_bien:dinh_nghia:intropt}}
    \label{fig:ham_so_mot_bien:dinh_nghia:dtp5}
 \end{figure}
@@ -377,7 +367,7 @@ Qua bảng đó, vẽ được đồ thị của $\mathcal{P}$ như hình \ref{f
    \begin{minipageindent}{0.48\textwidth}
       6. Nhìn vào bảng định nghĩa được cho, $f(x)$ có thể nhận các giá trị là $\{0; 3; 4; 7\}$.
 
-      Khi $f(x) \neq 0$, chỉ có một giá trị đầu vào cho $f$ sao cho $f(x)$ đạt được giá trị đầu ra. Ví dụ, chỉ có đầu vào $x = 2$ mới có $f(x) = 3$. Do đó, khi $f(x) \neq 0$, $x = 2b-1$. Biến đổi đại số cơ bản để có $b = \frac{x + 1}{2}$. Lập bảng \ref{tab:ham_so_mot_bien:dinh_nghia:b_values7} để thấy được mối quan hệ giữa $x$ và $b$.
+      \textcolor{colorEmphasis}{Trường hợp 1}: Khi $f(x) \neq 0$, chỉ có một giá trị đầu vào cho $f$ sao cho $f(x)$ đạt được giá trị đầu ra. Ví dụ, chỉ có đầu vào $x = 2$ mới có $f(x) = 3$. Do đó, khi $f(x) \neq 0$, $x = 2b-1$. Biến đổi đại số cơ bản để có $b = \frac{x + 1}{2}$. Lập bảng \ref{tab:ham_so_mot_bien:dinh_nghia:b_values7} để thấy được mối quan hệ giữa $x$ và $b$.
 
    \end{minipageindent}
    \hfill
@@ -397,34 +387,32 @@ Qua bảng đó, vẽ được đồ thị của $\mathcal{P}$ như hình \ref{f
    \end{minipageindent}
 }
 
-Khi $f(x) = 0$, $x$ và $2b-1$ có thể nhận bất cứ giá trị nào trong tập $\{-1; 1; -3\}$. Từ đó, có thể chọn $x \in \{-1; 1; 3\}$ và giải đại số để chọn $b \in \left\{\frac{-1+1}{2}; \frac{1+1}{2}; \frac{3+1}{2}\right\} = \{0; 1; 2\}$. Các cặp $(x; b)$ thỏa mãn là $(x; b)$ $\in$ $\{\left(-1; 0\right); \left(-1; 1\right); \left(-1; 2\right); \left(1; 0\right); \left(1; 1\right); \left(1; 2\right); \left(-3; 0\right); \left(-3; 1\right); \left(-3; 2\right)\}$.
+\textcolor{colorEmphasisCyan}{Trường hợp 2}: Khi $f(x) = 0$, $x$ và $2b-1$ có thể nhận bất cứ giá trị nào trong tập $\{-1; 1; -3\}$. Từ đó, có thể chọn $x \in \{-1; 1; 3\}$ và giải đại số để chọn $b \in \left\{\frac{-1+1}{2}; \frac{1+1}{2}; \frac{3+1}{2}\right\} = \{0; 1; 2\}$. Các cặp $(x; b)$ thỏa mãn là $(x; b)$ $\in$ $\{\left(-1; 0\right); \left(-1; 1\right); \left(-1; 2\right); \left(1; 0\right); \left(1; 1\right); \left(1; 2\right); \left(-3; 0\right); \left(-3; 1\right); \left(-3; 2\right)\}$.
 
 Cuối cùng, kết hợp hai trường hợp, chúng ta có đồ thị cho $\mathcal{P}$:
 \begin{figure}[H]
    \centering
-   \fbox{
-      \begin{tikzpicture}
-         \draw[->] (-4, 0) -- (3, 0) node[right] {$x$};
-         \draw[->] (0, -2.5) -- (0, 2.5) node[above] {$b$};
-         
-         % Vẽ phần f(x) khác 0
-         \filldraw (-2, -1.5) circle (\pointSize) node[below] {$\left(-2; -\frac{3}{2}\right)$};
-         \filldraw (2, 2) circle (\pointSize) node[below] {$\left(2; 2\right)$};
-         \filldraw (-3, -1) circle (\pointSize) node[below] {$\left(-3; -1\right)$};
-         
-         \filldraw (-1, 0) circle (\pointSize) node[below] {$\left(-1; 0\right)$};
-         \filldraw (1, 0) circle (\pointSize) node[below] {$\left(1; 0\right)$};
-         \filldraw (-3, 0) circle (\pointSize) node[below] {$\left(-3; 0\right)$};
-         
-         \filldraw (-1, 1) circle (\pointSize) node[below] {$\left(-1; 1\right)$};
-         \filldraw (1, 1) circle (\pointSize) node[below] {$\left(1; 1\right)$};
-         \filldraw (-3, 1) circle (\pointSize) node[below] {$\left(-3; 1\right)$};
-         
-         \filldraw (-1, 2) circle (\pointSize) node[below] {$\left(-1; 2\right)$};
-         \filldraw (1, 2) circle (\pointSize) node[below] {$\left(1; 2\right)$};
-         \filldraw (-3, 2) circle (\pointSize) node[below] {$\left(-3; 2\right)$};
-      \end{tikzpicture}
-   }
+   \begin{tikzpicture}
+      \draw[->] (-4, 0) -- (3, 0) node[right] {$x$};
+      \draw[->] (0, -2.5) -- (0, 2.5) node[above] {$b$};
+      
+      % Vẽ phần f(x) khác 0
+      \filldraw[color=colorEmphasis] (-2, -1.5) circle (\pointSize) node[below] {$\left(-2; -\frac{3}{2}\right)$};
+      \filldraw[color=colorEmphasis] (2, 2) circle (\pointSize) node[below] {$\left(2; 2\right)$};
+      \filldraw[color=colorEmphasis] (-3, -1) circle (\pointSize) node[below] {$\left(-3; -1\right)$};
+      
+      \filldraw[color=colorEmphasisCyan] (-1, 0) circle (\pointSize) node[below] {$\left(-1; 0\right)$};
+      \filldraw[color=colorEmphasisCyan] (1, 0) circle (\pointSize) node[below] {$\left(1; 0\right)$};
+      \filldraw[color=colorEmphasisCyan] (-3, 0) circle (\pointSize) node[below] {$\left(-3; 0\right)$};
+      
+      \filldraw[color=colorEmphasisCyan] (-1, 1) circle (\pointSize) node[below] {$\left(-1; 1\right)$};
+      \filldraw[color=colorEmphasisCyan] (1, 1) circle (\pointSize) node[below] {$\left(1; 1\right)$};
+      \filldraw[color=colorEmphasisCyan] (-3, 1) circle (\pointSize) node[below] {$\left(-3; 1\right)$};
+      
+      \filldraw[color=colorEmphasisCyan] (-1, 2) circle (\pointSize) node[below] {$\left(-1; 2\right)$};
+      \filldraw[color=colorEmphasisCyan] (1, 2) circle (\pointSize) node[below] {$\left(1; 2\right)$};
+      \filldraw[color=colorEmphasisCyan] (-3, 2) circle (\pointSize) node[below] {$\left(-3; 2\right)$};
+   \end{tikzpicture}
    \caption{Đồ thị phần 6 bài \ref{ex:ham_so_mot_bien:dinh_nghia:intropt}}
    \label{fig:ham_so_mot_bien:dinh_nghia:dtp7}
 \end{figure}
@@ -435,7 +423,7 @@ Theo $\mathcal{P}$, chúng ta cần phải chọn ba số trong tập giá trị
 
 Chúng ta cần tìm tất cả các bộ ba $(a, b, c)$ thỏa mãn $f(a) + f(b) = f(c)$. Xét hai trường hợp sau:
 
-\textbf{Trường hợp 1:} Tổng hai số khác 0. Để $f(a) + f(b) = f(c)$, chỉ có thể xảy ra khi $3 + 4 = 7$. Do đó, $(f(a); f(b); f(c))$ phải là $(3; 4; 7)$ hoặc $(4; 3; 7)$. Tra ngược lại bảng giá trị, chúng ta có hai nghiệm:
+\textcolor{colorEmphasis}{Trường hợp 1}: Tổng hai số khác 0. Để $f(a) + f(b) = f(c)$, chỉ có thể xảy ra khi $3 + 4 = 7$. Do đó, $(f(a); f(b); f(c))$ phải là $(3; 4; 7)$ hoặc $(4; 3; 7)$. Tra ngược lại bảng giá trị, chúng ta có hai nghiệm:
    \begin{itemize}
       \item $f(a)=3, f(b)=4 \implies a=2, b=-2$. Và
       \item $f(a)=4, f(b)=3 \implies a=-2, b=2$.
@@ -443,32 +431,30 @@ Chúng ta cần tìm tất cả các bộ ba $(a, b, c)$ thỏa mãn $f(a) + f(b
 
 Chỉ có $f(-3) = 7$ nên $c = -3$.
 
-\textbf{Trường hợp 2:} Tất cả bằng 0. Khi $f(a) = f(b) = f(c) = 0$, từ bảng định nghĩa, $f(x)=0$ khi $x \in \{-3; -1; 1\}$. Do đó, $a, b, c$ có thể nhận bất kỳ giá trị nào trong tập $\{-3; -1; 1\}$. Có tổng cộng $3^3 = 27$ bộ ba thỏa mãn trong trường hợp này.
+\textcolor{colorEmphasisCyan}{Trường hợp 2}: Tất cả bằng 0. Khi $f(a) = f(b) = f(c) = 0$, từ bảng định nghĩa, $f(x)=0$ khi $x \in \{-3; -1; 1\}$. Do đó, $a, b, c$ có thể nhận bất kỳ giá trị nào trong tập $\{-3; -1; 1\}$. Có tổng cộng $3^3 = 27$ bộ ba thỏa mãn trong trường hợp này.
 
 Kết hợp hai trường hợp, đồ thị của $\mathcal{P}$ sẽ gồm 29 điểm trong không gian 3 chiều (2 điểm từ trường hợp 1 và 27 điểm từ trường hợp 2), được biểu diễn trong hình \ref{fig:ham_so_mot_bien:dinh_nghia:dtp8}.
 
 \begin{figure}[H]
    \centering
    \tdplotsetmaincoords{80}{30}
-   \fbox{
-      \begin{tikzpicture}[tdplot_main_coords]
-         \draw[->] (-5, 0, 0) -- (2, 0, 0) node[right] {$a$};
-         \draw[->] (0, -5, 0) -- (0, 4, 0) node[above] {$b$};
-         \draw[->] (0, 0, -4) -- (0, 0, 2) node[above] {$c$};
-         \filldraw (2, -2, -3) circle (\pointSize) node[font=\scriptsize, anchor=north] {$\left(2; -2; -3\right)$};  
-         \filldraw (-2, 2, -3) circle (\pointSize) node[font=\scriptsize, anchor=south] {$\left(-2; 2; -3\right)$};  
-         \foreach \x/\y/\z in {
-            -3/-3/-3, -3/-3/-1, -3/-3/1, 
-            -3/-1/-3, -3/-1/-1, -3/-1/1, -3/1/-3, -3/1/-1, -3/1/1,
-            -1/-3/-3, -1/-3/-1, -1/-3/1, -1/-1/-3, -1/-1/-1, -1/-1/1,
-            -1/1/-3, -1/1/-1, -1/1/1, 1/-3/-3, 1/-3/-1, 1/-3/1,
-            1/-1/-3, 1/-1/-1, 1/-1/1, 1/1/-3, 1/1/-1, 1/1/1
-         } {
-            \filldraw (\x, \y, \z) circle (\pointSize);
-            \node[font=\scriptsize, anchor=east] at (\x, \y, \z) {$\left(\x; \y; \z\right)$};
-         }
-      \end{tikzpicture}
-   }
+   \begin{tikzpicture}[tdplot_main_coords]
+      \draw[->] (-5, 0, 0) -- (2, 0, 0) node[right] {$a$};
+      \draw[->] (0, -5, 0) -- (0, 4, 0) node[above] {$b$};
+      \draw[->] (0, 0, -4) -- (0, 0, 2) node[above] {$c$};
+      \filldraw[color=colorEmphasis] (2, -2, -3) circle (\pointSize) node[font=\scriptsize, anchor=north] {$\left(2; -2; -3\right)$};  
+      \filldraw[color=colorEmphasis] (-2, 2, -3) circle (\pointSize) node[font=\scriptsize, anchor=south] {$\left(-2; 2; -3\right)$};  
+      \foreach \x/\y/\z in {
+         -3/-3/-3, -3/-3/-1, -3/-3/1, 
+         -3/-1/-3, -3/-1/-1, -3/-1/1, -3/1/-3, -3/1/-1, -3/1/1,
+         -1/-3/-3, -1/-3/-1, -1/-3/1, -1/-1/-3, -1/-1/-1, -1/-1/1,
+         -1/1/-3, -1/1/-1, -1/1/1, 1/-3/-3, 1/-3/-1, 1/-3/1,
+         1/-1/-3, 1/-1/-1, 1/-1/1, 1/1/-3, 1/1/-1, 1/1/1
+      } {
+         \filldraw[color=colorEmphasisCyan] (\x, \y, \z) circle (\pointSize);
+         \node[font=\scriptsize, anchor=east, color=colorEmphasisCyan] at (\x, \y, \z) {$\left(\x; \y; \z\right)$};
+      }
+   \end{tikzpicture}
    \caption{Đồ thị phần 7 bài \ref{ex:ham_so_mot_bien:dinh_nghia:intropt}}
    \label{fig:ham_so_mot_bien:dinh_nghia:dtp8}
 \end{figure}
@@ -533,7 +519,7 @@ Kết hợp hai trường hợp, đồ thị của $\mathcal{P}$ sẽ gồm 29 �
          \begin{tikzpicture}
             \draw[->] (-1, 0) -- (5, 0) node[right] {$x$};
             \foreach \x in {0, 1, 3, 4} {
-               \filldraw (\x, 0) circle (\pointSize) node[below] {$\left(\x\right)$};
+               \filldraw[color=colorEmphasisCyan] (\x, 0) circle (\pointSize) node[below] {$\left(\x\right)$};
             }
          \end{tikzpicture}
          \caption{Đồ thị phần 1 bài \ref{ex:ham_so_mot_bien:dinh_nghia:bpt1}}
@@ -567,7 +553,7 @@ Kết hợp hai trường hợp, đồ thị của $\mathcal{P}$ sẽ gồm 29 �
    \begin{tikzpicture}
       \draw[->] (-8, 0) -- (8, 0) node[right] {$x$};
       \foreach \x in {0, 6, 2, -7, -6, 3} {
-         \filldraw (\x, 0) circle (\pointSize) node[below] {$\left(\x\right)$};
+         \filldraw[color=colorEmphasisCyan] (\x, 0) circle (\pointSize) node[below] {$\left(\x\right)$};
       }
    \end{tikzpicture}
    \caption{Đồ thị phần 3 bài \ref{ex:ham_so_mot_bien:dinh_nghia:bpt1}}
@@ -583,13 +569,13 @@ Kết hợp hai trường hợp, đồ thị của $\mathcal{P}$ sẽ gồm 29 �
 \end{align*}
 Qua đó, giá trị lớn nhất có thể của $\beta(y)$ là $4$. Theo bảng định nghĩa, $\beta(y)$ chỉ có thể nhận hai giá trị là $3$ hoặc $4$. 
 
-\textbf{Trường hợp 1}: $\beta(y) = 3 \iff y = -7$. Khi này, để $\alpha(x) \geq 2\beta(x)$ hay $\alpha(x) \geq 6$ thì $\alpha(x)$ có thể nhận giá trị $8$ hoặc $6$. Do đó,
+\textcolor{colorEmphasisCyan}{Trường hợp 1}: $\beta(y) = 3 \iff y = -7$. Khi này, để $\alpha(x) \geq 2\beta(x)$ hay $\alpha(x) \geq 6$ thì $\alpha(x)$ có thể nhận giá trị $8$ hoặc $6$. Do đó,
 \begin{align*}
    &\alpha(x) = 6 \implies x = 8;\\
    &\alpha(x) = 8 \implies x \in \{-8; 10\}.
 \end{align*}
 
-\textbf{Trường hợp 2}: $\beta(y) = 4 \iff y = 0$. Khi này, để $\alpha(x) \geq 8$ thì $\alpha(x)$ chỉ có thể nhận bằng $8$. Do đó, $x \in \{-8; 10\}$.
+\textcolor{colorEmphasis}{Trường hợp 2}: $\beta(y) = 4 \iff y = 0$. Khi này, để $\alpha(x) \geq 8$ thì $\alpha(x)$ chỉ có thể nhận bằng $8$. Do đó, $x \in \{-8; 10\}$.
 
 Từ đây, chúng ta có đồ thị \ref{fig:ham_so_mot_bien:dinh_nghia:bpt4}.
 
@@ -597,9 +583,12 @@ Từ đây, chúng ta có đồ thị \ref{fig:ham_so_mot_bien:dinh_nghia:bpt4}.
    \centering
    \begin{tikzpicture}
       \draw[->] (-4, 0) -- (4, 0) node[right] {$x$};
-      \draw[->] (0, -3) -- (0, 0.5) node[above] {$y$};
-      \foreach \x/\y/\pos in {8/-7/above, -8/-7/below, 10/-7/below, -8/0/below, 10/0/below} {
-         \filldraw({\x/3}, {\y/3}) circle (\pointSize) node [\pos] {$\left(\x; \y\right)$};
+      \draw[->] (0, -3) -- (0, 0) node[above] {$y$};
+      \foreach \x/\y/\pos in {8/-7/above, -8/-7/below, 10/-7/below} {
+         \filldraw[color=colorEmphasisCyan] (\x/3, \y/3) circle (\pointSize) node [\pos] {$\left(\x; \y\right)$};
+      }
+      \foreach \x/\y/\pos in {-8/0/below, 10/0/below} {
+         \filldraw[color=colorEmphasis] (\x/3, \y/3) circle (\pointSize) node [\pos] {$\left(\x; \y\right)$};
       }
    \end{tikzpicture}
    \caption{Đồ thị phần 4 bài \ref{ex:ham_so_mot_bien:dinh_nghia:bpt1}}
@@ -711,13 +700,11 @@ Từ đây, chúng ta có đồ thị \ref{fig:ham_so_mot_bien:dinh_nghia:bpt4}.
 
 \begin{figure}[H]
    \centering
-   \fbox{
-      \begin{tikzpicture}
-         \draw[->] (-1, 0) -- (5, 0) node[right] {$x$};
-         \filldraw (0, 0) circle (\pointSize) node[below] {$(0)$};
-         \filldraw (4, 0) circle (\pointSize) node[below] {$(4)$};
-      \end{tikzpicture}
-   }
+   \begin{tikzpicture}
+      \draw[->] (-1, 0) -- (5, 0) node[right] {$x$};
+      \filldraw[color=colorEmphasisCyan] (0, 0) circle (\pointSize) node[below] {$(0)$};
+      \filldraw[color=colorEmphasisCyan] (4, 0) circle (\pointSize) node[below] {$(4)$};
+   \end{tikzpicture}
    \caption{Đồ thị phần 1 bài \ref{ex:ham_so_mot_bien:dinh_nghia:hpt1}}
    \label{fig:hpt11}
 \end{figure}
@@ -732,23 +719,24 @@ Kết hợp ba trường hợp, xây dựng không gian tọa độ, chúng ta c
 
 \begin{figure}[H]
    \centering
-   \fbox{
-      \tdplotsetmaincoords{80}{-10}
-      \begin{tikzpicture}[tdplot_main_coords]
-         \draw[->] (-1.5, 0, 0) -- (3, 0, 0) node[right] {$a$};
-         \draw[->] (0, -1, 0) -- (0, 2.5, 0) node[above] {$b$};
-         \draw[->] (0, 0, -2.5) -- (0, 0, 2.5) node[above] {$c$};
-         \foreach \x/\y/\z/\pos [count=\i] in {
-            0/0/0/below left,
-            1/0/0/above,
-            2/0/0/below,
-            3/-2/-4/above,
-            4/4/4/above,
-            5/4/4/below} {
-               \filldraw ({\x/2}, {\y/2}, {\z/2}) circle (\pointSize) node[\pos] {$\left(\x; \y; \z\right)$};
-         }
-      \end{tikzpicture}
-   }
+   \tdplotsetmaincoords{80}{-10}
+   \begin{tikzpicture}[tdplot_main_coords]
+      \draw[->] (-1.5, 0, 0) -- (3, 0, 0) node[right] {$a$};
+      \draw[->] (0, -1, 0) -- (0, 2.5, 0) node[above] {$b$};
+      \draw[->] (0, 0, -2.5) -- (0, 0, 2.5) node[above] {$c$};
+      \foreach \x/\y/\z/\pos in {
+         0/0/0/below left,
+         1/0/0/above,
+         2/0/0/below} {
+            \filldraw[color=colorEmphasisCyan] ({\x/2}, {\y/2}, {\z/2}) circle (\pointSize) node[\pos] {$\left(\x; \y; \z\right)$};
+      }
+      \filldraw[color=colorEmphasis] (1.5, -1, -2) circle (\pointSize) node[above] {$\left(3; -2; -4\right)$};
+      \foreach \x/\y/\z/\pos in {
+         4/4/4/above,
+         5/4/4/below} {
+            \filldraw[color=colorEmphasisGreen] ({\x/2}, {\y/2}, {\z/2}) circle (\pointSize) node[\pos] {$\left(\x; \y; \z\right)$};
+      };
+   \end{tikzpicture}
    \caption{Đồ thị phần 2 bài \ref{ex:ham_so_mot_bien:dinh_nghia:hpt1}}
    \label{fig:hpt12}
 \end{figure}
@@ -772,11 +760,14 @@ Cuối cùng, vẽ đồ thị để được hình \ref{fig:hpt13}.
          \foreach \x/\y/\z/\pos in {
             0/0/0/below left,
             1/0/0/above,
-            2/0/0/below,
+            2/0/0/below} {
+               \filldraw[color=colorEmphasisCyan] ({\x/2}, {\y/2}, {\z/2}) circle (\pointSize) node[\pos] {$\left(\x; \y; \z\right)$};
+         }
+         \foreach \x/\y/\z/\pos in {
             4/4/4/above,
             5/4/4/below} {
-               \filldraw ({\x/2}, {\y/2}, {\z/2}) circle (\pointSize) node[\pos] {$\left(\x; \y; \z\right)$};
-         }
+               \filldraw[color=colorEmphasisGreen] ({\x/2}, {\y/2}, {\z/2}) circle (\pointSize) node[\pos] {$\left(\x; \y; \z\right)$};
+         };
       \end{tikzpicture}
    }
    \caption{Đồ thị phần 3 bài \ref{ex:ham_so_mot_bien:dinh_nghia:hpt1}}
@@ -795,7 +786,7 @@ Bộ số duy nhất thỏa mãn hệ phương trình $\mathcal{P}$ là $\left(m
          \draw[->] (-0.5, 0, 0) -- (2, 0, 0) node[right] {$m$};
          \draw[->] (0, -1.5, 0) -- (0, 0.5, 0) node[above] {$n$};
          \draw[->] (0, 0, -2.5) -- (0, 0, 0.5) node[above] {$w$};
-         \filldraw (1.5, -1, -2) circle (\pointSize ) node[above] {$\left(3; -2; -4\right)$};
+         \filldraw[color=colorEmphasisCyan] (1.5, -1, -2) circle (\pointSize ) node[above] {$\left(3; -2; -4\right)$};
       \end{tikzpicture}
    }
    \caption{Đồ thị phần 4 bài \ref{ex:ham_so_mot_bien:dinh_nghia:hpt1}}

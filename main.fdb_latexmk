@@ -1,10 +1,10 @@
 # Fdb version 4
-["xdvipdfmx"] 1755956386.69426 "main.xdv" "main.pdf" "main" 1755956387.28361 0
-  "main.xdv" 1755956386 1099864 1b0ea014251500863467c667b6b43ff0 "xelatex"
+["xdvipdfmx"] 1756055673.00433 "main.xdv" "main.pdf" "main" 1756055673.42622 0
+  "main.xdv" 1756055672 1161688 dbd863dcf3692fd259090fdb8fdc95dd "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1755956382.70425 "d:/OneDrive - Hanoi University of Science and Technology/Documents/Physics/-n-t-p-V-t-L-/main.tex" "main.xdv" "main" 1755956387.27728 0
+["xelatex"] 1756055669.03205 "d:/OneDrive - Hanoi University of Science and Technology/Documents/Physics/-n-t-p-V-t-L-/main.tex" "main.xdv" "main" 1756055673.41793 0
   "C:/Users/buinh/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1754119510 25521434 dbc151c24c532bc323b459e7df668540 ""
   "C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136747054 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1233951848 1120 1e8878807317373affa7f7bba4cf2f6a ""
@@ -261,20 +261,20 @@
   "C:/Users/buinh/AppData/Local/Programs/MiKTeX/tex/xelatex/xecjk/xeCJK.sty" 1659726270 183137 ed372550124703b2b73cbcc0b47cb20f ""
   "C:/Users/buinh/AppData/Local/Programs/MiKTeX/tex/xelatex/xecjk/xeCJKfntef.sty" 1659726270 39577 b470f8a1dbecc9c45c9bf05ca7db9188 ""
   "chapter/toan_hoc_nen_tang/do_thi.tex" 1755106918 199 5a3c2e9a7fc8492399aa95b194dd62cc ""
-  "chapter/toan_hoc_nen_tang/do_thi/khong_gian.tex" 1755698388 10046 0192820fd87de8bbd6b914e0d530ae35 ""
-  "chapter/toan_hoc_nen_tang/do_thi/mat_phang.tex" 1755956380 10314 506bbcb0b87cd9d86736c47698bbee24 ""
-  "chapter/toan_hoc_nen_tang/do_thi/truc_so.tex" 1755948717 11911 9446ebdb19a13ba64549c4e732ba76c7 ""
+  "chapter/toan_hoc_nen_tang/do_thi/khong_gian.tex" 1756047556 11771 6a00020f95f4a5eb97761206a49e1adf ""
+  "chapter/toan_hoc_nen_tang/do_thi/mat_phang.tex" 1756042658 10836 0d7011420480458f4b1d161648d77f85 ""
+  "chapter/toan_hoc_nen_tang/do_thi/truc_so.tex" 1756041614 11914 b62500b6f997249a213166fd1f2ed903 ""
   "chapter/toan_hoc_nen_tang/ham_so_mot_bien.tex" 1755704707 378 ff82b8748938d3bd388cf387bbef343a ""
-  "chapter/toan_hoc_nen_tang/ham_so_mot_bien/da_thuc.tex" 1755881308 25838 2d63905f6604c842d73a91fd6feb1b2f ""
-  "chapter/toan_hoc_nen_tang/ham_so_mot_bien/dinh_nghia.tex" 1755776357 40139 84914ef6315beb4b5c2c43004c7b0c36 ""
+  "chapter/toan_hoc_nen_tang/ham_so_mot_bien/da_thuc.tex" 1756055668 33176 14eb2dcf78cefbf24af44b8a862b013e ""
+  "chapter/toan_hoc_nen_tang/ham_so_mot_bien/dinh_nghia.tex" 1756047052 41442 d04a64e84468a8c736656b23a136445d ""
   "chapter/toan_hoc_nen_tang/ham_so_mot_bien/phan_thuc.tex" 1755704744 1997 349a1ee3a49c0bfe54cbdfcbac4b4aad ""
   "chapter/toan_hoc_nen_tang/ham_so_mot_bien/phep_hop_ham.tex" 1755704747 42 7a0ef5985f6bdb025ae4d9a540e5e25d ""
   "chapter/toan_hoc_nen_tang/ham_so_mot_bien/phep_tinh_ham.tex" 1755706382 5555 7eaf859cd94263bfd19c71ac568b6b36 ""
-  "d:/OneDrive - Hanoi University of Science and Technology/Documents/Physics/-n-t-p-V-t-L-/main.tex" 1755948696 62016 07c9dd5c3ddd3e15e07f0e79621e372f ""
-  "main.aux" 1755956386 27642 18ede226122e52c5fae1e2c480e5666f "xelatex"
-  "main.out" 1755956386 3163 1baa90fb43fbdeccdc22de4b98c1c279 "xelatex"
-  "main.tex" 1755948696 62016 07c9dd5c3ddd3e15e07f0e79621e372f ""
-  "main.toc" 1755956386 1553 fd4e008c4af9be3c1e11fc8eb4698dca "xelatex"
+  "d:/OneDrive - Hanoi University of Science and Technology/Documents/Physics/-n-t-p-V-t-L-/main.tex" 1756050151 62258 893913feab04afe4b4fec5642616b1c0 ""
+  "main.aux" 1756055672 28711 07fc7fc96a68bdc36d50e05065456a09 "xelatex"
+  "main.out" 1756055672 3163 1baa90fb43fbdeccdc22de4b98c1c279 "xelatex"
+  "main.tex" 1756050151 62258 893913feab04afe4b4fec5642616b1c0 ""
+  "main.toc" 1756055672 1553 c32e6df696da2f4a02e5fa60c57ebaed "xelatex"
   (generated)
   "main.aux"
   "main.log"

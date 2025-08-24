@@ -2,7 +2,11 @@
 
 \ % Lùi đầu dòng
 
-Một dạng hàm quen thuộc, được giới thiệu trong chương trình học trung học phổ thông, là đa thức, thông thường được biểu diễn dưới dạng $$f(x)=P_n(x)=\sum_{i = 0}^n a_i x^i = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0$$ với $n$ là một số nguyên không âm, $a_i$ là các số thực, gọi là các \emph{hệ số}, với mọi $i$ nguyên nằm trong đoạn $[0, n]$ và $a_n \neq 0$. Khi này, $n$ được gọi là \emph{bậc} của đa thức\label{def:ham_so_mot_bien:da_thuc:da_thuc}. Mọi giá trị $x \in \mathbb{R}$ đều thuộc tập xác định của hàm đa thức $f(x)$. Ví dụ:
+Một dạng hàm quen thuộc, được giới thiệu trong chương trình học trung học phổ thông, là đa thức. Nhưng trước khi chúng ta nhắc lại về đa thức, chúng ta sẽ nhắc lại về đơn thức. Hàm \defText{đơn thức}\footnote{Chúng ta sẽ đề cập đến đơn thức và đa thức nhiều biến khi đến phần hàm nhiều biến.} là một hàm được viết dưới dạng $$\defMath{f(x) = ax^n}$$ với $a$ là một số thực và biến $x$ được mũ lên một số nguyên không âm $n$. Trong chương sau, chúng ta sẽ đề cập về vấn đề hàm số mũ mà thay $n$ bằng số mũ thực. Tạm thời, chúng ta sẽ có định nghĩa \defText{số mũ} như sau:
+$$\defMath{x^n = \prod_{i=1}^n (x) =  \underbrace{x \times x \times \cdots \times x}_{n \text{ \defText{lần}}}}.$$
+Trong trường hợp $n = 0$ thì $x^n = \defMath{x^0 = 1}$.
+
+\defText{Hàm đa thức} thông thường được biểu diễn dưới dạng tổng của các đơn thức $$\defMath{f(x)=P_n(x)=\sum_{i = 0}^n \left(a_i x^i\right) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0}$$ với $n$ là một số nguyên không âm, $a_i$ là các số thực, gọi là các \defText{hệ số}, với mọi $i$ nguyên nằm trong đoạn $[0, n]$ và $a_n \neq 0$. Khi này, $n$ được gọi là \defText{bậc} của đa thức\label{def:ham_so_mot_bien:da_thuc:da_thuc}. Mọi giá trị $x \in \mathbb{R}$ đều thuộc tập xác định của hàm đa thức $f(x)$. Ví dụ:
 \begin{itemize}
    \item $f(x) = 2x^2 + 3x + 1$ là một đa thức bậc $2$ với các hệ số $a_2 = 2$, $a_1 = 3$, $a_0 = 1$;
    \item $g(y) = y^3 - 4y$ là một đa thức bậc $3$ với các hệ số $b_3 = 1$, $b_2 = 0$, $b_1 = -4$, $b_0 = 0$;
@@ -13,7 +17,7 @@ Tính toán một số giá trị mẫu:
    \item $p(1) = 7 \cdot 1^4 - 2 \cdot 1^2 + 9 = 14$ với $q(t)= 7t^4 - 2t^2 + 9$ là một đa thức bậc $4$ với các hệ số $d_4 = 7$, $d_3 = 0$, $d_2 = -2$, $d_1 = 0$, $d_0 = 9$;
    \item $q(2) = -3 \cdot 2 + 8 = 2$ với $q(r) = -3r + 8$ là một đa thức bậc $1$ với các hệ số $e_1 = -3$, $e_0 = 8$.
 \end{itemize}
-Khi đa thức có bậc bằng $0$, hay $f = P_0 = a_0$, thì được gọi là \emph{đa thức hằng} hay \emph{hàm hằng}. Một trường hợp đặc biệt là khi $f = 0$ (hay $f(x) = 0$ với mọi $x$). Nếu hàm này là đa thức, theo định nghĩa, hàm này chỉ có duy nhất hệ số đầu $a_0 = 0$. Tuy nhiên, cũng theo định nghĩa thì hệ số đầu phải khác $0$. Vì vậy, hàm không có bậc và không được gọi là đa thức. Nhưng, do hàm nhận giá trị cố định với mọi $x$ nên vẫn được gọi là hàm hằng \footnote{Đa số những nhà toán học không coi $f = 0$ là đa thức bậc $0$ do nhiều tính chất của đa thức bị phá vỡ khi gặp trường hợp này. Tuy nhiên, nhiều người vẫn coi $f = 0$ là đa thức không có bậc. Trong tài liệu này, tác giả không coi $0$ là đa thức, nhưng vẫn coi là hàm hằng.}.
+Khi đa thức có bậc bằng $0$, hay $f = P_0 = a_0$, thì được gọi là \defText{đa thức hằng} hay \defText{hàm hằng}. Một trường hợp đặc biệt là khi $f = 0$ (hay $f(x) = 0$ với mọi $x$). Nếu hàm này là đa thức, theo định nghĩa, hàm này chỉ có duy nhất hệ số đầu $a_0 = 0$. Tuy nhiên, cũng theo định nghĩa thì hệ số đầu phải khác $0$. Vì vậy, hàm không có bậc và không được gọi là đa thức. Nhưng, do hàm nhận giá trị cố định với mọi $x$ nên vẫn được gọi là hàm hằng \footnote{Đa số những nhà toán học không coi $f = 0$ là đa thức bậc $0$ do nhiều tính chất của đa thức bị phá vỡ khi gặp trường hợp này. Tuy nhiên, nhiều người vẫn coi $f = 0$ là đa thức không có bậc. Trong tài liệu này, tác giả không coi $0$ là đa thức, nhưng vẫn coi là hàm hằng.}.
 
 \exercise Phác thảo đồ thị của những hàm sau:
 \begin{multicols}{2}
@@ -37,95 +41,101 @@ Bạn đọc có thể để ý rằng là không phải lúc nào cũng đặt 
 
 Dưới đây là đồ thị của các hàm đa thức trong bài:
 
-\begin{multicols}{2}
-   \begin{figure}[H]
-      \centering
-      \fbox{
+{
+   \begin{minipageindent}{0.48\textwidth}
+      \begin{figure}[H]
+         \centering
          \begin{tikzpicture}
             \draw[->] (-5, 0) -- (1, 0) node[right] {$x$};
             \draw[->] (0, -3) -- (0, 3) node[above] {$f(x)$};
-            \draw[thick] plot[domain=-5:1] (\x, {\x + 2});
-            \filldraw (0, 2) circle (\pointSize) node[below right] {$\left(0; 2\right)$};
-            \filldraw (-2, 0) circle (\pointSize) node[below right] {$\left(-2; 0\right)$};
+            \draw[graph thickness, color=colorEmphasisCyan] plot[domain=-5:1] (\x, {\x + 2});
+            \filldraw[color=colorEmphasisCyan] (0, 2) circle (\pointSize) node[below right] {$\left(0; 2\right)$};
+            \filldraw[color=colorEmphasisCyan] (-2, 0) circle (\pointSize) node[below right] {$\left(-2; 0\right)$};
          \end{tikzpicture}
-      }
-      \caption{Đồ thị của hàm $f(x) = x + 2$}
-      \label{fig:ham_so:ham_da_thuc:x_2}
-   \end{figure}
-   
-   \begin{figure}[H]
-      \centering
-      \fbox{
+         \caption{Đồ thị của hàm $f(x) = x + 2$}
+         \label{fig:ham_so:ham_da_thuc:x_2}
+      \end{figure}
+   \end{minipageindent}
+   \hfill
+   \begin{minipageindent}{0.48\textwidth}
+      \begin{figure}[H]
+         \centering
          \begin{tikzpicture}
             \draw[->] (-4, 0) -- (2, 0) node[right] {$x$};
             \draw[->] (0, 0) -- (0, 6) node[above] {$f(x)$};
-            \draw[thick, smooth, samples=100] plot[domain=-3:1] (\x, {(\x + 1)^2 + 2});
-            \filldraw (-1, 2) circle (\pointSize) node[below] {$\left(-1; 2\right)$};
-            \filldraw (0, 3) circle (\pointSize) node[below right] {$\left(0; 3\right)$};
-            \filldraw (-2, 3) circle (\pointSize) node[left] {$\left(-2; 3\right)$};
+            \draw[color=colorEmphasisCyan, graph thickness, smooth, samples=100] plot[domain=-3:1] (\x, {(\x + 1)^2 + 2});
+            \filldraw[color=colorEmphasisCyan] (-1, 2) circle (\pointSize) node[below] {$\left(-1; 2\right)$};
+            \filldraw[color=colorEmphasisCyan] (0, 3) circle (\pointSize) node[below right] {$\left(0; 3\right)$};
+            \filldraw[color=colorEmphasisCyan] (-2, 3) circle (\pointSize) node[left] {$\left(-2; 3\right)$};
          \end{tikzpicture}
-      }
-      \caption{Đồ thị của hàm $f(x) = x^2 + 2x + 3$}
-      \label{fig:ham_so_mot_bien:da_thuc:x2_2x_3}
-   \end{figure}
+         \caption{Đồ thị của hàm $f(x) = x^2 + 2x + 3$}
+         \label{fig:ham_so_mot_bien:da_thuc:x2_2x_3}
+      \end{figure}
+   \end{minipageindent}
+}
 
-   \begin{figure}[H]
-      \centering
-      \fbox{
+{
+   \begin{minipageindent}{0.48\textwidth}
+      \begin{figure}[H]
+         \centering
          \begin{tikzpicture}
             \draw[->] (-2, 0) -- (4, 0) node[right] {$x$};
             \draw[->] (0, -5) -- (0, 1) node[above] {$f(x)$};
-            \draw[thick, smooth, samples=100] plot[domain=-0.186:2.686] (\x, {(-2*(\x)^2 + 5*(\x) - 4)});
+            \draw[color=colorEmphasisCyan, graph thickness, smooth, samples=100] plot[domain=-0.186:2.686] (\x, {(-2*(\x)^2 + 5*(\x) - 4)});
             \draw[snake it, name path=A] (-2, -0.25) -- (4, -0.25);
             \draw[snake it, name path=B] (-2, -0.35) -- (4, -0.35);
             \foreach \x/\y/\yy/\pos in {0/-4/-6/right, 1/-1/-3/above, 2/-2/-4/right} {
-               \filldraw (\x, \y) circle (\pointSize) node[\pos] {$\left(\x; {\yy}\right)$};
+               \filldraw[color=colorEmphasisCyan] (\x, \y) circle (\pointSize) node[\pos] {$\left(\x; {\yy}\right)$};
             }
             \tikzfillbetween[of=A and B]{white};
          \end{tikzpicture}
-      }
-      \caption{Đồ thị của hàm $f(x) = -2x^2 + 5x - 6$}
-      \label{fig:ham_so_mot_bien:da_thuc:t2x2_5x_t6}
-   \end{figure}
-
-   \begin{figure}[H]
-      \centering
-      \fbox{
+         \caption{Đồ thị của hàm $f(x) = -2x^2 + 5x - 6$}
+         \label{fig:ham_so_mot_bien:da_thuc:t2x2_5x_t6}
+      \end{figure}
+   \end{minipageindent}
+   \hfill
+   \begin{minipageindent}{0.48\textwidth}
+      \begin{figure}[H]
+         \centering
          \begin{tikzpicture}
             \draw[->] (0, 0) -- (6, 0) node[right] {$x$};
             \draw[->] (0, -3) -- (0, 5) node[above] {$f(x)$};
-            \draw[thick, smooth, samples=100] plot[domain=0.508:5.492] (\x, {((\x)^3 - 9*(\x)^2 + 24*(\x) - 16) / 2});
-            \filldraw (2, 2) circle (\pointSize) node[above] {$\left(2; 4\right)$};
-            \filldraw (4, 0) circle (\pointSize) node[below] {$\left(4; 0\right)$};
-            \filldraw (1, 0) circle (\pointSize) node[below right] {$\left(1; 0\right)$};
-            \filldraw (5, 2) circle (\pointSize) node[right] {$\left(5; 4\right)$};
+            \draw[color=colorEmphasisCyan, graph thickness, smooth, samples=100] plot[domain=0.508:5.492] (\x, {((\x)^3 - 9*(\x)^2 + 24*(\x) - 16) / 2});
+            \filldraw[color=colorEmphasisCyan] (2, 2) circle (\pointSize) node[above] {$\left(2; 4\right)$};
+            \filldraw[color=colorEmphasisCyan] (4, 0) circle (\pointSize) node[below] {$\left(4; 0\right)$};
+            \filldraw[color=colorEmphasisCyan] (1, 0) circle (\pointSize) node[below right] {$\left(1; 0\right)$};
+            \filldraw[color=colorEmphasisCyan] (5, 2) circle (\pointSize) node[right] {$\left(5; 4\right)$};
          \end{tikzpicture}
-      }
-      \caption{Đồ thị của hàm $f(x) = x^3 - 9x^2 + 24x - 16$}
-      \label{fig:ham_so_mot_bien:da_thuc:x3_t9x2_24x_t16}
-   \end{figure}
+         \caption{Đồ thị của hàm $f(x) = x^3 - 9x^2 + 24x - 16$}
+         \label{fig:ham_so_mot_bien:da_thuc:x3_t9x2_24x_t16}
+      \end{figure}
+   \end{minipageindent}
+}
 
-   \begin{figure}[H]
-      \centering
-      \fbox{
+Ở hình \ref{fig:ham_so_mot_bien:da_thuc:t2x2_5x_t6}, đồ thị có đoạn díc dắc. Ý nghĩa của cách vẽ này là để cắt bỏ phần đồ thị không cần thiết.
+
+{
+   \begin{minipageindent}{0.48\textwidth}
+      \begin{figure}[H]
+         \centering
          \begin{tikzpicture}
             \draw[->] (-3, 0) -- (3, 0) node[right] {$x$};
             \draw[->] (0, -1) -- (0, 3) node[above] {$f(x)$};
-            \draw[thick] plot[domain=-3:3] (\x, {2});
-            \filldraw (0, 2) circle (\pointSize) node[above left] {$\left(0; 2\right)$};
+            \draw[graph thickness, color=colorEmphasisCyan] plot[domain=-3:3] (\x, {2});
+            \filldraw[color=colorEmphasisCyan] (0, 2) circle (\pointSize) node[above left] {$\left(0; 2\right)$};
          \end{tikzpicture}
-      }
-      \caption{Đồ thị của hàm $f(x) = 2$}
-      \label{fig:ham_so:ham_da_thuc:2}
-   \end{figure}
-
-   \begin{figure}[H]
-      \centering
-      \fbox{
+         \caption{Đồ thị của hàm $f(x) = 2$}
+         \label{fig:ham_so:ham_da_thuc:2}
+      \end{figure}
+   \end{minipageindent}
+   \hfill
+   \begin{minipageindent}{0.48\textwidth}
+      \begin{figure}[H]
+         \centering
          \begin{tikzpicture}
             \draw[->] (-3, 0) -- (3, 0) node[right] {$x$};
             \draw[->] (0, -3) -- (0, 3) node[above] {$f(x)$};
-            \draw[thick, smooth, samples=100] plot[domain=-2.491:1.669] (\x, {36*(\x/3)^4 + 28*(\x/3)^3 - 3*(\x/3)^2 - 6*(\x/3) - 1});
+            \draw[color=colorEmphasisCyan, graph thickness, smooth, samples=100] plot[domain=-2.491:1.669] (\x, {36*(\x/3)^4 + 28*(\x/3)^3 - 3*(\x/3)^2 - 6*(\x/3) - 1});
             \foreach \x/\y/\xlabel/\ylabel/\pos in {
                -1.5/0/{-0,5}/0/below,
                -0.721/0/{-0,24}/0/above,
@@ -134,55 +144,57 @@ Dưới đây là đồ thị của các hàm đa thức trong bài:
                1.387/0/{0,462}/0/below right,
                -2.357/2/{-0,79}/2/right,
                1.5/1/{0,5}/1/right} {
-               \filldraw (\x, \y) circle (\pointSize) node[\pos] {$\left(\xlabel;\ylabel\right)$};
+               \filldraw[color=colorEmphasisCyan] (\x, \y) circle (\pointSize) node[\pos] {$\left(\xlabel;\ylabel\right)$};
             }
          \end{tikzpicture}
-      }
-      \caption{Đồ thị của hàm $f(x) = 36x^4 + 28x^3 - 3x^2 - 6x - 1$}
-      \label{fig:ham_so:ham_da_thuc:36x4_28x3_t3x2_t6x_t1}
-   \end{figure}
+         \caption{Đồ thị của hàm $f(x) = 36x^4 + 28x^3 - 3x^2 - 6x - 1$}
+         \label{fig:ham_so:ham_da_thuc:36x4_28x3_t3x2_t6x_t1}
+      \end{figure}
+   \end{minipageindent}
+}
 
-   \begin{figure}[H]
-      \centering
-      \fbox{
+{
+   \begin{minipageindent}{0.48\textwidth}
+      \begin{figure}[H]
+         \centering
          \begin{tikzpicture}
             \draw[->] (-3, 0) -- (3, 0) node[right] {$x$};
             \draw[->] (0, -4) -- (0, 2) node[above] {$f(x)$};
-            \draw[thick, smooth, samples=80] plot[domain=-3:2.356] (\x, {(-(\x / 2)^6 + (\x / 2)^2 - 2*(\x) - 2)/2});
+            \draw[color=colorEmphasisCyan, graph thickness, smooth, samples=80] plot[domain=-3:2.356] (\x, {(-(\x / 2)^6 + (\x / 2)^2 - 2*(\x) - 2)/2});
             \foreach \x/\y/\xlabel/\ylabel/\pos in {
                -3/-2.570/{-1,5}/{-5,14}/right,
                -2/1/-1/2/above,
                0/-1/0/-1/below left,
                2.356/-4/{1,18}/-8/left} {
-               \filldraw (\x, \y) circle (\pointSize) node[\pos] {$\left(\xlabel;\ylabel\right)$};
+               \filldraw[color=colorEmphasisCyan] (\x, \y) circle (\pointSize) node[\pos] {$\left(\xlabel;\ylabel\right)$};
             }
          \end{tikzpicture}
-      }
-      \caption{Đồ thị của hàm $f(x) = -x^6 + x^2 - 4x - 2$}
-      \label{fig:ham_so:ham_da_thuc:tx6_x2_t4x_t2}
-   \end{figure}
-
-   \begin{figure}[H]
-      \centering
-      \fbox{
+         \caption{Đồ thị của hàm $f(x) = -x^6 + x^2 - 4x - 2$}
+         \label{fig:ham_so:ham_da_thuc:tx6_x2_t4x_t2}
+      \end{figure}
+   \end{minipageindent}
+   \hfill
+   \begin{minipageindent}{0.48\textwidth}
+      \begin{figure}[H]
+         \centering
          \begin{tikzpicture}
             \draw[->] (-3, 0) -- (3, 0) node[right] {$x$};
             \draw[->] (0, -3) -- (0, 3) node[above] {$f(x)$};
-            \draw[thick, smooth, samples=80] plot[domain=-1.229:1.229] (\x, {-(\x)^7 + (\x)});
+            \draw[color=colorEmphasisCyan, graph thickness, smooth, samples=80] plot[domain=-1.229:1.229] (\x, {-(\x)^7 + (\x)});
             \foreach \x/\y/\xlabel/\ylabel/\pos in {
                -1/0/-1/0/above left,
                0/0/0/0/below right,
                1/0/1/0/above right,
                0.723/0.62/{0,72}/{0,62}/above,
                -0.723/-0.62/{-0,72}/{-0,62}/below left}{
-                  \filldraw (\x, \y) circle (\pointSize) node[\pos] {$\left(\xlabel;\ylabel\right)$};
+                  \filldraw[color=colorEmphasisCyan] (\x, \y) circle (\pointSize) node[\pos] {$\left(\xlabel;\ylabel\right)$};
             }
          \end{tikzpicture}
-      }
-      \caption{Đồ thị của hàm $f(x) = -x^7 + x$}
-      \label{fig:ham_so:ham_da_thuc:tx7_x}
-   \end{figure}
-\end{multicols}
+         \caption{Đồ thị của hàm $f(x) = -x^7 + x$}
+         \label{fig:ham_so:ham_da_thuc:tx7_x}
+      \end{figure}
+   \end{minipageindent}
+}
 
 \exercise Giải những phương trình sau. Các phương trình đều có ẩn là $x \in \mathbb{R}$.
 \begin{multicols}{2}
@@ -212,7 +224,7 @@ Dưới đây là đồ thị của các hàm đa thức trong bài:
    \iff 3x &= 7\\
    \iff x &= \frac{7}{3}.
 \end{align*}
-Vậy tập nghiệm của phương trình là $\boxed{\displaystyle\left\{\frac{7}{3}\right\}}$.
+Vậy tập nghiệm của phương trình là $\displaystyle\left\{\frac{7}{3}\right\}$.
 
 2. Chuyển số hạng có thừa số $x$ về một phía, và số hạng tự do về phía còn lại để được:
 \begin{align*}
@@ -221,7 +233,7 @@ Vậy tập nghiệm của phương trình là $\boxed{\displaystyle\left\{\frac
    \iff -4x &= 12 \\
    \iff x &= -3.
 \end{align*}
-Vậy tập nghiệm của phương trình là $\boxed{\displaystyle\left\{-3\right\}}$.
+Vậy tập nghiệm của phương trình là $\displaystyle\left\{-3\right\}$.
 
 3. Để giải phương trình có chứa tham số, chúng ta cần viết lại ẩn $x$ dưới dạng một biểu thức chỉ chứa tham số và hằng số. Cụ thể,
 \begin{align*}
@@ -229,7 +241,7 @@ Vậy tập nghiệm của phương trình là $\boxed{\displaystyle\left\{-3\ri
    \iff \frac{x}{v} &= t + \frac{x_0}{v} \\
    \iff x &= vt + x_0.
 \end{align*}
-Vậy nghiệm của phương trình là $\boxed{\displaystyle\left\{vt + x_0\right\}}$.
+Vậy nghiệm của phương trình là $\displaystyle\left\{vt + x_0\right\}$.
 
 4. Nếu như bạn đọc chưa biết, nếu như một đa thức $f(x)$ nhận $x = a$ là nghiệm thì $f(x)$ có thể được viết thành tích của $(x - a)$ nhân một đa thức $g(x)$ với bậc nhỏ hơn $1$ so với $f(x)$. Và nếu $g(x)$ lại có nghiệm $x = b$ thì chúng ta có thể viết $g(x) = (x-b)h(x)$ và qua đó có thể viết lại $f(x) = (x-a)(x-b)h(x)$. Một cách tổng quát nhất, nếu như $f(x)$ là phương trình bậc $n$ có $n$ nghiệm $a_1, a_2, \cdots, a_n$ thì có thể viết lại $$f(x) = A \prod_{i=1}^{n} (x - a_i) = A(x - a_1)(x - a_2)\cdots (x - a_n)$$ với $A$ là hệ số của số hạng có bậc lớn nhất trong đa thức $f(x)$.
 
@@ -252,7 +264,7 @@ Nhẩm nghiệm (bằng cách bấm máy tính) phương trình thì có $x = -\
       \end{aligned}
    \right..
 \end{align*}
-Vậy phương trình có nghiệm là $\boxed{\displaystyle\left\{-\frac{3}{2}; \frac{7}{3}\right\}}$.
+Vậy phương trình có nghiệm là $\displaystyle\left\{-\frac{3}{2}; \frac{7}{3}\right\}$.
 
 5.
 \begin{align*}
@@ -263,7 +275,7 @@ Vậy phương trình có nghiệm là $\boxed{\displaystyle\left\{-\frac{3}{2};
    \iff x &= 5.
 \end{align*}
 
-Vậy tập nghiệm của phương trình có một phần tử duy nhất $\boxed{\displaystyle\left\{5\right\}}$.
+Vậy tập nghiệm của phương trình có một phần tử duy nhất $\displaystyle\left\{5\right\}$.
 
 6. Với những phương trình liên quan tới đa thức bậc hai không thể nhẩm ngay được nghiệm, chúng ta sẽ sử dụng phương pháp tách bình phương. Với phương trình được cho:
 \begin{align}
@@ -271,7 +283,7 @@ Vậy tập nghiệm của phương trình có một phần tử duy nhất $\bo
    \iff x^2 + 2x + 1 &= -3 \nonumber\\
    \iff (x + 1)^2 &= -3. \label{eq:ham_so_mot_bien:ham_da_thuc:gptdt6}
 \end{align}
-Một số thực nhân với chính nó sẽ ra một số không âm. Cho nên phương trình \ref{eq:ham_so_mot_bien:ham_da_thuc:gptdt6} không thể đúng. Vậy phương trình \fbox{vô nghiệm} trên tập số thực.
+Một số thực nhân với chính nó sẽ ra một số không âm. Cho nên phương trình \ref{eq:ham_so_mot_bien:ham_da_thuc:gptdt6} không thể đúng. Vậy phương trình vô nghiệm trên tập số thực.
 
 7. 
 \begin{align*}
@@ -291,7 +303,7 @@ Một số thực nhân với chính nó sẽ ra một số không âm. Cho nên
       \end{aligned}
    \right..
 \end{align*}
-Vậy tập nghiệm của phương trình là $\boxed{\displaystyle\left\{\sqrt{5} - 1; -\sqrt{5} - 1\right\}}$.
+Vậy tập nghiệm của phương trình là $\displaystyle\left\{\sqrt{5} - 1; -\sqrt{5} - 1\right\}$.
 
 8. Phần này tác giả làm khác so với phần 2. Chuyển đổi toàn bộ phương trình về một vế để đưa về dạng phương trình $f(x) = 0$:
 \begin{align*}
@@ -308,7 +320,7 @@ Vậy tập nghiệm của phương trình là $\boxed{\displaystyle\left\{\sqrt
       \end{aligned}
    \right. \iff x \in \left\{3; 2\right\}. 
 \end{align*}
-Vậy phương trình có tập nghiệm $\boxed{\left\{3; 2\right\}}$.
+Vậy phương trình có tập nghiệm $\left\{3; 2\right\}$.
 
 9. Nhân cả hai vế với $2$ để khử phân số trong phương trình:
 \begin{align}
@@ -325,12 +337,10 @@ Với trường hợp $x_0^2 - \frac{mv^2}{k} < 0$ thì phương trình vô nghi
 
 Vậy, phương trình có nghiệm là 
 $$
-\boxed{
-   \begin{cases}
-      \left\{\sqrt{x_0^2 - \frac{mv^2}{k}}; -\sqrt{x_0^2 - \frac{mv^2}{k}}\right\} &\text{ nếu } x_0^2 - \frac{mv^2}{k} \geq 0 \\
-      \emptyset &\text{ nếu } x_0^2 - \frac{mv^2}{k} < 0
-   \end{cases}.
-}
+\begin{cases}
+   \left\{\sqrt{x_0^2 - \frac{mv^2}{k}}; -\sqrt{x_0^2 - \frac{mv^2}{k}}\right\} &\text{ nếu } x_0^2 - \frac{mv^2}{k} \geq 0 \\
+   \emptyset &\text{ nếu } x_0^2 - \frac{mv^2}{k} < 0
+\end{cases}.
 $$
 
 10. Phân tích thừa số với để ý rằng $1$, $\frac{1}{2}$ và $\frac{1}{3}$ là nghiệm:
@@ -359,7 +369,7 @@ $$
       \end{aligned}
    \right..
 \end{align*}
-Cuối cùng, như chúng ta đã dự đoán, phương trình có nghiệm là $\boxed{\displaystyle\left\{1; \frac{1}{2}; \frac{1}{3}\right\}}$.
+Cuối cùng, như chúng ta đã dự đoán, phương trình có nghiệm là $\displaystyle\left\{1; \frac{1}{2}; \frac{1}{3}\right\}$.
 
 11. Có một cách là chuyển phương trình về một vế rồi nhẩm nghiệm. Dưới đây, tác giả sẽ trình bày một góc nhìn khác để giải bài toán này.
 \begin{align}
@@ -373,7 +383,7 @@ Cuối cùng, như chúng ta đã dự đoán, phương trình có nghiệm là 
    2x - 2 &= 6 \\
    \iff x &= 4.
 \end{align*}
-Vậy phương trình có nghiệm là $\boxed{\displaystyle\left\{4\right\}}$.
+Vậy phương trình có nghiệm là $\displaystyle\left\{4\right\}$.
 
 12. Dễ dàng thấy được có thể phân tích thừa số của đa thức được cho như sau:
 \begin{align*}
@@ -392,7 +402,7 @@ Chia làm $4$ trường hợp: $\left[
    \end{aligned}
 \right.$ và giải từng trường hợp một để có $x \in \left\{0; -2; 1; -1\right\}$.
 
-Vậy phương trình có bộ nghiệm là $\boxed{\displaystyle\left\{0; -2; 1; -1\right\}}$.
+Vậy phương trình có bộ nghiệm là $\displaystyle\left\{0; -2; 1; -1\right\}$.
 
 \def\varPhu {\textit{付}}
 
@@ -411,7 +421,7 @@ $$
       \varPhu &= \frac{-3 - \sqrt{3^2 - 4 \cdot (-5)}}{2} = \frac{-3 - \sqrt{29}}{2}
    \end{aligned}
 \right..
-$$ Tuy nhiên, do $\varPhu = x^2 \geq 0$ nên $\varPhu$ chỉ có thể nhận giá trị $\frac{-3 + \sqrt{29}}{2}$, và qua đó $x^2 = \frac{-3 + \sqrt{29}}{2}$. Vậy phương trình có nghiệm là $x \in \boxed{\left\{\sqrt{\frac{-3 + \sqrt{29}}{2}}; -\sqrt{\frac{-3 + \sqrt{29}}{2}}\right\}}$.
+$$ Tuy nhiên, do $\varPhu = x^2 \geq 0$ nên $\varPhu$ chỉ có thể nhận giá trị $\frac{-3 + \sqrt{29}}{2}$, và qua đó $x^2 = \frac{-3 + \sqrt{29}}{2}$. Vậy phương trình có nghiệm là $x \in \left\{\sqrt{\frac{-3 + \sqrt{29}}{2}}; -\sqrt{\frac{-3 + \sqrt{29}}{2}}\right\}$.
 
 14. Bài tập này dành cho những bạn chuyên toán thuần hơn là về ứng dụng. Nhận thấy rằng $x = 0$ không là nghiệm của phương trình. Chia cả hai vế của phương trình cho $x^2 \neq 0$ để có 
 \begin{equation}
@@ -443,9 +453,7 @@ $$
 \right..
 $$
 
-Do $x \in \mathbb{R}$ nên giá trị trong dấu khai căn $y^2 - 4$ phải không nhỏ hơn $0$. Kiểm tra hai giá trị $y$ tìm được từ \ref{eq:ham_so_mot_bien:da_thuc:gpt14y}, chúng ta thấy $y = \frac{3 + \sqrt{21}}{2}$ thỏa mãn điều kiện này. Thay thế trực tiếp để tìm được tập nghiệm của phương trình.
-
-Cuối cùng, chúng ta có được $x \in$ \fbox{$\displaystyle\left\{\frac{3+\sqrt{21}+\sqrt{14 + 6\sqrt{21}}}{2}; \frac{3+\sqrt{21}-\sqrt{14 + 6\sqrt{21}}}{2}\right\}$}.
+Do $x \in \mathbb{R}$ nên giá trị trong dấu khai căn $y^2 - 4$ phải không nhỏ hơn $0$. Kiểm tra hai giá trị $y$ tìm được từ \ref{eq:ham_so_mot_bien:da_thuc:gpt14y}, chúng ta thấy $y = \frac{3 + \sqrt{21}}{2}$ thỏa mãn điều kiện này. Thay thế trực tiếp để tìm được tập nghiệm của phương trình. Cuối cùng, chúng ta có được $x \in \displaystyle\left\{\frac{3+\sqrt{21}+\sqrt{14 + 6\sqrt{21}}}{2}; \frac{3+\sqrt{21}-\sqrt{14 + 6\sqrt{21}}}{2}\right\}$.
 
 \exercise Giải các bất phương trình sau. Các bất phương trình đều có ẩn là $x \in \mathbb{R}$.
 
@@ -453,11 +461,118 @@ Cuối cùng, chúng ta có được $x \in$ \fbox{$\displaystyle\left\{\frac{3+
    \begin{enumerate}
       \item $4x + 7 < 0$;
       \item $-8x - 16 > 0$;
+      \item $x - 2 \geq -2x + 5$;
+      \item $x^2 + 6x + 10 \leq 0$;
+      \item $x^2 - 11x + 30 > 0$;
+      \item $-3x^2 + 15x - 12 > -2x^2 + 10x - 12$;
+      \item $-x^4 + 18x^2 - 77 \geq 0$;
+      \item $x^7 < x$.
    \end{enumerate}
 \end{multicols}
 
 \solution
 
+{ 
+   \begin{minipageindent}{0.55\textwidth}
+      1.
+
+      \begin{align*}
+         4x + 7 &< 0 \\
+         \iff 4x &< -7 \\
+         \iff x &< -\frac{7}{4}.
+      \end{align*}
+      
+      Tập nghiệm của bất phương trình là $\displaystyle\left(-\infty; -\frac{7}{4}\right)$.
+
+      Để kiểm chứng lại kết quả, chúng ta sẽ sử dụng đồ thị của hàm số $f(x) = 4x + 7$ và kiểm tra xem những điểm nào trên đồ thị có giá trị nhỏ hơn $0$ như hình \ref{fig:ham_so_mot_bien:da_thuc:gbpt1}. Chúng ta không nhận giá trị tại nút nên tại điểm giao với trục hoành, chúng ta vẽ đường tròn rỗng thay vì hình tròn.
+   \end{minipageindent}
+   \hfill
+   \begin{minipageindent}{0.4\textwidth}
+      \begin{figure}[H]
+         \centering
+         \begin{tikzpicture}
+            \draw[->] (-4, 0) -- (0, 0) node[right] {$x$};
+            \draw[->] (0, -3) -- (0, 3) node[above] {$y$};
+            \draw[graph thickness, color=colorEmphasis, domain=-1.75:-1] plot (\x, {4*\x + 7});
+            \filldraw[color=colorEmphasis] (-1.5, 1) circle (\pointSize) node[right] {$\left(-\frac{3}{2}; 1\right)$};
+            \draw[graph thickness, color=colorEmphasisCyan, domain=-2.5:-1.75] plot (\x, {4*\x + 7});
+            \filldraw[color=colorEmphasisCyan] (-2, -1) circle (\pointSize) node[left] {$\left(-2; -1\right)$};
+            \draw[color=colorEmphasis, graph thickness, fill=white] (-1.75, 0) circle (\pointSize) node[below right] {$\left(-\frac{7}{4}; 0\right)$};
+         \end{tikzpicture}
+         \caption{Đồ thị biểu diễn $f(x) = 4x + 7$ và khoảng nhỏ hơn $0$.}
+         \label{fig:ham_so_mot_bien:da_thuc:gbpt1}
+      \end{figure}
+   \end{minipageindent}
+}
+
+{
+   \begin{minipageindent}{0.55\textwidth}
+      2.
+
+      \begin{align*}
+         &-8x - 16 > 0 \\
+         \iff &-8x > 16 \\
+         \iff &x < -2.\qquad \text{\textcolor{colorEmphasis}{\parbox[c]{0.4\textwidth}{(Chia cho số âm thì đổi dấu bất phương trình.)}}}
+      \end{align*}
+      
+      Tập nghiệm của bất phương trình là $\displaystyle\left(-\infty; -2\right)$.
+   \end{minipageindent}
+   \hfill
+   \begin{minipageindent}{0.4\textwidth}
+      \begin{figure}[H]
+         \centering
+         \begin{tikzpicture}
+            \draw[->] (-3, 0) -- (3, 0) node[right] {$x$};
+            \draw[->] (0, -4) -- (0, 1) node[above] {$y$};
+            \draw[graph thickness, color=colorEmphasisCyan, domain=-3:-2] plot (\x, {-(\x) - 2});
+            \draw[graph thickness, color=colorEmphasis, domain=-2:2] plot (\x, {-(\x) - 2});
+            \draw[color=colorEmphasis, graph thickness, fill=white] (-2, 0) circle (\pointSize) node[above right] {$\left(-2; 0\right)$};
+            \filldraw[color=colorEmphasis] (0, -2) circle (\pointSize) node[above right] {$\left(0; -16\right)$};
+         \end{tikzpicture}
+         \caption{Đồ thị biểu diễn $f(x) = -8x - 16$ và khoảng lớn hơn $0$.}
+         \label{fig:ham_so_mot_bien:da_thuc:gbpt2}
+      \end{figure}
+   \end{minipageindent}
+}
+
+{
+   \begin{minipageindent}{0.55\textwidth}
+      3.
+      
+      \begin{align*}
+         x - 2 &\geq -2x + 5 \\
+         \iff x + 2x &\geq 5 + 2 \\
+         \iff 3x &\geq 7 \\
+         \iff x &\geq \frac{7}{3}.
+      \end{align*}
+      
+      Tập nghiệm của bất phương trình là $\displaystyle\left[\frac{7}{3}; \infty\right)$.
+   \end{minipageindent}
+   \hfill
+   \begin{minipageindent}{0.4\textwidth}
+      \begin{figure}[H]
+         \centering
+         \begin{tikzpicture}
+            \draw[->] (0, 0) -- (4, 0) node[right] {$x$};
+            \draw[->] (0, -2) -- (0, 3) node[above] {$y$};
+            \draw[graph thickness, color=colorEmphasisCyan, domain=2.333:4] plot (\x, {((\x) - 2) / 2});
+            \draw[graph thickness, color=colorEmphasis, domain=0:2.333] plot (\x, {((\x) - 2) / 2});
+            \draw[graph thickness, color=colorEmphasisCyan, domain=2.333:4] plot (\x, {(-2 * (\x) + 5) / 2});
+            \draw[graph thickness, color=colorEmphasis, domain=0:2.333] plot (\x, {(-2 * (\x) + 5) / 2});
+            \filldraw[color=colorEmphasisCyan] (2.333, {0.333 / 2}) circle (\pointSize);
+            \node[right, color=colorEmphasisCyan] at (2.4, 0.1) {$\left(\frac{7}{3}; \frac{1}{3}\right)$};
+            \filldraw[color=colorEmphasis] (0, {5 / 2}) circle (\pointSize) node[right] {$\left(0; \frac{5}{2}\right)$};
+            \filldraw[color=colorEmphasis] (0, -1) circle (\pointSize) node[below right] {$\left(0; -2\right)$};
+         \end{tikzpicture}
+         \caption{Đồ thị biểu diễn $f(x) = -8x - 16$ và khoảng lớn hơn $0$.}
+         \label{fig:ham_so_mot_bien:da_thuc:gbpt3}
+      \end{figure}
+   \end{minipageindent}
+}
+
+4. Để ý rằng $x^2 + 6x + 10 = \left(x^2 + 6x + 9\right) + 1 = (x + 3)^2 + 1 \implies x^2 + 6x + 10 \geq 1$. Do đó, $x^2 + 6x + 10 \leq 0$ không có nghiệm.
+
+5.
 
 \exercise Xác định tập giá trị của những hàm sau:
 \begin{multicols}{2}
