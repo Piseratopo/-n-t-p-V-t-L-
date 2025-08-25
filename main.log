@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.3) (preloaded format=xelatex 2025.8.2)  25 AUG 2025 17:49
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.3) (preloaded format=xelatex 2025.8.2)  25 AUG 2025 23:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1233,17 +1233,35 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [28]) (chapter/toan_hoc_nen_tang/ham_so_mot_bien/phep_tinh_ham.tex
 
-[29]) (chapter/toan_hoc_nen_tang/ham_so_mot_bien/phan_thuc.tex [30]) (chapter/toan_hoc_nen_tang/ham_so_mot_bien/phep_hop_ham.tex))
+[29]) (chapter/toan_hoc_nen_tang/ham_so_mot_bien/phan_thuc.tex
+Overfull \hbox (8.62787pt too wide) in paragraph at lines 27--54
+[]$[]$       $[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--54
+
+ []
+
+
+
+[30]
+Overfull \hbox (8.62787pt too wide) in paragraph at lines 56--96
+[]$[]$       $[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--96
+
+ []
+
+
+
+[31]) (chapter/toan_hoc_nen_tang/ham_so_mot_bien/phep_hop_ham.tex))
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 172.
 See the caption package documentation for explanation.
-
-
-
-[31]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
@@ -1252,6 +1270,8 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [33]
 
 [34]
+
+[35]
 Chương 1.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
@@ -1260,13 +1280,13 @@ See the caption package documentation for explanation.
 
 
 
-[35
+[36
 
 ]
 
-[36]
-
 [37]
+
+[38]
 Chương 2.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1276,11 +1296,11 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[38
+[39
 
 ]
 
-[39]
+[40]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1297,13 +1317,13 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[40]
-
-LaTeX Warning: Text page 41 contains only floats.
-
-
-
 [41]
+
+LaTeX Warning: Text page 42 contains only floats.
+
+
+
+[42]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 836.
@@ -1311,7 +1331,7 @@ See the caption package documentation for explanation.
 
 
 
-[42]
+[43]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 892.
@@ -1319,9 +1339,9 @@ See the caption package documentation for explanation.
 
 
 
-[43]
-
 [44]
+
+[45]
 
 Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
 (xeCJK)                
@@ -1330,7 +1350,7 @@ Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
 
 
 
-[45
+[46
 
 ] (main.aux)
  ***********
@@ -1345,12 +1365,12 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 1BAA90FB43FBDECCDC22DE4B98C1C279;3163.
  ) 
 Here is how much of TeX's memory you used:
- 43048 strings out of 408640
- 1019407 string characters out of 5744799
- 1648173 words of memory out of 5000000
- 65420 multiletter control sequences out of 15000+600000
+ 43356 strings out of 408640
+ 1025834 string characters out of 5744799
+ 1647316 words of memory out of 5000000
+ 65728 multiletter control sequences out of 15000+600000
  577132 words of font info for 116 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  99i,16n,105p,2041b,931s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (45 pages, 1253616 bytes).
+Output written on main.xdv (46 pages, 1292248 bytes).

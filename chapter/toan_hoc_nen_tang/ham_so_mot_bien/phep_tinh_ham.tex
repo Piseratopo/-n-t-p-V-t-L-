@@ -1,11 +1,11 @@
 \subsection{Phép tính đại số trên hàm}
 
-Giống như khi chúng ta làm những phép công, trừ, nhân, chia với số, chúng ta cũng có thể thực hiện các phép tính đại số đó lên hàm số thực. Với kí hiệu tương tự, nếu có hai hàm $f$ và $g$ thì định nghĩa các hàm tổng $f+g$, hàm hiệu $f-g$, hàm tích $f\cdot g$\footnote{Hạn chế viết hàm tích dưới dạng \dblquote{$fg$} do có khả năng nhầm lẫn với hàm có tên là \dblquote{fg}. Trong tương lai, hàm có thể có nhiều kí tự trong tên như hàm $\cos$ hay hàm $\tan$.}, hàm thương $\frac{f}{g}$ như sau:
+Giống như khi chúng ta làm những phép công, trừ, nhân, chia với số, chúng ta cũng có thể thực hiện các phép tính đại số đó lên hàm số thực. Với kí hiệu tương tự, nếu có hai hàm $f$ và $g$ thì định nghĩa các \defText{hàm tổng} $\defMath{f+g}$, \defText{hàm hiệu} $\defMath{f-g}$, \defText{hàm tích} $\defMath{f\cdot g}$\footnote{Hạn chế viết hàm tích dưới dạng \dblquote{$fg$} do có khả năng nhầm lẫn với hàm có tên là \dblquote{fg}. Trong tương lai, hàm có thể có nhiều kí tự trong tên như hàm $\cos$ hay hàm $\tan$.}, \defText{hàm thương} $\defMath{\frac{f}{g}}$ như sau:
 \begin{align*}
-   (f + g)(x) &= f(x) + g(x);\\
-   (f - g)(x) &= f(x) - g(x);\\
-   (f \cdot g)(x) &= f(x) \cdot g(x);\\
-   \left(\frac{f}{g}\right)(x) &= \frac{f(x)}{g(x)} \text{ với } g(x) \neq 0.
+   \defMath{(f + g)(x)} &\defMath{= f(x) + g(x)};\\
+   \defMath{(f - g)(x)} &\defMath{= f(x) - g(x)};\\
+   \defMath{(f \cdot g)(x)} &\defMath{= f(x) \cdot g(x)};\\
+   \defMath{\left(\frac{f}{g}\right)(x)} &\defMath{= \frac{f(x)}{g(x)} \text{ \defText{với} } g(x) \neq 0}.
 \end{align*}
 Khi này, tập xác định của hàm mới sẽ là tập hợp các giá trị $x$ thuộc tập xác định của cả $f$ và $g$. Trong trường hợp $\frac{f}{g}$, cần loại bỏ các giá trị $x$ khiến cho $g(x) = 0$.
 
@@ -44,9 +44,9 @@ $$
 \theF(x) = (f + g)(x) = f(x) + g(x) = (4 - 7x) + (2x - 5) = -5x - 1.
 $$
 
-Do $f(x)$ và $g(x)$ đều có tập xác định là $\mathbb{R}$ nên tập xác định của $\theF(x)$ cũng là $\boxed{\mathbb{R}}$. Để ý rằng, mọi $y \in \mathbb{R}$ đều có thể là giá trị của $\theF(x)$ do $$
+Do $f(x)$ và $g(x)$ đều có tập xác định là $\mathbb{R}$ nên tập xác định của $\theF(x)$ cũng là $\mathbb{R}$. Để ý rằng, mọi $y \in \mathbb{R}$ đều có thể là giá trị của $\theF(x)$ do $$
    \theF\left(\frac{y + 1}{-5}\right) = -5\left(\frac{y + 1}{-5}\right) - 1 = y + 1 - 1 = y.
-$$ Qua đó, tập giá trị của $\theF(x)$ là $\boxed{\mathbb{R}}$.
+$$ Qua đó, tập giá trị của $\theF(x)$ là $\mathbb{R}$.
 
 2. Kẻ bảng kết hợp với hàm $\theF$, chúng ta có:
 
@@ -67,14 +67,14 @@ $$ Qua đó, tập giá trị của $\theF(x)$ là $\boxed{\mathbb{R}}$.
    \label{tab:ham_so_mot_bien:phep_tinh_ham:theF_2}
 \end{table}
 
-Để ý rằng do $f(x)$ và $g(x)$ đều chỉ nhận đầu vào là $\left\{-2; 0; 1; 2\right\}$ nên tập xác định của $\theF(x)$ cũng là $\boxed{\left\{-2; 0; 1; 2\right\}}$. Ngoài ra, theo bảng \ref{tab:ham_so_mot_bien:phep_tinh_ham:theF_2}, tập giá trị của $\theF(x)$ là $\boxed{\left\{-6; -5; -7; 2\right\}}$.
+Để ý rằng do $f(x)$ và $g(x)$ đều chỉ nhận đầu vào là $\left\{-2; 0; 1; 2\right\}$ nên tập xác định của $\theF(x)$ cũng là $\left\{-2; 0; 1; 2\right\}$. Ngoài ra, theo bảng \ref{tab:ham_so_mot_bien:phep_tinh_ham:theF_2}, tập giá trị của $\theF(x)$ là $\left\{-6; -5; -7; 2\right\}$.
 
 3.
 $$
 \theF(x) = (f \cdot g)(x) = f(x) \cdot g(x) = (4 - 7x) \cdot (2x - 5) = -14x^2 + 37x - 20.
 $$
 
-Do $f(x)$ và $g(x)$ đều có tập xác định là $\mathbb{R}$ nên tập xác định của $\theF(x)$ cũng là $\boxed{\mathbb{R}}$.
+Do $f(x)$ và $g(x)$ đều có tập xác định là $\mathbb{R}$ nên tập xác định của $\theF(x)$ cũng là $\mathbb{R}$.
 
 Mặt khác, chúng ta có:
 \begin{align*}
@@ -83,7 +83,7 @@ Mặt khác, chúng ta có:
    &= -14\left(x^2 - \frac{37}{14}x + \left(\frac{37}{28}\right)^2 - \left(\frac{37}{28}\right)^2\right) - 20\\
    &= -14\left(x - \frac{37}{28}\right)^2 + \frac{249}{56}.
 \end{align*}
-Suy ra, $\theF(x) \ge \frac{249}{56}$ với mọi $x \in \mathbb{R}$. Ngược lại, với mọi $y \ge \frac{249}{56}$, tồn tại $x \in \mathbb{R}$ sao cho $\theF(x) = y$ với ví dụ là $\displaystyle x=\frac{\sqrt{249-56y}+37}{28}$. Vậy, tập giá trị của $\theF(x)$ là $\boxed{\left[\frac{249}{56}; +\infty\right)}$.
+Suy ra, $\theF(x) \ge \frac{249}{56}$ với mọi $x \in \mathbb{R}$. Ngược lại, với mọi $y \ge \frac{249}{56}$, tồn tại $x \in \mathbb{R}$ sao cho $\theF(x) = y$ với ví dụ là $\displaystyle x=\frac{\sqrt{249-56y}+37}{28}$. Vậy, tập giá trị của $\theF(x)$ là $\left[\frac{249}{56}; +\infty\right)$.
 
 4. Kẻ bảng kết hợp với hàm $\theF$, chúng ta có:
 
@@ -104,4 +104,4 @@ Suy ra, $\theF(x) \ge \frac{249}{56}$ với mọi $x \in \mathbb{R}$. Ngược l
    \label{tab:ham_so_mot_bien:phep_tinh_ham:theF_4}
 \end{table}
 
-Khi xác định tập giá trị của $\theF(x)$ cần phải để ý điều kiện $h(x) \neq 0$. Qua bảng \ref{tab:ham_so_mot_bien:phep_tinh_ham:theF_4}, ta thấy $h(x) = 0$ khi $x=1$. Vậy, tập xác định của $\theF(x)$ là $\boxed{\left\{-2; 0; 2\right\}}$. Theo bảng, chúng ta cũng có tập giá trị của $\theF(x)$ được xác định là $\boxed{\left\{\frac{9}{7}; \frac{1}{7}; -\frac{4}{3}\right\}}$.
+Khi xác định tập giá trị của $\theF(x)$ cần phải để ý điều kiện $h(x) \neq 0$. Qua bảng \ref{tab:ham_so_mot_bien:phep_tinh_ham:theF_4}, ta thấy $h(x) = 0$ khi $x=1$. Vậy, tập xác định của $\theF(x)$ là $\left\{-2; 0; 2\right\}$. Theo bảng, chúng ta cũng có tập giá trị của $\theF(x)$ được xác định là $\left\{\frac{9}{7}; \frac{1}{7}; -\frac{4}{3}\right\}$.

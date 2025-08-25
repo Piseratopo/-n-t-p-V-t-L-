@@ -1,8 +1,9 @@
 \begin{figure}[H]
 	\centering
 	\begin{tikzpicture}
-		\draw[->] (-3, 0) -- (3, 0) node[right] {$x$};
-		\draw[->] (0, -3) -- (0, 5)  node[above] {$y$};
-		\draw[graph thickness, color=colorEmphasisCyan, domain=-0.449:3.000] plot (\x, {(\x)^2 - 4*(\x) + 3});
+		\draw[->] (-6, 0) -- (2, 0) node[right] {$x$};
+		\draw[->] (0, 0) -- (0, 5)  node[above] {$y$};
+		\draw[graph thickness, color=colorEmphasisCyan, domain=-6.000:-2.447] plot (\x, {1/((\x)^2 + 4*(\x) + 4)});
+		\draw[graph thickness, color=colorEmphasisCyan, domain=-1.553:2.000] plot (\x, {1/((\x)^2 + 4*(\x) + 4)});
 	\end{tikzpicture}
 \end{figure}

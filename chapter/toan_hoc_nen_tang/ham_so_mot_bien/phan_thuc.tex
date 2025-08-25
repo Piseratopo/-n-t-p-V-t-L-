@@ -2,7 +2,9 @@
 
 \ % Lùi đầu dòng
 
-Hàm cộng, hàm trừ và hàm nhân của hai hàm đa thức là những hàm đa thức. Tuy nhiên, hàm thương lại không như vậy. Do khi chia hai đa thức có những tính chất đặc biệt, nên chúng ta xây dựng một khái niệm mới là hàm \emph{phân thức}. Một hàm $f$ được gọi là phân thức nếu $f = 0$, hoặc: $$f = \left(\frac{p}{q}\right)$$ với $p$ và $q$ là hai đa thức. Trong trường hợp $f \neq 0$, tập xác định của $f$ là tập hợp các giá trị $x$ sao cho $q(x) \neq 0$. 
+Hàm cộng, hàm trừ và hàm nhân của hai hàm đa thức là những hàm đa thức. Tuy nhiên, hàm thương lại không như vậy. Do khi chia hai đa thức có những tính chất đặc biệt, nên chúng ta xây dựng một khái niệm mới là hàm \defText{phân thức}. Một hàm $f$ được gọi là phân thức nếu $\defMath{f = 0}$, hoặc: $$\defMath{f = \left(\frac{p}{q}\right)}$$ với $p$ và $q$ là hai đa thức. Trong trường hợp $f \neq 0$, tập xác định của $f$ là tập hợp các giá trị $x$ sao cho $q(x) \neq 0$. 
+
+Khái niệm về phân thức dẫn chúng ta một cách tự nhiên đến khái niệm về một dạng phân thức đặc biệt mang tên \defText{số mũ âm}. Khi mũ một số bằng số âm, chúng ta có thể viết lại là $$\defMath{x^{-n} = \frac{1}{x^n}}.$$ Và đương nhiên, để có thể chia được thì $x \neq 0$.
 
 \exercise Cho biết tập xác định, tập giá trị và phác thảo đồ thị của những hàm sau:
 \begin{multicols}{3}
@@ -20,6 +22,77 @@ Hàm cộng, hàm trừ và hàm nhân của hai hàm đa thức là những hà
 \end{multicols}
 
 \solution
+
+{
+   \begin{minipageindent}{0.44\textwidth}
+      1. Theo định nghĩa hàm phân thức, tập xác định của hàm $f(x) = \frac{2}{x}$ là $\mathbb{R} \setminus \left\{0\right\}$.
+      
+      Kết quả của $f(x)$ phải khác $0$ do nếu như vậy thì $f(x) = \frac{2}{x} = 0 \implies 2 = 0\times x = 0$, vô lí.
+      
+      Tuy nhiên, mọi số $y$ khác $0$ đều có thể là giá trị của $f(x)$ do $$f\left(\frac{2}{y}\right) = \frac{2}{\frac{2}{y}} = y.$$
+      
+      Vậy tập giá trị của $f(x)$ là $\mathbb{R} \setminus \left\{0\right\}$.
+   \end{minipageindent}
+   \hfill
+   \begin{minipageindent}{0.55\textwidth}
+      \begin{figure}[H]
+         \centering
+         \begin{tikzpicture}
+            \draw[->] (-4, 0) -- (4, 0) node[right] {$x$};
+            \draw[->] (0, -4) -- (0, 4) node[above] {$f(x)$};
+            \draw[color=colorEmphasisCyan, graph thickness, smooth, samples=100] plot[domain=-4:-0.5] (\x, {2/\x});
+            \draw[color=colorEmphasisCyan, graph thickness, smooth, samples=100] plot[domain=0.5:4] (\x, {2/\x});
+            \foreach \x/\y/\pos in {1/2/right, -1/-2/left, -2/-1/above, 2/1/below} {
+               \filldraw[color=colorEmphasisCyan] (\x, \y) circle (\pointSize) node[\pos] {$\left(\x; \y\right)$};
+            }
+         \end{tikzpicture}
+         \caption{Đồ thị của hàm $f(x) = \frac{2}{x}$}
+         \label{fig:ham_so_mot_bien:phan_thuc:2_x}
+      \end{figure}
+   \end{minipageindent}
+}
+
+{
+   \begin{minipageindent}{0.44\textwidth}
+      2. Để phân thức có nghĩa thì mẫu số của phân thức phải khác $0$. Viết và bất phương trình này:
+
+      \begin{align*}
+         x^2 + 4x + 4 &\neq 0\\
+         \iff \left(x + 2\right)^2 &\neq 0\\
+         \iff x + 2 &\neq 0 \\
+         \iff x &\neq -2
+      \end{align*}
+      Vậy tập xác định của $f(x)$ là $\mathbb{R} \setminus \left\{-2\right\}$.
+
+      Có mẫu số $x^2 + 4x + 4 = (x + 2)^2 \geq 0$, mà mẫu số phải khác $0$ nên có $x^2 + 4x + 4 > 0$. Chia hai số dương luôn được số dương, cho nên $f(x)$ chỉ nhận giá trị dương. Ngược lại, mọi giá trị dương $y$ đều có thể biểu diễn thông qua $f(x)$ do \begin{align*}
+         &f\left(-2 + \frac{1}{\sqrt{y}}\right) \\
+         = &\frac{1}{\left(-2 + \frac{1}{\sqrt{y}}\right)^2 + 4\left(-2 + \frac{1}{\sqrt{y}}\right) + 4}\\
+         =& \frac{1}{\left(\left(-2 + \frac{1}{\sqrt{y}}\right) + 2\right)^2} \\
+         =&\frac{1}{\left(\frac{1}{\sqrt{y}}\right)^2} \\
+         =&\frac{1}{\frac{1}{y}} \\
+         =&y.
+      \end{align*}
+      Vậy tập giá trị của $f(x)$ là $\mathbb{R}^+$.
+   \end{minipageindent}
+   \hfill
+   \begin{minipageindent}{0.55\textwidth}
+      \begin{figure}[H]
+         \centering
+         \begin{tikzpicture}
+            \draw[->] (-6, 0) -- (2, 0) node[right] {$x$};
+            \draw[->] (0, 0) -- (0, 5)  node[above] {$y$};
+            \draw[graph thickness, color=colorEmphasisCyan, domain=-6.000:-2.447] plot (\x, {1/((\x)^2 + 4*(\x) + 4)});
+            \draw[graph thickness, color=colorEmphasisCyan, domain=-1.553:2.000] plot (\x, {1/((\x)^2 + 4*(\x) + 4)});
+            \filldraw[color=colorEmphasisCyan] (1, {1/9}) circle (\pointSize) node[below] {$\left(1; \frac{1}{9}\right)$};
+            \filldraw[color=colorEmphasisCyan] (0, {1/4}) circle (\pointSize) node[below] {$\left(0; \frac{1}{4}\right)$};
+            \filldraw[color=colorEmphasisCyan] (-1, 1) circle (\pointSize) node[right] {$\left(-1; 1\right)$};
+            \filldraw[color=colorEmphasisCyan] (-3, 1) circle (\pointSize) node[left] {$\left(-3; 1\right)$};
+         \end{tikzpicture}
+         \caption{Đồ thị của hàm $f(x) = \frac{1}{x^2 + 4x + 4}$}
+         \label{fig:ham_so_mot_bien:phan_thuc:1_x2_4x_4}
+      \end{figure}
+   \end{minipageindent}
+}
 
 \exercise Phác thảo đồ thị của những hàm sau:
 
