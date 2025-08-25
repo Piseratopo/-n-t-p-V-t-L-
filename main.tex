@@ -3,7 +3,7 @@
 \usepackage[T5]{fontenc}
 \usepackage[vietnamese]{babel}
 \usepackage[a4paper]{geometry}
-\usepackage{amsmath, amssymb, blindtext, bm, calc, caption, float, hyperref, icomma, makecell, multicol, pgfplots, steinmetz, tikz, tikz-3dplot, wrapfig2, xcolor, xparse, xeCJK}
+\usepackage{amsmath, amssymb, blindtext, bm, calc, caption, float, hyperref, icomma, makecell, multicol, pgfplots, steinmetz, tikz, tikz-3dplot, varwidth, wrapfig2, xcolor, xparse, xeCJK}
 
 % Tinh chỉnh Tikz
 \usetikzlibrary{arrows.meta, calc, decorations.pathmorphing, intersections, pgfplots.fillbetween, shadings}
@@ -76,7 +76,8 @@
 \def \pointSize {2pt}
 \pgfkeys{
    /tikz/graph thickness/.style={
-      very thick
+      very thick,
+      smooth
    }
 }
 \def \guideLineThickness {very thin}
@@ -88,6 +89,12 @@
       shorten >= \pointSize, 
       shorten <= \pointSize, 
       color=colorEmphasisCyan
+   }
+}
+\pgfkeys{
+   /tikz/hollow point/.style={
+      graph thickness,
+      fill=white
    }
 }
 

@@ -8,10 +8,10 @@
 \contentsline {section}{\numberline {0.2}Hàm số một biến}{11}{section.0.2}%
 \contentsline {subsection}{\numberline {0.2.1}Định nghĩa hàm số, phương trình, bất phương trình và hệ}{11}{subsection.0.2.1}%
 \contentsline {subsection}{\numberline {0.2.2}Hàm đa thức}{18}{subsection.0.2.2}%
-\contentsline {subsection}{\numberline {0.2.3}Phép tính đại số trên hàm}{27}{subsection.0.2.3}%
-\contentsline {subsection}{\numberline {0.2.4}Hàm phân thức}{28}{subsection.0.2.4}%
-\contentsline {subsection}{\numberline {0.2.5}Phép hợp hai hàm số}{29}{subsection.0.2.5}%
-\contentsline {section}{\numberline {0.3}Số ảo và số phức}{29}{section.0.3}%
-\contentsline {section}{\numberline {0.4}Bài tập tổng hợp}{32}{section.0.4}%
-\contentsline {chapter}{\numberline {1}Cơ bản của xử lí số liệu trong vật lí}{33}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Chuyển động}{36}{chapter.2}%
+\contentsline {subsection}{\numberline {0.2.3}Phép tính đại số trên hàm}{29}{subsection.0.2.3}%
+\contentsline {subsection}{\numberline {0.2.4}Hàm phân thức}{30}{subsection.0.2.4}%
+\contentsline {subsection}{\numberline {0.2.5}Phép hợp hai hàm số}{31}{subsection.0.2.5}%
+\contentsline {section}{\numberline {0.3}Số ảo và số phức}{31}{section.0.3}%
+\contentsline {section}{\numberline {0.4}Bài tập tổng hợp}{34}{section.0.4}%
+\contentsline {chapter}{\numberline {1}Cơ bản của xử lí số liệu trong vật lí}{35}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Chuyển động}{38}{chapter.2}%

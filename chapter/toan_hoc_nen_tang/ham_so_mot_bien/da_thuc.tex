@@ -6,7 +6,7 @@ Một dạng hàm quen thuộc, được giới thiệu trong chương trình h�
 $$\defMath{x^n = \prod_{i=1}^n (x) =  \underbrace{x \times x \times \cdots \times x}_{n \text{ \defText{lần}}}}.$$
 Trong trường hợp $n = 0$ thì $x^n = \defMath{x^0 = 1}$.
 
-\defText{Hàm đa thức} thông thường được biểu diễn dưới dạng tổng của các đơn thức $$\defMath{f(x)=P_n(x)=\sum_{i = 0}^n \left(a_i x^i\right) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0}$$ với $n$ là một số nguyên không âm, $a_i$ là các số thực, gọi là các \defText{hệ số}, với mọi $i$ nguyên nằm trong đoạn $[0, n]$ và $a_n \neq 0$. Khi này, $n$ được gọi là \defText{bậc} của đa thức\label{def:ham_so_mot_bien:da_thuc:da_thuc}. Mọi giá trị $x \in \mathbb{R}$ đều thuộc tập xác định của hàm đa thức $f(x)$. Ví dụ:
+Hàm \defText{đa thức} thông thường được biểu diễn dưới dạng tổng của các đơn thức $$\defMath{f(x)=P_n(x)=\sum_{i = 0}^n \left(a_i x^i\right) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0}$$ với $n$ là một số nguyên không âm, $a_i$ là các số thực, gọi là các \defText{hệ số}, với mọi $i$ nguyên nằm trong đoạn $[0, n]$ và $a_n \neq 0$. Khi này, $n$ được gọi là \defText{bậc} của đa thức\label{def:ham_so_mot_bien:da_thuc:da_thuc}. Mọi giá trị $x \in \mathbb{R}$ đều thuộc tập xác định của hàm đa thức $f(x)$. Ví dụ:
 \begin{itemize}
    \item $f(x) = 2x^2 + 3x + 1$ là một đa thức bậc $2$ với các hệ số $a_2 = 2$, $a_1 = 3$, $a_0 = 1$;
    \item $g(y) = y^3 - 4y$ là một đa thức bậc $3$ với các hệ số $b_3 = 1$, $b_2 = 0$, $b_1 = -4$, $b_0 = 0$;
@@ -84,10 +84,10 @@ Dưới đây là đồ thị của các hàm đa thức trong bài:
             \draw[color=colorEmphasisCyan, graph thickness, smooth, samples=100] plot[domain=-0.186:2.686] (\x, {(-2*(\x)^2 + 5*(\x) - 4)});
             \draw[snake it, name path=A] (-2, -0.25) -- (4, -0.25);
             \draw[snake it, name path=B] (-2, -0.35) -- (4, -0.35);
+            \tikzfillbetween[of=A and B]{white};
             \foreach \x/\y/\yy/\pos in {0/-4/-6/right, 1/-1/-3/above, 2/-2/-4/right} {
                \filldraw[color=colorEmphasisCyan] (\x, \y) circle (\pointSize) node[\pos] {$\left(\x; {\yy}\right)$};
             }
-            \tikzfillbetween[of=A and B]{white};
          \end{tikzpicture}
          \caption{Đồ thị của hàm $f(x) = -2x^2 + 5x - 6$}
          \label{fig:ham_so_mot_bien:da_thuc:t2x2_5x_t6}
@@ -466,7 +466,7 @@ Do $x \in \mathbb{R}$ nên giá trị trong dấu khai căn $y^2 - 4$ phải kh�
       \item $x^2 - 11x + 30 > 0$;
       \item $-3x^2 + 15x - 12 > -2x^2 + 10x - 12$;
       \item $-x^4 + 18x^2 - 77 \geq 0$;
-      \item $x^7 < x$.
+      \item $x^7 \geq x$.
    \end{enumerate}
 \end{multicols}
 
@@ -493,13 +493,13 @@ Do $x \in \mathbb{R}$ nên giá trị trong dấu khai căn $y^2 - 4$ phải kh�
          \begin{tikzpicture}
             \draw[->] (-4, 0) -- (0, 0) node[right] {$x$};
             \draw[->] (0, -3) -- (0, 3) node[above] {$y$};
-            \draw[graph thickness, color=colorEmphasis, domain=-1.75:-1] plot (\x, {4*\x + 7});
-            \filldraw[color=colorEmphasis] (-1.5, 1) circle (\pointSize) node[right] {$\left(-\frac{3}{2}; 1\right)$};
+            \draw[graph thickness, color=colorEmphasisCyan, dashed, domain=-1.75:-1] plot (\x, {4*\x + 7});
+            \filldraw[color=colorEmphasisCyan] (-1.5, 1) circle (\pointSize) node[right] {$\left(-\frac{3}{2}; 1\right)$};
             \draw[graph thickness, color=colorEmphasisCyan, domain=-2.5:-1.75] plot (\x, {4*\x + 7});
             \filldraw[color=colorEmphasisCyan] (-2, -1) circle (\pointSize) node[left] {$\left(-2; -1\right)$};
-            \draw[color=colorEmphasis, graph thickness, fill=white] (-1.75, 0) circle (\pointSize) node[below right] {$\left(-\frac{7}{4}; 0\right)$};
+            \draw[color=colorEmphasisCyan, hollow point] (-1.75, 0) circle (\pointSize) node[below right] {$\left(-\frac{7}{4}; 0\right)$};
          \end{tikzpicture}
-         \caption{Đồ thị biểu diễn $f(x) = 4x + 7$ và khoảng nhỏ hơn $0$.}
+         \caption{Đồ thị biểu diễn $4x + 7$ và khoảng nhỏ hơn $0$}
          \label{fig:ham_so_mot_bien:da_thuc:gbpt1}
       \end{figure}
    \end{minipageindent}
@@ -525,12 +525,12 @@ Do $x \in \mathbb{R}$ nên giá trị trong dấu khai căn $y^2 - 4$ phải kh�
             \draw[->] (-3, 0) -- (3, 0) node[right] {$x$};
             \draw[->] (0, -4) -- (0, 1) node[above] {$y$};
             \draw[graph thickness, color=colorEmphasisCyan, domain=-3:-2] plot (\x, {-(\x) - 2});
-            \draw[graph thickness, color=colorEmphasis, domain=-2:2] plot (\x, {-(\x) - 2});
-            \draw[color=colorEmphasis, graph thickness, fill=white] (-2, 0) circle (\pointSize) node[above right] {$\left(-2; 0\right)$};
-            \filldraw[color=colorEmphasis] (0, -2) circle (\pointSize) node[above right] {$\left(0; -16\right)$};
+            \draw[graph thickness, color=colorEmphasisCyan, dashed, domain=-2:2] plot (\x, {-(\x) - 2});
+            \draw[color=colorEmphasisCyan, graph thickness, fill=white] (-2, 0) circle (\pointSize) node[above right] {$\left(-2; 0\right)$};
+            \filldraw[color=colorEmphasisCyan] (0, -2) circle (\pointSize) node[above right] {$\left(0; -16\right)$};
          \end{tikzpicture}
-         \caption{Đồ thị biểu diễn $f(x) = -8x - 16$ và khoảng lớn hơn $0$.}
          \label{fig:ham_so_mot_bien:da_thuc:gbpt2}
+         \caption{Đồ thị biểu diễn $-8x - 16$ và khoảng lớn hơn $0$}
       \end{figure}
    \end{minipageindent}
 }
@@ -555,16 +555,16 @@ Do $x \in \mathbb{R}$ nên giá trị trong dấu khai căn $y^2 - 4$ phải kh�
          \begin{tikzpicture}
             \draw[->] (0, 0) -- (4, 0) node[right] {$x$};
             \draw[->] (0, -2) -- (0, 3) node[above] {$y$};
-            \draw[graph thickness, color=colorEmphasisCyan, domain=2.333:4] plot (\x, {((\x) - 2) / 2});
-            \draw[graph thickness, color=colorEmphasis, domain=0:2.333] plot (\x, {((\x) - 2) / 2});
+            \draw[graph thickness, color=colorEmphasis, domain=2.333:4] plot (\x, {((\x) - 2) / 2});
+            \draw[graph thickness, color=colorEmphasis, dashed, domain=0:2.333] plot (\x, {((\x) - 2) / 2});
             \draw[graph thickness, color=colorEmphasisCyan, domain=2.333:4] plot (\x, {(-2 * (\x) + 5) / 2});
-            \draw[graph thickness, color=colorEmphasis, domain=0:2.333] plot (\x, {(-2 * (\x) + 5) / 2});
-            \filldraw[color=colorEmphasisCyan] (2.333, {0.333 / 2}) circle (\pointSize);
-            \node[right, color=colorEmphasisCyan] at (2.4, 0.1) {$\left(\frac{7}{3}; \frac{1}{3}\right)$};
-            \filldraw[color=colorEmphasis] (0, {5 / 2}) circle (\pointSize) node[right] {$\left(0; \frac{5}{2}\right)$};
+            \draw[graph thickness, color=colorEmphasisCyan, dashed, domain=0:2.333] plot (\x, {(-2 * (\x) + 5) / 2});
+            \filldraw[color=colorEmphasisGreen] (2.333, {0.333 / 2}) circle (\pointSize);
+            \node[right, color=colorEmphasisGreen] at (2.4, 0.1) {$\left(\frac{7}{3}; \frac{1}{3}\right)$};
+            \filldraw[color=colorEmphasisCyan] (0, {5 / 2}) circle (\pointSize) node[right] {$\left(0; \frac{5}{2}\right)$};
             \filldraw[color=colorEmphasis] (0, -1) circle (\pointSize) node[below right] {$\left(0; -2\right)$};
          \end{tikzpicture}
-         \caption{Đồ thị biểu diễn $f(x) = -8x - 16$ và khoảng lớn hơn $0$.}
+         \caption{Đồ thị của $x - 2 \geq -2x + 5$}
          \label{fig:ham_so_mot_bien:da_thuc:gbpt3}
       \end{figure}
    \end{minipageindent}
@@ -572,7 +572,245 @@ Do $x \in \mathbb{R}$ nên giá trị trong dấu khai căn $y^2 - 4$ phải kh�
 
 4. Để ý rằng $x^2 + 6x + 10 = \left(x^2 + 6x + 9\right) + 1 = (x + 3)^2 + 1 \implies x^2 + 6x + 10 \geq 1$. Do đó, $x^2 + 6x + 10 \leq 0$ không có nghiệm.
 
-5.
+{
+   \begin{minipageindent}{0.55\textwidth}
+      5.
+
+      \begin{align}
+         x^2 - 11x + 30 &> 0 \nonumber\\
+         \iff (x - 5)(x - 6) &> 0.\qquad \parbox[c]{0.35\textwidth}{\textcolor{colorEmphasis}{(Phân tích đa thức thành nhân tử.)}} \label{eq:ham_so_mot_bien:da_thuc:gbpt5}
+      \end{align}
+
+      Do \ref{eq:ham_so_mot_bien:da_thuc:gbpt5}, nên nghiệm của $(x - 5)(x - 6) = 0$ hay $x \in \left\{5; 6\right\}$ không là nghiệm của \ref{eq:ham_so_mot_bien:da_thuc:gbpt5}.
+
+      Với $5 < x < 6$, $
+      \begin{cases}
+         x - 5 > 0 \\
+         x - 6 < 0
+      \end{cases}
+      $ cho nên $(x - 5)(x - 6) < 0$. Trường hợp này không thỏa mãn \ref{eq:ham_so_mot_bien:da_thuc:gbpt5}.
+
+      Với $x < 5$, $
+      \begin{cases}
+         x - 5 < 0 \\
+         x - 6 < 0
+      \end{cases}
+      $ cho nên $(x-5)(x-6) > 0$ \textcolor{colorEmphasis}{(Tích hai số âm là một số dương.)} thỏa mãn \eqref{eq:ham_so_mot_bien:da_thuc:gbpt5}.
+
+      Với $x > 6$, $
+      \begin{cases}
+         x - 5 > 0 \\
+         x - 6 > 0
+      \end{cases}
+      \implies (x-5)(x-6) > 0$ thỏa mãn \eqref{eq:ham_so_mot_bien:da_thuc:gbpt5}.
+
+      Vậy tập nghiệm của bất phương trình này là $\left(-\infty; 5\right) \cup \left(6; \infty\right)$.
+   \end{minipageindent}
+   \hfill
+   \begin{minipageindent}{0.4\textwidth}
+      \begin{figure}[H]
+         \centering
+         \begin{tikzpicture}
+            \draw[->] (0, 0) -- (6, 0) node[right] {$x$};
+            \draw[->] (0, -1) -- (0, 5) node[above] {$y$};
+            \draw[snake it, name path=A] (0.25, -1) -- (0.25, 5);
+            \draw[snake it, name path=B] (0.35, -1) -- (0.35, 5);
+            \tikzfillbetween[of=A and B]{white}
+            \draw[graph thickness, color=colorEmphasisCyan, domain=0.709:2.5] plot (\x, {(\x - 2.5) * (\x - 3.5)});
+            \draw[graph thickness, color=colorEmphasisCyan, domain=3.5:5.291] plot (\x, {(\x - 2.5) * (\x - 3.5)});
+            \draw[graph thickness, dashed, color=colorEmphasisCyan, domain=2.5:3.5] plot (\x, {(\x - 2.5) * (\x - 3.5)});
+            \draw[color=colorEmphasisCyan, hollow point] (2.5, 0) circle (\pointSize) node[below left] {$\left(5; 0\right)$};
+            \draw[color=colorEmphasisCyan, hollow point] (3.5, 0) circle (\pointSize) node[below right] {$\left(6; 0\right)$};
+         \end{tikzpicture}
+         \caption{Đồ thị của $x^2 - 11x +30 > 0$}
+         \label{fig:ham_so_mot_bien:da_thuc:gbpt5}
+      \end{figure}
+   \end{minipageindent}
+}
+
+Khi bạn đọc đã quen xét trường hợp thì có thể viết ngắn gọn lại dưới dạng bảng xét dấu như bảng \ref{tab:ham_so_mot_bien:da_thuc:gbpt5}.
+
+\begin{table}[H]
+   \centering
+   \begin{tabular}{|c|ccccccc|}
+   \hline
+   $x$          & $-\infty$ &     & $5$ &     & $6$ &   & $\infty$ \\
+   \hline
+   $x-5$        &           & $-$ &  0  &  +  &     & + &           \\
+   \hline
+   $x-6$        &           & $-$ &     & $-$ &  0  & + &           \\
+   \hline
+   $(x-5)(x-6)$ &           &  +  &  0  & $-$ &  0  & + &           \\
+   \hline
+   \end{tabular}
+   \caption{Bảng xét dấu cho $(x - 5)(x - 6)$}
+   \label{tab:ham_so_mot_bien:da_thuc:gbpt5}
+\end{table}
+
+{
+   \begin{minipageindent}{0.55\textwidth}
+      6.
+      
+      \begin{align}
+         -3x^2 + 15x - 12 &> -2x^2 + 10x - 12 \nonumber\\
+         \iff -3x^2 + 2x^2 + 15x - 10x &> -12 + 12 \nonumber\\
+         \iff -x^2 + 5x &> 0 \nonumber\\
+         \iff x\left(-x + 5\right) &> 0 \nonumber\\
+         \iff x\left(x - 5\right) &< 0. \label{eq:ham_so_mot_bien:da_thuc:gbpt6}
+      \end{align}
+
+      Kẻ bảng xét dấu:
+
+      \begin{figure}[H]
+         \centering
+         \begin{tabular}{|c|ccccccc|}
+            \hline
+            $x$      & $-\infty$ &     & $0$ &     & $5$ &   & $\infty$ \\
+            \hline
+            $x$      &           & $-$ &  0  &  +  &     & + &           \\
+            \hline
+            $x-5$    &           & $-$ &     & $-$ &  0  & + &           \\
+            \hline
+            $x(x-5)$ &           &  +  &  0  & $-$ &  0  & + &           \\
+            \hline
+         \end{tabular}
+         \caption{Bảng xét dấu cho $x(x-5)$}
+         \label{tab:ham_so_mot_bien:da_thuc:gbpt6}
+      \end{figure}
+
+      Vậy nghiệm của \ref{eq:ham_so_mot_bien:da_thuc:gbpt6} là $x \in \left(0; 5\right)$.
+   \end{minipageindent}
+   \hfill
+   \begin{minipageindent}{0.4\textwidth}
+      \begin{figure}[H]
+         \centering
+         \begin{tikzpicture}
+            \draw[->] (-1, 0) -- (5.5, 0) node[right] {$x$};
+            \draw[->] (0, -5) -- (0, 3) node[above] {$y$};
+            \draw[graph thickness, color=colorEmphasisCyan, dashed, domain=-0.193:0] plot (\x, {(-3*(\x)^2 + 15*(\x) - 12) / 3});
+            \draw[graph thickness, color=colorEmphasisCyan, dashed, domain=5:5.193] plot (\x, {(-3*(\x)^2 + 15*(\x) - 12) / 3});
+            \draw[graph thickness, color=colorEmphasisCyan, domain=0:5] plot (\x, {(-3*(\x)^2 + 15*(\x) - 12) / 3});
+            \draw[graph thickness, color=colorEmphasis, dashed, domain=-0.284:0] plot (\x, {(-2*(\x)^2 + 10*(\x) - 12) / 3});
+            \draw[graph thickness, color=colorEmphasis, dashed, domain=5:5.284] plot (\x, {(-2*(\x)^2 + 10*(\x) - 12) / 3});
+            \draw[graph thickness, color=colorEmphasis, domain=0:5] plot (\x, {(-2*(\x)^2 + 10*(\x) - 12) / 3});
+
+            \draw[color=colorEmphasisGreen, hollow point] (0, -4) circle (\pointSize) node[right] {$\left(0; -12\right)$};
+            \draw[color=colorEmphasisGreen, hollow point] (5, -4) circle (\pointSize) node[left] {$\left(5; -12\right)$};
+            \node[color=colorEmphasis, above] at (2.5, 0.1667) {$-2x^2 + 10x - 12$};
+            \node[color=colorEmphasisCyan, above] at (2.5, 2.25) {$-3x^2 + 15x - 12$};
+         \end{tikzpicture}
+         \caption{Đồ thị của $-3x^2 + 15x - 12 > -2x^2 + 10x - 12$}
+         \label{fig:ham_so_mot_bien:da_thuc:gbpt6}
+      \end{figure}
+   \end{minipageindent}
+}
+
+7. Có thể coi đa thức bậc $4$ này là một đa thức bậc $2$ với ẩn là $x^2$. Thực hiện phân tích nhân tử để có
+
+\begin{align*}
+   &-x^4 + 18x^2 - 77 \geq 0 \\
+   \iff &x^4 - 18x^2 + 77 \leq 0 
+   \qquad
+   \parbox[c]{\widthof{(Nhân $-1$ ở cả hai vế.)}}{
+      \begin{varwidth}{\linewidth}
+         \textcolor{colorEmphasis}{(Nhân $-1$ ở cả hai vế.)}
+      \end{varwidth}
+   } \\
+   \iff &\left(x^2 - 7\right)\left(x^2 - 11\right) \leq 0 \\
+   \iff &\left(x - \sqrt{7}\right)\left(x + \sqrt{7}\right)\left(x - \sqrt{11}\right)\left(x + \sqrt{11}\right) \leq 0.
+\end{align*}
+
+Kẻ bảng xét dấu
+
+\begin{figure}[H]
+   \centering
+   \begin{tabular}{|c|ccccccccccc|}
+      \hline
+      $x$                   & $-\infty$ &   & $-\sqrt{11}$ &     & $-\sqrt{7}$ &     & $\sqrt{7}$ &     & $\sqrt{11}$ &   & $+\infty$ \\
+      \hline
+      $x-\sqrt{7}$          &           & $-$ &              & $-$ &             & $-$ &     0      &  +  &             & + &           \\
+      \hline
+      $x+\sqrt{7}$          &           & $-$ &              & $-$ &      0       & $+$ &          &  +  &             & + &           \\
+      \hline
+      $x-\sqrt{11}$          &           & $-$ &             & $-$ &             & $-$ &            & $-$ &      0      & + &           \\
+      \hline
+      $x+\sqrt{11}$          &           & $-$ &       0      & $+$ &             & $+$ &            & $+$ &            & + &           \\
+      \hline
+      $x^4 - 18x^2 + 77$ &           & + &      0       & $-$ &      0      &  +  &     0      & $-$ &      0      & + &           \\
+      \hline
+      \end{tabular}
+   \caption{Bảng xét dấu cho $x^4 - 18x^2 + 77$}
+   \label{tab:ham_so_mot_bien:da_thuc:gbpt6}
+\end{figure}
+
+Từ bảng, chúng ta có tập nghiệm của bất phương trình là $\left[-\sqrt{11}; -\sqrt{7}\right] \cup \left[\sqrt{7}; \sqrt{11}\right]$.
+
+{
+   \begin{minipageindent}{0.55\textwidth}
+      8.
+
+      \begin{align}
+         &x^7 \geq x \nonumber\\
+         \iff &x^7 - x \geq 0  \nonumber\\
+         \iff &x(x^6 - 1) \geq 0 \nonumber\\
+         \iff &x(x^3 - 1)(x^3 + 1) \geq 0 \nonumber\\
+         \iff &x(x-1)(x^2 + x + 1)(x+1)(x^2 + x + 1) \geq 0. \label{eq:ham_so_mot_bien:da_thuc:gbpt8}
+      \end{align}
+
+      Cần phải để ý rằng $x^2 + x + 1 = \left(x + \frac{1}{2}\right)^2 + \frac{3}{4} \geq \frac{3}{4}$ và $x^2 - x + 1 = \left(x - \frac{1}{2}\right)^2 + \frac{3}{4} \geq \frac{3}{4}$ đều là hai số dương. Chia cả hai vế của \ref{eq:ham_so_mot_bien:da_thuc:gbpt8} cho hai số dương, chúng ta có:
+
+      \begin{equation}
+         \text{(\ref{eq:ham_so_mot_bien:da_thuc:gbpt8})} \iff x(x-1)(x + 1) \geq 0. \label{eq:ham_so_mot_bien:da_thuc:gbpt8_2}
+      \end{equation}
+   \end{minipageindent}
+   \hfill
+   \begin{minipageindent}{0.4\textwidth}
+      \begin{figure}[H]
+         \centering
+         \begin{tikzpicture}
+            \draw[->] (-3, 0) -- (3, 0) node[right] {$x$};
+            \draw[->] (0, -3) -- (0, 3)  node[above] {$y$};
+
+            \draw[graph thickness, color=colorEmphasisCyan, dashed, domain=-1.170:-1] plot (\x, {(\x)^7});
+            \draw[graph thickness, color=colorEmphasis, dashed, domain=-3:-1] plot (\x, {(\x)});
+
+            \draw[graph thickness, color=colorEmphasisCyan, domain=-1:0] plot (\x, {(\x)^7});
+            \draw[graph thickness, color=colorEmphasis, domain=-1:0] plot (\x, {(\x)});
+
+            \draw[graph thickness, color=colorEmphasisCyan, dashed, domain=0:1] plot (\x, {(\x)^7});
+            \draw[graph thickness, color=colorEmphasis, dashed, domain=0:1] plot (\x, {(\x)});
+
+            \draw[graph thickness, color=colorEmphasisCyan, domain=1:1.170] plot (\x, {(\x)^7});
+            \draw[graph thickness, color=colorEmphasis, domain=1:3] plot (\x, {(\x)});
+            \filldraw[color=colorEmphasisGreen] (-1, -1) circle (\pointSize) node[left] {$\left(-1; -1\right)$};
+            \filldraw[color=colorEmphasisGreen] (0, 0) circle (\pointSize) node[above left] {$\left(0; 0\right)$};
+            \filldraw[color=colorEmphasisGreen] (1, 1) circle (\pointSize) node[right] {$\left(1; 1\right)$};
+         \end{tikzpicture}
+         \caption{Đồ thị của $x^7 \geq x$}
+         \label{fig:ham_so_mot_bien:da_thuc:gbpt8}
+      \end{figure}
+   \end{minipageindent}
+}
+
+Kẻ bảng xét dấu cho \ref{eq:ham_so_mot_bien:da_thuc:gbpt8_2}:
+\begin{table}[H]
+   \centering
+   \begin{tabular}{|c|ccccccccc|}
+      \hline
+      $x$           & $-\infty$ &     & $-1$ &     & $0$ &     & $1$ &   & $+\infty$ \\
+      \hline
+      $x$           &           & $-$ &      & $-$ &  0  &  +  &     & + &           \\
+      \hline
+      $x-1$         &           & $-$ &      & $-$ &     & $-$ &  0  & + &           \\
+      \hline
+      $x+1$         &           & $-$ &  0   &  +  &     &  +  &     & + &           \\
+      \hline
+      $x(x-1)(x+1)$ &           & $-$ &  0   &  +  &  0  & $-$ &  0  & + &           \\
+      \hline
+      \end{tabular}
+\end{table}
+
+Vậy tập nghiệm của bất phương trình là $\left(-\infty; -1\right] \cup \left[0; 1\right]$.
 
 \exercise Xác định tập giá trị của những hàm sau:
 \begin{multicols}{2}
@@ -586,11 +824,11 @@ Do $x \in \mathbb{R}$ nên giá trị trong dấu khai căn $y^2 - 4$ phải kh�
 
 \solution
 
-1. Theo định nghĩa, do hàm chỉ trả về kết quả là $0$ nên tập giá trị của $f$ là $\boxed{\left\{0\right\}}$.
+1. Theo định nghĩa, do hàm chỉ trả về kết quả là $0$ nên tập giá trị của $f$ là $\left\{0\right\}$.
 
 2. Nhận thấy mọi giá trị $y \in \mathbb{R}$ đều có thể là kết quả của $f$ do:
 $$f\left(\frac{y}{10} + 2\right) = 10 \left(\frac{y}{10} + 2\right) - 20 = y.$$
-Vậy tập giá trị của $f$ là $\boxed{\mathbb{R}}$.
+Vậy tập giá trị của $f$ là $\mathbb{R}$.
 
 3. Theo đồ thị \ref{fig:ham_so_mot_bien:da_thuc:x2_2x_3}, chúng ta thấy được $f$ nhận mọi giá trị trong khoảng $\left[2; \infty\right)$. Về mặt đại số, biến đổi $f$ để có:
 $$f(x) = x^2 + 2x + 3 = (x + 1)^2 + 2 \geq 2.$$
@@ -603,7 +841,7 @@ $$f(x) = x^2 + 2x + 3 = (x + 1)^2 + 2 \geq 2.$$
 \end{align*}
 Qua đó, chúng ta kết luận với $y \geq 2$ thì tồn tại $x$ để $y = f(x)$.
 
-Vậy tập giá trị của $f$ là $\boxed{\left[2; \infty\right)}$.
+Vậy tập giá trị của $f$ là $\left[2; \infty\right)$.
 
 4. Bình phương của một số thì luôn không âm. Cho nên $x^2 \geq 0$ và $x^4 = x^2 \times x^2$ là tích của hai số không âm thì là một số không âm. Do đó $x^4 + 2x^2 + 3 \geq 3$.
 
@@ -613,6 +851,6 @@ Ngược lại, mọi số thực $y$ từ $3$ trở lên đều có thể có m
    \iff \sqrt{y - 2} &\geq 1 \\
    \iff \sqrt{y - 2} - 1 &\geq 0.
 \end{align*}
-Qua đó, chúng ta có thể lấy khai căn và đặt $x = \sqrt{\sqrt{y - 2} - 1}$. Khi này, thực hiện tương tự như đã làm ở phần 3 để có $f(x) = y$. Vậy tập giá trị của $f$ là $\boxed{\left[3; \infty\right)}$.
+Qua đó, chúng ta có thể lấy khai căn và đặt $x = \sqrt{\sqrt{y - 2} - 1}$. Khi này, thực hiện tương tự như đã làm ở phần 3 để có $f(x) = y$. Vậy tập giá trị của $f$ là $\left[3; \infty\right)$.
 
 

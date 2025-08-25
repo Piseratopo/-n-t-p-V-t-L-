@@ -1,10 +1,10 @@
 # Fdb version 4
-["xdvipdfmx"] 1756055673.00433 "main.xdv" "main.pdf" "main" 1756055673.42622 0
-  "main.xdv" 1756055672 1161688 dbd863dcf3692fd259090fdb8fdc95dd "xelatex"
+["xdvipdfmx"] 1756118955.26886 "main.xdv" "main.pdf" "main" 1756118955.71396 0
+  "main.xdv" 1756118955 1253616 cce6f2de75abfdfbad7877e3804ea554 "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1756055669.03205 "d:/OneDrive - Hanoi University of Science and Technology/Documents/Physics/-n-t-p-V-t-L-/main.tex" "main.xdv" "main" 1756055673.41793 0
+["xelatex"] 1756118951.04819 "d:/OneDrive - Hanoi University of Science and Technology/Documents/Physics/-n-t-p-V-t-L-/main.tex" "main.xdv" "main" 1756118955.70732 0
   "C:/Users/buinh/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1754119510 25521434 dbc151c24c532bc323b459e7df668540 ""
   "C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136747054 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1233951848 1120 1e8878807317373affa7f7bba4cf2f6a ""
@@ -251,6 +251,7 @@
   "C:/Users/buinh/AppData/Local/Programs/MiKTeX/tex/latex/tools/multicol.sty" 1730400552 32879 f4cfa2226c995da5b04a89ee47abf182 ""
   "C:/Users/buinh/AppData/Local/Programs/MiKTeX/tex/latex/tools/xspace.sty" 1730400552 4545 e3f4de576c914e2000f07f69a891c071 ""
   "C:/Users/buinh/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
+  "C:/Users/buinh/AppData/Local/Programs/MiKTeX/tex/latex/varwidth/varwidth.sty" 1238469540 10894 d359a13923460b2a73d4312d613554c8 ""
   "C:/Users/buinh/AppData/Local/Programs/MiKTeX/tex/latex/vntex/t5cmr.fd" 1368738347 1333 ab1c3d512aa3d88df568aed3641db58f ""
   "C:/Users/buinh/AppData/Local/Programs/MiKTeX/tex/latex/vntex/t5enc.def" 1368738347 21986 ccb3b8f7cc27fbd61b3daabbbb82ad3f ""
   "C:/Users/buinh/AppData/Local/Programs/MiKTeX/tex/latex/was/icomma.sty" 1665850770 1018 df058db1896806f044e2233bb506d425 ""
@@ -265,16 +266,16 @@
   "chapter/toan_hoc_nen_tang/do_thi/mat_phang.tex" 1756042658 10836 0d7011420480458f4b1d161648d77f85 ""
   "chapter/toan_hoc_nen_tang/do_thi/truc_so.tex" 1756041614 11914 b62500b6f997249a213166fd1f2ed903 ""
   "chapter/toan_hoc_nen_tang/ham_so_mot_bien.tex" 1755704707 378 ff82b8748938d3bd388cf387bbef343a ""
-  "chapter/toan_hoc_nen_tang/ham_so_mot_bien/da_thuc.tex" 1756055668 33176 14eb2dcf78cefbf24af44b8a862b013e ""
-  "chapter/toan_hoc_nen_tang/ham_so_mot_bien/dinh_nghia.tex" 1756047052 41442 d04a64e84468a8c736656b23a136445d ""
+  "chapter/toan_hoc_nen_tang/ham_so_mot_bien/da_thuc.tex" 1756118948 44500 3ac42f246e44d763fce6388df27d2031 ""
+  "chapter/toan_hoc_nen_tang/ham_so_mot_bien/dinh_nghia.tex" 1756094726 41800 58970252b5ab7b88005f6edc4dcb0f8e ""
   "chapter/toan_hoc_nen_tang/ham_so_mot_bien/phan_thuc.tex" 1755704744 1997 349a1ee3a49c0bfe54cbdfcbac4b4aad ""
   "chapter/toan_hoc_nen_tang/ham_so_mot_bien/phep_hop_ham.tex" 1755704747 42 7a0ef5985f6bdb025ae4d9a540e5e25d ""
   "chapter/toan_hoc_nen_tang/ham_so_mot_bien/phep_tinh_ham.tex" 1755706382 5555 7eaf859cd94263bfd19c71ac568b6b36 ""
-  "d:/OneDrive - Hanoi University of Science and Technology/Documents/Physics/-n-t-p-V-t-L-/main.tex" 1756050151 62258 893913feab04afe4b4fec5642616b1c0 ""
-  "main.aux" 1756055672 28711 07fc7fc96a68bdc36d50e05065456a09 "xelatex"
-  "main.out" 1756055672 3163 1baa90fb43fbdeccdc22de4b98c1c279 "xelatex"
-  "main.tex" 1756050151 62258 893913feab04afe4b4fec5642616b1c0 ""
-  "main.toc" 1756055672 1553 c32e6df696da2f4a02e5fa60c57ebaed "xelatex"
+  "d:/OneDrive - Hanoi University of Science and Technology/Documents/Physics/-n-t-p-V-t-L-/main.tex" 1756094172 62377 7fdd8978155195a8b47217d8aca1505e ""
+  "main.aux" 1756118955 30663 0a7e3db07ba034e36f81baec0a326101 "xelatex"
+  "main.out" 1756118955 3163 1baa90fb43fbdeccdc22de4b98c1c279 "xelatex"
+  "main.tex" 1756094172 62377 7fdd8978155195a8b47217d8aca1505e ""
+  "main.toc" 1756118955 1553 304c452fc36eb5336059bade277bb072 "xelatex"
   (generated)
   "main.aux"
   "main.log"
