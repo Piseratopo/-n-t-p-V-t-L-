@@ -1,9 +1,10 @@
 \begin{figure}[H]
 	\centering
 	\begin{tikzpicture}
-		\draw[->] (-6, 0) -- (2, 0) node[right] {$x$};
-		\draw[->] (0, 0) -- (0, 5)  node[above] {$y$};
-		\draw[graph thickness, color=colorEmphasisCyan, domain=-6.000:-2.447] plot (\x, {1/((\x)^2 + 4*(\x) + 4)});
-		\draw[graph thickness, color=colorEmphasisCyan, domain=-1.553:2.000] plot (\x, {1/((\x)^2 + 4*(\x) + 4)});
+		\draw[->] (-0.5, 0) -- (6.5, 0) node[right] {$x$};
+		\draw[->] (0, -1) -- (0, 6)  node[above] {$y$};
+		\draw[graph thickness, color=colorEmphasisCyan, domain=-0.500:2.667] plot (\x, {(2*(\x) - 5)/((\x) - 3)});
+		\draw[graph thickness, color=colorEmphasisCyan, domain=3.250:6.500] plot (\x, {(2*(\x) - 5)/((\x) - 3)});
 	\end{tikzpicture}
+	\caption{Đồ thị của $\frac{2 x - 5}{x - 3}$}
 \end{figure}
