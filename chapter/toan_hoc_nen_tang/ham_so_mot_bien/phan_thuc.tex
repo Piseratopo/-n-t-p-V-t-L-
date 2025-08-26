@@ -73,8 +73,8 @@ Khái niệm về phân thức dẫn chúng ta một cách tự nhiên đến kh
          \begin{tikzpicture}
             \draw[->] (-6, 0) -- (2, 0) node[right] {$x$};
             \draw[->] (0, 0) -- (0, 5)  node[above] {$y$};
-            \draw[graph thickness, color=colorEmphasisCyan, domain=-6.000:-2.447] plot (\x, {1/((\x)^2 + 4*(\x) + 4)});
-            \draw[graph thickness, color=colorEmphasisCyan, domain=-1.553:2.000] plot (\x, {1/((\x)^2 + 4*(\x) + 4)});
+            \draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-6.000:-2.447] plot (\x, {1/((\x)^2 + 4*(\x) + 4)});
+            \draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-1.553:2.000] plot (\x, {1/((\x)^2 + 4*(\x) + 4)});
             \filldraw[color=colorEmphasisCyan] (1, {1/9}) circle (\pointSize) node[below] {$\left(1; \frac{1}{9}\right)$};
             \filldraw[color=colorEmphasisCyan] (0, {1/4}) circle (\pointSize) node[below] {$\left(0; \frac{1}{4}\right)$};
             \filldraw[color=colorEmphasisCyan] (-1, 1) circle (\pointSize) node[right] {$\left(-1; 1\right)$};
@@ -117,8 +117,8 @@ Vậy tập giá trị của $f(x)$ là $\mathbb{R}^+$.
          \begin{tikzpicture}
             \draw[->] (-0.5, 0) -- (6.5, 0) node[right] {$x$};
             \draw[->] (0, -1) -- (0, 6)  node[above] {$y$};
-            \draw[graph thickness, color=colorEmphasisCyan, domain=-0.500:2.667] plot (\x, {(2*(\x) - 5)/((\x) - 3)});
-            \draw[graph thickness, color=colorEmphasisCyan, domain=3.250:6.500] plot (\x, {(2*(\x) - 5)/((\x) - 3)});
+            \draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-0.500:2.667] plot (\x, {(2*(\x) - 5)/((\x) - 3)});
+            \draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=3.250:6.500] plot (\x, {(2*(\x) - 5)/((\x) - 3)});
 
             \filldraw[color=colorEmphasisCyan] (0, {5/3}) circle (\pointSize) node[above right] {$\left(0; \frac{5}{3}\right)$};
             \filldraw[color=colorEmphasisCyan] (1, {3/2}) circle (\pointSize) node[above right] {$\left(1; \frac{3}{2}\right)$};
@@ -149,12 +149,129 @@ Qua lập luận vừa rồi, chúng ta có kết luận rằng tập giá trị
       \end{align*}
 
       Qua đó, tập xác định của $f(x)$ là $\mathbb{R} \setminus \left\{\frac{1}{2}; -3\right\}$.
+
+      Bây giờ, chúng ta cần tìm những giá trị $y$ sao cho tồn tại $x$ để $y = f(x)$. Với $y = 0$ thì có $f(-1) = 0$ từ đồ thị \ref{fig:ham_so_mot_bien:phan_thuc:1_x2_5x_3}.
+      Với $y \neq 0$, đặt $$x = \frac{\sqrt{49y^2-2y+1}-5y+1}{4y}.$$ $x$ luôn nhận giá trị thực do mẫu số khác $0$ ($4y\neq 0$) và phần tử bên trong dấu khai căn $49y^2 - 2y + 1 = 48y^2 + y^2 - 2y + 1 = 48y^2 + (y - 1)^2$ luôn không âm. Thay giá trị $x$ này vào tử số của $f(x)$:
+      \begin{align*}
+         x + 1 &= \frac{\sqrt{49y^2-2y+1}-5y+1}{4y} + 1\\
+         &= \frac{\sqrt{49y^2-2y+1}-y+1}{4y}.
+      \end{align*}
    \end{minipageindent}
    \hfill
    \begin{minipageindent}{0.5\textwidth}
-      
+      \begin{figure}[H]
+         \centering
+         \begin{tikzpicture}
+            \draw[->] (-5, 0) -- (2, 0) node[right] {$x$};
+            \draw[->] (0, -4) -- (0, 4)  node[above] {$y$};
+            \draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-5.000:-3.073] plot (\x, {((\x) + 1)/(2*(\x)^2 + 5*(\x) - 3)});
+            \draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-2.930:0.448] plot (\x, {((\x) + 1)/(2*(\x)^2 + 5*(\x) - 3)});
+            \draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=0.555:2.000] plot (\x, {((\x) + 1)/(2*(\x)^2 + 5*(\x) - 3)});
+
+            \filldraw[color= colorEmphasisCyan] (-1, 0.0) circle (\pointSize) node[below] {$\left(-1;0\right)$};
+            \filldraw[color= colorEmphasisCyan] (0, -0.3333333333333333) circle (\pointSize) node[right] {$\left(0;- \frac{1}{3}\right)$};
+            \filldraw[color= colorEmphasisCyan] (-2, 0.2) circle (\pointSize) node[above right] {$\left(-2;\frac{1}{5}\right)$};
+            \filldraw[color= colorEmphasisCyan] (1.5, 0.2777777777777778) circle (\pointSize) node[above right] {$\left(\frac{3}{2};\frac{5}{18}\right)$};
+            \filldraw[color= colorEmphasisCyan] (-5, -0.18181818181818182) circle (\pointSize) node[below] {$\left(-5;- \frac{2}{11}\right)$};
+            \filldraw[color= colorEmphasisCyan] (-2.75, 1.0769230769230769) circle (\pointSize) node[above right] {$\left(- \frac{11}{4};\frac{14}{13}\right)$};
+            \filldraw[color= colorEmphasisCyan] (-4, -0.3333333333333333) circle (\pointSize) node[right] {$\left(-4;- \frac{1}{3}\right)$};
+         \end{tikzpicture}
+         \caption{Đồ thị của $f(x) = \frac{x + 1}{2 x^{2} + 5 x - 3}$}
+         \label{fig:ham_so_mot_bien:phan_thuc:1_x2_5x_3}
+      \end{figure}
    \end{minipageindent}
 }
+
+Thay giá trị của $y$ vào mẫu:
+
+\begin{align*}
+   2x^2 + 5x - 3 &= (x + 3)(2x - 1)\\
+   &= \left(\frac{\sqrt{49y^2-2y+1}-5y+1}{4y}+3\right)\left(2\cdot\frac{\sqrt{49y^2-2y+1}-5y+1}{4y}-1\right) \\
+   &= \frac{\sqrt{49y^2-2y+1}+7y+1}{4y}\cdot\frac{\sqrt{49y^2-2y+1}-7y+1}{2y} \\
+   \displaybreak[1]
+   &= \frac{\left(\sqrt{49y^2-2y+1} + 1\right)^2 - (7y)^2}{8y^2}\\
+   &= \frac{49y^2-2y+1 + 2\sqrt{49y^2-2y+1} + 1 - 49y^2}{8y^2}\\
+   &= \frac{2\sqrt{49y^2-2y+1} - 2y + 2}{8y^2}\\
+   &= \frac{\sqrt{49y^2-2y+1} - y + 1}{4y^2}.
+\end{align*}
+
+Mẫu số này khác $0$ do nếu bằng $0$ thì chúng ta sẽ có
+\begin{align*}
+   \sqrt{49y^2-2y+1} - y + 1 &= 0\\
+   \iff \sqrt{49y^2-2y+1} &= y - 1\\
+   \implies 49y^2 - 2y + 1 &= (y - 1)^2\\
+   \iff 49y^2 - 2y + 1 &= y^2 - 2y + 1\\
+   \iff 48y^2 &= 0\\
+   \iff y &= 0
+\end{align*} mâu thuẫn với giả thiết $y\neq 0$. Lấy tử số chia cho mẫu số và khử bỏ thừa số chúng để có
+$$f\left(\frac{\sqrt{49y^2-2y+1}-5y+1}{4y}\right) = \frac{\frac{\sqrt{49y^2-2y+1}-y+1}{4y}}{\frac{\sqrt{49y^2-2y+1} - y + 1}{4y^2}} = y.$$
+
+Chúng ta đã thể hiện rằng mọi số $y$ đều có thể biểu diễn thông qua $f(x)$. Vậy tập giá trị của $f(x)$ là $\mathbb{R}$.
+
+5. Giải tập xác định:
+
+\begin{align*}
+   x^2 + 2x + 1 &\neq 0 \\
+   \iff (x + 1)^2 &\neq 0 \\
+   \iff x &\neq -1.
+\end{align*}
+
+Qua đó, chúng ta có tập xác định của $f(x)$ là $\mathbb{R} \setminus \left\{-1\right\}$.
+
+Giải tập giá trị sẽ khó hơn. Gọi $y\in\mathbb{R}$ và giả sử $y = f(x)$. Khi này,
+
+\begin{align}
+   y &= \frac{x^2 - 3x - 2}{x^2 + 2x + 1} \nonumber\\
+   \implies y(x^2 + 2x + 1) &= x^2 - 3x - 2 \nonumber\\
+   \iff yx^2 + 2yx + y &= x^2 - 3x - 2 \nonumber\\
+   \iff (y - 1)x^2 + (2y + 3)x + (y + 2) &= 0. \label{eq:ham_so_mot_bien:phan_thuc:p5}
+\end{align}
+
+Nếu $y = 1$ thì từ \ref{eq:ham_so_mot_bien:phan_thuc:p5}, $5x + 3 = 0 \iff x = -\frac{3}{5}$. Vậy $1$ có thể là kết quả của $f(x)$.
+
+Trong trường hợp còn lại, coi \ref{eq:ham_so_mot_bien:phan_thuc:p5} là phương trình bậc hai với $x$ là nghiệm. Để tồn tại nghiệm thì $\Delta \geq 0$, với $\Delta$ là 
+\begin{align*}
+   &= (2y + 3)^2 - 4(y - 1)(y + 2) \\
+   &= 4y^2 + 12y + 9 - 4(y^2 + y - 2) \\
+   &= 4y^2 + 12y + 9 - 4y^2 - 4y + 8 \\
+   &= 8y + 17.
+\end{align*}
+Từ đó, để $\Delta \geq 0$ thì $8y + 17 \geq 0 \iff y \geq -\frac{17}{8}$.
+
+Kiểm tra ngược tập giá trị, chúng ta đã biết $1$ thuộc tập giá trị này. Với mọi giá trị $y \geq -\frac{17}{8}$ khác $1$, đặt $x = \frac{2y + 3 - \sqrt{8y + 17}}{2(1 - y)}$, khi này
+
+\begin{align*}
+   f(x) &= \frac{x^2 - 3x - 2}{x^2 + 2x + 1} = \frac{x^2 - 3x - 2}{x^2 + 2x + 1} - y + y = \frac{x^2 -3x - 2 - yx^2 - 2yx - y}{\left(x + 1\right)^2} + y\\
+   &= \frac{(1-y)x^2 - (2y+3)x - (2+y)}{\left(x + 1\right)^2} + y = \frac{x^2 - \left(\frac{2y+3}{1-y}\right)x - \frac{y+2}{1-y}}{\left(x + 1\right)^2} + y\\
+   \displaybreak[1]
+   &= \frac{x^2 - 2\cdot x\cdot \left(\frac{2y+3}{2(1-y)}\right) + \left(\frac{2y+3}{2(1 - y)}\right)^2 - \left(\frac{2y+3}{2(1-y)}\right)^2 - \frac{y+2}{1 - y} }{(x + 1)^2} + y \\
+   &= \frac{\left(x - \frac{2y + 3}{2(1-y)}\right)^2-\frac{8y + 17}{4(1 - y)^2}}{(x + 1)^2} + y \\
+   &= \frac{\left(\frac{2y + 3 - \sqrt{8y + 17}}{2(1 - y)} - \frac{2y + 3}{2(1-y)}\right)^2-\frac{8y + 17}{4(1 - y)^2}}{(x + 1)^2} + y\\
+   &= \frac{\left(\frac{-\sqrt{8y+17}}{2(1-y)}\right)^2 - \frac{8y + 17}{4(1 - y)^2}}{(x + 1)^2} + y = \frac{\frac{8y + 17}{4(1 - y)^2} - \frac{8y + 17}{4(1 - y)^2}}{(x + 1)^2} + y = y.
+\end{align*}
+
+Vậy tập giá trị của $f(x)$ là $\left[-\frac{17}{8}; +\infty\right)$. Đồ thị của $f(x) = \frac{x^2 - 3x - 2}{x^2 + 2x + 1}$ được thể hiện trong \ref{fig:ham_so_mot_bien:phan_thuc:1t3t2_121}.
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\draw[->] (-6, 0) -- (6, 0) node[right] {$x$};
+		\draw[->] (0, -2.5) -- (0, 5.5)  node[above] {$y$};
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-6.000:-2.423] plot (\x, {((\x)^2 - 3*(\x) - 2)/((\x)^2 + 2*(\x) + 1)});
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-0.688:6.000] plot (\x, {((\x)^2 - 3*(\x) - 2)/((\x)^2 + 2*(\x) + 1)});
+		\filldraw[color= colorEmphasisCyan] (-3.0, 4.0) circle (\pointSize) node[below right] {$\left(-3{,}0;4{,}0\right)$};
+		\filldraw[color= colorEmphasisCyan] (-4.5, 2.5918367346938775) circle (\pointSize) node[below right] {$\left(-4{,}5;2{,}592\right)$};
+		\filldraw[color= colorEmphasisCyan] (0.0, -2.0) circle (\pointSize) node[right] {$\left(0{,}0;-2{,}0\right)$};
+		\filldraw[color= colorEmphasisCyan] (-0.2, -2.125) circle (\pointSize) node[below] {$\left(-\frac{1}{5};-\frac{17}{8}\right)$};
+		\filldraw[color= colorEmphasisCyan] (1.0, -1.0) circle (\pointSize) node[below right] {$\left(1{,}0;-1{,}0\right)$};
+		\filldraw[color= colorEmphasisCyan] (-0.5, -1.0) circle (\pointSize) node[left] {$\left(-0{,}5;-1{,}0\right)$};
+		\filldraw[color= colorEmphasisCyan] (3.0, -0.125) circle (\pointSize) node[above left] {$\left(3{,}0;-0{,}125\right)$};
+      \filldraw[color= colorEmphasisCyan] (-0.6, 1) circle (\pointSize) node[left] {$\left(-\frac{3}{5};1\right)$};
+	\end{tikzpicture}
+	\caption{Đồ thị của $f(x) = \frac{x^{2} - 3 x - 2}{x^{2} + 2 x + 1}$}
+   \label{fig:ham_so_mot_bien:phan_thuc:1t3t2_121}
+\end{figure}
+
 
 \exercise Phác thảo đồ thị của những hàm sau:
 
