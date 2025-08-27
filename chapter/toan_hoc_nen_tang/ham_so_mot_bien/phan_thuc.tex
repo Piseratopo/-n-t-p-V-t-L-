@@ -272,6 +272,106 @@ Vậy tập giá trị của $f(x)$ là $\left[-\frac{17}{8}; +\infty\right)$. �
    \label{fig:ham_so_mot_bien:phan_thuc:1t3t2_121}
 \end{figure}
 
+6.
+
+Xét tập xác định của $f(x)$, cần phải có $x - 2 \neq 0 \iff x \neq 2$. Vậy tập xác định của $f(x)$ là $\mathbb{R} \setminus \left\{2\right\}$.
+
+Đặt $y = f(x)$, chúng ta có:
+
+\begin{align*}
+   y &= \frac{2x^2 + 2}{x - 2} \\
+   \displaybreak[1]
+   \iff y(x - 2) &= 2x^2 + 2 \\
+   \displaybreak[1]
+   \iff yx - 2y &= 2x^2 + 2 \\
+   \displaybreak[1]
+   \iff 2x^2 - yx + 2y + 2 &= 0.
+\end{align*}
+
+Coi kết quả của biến đổi là phương trình bậc hai ẩn $x$. Để tồn tại $x$ thì cần phải có
+
+\begin{align*}
+   (-y)^2 - 4\cdot 2\cdot (2y + 2) & \geq 0\\
+   \iff y^2 - 16y - 16 &\geq 0.
+\end{align*}
+
+Kẻ bảng xét dấu của $g(y) = y^2 - 16y - 16$:
+
+\begin{table}[H]
+   \centering
+   \begin{tabular}{|c|ccccccc|}
+   \hline
+   $y$             & $-\infty$ &   & $8-4 \sqrt{5}$ &     & $8+4 \sqrt{5}$ &   & $+\infty$ \\
+   \hline
+   $y^{2}-16y-16$  &           & + &        0        & $-$ &       0        & + &           \\
+   \hline
+   \end{tabular}
+   \caption{Bảng xét dấu của $g(y) = y^2 - 16y - 16$}
+   \label{tab:ham_so_mot_bien:phan_thuc:1t16t16}
+\end{table}
+
+Qua bảng, chúng ta có điều kiện của $y$ là $y \in \left(-\infty; 8 - 4\sqrt{5}\right] \cup \left[8 + 4\sqrt{5}; +\infty\right)$. Chúng ta cũng có thể kiểm chứng bằng biến đổi đại số rằng với $y$ thuộc tập hợp này thì có $f\left(\frac{\sqrt{y^2 - 16y - 16} + y}{4}\right) = y$.
+
+Vậy tập giá trị của $f(x)$ là $\left(-\infty; 8 - 4\sqrt{5}\right] \cup \left[8 + 4\sqrt{5}; +\infty\right)$.
+
+Do tính chất của đồ thị, trục tung của đồ thị trong lời giải của tác giả đã bị co lại $10$ lần, thể hiện ở hình \ref{fig:ham_so_mot_bien:phan_thuc:2x2_2_x_t2}.
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\draw[->] (-3, 0) -- (7, 0) node[right] {$x$};
+		\draw[->] (0, -4) -- (0, 4)  node[above] {$y$};
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-3.000:1.790] plot (\x, {((2*(\x)^2 + 2)/((\x) - 2)) / 10});
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=2.319:7.000] plot (\x, {((2*(\x)^2 + 2)/((\x) - 2)) / 10});
+		\filldraw[color= colorEmphasisCyan] (-2, -0.25) circle (\pointSize) node[below] {$\left(-2;- \frac{5}{2}\right)$};
+		\filldraw[color= colorEmphasisCyan] (1, -0.4) circle (\pointSize) node[below left] {$\left(1;-4\right)$};
+		\filldraw[color= colorEmphasisCyan] (0, -0.1) circle (\pointSize) node[above] {$\left(0;-1\right)$};
+		\filldraw[color= colorEmphasisCyan] (3, 2.0) circle (\pointSize) node[below left] {$\left(3;20\right)$};
+		\filldraw[color= colorEmphasisCyan] (5, 1.7333333333333334) circle (\pointSize) node[above] {$\left(5;\frac{52}{3}\right)$};
+	\end{tikzpicture}
+	\caption{Đồ thị của $f(x) = \frac{2 x^{2} + 2}{x - 2}$}
+   \label{fig:ham_so_mot_bien:phan_thuc:2x2_2_x_t2}
+\end{figure}
+
+{
+   \begin{minipageindent}{0.48\textwidth}
+      7. Giải tập xác định:
+      
+      $$x - 1 \neq 0 \iff x \neq 1.$$
+      
+      Qua đó, tập xác định của $f(x)$ là $\mathbb{R} \setminus \left\{1\right\}$.
+      
+      Đặt $y = f(x)$, với giả thiết $x \neq 1$ thì 
+      
+      $$
+      y = \frac{x^2 + 4x - 5}{x - 1} = \frac{(x + 5)(x - 1)}{x - 1} = x + 5.
+      $$
+      
+      Nhận thấy rằng $y\neq 6$, do nếu ngược lại thì sẽ cần phải có $x = 1$, không thỏa mãn tập xác định của $f(x)$. Với mọi giá trị khác của $y$ đều có thể là đầu ra, do hiển nhiên rằng $f(y - 5) = y$ như biến đổi ở trên.
+      
+      Vậy tập giá trị của $f(x)$ là $\mathbb{R} \setminus \left\{6\right\}$.
+
+      Tương tự khi giải bất phương trình, khi biểu diễn đồ thị có đứt đoạn, người ta thường vẽ đường tròn rỗng tại điểm bị đứt như đồ thị hình \ref{fig:ham_so_mot_bien:phan_thuc:145_1t1}.
+   \end{minipageindent}
+   \hfill
+   \begin{minipageindent}{0.5\textwidth}
+      \begin{figure}[H]
+         \centering
+         \begin{tikzpicture}
+            \draw[->] (-3.5, 0) -- (3.5, 0) node[right] {$x$};
+            \draw[->] (0, 0) -- (0, 8)  node[above] {$y$};
+            \draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-3.500:3.000] plot (\x, {(((\x)^2 + 4*(\x) - 5)/((\x) - 1)) / 1});
+            \filldraw[color= colorEmphasisCyan] (-2, 3.0) circle (\pointSize) node[above left] {$\left(-2;3\right)$};
+            \filldraw[color= colorEmphasisCyan] (-1, 4.0) circle (\pointSize) node[above left] {$\left(-1;4\right)$};
+            \filldraw[color= colorEmphasisCyan] (0, 5.0) circle (\pointSize) node[above left] {$\left(0;5\right)$};
+            \draw[color=colorEmphasisCyan, hollow point] (1, 6.0) circle (\pointSize) node[above left] {$\left(1;6\right)$};
+            \filldraw[color= colorEmphasisCyan] (2, 7.0) circle (\pointSize) node[above left] {$\left(2;7\right)$};
+         \end{tikzpicture}
+         \caption{Đồ thị của $f(x) = \frac{x^{2} + 4 x - 5}{x - 1}$}
+         \label{fig:ham_so_mot_bien:phan_thuc:145_1t1}
+      \end{figure}
+   \end{minipageindent}
+}
 
 \exercise Phác thảo đồ thị của những hàm sau:
 
