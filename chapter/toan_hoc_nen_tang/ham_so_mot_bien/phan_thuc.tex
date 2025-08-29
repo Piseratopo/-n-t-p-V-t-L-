@@ -12,12 +12,12 @@ Khái niệm về phân thức dẫn chúng ta một cách tự nhiên đến kh
       \item $\displaystyle f(x) = \frac{2}{x}$;
       \item $\displaystyle f(x) = \frac{1}{x^2 + 4x + 4}$;
       \item $\displaystyle f(x) = \frac{2x - 5}{x - 3}$;
-      \item $\displaystyle f(x) = \frac{x + 1}{2x^2 + 5x - 3}$;
-      \item $\displaystyle f(x) = \frac{x^2 - 3x - 2}{x^2 + 2x + 1}$;
-      \item $\displaystyle f(x) = \frac{2x^2 + 2}{x - 2}$;
       \item $\displaystyle f(x) = \frac{x^2 + 4x - 5}{x - 1}$;
       \item $\displaystyle f(x) = \frac{x - 1}{x^2 + 4x - 5}$;
       \item $\displaystyle f(x) = \frac{1}{x^2 + x + 1}$.
+      \item $\displaystyle f(x) = \frac{x + 1}{2x^2 + 5x - 3}$;
+      \item $\displaystyle f(x) = \frac{x^2 - 3x - 2}{x^2 + 2x + 1}$;
+      \item $\displaystyle f(x) = \frac{2x^2 + 2}{x - 2}$;
    \end{enumerate}
 \end{multicols}
 
@@ -141,7 +141,119 @@ Qua lập luận vừa rồi, chúng ta có kết luận rằng tập giá trị
 
 {
    \begin{minipageindent}{0.48\textwidth}
-      4. Để $f(x)$ có nghĩa thì mẫu số phải khác $0$. Có:
+      4. Giải tập xác định:
+      
+      $$x - 1 \neq 0 \iff x \neq 1.$$
+      
+      Qua đó, tập xác định của $f(x)$ là $\mathbb{R} \setminus \left\{1\right\}$.
+      
+      Đặt $y = f(x)$, với giả thiết $x \neq 1$ thì 
+      
+      $$
+      y = \frac{x^2 + 4x - 5}{x - 1} = \frac{(x + 5)(x - 1)}{x - 1} = x + 5.
+      $$
+      
+      Nhận thấy rằng $y\neq 6$, do nếu ngược lại thì sẽ cần phải có $x = 1$, không thỏa mãn tập xác định của $f(x)$. Với mọi giá trị khác của $y$ đều có thể là đầu ra, do hiển nhiên rằng $f(y - 5) = y$ như biến đổi ở trên.
+      
+      Vậy tập giá trị của $f(x)$ là $\mathbb{R} \setminus \left\{6\right\}$.
+
+      Tương tự khi giải bất phương trình, khi biểu diễn đồ thị có đứt đoạn, người ta thường vẽ đường tròn rỗng tại điểm bị đứt như đồ thị hình \ref{fig:ham_so_mot_bien:phan_thuc:145_1t1}.
+   \end{minipageindent}
+   \hfill
+   \begin{minipageindent}{0.5\textwidth}
+      \begin{figure}[H]
+         \centering
+         \begin{tikzpicture}
+            \draw[->] (-3.5, 0) -- (3.5, 0) node[right] {$x$};
+            \draw[->] (0, 0) -- (0, 8)  node[above] {$y$};
+            \draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-3.500:3.000] plot (\x, {(((\x)^2 + 4*(\x) - 5)/((\x) - 1)) / 1});
+            \filldraw[color= colorEmphasisCyan] (-2, 3.0) circle (\pointSize) node[above left] {$\left(-2;3\right)$};
+            \filldraw[color= colorEmphasisCyan] (-1, 4.0) circle (\pointSize) node[above left] {$\left(-1;4\right)$};
+            \filldraw[color= colorEmphasisCyan] (0, 5.0) circle (\pointSize) node[above left] {$\left(0;5\right)$};
+            \draw[color=colorEmphasisCyan, hollow point] (1, 6.0) circle (\pointSize) node[above left] {$\left(1;6\right)$};
+            \filldraw[color= colorEmphasisCyan] (2, 7.0) circle (\pointSize) node[above left] {$\left(2;7\right)$};
+         \end{tikzpicture}
+         \caption{Đồ thị của $f(x) = \frac{x^{2} + 4 x - 5}{x - 1}$}
+         \label{fig:ham_so_mot_bien:phan_thuc:145_1t1}
+      \end{figure}
+   \end{minipageindent}
+}
+
+5. Giải tập xác định, $f(x)$ xác định khi và chỉ khi
+
+\begin{align*}
+   x^2 + 4x - 5 &\neq 0\\
+   \iff (x + 5)(x - 1) &\neq 0\\
+   \iff x &\notin \left\{-5; 1\right\}.
+\end{align*}
+
+Tập xác định của $f(x)$ là $\mathbb{R} \setminus \left\{-5; 1\right\}$.
+
+Đặt $y = f(x) = \frac{x - 1}{x^2 + 4x - 5}=\frac{x - 1}{(x + 5)(x - 1)} = \frac{1}{x + 5}$. Qua đó, $y$ không thể bằng $0$. Khi $y\neq 0$, biến đổi cho chúng ta được $x = \frac{1}{y} - 5$. Do điều kiện tập xác định lên $x$ nên $y\neq \frac{1}{6}$.
+
+Kiểm chứng đại số cơ bản cho chúng ta được nếu $y\notin \left\{0; \frac{1}{6}\right\}$ thì có thể đặt $x = \frac{1}{y} - 5$ để có $f(x) = y$.
+
+Vậy tập giá trị của $f(x)$ là $\mathbb{R} \setminus \left\{0; \frac{1}{6}\right\}$.
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\draw[->] (-7, 0) -- (3, 0) node[right] {$x$};
+		\draw[->] (0, -4) -- (0, 4)  node[above] {$y$};
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-7.000:-5.250] plot (\x, {(((\x) - 1)/((\x)^2 + 4*(\x) - 5)) / 1});
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-4.750:3.000] plot (\x, {(((\x) - 1)/((\x)^2 + 4*(\x) - 5)) / 1});
+		\filldraw[color= colorEmphasisCyan] (-3, 0.5) circle (\pointSize) node[above] {$\left(-3;\frac{1}{2}\right)$};
+		\filldraw[color= colorEmphasisCyan] (-6, -1.0) circle (\pointSize) node[above right] {$\left(-6;-1\right)$};
+		\filldraw[color= colorEmphasisCyan] (0, 0.2) circle (\pointSize) node[below] {$\left(0;\frac{1}{5}\right)$};
+		\filldraw[color= colorEmphasisCyan] (2, 0.14285714285714285) circle (\pointSize) node[below] {$\left(2;\frac{1}{7}\right)$};
+      \draw[color=colorEmphasisCyan, hollow point] (1, {1/6}) circle (\pointSize) node[above] {$\left(1;\frac{1}{6}\right)$};
+	\end{tikzpicture}
+	\caption{Đồ thị của $\frac{x - 1}{x^{2} + 4 x - 5}$}
+   \label{fig:ham_so_mot_bien:phan_thuc:1t1_14t5}
+\end{figure}
+
+{
+   \begin{minipageindent}{0.48\textwidth}
+      6. Để ý rằng $x^2 + x + 1 = \left(x + \frac{1}{2}\right)^2 + \frac{3}{4} \geq \frac{3}{4}$ với mọi giá trị thực của $x$. Cho nên $f(x) = \frac{1}{x^2 + x + 1}$ là hai số dương chia cho nhau luôn có nghĩa. Cho nên, tập xác định của $f(x)$ là $\mathbb{R}$.
+
+      Cũng từ $x^2 + x + 1 \geq \frac{3}{4}$ mà chúng ta có $\frac{1}{x^2 + x + 1} \leq \frac{4}{3}$ \textcolor{colorEmphasis}{(Cùng chia cả hai vế cho số dương $\frac{3(x^2 + x + 1)}{4}$)}.
+      
+      Ngoài ra, do là phép chia hai số dương nên $\frac{1}{x^2 + x + 1} > 0$. Do đó, $0 < f(x) \leq \frac{4}{3}$.
+
+      Ngược lại, mọi $y \in \left(0; \frac{4}{3}\right]$ đều có thể biểu diễn thông qua $f(x)$, do 
+      \begin{align*}
+         f\left(\sqrt{\frac{4-3y}{4y}} - \frac{1}{2} \right) &= \frac{1}{\left(\left(\sqrt{\frac{4-3y}{4y}} - \frac{1}{2}\right) + \frac{1}{2}\right)^2 + \frac{3}{4}} \\
+         &= \frac{1}{\left(\sqrt{\frac{4-3y}{4y}}\right)^2 + \frac{3}{4}} \\
+         &= \frac{1}{\frac{4-3y}{4y} + \frac{3}{4}} \\
+         &= \frac{1}{\frac{4-3y + 3y}{4y}} \\
+         &= \frac{1}{\frac{4}{4y}} \\
+         &= y.
+      \end{align*}
+
+      Vậy tập giá trị của $f(x)$ là $\left(0; \frac{4}{3}\right]$.
+   \end{minipageindent}
+   \hfill
+   \begin{minipageindent}{0.5\textwidth}
+      \begin{figure}[H]
+         \centering
+         \begin{tikzpicture}
+            \draw[->] (-4, 0) -- (3, 0) node[right] {$x$};
+            \draw[->] (0, -2) -- (0, 4)  node[above] {$y$};
+            \draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-4.000:3.000] plot (\x, {(1/((\x)^2 + (\x) + 1)) / 0.5});
+            \filldraw[color=colorEmphasisCyan] (0, 2.0) circle (\pointSize) node[right] {$\left(0;1\right)$};
+            \filldraw[color=colorEmphasisCyan] (-0.5, 2.6666666666666665) circle (\pointSize) node[above] {$\left(- \frac{1}{2};\frac{4}{3}\right)$};
+            \filldraw[color=colorEmphasisCyan] (1, 0.6666666666666666) circle (\pointSize) node[above right] {$\left(1;\frac{1}{3}\right)$};
+            \filldraw[color=colorEmphasisCyan] (-2, 0.6666666666666666) circle (\pointSize) node[above left] {$\left(-2;\frac{1}{3}\right)$};
+         \end{tikzpicture}
+         \caption{Đồ thị của $f(x) = \frac{1}{x^{2} + x + 1}$}
+         \label{fig:ham_so_mot_bien:phan_thuc:1_x2_1x_1}
+      \end{figure}
+   \end{minipageindent}
+}
+
+{
+   \begin{minipageindent}{0.48\textwidth}
+      7. Để $f(x)$ có nghĩa thì mẫu số phải khác $0$. Có:
       \begin{align*}
          2x^2 + 5x - 3 &\neq 0 \\
          \iff (2x - 1)(x + 3) &\neq 0 \qquad \parbox[c]{0.36\textwidth}{\textcolor{colorEmphasis}{(Phân tích đa thức thành nhân tử.)}}\\
@@ -188,7 +300,7 @@ Thay giá trị của $y$ vào mẫu:
    2x^2 + 5x - 3 &= (x + 3)(2x - 1)\\
    &= \left(\frac{\sqrt{49y^2-2y+1}-5y+1}{4y}+3\right)\left(2\cdot\frac{\sqrt{49y^2-2y+1}-5y+1}{4y}-1\right) \\
    &= \frac{\sqrt{49y^2-2y+1}+7y+1}{4y}\cdot\frac{\sqrt{49y^2-2y+1}-7y+1}{2y} \\
-   \displaybreak[1]
+   \displaybreak[2]
    &= \frac{\left(\sqrt{49y^2-2y+1} + 1\right)^2 - (7y)^2}{8y^2}\\
    &= \frac{49y^2-2y+1 + 2\sqrt{49y^2-2y+1} + 1 - 49y^2}{8y^2}\\
    &= \frac{2\sqrt{49y^2-2y+1} - 2y + 2}{8y^2}\\
@@ -208,7 +320,7 @@ $$f\left(\frac{\sqrt{49y^2-2y+1}-5y+1}{4y}\right) = \frac{\frac{\sqrt{49y^2-2y+1
 
 Chúng ta đã thể hiện rằng mọi số $y$ đều có thể biểu diễn thông qua $f(x)$. Vậy tập giá trị của $f(x)$ là $\mathbb{R}$.
 
-5. Giải tập xác định:
+8. Giải tập xác định:
 
 \begin{align*}
    x^2 + 2x + 1 &\neq 0 \\
@@ -227,9 +339,9 @@ Giải tập giá trị sẽ khó hơn. Gọi $y\in\mathbb{R}$ và giả sử $y
    \iff (y - 1)x^2 + (2y + 3)x + (y + 2) &= 0. \label{eq:ham_so_mot_bien:phan_thuc:p5}
 \end{align}
 
-Nếu $y = 1$ thì từ \ref{eq:ham_so_mot_bien:phan_thuc:p5}, $5x + 3 = 0 \iff x = -\frac{3}{5}$. Vậy $1$ có thể là kết quả của $f(x)$.
+Nếu $y = 1$ thì từ (\ref{eq:ham_so_mot_bien:phan_thuc:p5}), $5x + 3 = 0 \iff x = -\frac{3}{5}$. Vậy $1$ có thể là kết quả của $f(x)$.
 
-Trong trường hợp còn lại, coi \ref{eq:ham_so_mot_bien:phan_thuc:p5} là phương trình bậc hai với $x$ là nghiệm. Để tồn tại nghiệm thì $\Delta \geq 0$, với $\Delta$ là 
+Trong trường hợp còn lại, coi (\ref{eq:ham_so_mot_bien:phan_thuc:p5}) là phương trình bậc hai với $x$ là nghiệm. Để tồn tại nghiệm thì $\Delta \geq 0$, với $\Delta$ là 
 \begin{align*}
    &= (2y + 3)^2 - 4(y - 1)(y + 2) \\
    &= 4y^2 + 12y + 9 - 4(y^2 + y - 2) \\
@@ -243,7 +355,7 @@ Kiểm tra ngược tập giá trị, chúng ta đã biết $1$ thuộc tập gi
 \begin{align*}
    f(x) &= \frac{x^2 - 3x - 2}{x^2 + 2x + 1} = \frac{x^2 - 3x - 2}{x^2 + 2x + 1} - y + y = \frac{x^2 -3x - 2 - yx^2 - 2yx - y}{\left(x + 1\right)^2} + y\\
    &= \frac{(1-y)x^2 - (2y+3)x - (2+y)}{\left(x + 1\right)^2} + y = \frac{x^2 - \left(\frac{2y+3}{1-y}\right)x - \frac{y+2}{1-y}}{\left(x + 1\right)^2} + y\\
-   \displaybreak[1]
+   \displaybreak[2]
    &= \frac{x^2 - 2\cdot x\cdot \left(\frac{2y+3}{2(1-y)}\right) + \left(\frac{2y+3}{2(1 - y)}\right)^2 - \left(\frac{2y+3}{2(1-y)}\right)^2 - \frac{y+2}{1 - y} }{(x + 1)^2} + y \\
    &= \frac{\left(x - \frac{2y + 3}{2(1-y)}\right)^2-\frac{8y + 17}{4(1 - y)^2}}{(x + 1)^2} + y \\
    &= \frac{\left(\frac{2y + 3 - \sqrt{8y + 17}}{2(1 - y)} - \frac{2y + 3}{2(1-y)}\right)^2-\frac{8y + 17}{4(1 - y)^2}}{(x + 1)^2} + y\\
@@ -272,7 +384,7 @@ Vậy tập giá trị của $f(x)$ là $\left[-\frac{17}{8}; +\infty\right)$. �
    \label{fig:ham_so_mot_bien:phan_thuc:1t3t2_121}
 \end{figure}
 
-6.
+9.
 
 Xét tập xác định của $f(x)$, cần phải có $x - 2 \neq 0 \iff x \neq 2$. Vậy tập xác định của $f(x)$ là $\mathbb{R} \setminus \left\{2\right\}$.
 
@@ -280,11 +392,11 @@ Xét tập xác định của $f(x)$, cần phải có $x - 2 \neq 0 \iff x \neq
 
 \begin{align*}
    y &= \frac{2x^2 + 2}{x - 2} \\
-   \displaybreak[1]
+   \displaybreak[2]
    \iff y(x - 2) &= 2x^2 + 2 \\
-   \displaybreak[1]
+   \displaybreak[2]
    \iff yx - 2y &= 2x^2 + 2 \\
-   \displaybreak[1]
+   \displaybreak[2]
    \iff 2x^2 - yx + 2y + 2 &= 0.
 \end{align*}
 
@@ -333,45 +445,216 @@ Do tính chất của đồ thị, trục tung của đồ thị trong lời gi�
    \label{fig:ham_so_mot_bien:phan_thuc:2x2_2_x_t2}
 \end{figure}
 
-{
-   \begin{minipageindent}{0.48\textwidth}
-      7. Giải tập xác định:
-      
-      $$x - 1 \neq 0 \iff x \neq 1.$$
-      
-      Qua đó, tập xác định của $f(x)$ là $\mathbb{R} \setminus \left\{1\right\}$.
-      
-      Đặt $y = f(x)$, với giả thiết $x \neq 1$ thì 
-      
-      $$
-      y = \frac{x^2 + 4x - 5}{x - 1} = \frac{(x + 5)(x - 1)}{x - 1} = x + 5.
-      $$
-      
-      Nhận thấy rằng $y\neq 6$, do nếu ngược lại thì sẽ cần phải có $x = 1$, không thỏa mãn tập xác định của $f(x)$. Với mọi giá trị khác của $y$ đều có thể là đầu ra, do hiển nhiên rằng $f(y - 5) = y$ như biến đổi ở trên.
-      
-      Vậy tập giá trị của $f(x)$ là $\mathbb{R} \setminus \left\{6\right\}$.
+\exercise Giải các phương trình sau với ẩn $x \in \mathbb{R}$.
 
-      Tương tự khi giải bất phương trình, khi biểu diễn đồ thị có đứt đoạn, người ta thường vẽ đường tròn rỗng tại điểm bị đứt như đồ thị hình \ref{fig:ham_so_mot_bien:phan_thuc:145_1t1}.
-   \end{minipageindent}
-   \hfill
-   \begin{minipageindent}{0.5\textwidth}
-      \begin{figure}[H]
-         \centering
-         \begin{tikzpicture}
-            \draw[->] (-3.5, 0) -- (3.5, 0) node[right] {$x$};
-            \draw[->] (0, 0) -- (0, 8)  node[above] {$y$};
-            \draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-3.500:3.000] plot (\x, {(((\x)^2 + 4*(\x) - 5)/((\x) - 1)) / 1});
-            \filldraw[color= colorEmphasisCyan] (-2, 3.0) circle (\pointSize) node[above left] {$\left(-2;3\right)$};
-            \filldraw[color= colorEmphasisCyan] (-1, 4.0) circle (\pointSize) node[above left] {$\left(-1;4\right)$};
-            \filldraw[color= colorEmphasisCyan] (0, 5.0) circle (\pointSize) node[above left] {$\left(0;5\right)$};
-            \draw[color=colorEmphasisCyan, hollow point] (1, 6.0) circle (\pointSize) node[above left] {$\left(1;6\right)$};
-            \filldraw[color= colorEmphasisCyan] (2, 7.0) circle (\pointSize) node[above left] {$\left(2;7\right)$};
-         \end{tikzpicture}
-         \caption{Đồ thị của $f(x) = \frac{x^{2} + 4 x - 5}{x - 1}$}
-         \label{fig:ham_so_mot_bien:phan_thuc:145_1t1}
-      \end{figure}
-   \end{minipageindent}
-}
+\begin{multicols}{2}
+   \begin{enumerate}
+      \item $\displaystyle\frac{2x^2 - 5x + 2}{3x} = 0$;
+      \item $\displaystyle \frac{4x + 2}{x^2 + x - 2} = 1$;
+      \item $\displaystyle \frac{x^2 + 4x + 3}{x^3 + 3x^2 -x - 3} = \frac{1}{x - 1}$;
+      \item $\displaystyle \frac{3x}{x + 2} - \frac{x}{x - 2} = \frac{8}{x^2 - 4}$;
+      \item $\displaystyle A = \frac{h}{6x}\left(\frac{b_0}{x} + 4b_1 + b_2\right)$ với $A$, $b_0$, $b_1$, $b_2$, $h$ là những tham số thực dương;
+      \item $\displaystyle \frac{3x}{x + 2} - \frac{x}{x - 2} = \frac{8}{4 - x^2}$;
+      \item $\displaystyle \frac{24}{x + 2} + \frac{24}{x^2 - 5x + 6} = x^2$.
+   \end{enumerate}
+\end{multicols}
+
+\solution
+
+1. Không phải mọi giá trị của $x$ sẽ làm cho biểu thức được cho ở mỗi vế có nghĩa. Để $\frac{2x^2 - 5x + 2}{3x}$ có nghĩa thì $3x \neq 0 \iff x \neq 0$. Khi này:
+
+\begin{align*}
+   \frac{2x^2 - 5x + 2}{3x} &= 0 \\
+   \implies 2x^2 - 5x + 2 &= 0 \\
+   \iff (2x - 1)(x - 2) &= 0
+\end{align*}
+\begin{equation*}
+   \iff \left[\begin{array}{l}
+      2x - 1 = 0 \\
+      x - 2 = 0
+   \end{array}\right. \iff \left[\begin{array}{l}
+      x = \frac{1}{2} \\
+      x = 2
+   \end{array}\right..
+\end{equation*}
+
+Kiểm tra trực tiếp, chúng ta thấy nghiệm thỏa mãn phương trình gốc. Vậy tập nghiệm của phương trình là $\left\{\frac{1}{2}; 2\right\}$.
+
+2. Coi vế trái của phương trình được cho là một phân thức, chúng ta tìm tập xác định của nó:
+
+\begin{align*}
+   x^2 + x - 2 &\neq 0 \\
+   \iff (x + 2)(x - 1) &\neq 0 \\
+\end{align*}
+\begin{equation*}
+   \iff \begin{cases}
+      x + 2 \neq 0 \\
+      x - 1 \neq 0
+   \end{cases} \iff \begin{cases}
+      x \neq -2 \\
+      x \neq 1
+   \end{cases}.
+\end{equation*}
+
+Thực hiện biến đổi phương trình:
+
+\begin{align*}
+   \frac{4x + 2}{x^2 + x - 2} &= 1 \\
+   \implies 4x + 2 &= x^2 + x - 2 \\
+   \displaybreak[2]
+   \iff 0 &= x^2 - 3x - 4 \\
+   \iff 0 &= (x + 1)(x - 4) \\
+   \iff x &\in \left\{-1; 4\right\}.
+\end{align*}
+
+Cả hai giá trị đều là nghiệm của phương trình bằng kiểm tra trực tiếp. Vậy phương trình có nghiệm là $\left\{-1; 4\right\}$.
+
+3. Để cả vế trái và vế phải của phương trình xác định giá trị thì
+
+\begin{equation*}
+   \begin{cases}
+      x^3 + 3x^2 - x - 3 \neq 0 \\
+      x - 1 \neq 0
+   \end{cases} \iff 
+   \begin{cases}
+      (x - 1)(x + 1)(x - 3) \neq 0 \\
+      x - 1 \neq 0
+   \end{cases}
+   \iff x \notin \left\{-1; 1; 3\right\}.
+\end{equation*}
+
+Biến đổi phương trình:
+
+\begin{align}
+   \frac{x^2 + 4x + 3}{x^3 + 3x^2 -x - 3} &= \frac{1}{x - 1} \nonumber\\
+   \iff \frac{(x + 1)(x + 3)}{(x - 1)(x + 1)(x - 3)} &= \frac{1}{x - 1} \nonumber\\
+   \iff \frac{1}{x - 1} = \frac{1}{x - 1}. \label{eq:ham_so_mot_bien:ơhan_thuc:ptpt3}
+\end{align}
+
+Phương trình (\ref{eq:ham_so_mot_bien:ơhan_thuc:ptpt3}) luôn đúng với $x$ làm cho cả hai vế của phương trình xác định. Do đó, tập nghiệm của phương trình là $\mathbb{R} \setminus \left\{-1; 1; 3\right\}$.
+
+4. Phương trình có tập xác định\footnote{Tập xác định chỉ có với hàm số. Ở đây, ý chúng ta muốn là những giá trị để cho cả hai vế có thể tính được.} là $\mathbb{R} \setminus \{-2; 2\}$.
+
+\begin{align*}
+   \frac{3x}{x + 2} - \frac{x}{x - 2} &= \frac{8}{x^2 - 4} \\
+   \iff \frac{3x(x - 2)}{(x + 2)(x - 2)} - \frac{x(x + 2)}{(x - 2)(x + 2)} &= \frac{8}{(x - 2)(x + 2)} \\
+   \implies \left(3x^2 - 6x\right) - \left(x^2 + 2x\right) &= 8 \\
+   \iff 2x^2 - 8x - 8 &= 0 \\
+   \iff x &\in \left\{2\left(1 + \sqrt{2}\right); 2(1 - \sqrt{2})\right\}.
+\end{align*}
+
+Kiểm tra lại, chúng ta có:
+
+\begin{align*}
+   &\frac{3\cdot 2(1+\sqrt{2})}{2(1+\sqrt{2}) + 2} - \frac{2(1+\sqrt{2})}{2(1+\sqrt{2}) - 2} \\
+   = &\frac{6 + 6\sqrt{2}}{4 + 2\sqrt{2}} - \frac{2 + 2\sqrt{2}}{2\sqrt{2}} \\
+   = &\frac{\left(6 + 6\sqrt{2}\right)2\sqrt{2} - \left(2 + 2\sqrt{2}\right)\left(4 + 2\sqrt{2}\right)}{\left(4 + 2\sqrt{2}\right)\left(2\sqrt{2}\right)} \\
+   = &\frac{12\sqrt{2} + 24 - \left(16 + 12\sqrt{2}\right)}{\left(2\left(1 + \sqrt{2}\right)\right)^2 - 4} \\
+   = &\frac{8}{\left(2\left(1 + \sqrt{2}\right)\right)^2 - 4}.
+\end{align*}
+
+Tương tự khi kiểm tra $x = 2\left(1 - \sqrt{2}\right)$. Vậy phương trình có nghiệm là $\left\{2\left(1 + \sqrt{2}\right); 2\left(1 - \sqrt{2}\right)\right\}$.
+
+5. Phương trình xác định khi $x \neq 0$. Trên điều kiện này,
+
+\begin{align}
+   A &= \frac{h}{6x}\left(\frac{b_0}{x} + 4b_1 + b_2\right) \nonumber\\
+   &= \frac{hb_0}{6x^2} + \frac{h\left(4b_1 + b_2\right)}{6x} \nonumber\\
+   \iff 6x^2A &= hb_0 + h\left(4b_1 + b_2\right)x \nonumber\\
+   \iff 6A\cdot x^2 - h\left(4b_1 + b_2\right)x - hb_0 &= 0. \label{eq:ham_so_mot_bien:ơhan_thuc:ptpt5}
+\end{align}
+
+Nhận thấy rằng nếu (\ref{eq:ham_so_mot_bien:ơhan_thuc:ptpt5}) có nghiệm thì nghiệm này phải khác $0$. Trái lại, nếu $0$ là nghiệm thì sẽ phải có $hb_0 = 0$. Nhưng từ giả thiết $b_0$ và $h$ đều dương, $hb_0 > 0$. Chúng ta cần phải có nhận định này để không cần phải kiểm tra lại điều kiện tập xác định khi giải ra nghiệm.
+
+Xét biệt thức $\Delta = h^2(4b_1 + b_2)^2 + 24A\cdot hb_0$ của phương trình (\ref{eq:ham_so_mot_bien:ơhan_thuc:ptpt5}). Có các tham số đều là các giá trị dương nên $\Delta$ cũng là một giá trị dương. Cho nên, từ (\ref{eq:ham_so_mot_bien:ơhan_thuc:ptpt5}), chúng ta giải ra hai nghiệm
+\begin{equation*}
+   \left[\begin{array}{l}
+      x = \frac{h\left(4b_1 + b_2\right) + \sqrt{\Delta}}{12A} \\
+      x = \frac{h\left(4b_1 + b_2\right) - \sqrt{\Delta}}{12A} \\
+   \end{array}\right..
+\end{equation*}
+
+Vậy tập nghiệm của phương trình là $\left\{\frac{h\left(4b_1 + b_2\right) + \sqrt{\Delta}}{12A}; \frac{h\left(4b_1 + b_2\right) - \sqrt{\Delta}}{12A}\right\}$.
+
+6. Phương trình có tập xác định là $\mathbb{R} \setminus \{-2; 2\}$. Trong tập xác định này, 
+
+\begin{align*}
+   &\frac{3x}{x + 2} - \frac{x}{x - 2} = \frac{8}{4 - x^2} \\
+   \iff &\frac{3x(x - 2)}{(x + 2)(x - 2)} - \frac{x(x + 2)}{(x - 2)(x + 2)} + \frac{8}{(x - 2)(x + 2)} = 0\\
+   \iff &\frac{3x^2 - 6x - x^2 - 2x + 8}{(x + 2)(x - 2)} = 0\\
+   \iff &\frac{2x^2 - 8x + 8}{(x + 2)(x - 2)} = 0\\
+   \iff &2x^2 - 8x + 8 = 0\\
+   \iff &x^2 - 4x + 4 = 0\\
+   \iff &(x - 2)^2 = 0\\
+   \iff &x = 2.
+\end{align*}
+
+Tuy nhiên, tập xác định yêu cầu không nhận giá trị $x$ này, cho nên phương trình này suy ra một điều mâu thuẫn. Vậy phương trình vô nghiệm.
+
+7. Giải tập xác định của phương trình:
+
+\begin{equation*}
+   \begin{cases}
+      x + 2 \neq 0 \\
+      x^2 - 5x + 6 \neq 0
+   \end{cases} \iff x \notin \{-2; 2; 3\}.
+\end{equation*}
+
+Giải phương trình:
+
+\begin{align}
+   &\frac{24}{x + 2} + \frac{24}{x^2 - 5x + 6} = x^2 \nonumber\\
+   \iff &\frac{24}{x + 2} + \frac{24}{(x - 2)(x - 3)} - x^2 = 0 \nonumber\\
+   \implies &24(x - 2)(x - 3) + 24(x + 2) - x^2(x - 2)(x - 3)(x + 2) = 0 \qquad \textcolor{colorEmphasis}{\begin{aligned}
+      &\text{Nhân cả hai vế với}\\
+      &\text{$(x + 2)(x - 2)(x - 3)$.}
+   \end{aligned}} \nonumber\\
+   \iff &\left(24x^2 - 120x + 144\right) + \left(24x + 48\right) - \left(x^5 - 3x^4 - 4x^3 + 12x^2\right) = 0 \nonumber\\
+   \iff &-x^5 + 3x^4 + 4x^3 + 12x^2 - 96x + 144 = 0 \nonumber\\
+   \iff &\left(4 - x\right)\left(x^4 + x^3 - 12x + 48\right) = 0 \label{eq:ham_so_mot_bien:phan_thuc:ptpt7}
+\end{align}
+
+Nhìn thấy ngay được, phương trình (\ref{eq:ham_so_mot_bien:phan_thuc:ptpt7}) có nghiệm $x = 4$. Xét trường hợp còn lại, đặt $f(x) = x^4 + x^3 - 12x + 48 = x(x - 2)\left(x^2 + 3x + 6\right) + 48$. Chúng ta sẽ chứng minh $f(x) > 0$ với mọi $x \in \mathbb{R}$. Chia làm hai trường hợp:
+
+\textcolor{colorEmphasisCyan}{Trường hợp 1 ($0 \leq x \leq 2$)}: Chúng ta sẽ chặn giá trị của những thành phần sau:
+
+\begin{itemize}
+   \item $x(x - 2)$: \begin{align}
+      x(x - 2) &= x^2 - 2x \nonumber \\
+      &= \left(x - 1\right)^2 - 1 \nonumber \\
+      \implies x(x - 2) &\geq -1. \label{eq:ham_so_mot_bien:phan_thuc:ptpt7_1}
+   \end{align}
+   \item $x^2 + 3x + 6$: \begin{align*}
+      x^2 + 3x + 6 &= \left(x + \frac{3}{2}\right)^2 + \frac{15}{4} \\
+      \implies x^2 + 3x + 6 &\geq \frac{15}{4} > 0.
+   \end{align*}
+\end{itemize}
+
+Ngoài ra, theo giả thiết $0 \leq x \leq 2$,
+\begin{equation}
+   \begin{cases}
+      x^2 \leq 4 \\
+      3x \leq 6
+   \end{cases} \implies x^2 + 3x + 6 \leq 16 \iff -\left(x^2 + 3x + 6\right) \geq -16. \label{eq:ham_so_mot_bien:phan_thuc:ptpt7_2}
+\end{equation}
+
+Kết hợp giữa \refeq{eq:ham_so_mot_bien:phan_thuc:ptpt7_1} và \refeq{eq:ham_so_mot_bien:phan_thuc:ptpt7_2} chúng ta có:
+
+\begin{align*}
+   x(x - 2) &\geq -1 \equationexplanation{Từ bất phương trình \refeq{eq:ham_so_mot_bien:phan_thuc:ptpt7_1}.}\\
+   \iff x(x - 2)\left(x^2 + 3x + 6\right) &\geq -\left(x^2 + 3x + 6\right) \equationexplanation{Nhân cả hai vế với một số dương.}\\
+   \iff x(x - 2)\left(x^2 + 3x + 6\right) &\geq -16 \equationexplanation{Từ bất phương trình ở \refeq{eq:ham_so_mot_bien:phan_thuc:ptpt7_2}.} \\
+   \iff x\left(x - 2\right)\left(x^2 + 3x + 6\right) + 48 &\geq 32 \\
+   \implies x^4 + x^3 - 12x + 48 > 0.
+\end{align*}
+
+Qua đó, chúng ta có được $f(x) = 0$ không có nghiệm trong đoạn $\left[0; 2\right]$.
+
+\textcolor{colorEmphasis}{Trường hợp 2 ($x < 0$ hoặc $x > 2$)}: Dễ dàng nhận thấy $x$ và $x - 2$ cùng dấu cho nên $x(x - 2) > 0$. Ngoài ra, đã có $x^2 + 3x + 6 > 0$ cho nên $x\left(x - 2\right)\left(x^2 + 3x + 6\right) > 0$. Suy ra, $f(x) > 0$ vói mọi $x \in \left)0; 2\right($.
+
+Kết hợp cả hai trường hợp, chúng ta có $f(x) > 0$ với mọi $x \in \mathbb{R}$ như cần phải chứng minh.
+
+Do đó, $\text{\refeq{eq:ham_so_mot_bien:phan_thuc:ptpt7}} \iff x = 4$. Kiểm tra trực tiếp chúng ta thấy nghiệm này thỏa mãn. Vậy phương trình có nghiệm duy nhất là $x = 4$.
 
 \exercise Phác thảo đồ thị của những hàm sau:
 
@@ -387,3 +670,56 @@ Do tính chất của đồ thị, trục tung của đồ thị trong lời gi�
 \end{multicols}
 
 \solution
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\draw[->] (-6, 0) -- (6, 0) node[right] {$x$};
+		\draw[->] (0, -1) -- (0, 5)  node[above] {$y$};
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-6.000:6.000] plot (\x, {((2 * (\x))/((\x)^2 + 1) + 1) / 0.5});
+		\filldraw[color= colorEmphasisCyan] (-4.0, 1.0588235294117647) circle (\pointSize) node[above right] {$\left(-4{,}00;0{,}53\right)$};
+		\filldraw[color= colorEmphasisCyan] (0.0, 2.0) circle (\pointSize) node[right] {$\left(0;1\right)$};
+		\filldraw[color= colorEmphasisCyan] (-2.0, 0.3999999999999999) circle (\pointSize) node[below left] {$\left(-2{,}00;0{,}20\right)$};
+		\filldraw[color= colorEmphasisCyan] (4.0, 2.9411764705882355) circle (\pointSize) node[above right] {$\left(4{,}00;1{,}47\right)$};
+		\filldraw[color= colorEmphasisCyan] (2.0, 3.6) circle (\pointSize) node[above right] {$\left(2{,}00;1{,}80\right)$};
+	\end{tikzpicture}
+	\caption{Đồ thị của $f(x) = \frac{2 x}{x^{2} + 1} + 1$}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\draw[->] (-6, 0) -- (6, 0) node[right] {$x$};
+		\draw[->] (0, -1) -- (0, 5)  node[above] {$y$};
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-2.636:-0.266] plot (\x, {(((\x)^4 + 1)/(3*(\x)^2) - (\x)) / 1});
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=0.252:5.650] plot (\x, {(((\x)^4 + 1)/(3*(\x)^2) - (\x)) / 1});
+		\filldraw[color=colorEmphasisCyan] (-0.762, 1.5296232222245185) circle (\pointSize) node[below] {$\left(-0{,}76;1{,}53\right)$};
+		\filldraw[color=colorEmphasisCyan] (1.703, -0.6213294211232134) circle (\pointSize) node[below] {$\left(1{,}70;-0{,}62\right)$};
+		\filldraw[color=colorEmphasisCyan] (0.765, -0.0003435000071200234) circle (\pointSize) node[above left] {$\left(0{,}77;0{,}00\right)$};
+		\filldraw[color=colorEmphasisCyan] (2.962, 0.00047477505739657033) circle (\pointSize) node[below right] {$\left(2{,}96;0{,}00\right)$};
+		\filldraw[color=colorEmphasisCyan] (4.0, 1.354166666666666) circle (\pointSize) node[below right] {$\left(4{,}00;1{,}35\right)$};
+		\filldraw[color=colorEmphasisCyan] (-2.0, 3.4166666666666665) circle (\pointSize) node[below left] {$\left(-2{,}00;3{,}42\right)$};
+		\filldraw[color=colorEmphasisCyan] (-0.3, 4.033703703703704) circle (\pointSize) node[above left] {$\left(-0{,}30;4{,}03\right)$};
+
+	\end{tikzpicture}
+	\caption{Đồ thị của $f(x) = \frac{x^{4} + 1}{3 x^{2}} - x$}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\draw[->] (-6, 0) -- (6, 0) node[right] {$x$};
+		\draw[->] (0, -3.5) -- (0, 3.5)  node[above] {$y$};
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-5.065:6.000] plot (\x, {((15*((\x)/3)^3 + ((\x)/3)^2 - 22*((\x)/3) - 8)/(3*((\x)/3)^2 + 3*((\x)/3) + 8)) / 1});
+		\filldraw[color=colorEmphasisCyan] (-3.0, 0.0) circle (\pointSize) node[above left] {$\left(-1;0\right)$};
+		\filldraw[color=colorEmphasisCyan] (-1.2000000000000002, 0.0) circle (\pointSize) node[above right] {$\left(- \frac{2}{5};0\right)$};
+		\filldraw[color=colorEmphasisCyan] (0.0, -1.0) circle (\pointSize) node[below left] {$\left(0;-1\right)$};
+		\filldraw[color=colorEmphasisCyan] (4.0, 0.0) circle (\pointSize) node[above left] {$\left(\frac{4}{3};0\right)$};
+      \filldraw[color=colorEmphasisCyan] (-2.142, 0.3733228632366404) circle (\pointSize) node[above] {$\left(-0{,}71;0{,}37\right)$};
+		\filldraw[color=colorEmphasisCyan] (1.494, -1.6463553783683789) circle (\pointSize) node[below] {$\left(0{,}50;-1{,}65\right)$};
+	\end{tikzpicture}
+	\caption{Đồ thị của $f(x) = \frac{15 x^{3} + x^{2} - 22 x - 8}{3 x^{2} + 3 x + 8}$}
+\end{figure}
+
+
+

@@ -10,8 +10,8 @@
 \contentsline {subsection}{\numberline {0.2.2}Hàm đa thức}{18}{subsection.0.2.2}%
 \contentsline {subsection}{\numberline {0.2.3}Phép tính đại số trên hàm}{29}{subsection.0.2.3}%
 \contentsline {subsection}{\numberline {0.2.4}Hàm phân thức}{30}{subsection.0.2.4}%
-\contentsline {subsection}{\numberline {0.2.5}Phép hợp hai hàm số}{36}{subsection.0.2.5}%
-\contentsline {section}{\numberline {0.3}Số ảo và số phức}{36}{section.0.3}%
-\contentsline {section}{\numberline {0.4}Bài tập tổng hợp}{39}{section.0.4}%
-\contentsline {chapter}{\numberline {1}Cơ bản của xử lí số liệu trong vật lí}{40}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Chuyển động}{43}{chapter.2}%
+\contentsline {subsection}{\numberline {0.2.5}Phép hợp hai hàm số}{41}{subsection.0.2.5}%
+\contentsline {section}{\numberline {0.3}Số ảo và số phức}{41}{section.0.3}%
+\contentsline {section}{\numberline {0.4}Bài tập tổng hợp}{44}{section.0.4}%
+\contentsline {chapter}{\numberline {1}Cơ bản của xử lí số liệu trong vật lí}{45}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Chuyển động}{48}{chapter.2}%

@@ -1,13 +1,11 @@
 \begin{figure}[H]
 	\centering
 	\begin{tikzpicture}
-		\draw[->] (-3.5, 0) -- (3.5, 0) node[right] {$x$};
-		\draw[->] (0, 0) -- (0, 8)  node[above] {$y$};
-		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-3.500:3.000] plot (\x, {(((\x)^2 + 4*(\x) - 5)/((\x) - 1)) / 1});
-		\filldraw[color= colorEmphasisCyan] (-2, 3.0) circle (\pointSize) node[above] {$\left(-2;3\right)$};
-		\filldraw[color= colorEmphasisCyan] (-1, 4.0) circle (\pointSize) node[above] {$\left(-1;4\right)$};
-		\filldraw[color= colorEmphasisCyan] (0, 5.0) circle (\pointSize) node[above] {$\left(0;5\right)$};
-		\filldraw[color= colorEmphasisCyan] (2, 7.0) circle (\pointSize) node[above] {$\left(2;7\right)$};
+		\draw[->] (-6, 0) -- (6, 0) node[right] {$x$};
+		\draw[->] (0, -3.5) -- (0, 3.5)  node[above] {$y$};
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-5.065:6.000] plot (\x, {((15*((\x)/3)^3 + ((\x)/3)^2 - 22*((\x)/3) - 8)/(3*((\x)/3)^2 + 3*((\x)/3) + 8)) / 1});
+		\filldraw[color=colorEmphasisCyan] (-2.142, 0.3733228632366404) circle (\pointSize) node[above] {$\left(-0{,}71;0{,}37\right)$};
+		\filldraw[color=colorEmphasisCyan] (1.494, -1.6463553783683789) circle (\pointSize) node[above] {$\left(0{,}50;-1{,}65\right)$};
 	\end{tikzpicture}
-	\caption{Đồ thị của $\frac{x^{2} + 4 x - 5}{x - 1}$}
+	\caption{Đồ thị của $\frac{15 x^{3} + x^{2} - 22 x - 8}{3 x^{2} + 3 x + 8}$}
 \end{figure}
