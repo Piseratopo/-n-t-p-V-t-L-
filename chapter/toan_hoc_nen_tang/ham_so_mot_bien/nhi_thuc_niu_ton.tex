@@ -1,0 +1,78 @@
+\subsection{Nhị thức Niu-tơn}
+
+Trước khi nhắc đến nhị thức Niu-tơn\footnote{Phát hiện lần đầu bởi Isaac Newton (1643 - 1727).}, chúng ta sẽ nhắc lại về khái niệm giai thừa và tổ hợp. Ở thời kì của Niu-tơn, các khác niệm liên quan đến những bài toán tổ hợp chưa được phát minh, cho nên nếu bạn đọc tìm hiểu tài liệu gốc thì sẽ thấy cách biểu diễn nhị thức Niu-tơn rất khác so với cách biểu diễn hiện đại.
+
+\defText{Giai thừa} của một số nguyên dương $n$ được định nghĩa là
+$$\defMath{n!= \prod_{i = 1}^{n} = n\times(n-1)\times \cdots \times 1}.$$
+Định nghĩa này mở rộng lên tập số tự nhiên bằng cách đặt $\defMath{0!=1}$.
+
+Cho hai số tự nhiên $k$ và $n$ với $k \leq n$. \defText{Tổ hợp chập $\defMath{k}$ của $\defMath{n}$} là số cách chọn $k$ phần tử khác nhau từ một tập hợp có $n$ phần tử. Công thức được cho bởi
+$$\defMath{C_n^k = \binom{n}{k} = \frac{n!}{k!(n - k)!} = \prod_{i=1}^{k}\left(\frac{n - i + 1}{i}\right) = \frac{n\times(n-1)\times \cdots \times (n-k+1)}{k\times (k-1)\times \cdots \times 1}}.$$
+Định nghĩa này cũng có thể được mở rộng. Với $\defMath{k > n,~C_n^k = 0}$. Về mặt tưởng tượng, không có cách nào để có thể lấy $k$ vật từ một túi có ít hơn $k$ vật được, vậy việc mở rộng này là hợp lí.
+
+Quay trở lại về vấn đề chính, đặt $f$ là \defText{nhị thức} (đa thức khi rút gọn được viết dưới dạng tổng của hai đơn thức) $f(x) = x + y$ với $y$ là tham số, và $g$ được định nghĩa là $g(x) = x^n$ với $n \in \mathbb{N}$, thực hiện $\left(g \circ f\right)(x) = g(f(x)) = (x + y)^n$. Đây là \defText{nhị thức Niu-tơn}. Nhị thức Niu-tơn có thể viết lại dưới dạng đa thức như sau:
+
+$$\defMath{(x + y)^n = \sum_{i = 0}^{n} \left(C_n^i y^{n-i} x^i \right) = \sum_{i = 0}^{n}\left( C_n^i y^i x^{n-i} \right)}.$$
+
+Về mặt cảm nhận tổ hợp, chúng ta coi như việc khai triển $(x + y)^n$ là chọn những phần tử $x$ và $y$ từ $n$ thừa số $x + y$, nhân chúng lại tạo thành một thừa số mới và cộng tất cả những giá trị lại với nhau. Mỗi thừa số như vậy sẽ có $i$ thừa số $x$ và $n-i$ thừa số $y$ và có giá trị là $x^iy^{n-i}$. Do đó, số cách chọn thừa số mà có dạng $x^iy^{n-i}$ là $C_n^i$. Cho $i$, hay số thừa số con $x$ trong thừa số $x^iy^{n-i}$, chạy từ $0$ đến $n$ và cộng các thừa số lại, chúng ta có đẳng thức cần chứng minh.
+
+Một cách khác để chứng minh là sử dụng quy nạp. Xét trường hợp nền $n = 0$, chúng ta có $(x + y)^0 = 1$. Mặt khác,
+$$\sum_{i = 0}^{0} \left(C_0^i x^i y^{0-i}\right) = C_0^0 x^0 y^0 = C_0^0 = \frac{0!}{0!\times (0 - 0)!} = 1.$$
+Do đó, đẳng thức đúng với $n = 0$. Giả sử đẳng thức đúng với $n = k$, khi đó
+$$(x + y)^k = \sum_{i = 0}^{k} \left(C_k^i x^i y^{k-i}\right).$$
+
+Theo tính chất của mũ với số mũ tự nhiên,
+
+\begin{align*}
+   (x + y)^{k + 1} = &(x + y)^k (x + y) \\ 
+   = &\sum_{i = 0}^{k} \left(C_k^i x^i y^{k-i}\right) (x + y)\\
+   = &\sum_{i = 0}^{k} \left(C_k^i x^i y^{k-i}\right)x + \sum_{i = 0}^{k} \left(C_k^i x^i y^{k-i}\right)y \\
+   \displaybreak[2]
+   = &\sum_{i = 0}^{k} \left(C_k^i x^{i + 1} y^{k-i}\right) + \sum_{i = 0}^{k} \left(C_k^i x^i y^{k-i + 1}\right) \\
+   \displaybreak[2]
+   = &\sum_{i = 1}^{k + 1} \left(C_k^{i-1} x^i y^{k-\left(i - 1\right)}\right) + \sum_{i = 0}^{k} \left(C_k^i x^i y^{\left(k + 1\right) -i}\right)\equationexplanation{Thay đổi chỉ số $i$ tăng thêm $1$.} \\
+   \displaybreak[2]
+   = &\left(C_k^{\left(k + 1\right)-1} x^{k + 1} y^{k-\left(\left(k + 1\right) - 1\right)}\right) + \sum_{i = 1}^{k} \left(C_k^{i-1} x^i y^{k-\left(i - 1\right)}\right) + \\
+   &\left(C_k^0 x^0 y^{\left(k + 1\right) -0}\right) + \sum_{i = 1}^{k} \left(C_k^i x^i y^{\left(k + 1\right) -i}\right).
+\end{align*}
+
+Xét các thành phần, để ý rằng $C_n^n = \frac{n!}{n!\times (n - n)!} = 1$ với mọi $n$, cho nên
+$$\left(C_k^{\left(k + 1\right)-1} x^{k + 1} y^{k-\left(\left(k + 1\right) - 1\right)}\right) = C_k^kx^{k+1}y^0=C_{k+1}^{k+1}x^{k+1}y^{(k + 1) - (k + 1)}.$$
+
+Một cách tương tự, $C_n^0 = \frac{n!}{0!\times (n - 0)!} = 1$ với mọi $n$. Do đó, 
+$$C_k^0 x^0 y^{\left(k + 1\right) -0} = C_{k+1}^{0}x^0y^{(k+1) - 0}.$$
+
+Cuối cùng, xét tổng của hai tổng lớn, thấy chúng có cùng chỉ số $i$ cho nên
+
+\begin{equation}
+   \sum_{i = 1}^{k} \left(C_k^{i-1} x^i y^{(k - (i - 1))}\right) + \sum_{i = 1}^{k} \left(C_k^i x^i y^{(k + 1) - i}\right) = \sum_{i = 1}^{k} \left(\left(C_k^{i-1} + C_k^i\right) x^i y^{(k + 1) - i}\right). \label{eq:ham_so_mot_bien:nhi_thuc_niu_ton:cm_tong}
+\end{equation}
+
+Hơn thế nữa, chúng ta có
+\begin{align*}
+   C_k^{i-1} + C_k^i &= \frac{k!}{(i - 1)!\left(k - (i - 1)\right)!} + \frac{k!}{i!\left(k - i\right)!} \\
+   &= \frac{ik!}{i(i - 1)!\left((k + 1) - i\right)!} + \frac{k!\left((k + 1) - i\right)}{i!\left(k - i\right)!\left((k + 1) - i\right)} \\
+   \displaybreak[2]
+   &= \frac{ik! + k!\left((k + 1) - i\right)}{i!\left((k + 1) - i\right)!} \\
+   \displaybreak[2]
+   &= \frac{k!\left(i + (k + 1) - i\right)}{i!\left((k + 1) - i\right)!} \\
+   \displaybreak[2]
+   &= \frac{k!(k + 1)}{i!\left((k + 1) - i\right)!} \\
+   &= \frac{(k + 1)!}{i!\left((k + 1) - i\right)!} = C_{k+1}^i.
+\end{align*}
+
+Thay kết quả này vào \refeq{eq:ham_so_mot_bien:nhi_thuc_niu_ton:cm_tong}, chúng ta được
+
+$$\sum_{i = 1}^{k} \left(C_k^{i-1} x^i y^{(k - (i - 1))}\right) + \sum_{i = 1}^{k} \left(C_k^i x^i y^{(k + 1) - i}\right) = \sum_{i = 1}^{k} \left(C_{k+1}^i x^i y^{(k + 1) - i}\right).$$
+
+Lấy tổng của các thành phần,
+
+\begin{align*}
+   (x + y)^{k + 1} &= C_{k+1}^{k+1}x^{k+1}y^{(k + 1) - (k + 1)} + C_{k+1}^{0}x^0y^{(k+1) - 0} + \sum_{i = 1}^{k} \left(C_{k+1}^i x^i y^{(k + 1) - i}\right) \\
+   \displaybreak[2]
+   &= \sum_{i = 0}^{k+1} \left(C_{k+1}^i x^i y^{(k + 1) - i}\right).
+\end{align*}
+
+Theo quy nạp toán học, đẳng thức đã được chứng minh.
+
+Tuy rằng chúng ta đã giả sử $y$ là tham số, nhưng đẳng thức liên quan đến nhị thức Niu-tơn này vẫn đúng khi $y$ là một hàm bất kì do trong chứng minh chúng ta không sử dụng tính chất số của $y$.

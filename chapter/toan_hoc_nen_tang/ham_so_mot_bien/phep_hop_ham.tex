@@ -1,2 +1,137 @@
 \subsection{Phép hợp hai hàm số}
 
+Khi áp dụng hàm $f$ lên kết quả của một hàm $g$ khác, chúng ta có \defText{phép hợp} hai hàm số $f$ và $g$ và kí hiệu hàm hợp này như sau: $$\defMath{\left(f\circ g\right)(x) = f\left(g(x)\right)}.$$
+
+Để ý rằng mặc dù $f$ được viết trước $g$, $g$ được thực hiện trước $f$.
+
+\exercise Cho các hàm $f$ và $g$ được định nghĩa thông qua đồ thị như sau:
+
+{
+   \begin{minipage}{0.48\textwidth}
+      \begin{figure}[H]
+         \centering
+         \begin{tikzpicture}
+            \draw[->] (-2.6666666666666665, 0) -- (2.6666666666666665, 0) node[right] {$x$};
+            \draw[->] (0, -2.6666666666666665) -- (0, 2.6666666666666665)  node[above] {$f(x)$};
+            \filldraw[color=colorEmphasisCyan] (-2.0, -1.3333333333333333) circle (\pointSize) node[above] {$\left(-3;-2\right)$};
+            \filldraw[color=colorEmphasisCyan] (-1.3333333333333333, -0.6666666666666666) circle (\pointSize) node[above] {$\left(-2;-1\right)$};
+            \filldraw[color=colorEmphasisCyan] (-0.6666666666666666, 0.0) circle (\pointSize) node[above] {$\left(-1;0\right)$};
+            \filldraw[color=colorEmphasisCyan] (0.0, -0.6666666666666666) circle (\pointSize) node[above] {$\left(0;-1\right)$};
+            \filldraw[color=colorEmphasisCyan] (0.6666666666666666, -1.3333333333333333) circle (\pointSize) node[above] {$\left(1;-2\right)$};
+            \filldraw[color=colorEmphasisCyan] (1.3333333333333333, -0.6666666666666666) circle (\pointSize) node[above] {$\left(2;-1\right)$};
+            \filldraw[color=colorEmphasisCyan] (2.0, -1.3333333333333333) circle (\pointSize) node[above] {$\left(3;-2\right)$};
+         \end{tikzpicture}
+         \caption{Đồ thị của $f$}
+      \end{figure}
+   \end{minipage}
+   \hfill
+   \begin{minipage}{0.48\textwidth}
+      \begin{figure}[H]
+         \centering
+         \begin{tikzpicture}
+            \draw[->] (-2.6666666666666665, 0) -- (2.6666666666666665, 0) node[right] {$x$};
+            \draw[->] (0, -2.6666666666666665) -- (0, 2.6666666666666665)  node[above] {$g(x)$};
+            \filldraw[color=colorEmphasis] (-2.00000000000000, 2.00000000000000) circle (\pointSize) node[above] {$\left(-3;3\right)$};
+            \filldraw[color=colorEmphasis] (-1.33333333333333, 0.666666666666667) circle (\pointSize) node[above] {$\left(-2;1\right)$};
+            \filldraw[color=colorEmphasis] (-0.666666666666667, -0.666666666666667) circle (\pointSize) node[above] {$\left(-1;-1\right)$};
+            \filldraw[color=colorEmphasis] (0, -2.00000000000000) circle (\pointSize) node[above] {$\left(0;-3\right)$};
+            \filldraw[color=colorEmphasis] (0.666666666666667, -0.666666666666667) circle (\pointSize) node[above] {$\left(1;-1\right)$};
+            \filldraw[color=colorEmphasis] (1.33333333333333, 0.666666666666667) circle (\pointSize) node[above] {$\left(2;1\right)$};
+            \filldraw[color=colorEmphasis] (2.00000000000000, 2.00000000000000) circle (\pointSize) node[above] {$\left(3;3\right)$};
+         \end{tikzpicture}
+         \caption{Đồ thị của $g$}
+      \end{figure}
+   \end{minipage}
+}
+
+Xác định tập xác định, tập giá trị của các hàm hợp $f\circ g$ và $g\circ f$. Sau đó, vẽ đồ thị của hai hàm này.
+
+\solution
+
+Tập xác định của $f$ và $g$ đều là $\{-3; -2; -1; 0; 1; 2; 3\}$. Ngoài ra, tập giá trị của $f$ là $\{-2;-1;0\}$ và tập giá trị của $g$ là $\{-3; -1; 1; 3\}$.
+
+Có $\left(f\circ g\right)(x) = f\left(g(x)\right)$ với mọi $x$ làm cho $f\circ g$ có nghĩa. Để ngắn gọn, chúng ta thực hiện kẻ bảng:
+
+\begin{table}[H]
+   \centering
+   \begin{tabular}{|c|c|c|c|c|c|c|c|}
+      \hline
+      $x$ & $-3$ & $-2$ & $-1$ & $0$ & $1$ & $2$ & $3$\\
+      \hline
+      $g(x)$ & $3$ & $1$ & $-1$ & $-3$ & $-1$ & $1$ & $3$\\
+      \hline
+      $f\left(g(x)\right)$ & $-2$ & $0$ & $-2$ & $-2$ & $-2$ & $0$ & $-2$\\
+      \hline
+   \end{tabular}
+   \caption{Bảng giá trị của $f\circ g$}
+\end{table}
+
+Vậy tập xác định và tập giá trị của $f\circ g$ lần lượt là $\{-3; -2; -1; 0; 1; 2; 3\}$ và $\{-2; 0\}$.
+
+Tương tự, chúng ta có $\left(g\circ f\right)(x) = g\left(f(x)\right)$. Kẻ bảng giá trị:
+
+\begin{table}[H]
+   \centering
+   \begin{tabular}{|c|c|c|c|c|c|c|c|}
+      \hline
+      $x$ & $-3$ & $-2$ & $-1$ & $0$ & $1$ & $2$ & $3$\\
+      \hline
+      $f(x)$ & $-2$ & $-1$ & $0$ & $-1$ & $-2$ & $-1$ & $-2$\\
+      \hline
+      $g\left(f(x)\right)$ & $1$ & $-1$ & $-3$ & $-1$ & $1$ & $-1$ & $1$\\
+      \hline
+   \end{tabular}
+   \caption{Bảng giá trị của $g\circ f$}
+\end{table}
+
+Từ bảng, chúng ta có $g\circ f$ có tập xác định là $\{-3; -2; -1; 0; 1; 2; 3\}$ và tập giá trị là $\{-3; -1; 1\}$.
+
+Cuối cùng, chúng ta có đồ thị của hai hàm:
+
+{
+   \begin{minipage}{0.48\textwidth}
+      \begin{figure}[H]
+         \centering
+         \begin{tikzpicture}
+            \draw[->] (-2.6666666666666665, 0) -- (2.6666666666666665, 0) node[right] {$x$};
+            \draw[->] (0, -2.6666666666666665) -- (0, 2.6666666666666665)  node[above] {$\left(f\circ g\right)(x)$};
+            \filldraw[color=colorEmphasisCyan] (-2.00000000000000, -1.33333333333333) circle (\pointSize) node[above] {$\left(-3;-2\right)$};
+            \filldraw[color=colorEmphasisCyan] (-1.33333333333333, 0) circle (\pointSize) node[above] {$\left(-2;0\right)$};
+            \filldraw[color=colorEmphasisCyan] (-0.666666666666667, -1.33333333333333) circle (\pointSize) node[above] {$\left(-1;-2\right)$};
+            \filldraw[color=colorEmphasisCyan] (0, -1.33333333333333) circle (\pointSize) node[below] {$\left(0;-2\right)$};
+            \filldraw[color=colorEmphasisCyan] (0.666666666666667, -1.33333333333333) circle (\pointSize) node[above] {$\left(1;-2\right)$};
+            \filldraw[color=colorEmphasisCyan] (1.33333333333333, 0) circle (\pointSize) node[above] {$\left(2;0\right)$};
+            \filldraw[color=colorEmphasisCyan] (2.00000000000000, -1.33333333333333) circle (\pointSize) node[above] {$\left(3;-2\right)$};
+         \end{tikzpicture}
+         \caption{Đồ thị của $f\circ g$}
+      \end{figure}
+   \end{minipage}
+   \hfill
+   \begin{minipage}{0.48\textwidth}
+      \begin{figure}[H]
+         \centering
+         \begin{tikzpicture}
+            \draw[->] (-2.6666666666666665, 0) -- (2.6666666666666665, 0) node[right] {$x$};
+            \draw[->] (0, -2.6666666666666665) -- (0, 2.6666666666666665)  node[above] {$\left(g\circ f\right)(x)$};
+            \filldraw[color=colorEmphasis] (-2.00000000000000, 0.666666666666667) circle (\pointSize) node[above] {$\left(-3;1\right)$};
+            \filldraw[color=colorEmphasis] (-1.33333333333333, -0.666666666666667) circle (\pointSize) node[above] {$\left(-2;-1\right)$};
+            \filldraw[color=colorEmphasis] (-0.666666666666667, -2.00000000000000) circle (\pointSize) node[above] {$\left(-1;-3\right)$};
+            \filldraw[color=colorEmphasis] (0, -0.666666666666667) circle (\pointSize) node[above] {$\left(0;-1\right)$};
+            \filldraw[color=colorEmphasis] (0.666666666666667, 0.666666666666667) circle (\pointSize) node[above] {$\left(1;1\right)$};
+            \filldraw[color=colorEmphasis] (1.33333333333333, -0.666666666666667) circle (\pointSize) node[above] {$\left(2;-1\right)$};
+            \filldraw[color=colorEmphasis] (2.00000000000000, 0.666666666666667) circle (\pointSize) node[above] {$\left(3;1\right)$};
+         \end{tikzpicture}
+         \caption{Đồ thị của $g\circ f$}
+      \end{figure}
+   \end{minipage}
+}
+
+\exercise Có tồn tại hàm $\chungF$ sao cho $\chungF \circ f = f \circ \chungF = f$?
+
+\solution
+
+Có, đặt $\chungF(x) = x$ với mọi $x$. Khi này, hiển nhiên rằng, với mọi $x$ thuộc tập xác định của $f$:
+$$\left(\chungF \circ f\right)(x) = \chungF\left(f(x)\right) = f(x)~\text{và}$$
+$$\left(f \circ \chungF\right)(x) = f\left(\chungF(x)\right) = f(x).$$
+
+Tên gọi của $\chungF$ là \defText{hàm đồng nhất}.

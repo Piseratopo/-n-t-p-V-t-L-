@@ -1,10 +1,10 @@
 # Fdb version 4
-["xdvipdfmx"] 1756478119.81716 "main.xdv" "main.pdf" "main" 1756478120.23995 0
-  "main.xdv" 1756478119 1559796 1ab48ea87a1fabf76f7cae896b02e672 "xelatex"
+["xdvipdfmx"] 1756625233.17343 "main.xdv" "main.pdf" "main" 1756625233.59852 0
+  "main.xdv" 1756625232 1716436 a191bbc4f79150cc75a6111ce034c3d5 "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1756478113.49934 "d:/OneDrive - Hanoi University of Science and Technology/Documents/Physics/-n-t-p-V-t-L-/main.tex" "main.xdv" "main" 1756478120.23365 0
+["xelatex"] 1756625225.89622 "d:/OneDrive - Hanoi University of Science and Technology/Documents/Physics/-n-t-p-V-t-L-/main.tex" "main.xdv" "main" 1756625233.59135 0
   "C:/Users/buinh/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1754119510 25521434 dbc151c24c532bc323b459e7df668540 ""
   "C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136747054 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "C:/Users/buinh/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1233951848 1120 1e8878807317373affa7f7bba4cf2f6a ""
@@ -261,21 +261,25 @@
   "C:/Users/buinh/AppData/Local/Programs/MiKTeX/tex/xelatex/xecjk/xeCJK.cfg" 1659726270 408 7369c27beaa819c5f46de3795b22ee3e ""
   "C:/Users/buinh/AppData/Local/Programs/MiKTeX/tex/xelatex/xecjk/xeCJK.sty" 1659726270 183137 ed372550124703b2b73cbcc0b47cb20f ""
   "C:/Users/buinh/AppData/Local/Programs/MiKTeX/tex/xelatex/xecjk/xeCJKfntef.sty" 1659726270 39577 b470f8a1dbecc9c45c9bf05ca7db9188 ""
+  "chapter/kiem_tra.tex" 1756617982 99 2755e72853148438cfa0fb3393aac77a ""
+  "chapter/loi_gioi_thieu.tex" 1756617505 85 1bfc6549bf11edd5fb64957e0a61b839 ""
+  "chapter/toan_hoc_nen_tang.tex" 1756617302 5345 aa8f88be950cb3fc8d4cd62024e91b22 ""
   "chapter/toan_hoc_nen_tang/do_thi.tex" 1755106918 199 5a3c2e9a7fc8492399aa95b194dd62cc ""
   "chapter/toan_hoc_nen_tang/do_thi/khong_gian.tex" 1756047556 11771 6a00020f95f4a5eb97761206a49e1adf ""
   "chapter/toan_hoc_nen_tang/do_thi/mat_phang.tex" 1756042658 10836 0d7011420480458f4b1d161648d77f85 ""
   "chapter/toan_hoc_nen_tang/do_thi/truc_so.tex" 1756041614 11914 b62500b6f997249a213166fd1f2ed903 ""
-  "chapter/toan_hoc_nen_tang/ham_so_mot_bien.tex" 1755704707 378 ff82b8748938d3bd388cf387bbef343a ""
+  "chapter/toan_hoc_nen_tang/ham_so_mot_bien.tex" 1756619312 497 8733384311d35d6f59485e89aba364f4 ""
   "chapter/toan_hoc_nen_tang/ham_so_mot_bien/da_thuc.tex" 1756118948 44500 3ac42f246e44d763fce6388df27d2031 ""
   "chapter/toan_hoc_nen_tang/ham_so_mot_bien/dinh_nghia.tex" 1756094726 41800 58970252b5ab7b88005f6edc4dcb0f8e ""
-  "chapter/toan_hoc_nen_tang/ham_so_mot_bien/phan_thuc.tex" 1756478106 41506 627457eff35d1a343bddf880ccb653dd ""
-  "chapter/toan_hoc_nen_tang/ham_so_mot_bien/phep_hop_ham.tex" 1755704747 42 7a0ef5985f6bdb025ae4d9a540e5e25d ""
-  "chapter/toan_hoc_nen_tang/ham_so_mot_bien/phep_tinh_ham.tex" 1756136959 5661 e0a1a46634247281b43341359121e4e5 ""
-  "d:/OneDrive - Hanoi University of Science and Technology/Documents/Physics/-n-t-p-V-t-L-/main.tex" 1756473583 62534 73c669b80366cfd42c6a6ef0061ea17e ""
-  "main.aux" 1756478119 34940 5ba017c9886139a9402d72802ca70fc6 "xelatex"
-  "main.out" 1756478119 3163 1baa90fb43fbdeccdc22de4b98c1c279 "xelatex"
-  "main.tex" 1756473583 62534 73c669b80366cfd42c6a6ef0061ea17e ""
-  "main.toc" 1756478119 1553 df8abd0035606abcff8504d4f8bd6b72 "xelatex"
+  "chapter/toan_hoc_nen_tang/ham_so_mot_bien/nhi_thuc_niu_ton.tex" 1756625225 6645 2546c64a71aa32d3ab70b33505388658 ""
+  "chapter/toan_hoc_nen_tang/ham_so_mot_bien/phan_thuc.tex" 1756615930 47003 d4bb89a79aff41422a8a848f1c489c6a ""
+  "chapter/toan_hoc_nen_tang/ham_so_mot_bien/phep_hop_ham.tex" 1756618779 8248 2dd04420994040c0fd6b042fb507612a ""
+  "chapter/toan_hoc_nen_tang/ham_so_mot_bien/phep_tinh_ham.tex" 1756617166 5632 441054a35af97ac352157542bd2eabe8 ""
+  "d:/OneDrive - Hanoi University of Science and Technology/Documents/Physics/-n-t-p-V-t-L-/main.tex" 1756618060 57270 a5aceee18d725605c78ef80849dc128e ""
+  "main.aux" 1756625232 37148 b752d0e19625140741a502c3eb8061f6 "xelatex"
+  "main.out" 1756625232 3666 c37f5a0dbbfe439692f4eadd650d74ea "xelatex"
+  "main.tex" 1756618060 57270 a5aceee18d725605c78ef80849dc128e ""
+  "main.toc" 1756625232 1770 e1b2406cb51ddc8c57776dcc0850a617 "xelatex"
   (generated)
   "main.aux"
   "main.log"

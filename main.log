@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.3) (preloaded format=xelatex 2025.8.2)  29 AUG 2025 21:35
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.3) (preloaded format=xelatex 2025.8.2)  31 AUG 2025 14:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -875,21 +875,21 @@ File: pgflibraryshadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \recordparindent=\skip81
 
 Package fontspec Info: 
-(fontspec)             Font family 'NomNaTong(0)' created for font 'Nom Na
-(fontspec)             Tong' with options
-(fontspec)             [Script={CJK},AutoFakeBold={2},AutoFakeSlant={0.15}].
+(fontspec)             Font family 'DFKai-SB(0)' created for font 'DFKai-SB'
+(fontspec)             with options
+(fontspec)             [Script={CJK},AutoFakeBold={2},AutoFakeSlant={0.2}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Nom Na
-(fontspec)             Tong/OT:script=hani;language=dflt;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Nom Na
-(fontspec)             Tong/OT:script=hani;language=dflt;embolden=2;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Nom Na
-(fontspec)             Tong/OT:script=hani;language=dflt;slant=0.15;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Nom Na
-(fontspec)             Tong/OT:script=hani;language=dflt;embolden=2;slant=0.15;"
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"DFKai-SB/OT:script=hani;language=dflt;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"DFKai-SB/OT:script=hani;language=dflt;embolden=2;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"DFKai-SB/OT:script=hani;language=dflt;slant=0.2;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"DFKai-SB/OT:script=hani;language=dflt;embolden=2;slant=0.2;"
 
 \c@exercise=\count395
 \c@solution=\count396
@@ -903,32 +903,32 @@ LaTeX Warning: Label `tab:ham_so_mot_bien:da_thuc:gbpt6' multiply defined.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 110.
-LaTeX Font Info:    Trying to load font information for T5+cmr on input line 110.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 111.
+LaTeX Font Info:    Trying to load font information for T5+cmr on input line 111.
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5cmr.fd
 File: t5cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -969,7 +969,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 110.
+Package hyperref Info: Link coloring OFF on input line 111.
 (main.out) (main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
@@ -977,7 +977,7 @@ Package hyperref Info: Link coloring OFF on input line 110.
 
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into your preamble.
- on input line 110.
+ on input line 111.
 
 
 Package fontspec Info: 
@@ -986,61 +986,61 @@ Package fontspec Info:
 
 \symlegacymaths=\mathgroup9
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 110.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 110.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 110.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 110.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 110.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 110.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 110.
-LaTeX Font Info:    Redeclaring math accent \check on input line 110.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 110.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 110.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 110.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 110.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 110.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 110.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 110.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 110.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 110.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 110.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 110.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 110.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 110.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 110.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 110.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 110.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 111.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 111.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 111.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 111.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 111.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 111.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 111.
+LaTeX Font Info:    Redeclaring math accent \check on input line 111.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 111.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 111.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 111.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 111.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 111.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 111.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 111.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 111.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 111.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 111.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 111.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 111.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 111.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 111.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 111.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 111.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 110.
+(Font)              `operators' in the math version `normal' on input line 111.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 110.
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 111.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 110.
+(Font)              `operators' in the math version `bold' on input line 111.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 110.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 111.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 110.
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 111.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 110.
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 111.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 110.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 111.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 110.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 111.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 110.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 111.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 110.
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 111.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 110.
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 111.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 110.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 111.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 110.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 113.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 111.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 116.
 (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 113.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 116.
  (C:\Users\buinh\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -1052,41 +1052,45 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
-
+ (chapter/loi_gioi_thieu.tex
 
 [2
 
-]
+]) (chapter/kiem_tra.tex
 
 [3
+
+]) (chapter/toan_hoc_nen_tang.tex
+
+[4
 
 ]
 Chương 0.
 (chapter/toan_hoc_nen_tang/do_thi.tex (chapter/toan_hoc_nen_tang/do_thi/truc_so.tex
 
-[4
+[5
 
 ]
 
 Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
 (babel)             Reported  on input line 124.
-[5]) (chapter/toan_hoc_nen_tang/do_thi/mat_phang.tex
+[6]) (chapter/toan_hoc_nen_tang/do_thi/mat_phang.tex
 
-[6]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+[7]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[7]) (chapter/toan_hoc_nen_tang/do_thi/khong_gian.tex
+
+
+[8]) (chapter/toan_hoc_nen_tang/do_thi/khong_gian.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[8]
+[9]
 Underfull \hbox (badness 10000) in paragraph at lines 67--108
 
  []
@@ -1096,16 +1100,16 @@ Underfull \vbox (badness 2384) has occurred while \output is active []
 
 
 
-[9])) (chapter/toan_hoc_nen_tang/ham_so_mot_bien.tex (chapter/toan_hoc_nen_tang/ham_so_mot_bien/dinh_nghia.tex
+[10])) (chapter/toan_hoc_nen_tang/ham_so_mot_bien.tex (chapter/toan_hoc_nen_tang/ham_so_mot_bien/dinh_nghia.tex
 Underfull \vbox (badness 1394) has occurred while \output is active []
 
 
 
-[10]
-
 [11]
 
 [12]
+
+[13]
 Underfull \hbox (badness 10000) in paragraph at lines 198--218
 
  []
@@ -1132,7 +1136,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 279--302
 
 
 
-[13]
+[14]
 Underfull \hbox (badness 10000) in paragraph at lines 367--389
 
  []
@@ -1142,9 +1146,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[14]
-
 [15]
+
+[16]
 Underfull \hbox (badness 10000) in paragraph at lines 511--530
 
  []
@@ -1156,15 +1160,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 532--548
 
 
 
-[16]
+[17]
 Missing character: There is no ; in font nullfont!
 
 
-[17]
+[18]
 Missing character: There is no ; in font nullfont!
 ) (chapter/toan_hoc_nen_tang/ham_so_mot_bien/da_thuc.tex
 
-[18]
+[19]
 Underfull \hbox (badness 10000) in paragraph at lines 45--76
 
  []
@@ -1180,7 +1184,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 78--114
 
 
 
-[19]
+[20]
 Underfull \hbox (badness 10000) in paragraph at lines 118--155
 
  []
@@ -1195,8 +1199,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[20]
-
 [21]
 
 [22]
@@ -1206,6 +1208,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [24]
 
 [25]
+
+[26]
 
 Package pgfplots Warning: 'fill between': Could not activate graphics layer 'pre main'. Filled path will be on top of the other ones. Please ensure that 'pre main' is somewhere in the layer list (or set '/tikz/fill between/on layer='). on input line 618.
 
@@ -1219,7 +1223,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[26]
+[27]
 Overfull \hbox (9.93872pt too wide) in paragraph at lines 701--702
  [][] 
  []
@@ -1229,11 +1233,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[27]
+[28]
 
-[28]) (chapter/toan_hoc_nen_tang/ham_so_mot_bien/phep_tinh_ham.tex
+[29]) (chapter/toan_hoc_nen_tang/ham_so_mot_bien/phep_tinh_ham.tex
 
-[29]) (chapter/toan_hoc_nen_tang/ham_so_mot_bien/phan_thuc.tex
+[30]) (chapter/toan_hoc_nen_tang/ham_so_mot_bien/phan_thuc.tex
 Overfull \hbox (8.62787pt too wide) in paragraph at lines 27--54
 []$[]$       $[]$
  []
@@ -1245,7 +1249,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--54
 
 
 
-[30]
+[31]
 Overfull \hbox (8.62787pt too wide) in paragraph at lines 56--89
 []$[]$       $[]$
  []
@@ -1270,7 +1274,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[31]
+[32]
 Overfull \hbox (3.92857pt too wide) in paragraph at lines 143--181
 []$[]$       $[]$
  []
@@ -1282,7 +1286,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 143--181
 
 
 
-[32]
+[33]
 Overfull \hbox (3.92857pt too wide) in paragraph at lines 216--253
 []$[]$       $[]$
  []
@@ -1312,19 +1316,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[33]
-
 [34]
+
+[35]
 Underfull \vbox (badness 4779) has occurred while \output is active []
 
 
 
-[35]
-Underfull \vbox (badness 2293) has occurred while \output is active []
-
-
-
 [36]
+Underfull \vbox (badness 1939) has occurred while \output is active []
+
+
 
 [37]
 
@@ -1332,36 +1334,81 @@ Underfull \vbox (badness 2293) has occurred while \output is active []
 
 [39]
 
-[40]) (chapter/toan_hoc_nen_tang/ham_so_mot_bien/phep_hop_ham.tex))
+[40]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [41]
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 175.
-See the caption package documentation for explanation.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 [42]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[43]
+
+
+[43]) (chapter/toan_hoc_nen_tang/ham_so_mot_bien/phep_hop_ham.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [44]
+Underfull \hbox (badness 10000) in paragraph at lines 10--46
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--128
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[45]) (chapter/toan_hoc_nen_tang/ham_so_mot_bien/nhi_thuc_niu_ton.tex
+
+[46]
+
+[47])))
+
+[48]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 163.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[49]
+
+[50]
+
+[51]
 Chương 1.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 324.
+(caption)                particular \caption on input line 312.
 See the caption package documentation for explanation.
 
 
 
-[45
+[52
 
 ]
 
-[46]
+[53]
 
-[47]
+[54]
 Chương 2.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1371,16 +1418,16 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[48
+[55
 
 ]
 
-[49]
+[56]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (4.0166pt too wide) in paragraph at lines 725--726
+Overfull \hbox (4.0166pt too wide) in paragraph at lines 713--714
  [][] 
  []
 
@@ -1392,31 +1439,31 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[50]
+[57]
 
-LaTeX Warning: Text page 51 contains only floats.
+LaTeX Warning: Text page 58 contains only floats.
 
 
 
-[51]
+[58]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 839.
+(caption)                particular \caption on input line 827.
 See the caption package documentation for explanation.
 
 
 
-[52]
+[59]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 895.
+(caption)                particular \caption on input line 883.
 See the caption package documentation for explanation.
 
 
 
-[53]
+[60]
 
-[54]
+[61]
 
 Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
 (xeCJK)                
@@ -1425,7 +1472,7 @@ Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
 
 
 
-[55
+[62
 
 ] (main.aux)
  ***********
@@ -1437,15 +1484,15 @@ L3 programming layer <2022/08/05>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 1BAA90FB43FBDECCDC22DE4B98C1C279;3163.
+(rerunfilecheck)             Checksum: C37F5A0DBBFE439692F4EADD650D74EA;3666.
  ) 
 Here is how much of TeX's memory you used:
- 45668 strings out of 408640
- 1074110 string characters out of 5744799
- 1648245 words of memory out of 5000000
- 68040 multiletter control sequences out of 15000+600000
- 577132 words of font info for 116 fonts, out of 8000000 for 9000
+ 46355 strings out of 408640
+ 1088906 string characters out of 5744799
+ 1649004 words of memory out of 5000000
+ 68706 multiletter control sequences out of 15000+600000
+ 577180 words of font info for 122 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 99i,20n,105p,2041b,931s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,20n,105p,2080b,931s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (55 pages, 1559796 bytes).
+Output written on main.xdv (62 pages, 1716436 bytes).
