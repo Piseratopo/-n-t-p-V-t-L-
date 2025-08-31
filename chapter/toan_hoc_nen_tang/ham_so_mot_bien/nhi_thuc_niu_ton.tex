@@ -76,3 +76,10 @@ Lấy tổng của các thành phần,
 Theo quy nạp toán học, đẳng thức đã được chứng minh.
 
 Tuy rằng chúng ta đã giả sử $y$ là tham số, nhưng đẳng thức liên quan đến nhị thức Niu-tơn này vẫn đúng khi $y$ là một hàm bất kì do trong chứng minh chúng ta không sử dụng tính chất số của $y$.
+
+\exercise Đặt $$\binom{n}{k_1;k_2;\cdots;k_m} = \frac{n!}{\prod_{i}^{m}\left(k_i!\right)\cdots \left(n - \sum_{i}^{m}\left(k_i\right)\right)!} = \frac{n!}{k_1!k_2!\cdots k_m!\cdot\left(n-k_1-k_2-\cdots-k_m\right)!}.$$ Cho $m$ là số nguyên dương và $n$ là số tự nhiên. Chứng minh rằng $$\left(\sum_{i=1}^{m}\left(x_i\right)\right)^n = \left(x_1 + x_2 + \cdots + x_m\right)^n = \sum_{\begin{cases}
+   k_1+k_2+\cdots+k_m=n\\
+   k_1;k_2;\cdots;k_m\in\mathbb{N}
+\end{cases}}\left(\binom{n}{k_1;k_2;\cdots;k_m}\prod_{i=1}^{m}x_i^{k_i}\right).$$
+
+\solution

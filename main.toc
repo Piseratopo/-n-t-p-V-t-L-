@@ -14,6 +14,5 @@
 \contentsline {subsection}{\numberline {0.2.5}Phép hợp hai hàm số}{45}{subsection.0.2.5}%
 \contentsline {subsection}{\numberline {0.2.6}Nhị thức Niu-tơn}{46}{subsection.0.2.6}%
 \contentsline {section}{\numberline {0.3}Số ảo và số phức}{48}{section.0.3}%
-\contentsline {section}{\numberline {0.4}Bài tập tổng hợp}{51}{section.0.4}%
 \contentsline {chapter}{\numberline {1}Cơ bản của xử lí số liệu trong vật lí}{52}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Chuyển động}{55}{chapter.2}%
