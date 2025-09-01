@@ -485,6 +485,9 @@ INPUT chapter\toan_hoc_nen_tang\ham_so_mot_bien.tex
 INPUT .\chapter\toan_hoc_nen_tang\ham_so_mot_bien\dinh_nghia.tex
 INPUT .\chapter\toan_hoc_nen_tang\ham_so_mot_bien\dinh_nghia.tex
 INPUT chapter\toan_hoc_nen_tang\ham_so_mot_bien\dinh_nghia.tex
+INPUT .\chapter\toan_hoc_nen_tang\ham_so_mot_bien\ki_hieu_tong_tich.tex
+INPUT .\chapter\toan_hoc_nen_tang\ham_so_mot_bien\ki_hieu_tong_tich.tex
+INPUT chapter\toan_hoc_nen_tang\ham_so_mot_bien\ki_hieu_tong_tich.tex
 INPUT .\chapter\toan_hoc_nen_tang\ham_so_mot_bien\da_thuc.tex
 INPUT .\chapter\toan_hoc_nen_tang\ham_so_mot_bien\da_thuc.tex
 INPUT chapter\toan_hoc_nen_tang\ham_so_mot_bien\da_thuc.tex
@@ -500,6 +503,12 @@ INPUT chapter\toan_hoc_nen_tang\ham_so_mot_bien\phep_hop_ham.tex
 INPUT .\chapter\toan_hoc_nen_tang\ham_so_mot_bien\nhi_thuc_niu_ton.tex
 INPUT .\chapter\toan_hoc_nen_tang\ham_so_mot_bien\nhi_thuc_niu_ton.tex
 INPUT chapter\toan_hoc_nen_tang\ham_so_mot_bien\nhi_thuc_niu_ton.tex
+INPUT .\chapter\toan_hoc_nen_tang\ham_luong_giac.tex
+INPUT .\chapter\toan_hoc_nen_tang\ham_luong_giac.tex
+INPUT chapter\toan_hoc_nen_tang\ham_luong_giac.tex
+INPUT .\chapter\toan_hoc_nen_tang\ham_luong_giac\goc_dinh_huong.tex
+INPUT .\chapter\toan_hoc_nen_tang\ham_luong_giac\goc_dinh_huong.tex
+INPUT chapter\toan_hoc_nen_tang\ham_luong_giac\goc_dinh_huong.tex
 INPUT main.aux
 INPUT .\main.out
 INPUT .\main.out

@@ -45,7 +45,7 @@
 
 \NewDocumentCommand{\exercise}{o}{
    \refstepcounter{exercise}
-   \noindent\textbf{Bài \arabic{exercise}:}
+   \noindent\textbf{\textcolor{colorEmphasisCyan}{Bài \arabic{exercise}:}}
    \IfNoValueTF{#1}
       {\label{ex\arabic{exercise}}}
       {\label{#1}}

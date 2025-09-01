@@ -1,5 +1,9 @@
 \subsection{Nhị thức Niu-tơn}
 
+\ % Lùi đầu dòng
+
+Nhìn về phía trước, phần này được đưa vào nhằm phục vụ cho chứng minh các tính chất của đạo hàm của đa thức sẽ được đề cập sau này. Ngoài ra, công thức nhị thức Niu-tơn cũng có thể được dùng để xấp xỉ hàm số mũ. Việc xấp xỉ này là việc thường thấy khi làm các tính toán về vật lí và kĩ thuật nói chung.
+
 Trước khi nhắc đến nhị thức Niu-tơn\footnote{Phát hiện lần đầu bởi Isaac Newton (1643 - 1727).}, chúng ta sẽ nhắc lại về khái niệm giai thừa và tổ hợp. Ở thời kì của Niu-tơn, các khác niệm liên quan đến những bài toán tổ hợp chưa được phát minh, cho nên nếu bạn đọc tìm hiểu tài liệu gốc thì sẽ thấy cách biểu diễn nhị thức Niu-tơn rất khác so với cách biểu diễn hiện đại.
 
 \defText{Giai thừa} của một số nguyên dương $n$ được định nghĩa là
@@ -77,9 +81,100 @@ Theo quy nạp toán học, đẳng thức đã được chứng minh.
 
 Tuy rằng chúng ta đã giả sử $y$ là tham số, nhưng đẳng thức liên quan đến nhị thức Niu-tơn này vẫn đúng khi $y$ là một hàm bất kì do trong chứng minh chúng ta không sử dụng tính chất số của $y$.
 
-\exercise Đặt $$\binom{n}{k_1;k_2;\cdots;k_m} = \frac{n!}{\prod_{i}^{m}\left(k_i!\right)\cdots \left(n - \sum_{i}^{m}\left(k_i\right)\right)!} = \frac{n!}{k_1!k_2!\cdots k_m!\cdot\left(n-k_1-k_2-\cdots-k_m\right)!}.$$ Cho $m$ là số nguyên dương và $n$ là số tự nhiên. Chứng minh rằng $$\left(\sum_{i=1}^{m}\left(x_i\right)\right)^n = \left(x_1 + x_2 + \cdots + x_m\right)^n = \sum_{\begin{cases}
+\exercise Cho $m$ là một số nguyên dương, và $n; k_1; k_2; \cdots ;k_m$ là các số tự nhiên thỏa mãn $\sum_{i=1}^{m}k_i \leq n$. Đặt $$\binom{n}{k_1;k_2;\cdots;k_m} = \frac{n!}{\prod_{i}^{m}\left(k_i!\right)\cdots \left(n - \sum_{i}^{m}\left(k_i\right)\right)!} = \frac{n!}{k_1!k_2!\cdots k_m!\cdot\left(n-k_1-k_2-\cdots-k_m\right)!}.$$ Chứng minh rằng $$\left(\sum_{i=1}^{m}\left(x_i\right)\right)^n = \sum_{\begin{cases}
+   \sum_{i}^{m}\left(k_i\right)=n\\
+   k_1;k_2;\cdots;k_m\in\mathbb{N}
+\end{cases}}\left(\binom{n}{k_1;k_2;\cdots;k_m}\prod_{i=1}^{m}\left(x_i^{k_i}\right)\right)$$
+hay
+$$\left(x_1 + x_2 + \cdots + x_m\right)^n = \sum_{\begin{cases}
    k_1+k_2+\cdots+k_m=n\\
    k_1;k_2;\cdots;k_m\in\mathbb{N}
-\end{cases}}\left(\binom{n}{k_1;k_2;\cdots;k_m}\prod_{i=1}^{m}x_i^{k_i}\right).$$
+\end{cases}}\left(\binom{n}{k_1;k_2;\cdots;k_m}k_1k_2\cdots k_m\right).$$
 
 \solution
+
+Trước khi đi vào chứng minh, cần để ý rằng nếu $\sum_{i=1}^{m}k_i = n$ thì
+\begin{align*}
+   \binom{n}{k_1;k_2;\cdots;k_m} &= \frac{n!}{\prod_{i}^{m}\left(k_i!\right)\cdots \left(n - \sum_{i}^{m}\left(k_i\right)\right)!} \\
+   &= \frac{n!}{\prod_{i}^{m}\left(k_i!\right)\cdots \left(n - n\right)!} = \frac{n!}{\prod_{i}^{m}\left(k_i!\right)}.
+\end{align*}
+
+Chúng ta chứng minh bằng việc sử dụng quy nạp trên $m$. Xét trường hợp nền $m = 1$, chúng ta có $\sum_{i}^{m}\left(k_i\right) = x_1^n.$ Để tổng của một số $k_1$ bằng đúng $n$ thì $k_1 = n$. Cho nên, thay thế $m$ vào để có
+
+\begin{align*}
+   &\sum_{\begin{cases}
+      \sum_{i}^{m}\left(k_i\right)=n\\
+      k_1;k_2;\cdots;k_m\in\mathbb{N}
+   \end{cases}}\left(\binom{n}{k_1;k_2;\cdots;k_m}\prod_{i=1}^{m}\left(x_i^{k_i}\right)\right) \\
+   = &\binom{n}{k_1} \prod_{i=1}^{1}\left(x_i^{k_i}\right) = \binom{n}{n}x_1^n = x_1^n
+\end{align*}
+và chúng ta đã chứng minh đẳng thức được cho với $m = 1.$
+
+Với bước quy nạp, giả sử đẳng thức đúng với $m = a$. Khi này,
+
+\begin{equation}
+   \left(\sum_{i}^{a + 1}\left(x_i\right)\right)^n = \left(\sum_{i}^{a - 1}\left(x_i\right) + \left(x_{a} + x_{a + 1}\right)\right)^n.\equationexplanation{Tách hai số hạng cuối.}
+   \label{eq:ham_so_mot_bien:nhi_thuc_niu_ton:ex18_multinomial_support}
+\end{equation}
+
+Đặt $\begin{cases}
+   X = x_{a} + x_{a + 1} \\
+   K = k_a + k_{a + 1}
+\end{cases}$. Khi đó, theo giả thiết quy nạp, 
+
+\begin{align*}
+   \left(\sum_{i}^{a + 1}\left(x_i\right)\right)^n = \sum_{\begin{cases}
+      \sum_{i}^{a-1}\left(k_i\right) + K=n\\
+      k_1;k_2;\cdots;k_{a-1};K\in\mathbb{N}
+   \end{cases}}\left(\binom{n}{k_1;k_2;\cdots;k_{a-1};K}\prod_{i=1}^{a-1}\left(x_i^{k_i}\right)X^K\right).
+\end{align*}
+
+Theo nhị thức Niu-tơn, chúng ta đã có:
+$$
+   X^K = \left(x_a + x_{a + 1}\right)^K = \sum_{i=0}^{K} \left(\binom{K}{i} x_a^i x_{a+1}^{K-i}\right).
+$$
+Nhìn theo một khía cạnh khác, nếu cho $i$ chạy từ $0$ đến $K$ thì bộ số $\left(i; K-i\right)$ sẽ quét tất cả các trường hợp $\left(k_a; k_{a + 1}\right)$ với $k_a + k_{a + 1} = K$. Do đó, 
+$$
+   X^K = \left(x_a + x_{a + 1}\right)^K = \sum_{\begin{cases}
+      k_a + k_{a + 1} = K\\
+      k_a;k_{a + 1}\in\mathbb{N}
+   \end{cases}} \left(\binom{K}{k_a; k_{a + 1}} x_a^{k_a} x_{a+1}^{k_{a + 1}}\right).
+$$
+
+Từ \refeq{eq:ham_so_mot_bien:nhi_thuc_niu_ton:ex18_multinomial_support}, chúng ta có
+
+\begin{align*}
+   \binom{n}{k_1;k_2;\cdots ;k_{a - 1};K}\binom{K}{k_a; k_{a + 1}} &= \frac{n!}{\prod_{1}^{a-1}\left(k_i!\right)K!} \frac{K!}{k_a!k_{a + 1}!} \\
+   &= \frac{n!}{\prod_{1}^{a-1}\left(k_i!\right)k_a!k_{a + 1}!} \\
+   &= \frac{n!}{\prod_{1}^{a+1}\left(k_i!\right)} \\
+   &= \binom{n}{k_1;k_2;\cdots ;k_{a-1};k_a;k_{a + 1}}.
+\end{align*}
+
+Từ đó, kết hợp những gì chúng ta đã có để có
+
+\begin{align*}
+   &\left(\sum_{i}^{a + 1}\left(x_i\right)\right)^n \\
+   \displaybreak[2]
+   = &\sum_{\begin{cases}
+      \sum_{i}^{a-1}\left(k_i\right) + K=n\\
+      k_1;\cdots;k_{a-1};K\in\mathbb{N}
+   \end{cases}}\left(\binom{n}{k_1;\cdots;k_{a-1};K}\prod_{i=1}^{a-1}\left(x_i^{k_i}\right)\sum_{\begin{cases}
+      k_a + k_{a + 1} = K\\
+      k_a;k_{a + 1}\in\mathbb{N}
+   \end{cases}} \left(\binom{K}{k_a; k_{a + 1}} x_a^{k_a} x_{a+1}^{k_{a + 1}}\right)\right) \\
+   \displaybreak[2]
+   = &\sum_{\begin{cases}
+      \sum_{i}^{a+1}\left(k_i\right)=n\\
+      k_1;\cdots;k_{a+1}\in\mathbb{N}
+   \end{cases}}\left(
+      \binom{n}{k_1;\cdots;k_{a-1};K}\binom{K}{k_a; k_{a + 1}}\prod_{i=1}^{a-1}\left(x_i^{k_i}\right)x_a^{k_a} x_{a+1}^{k_{a + 1}}
+   \right) \\
+   \displaybreak[2]
+   = &\sum_{\begin{cases}
+         \sum_{i}^{a+1}\left(k_i\right)=n\\
+         k_1;k_2;\cdots;k_{a+1}\in\mathbb{N}
+      \end{cases}}\left(\binom{n}{k_1;k_2;\cdots;k_{a+1}}\prod_{i=1}^{a+1}\left(x_i^{k_i}\right)\right).
+\end{align*}
+
+Bước quy nạp đã hoàn tất, cùng với đó là điều phải chứng minh. Bài tập này cũng có thể chứng minh bằng phương pháp tổ hợp giống như nhị thức Niu-tơn. Nhìn chung, đây là một bài tập có mạch tương đối thẳng. Điều khó nhất của bài tập này là việc đọc hiểu các kí hiệu toán và thực hiện biến đổi đại số trên một số lượng số không xác định.
+

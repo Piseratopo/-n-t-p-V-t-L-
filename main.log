@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.3) (preloaded format=xelatex 2025.8.2)  31 AUG 2025 20:27
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.3) (preloaded format=xelatex 2025.8.2)  1 SEP 2025 20:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1166,9 +1166,16 @@ Missing character: There is no ; in font nullfont!
 
 [18]
 Missing character: There is no ; in font nullfont!
-) (chapter/toan_hoc_nen_tang/ham_so_mot_bien/da_thuc.tex
+) (chapter/toan_hoc_nen_tang/ham_so_mot_bien/ki_hieu_tong_tich.tex
 
-[19]
+[19]) (chapter/toan_hoc_nen_tang/ham_so_mot_bien/da_thuc.tex
+Underfull \hbox (badness 10000) in paragraph at lines 37--1
+
+ []
+
+
+
+[20]
 Underfull \hbox (badness 10000) in paragraph at lines 45--76
 
  []
@@ -1183,8 +1190,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 78--114
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[20]
+
+
+[21]
 Underfull \hbox (badness 10000) in paragraph at lines 118--155
 
  []
@@ -1199,8 +1209,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[21]
-
 [22]
 
 [23]
@@ -1210,6 +1218,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [25]
 
 [26]
+
+[27]
 
 Package pgfplots Warning: 'fill between': Could not activate graphics layer 'pre main'. Filled path will be on top of the other ones. Please ensure that 'pre main' is somewhere in the layer list (or set '/tikz/fill between/on layer='). on input line 618.
 
@@ -1223,7 +1233,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[27]
+[28]
 Overfull \hbox (9.93872pt too wide) in paragraph at lines 701--702
  [][] 
  []
@@ -1233,11 +1243,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[28]
+[29]
 
-[29]) (chapter/toan_hoc_nen_tang/ham_so_mot_bien/phep_tinh_ham.tex
+[30]) (chapter/toan_hoc_nen_tang/ham_so_mot_bien/phep_tinh_ham.tex
 
-[30]) (chapter/toan_hoc_nen_tang/ham_so_mot_bien/phan_thuc.tex
+[31]) (chapter/toan_hoc_nen_tang/ham_so_mot_bien/phan_thuc.tex
 Overfull \hbox (8.62787pt too wide) in paragraph at lines 27--54
 []$[]$       $[]$
  []
@@ -1249,7 +1259,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--54
 
 
 
-[31]
+[32]
 Overfull \hbox (8.62787pt too wide) in paragraph at lines 56--89
 []$[]$       $[]$
  []
@@ -1274,7 +1284,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[32]
+[33]
 Overfull \hbox (3.92857pt too wide) in paragraph at lines 143--181
 []$[]$       $[]$
  []
@@ -1286,7 +1296,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 143--181
 
 
 
-[33]
+[34]
 Overfull \hbox (3.92857pt too wide) in paragraph at lines 216--253
 []$[]$       $[]$
  []
@@ -1316,28 +1326,23 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[34]
-
 [35]
+
+[36]
 Underfull \vbox (badness 4779) has occurred while \output is active []
 
 
 
-[36]
+[37]
 Underfull \vbox (badness 1939) has occurred while \output is active []
 
 
-
-[37]
 
 [38]
 
 [39]
 
 [40]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [41]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1349,18 +1354,20 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[43]) (chapter/toan_hoc_nen_tang/ham_so_mot_bien/phep_hop_ham.tex
+[43]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[44]
-Underfull \hbox (badness 10000) in paragraph at lines 10--46
+[44]) (chapter/toan_hoc_nen_tang/ham_so_mot_bien/phep_hop_ham.tex
+
+[45]
+Underfull \hbox (badness 10000) in paragraph at lines 12--48
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--128
+Underfull \hbox (badness 10000) in paragraph at lines 94--130
 
  []
 
@@ -1369,31 +1376,36 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[45]) (chapter/toan_hoc_nen_tang/ham_so_mot_bien/nhi_thuc_niu_ton.tex
+[46]) (chapter/toan_hoc_nen_tang/ham_so_mot_bien/nhi_thuc_niu_ton.tex
 
-[46]
-
-[47])))
+[47]
 
 [48]
+
+[49]
+
+[50])) (chapter/toan_hoc_nen_tang/ham_luong_giac.tex (chapter/toan_hoc_nen_tang/ham_luong_giac/goc_dinh_huong.tex)))
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 163.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
-[49]
-
-[50]
 
 [51]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[52]
+
+[53]
+
+[54]
 Chương 1.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
@@ -1402,13 +1414,13 @@ See the caption package documentation for explanation.
 
 
 
-[52
+[55
 
 ]
 
-[53]
+[56]
 
-[54]
+[57]
 Chương 2.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1418,11 +1430,11 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[55
+[58
 
 ]
 
-[56]
+[59]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1439,13 +1451,13 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[57]
+[60]
 
-LaTeX Warning: Text page 58 contains only floats.
+LaTeX Warning: Text page 61 contains only floats.
 
 
 
-[58]
+[61]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 825.
@@ -1453,7 +1465,7 @@ See the caption package documentation for explanation.
 
 
 
-[59]
+[62]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 881.
@@ -1461,9 +1473,9 @@ See the caption package documentation for explanation.
 
 
 
-[60]
+[63]
 
-[61]
+[64]
 
 Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
 (xeCJK)                
@@ -1472,7 +1484,7 @@ Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
 
 
 
-[62
+[65
 
 ] (main.aux)
  ***********
@@ -1484,15 +1496,15 @@ L3 programming layer <2022/08/05>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 913ABD2F36877084E34E31D00A6DDAA4;3510.
+(rerunfilecheck)             Checksum: 375E503C5EDBB7DD97E7C530A71F0158;4222.
  ) 
 Here is how much of TeX's memory you used:
- 46357 strings out of 408640
- 1088919 string characters out of 5744799
- 1649090 words of memory out of 5000000
- 68708 multiletter control sequences out of 15000+600000
+ 46378 strings out of 408640
+ 1089985 string characters out of 5744799
+ 1648894 words of memory out of 5000000
+ 68719 multiletter control sequences out of 15000+600000
  577180 words of font info for 122 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  99i,20n,105p,2080b,931s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.xdv (62 pages, 1716920 bytes).
+Output written on main.xdv (65 pages, 1760568 bytes).
