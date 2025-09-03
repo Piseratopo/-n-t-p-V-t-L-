@@ -4,7 +4,52 @@
 
 \defText{Góc không định hướng} (gọi tắt là \defText{góc}) là hình gồm hai tia có chung gốc. Gốc chung của hai tia là \defText{đỉnh} của góc. Hai tia chắn góc được gọi là \defText{cạnh} của góc.
 
-\defText{Số đo góc} về mặt trực quan là độ mở của góc. Để đo số đo góc, chúng ta sử dụng đơn vị \defText{độ} hoặc \defText{ra-đi-an}. Gọi \defText{đường tròn đơn vị} là đường tròn có bán kính bằng $1$ đơn vị độ dài. Vẽ đường tròn đơn vị với tâm nằm ở đỉnh của góc, khi đó, số đo góc được đo bằng độ dài của cung chắn góc. Định nghĩa hai đơn vị đo góc như sau:
+\defText{Số đo góc} về mặt trực quan là độ mở của góc. Để đo số đo góc, chúng ta sử dụng đơn vị \defText{độ} hoặc \defText{ra-đi-an}. Gọi \defText{đường tròn đơn vị} là đường tròn có bán kính bằng $1$ đơn vị độ dài. Vẽ đường tròn đơn vị với tâm nằm ở đỉnh của góc, khi đó, số đo góc được đo bằng độ dài của cung chắn góc. Chúng ta sẽ không chứng minh tại sao mọi đường tròn lại có chu vi bằng $2\pi$ lần bán kính, nhưng chúng ta sẽ sử dụng điều đó để có chu vi của đường tròn đơn vị bằng $2\pi$ đơn vị độ dài. Định nghĩa hai đơn vị đo như sau:
 \begin{itemize}
-   \item Độ: Chia đường tròn làm $360$ phần bằng nhau. 
+   \item \defText{Độ}: Chia đường tròn làm $360$ phần bằng nhau, mỗi phần sẽ có độ dài là $\frac{2\pi}{360} = \frac{\pi}{180}$. Một cung chắn góc trên đường tròn đơn vị có đường tròn bằng này định nghĩa cho góc $1$ độ hay $\defMath{1^\circ}$.
+   \item \defText{Ra-đi-an}: Một cung chắn góc trên đường tròn đơn vị có độ dài bằng $1$ định nghĩa cho góc $1$ ra-đi-an hay $\defMath{1\defText{ rad}}$.
 \end{itemize}
+
+Chúng ta tính số đo của các góc khác theo tỉ lệ với những góc đơn vị này. Như trong hình \ref{fig:toan_hoc_nen_tang:ham_luong_giac:goc_thong_dung}, góc $\textcolor{colorEmphasisCyan}{\theta_1 = \frac{\pi}{2} \text{ rad} = 90^\circ}$, góc $\textcolor{colorEmphasis}{\theta_2 = \frac{\pi}{3} \text{ rad} = 60^\circ}$ và góc $\textcolor{colorEmphasisGreen}{\theta_3 = \frac{\pi}{4} \text{ rad} = 45^\circ}$.
+
+{
+   \begin{minipage}{0.48\textwidth}
+      \begin{figure}[H]
+         \centering
+         \begin{tikzpicture}
+            \draw[color=colorEmphasisCyan, very thick] (1, 3) -- (0, 0) -- (3, 1);
+            \filldraw[color=colorEmphasis] (0,0) circle (\pointSize) node[below left] {Đỉnh};
+            \node[above left, color=colorEmphasisCyan] at (0.5, 1.5) {Cạnh};
+            \node[below right, color=colorEmphasisCyan] at (1.5, 0) {Cạnh};
+            \draw[color=colorEmphasisGreen] ({cos(atan(1/3))},{sin(atan(1/3))}) arc[start angle={atan(1/3)}, end angle={atan(3)}, radius=1];
+            \node[above right, color=colorEmphasisGreen] at (0.65, 0.65) {$\theta$};
+         \end{tikzpicture}
+         \caption{Biểu diễn góc có số đo bằng $\theta$}
+         \label{fig:toan_hoc_nen_tang:ham_luong_giac:sdg}
+      \end{figure}
+   \end{minipage}
+   \hfill
+   \begin{minipage}{0.48\textwidth}
+      \begin{figure}[H]
+         \centering
+         \begin{tikzpicture}
+            \draw (0, 0) -- (4, 0);
+            \draw[color=colorEmphasisGreen, very thick] (0, 0) -- ({4*cos(45)}, {4*sin(45)});
+            \draw[color=colorEmphasisGreen] (3, 0) arc[start angle={0}, end angle={45}, radius=3];
+            \node[above right, color=colorEmphasisGreen] at ({2.9 * cos(22)}, {2.8 * sin(22)}) {$\theta_3$};
+            \draw[color=colorEmphasis, very thick] (0, 0) -- ({4*cos(60)}, {4*sin(60)});
+            \draw[color=colorEmphasis] (2, 0) arc[start angle={0}, end angle={60}, radius=2];
+            \node[above right, color=colorEmphasis] at ({1.9 * cos(30)}, {1.8 * sin(30)}) {$\theta_2$};
+            \draw[color=colorEmphasisCyan, very thick] (0, 0) -- (0, 4);
+            \draw[color=colorEmphasisCyan] (1, 0) arc[start angle={0}, end angle={90}, radius=1];
+            \node[right, color=colorEmphasisCyan] at ({cos(40)}, {sin(40)}) {$\theta_1$};
+            \filldraw (0, 0) circle (\pointSize) node[below left] {$O$};
+         \end{tikzpicture}
+         \caption{Biểu diễn các góc quen thuộc}
+         \label{fig:toan_hoc_nen_tang:ham_luong_giac:goc_thong_dung}
+      \end{figure}
+   \end{minipage}
+}
+
+Trên máy tính khoa học hiện hành còn một đơn vị nữa là \defText{gra-đi-an} được định nghĩa bằng việc chia đường tròn thành $400$ phần bằng nhau thay vì $360$ giống như độ. Khi này, chúng ta có quy đổi $$\defMath{1\defText{ grad} = 1\defText{ gon} = 1^\defText{ g} = \frac{\pi}{200}\defText{ rad}}.$$
+Đơn vị này thông dụng hơn trong địa lí thay vì vật lí.
