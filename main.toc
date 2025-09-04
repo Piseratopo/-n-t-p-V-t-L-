@@ -17,6 +17,7 @@
 \contentsline {subsection}{\numberline {0.2.7}Nhị thức Niu-tơn}{47}{subsection.0.2.7}%
 \contentsline {section}{\numberline {0.3}Hàm lượng giác}{51}{section.0.3}%
 \contentsline {subsection}{\numberline {0.3.1}Góc định hướng}{51}{subsection.0.3.1}%
-\contentsline {section}{\numberline {0.4}Số ảo và số phức}{51}{section.0.4}%
-\contentsline {chapter}{\numberline {1}Cơ bản của xử lí số liệu trong vật lí}{55}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Chuyển động}{58}{chapter.2}%
+\contentsline {subsection}{\numberline {0.3.2}Định nghĩa hàm lượng giác}{52}{subsection.0.3.2}%
+\contentsline {section}{\numberline {0.4}Số ảo và số phức}{52}{section.0.4}%
+\contentsline {chapter}{\numberline {1}Cơ bản của xử lí số liệu trong vật lí}{56}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Chuyển động}{59}{chapter.2}%

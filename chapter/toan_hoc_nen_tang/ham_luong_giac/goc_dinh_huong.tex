@@ -2,7 +2,7 @@
 
 \ % Lùi đầu dòng
 
-\defText{Góc không định hướng} (gọi tắt là \defText{góc}) là hình gồm hai tia có chung gốc. Gốc chung của hai tia là \defText{đỉnh} của góc. Hai tia chắn góc được gọi là \defText{cạnh} của góc.
+\defText{Góc không định hướng} (gọi tắt là \defText{góc}) là hình gồm hai tia có chung gốc. Gốc chung của hai tia là \defText{đỉnh} của góc. Hai tia chắn góc được gọi là \defText{cạnh} của góc. Về mặt kí hiệu, nếu góc có hai cạnh là $Ox$, $Oy$ và chúng có chung đỉnh là $O$, thì góc được kí hiệu là $\defMath{\angle xOy}$,  $\defMath{\angle yOx}$, $\defMath{\widehat{xOy}}$ hoặc $\defMath{\widehat{yOx}}$.
 
 \defText{Số đo góc} về mặt trực quan là độ mở của góc. Để đo số đo góc, chúng ta sử dụng đơn vị \defText{độ} hoặc \defText{ra-đi-an}. Gọi \defText{đường tròn đơn vị} là đường tròn có bán kính bằng $1$ đơn vị độ dài. Vẽ đường tròn đơn vị với tâm nằm ở đỉnh của góc, khi đó, số đo góc được đo bằng độ dài của cung chắn góc. Chúng ta sẽ không chứng minh tại sao mọi đường tròn lại có chu vi bằng $2\pi$ lần bán kính, nhưng sẽ sử dụng điều đó để có chu vi của đường tròn đơn vị bằng $2\pi$ đơn vị độ dài. Định nghĩa hai đơn vị đo như sau:
 \begin{itemize}
@@ -18,15 +18,15 @@ Chúng ta tính số đo của các góc khác theo tỉ lệ với những góc
          \centering
          \begin{tikzpicture}
             \draw[color=colorEmphasisCyan, very thick] (1, 3) -- (0, 0) -- (3, 1);
-            \filldraw[color=colorEmphasis] (0,0) circle (\pointSize) node[below left] {Đỉnh};
-            \node[above] at (1, 3) {$y$};
+            \filldraw[color=colorEmphasis] (0,0) circle (\pointSize) node[below right] {Đỉnh} node[below left] {$O$};
+            \node[above, color=colorEmphasisCyan] at (1, 3) {$y$};
             \node[above left, color=colorEmphasisCyan] at (0.5, 1.5) {Cạnh};
-            \node[right] at (3, 1) {$x$};
+            \node[right, color=colorEmphasisCyan] at (3, 1) {$x$};
             \node[below right, color=colorEmphasisCyan] at (1.5, 0) {Cạnh};
-            \draw[color=colorEmphasisGreen] ({cos(atan(1/3))},{sin(atan(1/3))}) arc[start angle={atan(1/3)}, end angle={atan(3)}, radius=1];
+            \draw[measuring arrow, color=colorEmphasisGreen] ({cos(atan(1/3))},{sin(atan(1/3))}) arc[start angle={atan(1/3)}, end angle={atan(3)}, radius=1];
             \node[above right, color=colorEmphasisGreen] at (0.65, 0.65) {$\theta$};
          \end{tikzpicture}
-         \caption{Biểu diễn góc có số đo bằng $\theta$}
+         \caption{Biểu diễn $\angle xOy$ có số đo bằng $\theta$}
          \label{fig:toan_hoc_nen_tang:ham_luong_giac:sdg}
       \end{figure}
    \end{minipage}
@@ -36,14 +36,17 @@ Chúng ta tính số đo của các góc khác theo tỉ lệ với những góc
          \centering
          \begin{tikzpicture}
             \draw (0, 0) -- (4, 0);
+
             \draw[color=colorEmphasisGreen, very thick] (0, 0) -- ({4*cos(45)}, {4*sin(45)});
-            \draw[color=colorEmphasisGreen] (3, 0) arc[start angle={0}, end angle={45}, radius=3];
+            \draw[measuring arrow, color=colorEmphasisGreen] (3, 0) arc[start angle={0}, end angle={45}, radius=3];
             \node[above right, color=colorEmphasisGreen] at ({2.9 * cos(22)}, {2.8 * sin(22)}) {$\theta_3$};
+
             \draw[color=colorEmphasis, very thick] (0, 0) -- ({4*cos(60)}, {4*sin(60)});
-            \draw[color=colorEmphasis] (2, 0) arc[start angle={0}, end angle={60}, radius=2];
+            \draw[measuring arrow, color=colorEmphasis] (2, 0) arc[start angle={0}, end angle={60}, radius=2];
             \node[above right, color=colorEmphasis] at ({1.9 * cos(30)}, {1.8 * sin(30)}) {$\theta_2$};
+
             \draw[color=colorEmphasisCyan, very thick] (0, 0) -- (0, 4);
-            \draw[color=colorEmphasisCyan] (1, 0) arc[start angle={0}, end angle={90}, radius=1];
+            \draw[measuring arrow, color=colorEmphasisCyan] (1, 0) arc[start angle={0}, end angle={90}, radius=1];
             \node[right, color=colorEmphasisCyan] at ({cos(40)}, {sin(40)}) {$\theta_1$};
             \filldraw (0, 0) circle (\pointSize) node[below left] {$O$};
          \end{tikzpicture}
@@ -53,5 +56,41 @@ Chúng ta tính số đo của các góc khác theo tỉ lệ với những góc
    \end{minipage}
 }
 
+Nếu số đo lẻ góc theo đơn vị độ thì ngoài việc sử dụng số thập phân, chúng ta còn có thể sử dụng đơn vị \defText{phút} và \defText{giây}. Một độ được chia làm $60$ phần bằng nhau, mỗi phần gọi là một phút kí hiệu là $\defMath{'}$. Một phút lại được chia làm $60$ phần bằng nhau, mỗi phần gọi là một giây kí hiệu là $\defMath{''}$. Ví dụ, góc có số đo là $36{,}61^\circ = 36^\circ 36{,}6' = 36^\circ 36' 36''$.
+
 Trên máy tính khoa học hiện hành còn một đơn vị nữa là \defText{gra-đi-an} được định nghĩa bằng việc chia đường tròn thành $400$ phần bằng nhau thay vì $360$ giống như độ. Khi này, chúng ta có quy đổi $$\defMath{1\defText{ grad} = 1\defText{ gon} = 1^\defText{ g} = \frac{\pi}{200}\defText{ rad}}.$$
 Đơn vị này thông dụng hơn trong địa lí thay vì vật lí.
+
+\defText{Góc định hướng} là mở rộng của góc không định hướng. Hai cạnh được chia ra làm cạnh đầu và cạnh cuối. Số đo của góc định hướng được tạo nên bằng cách xác định góc quay xung quanh đỉnh cần thiết để cho cạnh đầu trùng vào cạnh cuối. Trên mặt phẳng hai chiều, số đo này có thể là âm hoặc dương, tùy thuộc vào chiều quay:
+\begin{itemize}
+   \item Nếu quay ngược chiều kim đồng hồ thì số đo được xác định dương;
+   \item Nếu quay cùng chiều kim đồng hồ thì số đo được xác định âm.
+\end{itemize}
+
+\begin{figure}[H]
+   \centering
+   \begin{tikzpicture}
+      \begin{scope}[shift={(-4,0)}]
+         \node at (2, 4) {\defText{Định hướng âm}};
+
+         \draw[color=colorEmphasisCyan] (1, 3) -- (0, 0) -- (3, 1);
+         \filldraw (0,0) circle (\pointSize) node[below left] {$O$};
+         \node[above, color=colorEmphasisCyan] at (1, 3) {Cạnh đầu};
+         \node[right, color=colorEmphasisCyan] at (3, 1) {Cạnh cuối};
+         \draw[single measuring arrow, very thick, color=colorEmphasis] ({cos(atan(3))},{sin(atan(3))}) arc[start angle={atan(3)}, end angle={atan(1/3)}, radius=1];
+      \end{scope}
+      \begin{scope}[shift={(4,0)}]
+         \node at (2, 4) {\defText{Định hướng dương}};
+
+         \draw[color=colorEmphasisCyan] (1, 3) -- (0, 0) -- (3, 1);
+         \filldraw (0,0) circle (\pointSize) node[below left] {$O$};
+         \node[above, color=colorEmphasisCyan] at (1, 3) {Cạnh đầu};
+         \node[right, color=colorEmphasisCyan] at (3, 1) {Cạnh cuối};
+         \draw[single measuring arrow, very thick, color=colorEmphasis] ({cos(atan(3))},{sin(atan(3))}) arc[start angle={atan(3)}, end angle={atan(1/3) + 360}, radius=1];
+      \end{scope}
+   \end{tikzpicture}
+   \caption{Góc định hướng}
+   \label{fig:toan_hoc_nen_tang:ham_luong_giac:goc_dinh_huong}
+\end{figure}
+
+Néu $\angle xOy$ có $Ox$ là cạnh đầu và $Oy$ là cạnh cuối, thì góc định hướng này được kí hiệu là $\measuredangle{xOy}$.

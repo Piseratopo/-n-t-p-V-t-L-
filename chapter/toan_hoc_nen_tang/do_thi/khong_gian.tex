@@ -50,7 +50,7 @@
          \filldraw[color=colorEmphasisCyan] (P) circle (\pointSize) node[right] {$P$};
          \filldraw[color=colorEmphasisCyan] (Q) circle (\pointSize) node[left] {$Q$};
          \draw[graph thickness, color=colorEmphasisCyan] (P) -- (Q);
-         \draw[measuring arrow] ({\xP}, {\yP}, {\zP + 0.2}) -- ({\xQ}, {\yQ}, {\zQ + 0.2});
+         \draw[measuring arrow, color=colorEmphasisCyan] ({\xP}, {\yP}, {\zP + 0.2}) -- ({\xQ}, {\yQ}, {\zQ + 0.2});
          \node[above, color=colorEmphasisCyan] at ({(\xP+\xQ)/2}, {(\yP+\yQ)/2}, {(\zP+\zQ)/2 + 0.2}) {$d(P;Q)$};
 
       \end{tikzpicture}

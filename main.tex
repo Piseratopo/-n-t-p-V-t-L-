@@ -95,8 +95,15 @@
       <->, 
       >=latex, 
       shorten >= \pointSize, 
-      shorten <= \pointSize, 
-      color=colorEmphasisCyan
+      shorten <= \pointSize
+   }
+}
+\pgfkeys{
+   /tikz/single measuring arrow/.style={
+      ->, 
+      >=latex, 
+      shorten >= \pointSize, 
+      shorten <= \pointSize
    }
 }
 \pgfkeys{
