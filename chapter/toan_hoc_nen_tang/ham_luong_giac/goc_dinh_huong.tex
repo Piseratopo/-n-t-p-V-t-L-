@@ -4,7 +4,7 @@
 
 \defText{Góc không định hướng} (gọi tắt là \defText{góc}) là hình gồm hai tia có chung gốc. Gốc chung của hai tia là \defText{đỉnh} của góc. Hai tia chắn góc được gọi là \defText{cạnh} của góc.
 
-\defText{Số đo góc} về mặt trực quan là độ mở của góc. Để đo số đo góc, chúng ta sử dụng đơn vị \defText{độ} hoặc \defText{ra-đi-an}. Gọi \defText{đường tròn đơn vị} là đường tròn có bán kính bằng $1$ đơn vị độ dài. Vẽ đường tròn đơn vị với tâm nằm ở đỉnh của góc, khi đó, số đo góc được đo bằng độ dài của cung chắn góc. Chúng ta sẽ không chứng minh tại sao mọi đường tròn lại có chu vi bằng $2\pi$ lần bán kính, nhưng chúng ta sẽ sử dụng điều đó để có chu vi của đường tròn đơn vị bằng $2\pi$ đơn vị độ dài. Định nghĩa hai đơn vị đo như sau:
+\defText{Số đo góc} về mặt trực quan là độ mở của góc. Để đo số đo góc, chúng ta sử dụng đơn vị \defText{độ} hoặc \defText{ra-đi-an}. Gọi \defText{đường tròn đơn vị} là đường tròn có bán kính bằng $1$ đơn vị độ dài. Vẽ đường tròn đơn vị với tâm nằm ở đỉnh của góc, khi đó, số đo góc được đo bằng độ dài của cung chắn góc. Chúng ta sẽ không chứng minh tại sao mọi đường tròn lại có chu vi bằng $2\pi$ lần bán kính, nhưng sẽ sử dụng điều đó để có chu vi của đường tròn đơn vị bằng $2\pi$ đơn vị độ dài. Định nghĩa hai đơn vị đo như sau:
 \begin{itemize}
    \item \defText{Độ}: Chia đường tròn làm $360$ phần bằng nhau, mỗi phần sẽ có độ dài là $\frac{2\pi}{360} = \frac{\pi}{180}$. Một cung chắn góc trên đường tròn đơn vị có đường tròn bằng này định nghĩa cho góc $1$ độ hay $\defMath{1^\circ}$.
    \item \defText{Ra-đi-an}: Một cung chắn góc trên đường tròn đơn vị có độ dài bằng $1$ định nghĩa cho góc $1$ ra-đi-an hay $\defMath{1\defText{ rad}}$.
@@ -19,7 +19,9 @@ Chúng ta tính số đo của các góc khác theo tỉ lệ với những góc
          \begin{tikzpicture}
             \draw[color=colorEmphasisCyan, very thick] (1, 3) -- (0, 0) -- (3, 1);
             \filldraw[color=colorEmphasis] (0,0) circle (\pointSize) node[below left] {Đỉnh};
+            \node[above] at (1, 3) {$y$};
             \node[above left, color=colorEmphasisCyan] at (0.5, 1.5) {Cạnh};
+            \node[right] at (3, 1) {$x$};
             \node[below right, color=colorEmphasisCyan] at (1.5, 0) {Cạnh};
             \draw[color=colorEmphasisGreen] ({cos(atan(1/3))},{sin(atan(1/3))}) arc[start angle={atan(1/3)}, end angle={atan(3)}, radius=1];
             \node[above right, color=colorEmphasisGreen] at (0.65, 0.65) {$\theta$};
