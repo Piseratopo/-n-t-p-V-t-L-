@@ -55,7 +55,7 @@
 
          \filldraw[color=colorEmphasisCyan] (\xP, \yP) circle (\pointSize) node[above right] {$P(x_P; y_P)$};
          \filldraw[color=colorEmphasisCyan] (\xQ, \yQ) circle (\pointSize) node[below right] {$Q(x_Q; y_Q)$};
-         \draw[<->, >=latex, shorten >=\pointSize, shorten <=\pointSize, color=colorEmphasisCyan] ({\xP - \leftShift / 2}, {\yP - \upShift / 2}) -- ({\xQ - \leftShift / 2}, {\yQ - \upShift / 2});
+         \draw[<->, >=latex, color=colorEmphasisCyan] ({\xP - \leftShift / 2}, {\yP - \upShift / 2}) -- ({\xQ - \leftShift / 2}, {\yQ - \upShift / 2});
 
          \draw[graph thickness, color=colorEmphasisCyan] (\xP, \yP) -- (\xQ, \yQ);
          \node[above left, color=colorEmphasisCyan] at ({(\xP+\xQ)/2}, {(\yP+\yQ)/2}) {$d(P;Q)$};

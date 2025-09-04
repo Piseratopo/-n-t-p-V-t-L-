@@ -1,0 +1,44 @@
+\subsection{Hàm lượng giác trong tam giác vuông}
+
+\ % Lùi đầu dòng
+
+{
+   \begin{minipageindent}{0.48\textwidth}
+      \begin{figure}[H]
+         \centering
+         \begin{tikzpicture}
+            \pgfmathsetmacro{\xC}{2}
+            \pgfmathsetmacro{\yC}{4}
+            \pgfmathsetmacro{\xB}{0}
+            \pgfmathsetmacro{\yB}{0}
+            \pgfmathsetmacro{\slope}{(\xC - \xB)/(\yB - \yC)}
+            \pgfmathsetmacro{\leftShift}{\guideLineLength*1 / sqrt((\slope)^2+1)}
+            \pgfmathsetmacro{\upShift}{\guideLineLength*(\slope) / sqrt((\slope)^2+1)}
+
+            \draw[\guideLineThickness] (\xC, \yC) -- ({\xC - \leftShift}, {\yC - \upShift});
+            \draw[\guideLineThickness] (\xB, \yB) -- ({\xB - \leftShift}, {\yB - \upShift});
+            \draw[measuring arrow, color=colorEmphasisCyan] ({\xC - \leftShift / 2}, {\yC - \upShift / 2}) -- ({\xB - \leftShift / 2}, {\yB - \upShift / 2}) node[midway, above left] {$h$};
+            
+            \draw[very thick, color=colorEmphasisCyan] (\xB, \yB) -- (\xC, \yC);
+
+            \draw[very thick, color=colorEmphasis] (0,0) -- (2,0);
+            \draw[\guideLineThickness] (0,0) -- (0, -\guideLineLength);
+            \draw[\guideLineThickness] (2,0) -- (2, -\guideLineLength);
+            \draw[measuring arrow, color=colorEmphasis] (0, -\guideLineLength / 2) -- (2, -\guideLineLength / 2) node[midway, below] {$k$};
+
+            \draw[very thick, color=colorEmphasisGreen] (2,0) -- (2,4);
+            \draw[\guideLineThickness] (2,0) -- (2+\guideLineLength, 0);
+            \draw[\guideLineThickness] (2,4) -- (2+\guideLineLength, 4);
+            \draw[measuring arrow, color=colorEmphasisGreen] (2+\guideLineLength / 2, 0) -- (2+\guideLineLength / 2, 4) node[midway, right] {$d$};
+
+            \filldraw (0,0) circle (\pointSize) node[below left] {$B$};
+            \filldraw (2,0) circle (\pointSize) node[below right] {$A$};
+            \filldraw (2,4) circle (\pointSize) node[above] {$C$};
+         \end{tikzpicture}
+      \end{figure}
+   \end{minipageindent}
+   \hfill
+   \begin{minipageindent}{0.48\textwidth}
+      Trong trường hợp góc $\theta$ thỏa mãn $0 < \theta < 90^\circ$, tồn tại $\triangle ABC$ vuông tại $A$ với $\angle BAC = \theta$.  
+   \end{minipageindent}
+}
