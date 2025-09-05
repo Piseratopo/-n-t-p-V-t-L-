@@ -139,14 +139,20 @@
    {}
    {0pt}
    {%
-      \setlength{\fboxrule}{4pt}% Border thickness
+      \setlength{\fboxrule}{2pt}% Border thickness
       \setlength{\fboxsep}{1em}% Padding
       \fcolorbox{colorEmphasisCyan}{white}{% Border color and fill color
          \parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{%
-         \textcolor{colorEmphasisCyan}{\thesection.}\quad #1
+         \textcolor{colorEmphasisCyan}{\thesection}\quad #1
          }%
       }%
    }
+
+\titleformat{\subsection}
+   {\normalfont\large\bfseries}
+   {}
+   {0pt}
+   {\textcolor{colorEmphasisCyan}{\thesubsection} \quad #1}
 
 \begin{document}
 
