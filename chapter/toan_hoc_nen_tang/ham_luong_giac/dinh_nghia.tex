@@ -15,8 +15,6 @@
             \defMath{\sec \left(\theta\right) = \frac{1}{\cos \left(\theta\right)}}; &\qquad& \defMath{\csc \left(\theta\right) = \frac{1}{\sin \left(\theta\right)}}.
          \end{array}
       \end{equation*}
-
-      Những giá trị $\theta$ làm cho $\cos \left(\theta\right) = 0$ sẽ khiến cho $\tan \left(\theta\right)$ và $\sec \left(\theta\right)$ không xác định. Tương tự, nếu $\sin \left(\theta\right) = 0$ thì $\cot \left(\theta\right)$ và $\csc \left(\theta\right)$ không xác định. Từ định nghĩa đó, dễ dàng nhận thấy rằng $$\tan \left(\theta\right) = \frac{1}{\cot \left(\theta\right)}.$$
    \end{minipageindent}
    \hfill
    \begin{minipageindent}{0.48\textwidth}
@@ -35,12 +33,12 @@
 
             \draw[color=colorEmphasisCyan, dashed] ({\xcoord}, {\ycoord}) -- (0, {\ycoord});
             \draw[color=colorEmphasisCyan, measuring arrow] ({\xcoord}, {\ycoord + \guideLineLength / 2}) -- (0, {\ycoord + \guideLineLength / 2});
-            \draw[\guideLineThickness] ({\xcoord}, {\ycoord}) -- ({\xcoord}, {\ycoord + \guideLineLength});
+            \draw[guideline] ({\xcoord}, {\ycoord}) -- ({\xcoord}, {\ycoord + \guideLineLength});
             \node[above, color=colorEmphasisCyan] at ({\xcoord / 2}, {\ycoord + \guideLineLength / 2}) {$\cos (\theta)$};
 
             \draw[color=colorEmphasis, dashed] ({\xcoord}, {\ycoord}) -- ({\xcoord}, 0);
             \draw[color=colorEmphasis, measuring arrow] ({\xcoord + \guideLineLength / 2}, {\ycoord}) -- ({\xcoord + \guideLineLength / 2}, 0);
-            \draw[\guideLineThickness] ({\xcoord + \guideLineLength}, {\ycoord}) -- ({\xcoord}, {\ycoord});
+            \draw[guideline] ({\xcoord + \guideLineLength}, {\ycoord}) -- ({\xcoord}, {\ycoord});
             \node[right, color=colorEmphasis] at ({\xcoord + \guideLineLength / 2}, {\ycoord / 2}) {$\sin (\theta)$};
 
             \draw[single measuring arrow] (0.75, 0) arc[start angle=0, end angle={atan(2)}, radius=0.75];
@@ -49,6 +47,8 @@
             \filldraw ({\xcoord}, {\ycoord}) circle (\pointSize) node[above right] {$P\left(\textcolor{colorEmphasisCyan}{\cos (\theta)}; \textcolor{colorEmphasis}{\sin (\theta)}\right)$};
             \filldraw ({\xcoord}, 0) circle (\pointSize) node[below right] {$S$};
             \filldraw (0, {\ycoord}) circle (\pointSize) node[below left] {$C$};
+
+            
          \end{tikzpicture}
          \caption{Biểu diễn $\cos (\theta)$ và $\sin (\theta)$}
          \label{fig:toan_hoc_nen_tang:dinh_nghia:dn_sin_cos}
@@ -56,4 +56,6 @@
    \end{minipageindent}
 }
 
+Những giá trị $\theta$ làm cho $\cos \left(\theta\right) = 0$ sẽ khiến cho $\tan \left(\theta\right)$ và $\sec \left(\theta\right)$ không xác định. Tương tự, nếu $\sin \left(\theta\right) = 0$ thì $\cot \left(\theta\right)$ và $\csc \left(\theta\right)$ không xác định. Từ định nghĩa đó, dễ thấy rằng $$\tan \left(\theta\right) = \frac{1}{\cot \left(\theta\right)}.$$
 
+Về cách đọc, hàm $\sin$ đọc là \dblquote{xin}, hàm $\cos$ đọc là \dblquote{cô-xin}, hàm $\tan$ đọc là \dblquote{tan}, hàm $\cot$ đọc là \dblquote{cô-tan}, hàm $\sec$ đọc là \dblquote{xê-can}, hàm $\csc$ đọc là \dblquote{cô-xê-can}.

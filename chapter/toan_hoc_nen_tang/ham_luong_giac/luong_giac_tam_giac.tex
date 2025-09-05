@@ -3,7 +3,7 @@
 \ % Lùi đầu dòng
 
 {
-   \begin{minipageindent}{0.48\textwidth}
+   \begin{minipageindent}{0.38\textwidth}
       \begin{figure}[H]
          \centering
          \begin{tikzpicture}
@@ -15,30 +15,55 @@
             \pgfmathsetmacro{\leftShift}{\guideLineLength*1 / sqrt((\slope)^2+1)}
             \pgfmathsetmacro{\upShift}{\guideLineLength*(\slope) / sqrt((\slope)^2+1)}
 
-            \draw[\guideLineThickness] (\xC, \yC) -- ({\xC - \leftShift}, {\yC - \upShift});
-            \draw[\guideLineThickness] (\xB, \yB) -- ({\xB - \leftShift}, {\yB - \upShift});
+            \draw[measuring arrow] (1, 0) arc[start angle=0, end angle={atan(2)}, radius=1]; 
+            \node at ({0.75*cos(atan(2) / 2)}, {0.75*sin(atan(2) / 2)}) {$\theta$};
+            \draw[guideline] (1.8, 0) -- (1.8, 0.2) -- (2, 0.2);
+
+            \draw[guideline] (\xC, \yC) -- ({\xC - \leftShift}, {\yC - \upShift});
+            \draw[guideline] (\xB, \yB) -- ({\xB - \leftShift}, {\yB - \upShift});
             \draw[measuring arrow, color=colorEmphasisCyan] ({\xC - \leftShift / 2}, {\yC - \upShift / 2}) -- ({\xB - \leftShift / 2}, {\yB - \upShift / 2}) node[midway, above left] {$h$};
             
             \draw[very thick, color=colorEmphasisCyan] (\xB, \yB) -- (\xC, \yC);
 
             \draw[very thick, color=colorEmphasis] (0,0) -- (2,0);
-            \draw[\guideLineThickness] (0,0) -- (0, -\guideLineLength);
-            \draw[\guideLineThickness] (2,0) -- (2, -\guideLineLength);
+            \draw[guideline] (0,0) -- (0, -\guideLineLength);
+            \draw[guideline] (2,0) -- (2, -\guideLineLength);
             \draw[measuring arrow, color=colorEmphasis] (0, -\guideLineLength / 2) -- (2, -\guideLineLength / 2) node[midway, below] {$k$};
 
             \draw[very thick, color=colorEmphasisGreen] (2,0) -- (2,4);
-            \draw[\guideLineThickness] (2,0) -- (2+\guideLineLength, 0);
-            \draw[\guideLineThickness] (2,4) -- (2+\guideLineLength, 4);
+            \draw[guideline] (2,0) -- (2+\guideLineLength, 0);
+            \draw[guideline] (2,4) -- (2+\guideLineLength, 4);
             \draw[measuring arrow, color=colorEmphasisGreen] (2+\guideLineLength / 2, 0) -- (2+\guideLineLength / 2, 4) node[midway, right] {$d$};
 
             \filldraw (0,0) circle (\pointSize) node[below left] {$B$};
             \filldraw (2,0) circle (\pointSize) node[below right] {$A$};
             \filldraw (2,4) circle (\pointSize) node[above] {$C$};
          \end{tikzpicture}
+         \caption{Mô hình tam giác vuông}
+         \label{fig:toan_hoc_nen_tang:ham_luong_giac:tam_giac_vuong}
       \end{figure}
    \end{minipageindent}
    \hfill
-   \begin{minipageindent}{0.48\textwidth}
-      Trong trường hợp góc $\theta$ thỏa mãn $0 < \theta < 90^\circ$, tồn tại $\triangle ABC$ vuông tại $A$ với $\angle BAC = \theta$.  
+   \begin{minipageindent}{0.58\textwidth}
+      Trong trường hợp góc $\theta$ thỏa mãn $0 < \theta < 90^\circ$, tồn tại $\triangle ABC$ vuông tại $A$ với $\angle BAC = \theta$. Đặt độ dài cạnh huyền $BC = h$, cạnh kề với góc $\theta$ $AB = k$, cạnh đối với góc $\theta$ $AC = d$. Khi đó, định nghĩa các hàm lượng giác như sau:
+
+      $$
+         \begin{array}{ccccc}
+            \defMath{\sin \left(\theta\right) = \frac{d}{h}}; &\qquad& \defMath{\cos \left(\theta\right) = \frac{k}{h}}; &\qquad& \defMath{\tan \left(\theta\right) = \frac{d}{k}}; \\
+            \defMath{\cot \left(\theta\right) = \frac{k}{d}}; &\qquad& \defMath{\sec \left(\theta\right) = \frac{h}{k}}; &\qquad& \defMath{\csc \left(\theta\right) = \frac{h}{d}}.
+         \end{array}
+      $$
+
+      Chúng ta sẽ công nhận rằng, với định nghĩa mới này, các giá trị hàm lượng giác là không thay đổi so với định nghĩa sử dụng đường tròn đơn vị.
    \end{minipageindent}
 }
+
+Từ \ref{fig:toan_hoc_nen_tang:ham_luong_giac:tam_giac_vuong}, có $\angle BCA = 90^\circ - \angle ABC = 90^\circ - \theta$. Xây dựng các hàm lượng giác với góc $\angle C$ sẽ suy ra được những đẳng thức sau:
+
+\begin{equation*}
+   \begin{array}{ccccc}
+      \defMath{\sin\left(\theta\right) = \cos\left(90^\circ - \theta\right)}; &\qquad& \defMath{\cos\left(\theta\right) = \sin\left(90^\circ - \theta\right)}; &\qquad& \defMath{\tan\left(\theta\right) = \cot\left(90^\circ - \theta\right)}; \\
+      \defMath{\cot\left(\theta\right) = \tan\left(90^\circ - \theta\right)}; &\qquad& \defMath{\sec\left(\theta\right) = \csc\left(90^\circ - \theta\right)}; &\qquad& \defMath{\csc\left(\theta\right) = \sec\left(90^\circ - \theta\right)}.
+   \end{array}
+\end{equation*}
+Những đẳng thức này cũng đúng khi $\theta$ nằm ngoài vùng góc nhọn.

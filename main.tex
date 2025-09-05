@@ -3,6 +3,7 @@
 \usepackage[T5]{fontenc}
 \usepackage[vietnamese]{babel}
 \usepackage[a4paper]{geometry}
+\usepackage[explicit]{titlesec}
 \usepackage{amsmath, amssymb, blindtext, bm, calc, caption, float, hyperref, icomma, makecell, multicol, pgfplots, steinmetz, tikz, tikz-3dplot, varwidth, wrapfig2, xcolor, xparse, xeCJK}
 
 % Tinh chỉnh Tikz
@@ -88,8 +89,13 @@
       smooth
    }
 }
-\def \guideLineThickness {very thin}
+
 \def \guideLineLength {0.4}
+\pgfkeys{
+   /tikz/guideline/.style={
+      very thin
+   }
+}
 \pgfkeys{
    /tikz/measuring arrow/.style={
       <->, 
@@ -110,8 +116,37 @@
       fill=white
    }
 }
-
 \tikzset{snake it/.style={decorate, decoration=snake, very thin}}
+
+% Làm đẹp tiêu đề
+\titleformat{name=\chapter,numberless}
+   {\normalfont\Huge\bfseries}
+   {}
+   {0pt}
+   {#1}
+
+\titleformat{\chapter}
+   {\normalfont\Huge\bfseries}
+   {}
+   {0pt}
+   {\textcolor{colorEmphasisCyan}{
+      {\fontsize{60}{72}\selectfont\thechapter.}}\\[0.5em]
+      #1
+   }
+
+\titleformat{\section}
+   {\normalfont\Large\bfseries}
+   {}
+   {0pt}
+   {%
+      \setlength{\fboxrule}{4pt}% Border thickness
+      \setlength{\fboxsep}{1em}% Padding
+      \fcolorbox{colorEmphasisCyan}{white}{% Border color and fill color
+         \parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{%
+         \textcolor{colorEmphasisCyan}{\thesection.}\quad #1
+         }%
+      }%
+   }
 
 \begin{document}
 

@@ -47,8 +47,8 @@
          \pgfmathsetmacro{\leftShift}{\guideLineLength*1 / sqrt((\slope)^2+1)}
          \pgfmathsetmacro{\upShift}{\guideLineLength*(\slope) / sqrt((\slope)^2+1)}
 
-         \draw[\guideLineThickness] (\xP, \yP) -- ({\xP - \leftShift}, {\yP - \upShift});
-         \draw[\guideLineThickness] (\xQ, \yQ) -- ({\xQ - \leftShift}, {\yQ - \upShift});
+         \draw[guideline] (\xP, \yP) -- ({\xP - \leftShift}, {\yP - \upShift});
+         \draw[guideline] (\xQ, \yQ) -- ({\xQ - \leftShift}, {\yQ - \upShift});
          
          \draw[dashed] (\xP, \yP) -- (\xP, \yQ);
          \draw[dashed] (\xP, \yQ) -- (\xQ, \yQ);

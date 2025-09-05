@@ -30,8 +30,8 @@
             \draw[->] (-3,0) -- (2,0) node[right] {$x$};
             \pgfmathsetmacro{\xP}{1.2}
             \pgfmathsetmacro{\xQ}{-2}
-            \draw[\guideLineThickness] (\xP,0) -- (\xP,\guideLineLength);
-            \draw[\guideLineThickness] (\xQ,0) -- (\xQ,\guideLineLength);
+            \draw[guideline] (\xP,0) -- (\xP,\guideLineLength);
+            \draw[guideline] (\xQ,0) -- (\xQ,\guideLineLength);
             \filldraw[color=colorEmphasisCyan] (\xP, 0) circle (\pointSize) node[below, color=colorEmphasisCyan] {$P(x_P)$};
             \filldraw[color=colorEmphasisCyan] (\xQ, 0) circle (\pointSize) node[below, color=colorEmphasisCyan] {$Q(x_Q)$};
             \draw[graph thickness,color=colorEmphasisCyan] (\xQ,0) -- (\xP,0);

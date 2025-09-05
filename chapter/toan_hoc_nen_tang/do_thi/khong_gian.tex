@@ -44,8 +44,8 @@
          \draw[->] (0,-2.5,0) -- (0,2.5,0) node[anchor=north west]{$y$};
          \draw[->] (0,0,-1.5) -- (0,0,1.5) node[anchor=south]{$z$};
 
-         \draw[\guideLineThickness] (P) -- ({\xP}, \yP, {\zP + 0.4});
-         \draw[\guideLineThickness] (Q) -- ({\xQ}, \yQ, {\zQ + 0.4});
+         \draw[guideline] (P) -- ({\xP}, \yP, {\zP + 0.4});
+         \draw[guideline] (Q) -- ({\xQ}, \yQ, {\zQ + 0.4});
          
          \filldraw[color=colorEmphasisCyan] (P) circle (\pointSize) node[right] {$P$};
          \filldraw[color=colorEmphasisCyan] (Q) circle (\pointSize) node[left] {$Q$};
