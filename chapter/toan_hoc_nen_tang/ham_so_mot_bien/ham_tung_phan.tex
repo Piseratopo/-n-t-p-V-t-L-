@@ -17,23 +17,155 @@ Không phải lúc nào hàm số trong đời sống có thể biểu diễn d�
          -x^2 + 1 \text{ nếu } x \geq 0
       \end{cases}$;
       \item $f(x) = \begin{cases}
-         \frac{4}{x} \text{ nếu } -2 > x \geq -3 \\
-         \parbox{0.3\textwidth}{$\begin{array}{cl}
-            -\frac{4}{x^2} &\text{nếu } x \text{ là số thực để } \frac{4}{x^2} \text{ là}\\
-            &\text{số nguyên không quá }$4$
+         -\frac{4}{x^2} \text{ nếu } -2 > x \geq -3 \\
+         \parbox{0.29\textwidth}{$\begin{array}{cl}
+            -\frac{5}{x^2 + 1} &\text{nếu } x \geq -2 \text{ thực để} \\
+            &\frac{5}{x^2 + 1}\text{ là số nguyên}
          \end{array}$}
       \end{cases}$;
       \item $f(x) = \begin{cases}
          \frac{2x - 1}{x - 1} \text{ nếu } -3 \leq x < 0 \\
-         \left(x + 1\right)^2 - 1 \text{ nếu } 0 \leq x < 1 \\
-         \frac{2x - 1}{x - 1} \text{ nếu } 1 \leq x \leq 3
+         \left(x + 1\right)^2 - 3x \text{ nếu } 0 \leq x < 2 \\
+         \frac{2x - 1}{x - 1} \text{ nếu } 2 \leq x \leq 3
       \end{cases}$;
       \item $f(x) = \begin{cases}
          x^3 + 3 \text{ nếu } x \leq 0 \\
-         x + 3 \text{ nếu } 0 < x < 1 \\
+         -2x + 2 \text{ nếu } 0 < x < 1 \\
          4 + x - x^2 \text{ nếu } x \geq 1
       \end{cases}$.
    \end{enumerate}
 \end{multicols}
 
 \solution
+
+1.
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\draw[->] (-4, 0) -- (4, 0) node[right] {$x$};
+		\draw[->] (0, -4) -- (0, 4)  node[above] {$f(x)$};
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-4.000:1] plot (\x, {(((\x)/1) + 1) / 1});
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=1:4] plot (\x, 2);
+		\filldraw[color=colorEmphasisCyan] (-3.0, -2.0) circle (\pointSize) node[above left] {$\left(-3;-2\right)$};
+		\filldraw[color=colorEmphasisCyan] (-1.0, 0.0) circle (\pointSize) node[above left] {$\left(-1;0\right)$};
+		\filldraw[color=colorEmphasisCyan] (1.0, 2.0) circle (\pointSize) node[above] {$\left(1;2\right)$};
+      \filldraw[color=colorEmphasisCyan] (3.0, 2.0) circle (\pointSize) node[above] {$\left(3;2\right)$};
+	\end{tikzpicture}
+	\caption{Đồ thị của $\begin{cases}
+         x + 1 \text{ nếu } x \leq 1 \\
+         2 \text{ nếu } x > 1
+      \end{cases}$}
+\end{figure}
+
+2.
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\draw[->] (-4, 0) -- (4, 0) node[right] {$x$};
+		\draw[->] (0, -4) -- (0, 5)  node[above] {$f(x)$};
+      \draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-2.000:0.000] plot (\x, {(((\x)/1)^3 + 4) / 1});
+      \filldraw[color=colorEmphasisCyan] (-2, -4) circle (\pointSize) node[above left] {$\left(-2;-4\right)$};
+		\filldraw[color=colorEmphasisCyan] (-1.0, 3.0) circle (\pointSize) node[left] {$\left(-1;3\right)$};
+		\draw[color=colorEmphasisCyan, hollow point] (0.0, 4.0) circle (\pointSize) node[right] {$\left(0;4\right)$};
+      \draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=0.000:2.236] plot (\x, {(-((\x)/1)^2 + 1) / 1});
+		\filldraw[color=colorEmphasisCyan] (0.0, 1.0) circle (\pointSize) node[left] {$\left(0;1\right)$};
+		\filldraw[color=colorEmphasisCyan] (1.0, 0.0) circle (\pointSize) node[above right] {$\left(1;0\right)$};
+		\filldraw[color=colorEmphasisCyan] (2.0, -3.0) circle (\pointSize) node[left] {$\left(2;-3\right)$};
+	\end{tikzpicture}
+	\caption{Đồ thị của $\begin{cases}
+         x^3 + 4 \text{ nếu } x < 0 \\
+         -x^2 + 1 \text{ nếu } x \geq 0
+      \end{cases}$}
+\end{figure}
+
+Để ý rằng $f(x)$ đứt đoạn tại giá trị $x = 0$. Cụ thể, $f(x)$ không nhận giá trị $x^3 + 4$ khi $x = 0$. Tuy nhiên, không thể vẽ điểm ngay liền trước nó (không có số âm lớn nhất), nên người ta hay dùng đường tròn rỗng để biểu thị điểm đứt đoạn này.
+
+3. Trước hết, cần xác định các giá trị của $x \geq -2$ để $\frac{5}{x^2 + 1}$ là số nguyên. Do với mọi $x \in \mathbb{R}$ thì $$x^2 \geq 0 \iff x^2 + 1 \geq 1 > 0 \iff 5 \geq \frac{5}{x^2 + 1} > 0.$$ Mà cần phải để $\frac{5}{x^2 + 1} \in \mathbb{N}$ cho nên $\frac{5}{x^2 + 1} \in \left\{1; 2; 3; 4; 5\right\}$. Với để ý đến điều kiện $x \geq -2$, kẻ bảng để xác định các giá trị có thể của $x$:
+
+\begin{table}[H]
+   \centering
+   \begin{tabular}{|c|c|c|c|c|c|}
+   \hline
+   $\displaystyle \frac{5}{x^2 + 1}$ & $1$ & $2$ & $3$ & $4$ & $5$ \\
+   \hline
+   $x^2 + 1$ & $5$ & $\displaystyle\frac{5}{2}$ & $\displaystyle\frac{5}{3}$ & $\displaystyle\frac{5}{4}$ & $1$ \\
+   \hline
+   $x^2$ & $4$ & $\displaystyle\frac{3}{2}$ & $\displaystyle\frac{2}{3}$ & $\displaystyle\frac{1}{4}$ & $1$ \\
+   \hline
+   $x$ & $\left\{-2; 2\right\}$ & $\left\{-\sqrt{\frac{3}{2}}; \sqrt{\frac{3}{2}}\right\}$ & $\left\{-\sqrt{\frac{2}{3}}; \sqrt{\frac{2}{3}}\right\}$ & $\left\{-\frac{1}{2}; \frac{1}{2}\right\}$ & $0$ \\
+   \hline
+   \end{tabular}
+   \caption{Bảng giá trị của $\frac{5}{x^2 + 1}$ với $x$} 
+\end{table}
+
+Từ đây, có được đồ thị của $f(x)$:
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\draw[->] (-4, 0) -- (3, 0) node[right] {$x$};
+		\draw[->] (0, -6) -- (0, 1)  node[above] {$f(x)$};
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-3.000:-2.000] plot (\x, {(-4 / (\x)^2)});
+      \filldraw[color=colorEmphasisCyan] (-3.0, -0.4444444444444444) circle (\pointSize) node[left] {$\left(-3;- \frac{4}{9}\right)$};
+		\filldraw[color=colorEmphasisCyan] (-2.0, -1.0) circle (\pointSize) node[above right] {$\left(-2;-1\right)$};
+
+		\filldraw[color=colorEmphasisCyan] ({ 2.0 }, { -1.0 }) circle (\pointSize) node[above] {$\left({2};{-1}\right)$};
+		\filldraw[color=colorEmphasisCyan] ({ 0.0 }, { -5.0 }) circle (\pointSize) node[below] {$\left({0};{-5}\right)$};
+		\filldraw[color=colorEmphasisCyan] ({ -0.5*sqrt(6) }, { -2.0 }) circle (\pointSize) node[left] {$\left({- \frac{\sqrt{6}}{2}};{-2}\right)$};
+		\filldraw[color=colorEmphasisCyan] ({ 0.5*sqrt(6) }, { -2.0 }) circle (\pointSize) node[right] {$\left({\frac{\sqrt{6}}{2}};{-2}\right)$};
+		\filldraw[color=colorEmphasisCyan] ({ -0.333333333333333*sqrt(6) }, { -3.0 }) circle (\pointSize) node[left] {$\left({- \frac{\sqrt{6}}{3}};{-3}\right)$};
+		\filldraw[color=colorEmphasisCyan] ({ 0.333333333333333*sqrt(6) }, { -3.0 }) circle (\pointSize) node[right] {$\left({\frac{\sqrt{6}}{3}};{-3}\right)$};
+		\filldraw[color=colorEmphasisCyan] ({ -0.500000000000000 }, { -4.0 }) circle (\pointSize) node[left] {$\left({- \frac{1}{2}};{-4}\right)$};
+		\filldraw[color=colorEmphasisCyan] ({ 0.500000000000000 }, { -4.0 }) circle (\pointSize) node[right] {$\left({\frac{1}{2}};{-4}\right)$};
+	\end{tikzpicture}
+	\caption{Đồ thị của $\begin{cases}
+      -\frac{4}{x^2} \text{ nếu } -2 > x \geq -3 \\
+      \parbox{0.29\textwidth}{$\begin{array}{cl}
+         -\frac{5}{x^2 + 1} &\text{nếu } x \geq -2 \text{ thực để} \\
+         &\frac{5}{x^2 + 1}\text{ là số nguyên}
+      \end{array}$}
+   \end{cases}$}
+\end{figure}
+
+4. 
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\draw[->] (-4, 0) -- (4, 0) node[right] {$x$};
+		\draw[->] (0, 0) -- (0, 4)  node[above] {$f(x)$};
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-3:0] plot (\x, {((2*((\x)/1) - 1) / (((\x)/1) - 1)) / 1});
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=2:3] plot (\x, {((2*((\x)/1) - 1) / (((\x)/1) - 1)) / 1});
+		\filldraw[color=colorEmphasisCyan] ({ -3.0 }, { 1.75 }) circle (\pointSize) node[above] {$\left({-3};{\frac{7}{4}}\right)$};
+		\filldraw[color=colorEmphasisCyan] ({ 0.0 }, { 1.0 }) circle (\pointSize) node[above right] {$\left({0};{1}\right)$};
+		\filldraw[color=colorEmphasisCyan] ({ 2.0 }, { 3.0 }) circle (\pointSize) node[above] {$\left({2};{3}\right)$};
+		\filldraw[color=colorEmphasisCyan] ({ 3.0 }, { 2.5 }) circle (\pointSize) node[right] {$\left({3};{\frac{5}{2}}\right)$};
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=0:2] plot (\x, {((((\x)/1) + 1)^2 - 3 * ((\x)/1)) / 1});
+	\end{tikzpicture}
+	\caption{Đồ thị của $\begin{cases}
+         \frac{2x - 1}{x - 1} \text{ nếu } -3 \leq x < 0 \\
+         \left(x + 1\right)^2 - 3x \text{ nếu } 0 \leq x < 2 \\
+         \frac{2x - 1}{x - 1} \text{ nếu } 2 \leq x \leq 3
+      \end{cases}$}
+\end{figure}
+
+5.
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\draw[->] (-4, 0) -- (4, 0) node[right] {$x$};
+		\draw[->] (0, -4) -- (0, 4)  node[above] {$f(x)$};
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-1.913:0] plot (\x, {(((\x)/1)^3 + 3) / 1});
+		\filldraw[color=colorEmphasisCyan] ({ 0.0 }, { 3.0 }) circle (\pointSize) node[above] {$\left({0};{3}\right)$};
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=0.000:1.000] plot (\x, {(-2*(\x) + 2) / 1});
+      \draw[color=colorEmphasisCyan, hollow point] (0, 2) circle (\pointSize) node[below left] {$\left({0};{2}\right)$};
+	\end{tikzpicture}
+	\caption{Đồ thị của $\begin{cases}
+      x^3 + 3 \text{ nếu } x \leq 0 \\
+      -2x + 2 \text{ nếu } 0 < x < 1 \\
+      4 + x - x^2 \text{ nếu } x \geq 1
+   \end{cases}$}
+\end{figure}

@@ -7,7 +7,8 @@ def write_line(opened_file, line, tab_count=0):
 
 
 def write_graph_code(
-    file, functions, x_clip, y_clip, samples=None, decimal=False, x_scale=1, y_scale=1
+    file, functions, x_clip, y_clip, samples=None, decimal=False, x_scale=1, y_scale=1,
+    x_label="x", y_label="y"
 ):
     color_order = ["colorEmphasisCyan", "colorEmphasis"]
 
@@ -18,12 +19,12 @@ def write_graph_code(
 
         write_line(
             f,
-            f"draw[->] ({x_clip[0]}, 0) -- ({x_clip[1]}, 0) node[right] " + "{$x$};",
+            f"draw[->] ({x_clip[0]}, 0) -- ({x_clip[1]}, 0) node[right] " + "{$" + x_label + "$};",
             2,
         )
         write_line(
             f,
-            f"draw[->] (0, {y_clip[0]}) -- (0, {y_clip[1]})  node[above] " + "{$y$};",
+            f"draw[->] (0, {y_clip[0]}) -- (0, {y_clip[1]})  node[above] " + "{$" + y_label + "$};",
             2,
         )
 
@@ -96,7 +97,10 @@ def write_graph_code(
                     if value / y_scale < y_clip[1] and value / y_scale > y_clip[0]:
                         write_line(
                             f,
-                            f"filldraw[color={color_order[func_id]}] ({p * x_scale}, {value / y_scale}) circle (\pointSize) node[above] "
+                            f"filldraw[color={color_order[func_id]}] (" 
+                            + "{"
+                            + f"{p * x_scale}" + "}" 
+                            + f", {{ {value / y_scale} }}) circle (\pointSize) node[above] "
                             + r"{$\left("
                             + f"{p_latex};{value_latex}"
                             + r"\right)$};",
@@ -106,9 +110,12 @@ def write_graph_code(
                     if isinstance(point, tuple):
                         p = float(point[0]) / float(point[1])
                         p_rational = sympy.Rational(*point)
-                    else:
+                    elif isinstance(point, float):
                         p = point
                         p_rational = sympy.Rational(point)
+                    else:
+                        p = point
+                        p_rational = point
                     value = pre_expression.subs(x, p_rational)
                     p_latex = sympy.latex(p_rational).replace(".", "{,}")
                     value_latex = sympy.latex(value).replace(".", "{,}")
@@ -116,12 +123,12 @@ def write_graph_code(
                     if value / y_scale < y_clip[1] and value / y_scale > y_clip[0]:
                         write_line(
                             f,
-                            f"filldraw[color={color_order[func_id]}] ({p * 1.0 * x_scale}, {float(value / y_scale)}) circle (\pointSize) node[above] "
-                            + r"{$\left("
+                            f"filldraw[color={color_order[func_id]}] ({{ {p * 1.0 * x_scale} }}, {{ {float(value / y_scale)} }}) circle (\pointSize) node[above] "
+                            + r"{$\left({"
                             + p_latex
-                            + ";"
+                            + "};{"
                             + value_latex
-                            + r"\right)$};",
+                            + r"}\right)$};",
                             2,
                         )
 

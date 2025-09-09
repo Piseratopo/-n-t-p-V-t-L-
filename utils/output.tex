@@ -1,15 +1,9 @@
 \begin{figure}[H]
 	\centering
 	\begin{tikzpicture}
-		\draw[->] (-2.6666666666666665, 0) -- (2.6666666666666665, 0) node[right] {$x$};
-		\draw[->] (0, -2.6666666666666665) -- (0, 2.6666666666666665)  node[above] {$\left(g\circ f\right)(x)$};
-		\filldraw[color=colorEmphasis] (-2.00000000000000, 0.666666666666667) circle (\pointSize) node[above] {$\left(-3;1\right)$};
-		\filldraw[color=colorEmphasis] (-1.33333333333333, -0.666666666666667) circle (\pointSize) node[above] {$\left(-2;-1\right)$};
-		\filldraw[color=colorEmphasis] (-0.666666666666667, -2.00000000000000) circle (\pointSize) node[above] {$\left(-1;-3\right)$};
-		\filldraw[color=colorEmphasis] (0, -0.666666666666667) circle (\pointSize) node[above] {$\left(0;-1\right)$};
-		\filldraw[color=colorEmphasis] (0.666666666666667, 0.666666666666667) circle (\pointSize) node[above] {$\left(1;1\right)$};
-		\filldraw[color=colorEmphasis] (1.33333333333333, -0.666666666666667) circle (\pointSize) node[above] {$\left(2;-1\right)$};
-		\filldraw[color=colorEmphasis] (2.00000000000000, 0.666666666666667) circle (\pointSize) node[above] {$\left(3;1\right)$};
+		\draw[->] (0, 0) -- (1, 0) node[right] {$x$};
+		\draw[->] (0, -4) -- (0, 4)  node[above] {$f(x)$};
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=0.000:1.000] plot (\x, {(((\x)/1) + 2) / 1});
 	\end{tikzpicture}
-	\caption{Đồ thị của $g\circ f$}
+	\caption{Đồ thị của $x + 2$}
 \end{figure}
