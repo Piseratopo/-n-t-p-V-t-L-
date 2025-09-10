@@ -26,7 +26,12 @@
 }
 
 % Chỉnh phông chữ
-\setCJKmainfont[AutoFakeSlant=0.2,AutoFakeBold=2.0]{DFKai-SB}
+\setCJKmainfont[
+   Path = fonts/,
+   UprightFont = * ,   
+   AutoFakeSlant=0.2,
+   AutoFakeBold=2.0
+]{DFKai-SB}
 
 \makegapedcells
 
@@ -163,7 +168,7 @@
 \tableofcontents
 
 \input{\chapdir loi_gioi_thieu.tex}
-\input{\chapdir kiem_tra.tex}
+% \input{\chapdir kiem_tra.tex}
 \input{\chapdir toan_hoc_nen_tang.tex}
 
 \section{Số ảo và số phức}
