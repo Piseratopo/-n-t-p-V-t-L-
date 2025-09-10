@@ -1,9 +1,9 @@
 \begin{figure}[H]
 	\centering
 	\begin{tikzpicture}
-		\draw[->] (0, 0) -- (1, 0) node[right] {$x$};
+		\draw[->] (1, 0) -- (4, 0) node[right] {$x$};
 		\draw[->] (0, -4) -- (0, 4)  node[above] {$f(x)$};
-		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=0.000:1.000] plot (\x, {(((\x)/1) + 2) / 1});
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=1.000:3.000] plot (\x, {(2 + ((\x)/1) - ((\x)/1)^2) / 1});
 	\end{tikzpicture}
-	\caption{Đồ thị của $x + 2$}
+	\caption{Đồ thị của $- x^{2} + x + 2$}
 \end{figure}
