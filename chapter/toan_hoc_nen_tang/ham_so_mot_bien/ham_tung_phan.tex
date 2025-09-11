@@ -37,7 +37,7 @@ Ví dụ:
       \item $|7 - 2x| < 9$;
       \item $|3 + 6x| \geq 9$;
       \item $\left|3(x - 5) + 2\right| + 3 = 9$;
-      \item $2x + 8 + |3x + 4| > 0$;
+      \item $2x + 3 + |3x + 4| > 0$;
       \item $|x + 4| = |7x - 12|$;
       \item $|6x + 9| > |6x - 3|$;
       \item $|2x + 2| + |x + 1| = 9$;
@@ -49,13 +49,13 @@ Ví dụ:
 
 1. Xét hai trường hợp:
 
-\textcolor{colorEmphasisCyan}{Trường hợp 1 --- $x + 4 \geq 0$}. Khi này, phá dấu giá trị tuyệt đối để có $|x + 4| = x + 4$. Cho nên phương trình ban đầu sẽ tương đương với:
+\textcolor{colorEmphasisCyan}{Trường hợp một --- $x + 4 \geq 0$}. Khi này, phá dấu giá trị tuyệt đối để có $|x + 4| = x + 4$. Cho nên phương trình ban đầu sẽ tương đương với:
 
 \begin{equation*}
    x + 4 = 9 \iff x = 5.
 \end{equation*}
 
-\textcolor{colorEmphasis}{Trường hợp 2 --- $x + 4 < 0$}. Khi này,
+\textcolor{colorEmphasis}{Trường hợp hai --- $x + 4 < 0$}. Khi này,
 
 \begin{align*}
    &\begin{cases}
@@ -87,7 +87,7 @@ Sai lầm thường gặp ở dạng bài này là có suy luận như sau:
 
 3. Một lần nữa, xét hai trường hợp:
 
-\textcolor{colorEmphasisCyan}{Trường hợp 1 --- $7 - 2x \geq 0$}. Thực hiện biến đổi:
+\textcolor{colorEmphasisCyan}{Trường hợp một --- $7 - 2x \geq 0$}. Thực hiện biến đổi:
 
 \begin{align*}
    &\begin{cases}
@@ -103,7 +103,7 @@ Sai lầm thường gặp ở dạng bài này là có suy luận như sau:
    \iff &\frac{7}{2} \geq x > -1.
 \end{align*}
 
-\textcolor{colorEmphasis}{Trường hợp 2 --- $7 - 2x < 0$}:
+\textcolor{colorEmphasis}{Trường hợp hai --- $7 - 2x < 0$}:
 
 \begin{align*}
    &\begin{cases}
@@ -121,7 +121,51 @@ Sai lầm thường gặp ở dạng bài này là có suy luận như sau:
 
 Kết hợp hai trường hợp, có được $x \in \left(-1; 8\right)$. Có biến đổi là tương đương trong tập xác định cho nên phương trình có nghiệm $x \in \left(-1; 8\right)$.
 
-4. 
+4. \textcolor{colorEmphasisCyan}{Trường hợp một --- $3 + 6x \geq 0$}:
+
+\begin{align*}
+   &\begin{cases}
+      |3 + 6x| \geq 9 \\
+      3 + 6x \geq 0
+   \end{cases} \\
+   \iff 3 + 6x \geq 9 \\
+   \iff x \geq 1.
+\end{align*}
+
+\textcolor{colorEmphasis}{Trường hợp hai --- $3 + 6x < 0$}:
+
+\begin{align*}
+   &\begin{cases}
+      |3 + 6x| \geq 9 \\
+      3 + 6x < 0
+   \end{cases} \\
+   \iff &-(3 + 6x) \geq 9 \\
+   \iff &3 + 6x \leq -9 \\
+   \iff &x \leq -2.
+\end{align*}
+
+Do trong mỗi trường hợp, mọi biến đổi là tương đương, nên chúng ta có tập nghiệm của bất phương trình là $\left(-\infty; -2\right] \cup \left[1; \infty\right)$.
+
+5.
+
+\begin{align}
+   \left|3(x-5) + 2\right| + 3 &= 9 \nonumber\\
+   \iff \left|3x - 13\right| &= 6. \label{eq:toan_hoc_nen_tang:ham_so_mot_bien:ham_tung_phan:pt5}\\
+\end{align}
+
+Đến đây, chúng ta xét dấu của $3x - 13$ để chia làm hai trường hợp. Nhằm mục đích rút gọn, tác giả sẽ gộp cả hai trường hợp vào để có phương trình \refeq{eq:toan_hoc_nen_tang:ham_so_mot_bien:ham_tung_phan:pt5} tương đương với:
+
+\begin{equation*}
+   \text{\refeq{eq:toan_hoc_nen_tang:ham_so_mot_bien:ham_tung_phan:pt5}} \iff \left[\begin{array}{l}
+      3x - 13 = 6 \\
+      -(3x - 13) = 6
+   \end{array}\right. \iff \left[\begin{array}{l}
+      x = \frac{19}{3} \\
+      x = \frac{7}{3}
+   \end{array}\right.
+\end{equation*}
+
+Và qua đó, tập nghiệm của phương trình là $\left\{\frac{19}{3}; \frac{7}{3}\right\}$.
 
 \exercise Phác thảo đồ thị của những hàm sau:
 
