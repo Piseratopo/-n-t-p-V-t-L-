@@ -47,17 +47,15 @@ Ví dụ:
 
 \solution
 
-1.
+1. Xét hai trường hợp:
 
-Xét hai trường hợp:
-
-\textcolor{colorEmphasisCyan}{Trường hợp 1 - $x + 4 \geq 0$}: Khi này, phá dấu giá trị tuyệt đối để có $|x + 4| = x + 4$. Cho nên phương trình ban đầu sẽ tương đương với:
+\textcolor{colorEmphasisCyan}{Trường hợp 1 --- $x + 4 \geq 0$}. Khi này, phá dấu giá trị tuyệt đối để có $|x + 4| = x + 4$. Cho nên phương trình ban đầu sẽ tương đương với:
 
 \begin{equation*}
    x + 4 = 9 \iff x = 5.
 \end{equation*}
 
-\textcolor{colorEmphasis}{Trường hợp 2 - $x + 4 < 0$}: Khi này,
+\textcolor{colorEmphasis}{Trường hợp 2 --- $x + 4 < 0$}. Khi này,
 
 \begin{align*}
    &\begin{cases}
@@ -69,6 +67,61 @@ Xét hai trường hợp:
 \end{align*}
 
 Kết hợp hai trường hợp, có được $x \in \{5; -13\}$. Thử lại trực tiếp thấy thỏa mãn.
+
+Vậy tập nghiệm của phương trình là $\{5; -13\}$.
+
+2. Đặt $f(x) = |x|$.
+
+Nếu \textcolor{colorEmphasisCyan}{$x \geq 0$} thì $f(x) = |x| = x$ và hiển nhiên $f(x) \geq 0$. Nếu \textcolor{colorEmphasis}{$x < 0$} thì $f(x) = |x| = -x$. Có $x < 0 \iff -x > 0 \iff f(x) > 0$.
+
+Kết hợp lại, chúng ta có $f(x) \geq 0$ với mọi $x \in \mathbb{R}$. Suy ra được rằng $f(x - 3) \geq 0$. Tuy nhiên, phương trình được cho có thể được viết lại là $f(x - 3) = -9$. Do đó, phương trình vô nghiệm.
+
+Sai lầm thường gặp ở dạng bài này là có suy luận như sau:
+
+\begin{equation*}
+   |x - 3| = -9 \iff \left[\begin{array}{l}
+      x - 3 = -9 \\
+      x - 3 = 9
+   \end{array}\right..
+\end{equation*}
+
+3. Một lần nữa, xét hai trường hợp:
+
+\textcolor{colorEmphasisCyan}{Trường hợp 1 --- $7 - 2x \geq 0$}. Thực hiện biến đổi:
+
+\begin{align*}
+   &\begin{cases}
+      |7 - 2x| < 9 \\
+      7 - 2x \geq 0
+   \end{cases} \\
+   \iff &\begin{cases}
+      7 - 2x < 9 \\
+      7 - 2x \geq 0
+   \end{cases} \\
+   \iff &0 \leq 7 - 2x < 9 \\
+   \iff &-7 \leq -2x < 2 \\
+   \iff &\frac{7}{2} \geq x > -1.
+\end{align*}
+
+\textcolor{colorEmphasis}{Trường hợp 2 --- $7 - 2x < 0$}:
+
+\begin{align*}
+   &\begin{cases}
+      |7 - 2x| < 9 \\
+      7 - 2x < 0
+   \end{cases} \\
+   \iff &\begin{cases}
+      - (7 - 2x) < 9 \\
+      7 - 2x < 0
+   \end{cases} \\
+   \iff & -9 < 7 - 2x < 0 \\
+   \iff & -16 < -2x < -7 \\
+   \iff & 8 > x > \frac{7}{2}.
+\end{align*}
+
+Kết hợp hai trường hợp, có được $x \in \left(-1; 8\right)$. Có biến đổi là tương đương trong tập xác định cho nên phương trình có nghiệm $x \in \left(-1; 8\right)$.
+
+4. 
 
 \exercise Phác thảo đồ thị của những hàm sau:
 

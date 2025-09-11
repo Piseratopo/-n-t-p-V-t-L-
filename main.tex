@@ -25,14 +25,15 @@
    \setlength{\parindent}{\recordparindent}
 }
 
-% Chỉnh phông chữ
-\setCJKmainfont[
-   Path = fonts/,
-   UprightFont = * ,   
-   AutoFakeSlant=0.2,
-   AutoFakeBold=2.0
-]{DFKai-SB}
+% Định nghĩa tông màu
+\definecolor{colorEmphasisCyan}{RGB}{0, 120, 255}
+\definecolor{colorEmphasis}{RGB}{220, 24, 78}
+\definecolor{colorEmphasisGreen}{RGB}{0, 171, 77}
 
+% Chỉnh phông chữ
+\setCJKmainfont[AutoFakeSlant=0.2,AutoFakeBold=2.0]{DFKai-SB}
+
+% Tăng kích cỡ ô trong bảng
 \makegapedcells
 
 % Đánh dấu định nghĩa
@@ -44,7 +45,6 @@
 
 \title{\Huge Ôn tập Vật Lí}
 \author{Bùi Nhật Minh}
-\date{\today}
 
 % Xử lí số đếm của bài tập
 \newcounter{exercise}
@@ -80,11 +80,6 @@
 % Phục vụ viết biểu thức
 \newcommand{\refeq}[1]{(\ref{#1})}
 \newcommand{\equationexplanation}[1]{\qquad \textcolor{colorEmphasis}{\text{(#1)}}}
-
-% Định nghĩa tông màu
-\definecolor{colorEmphasisCyan}{RGB}{0, 120, 255}
-\definecolor{colorEmphasis}{RGB}{220, 24, 78}
-\definecolor{colorEmphasisGreen}{RGB}{0, 171, 77}
 
 % Định nghĩa kích thước các bộ phận của đồ thị
 \def \pointSize {2pt}
@@ -128,15 +123,15 @@
    {\normalfont\Huge\bfseries}
    {}
    {0pt}
-   {#1}
+   {\textcolor{colorEmphasisCyan}{#1}}
 
 \titleformat{\chapter}
    {\normalfont\Huge\bfseries}
    {}
    {0pt}
    {\textcolor{colorEmphasisCyan}{
-      {\fontsize{60}{72}\selectfont\thechapter.}}\\[0.5em]
-      #1
+      {\fontsize{60}{72}\selectfont\thechapter.}\\[0.5em]
+      #1}
    }
 
 \titleformat{\section}
@@ -159,6 +154,22 @@
    {0pt}
    {\textcolor{colorEmphasisCyan}{\thesubsection} \quad #1}
 
+% Chỉnh màu của mục lục
+\makeatletter
+\patchcmd{\@tocline}
+   {\numberline}
+   {\color{colorEmphasisCyan}\numberline}
+   {}{}
+\patchcmd{\l@chapter}
+   {\bfseries}
+   {\color{colorEmphasisCyan}\bfseries}
+   {}{}
+\makeatother
+
+\makeatletter
+\renewcommand{\numberline}[1]{\textcolor{colorEmphasisCyan}{#1}\hspace{1em}}
+\makeatother
+
 \begin{document}
 
 \setcounter{chapter}{-1}
@@ -171,155 +182,6 @@
 % \input{\chapdir kiem_tra.tex}
 \input{\chapdir toan_hoc_nen_tang.tex}
 
-\section{Số ảo và số phức}
-
-\ % Lùi đầu dòng
-
-Trước khi đến với số phức, chúng ta bắt đầu tiếp cận với định nghĩa đơn vị ảo. Cụ thể, \emph{đơn vị ảo} được kí hiệu là $\mathbf{i}$ \footnote{Phần lớn các tài liệu sẽ kí hiệu số ảo là chữ $i$ thông thường. Tác giả kí hiệu thành chữ $\mathbf{i}$ đứng in đậm để bảo toàn chữ $i$ cho nhiệm vụ khác.} và thỏa mãn $$\mathbf{i}^2 = -1 \text{ hay } \mathbf{i} = \sqrt{-1}.$$
-
-Để có số ảo, nhân một số thực $b \neq 0$ với đơn vị ảo để thành $\mathbf{i}b$. Một số phức bao gồm thành phần thực và $\mathbf{i}$ lần phẩn ảo cộng vào. Viết dưới \emph{dạng chính tắc}, một số phức có dạng là $$z=a+\mathbf{i}b$$ với $a, b$ thực. Từ một số phức, chúng ta cũng có thể lấy ngược lại giá trị phần thực và phần ảo của nó lần lượt qua hai hàm $\Re{(z)}$ và $\Im{(z)}$ (hoặc $\operatorname*{Re}{(z)}$ và $\operatorname*{Im}{(z)}$). Cụ thể, với $z=a+\mathbf{i}b$ thì $\Re{(z)} = a$ và $\Im{(z)}=b$\footnote{Tại sao không gọi cả $\mathbf{i}b$ là phần ảo? Khi nói đến phần ảo, chúng ta đã ngầm định nó sẽ thuộc về số hạng mà có thừa số $\mathbf{i}$. Viết lại đơn vị ảo trở nên thừa thãi. Hơn nữa, sẽ dễ làm việc hơn khi mà cả $\Re{(z)}$ và $\Im{(z)}$ đều thực và không phải chia $\Im{(z)}$ cho $\mathbf{i}$ liên tục.}.
-
-Chúng ta sẽ coi như có thể thực hiện các định luật đại số thông thường trên tập số phức. Coi $\mathbf{i}$ là một biến với $\mathbf{i}^2 = -1$. Để cộng (hay trừ) hai số phức $v = a + \mathbf{i}b$ và $w = c + \mathbf{i}d$, thực hiện cộng (hay trừ) các thành phần tương đương (phần thực với phần thực, phần ảo với phần ảo). Viết dưới dạng toán học:
-\begin{equation*}
-   \begin{cases}
-      v + w = (a + c) + \mathbf{i}(b + d) \\ 
-      v - w = (a - c) + \mathbf{i}(b - d) 
-   \end{cases}.
-\end{equation*}
-
-Nhân hai số phức sẽ yêu cầu sử dụng tính chất phân phối giữa phép nhân với phép cộng, được thực hiện như sau
-\begin{align*}
-   v\cdot w&=\left(a + \mathbf{i}b\right)\cdot\left(c + \mathbf{i}d\right) \\
-      &= ac + \mathbf{i}ad + \mathbf{i}bc + \mathbf{i}^2 bd \\
-      &= (ac - bd) + \mathbf{i}(ad + bc).
-\end{align*}
-
-Trước khi chia hai số phức, chúng ta cần phải biết đến khái niệm số phức liên hợp và tính chất đặc biệt của nó. Một số phức $z = a+\mathbf{i}b$ sẽ có số phức liên hợp là $$\bar{z} = z^* = a - \mathbf{i}b.$$ Khi này, thực hiện phép nhân số phức $z$ với liên hợp của nó để có $$z\bar{z} = (a+\mathbf{i}b)(a-\mathbf{i}b) = a^2 + b^2.$$ Để ý rằng $a^2 + b^2$ là một số thực do $a, b$ đã là số thực từ định nghĩa, và cũng cần phải nhớ lại rằng khi nhân cả số bị chia và số chia với một số thì thương không đổi. Cho nên, để chia hai số phức, chúng ta nhân cả tử và mẫu với liên hợp của số chia $$\frac{v}{w} = \frac{a + \mathbf{i}b}{c + \mathbf{i}d} = \frac{\left(a + \mathbf{i}b\right)\left(c - \mathbf{i}d\right)}{\left(c + \mathbf{i}d\right)\left(c - \mathbf{i}d\right)} = \frac{\left(ac+bd\right) + \mathbf{i}\left(bc - ad\right)}{c^2+d^2}.$$ Từ đó, chúng ta đưa phép chia hai số phức thành phép chia số phức với số thực và có kết quả là $$\frac{v}{w} = \frac{a + \mathbf{i}b}{c + \mathbf{i}d} = \frac{ac+bd}{c^2+d^2}+\mathbf{i}\cdot\frac{bc - ad}{c^2+d^2}.$$
-
-\begin{wrapfigure}{R}{0.5\textwidth}
-   \centering
-   \begin{tikzpicture}
-      \draw[->] (-2,0) -- (4,0) node[right] {$\operatorname*{Re}(z)$};
-      \draw[->] (0,-1) -- (0,3) node[above] {$\operatorname*{Im}(z)$};
-      \filldraw (3,2) circle (1pt) node[anchor=west] {$z = 3 + 2\mathbf{i}$};
-      \filldraw (0, 0) circle (1pt);
-      \node[above] at (3,2) {$Z(3, 2)$};
-      \draw[dashed, thick] (0, 0) -- (3, 2);
-      \draw (0,0) -- (0.1, -0.15);
-      \draw (3, 2) -- (3.1, 1.85);
-      \draw[<->] (0.05, -0.075) -- (3.05, 1.925);
-      \node[right] at ($(0.1, -0.1)!0.5!(3.1, 1.9)$) {$|z| = \sqrt{3^2 + 2^2} = \sqrt{13}$};
-   \end{tikzpicture}
-
-   \caption{Biểu diễn $z = 3 + 2\mathbf{i}$ trên mặt phẳng tọa độ}
-   \label{fig:bieu_dien_so_phuc}
-\end{wrapfigure}
-
-Ngoài cách biểu diễn đại số, còn có cách biểu diễn hình học trên mặt phẳng tọa độ của số phức qua việc coi trục hoành và trục tung lần lượt biểu diễn phần thực và phần ảo của số phức. Cụ thể, số phức $z = a + \mathbf{i}b$ được biểu diễn bởi một điểm $Z(a,b)$ trên hệ tọa độ vuông góc. Khi này, $Z$ là \emph{ảnh} (hay đơn giản là \emph{điểm biểu diễn}) của $z$ và $(a,b)$ được gọi là \emph{tọa vị} (hay \emph{tọa độ phức}) của $z$.
-
-Hình \ref{fig:bieu_dien_so_phuc} đã biểu diễn số phức $z = 3 + 2\mathbf{i}$ trên mặt phẳng tọa độ. Từ đây, chúng ta có thể phát hiện ra những đặc tính khác của $z$ khác tọa vị. Đầu tiên, chúng ta có thể đo khoảng cách từ ảnh $Z$ đến gốc $(0;0)$, và từ đó, chúng ta sẽ nhận được \emph{mô-đun (module)} của $z$, kí hiệu: $|z|$. Bạn đọc có thể để ý rằng kí hiệu giống như kí hiệu giá trị tuyệt đối của số thực. Cũng có thể hiểu được tại sao lại vậy nếu như bạn đọc nhớ cách biểu diễn khoảng cách hình học của giá trị tuyệt đối trên trục số thực. Khi chúng ta có một điểm biểu diễn một số thực $x$ trên một trục thì giá trị tuyệt đối của $x$ chính là khoảng cách từ $x$ đến điểm $0$.
-
-\begin{figure}[H]
-   \centering
-   \begin{tikzpicture}
-      \draw[<->] (-5, 0) -- (5, 0);
-
-      \foreach \pt/\lbl in {0/0, 4/x, -2.5/y} {
-         \filldraw (\pt, 0) circle (1pt);
-         \draw (\pt, 0) -- (\pt, -0.2);
-         \node[above] at (\pt, 0) {$\lbl$};
-      }
-      
-      \draw[<->] (-2.5, -0.1) -- (0, -0.1);
-      \node[below] at (-1.25, -0.1) {$|y|$};
-      \draw[<->] (4, -0.1) -- (0, -0.1);
-      \node[below] at (2, -0.1) {$|x|$};
-   \end{tikzpicture}
-   \caption{Giá trị tuyệt đối trên trục thực}
-   \label{fig:gia_tri_tuyet_doi_thuc}
-\end{figure}
-
-Một cách tương tự, $|z|$ là khoảng cách từ $Z$ đến gốc tọa độ. Công thức Pi-ta-go được sử dụng để tính khoảng cách này: $$|z| = \sqrt{a^2+b^2}.$$ Cũng là vì lí do đó nên trong một số tài liệu, $|z|$ vẫn được gọi là giá trị tuyệt đối để đảm bảo tính nhất quán.
-
-Trên trục số thực, mốt số cụ thể thì giá trị tuyệt đối của nó chỉ có một giá trị, nhưng nếu đầu ra là một giá trị tuyệt đối thì đầu vào có thể là $2$ số khác nhau. Để biết chính xác là số nào thì cần biết thêm dấu của số đó, hay nói một cách khác, hướng của số đó nếu nhìn từ vị trí gốc $0$. Một cách tương tự, một số phức $z$ chỉ ra được một giá trị mô-đun $|z|$ của nó, nhưng với một $|z|$ thì có thể có nhiều $z$ thỏa mãn. Để biết chính xác được giá trị của $z$ thì chúng ta cần phải biết thêm hướng của $z$. Tuy nhiên, việc xác định hướng này không chỉ đơn giản là nằm trái hay phải trên trục một chiều nữa, mà cần phải xác định vị trí trong mặt phẳng hai chiều. Một cách để thực hiện điều này là xác định \emph{góc} (hay \emph{a-gu-men}) của $z$.
-
-Để xác định góc, chúng ta cần phải có $2$ tia. Một tia có thể được nối từ gốc đến điểm biểu diễn. Một tia còn lại có thể bám theo một trục cố định. Về quy ước, phía dương trục hoành, hay trục thực, được sử dụng làm bờ còn lại. Bạn đọc có thể nghĩ rằng là khi này chúng ta đã có đủ điều kiện để xác định góc. Cũng đũng, đã đủ để từ số phức $z$ ra được góc của $z$. Nhưng từ góc của $z$ vẫn chưa đủ để ra được $z$. Hãy nhìn vào hình \ref{fig:hai_truong_hop_goc}:
-\begin{figure}[h]
-   \centering
-   \begin{tikzpicture}
-      \draw[->] (-1, 0) -- (5, 0);
-      \draw[->] (0, -3) -- (0, 3);
-
-      \filldraw (4,2) circle (1pt) node[anchor=west] {$z = 4 + 2\mathbf{i}$};
-      \filldraw (4,-2) circle (1pt) node[anchor=west] {$z = 4 - 2\mathbf{i}$};
-
-      \draw[dashed, ->, thick] (0, 0) -- (4, 2);
-      \draw[dashed, ->, thick] (0, 0) -- (4, -2);
-
-      \draw (0.5,0) arc[start angle=0, end angle={atan(2/4)}, radius=0.5];
-      \node at (0.75,0.18) {$\theta$};
-
-      \draw (0.75,0) arc[start angle=0, end angle={-atan(2/4)}, radius=0.75];
-      \node at (0.9,-0.2) {$\theta$};
-   \end{tikzpicture}
-   \caption{$4+2\mathbf{i}$ và $4-2\mathbf{i}$ có độ lớn góc bằng nhau.}
-   \label{fig:hai_truong_hop_goc}
-\end{figure}
-
-
-Để phân biệt hai góc này, người ta sử dụng khái niệm \emph{góc định hướng}. Một cách đơn giản, quay trục hoành ngược chiều kim đồng hồ cho đến khi chạm vào cạnh còn lại. Góc đã quay là độ lớn của góc định hướng. Khi quay thuận chiều kim đồng hồ thì góc đó quy ước là quay góc âm. Từ đó, chúng ta có thể phân biệt góc nhìn như hình \ref{fig:hai_truong_hop_goc_dinh_huong}:
-
-\begin{figure}[h]
-   \centering
-   \begin{tikzpicture}
-      \draw[->] (-2, 0) -- (5, 0);
-      \draw[->] (0, -3) -- (0, 3);
-
-      \filldraw (4,2) circle (1pt) node[anchor=west] {$z = 4 + 2\mathbf{i}$};
-      \filldraw (4,-2) circle (1pt) node[anchor=west] {$z = 4 - 2\mathbf{i}$};
-
-      \draw[dashed, ->, thick] (0, 0) -- (4, 2);
-      \draw[dashed, ->, thick] (0, 0) -- (4, -2);
-
-      \draw[->] (0.5,0) arc[start angle=0, end angle={atan(2/4)}, radius=0.5];
-      \node at (0.75,0.18) {$\theta$};
-
-      \draw[->] (0.75,0) arc[start angle=0, end angle={-atan(2/4)}, radius=0.75];
-      \node at (1,-0.22) {$-\theta$};
-
-      \draw[->] (1,0) arc[start angle=0, end angle={360-atan(2/4)}, radius=1];
-      \node at (-1.5,0.7) {$2\pi - \theta$};
-   \end{tikzpicture}
-   \caption{$4+2\mathbf{i}$ và $4-2\mathbf{i}$ có độ lớn góc bằng nhau.}
-   \label{fig:hai_truong_hop_goc_dinh_huong}
-\end{figure}
-
-Người ta kí hiệu góc của số phức là $\arg{(z)}$ hoặc $\Arg{(z)}$. Cũng giống như góc không định hướng, khi cộng thêm hay bớt đi $2\pi$ ra-đi-an (hay $360$ độ) thì \dblquote{hướng nhìn} cũng không thay đổi. Để cho $\arg{(z)}$ chỉ trả ra một giá trị duy nhất, quy ước là lấy góc trong nửa đoạn $\left(-\pi;\pi\right]$ (hay $\left(-180^\circ;180^\circ\right]$). Như ví dụ trong hình \ref{fig:hai_truong_hop_goc_dinh_huong}, $\arg{(4+2\mathbf{i})} = \theta = \arctan\left(\frac{2}{4}\right) \approx 0,464~\text{rad}$ (hay $26,565^\circ$) và $\arg{(4-2\mathbf{i})} = -\theta = -\arctan\left(\frac{2}{4}\right) \approx -0,464~\text{rad}$ (cũng có thể được viết lại là $-26,565^\circ$).
-
-Như đã viết, có khoảng cách và hướng nhìn thì chúng ta sẽ có được vị trí số phức. Cách biểu diễn này được gọi là \emph{dạng lượng giác} của số phức. Đặt $r = |z|$ và $\varphi = \arg{(z)}$, dạng lượng giác của $z$ được kí hiệu là $z = r \angle \varphi = r \phase{\varphi}$. Quy đổi giữa dạng lượng giác và dạng chính tắc, khi $z = a + \mathbf{i}b = r \phase{\varphi}$ thì
-\[
-\left\{
-\begin{aligned}
-   a &= \Re{(z)} = r \cos{(\varphi)} \\ 
-   b &= \Im{(z)} = r \sin{(\varphi)}
-\end{aligned}
-\right.
-\]
-và từ đó $z = r\left(\cos{(\varphi)} + \mathbf{i}\sin{(\varphi)}\right)$. Liên hợp của $z$ dưới dạng lượng giác là $\bar{z} = r\left(\cos{(\varphi)} - \mathbf{i}\sin{(\varphi)}\right) = r \phase{-\varphi}$.
-
-
-
-Thật sự, rất khó cho nhiều người không thường xuyên thường thức về toán ngay lập tức tìm ra và cảm nhận được ý nghĩa thực tiễn của số ảo. Chúng ta không thể tưởng tượng được số ảo một cách trực quan như các số mà chúng ta thường thấy ở ngoài cuộc sống như $5$ cái bút hay $\frac{1}{3}$ giờ. Đi kèm với đó, kể cả trên lí thuyết toán của ghế nhà trường, cũng sẽ không xảy ra trường hợp nào để cho một số nhân với chính nó ra một số âm. 
-
-Nhắc về số âm, theo quan điểm cá nhân, số âm trong đời xuống vốn đã ít khi được sử dụng. Chẳng mấy ai ưa nói \dblquote{lãi $-500000$ đồng} so với \dblquote{lỗ $500000$ đồng}. Một cách tương tự, nhìn về phương diện lịch sử, trong phần lớn quá trình phát triển của toán học, các nhà toán học xưa thường có mặc cảm với những số âm. Các phương trình sẽ luôn được viết lại thành nhiều trường hợp để tránh chúng. Ví dụ, nếu phương trình bậc hai được viết dưới dạng hiện đại là $x^2 + ax+b=0$ với $a,b$ là hai số thực (có thể âm), thì trong quá khữ, phương trình này được chia ra làm ba trường hợp
-\begin{align*}
-   &x^2+ax = b;\\
-   &x^2+b =ax;\\
-   &x^2 =ax+b
-\end{align*}
-với $a,b$ là hai số thực luôn dương. Và cũng từ sự mặc cảm với số âm, họ cho rằng nghiệm của phương trình cũng phải là một số dương. Tương tự với Các-đa-nô \footnote{Gerolamo Cardano (1501-1576).}, khi giải phương trình bậc ba, ông cũng đưa về các trường hợp như trên. Cụ thể, chúng ta xem xét một trường hợp của bài toán: $$x^3 = ax+b.$$ Giải phương trình, chúng ta có được nghiệm $$x=\sqrt[3]{\frac{b}{2} + \sqrt{\frac{b^2}{4}-\frac{a^3}{27}}}+\sqrt[3]{\frac{b}{2} - \sqrt{\frac{b^2}{4}-\frac{a^3}{27}}}.$$ Tuy nhiên, sau khi thay những giá trị cụ thể vào $a$ và $b$, Các-đa-nô đã phát hiện ra một vấn đề. Khi $a=15$ và $b=4$, nghiệm trả ra cho phương trình $x^3 = 15x+4$ theo công thức vừa trên là $$x=\sqrt[3]{2+\sqrt{-121}}+\sqrt[3]{2-\sqrt{-121}}$$ mặc dù phương trình có một nghiệm bình thường là $x=4$ (với kiến thức toán học hiện đại, chúng ta có thể giải ra hai nghiệm cũng thực khác là $-2 \pm \sqrt{3}$). Nhận ra điều đó, Các-đa-nô đã khẳng định rằng công thức này của ông không áp dụng được trong trường hợp xảy ra căn của một số âm. Tuy nhiên, một học trò của ông, Bom-be-li \footnote{Rafael Bombelli (1526-1572).}, lại phủ nhận điều trên. Bom-be-li nhận định rằng tồn tại một kiểu số khác số thực sẽ có giá trị bằng \dblquote{căn âm}. Ông chỉ rõ sự khác biệt giữa kiểu số mới này và kiểu số thực thông thường, và đi kèm theo là phương pháp thực hiện đại số trên kiểu số mới. Áp dụng những nền tảng đó, ông đã tính được căn bậc ba của hai số phức lần lượt là $\sqrt[3]{2+\sqrt{-121}}=2+\sqrt{-1}$ và $\sqrt[3]{2-\sqrt{-121}}=2-\sqrt{-1}$. Cộng hai số vào, hiển nhiên sẽ có được nghiệm $4$ như mong muốn.
-
-Với sự xây dựng ban đầu của Bom-be-li làm gốc, trong những thế kỉ sau, tên gọi và lí thuyết về cách biểu diễn số phức được hình thành.
 
 
 \chapter{Cơ bản của xử lí số liệu trong vật lí}
