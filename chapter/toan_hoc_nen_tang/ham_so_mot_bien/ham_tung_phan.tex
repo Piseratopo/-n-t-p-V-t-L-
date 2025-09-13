@@ -203,6 +203,169 @@ Từ đó, có:
 
 Từ hai trường hợp, chúng ta có $2x + 3 + |3x + 4| > 0$ với mọi giá trị thực của $x$. Do đó, tập nghiệm của phương trình là $\mathbb{R}$.
 
+7. Tóm tắt các trường hợp thông qua bảng xét dấu sau:
+
+\begin{table}[H]
+   \centering
+   \begin{tabular}{|c|ccccccc|}
+   \hline
+   $x$          & $-\infty$ &     & $-4$ &     & $\frac{12}{7}$ &   & $\infty$ \\
+   \hline
+   $x+4$        &           & $-$ &  0  &  +  &     & + &           \\
+   \hline
+   $7x-12$        &           & $-$ &     & $-$ &  0  & + &           \\
+   \hline
+   \end{tabular}
+   \caption{Bảng xét dấu cho $x+4$ và $7x-12$}
+   \label{tab:toan_hoc_nen_tang:ham_so_mot_bien:ham_tung_phan:gpt7}
+\end{table}
+
+\textcolor{colorEmphasisCyan}{Trường hợp một --- $x < -4$}. Khi này, phương trình ban đầu trở thành
+
+\begin{align*}
+   |x + 4| &= |7x - 12| \\
+   \iff -(x + 4) &= -(7x - 12) \\
+   \iff x = \frac{8}{3}.
+\end{align*}
+
+Chúng ta không nhận nghiệm này trong trường hợp này do trái với giả thiết $x < -4$.
+
+\textcolor{colorEmphasis}{Trường hợp hai --- $-4\leq x < \frac{12}{7} $}. Khi này, 
+
+\begin{align*}
+   |x + 4| &= |7x - 12| \\
+   \iff x + 4 &= -(7x - 12) \\
+   \iff x &= 1.
+\end{align*}
+
+\textcolor{colorEmphasisGreen}{Trường hợp ba --- $x \geq \frac{12}{7}$}. Từ đây,
+
+\begin{align*}
+   |x + 4| &= |7x - 12| \\
+   \iff x + 4 &= 7x - 12 \\
+   \iff x &= \frac{8}{3}.
+\end{align*}
+
+Kết hợp các trường hợp và kiểm tra lại các nghiệm, chúng ta có nghiệm của phương trình là $x \in \left\{1; \frac{8}{3}\right\}$.
+
+8. Kẻ bảng xét dấu
+
+\begin{table}[H]
+   \centering
+   \begin{tabular}{|c|ccccccc|}
+   \hline
+   $x$          & $-\infty$ &     & $-\frac{3}{2}$ &     & $\frac{1}{2}$ &   & $\infty$ \\
+   \hline
+   $6x + 9$        &           & $-$ &  0  &  +  &     & + &           \\
+   \hline
+   $6x - 3$        &           & $-$ &     & $-$ &  0  & + &           \\
+   \hline
+   \end{tabular}
+   \caption{Bảng xét dấu cho $6x + 9$ và $6x - 3$}
+   \label{tab:toan_hoc_nen_tang:ham_so_mot_bien:ham_tung_phan:gpt7}
+\end{table}
+
+\textcolor{colorEmphasisCyan}{Trường hợp một --- $x < -\frac{3}{2}$}. Khi này, bất phương trình ban đầu trở thành
+
+\begin{align*}
+   |6x + 9| &> |6x - 3| \\
+   \iff -(6x + 9) &> -(6x - 3) \\
+   \iff -9 &> 3.
+\end{align*}
+
+Bất phương trình sai với mọi $x$. Đối với trường hợp này, tập nghiệm là $\emptyset$.
+
+\textcolor{colorEmphasis}{Trường hợp hai --- $-\frac{3}{2} \leq x < \frac{1}{2}$}. Khi này,
+
+\begin{align*}
+   |6x + 9| &> |6x - 3| \\
+   \iff 6x + 9 &> -(6x - 3) \\
+   \iff x &> -\frac{1}{2}.
+\end{align*}
+
+\textcolor{colorEmphasisGreen}{Trường hợp ba --- $x \geq \frac{1}{2}$}:
+
+\begin{align*}
+   |6x + 9| &> |6x - 3| \\
+   \iff 6x + 9 &> 6x - 3 \\
+   \iff 9 &> -3
+\end{align*}
+luôn đúng. Kết hợp với điều kiện, chúng ta có tập nghiệm $\left[\frac{1}{2}; \infty\right)$.
+
+Hợp tập nghiệm của cả ba trường hợp, do mọi biến đổi trong mỗi trường hợp là tương đương cho nên bất phương trình có tập nghiệm là $\left(-\frac{1}{2}; \infty\right)$.
+
+9. Biến đổi cơ bản để có
+
+\begin{align}
+   \left|2x + 2\right| + \left|x + 1\right| &= 9 \nonumber\\
+   \iff \left|2(x + 1)\right| + \left|x + 1\right| &= 9. \label{eq:toan_hoc_nen_tang:ham_so_mot_bien:ham_tung_phan:pt9}
+\end{align}
+
+Với \textcolor{colorEmphasisCyan}{$x \geq -1$} thì $x+ 1 \geq 0 \iff \begin{cases}
+   \left|2(x + 1)\right| = 2(x + 1) \\
+   \left|x + 1\right| = x + 1
+\end{cases}$. Cho nên 
+\begin{align*}
+   \text{\refeq{eq:toan_hoc_nen_tang:ham_so_mot_bien:ham_tung_phan:pt9}} \iff &2(x + 1) + (x + 1) = 9 \\
+   \iff &x = 2.
+\end{align*}
+
+Với \textcolor{colorEmphasis}{$x < -1$} thì $x + 1 < 0 \iff \begin{cases}
+   \left|2(x + 1)\right| = -\left(2(x + 1)\right) \\
+   \left|x + 1\right| = -\left(x + 1\right)
+\end{cases}$. Cho nên
+\begin{align*}
+   \text{\refeq{eq:toan_hoc_nen_tang:ham_so_mot_bien:ham_tung_phan:pt9}} \iff &-\left(2(x + 1)\right) -\left(x + 1\right) = 9 \\
+   \iff &x = -4.
+\end{align*}
+
+Phương trình có nghiệm là $\left\{2; -4\right\}$.
+
+10. Kẻ bảng xét dấu
+
+\begin{table}[H]
+   \centering
+   \begin{tabular}{|c|ccccccc|}
+   \hline
+   $x$          & $-\infty$ &     & $-1$ &     & $\frac{4}{3}$ &   & $\infty$ \\
+   \hline
+   $3x + 3$        &           & $-$ &  0  &  +  &     & + &           \\
+   \hline
+   $3x - 4$        &           & $-$ &     & $-$ &  0  & + &           \\
+   \hline
+   \end{tabular}
+   \caption{Bảng xét dấu cho $3x + 3$ và $3x - 4$}
+   \label{tab:toan_hoc_nen_tang:ham_so_mot_bien:ham_tung_phan:gpt10}
+\end{table}
+
+\textcolor{colorEmphasisCyan}{Trường hợp một --- $x < -1$}. Từ đó,
+\begin{align*}
+   |3x + 3| + |3x - 4| &\leq 7 \\
+   \iff -(3x + 3) - (3x - 4) &\leq 7 \\
+   \iff -6x + 1 &\leq 7 \\
+   \iff x &\geq -1.
+\end{align*}
+
+Điều này trái với điều kiện $x < -1$ của trường hợp này.
+
+\textcolor{colorEmphasis}{Trường hợp hai --- $-1 \leq x < \frac{4}{3}$}. Với điều kiện này,
+\begin{align*}
+   |3x + 3| + |3x - 4| &\leq 7 \\
+   \iff 3x + 3 - (3x - 4) &\leq 7 \\
+   \iff 7 &\leq 7.
+\end{align*}
+Bất phương trình này là luôn đúng.
+
+\textcolor{colorEmphasisGreen}{Trường hợp ba --- $x \geq \frac{4}{3}$}. Khi này,
+\begin{align*}
+   |3x + 3| + |3x - 4| &\leq 7 \\
+   \iff 3x + 3 + 3x - 4 &\leq 7 \\
+   \iff x &\leq \frac{4}{3}.
+\end{align*}
+
+Kết hợp với điều kiện, có được $x = \frac{4}{3}$.
+
+Qua ba trường hợp, tập nghiệm của bất phương trình là $\left[-1; \frac{4}{3}\right]$.
 
 \exercise Phác thảo đồ thị của những hàm sau:
 
@@ -232,7 +395,9 @@ Từ hai trường hợp, chúng ta có $2x + 3 + |3x + 4| > 0$ với mọi giá
          x^3 + 3 \text{ nếu } x \leq 0 \\
          -2x + 2 \text{ nếu } 0 < x < 1 \\
          2 + x - x^2 \text{ nếu } x \geq 1
-      \end{cases}$.
+      \end{cases}$;
+      \item $f(x) = |x|$;
+      \item $f(x) = $
    \end{enumerate}
 \end{multicols}
 
