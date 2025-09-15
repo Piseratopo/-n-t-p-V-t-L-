@@ -14,7 +14,7 @@
 \contentsline {subsection}{\numberline {0.2.6}Phép hợp hai hàm số}{44}{subsection.0.2.6}%
 \contentsline {subsection}{\numberline {0.2.7}Nhị thức Niu-tơn}{46}{subsection.0.2.7}%
 \contentsline {subsection}{\numberline {0.2.8}Hàm số xác định từng phần}{50}{subsection.0.2.8}%
-\contentsline {section}{\numberline {0.3}Thuộc tính của hàm số}{57}{section.0.3}%
-\contentsline {subsection}{\numberline {0.3.1}Hàm chẵn và hàm lẻ}{57}{subsection.0.3.1}%
-\contentsline {chapter}{\numberline {1}Cơ bản của xử lí số liệu trong vật lí}{58}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Chuyển động}{61}{chapter.2}%
+\contentsline {section}{\numberline {0.3}Thuộc tính của hàm số}{58}{section.0.3}%
+\contentsline {subsection}{\numberline {0.3.1}Hàm chẵn và hàm lẻ}{58}{subsection.0.3.1}%
+\contentsline {chapter}{\numberline {1}Cơ bản của xử lí số liệu trong vật lí}{59}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Chuyển động}{62}{chapter.2}%

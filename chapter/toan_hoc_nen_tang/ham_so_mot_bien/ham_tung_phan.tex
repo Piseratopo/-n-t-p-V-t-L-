@@ -348,7 +348,102 @@ Kết hợp với điều kiện, có được $x = \frac{4}{3}$.
 
 Qua ba trường hợp, tập nghiệm của bất phương trình là $\left[-1; \frac{4}{3}\right]$.
 
-10. 
+10.
+
+\begin{align}
+   \left|2(x - 1)^2 - 4\right| &= 2 \nonumber\\
+   \iff \left|2x^2 - 2x - 2\right| &= 2. \label{eq:toan_hoc_nen_tang:ham_so_mot_bien:ham_tung_phan:pt10}
+\end{align}
+
+Xét hai trường hợp. \textcolor{colorEmphasisCyan}{Trường hợp một --- $2x^2 - 2x - 2 \geq 0$}:
+
+\begin{align*}
+   \text{\refeq{eq:toan_hoc_nen_tang:ham_so_mot_bien:ham_tung_phan:pt10}} \iff 2x^2 - 2x - 2 &= 2 \\
+   2x^2 - 2x - 4 &= 0 \\
+   x^2 - x - 2 &= 0.
+\end{align*}
+Giải phương trình này để có $x\in\left\{-1; 2\right\}$, đều thỏa mãn điều kiện $2x^2 - 2x - 2 \geq 0$.
+
+\textcolor{colorEmphasis}{Trường hợp hai --- $2x^2 - 2x - 2 < 0$}:
+
+\begin{align*}
+   \text{\refeq{eq:toan_hoc_nen_tang:ham_so_mot_bien:ham_tung_phan:pt10}} \iff -\left(2x^2 - 2x - 2\right) &= 2 \\
+   \iff -2x^2 + 2x + 2 &= 2 \\
+   \iff -2x^2 + 2x &= 0.
+\end{align*}
+Phương trình này có nghiệm $x = 0$ hoặc $x = 1$, đều thỏa mãn điều kiện $2x^2 - 2x - 2 < 0$.
+
+Qua hai trường hợp, tập nghiệm của phương trình là $\left\{-1; 0; 1; 2\right\}$.
+
+11. Vì cả hai đa thức bậc hai $2x^2 -2x - 2$ và $3x^2 - 4x - 2$ đều không có nghiệm đẹp, nên tác giả sẽ không vẽ bảng xét dấu cho bài này mà chia làm bốn trường hợp. Để rút gọn, tác giả sẽ gộp lại như sau:
+
+\textcolor{colorEmphasisCyan}{Trường hợp một --- $
+\begin{cases}
+   2x^2 - 2x - 2 \geq 0 \\
+   3x^2 - 4x - 2 \geq 0
+\end{cases}$} và \textcolor{colorEmphasisCyan}{trường hợp hai --- $
+\begin{cases}
+   2x^2 - 2x - 2 < 0 \\
+   3x^2 - 4x - 2 < 0
+\end{cases}$}. Cả hai trường hợp này sau khi phá bỏ dấu giá trị tuyệt đối đều cho:
+\begin{align*}
+   2x^2 - 2x - 2 &= 3x^2 - 4x - 2 \\
+   \iff 0 &= x^2 - 2x \\
+   \iff x &\in \left\{0; 2\right\}.
+\end{align*}
+
+\textcolor{colorEmphasis}{Trường hợp ba --- $
+\begin{cases}
+   2x^2 - 2x - 2 \geq 0 \\
+   3x^2 - 4x - 2 < 0
+\end{cases}$} và \textcolor{colorEmphasis}{trường hợp bốn --- $
+\begin{cases}
+   2x^2 - 2x - 2 < 0 \\
+   3x^2 - 4x - 2 \geq 0
+\end{cases}$}. Cả hai trường hợp đều suy ra
+\begin{align*}
+   2x^2 - 2x - 2 &= -\left(3x^2 - 4x - 2\right) \\
+   \iff 5x^2 - 6x - 4 &= 0 \\
+   \iff x &\in \left\{\frac{3 + \sqrt{29}}{5}; \frac{3 - \sqrt{29}}{5}\right\}.
+\end{align*}
+
+Kết hợp các tập nghiệm và kiểm tra trực tiếp, chúng ta có tập nghiệm của phương trình là $$\left\{0; 2; \frac{3 + \sqrt{29}}{5}; \frac{3 - \sqrt{29}}{5}\right\}.$$
+
+12. Xét \textcolor{colorEmphasisCyan}{trường hợp một --- $x < 0$}, có $x^3 - 3x^2 + x = x\left(x^2 - 3x + 1\right)$. Vì $x < 0$ nên $-3x > 0 \implies x^2 - 3x + 1 > 0$ $\implies x^3 - 3x^2 + x < 0$. Do đó,
+$$
+\begin{cases}
+   |x^3 - 3x^2 + x| = -\left(x^3 - 3x^2 + x\right) \\
+   |x| = -x
+\end{cases}.
+$$
+Qua đó, bất phương trình ban đầu trở thành:
+\begin{align*}
+   \left|x^3 - 3x^2 + x\right| &\leq \left|x\right| \\
+   \iff -\left(x^3 - 3x^2 + x\right) &\leq x \\
+   \iff -x^3 + 3x^2 - 2x &\leq 0 \\
+   \iff -x(x-1)(x-2) &\leq 0.
+\end{align*}
+
+Vì $x < 0$ nên $\begin{cases}
+   x - 1 < 0 \\
+   x - 2 < 0
+\end{cases}$. Cho nên $-x(x-1)(x-2) \leq 0$ luôn đúng với $x < 0$.
+
+Xét $x \geq 0$, chúng ta chia làm hai trường hợp nhỏ. Cụ thể, \textcolor{colorEmphasis}{trường hợp hai --- $\begin{cases}
+   x \geq 0 \\
+   x^3 - 3x^2 + x \geq 0
+\end{cases}$}. Khi này
+
+\begin{align*}
+   |x^3 - 3x^2 + x| &\leq |x| \\
+   \iff x^3 - 3x^2 + x &\leq x \\
+   \iff x^3 - 3x^2 &\leq 0 \\
+   \iff x^2(x - 3) &\leq 0 \\
+   \iff x - 3 &\leq 0 \equationexplanation{$x^2 \geq 0$ với mọi $x \in \mathbb{R}$} \\
+   \iff x &\leq 3.
+\end{align*}
+
+
 
 \exercise Phác thảo đồ thị của những hàm sau:
 
