@@ -1,4 +1,4 @@
-from sympy import symbols, solve, Eq
+from sympy import symbols, solve, Eq, Abs
 import sympy
 
 

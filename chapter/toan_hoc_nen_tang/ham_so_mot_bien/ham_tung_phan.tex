@@ -419,15 +419,13 @@ $$
 Qua đó, bất phương trình ban đầu trở thành:
 \begin{align*}
    \left|x^3 - 3x^2 + x\right| &\leq \left|x\right| \\
-   \iff -\left(x^3 - 3x^2 + x\right) &\leq x \\
-   \iff -x^3 + 3x^2 - 2x &\leq 0 \\
-   \iff -x(x-1)(x-2) &\leq 0.
+   \iff -\left(x^3 - 3x^2 + x\right) &\leq -x \\
+   \iff -x^3 + 3x^2 &\leq 0 \\
+   \iff x^2 (3 - x) &\leq 0 \\
+   \iff 3 - x &\leq 0 \equationexplanation{$x^2 \geq 0$ với mọi $x \in \mathbb{R}$} \\
+   \iff x &\geq 3.
 \end{align*}
-
-Vì $x < 0$ nên $\begin{cases}
-   x - 1 < 0 \\
-   x - 2 < 0
-\end{cases}$. Cho nên $-x(x-1)(x-2) \leq 0$ luôn đúng với $x < 0$.
+Kết quả này mâu thuẫn với điều kiện $x < 0$ nên không có nghiệm trong trường hợp này.
 
 Xét $x \geq 0$, chúng ta chia làm hai trường hợp nhỏ. Cụ thể, \textcolor{colorEmphasis}{trường hợp hai --- $\begin{cases}
    x \geq 0 \\
@@ -443,7 +441,64 @@ Xét $x \geq 0$, chúng ta chia làm hai trường hợp nhỏ. Cụ thể, \tex
    \iff x &\leq 3.
 \end{align*}
 
+Cần phải kết hợp với điều kiện để xác định nghiệm thỏa mãn. Có
 
+\begin{align*}
+   x^3 - 3x^2 + x &\geq 0 \\
+   \iff x(x^2 - 3x + 1) &\geq 0 \\
+   \iff x^2 - 3x + 1 &\geq 0 \equationexplanation{$x \geq 0$ theo điều kiện}.
+\end{align*}
+
+Kẻ bảng xét dấu
+
+\begin{table}[H]
+   \centering
+   \begin{tabular}{|c|ccccccc|}
+   \hline
+   $x$           & $-\infty$ &   & $\frac{3 - \sqrt{5}}{2}$ &     & $\frac{3 + \sqrt{5}}{2}$ &   & $\infty$ \\
+   \hline
+   $x^{2}-3x+1$  &           & + &                 0                 & $-$ &                0                 & + &           \\
+   \hline
+   \end{tabular}
+   \caption{Bảng xét dấu của $x^{2}-3x+1$}
+   \label{tab:toan_hoc_nen_tang:ham_so_mot_bien:ham_tung_phan:bxd12_x2_t3x_1}
+\end{table}
+
+Qua đó, nghiệm của bất phương trình trong trường hợp này là $\left[0; \frac{3 - \sqrt{5}}{2}\right] \cup \left[\frac{3 + \sqrt{5}}{2}; 3\right]$.
+
+\textcolor{colorEmphasisGreen}{Trường hợp ba --- $
+\begin{cases}
+   x \geq 0 \\
+   x^3 - 3x^2 + x < 0
+\end{cases}$} $\iff x^2 - 3x + 1 < 0$. Từ bảng xét dấu \ref{tab:toan_hoc_nen_tang:ham_so_mot_bien:ham_tung_phan:bxd12_x2_t3x_1}, $x$ phải nằm trong đoạn $\left[\frac{3 - \sqrt{5}}{2}; \frac{3 + \sqrt{5}}{2}\right]$. Ngoài ra, từ bất phương trình:
+\begin{align*}
+   |x^3 - 3x^2 + x| &\leq |x| \\
+   \iff -\left(x^3 - 3x^2 + x\right) &\leq x \\
+   \iff -x^3 + 3x^2 - 2x &\leq 0 \\
+   \iff -x(x-1)(x-2) &\leq 0 \\
+   \iff (x - 1)(x - 2) &\geq 0 \equationexplanation{$x < 0$ theo điều kiện}.
+\end{align*}
+
+Kẻ bảng xét dấu cho $(x - 1)(x - 2)$:
+\begin{table}[H]
+   \centering
+   \begin{tabular}{|c|ccccccc|}
+      \hline
+      $x$          & $-\infty$ &     & $1$ &     & $2$ &   & $\infty$ \\
+      \hline
+      $x-1$        &           & $-$ &  0  &  +  &     & + &           \\
+      \hline
+      $x-2$        &           & $-$ &     & $-$ &  0  & + &           \\
+      \hline
+      $(x-1)(x-2)$ &           &  +  &  0  & $-$ &  0  & + &           \\
+      \hline
+   \end{tabular}
+   \caption{Bảng xét dấu của $(x-1)(x-2)$}
+\end{table}
+
+Qua đó, nghiệm của bất phương trình trong trường hợp này là $\left[\frac{3 - \sqrt{5}}{2}; 1\right] \cup \left[2; \frac{3 + \sqrt{5}}{2}\right]$.
+
+Qua ba trường hợp, chúng ta có tập nghiệm của bất phương trình: $\left[0; 1\right] \cup \left[2; 3\right]$.
 
 \exercise Phác thảo đồ thị của những hàm sau:
 
@@ -475,7 +530,7 @@ Xét $x \geq 0$, chúng ta chia làm hai trường hợp nhỏ. Cụ thể, \tex
          2 + x - x^2 \text{ nếu } x \geq 1
       \end{cases}$;
       \item $f(x) = |x|$;
-      \item $f(x) = $
+      \item $f(x) = \left|2x^2 - 4x\right|$
    \end{enumerate}
 \end{multicols}
 
@@ -616,6 +671,42 @@ Từ đây, có được đồ thị của $f(x)$:
       2 + x - x^2 \text{ nếu } x \geq 1
    \end{cases}$}
 \end{figure}
+
+6.
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\draw[->] (-4, 0) -- (4, 0) node[right] {$x$};
+		\draw[->] (0, -1) -- (0, 4)  node[above] {$f(x)$};
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=0.000:4.000] plot (\x, {(((\x)/1)) / 1});
+      \draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-4.000:0.000] plot (\x, {(-((\x)/1)) / 1});
+		\filldraw[color=colorEmphasisCyan] ({ 0.0 }, { 0.0 }) circle (\pointSize) node[below] {$\left({0};{0}\right)$};
+		\filldraw[color=colorEmphasisCyan] ({ -2.0 }, { 2.0 }) circle (\pointSize) node[below left] {$\left({-2};{2}\right)$};
+		\filldraw[color=colorEmphasisCyan] ({ 2.0 }, { 2.0 }) circle (\pointSize) node[below right] {$\left({2};{2}\right)$};
+	\end{tikzpicture}
+	\caption{Đồ thị của $|x|$}
+\end{figure}
+
+7.
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\draw[->] (-3, 0) -- (5, 0) node[right] {$x$};
+		\draw[->] (0, -1) -- (0, 4)  node[above] {$f(x)$};
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-0.732:0] plot (\x, {(2*((\x)/1)^2 - 4*((\x)/1)) / 1});
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=2:2.732] plot (\x, {(2*((\x)/1)^2 - 4*((\x)/1)) / 1});
+		\filldraw[color=colorEmphasisCyan] ({ 0.0 }, { 0.0 }) circle (\pointSize) node[below left] {$\left({0};{0}\right)$};
+		\filldraw[color=colorEmphasisCyan] ({ 2.0 }, { 0.0 }) circle (\pointSize) node[below right] {$\left({2};{0}\right)$};
+      \filldraw[color=colorEmphasisCyan] ({ -0.581 }, { 3.0 }) circle (\pointSize) node[below left] {$\left(-0{,}58;3{,}00\right)$};
+      \filldraw[color=colorEmphasisCyan] ({ 2.581 }, { 3.0 }) circle (\pointSize) node[below right] {$\left(2{,}58;3{,}00\right)$};
+      \draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=0.000:2.000] plot (\x, {(-2*((\x)/1)^2 + 4*((\x)/1)) / 1});
+		\filldraw[color=colorEmphasisCyan] ({ 1.0 }, { 2.0 }) circle (\pointSize) node[above] {$\left({1};{2}\right)$};
+	\end{tikzpicture}
+	\caption{Đồ thị của $\left|2 x^{2} - 4 x\right|$}
+\end{figure}
+
 
 \exercise Giải các phương trình và bất phương trình sau trên ẩn $x$ thực:
 
