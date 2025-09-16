@@ -530,7 +530,8 @@ Qua ba trường hợp, chúng ta có tập nghiệm của bất phương trình
          2 + x - x^2 \text{ nếu } x \geq 1
       \end{cases}$;
       \item $f(x) = |x|$;
-      \item $f(x) = \left|2x^2 - 4x\right|$
+      \item $f(x) = \left|2x^2 - 4x\right|$;
+      \item $f(x) = \left|x^3 - 3x^2 + x\right| - \left|x\right|$;
    \end{enumerate}
 \end{multicols}
 
@@ -707,11 +708,105 @@ Từ đây, có được đồ thị của $f(x)$:
 	\caption{Đồ thị của $\left|2 x^{2} - 4 x\right|$}
 \end{figure}
 
+8.
+
+\begin{figure}[H]
+   \centering
+   \begin{tikzpicture}
+      \draw[->] (-3, 0) -- (6, 0) node[right] {$x$};
+		\draw[->] (0, -4) -- (0, 4)  node[above] {$f(x)$};
+      \draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-1.5:5.033] plot (\x, {abs((\x/1.5)^3 - 3*(\x/1.5)^2 + (\x/1.5)) - abs(\x/1.5)});
+      \filldraw[color=colorEmphasisCyan] ({ 0.0 }, { 0.0 }) circle (\pointSize) node[below left] {$\left({0};{0}\right)$};
+      \filldraw[color=colorEmphasisCyan] ({ 1.5 }, { 0.0 }) circle (\pointSize) node[below right] {$\left({1};{0}\right)$};
+      \filldraw[color=colorEmphasisCyan] ({ 3.0 }, { 0.0 }) circle (\pointSize) node[above right] {$\left({2};{0}\right)$};
+      \filldraw[color=colorEmphasisCyan] ({ 4.5 }, { 0.0 }) circle (\pointSize) node[below right] {$\left({3};{0}\right)$};
+      \filldraw[color=colorEmphasisCyan] ({ 3.927 }, { -2.618 }) circle (\pointSize) node[below right] {$\left({2{,}62};{-2{,}62}\right)$};
+      \filldraw[color=colorEmphasisCyan] ({ -1.5 }, { 4.0 }) circle (\pointSize) node[left] {$\left({-1};{4}\right)$};
+   \end{tikzpicture}
+\end{figure}
+
+\exercise Cho $a$ và $b$ là hai số thực. Chứng minh rằng $|a||b| = |ab|$.
+
+\solution
+
+Để chứng minh $|a||b| = |ab|$ ngắn gọn, chúng ta thực hiện kẻ bảng:
+
+\begin{table}[H]
+   \centering
+   \begin{tabular}{|c||c|c|c|c|}
+      \hline
+      Điều kiện & $\begin{cases}a\geq 0\\b\geq0\end{cases}$ & $\begin{cases}a\geq0\\b<0\end{cases}$ & $\begin{cases}a<0\\b\geq 0\end{cases}$ & $\begin{cases}a<0\\b<0\end{cases}$ \\
+      \hline
+      $|a|$, $|b|$ & $\begin{cases}|a| = a\\|b| = b\end{cases}$ & $\begin{cases}|a| = a\\|b| = -b\end{cases}$ & $\begin{cases}|a| = -a\\|b| = b\end{cases}$ & $\begin{cases}|a| = -a\\|b| = -b\end{cases}$ \\
+      \hline
+      $|a||b|$ & $ab$ & $(-a)b = -ab$ & $a(-b) = -ab$ & $(-a)(-b) = ab$ \\
+      \hline
+      Dấu của $ab$ & $\geq 0$ & $< 0$ & $<0$ & $\geq 0$ \\
+      \hline
+      $|ab|$ & $ab$ & $-ab$ & $-ab$ & $ab$ \\
+      \hline
+   \end{tabular}
+   \caption{Bảng so sánh $|a||b|$ và $|ab|$}
+\end{table}
+
+Qua bảng, chúng ta luôn có $|a||b| = |ab|$. Chúng ta có điều phải chứng minh.
+
+\exercise Cho sô thực $a$. Chứng minh rằng
+\begin{multicols}{2}
+   \begin{enumerate}
+      \item $|a| \geq a$;
+      \item $|a|^2 = a^2$.
+   \end{enumerate}
+\end{multicols}
+
+\solution
+
+1. Khi $a \geq 0$ thì $|a| = a$. Trong trường hợp còn lại, nếu $a < 0$, chúng ta có $-a > 0$. Do đó $|a| > a$.
+
+Vậy $|a| \geq a$ với mọi $a$ thực.
+
+2. 
+\begin{align*}
+   |a|^2 &= |a|\cdot |a| = |a \cdot a| = \left|a^2\right|\\
+   &= a^2 \equationexplanation{$a^2$ thì luôn không âm}.
+\end{align*}
+Chúng ta qua đó có điều phải chứng minh.
+
+\exercise Chứng minh rằng với $a$ và $b$ là hai số thực thì $|a| + |b| \geq |a + b|$.
+
+\solution
+
+Chúng ta có những đẳng thức và bất đẳng thức sau:
+\begin{equation*}
+   \begin{cases}
+      |a|^2 = a^2 \\
+      |b|^2 = b^2 \\
+      |a||b| = |ab| \geq ab
+   \end{cases}.
+\end{equation*}
+Qua đó, 
+\begin{align}
+   |a|^2 + 2|a||b| + |b|^2 &\geq a^2 + 2ab + b^2 \nonumber\\
+   \iff \left(|a| + |b|\right)^2 &\geq (a + b)^2 \nonumber\\
+   \iff \left(|a| + |b|\right)^2 - \left|a + b\right|^2 &\geq 0 \nonumber\\
+   \iff \left(|a| + |b| - |a + b|\right)\left(|a| + |b| + |a + b|\right) &\geq 0. \label{eq:toan_hoc_nen_tang:ham_so_mot_bien:ham_tung_phan:bdt23}
+\end{align}
+
+Do $|a|$, $|b|$, $|a + b|$ đều không âm nên $|a| + |b| + |a + b| \geq 0$. Cho nên:
+
+\begin{align*}
+   \text{\refeq{eq:toan_hoc_nen_tang:ham_so_mot_bien:ham_tung_phan:bdt23}} \iff |a| + |b| - |a + b| &\geq 0 \\
+   \iff |a| + |b| &\geq |a + b|.
+\end{align*}
+Đây là điều phải chứng minh.
 
 \exercise Giải các phương trình và bất phương trình sau trên ẩn $x$ thực:
 
 \begin{multicols}{2}
    \begin{enumerate}
+      \item $\lfloor x \rfloor = 4$;
+      \item $\left\lceil \frac{x}{4} \right\rceil = -2$;
+      \item $2\left\lfloor 2x - 3 \right\rfloor - 1 = 1$;
       \item 
    \end{enumerate}
 \end{multicols}
