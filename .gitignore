@@ -1,1 +1,8 @@
 venv/
+*.log
+*.aux
+*.fls
+*.out
+*.toc
+*.xdv
+*.fdb_latexmk
