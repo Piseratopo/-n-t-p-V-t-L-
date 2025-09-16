@@ -800,16 +800,35 @@ Do $|a|$, $|b|$, $|a + b|$ đều không âm nên $|a| + |b| + |a + b| \geq 0$. 
 \end{align*}
 Đây là điều phải chứng minh.
 
-\exercise Giải các phương trình và bất phương trình sau trên ẩn $x$ thực:
+\exercise Giải các phương trình sau trên ẩn $x$ thực:
 
 \begin{multicols}{2}
    \begin{enumerate}
       \item $\lfloor x \rfloor = 4$;
       \item $\left\lceil \frac{x}{4} \right\rceil = -2$;
       \item $2\left\lfloor 2x - 3 \right\rfloor - 1 = 1$;
-      \item 
+      \item $3\lceil x \rceil^2 - 4\lceil x \rceil - 4 = 0$;
+      \item $\lfloor x + 2 \rfloor^3 - \lfloor x \rfloor = 2$;
+      \item $\left\lfloor \frac{x}{3} \right\rfloor + \left\lfloor \frac{x}{5} \right\rfloor = 7$. 
    \end{enumerate}
 \end{multicols}
 
 \solution
+
+\setcounter{subexercise}{1}
+
+\arabic{subexercise}. Giả sử $x \geq 5$. Khi đó, số nguyên lớn nhất không vượt quá $x$ sẽ phải đạt giá trị tối thiểu là $5$, và suy ra $\lfloor x \rfloor \geq 5$.
+
+Giả sử $x < 4$. Nếu như vậy, số nguyên lớn nhất không vượt quá $x$ cũng không thể từ $4$ trở lên. Do vậy, $\lfloor x \rfloor < 5$. 
+
+Ngoài ra, dễ thấy rằng nếu $4 \leq x < 5$ thì $\lfloor x \rfloor = 4$ theo định nghĩa. Vậy tập nghiệm của phương trình là $\left[4; 5\right)$.
+
+Tổng quát hóa, chúng ta sẽ có $\lfloor x \rfloor = a \iff a \leq x < a + 1$ với $a \in \mathbb{N}$.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Với một lập luận tương tự như phần trước, chúng ta có
+\begin{equation*}
+   \left\lceil \frac{x}{4} \right\rceil = -2 \\
+   \iff 
+\end{equation*}
 
