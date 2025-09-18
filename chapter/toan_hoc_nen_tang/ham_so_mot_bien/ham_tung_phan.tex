@@ -28,6 +28,10 @@ Ví dụ:
    \end{itemize}
 \end{multicols}
 
+Và rõ ràng rằng không phải mọi giá trị trong tự nhiên và xã hội đều biểu diễn tốt nhất dưới dạng số thập phân. Chúng ta không mấy khi cắt nửa quả táo để bán cho nhau, hay không có bãi đỗ xe nào nhận đỗ $0{,}2$ cái xe (hoặc ít nhất tác giả chưa thấy bãi nào như vậy).
+
+Để giải những vấn đề với hàm xác định giá trị từng phần, tương tự như cái tên, chúng ta chủ yếu chia bài toán theo các trường hợp phù hợp với từng phần của hàm đầu vào.
+
 \exercise Giải các phương trình và bất phương trình sau trên ẩn $x$ thực:
 
 \begin{multicols}{2}
@@ -806,7 +810,7 @@ Do $|a|$, $|b|$, $|a + b|$ đều không âm nên $|a| + |b| + |a + b| \geq 0$. 
    \begin{enumerate}
       \item $\lfloor x \rfloor = 4$;
       \item $\left\lceil \frac{x}{4} \right\rceil = -2$;
-      \item $2\left\lfloor 2x - 3 \right\rfloor - 1 = 1$;
+      \item $2\left\lfloor -2x - 3 \right\rfloor - 1 = 1$;
       \item $3\lceil x \rceil^2 - 4\lceil x \rceil - 4 = 0$;
       \item $\lfloor x + 2 \rfloor^3 - \lfloor x \rfloor = 2$;
       \item $\left\lfloor \frac{x}{3} \right\rfloor + \left\lfloor \frac{x}{5} \right\rfloor = 7$. 
@@ -827,8 +831,97 @@ Tổng quát hóa, chúng ta sẽ có $\lfloor x \rfloor = a \iff a \leq x < a +
 
 \stepcounter{subexercise}
 \arabic{subexercise}. Với một lập luận tương tự như phần trước, chúng ta có
-\begin{equation*}
-   \left\lceil \frac{x}{4} \right\rceil = -2 \\
-   \iff 
-\end{equation*}
+\begin{align*}
+   &\left\lceil \frac{x}{4} \right\rceil = -2 \\
+   \iff &-3 < \frac{x}{4} \leq -2 \\
+   \iff &-12 < x \leq -8.
+\end{align*}
 
+Tập nghiệm của phương trình là $\left(-12; -8\right]$.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. 
+
+\begin{align*}
+   2\lfloor -2x - 3 \rfloor - 1 &= 1 \\
+   \iff \lfloor -2x - 3 \rfloor &= 1 \\
+   \iff 1 \leq -2x - 3 &< 2 \\
+   \iff -2 \geq x &> -\frac{5}{2}.
+\end{align*}
+
+Tập nghiệm của phương trình là $\left(-\frac{5}{2}; -2\right]$.
+
+\stepcounter{subexercise}
+\arabic{subexercise}.
+
+\begin{align*}
+   &3\lceil x \rceil^2 - 4\lceil x \rceil - 4 = 0 \\
+   \iff &\left(3\lceil x \rceil + 2\right)\left(\lceil x \rceil - 2\right) = 0 \\
+   \iff &\left[\begin{array}{l}
+      \lceil x \rceil = -\frac{2}{3} \\
+      \lceil x \rceil = 2
+   \end{array}\right..
+\end{align*}
+
+Do kết quả của hàm trần luôn là số nguyên nên chỉ có một trường hợp
+\begin{equation*}
+   \lceil x \rceil = 2 \iff 1 < x \leq 2.
+\end{equation*}
+Vậy tập nghiệm của phương trình là $\left(1; 2\right]$.
+
+\stepcounter{subexercise}
+\arabic{subexercise}.
+
+Đặt $y = \lfloor x \rfloor$ với $y \in \mathbb{N}$. Theo định nghĩa, $y$ là số nguyên lớn nhất không vượt quá $x$. Theo một cách nói khác, $y$ là số nguyên duy nhất thỏa mãn $y \leq x < y + 1$. Công $2$ vào tất cả các vế, chúng ta có $y + 2 \leq x + 2 < y + 3$. Nhận thấy rằng, $z = y + 2$ là số nguyên duy nhất thỏa mãn $z \leq x + 2 < z + 1$, hay $z$ là số nguyên lớn nhất không quá $x + 2$. Do vậy, 
+\begin{equation}
+   \lfloor x + 2 \rfloor = y + 2 = \lfloor x \rfloor + 2.
+\end{equation}
+
+Sử dụng điều kiện này để biến đổi phương trình:
+\begin{align*}
+   &\lfloor x + 2 \rfloor^3 - \lfloor x \rfloor = 2\\
+   \iff &\left(\lfloor x \rfloor + 2\right)^3 - \left(\lfloor x \rfloor + 2\right) = 0 \\
+   \iff &\left(\lfloor x \rfloor + 2\right)\left(\left(\lfloor x \rfloor + 2\right)^2 - 1\right) = 0 \\
+   \iff &\left(\lfloor x \rfloor + 2\right)\left(\lfloor x \rfloor + 1\right)\left(\lfloor x \rfloor + 3\right) = 0 \\
+   \iff &\left[\begin{array}{l}
+      \lfloor x \rfloor = -1 \\
+      \lfloor x \rfloor = -2 \\
+      \lfloor x \rfloor = -3
+   \end{array}\right. \\
+   \iff &\left[\begin{array}{l}
+      -1 \leq x < 0 \\
+      -2 \leq x < -1 \\
+      -3 \leq x < -2
+   \end{array}\right. \\
+   \iff & -3 \leq x < 0.
+\end{align*}
+
+Qua đó, chúng ta có nghiệm $x \in \left[-3; 0\right)$.
+
+6. Nếu $x \geq 15$, $$\begin{cases}
+   \frac{x}{3} \geq 5 \\
+   \frac{x}{5} \geq 3
+\end{cases} \implies \begin{cases}
+   \left\lfloor \frac{x}{3} \right\rfloor \geq 5 \\
+   \left\lfloor \frac{x}{5} \right\rfloor \geq 3
+\end{cases} \implies \left\lfloor \frac{x}{3} \right\rfloor + \left\lfloor \frac{x}{5} \right\rfloor \geq 8.$$
+
+Nếu $x < 15$, một cách tương tự, chúng ta cũng có
+\begin{equation*}
+   \begin{cases}
+      \frac{x}{3} < 5 \\
+      \frac{x}{5} < 3
+   \end{cases} \implies \begin{cases}
+      \left\lfloor \frac{x}{3} \right\rfloor < 5 \\
+      \left\lfloor \frac{x}{5} \right\rfloor < 3
+   \end{cases}.
+\end{equation*}
+Do $\left\lfloor \frac{x}{3} \right\rfloor$ và $\left\lfloor \frac{x}{5} \right\rfloor$ đều là số nguyên cho nên
+$$
+\begin{cases}
+   \left\lfloor \frac{x}{3} \right\rfloor \leq 4 \\
+   \left\lfloor \frac{x}{5} \right\rfloor \leq 2
+\end{cases} \implies \left\lfloor \frac{x}{3} \right\rfloor + \left\lfloor \frac{x}{5} \right\rfloor \leq 6.
+$$
+
+Qua hai trường hợp, chúng ta thấy không có $x$ để $\left\lfloor \frac{x}{3} \right\rfloor + \left\lfloor \frac{x}{5} \right\rfloor = 7$. Vậy phương trình vô nghiệm.
