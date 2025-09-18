@@ -2,9 +2,18 @@
 
 \ % Lùi đầu dòng
 
-Một dạng hàm quen thuộc, được giới thiệu trong chương trình học trung học phổ thông, là đa thức. Nhưng trước khi chúng ta nhắc lại về đa thức, chúng ta sẽ nhắc lại về đơn thức. Hàm \defText{đơn thức}\footnote{Chúng ta sẽ đề cập đến đơn thức và đa thức nhiều biến khi đến phần hàm nhiều biến.} là một hàm được viết dưới dạng $$\defMath{f(x) = ax^n}$$ với $a$ là một số thực và biến $x$ được mũ lên một số nguyên không âm $n$. Trong tương lai, chúng ta sẽ đề cập về vấn đề hàm số mũ mà thay $n$ bằng số mũ thực. Tạm thời, chúng ta sẽ có định nghĩa \defText{số mũ} như sau:
-$$\defMath{x^n = \prod_{i=1}^n (x) =  \underbrace{x \times x \times \cdots \times x}_{n \text{ \defText{lần}}}}.$$
-Trong trường hợp $n = 0$ thì $x^n = \defMath{x^0 = 1}$.
+Một dạng hàm quen thuộc, được giới thiệu trong chương trình học trung học phổ thông, là đa thức. Nhưng trước khi chúng ta nhắc lại về đa thức, chúng ta sẽ nhắc lại về đơn thức. Hàm \defText{đơn thức}\footnote{Chúng ta sẽ đề cập đến đơn thức và đa thức nhiều biến khi đến phần hàm nhiều biến.} là một hàm được viết dưới dạng $$\defMath{f(x) = ax^n}$$ với $a$ là một số thực và biến $x$ được mũ lên một số nguyên không âm $n$. Trong tương lai, chúng ta sẽ đề cập về vấn đề hàm số mũ mà thay $n$ bằng số mũ thực. Tạm thời, chúng ta sẽ có định nghĩa \defText{số mũ} như sau: Với $x \in \mathbb{R}$ và $n \in \mathbb{Z}^+$ thì
+$$\defMath{x^n = \prod_{i=1}^n (x) = \underbrace{x \times x \times \cdots \times x}_{n \text{ \defText{lần}}}}.$$
+
+Từ định nghĩa, chúng ta có những tính chất cơ bản của số mũ như sau: Với $x$, $y$ là hai số thực và $m$, $n$ là hai số nguyên dương, chúng ta có
+
+\begin{align*}
+   x^m \times x^n &= \underbrace{x \times x \times \cdots \times x}_{m\text{ lần}} \times \underbrace{x \times x \times \cdots \times x}_{n\text{ lần}}\\
+   &= \underbrace{x \times x \times \cdots \times x}_{m + n\text{ lần}} \\
+   &= x^{m+n}; 
+\end{align*}
+
+Chúng ta mở rộng định nghĩa với $n = 0$. Với $x \neq 0$ thì $\defMath{x^0 = 1}$. Không xác định giá trị với $0^0$.
 
 Hàm \defText{đa thức} thông thường được biểu diễn dưới dạng tổng của các đơn thức $$\defMath{f(x)=P_n(x)=\sum_{i = 0}^n \left(a_i x^i\right) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0}$$ với $n$ là một số nguyên không âm, $a_i$ là các số thực, gọi là các \defText{hệ số}, với mọi $i$ nguyên nằm trong đoạn $[0, n]$ và $a_n \neq 0$. Khi này, $n$ được gọi là \defText{bậc} của đa thức\label{def:ham_so_mot_bien:da_thuc:da_thuc}. Mọi giá trị $x \in \mathbb{R}$ đều thuộc tập xác định của hàm đa thức $f(x)$. Ví dụ:
 \begin{itemize}
