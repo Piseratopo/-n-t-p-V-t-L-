@@ -1,3 +1,55 @@
 \subsection{Số mũ}
 
 \ % Lùi đầu dòng
+
+Một dạng hàm quen thuộc, được giới thiệu trong chương trình học trung học phổ thông, là đa thức. Nhưng trước khi chúng ta nhắc lại về đa thức, chúng ta sẽ nhắc lại về đơn thức. Hàm \defText{đơn thức}\footnote{Chúng ta sẽ đề cập đến đơn thức và đa thức nhiều biến khi đến phần hàm nhiều biến.} là một hàm được viết dưới dạng $$\defMath{f(x) = ax^n}$$ với $a$ là một số thực và biến $x$ được mũ lên một số nguyên không âm $n$. Trong tương lai, chúng ta sẽ đề cập về vấn đề hàm số mũ mà thay $n$ bằng số mũ thực. Tạm thời, chúng ta sẽ có định nghĩa \defText{số mũ} như sau: Với $x \in \mathbb{R}$ và $n \in \mathbb{Z}^+$ thì
+$$\defMath{x^n = \prod_{i=1}^n (x) = \underbrace{x \times x \times \cdots \times x}_{n \text{ \defText{lần}}}}.$$
+Một cách định nghĩa chặt chẽ hơn là sử dụng truy hồi: Với $x \in \mathbb{R}$ và $n \in \mathbb{Z}^+$ thì
+\begin{itemize}
+   \item $\defMath{x^1 = x}$, và;
+   \item $\defMath{x^{n+1} = x \times x^n}$ với mọi số nguyên dương $n$.
+\end{itemize}
+
+Số mũ có một số tính chất như nhau: Với $x$ và $y$ là hai số thực và $m$, $n$ là hai số nguyên dương thì
+\begin{multicols}{2}
+   \begin{itemize}
+      \item $\defMath{x^m x^n = x^{m+n}}$;
+      \item $\displaystyle\defMath{\frac{x^m}{x^n} = x^{m-n}\ \left(x \neq 0\right)}$;
+      \item $\defMath{x^m y^m = (xy)^m}$;
+      \item $\displaystyle\defMath{\frac{x^m}{y^m} = \left(\frac{x}{y}\right)^m\ \left(y \neq 0\right)}$;
+      \item $\defMath{(x^m)^n = x^{mn}}$.
+   \end{itemize}
+\end{multicols}
+
+Chúng ta sẽ mở rộng định nghĩa với số mũ bằng $0$. Coi như là các tính chất vẫn đúng, chúng ta có $$x^0 = x^{n-n} = \frac{x^n}{x^n} = 1.$$ Để ý rằng chúng ta đã thực hiện phép chia trong quá trình xác định $x^0$. Do đó, chúng ta cần đảm bảo rằng $x \neq 0$. Nói ngắn gọn, định nghĩa $\defMath{x^0 = 1}$ với $x \neq 0$.
+
+\exercise Sử dụng định nghĩa truy hồi, chứng minh rằng với mọi số thực $x$ số nguyên dương $m$ và $n$ thì $x^m \times x^n = x^{m+n}$ và $\frac{x^m}{x^n} = x^{m-n}$ nếu $x \neq 0$.
+
+\solution
+
+Chúng ta sẽ chứng minh các tính chất $x^m x^n = x^{m+n}$ bằng cách quy nạp theo $n$. Hiển nhiên, $x^m x^1 = x^m \times x = x^{m+1}$. Giả sử $x^m x^n = x^{m+n}$ đúng với số nguyên dương $n = k$. Khi đó, 
+\begin{align*}
+x^{m+k+1} &= x^{m+k} \times x \equationexplanation{định nghĩa truy hồi} \\
+&= x^m x^k \times x \equationexplanation{quy nạp} \\
+&= x^m x^{k+1}
+\end{align*}
+và qua đó chúng ta có giả thiết đúng với $k + 1$. Sử dụng nguyên lí quy nạp để có $x^m x^n = x^{m+n}$ luôn đúng.
+
+Sử dụng tính chất này, với $x \neq 0$, có:
+\begin{align*}
+   x^{m - n} x^n &= x^{\left(m - n\right) + n} = x^m\\
+   \iff x^{m - n} &= \frac{x^m}{x^n}.
+\end{align*}
+Chúng ta có điều phải chứng minh.
+
+\exercise Sử dụng định nghĩa truy hồi, chứng minh rằng với mọi số thực $x$ và $y$ và số nguyên dương $m$ thì $x^m y^m = (xy)^m$.
+
+\solution 
+
+Một lần nữa, chúng ta lại chứng minh bằng quy nạp theo $m$. Điều cần chứng minh hiển nhiên đúng với $m = 1$. Giả sử $x^m y^m = (xy)^m$ đúng với số nguyên dương $m = k$. Khi đó, 
+\begin{align*}
+   x^{k+1} y^{k+1} &= x^k x y^k y \equationexplanation{định nghĩa truy hồi}\\
+   &= (xy)^k x y \equationexplanation{quy nạp}\\
+   &= (xy)^{k+1}
+\end{align*}
+và qua đó chúng ta có giả thiết đúng với $k + 1$. Sử dụng nguyên lí quy nạp để có $x^m y^m = (xy)^m$ luôn đúng.
