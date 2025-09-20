@@ -17,7 +17,7 @@ Số mũ có một số tính chất như nhau: Với $x$ và $y$ là hai số t
       \item $\displaystyle\defMath{\frac{x^m}{x^n} = x^{m-n}\ \left(x \neq 0\right)}$;
       \item $\defMath{x^m y^m = (xy)^m}$;
       \item $\displaystyle\defMath{\frac{x^m}{y^m} = \left(\frac{x}{y}\right)^m\ \left(y \neq 0\right)}$;
-      \item $\defMath{(x^m)^n = x^{mn}}$.
+      \item $\defMath{\left(x^m\right)^n = x^{mn}}$.
    \end{itemize}
 \end{multicols}
 
@@ -53,3 +53,15 @@ Một lần nữa, chúng ta lại chứng minh bằng quy nạp theo $m$. Đi�
    &= (xy)^{k+1}
 \end{align*}
 và qua đó chúng ta có giả thiết đúng với $k + 1$. Sử dụng nguyên lí quy nạp để có $x^m y^m = (xy)^m$ luôn đúng.
+
+\exercise Sử dụng định nghĩa truy hồi, chứng minh rằng với mọi số thực $x$ và số nguyên dương $m$, $n$ thì $\left(x^m\right)^n = x^{mn}$.
+
+\solution 
+
+Chứng minh bằng quy nạp theo $n$. Điều cần chứng minh hiển nhiên đúng với $n = 1$. Giả sử $\left(x^m\right)^n = x^{mn}$ đúng với số nguyên dương $n = k$. Khi đó, 
+\begin{align*}
+   \left(x^m\right)^{k+1} &= \left(x^m\right)^k x^m \equationexplanation{định nghĩa truy hồi}\\
+   &= x^{mk} x^m \equationexplanation{quy nạp}\\
+   &= x^{mk + m} = x^{m(k+1)}
+\end{align*}
+và qua đó chúng ta có giả thiết đúng với $k + 1$. Sử dụng nguyên lí quy nạp để có $\left(x^m\right)^n = x^{mn}$ luôn đúng.
