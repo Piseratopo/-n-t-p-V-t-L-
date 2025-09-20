@@ -4,7 +4,7 @@
 
 Hàm cộng, hàm trừ và hàm nhân của hai hàm đa thức là những hàm đa thức. Tuy nhiên, hàm thương lại không như vậy. Do khi chia hai đa thức có những tính chất đặc biệt, nên chúng ta xây dựng một khái niệm mới là hàm \defText{phân thức}. Một hàm $f$ được gọi là phân thức nếu $\defMath{f = 0}$, hoặc: $$\defMath{f = \left(\frac{p}{q}\right)}$$ với $p$ và $q$ là hai đa thức. Trong trường hợp $f \neq 0$, tập xác định của $f$ là tập hợp các giá trị $x$ sao cho $q(x) \neq 0$. 
 
-Khái niệm về phân thức dẫn chúng ta một cách tự nhiên đến khái niệm về một dạng phân thức đặc biệt mang tên \defText{số mũ âm}. Khi mũ một số với số âm, chúng ta có thể viết lại là $$\defMath{x^{-n} = \frac{1}{x^n}}$$ với $x \in \mathbb{R} \setminus \{0\}$ và $n \in \mathbb{Z}^+$.
+Khái niệm về phân thức dẫn chúng ta một cách tự nhiên đến khái niệm về một dạng phân thức đặc biệt mang tên \defText{số mũ âm}. Khi mũ một số với số âm, chúng ta có thể viết lại là $$\defMath{x^{-n} = \frac{1}{x^n}}$$ với $x \in \mathbb{R} \setminus \{0\}$ và $n \in \mathbb{Z}^+$. Các tính chất liên quan đến số mũ không âm cũng được áp dụng cho số mũ âm.
 
 \exercise Cho biết tập xác định, tập giá trị và phác thảo đồ thị của những hàm sau:
 \begin{multicols}{3}
@@ -55,7 +55,8 @@ Khái niệm về phân thức dẫn chúng ta một cách tự nhiên đến kh
 
 {
    \begin{minipageindent}{0.44\textwidth}
-      2. Để phân thức có nghĩa thì mẫu số của phân thức phải khác $0$. Viết và bất phương trình này:
+      \stepcounter{subexercise}
+\arabic{subexercise}. Để phân thức có nghĩa thì mẫu số của phân thức phải khác $0$. Viết và bất phương trình này:
 
       \begin{align*}
          x^2 + 4x + 4 &\neq 0\\
@@ -97,7 +98,8 @@ Vậy tập giá trị của $f(x)$ là $\mathbb{R}^+$.
 
 {
    \begin{minipageindent}{0.48\textwidth}
-      3. Để $x$ thuộc tập xác định của hàm $f(x) = \frac{2x - 5}{x - 3}$ thì $x - 3 \neq 0 \implies x \neq 3$. Vậy tập xác định của $f(x)$ là $\mathbb{R} \setminus \left\{3\right\}$.
+      \stepcounter{subexercise}
+\arabic{subexercise}. Để $x$ thuộc tập xác định của hàm $f(x) = \frac{2x - 5}{x - 3}$ thì $x - 3 \neq 0 \implies x \neq 3$. Vậy tập xác định của $f(x)$ là $\mathbb{R} \setminus \left\{3\right\}$.
 
       Giả sử có $y$ sao cho $y = f(x)$. Khi này, chúng ta có \begin{align*}
          y &= \frac{2x - 5}{x - 3}\\
@@ -142,7 +144,8 @@ Qua lập luận vừa rồi, chúng ta có kết luận rằng tập giá trị
 
 {
    \begin{minipageindent}{0.48\textwidth}
-      4. Giải tập xác định:
+      \stepcounter{subexercise}
+\arabic{subexercise}. Giải tập xác định:
       
       $$x - 1 \neq 0 \iff x \neq 1.$$
       
@@ -180,7 +183,8 @@ Qua lập luận vừa rồi, chúng ta có kết luận rằng tập giá trị
    \end{minipageindent}
 }
 
-5. Giải tập xác định, $f(x)$ xác định khi và chỉ khi
+\stepcounter{subexercise}
+\arabic{subexercise}. Giải tập xác định, $f(x)$ xác định khi và chỉ khi
 
 \begin{align*}
    x^2 + 4x - 5 &\neq 0\\
@@ -215,7 +219,8 @@ Vậy tập giá trị của $f(x)$ là $\mathbb{R} \setminus \left\{0; \frac{1}
 
 {
    \begin{minipageindent}{0.48\textwidth}
-      6. Để ý rằng $x^2 + x + 1 = \left(x + \frac{1}{2}\right)^2 + \frac{3}{4} \geq \frac{3}{4}$ với mọi giá trị thực của $x$. Cho nên $f(x) = \frac{1}{x^2 + x + 1}$ là hai số dương chia cho nhau luôn có nghĩa. Cho nên, tập xác định của $f(x)$ là $\mathbb{R}$.
+      \stepcounter{subexercise}
+      \arabic{subexercise}. Để ý rằng $x^2 + x + 1 = \left(x + \frac{1}{2}\right)^2 + \frac{3}{4} \geq \frac{3}{4}$ với mọi giá trị thực của $x$. Cho nên $f(x) = \frac{1}{x^2 + x + 1}$ là hai số dương chia cho nhau luôn có nghĩa. Cho nên, tập xác định của $f(x)$ là $\mathbb{R}$.
 
       Cũng từ $x^2 + x + 1 \geq \frac{3}{4}$ mà chúng ta có $\frac{1}{x^2 + x + 1} \leq \frac{4}{3}$ \textcolor{colorEmphasis}{(Cùng chia cả hai vế cho số dương $\frac{3(x^2 + x + 1)}{4}$)}.
       
@@ -254,7 +259,8 @@ Vậy tập giá trị của $f(x)$ là $\mathbb{R} \setminus \left\{0; \frac{1}
 
 {
    \begin{minipageindent}{0.48\textwidth}
-      7. Để $f(x)$ có nghĩa thì mẫu số phải khác $0$. Có:
+      \stepcounter{subexercise}
+      \arabic{subexercise}. Để $f(x)$ có nghĩa thì mẫu số phải khác $0$. Có:
       \begin{align*}
          2x^2 + 5x - 3 &\neq 0 \\
          \iff (2x - 1)(x + 3) &\neq 0 \qquad \parbox[c]{0.36\textwidth}{\textcolor{colorEmphasis}{(Phân tích đa thức thành nhân tử.)}}\\
@@ -321,7 +327,8 @@ $$f\left(\frac{\sqrt{49y^2-2y+1}-5y+1}{4y}\right) = \frac{\frac{\sqrt{49y^2-2y+1
 
 Chúng ta đã thể hiện rằng mọi số $y$ đều có thể biểu diễn thông qua $f(x)$. Vậy tập giá trị của $f(x)$ là $\mathbb{R}$.
 
-8. Giải tập xác định:
+\stepcounter{subexercise}
+\arabic{subexercise}. Giải tập xác định:
 
 \begin{align*}
    x^2 + 2x + 1 &\neq 0 \\
@@ -385,9 +392,8 @@ Vậy tập giá trị của $f(x)$ là $\left[-\frac{17}{8}; \infty\right)$. Đ
    \label{fig:ham_so_mot_bien:phan_thuc:1t3t2_121}
 \end{figure}
 
-9.
-
-Xét tập xác định của $f(x)$, cần phải có $x - 2 \neq 0 \iff x \neq 2$. Vậy tập xác định của $f(x)$ là $\mathbb{R} \setminus \left\{2\right\}$.
+\stepcounter{subexercise}
+\arabic{subexercise}. Xét tập xác định của $f(x)$, cần phải có $x - 2 \neq 0 \iff x \neq 2$. Vậy tập xác định của $f(x)$ là $\mathbb{R} \setminus \left\{2\right\}$.
 
 Đặt $y = f(x)$, chúng ta có:
 
@@ -482,7 +488,8 @@ Do tính chất của đồ thị, trục tung của đồ thị trong lời gi�
 
 Kiểm tra trực tiếp, chúng ta thấy nghiệm thỏa mãn phương trình gốc. Vậy tập nghiệm của phương trình là $\left\{\frac{1}{2}; 2\right\}$.
 
-2. Coi vế trái của phương trình được cho là một phân thức, chúng ta tìm tập xác định của nó:
+\stepcounter{subexercise}
+\arabic{subexercise}. Coi vế trái của phương trình được cho là một phân thức, chúng ta tìm tập xác định của nó:
 
 \begin{align*}
    x^2 + x - 2 &\neq 0 \\
@@ -511,7 +518,8 @@ Thực hiện biến đổi phương trình:
 
 Cả hai giá trị đều là nghiệm của phương trình bằng kiểm tra trực tiếp. Vậy phương trình có nghiệm là $\left\{-1; 4\right\}$.
 
-3. Để cả vế trái và vế phải của phương trình xác định giá trị thì
+\stepcounter{subexercise}
+\arabic{subexercise}. Để cả vế trái và vế phải của phương trình xác định giá trị thì
 
 \begin{equation*}
    \begin{cases}
@@ -535,7 +543,8 @@ Biến đổi phương trình:
 
 Phương trình (\ref{eq:ham_so_mot_bien:ơhan_thuc:ptpt3}) luôn đúng với $x$ làm cho cả hai vế của phương trình xác định. Do đó, tập nghiệm của phương trình là $\mathbb{R} \setminus \left\{-1; 1; 3\right\}$.
 
-4. Phương trình có tập xác định\footnote{Tập xác định chỉ có với hàm số. Ở đây, ý chúng ta muốn là những giá trị để cho cả hai vế có thể tính được.} là $\mathbb{R} \setminus \{-2; 2\}$.
+\stepcounter{subexercise}
+\arabic{subexercise}. Phương trình có tập xác định\footnote{Tập xác định chỉ có với hàm số. Ở đây, ý chúng ta muốn là những giá trị để cho cả hai vế có thể tính được.} là $\mathbb{R} \setminus \{-2; 2\}$.
 
 \begin{align*}
    \frac{3x}{x + 2} - \frac{x}{x - 2} &= \frac{8}{x^2 - 4} \\
@@ -557,7 +566,8 @@ Kiểm tra lại, chúng ta có:
 
 Tương tự khi kiểm tra $x = 2\left(1 - \sqrt{2}\right)$. Vậy phương trình có nghiệm là $\left\{2\left(1 + \sqrt{2}\right); 2\left(1 - \sqrt{2}\right)\right\}$.
 
-5. Phương trình xác định khi $x \neq 0$. Trên điều kiện này,
+\stepcounter{subexercise}
+\arabic{subexercise}. Phương trình xác định khi $x \neq 0$. Trên điều kiện này,
 
 \begin{align}
    A &= \frac{h}{6x}\left(\frac{b_0}{x} + 4b_1 + b_2\right) \nonumber\\
@@ -578,7 +588,8 @@ Xét biệt thức $\Delta = h^2(4b_1 + b_2)^2 + 24A\cdot hb_0$ của phương t
 
 Vậy tập nghiệm của phương trình là $\left\{\frac{h\left(4b_1 + b_2\right) + \sqrt{\Delta}}{12A}; \frac{h\left(4b_1 + b_2\right) - \sqrt{\Delta}}{12A}\right\}$.
 
-6. Phương trình có tập xác định là $\mathbb{R} \setminus \{-2; 2\}$. Trong tập xác định này, 
+\stepcounter{subexercise}
+\arabic{subexercise}. Phương trình có tập xác định là $\mathbb{R} \setminus \{-2; 2\}$. Trong tập xác định này, 
 
 \begin{align*}
    &\frac{3x}{x + 2} - \frac{x}{x - 2} = \frac{8}{4 - x^2} \\
@@ -593,7 +604,8 @@ Vậy tập nghiệm của phương trình là $\left\{\frac{h\left(4b_1 + b_2\r
 
 Tuy nhiên, tập xác định yêu cầu không nhận giá trị $x$ này, cho nên phương trình này suy ra một điều mâu thuẫn. Vậy phương trình vô nghiệm.
 
-7. Giải tập xác định của phương trình:
+\stepcounter{subexercise}
+\arabic{subexercise}. Giải tập xác định của phương trình:
 
 \begin{equation*}
    \begin{cases}
@@ -692,7 +704,8 @@ Do đó, $\text{\refeq{eq:ham_so_mot_bien:phan_thuc:ptpt7}} \iff x = 4$. Kiểm 
 	\caption{Đồ thị của $f(x) = \frac{2 x}{x^{2} + 1} + 1$}
 \end{figure}
 
-2.
+\stepcounter{subexercise}
+\arabic{subexercise}.
 
 \begin{figure}[H]
 	\centering
@@ -713,7 +726,8 @@ Do đó, $\text{\refeq{eq:ham_so_mot_bien:phan_thuc:ptpt7}} \iff x = 4$. Kiểm 
 	\caption{Đồ thị của $f(x) = \frac{x^{4} + 1}{3 x^{2}} - x$}
 \end{figure}
 
-3.
+\stepcounter{subexercise}
+\arabic{subexercise}.
 
 \begin{figure}[H]
 	\centering
@@ -731,7 +745,8 @@ Do đó, $\text{\refeq{eq:ham_so_mot_bien:phan_thuc:ptpt7}} \iff x = 4$. Kiểm 
 	\caption{Đồ thị của $f(x) = \frac{15 x^{3} + x^{2} - 22 x - 8}{3 x^{2} + 3 x + 8}$}
 \end{figure}
 
-4.
+\stepcounter{subexercise}
+\arabic{subexercise}.
 
 \begin{figure}[H]
 	\centering
@@ -754,7 +769,8 @@ Do đó, $\text{\refeq{eq:ham_so_mot_bien:phan_thuc:ptpt7}} \iff x = 4$. Kiểm 
 	\caption{Đồ thị của $f(x) = \frac{x}{x + 2} + \frac{1}{x - 2}$}
 \end{figure}
 
-5.
+\stepcounter{subexercise}
+\arabic{subexercise}.
 
 \begin{figure}[H]
 	\centering
@@ -774,7 +790,8 @@ Do đó, $\text{\refeq{eq:ham_so_mot_bien:phan_thuc:ptpt7}} \iff x = 4$. Kiểm 
 	\caption{Đồ thị của $f(x) = \frac{x + 2}{x}\cdot\frac{x + 3}{x + 1}$}
 \end{figure}
 
-6. Thực hiện một số biến đổi đơn giản:
+\stepcounter{subexercise}
+\arabic{subexercise}. Thực hiện một số biến đổi đơn giản:
 
 \begin{align*}
    f(x) &= \frac{\frac{x^3 + 3x^2 + 3x + 1}{x^4 + 4}}{\frac{2x^2 + 2}{3x^2 + 6x + 6}} = \frac{\frac{(x + 1)^3}{(x^4 + 4x^2 + 4) - 4x^2}}{\frac{2\left(x^2 + 1\right)}{3\left(x^2 + 2x + 2\right)}}\\
