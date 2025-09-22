@@ -2,9 +2,25 @@
 
 \ % Lùi đầu dòng
 
-Phần tính chất đầu tiên mà chúng ta quan tâm đến là tính đối xứng của hàm số trên đồ thị. Nhắc lại một chút kiến thức hình học, một hình có thể có hai kiểu đối xứng là đối xứng trục và đối xứng điểm. Tạm thời, chúng ta chỉ quan tâm đến những trường hợp đối xứng cụ thể. Với đồ thị của một hàm số, một cách khá tự nhiên, chúng ta sẽ xem xét tính đối xứng trên  
+Phần tính chất đầu tiên mà chúng ta quan tâm đến là tính đối xứng của hàm số trên đồ thị. Nhắc lại một chút kiến thức hình học, một hình có thể có hai kiểu đối xứng là đối xứng trục và đối xứng điểm. Tạm thời, chúng ta chỉ quan tâm đến những trường hợp đối xứng cụ thể. Với đồ thị của một hàm số, một cách khá tự nhiên, chúng ta sẽ xem xét tính đối xứng trục tung hoặc qua điểm gốc tọa độ. 
 
-Cho $f(x)$ là một hàm số xác định trên $A$. $f(x)$ được gọi là \defText{hàm chẵn} nếu $\defMath{x \in A \implies -x \in A}$ và $$\defMath{f(-x) = f(x)}.$$ Tương tự, $f(x)$ được gọi là \defText{hàm lẻ} nếu $\defMath{x \in A \implies -x \in A}$ và $$\defMath{f(-x) = -f(x)}.$$
+Đầu tiên là đối xứng qua trục tung. Một hàm số có tính đối xứng như vậy được gọi là \defText{hàm chẵn}. Cụ thể, cho $f(x)$ là một hàm số xác định trên $A$. $f(x)$ là hàm chẵn nếu $\defMath{x \in A \implies -x \in A}$ và $$\defMath{f(-x) = f(x)}$$ với mọi $x \in A$. 
+
+Tương tự, $f(x)$ được gọi là \defText{hàm lẻ} nếu $\defMath{x \in A \implies -x \in A}$ và $$\defMath{f(-x) = -f(x)}$$ với mọi $x \in A$. Khi này, hàm sẽ đối xứng qua gốc tọa độ.
+
+{
+   \begin{minipageindent}{0.48\textwidth}
+      \begin{figure}[H]
+         \centering
+         \begin{tikzpicture}
+            \draw[->] (-4, 0) -- (4, 0) node[right] {$x$};
+            \draw[->] (0, -4) -- (0, 4)  node[above] {$f(x)$};
+            \draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-1.799:1.799] plot (\x, {(((\x)/1)^4 - 2*((\x)/1)^2) / 1});
+         \end{tikzpicture}
+         \caption{Đồ thị của một hàm chẵn}
+      \end{figure}
+   \end{minipageindent}
+}
 
 Biểu diễn về mặt đồ thị, đối với hàm $f(x)$ chẵn, hai điểm 
 

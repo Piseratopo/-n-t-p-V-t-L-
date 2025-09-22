@@ -1,10 +1,9 @@
 \begin{figure}[H]
 	\centering
 	\begin{tikzpicture}
-		\draw[->] (0, 0) -- (2, 0) node[right] {$x$};
-		\draw[->] (0, -1) -- (0, 4)  node[above] {$f(x)$};
-		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=0.000:2.000] plot (\x, {(-2*((\x)/1)^2 + 4*((\x)/1)) / 1});
-		\filldraw[color=colorEmphasisCyan] ({ 1.0 }, { 2.0 }) circle (\pointSize) node[above] {$\left({1};{2}\right)$};
+		\draw[->] (-4, 0) -- (4, 0) node[right] {$x$};
+		\draw[->] (0, -4) -- (0, 4)  node[above] {$f(x)$};
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-1.799:1.799] plot (\x, {(((\x)/1)^4 - 2*((\x)/1)^2) / 1});
 	\end{tikzpicture}
-	\caption{Đồ thị của $- 2 x^{2} + 4 x$}
+	\caption{Đồ thị của $x^{4} - 2 x^{2}$}
 \end{figure}
