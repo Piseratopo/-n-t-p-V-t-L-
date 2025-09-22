@@ -14,15 +14,35 @@ Tương tự, $f(x)$ được gọi là \defText{hàm lẻ} nếu $\defMath{x \i
          \centering
          \begin{tikzpicture}
             \draw[->] (-4, 0) -- (4, 0) node[right] {$x$};
-            \draw[->] (0, -4) -- (0, 4)  node[above] {$f(x)$};
-            \draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-1.799:1.799] plot (\x, {(((\x)/1)^4 - 2*((\x)/1)^2) / 1});
+            \draw[->, color=colorEmphasis] (0, -4) -- (0, 4)  node[above] {$f(x)$};
+            \draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-1.857:1.857] plot (\x, {(((\x)/1)^4 - 2*((\x)/1)^2 - 1) / 1});
+            \filldraw[color=colorEmphasis] ({1.65}, { 0.967006249999999 }) circle (\pointSize) node[right] {$\left(x;f(x)\right)$};
+            \filldraw[color=colorEmphasis] ({-1.65}, { 0.967006249999999 }) circle (\pointSize) node[left] {$\left(-x;f(x)\right)$};
+            \draw[dashed, color=colorEmphasis] ({1.65}, { 0.967006249999999 }) -- ({-1.65}, { 0.967006249999999 });
          \end{tikzpicture}
          \caption{Đồ thị của một hàm chẵn}
       \end{figure}
    \end{minipageindent}
+   \begin{minipageindent}{0.48\textwidth}
+      \begin{figure}[H]
+         \centering
+         \begin{tikzpicture}
+            \draw[->] (-4, 0) -- (4, 0) node[right] {$x$};
+            \draw[->] (0, -4) -- (0, 4)  node[above] {$f(x)$};
+            \draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-4.000:-1.133] plot (\x, {(((\x)/1) / (((\x)/1)^2 - 1)) / 1});
+            \draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-0.883:0.883] plot (\x, {(((\x)/1) / (((\x)/1)^2 - 1)) / 1});
+            \draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=1.133:4.000] plot (\x, {(((\x)/1) / (((\x)/1)^2 - 1)) / 1});
+            \filldraw[color=colorEmphasis] ({2.0}, { 0.6666666666666666 }) circle (\pointSize) node[above right] {$\left(x;f(x)\right)$};
+            \filldraw[color=colorEmphasis] ({-2.0}, { -0.6666666666666666 }) circle (\pointSize) node[below left] {$\left(-x;f(x)\right)$};
+            \filldraw[color=colorEmphasis] (0, 0) circle (\pointSize) node[below] {$\left(0;0\right)$};
+            \draw[dashed, color=colorEmphasis] ({2.0}, { 0.6666666666666666 }) -- ({-2.0}, { -0.6666666666666666 });
+         \end{tikzpicture}
+         \caption{Đồ thị của một hàm lẻ}
+      \end{figure}
+      
+   \end{minipageindent}
 }
 
-Biểu diễn về mặt đồ thị, đối với hàm $f(x)$ chẵn, hai điểm 
 
 \exercise Xác định xem những hàm sau có phải là hàm chẵn, hàm lẻ hay không. Sau đó, vẽ đồ thị của chúng.
 \begin{multicols}{2}
