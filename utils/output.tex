@@ -1,0 +1,10 @@
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\draw[->] (-3, 0) -- (3, 0) node[right] {$x$};
+		\draw[->] (0, -3) -- (0, 5)  node[above] {$f(x)$};
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-2.425:-0.510] plot (\x, {((((\x)/1)^6 - 1) / (((\x)/1)^4 + ((\x)/1)^2)) / 1});
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=0.510:2.425] plot (\x, {((((\x)/1)^6 - 1) / (((\x)/1)^4 + ((\x)/1)^2)) / 1});
+	\end{tikzpicture}
+	\caption{Đồ thị của $\frac{x^{6} - 1}{x^{4} + x^{2}}$}
+\end{figure}
