@@ -1,9 +1,0 @@
-\begin{figure}[H]
-	\centering
-	\begin{tikzpicture}
-		\draw[->] (-3, 0) -- (3, 0) node[right] {$x$};
-		\draw[->] (0, -4) -- (0, 4)  node[above] {$f(x)$};
-		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-1.398:1.398] plot (\x, {(((\x)/1)^5 - ((\x)/1)^3 + ((\x)/1)) / 1});
-	\end{tikzpicture}
-	\caption{Đồ thị của $x^{5} - x^{3} + x$}
-\end{figure}

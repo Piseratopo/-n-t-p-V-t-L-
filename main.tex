@@ -67,7 +67,7 @@
 \NewDocumentCommand{\solution}{o}{
    \refstepcounter{solution}
    \IfNoValueTF{#1}
-      {\noindent\textbf{Lời giải bài~\ref{ex\arabic{solution}}:}}
+      {\noindent\textbf{Lời giải bài~\ref{ex\arabic{exercise}}:}}
       {\noindent\textbf{Lời giải bài~\ref{#1}}:}
    \IfNoValueTF{#1}
       {\label{sol\arabic{solution}}}
