@@ -23,6 +23,7 @@ Tương tự, $f(x)$ được gọi là \defText{hàm lẻ} nếu $\defMath{x \i
          \caption{Đồ thị của một hàm chẵn}
       \end{figure}
    \end{minipageindent}
+   \hfill
    \begin{minipageindent}{0.48\textwidth}
       \begin{figure}[H]
          \centering
@@ -48,7 +49,7 @@ Tương tự, $f(x)$ được gọi là \defText{hàm lẻ} nếu $\defMath{x \i
 \begin{multicols}{2}
    \begin{enumerate}
       \item $f(x) = x^4 - 2x^2 - 3$;
-      \item $f(x) = -x^7 + x$;
+      \item $f(x) = x^5 - x^3 + x$;
       \item $f(x) = \frac{x}{x^2 + 1}$;
       \item $f(x) = \frac{x^3 - \frac{1}{x^3}}{x + \frac{1}{x}}$;
       \item $f(x) = |x|^2 - \left|x^3\right| + 1$;
@@ -59,4 +60,69 @@ Tương tự, $f(x)$ được gọi là \defText{hàm lẻ} nếu $\defMath{x \i
 \solution 
 
 \setcounter{subexercise}{1}
-\arabic{subexercise}. 
+\arabic{subexercise}. Tập xác định của hàm là $\mathbb{R}$. Với mọi $x \in \mathbb{R}$, có $-x \in \mathbb{R}$ và
+\begin{align*}
+   f(-x) &= (-x)^4 - 2(-x)^2 - 3\\
+   &= x^4 - 2x^2 - 3\\
+   &= f(x).
+\end{align*}
+Vậy $f(x)$ là hàm chẵn.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Tập xác định của hàm là $\mathbb{R}$. Với mọi $x \in \mathbb{R}$, có $-x \in \mathbb{R}$ và
+\begin{align*}
+   f(-x) &= (-x)^5 - (-x)^3 + (-x)\\
+   &= -x^5 + x^3 - x\\
+   &= -f(x).
+\end{align*}
+Vậy $f(x)$ là hàm lẻ.
+
+{
+   \begin{minipageindent}{0.48\textwidth}
+      \begin{figure}[H]
+         \centering
+         \begin{tikzpicture}
+            \draw[->] (-3, 0) -- (3, 0) node[right] {$x$};
+            \draw[->] (0, -4) -- (0, 4)  node[above] {$f(x)$};
+            \draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-2.040:2.040] plot (\x, {(((\x)/1)^4 - 2*((\x)/1)^2 - 3) / 1.5});
+         \end{tikzpicture}
+         \caption{Đồ thị của $x^{4} - 2 x^{2} - 3$}
+      \end{figure}
+   \end{minipageindent}
+   \hfill
+   \begin{minipageindent}{0.48\textwidth}
+      \begin{figure}[H]
+         \centering
+         \begin{tikzpicture}
+            \draw[->] (-3, 0) -- (3, 0) node[right] {$x$};
+            \draw[->] (0, -4) -- (0, 4)  node[above] {$f(x)$};
+            \draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-1.398:1.398] plot (\x, {(((\x)/1)^5 - ((\x)/1)^3 + ((\x)/1)) / 1});
+         \end{tikzpicture}
+         \caption{Đồ thị của $x^{5} - x^{3} + x$}
+      \end{figure}
+   \end{minipageindent}
+}
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Tập xác định của hàm là $\mathbb{R}$. Với mọi $x \in \mathbb{R}$, có $-x \in \mathbb{R}$ và
+\begin{align*}
+   f(-x) &= \frac{-x}{(-x)^2 + 1}\\
+   &= \frac{-x}{x^2 + 1}\\
+   &= -\frac{x}{x^2 + 1}\\
+   &= -f(x).
+\end{align*}
+Vậy $f(x)$ là hàm lẻ.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Tìm tập xác định, $x$ làm cho $f(x)$ thỏa mãn khi và chỉ khi
+\begin{equation*}
+   \begin{cases}
+      x \neq 0 \\
+      x + \frac{1}{x} \neq 0
+   \end{cases}.
+\end{equation*}
+Từ bất phương trình thứ hai, với điều kiện $x \neq 0$:
+\begin{equation*}
+   x + \frac{1}{x} \neq 0 \\
+   \implies x^2 + 1 \neq 0
+\end{equation*}

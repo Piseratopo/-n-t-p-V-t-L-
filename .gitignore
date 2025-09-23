@@ -5,4 +5,6 @@ venv/
 *.out
 *.toc
 *.xdv
+*.bbl
+*.blg
 *.fdb_latexmk

@@ -21,7 +21,20 @@ Số mũ có một số tính chất như nhau: Với $x$ và $y$ là hai số t
    \end{itemize}
 \end{multicols}
 
-Chúng ta sẽ mở rộng định nghĩa với số mũ bằng $0$. Coi như là các tính chất vẫn đúng, chúng ta có $$x^0 = x^{n-n} = \frac{x^n}{x^n} = 1.$$ Để ý rằng chúng ta đã thực hiện phép chia trong quá trình xác định $x^0$. Do đó, chúng ta cần đảm bảo rằng $x \neq 0$. Nói ngắn gọn, định nghĩa $\defMath{x^0 = 1}$ với $x \neq 0$.
+Chúng ta sẽ mở rộng định nghĩa với số mũ bằng $0$. Coi như là các tính chất vẫn đúng, chúng ta có $$x^0 = x^{n-n} = \frac{x^n}{x^n} = 1.$$ Để ý rằng chúng ta đã thực hiện phép chia trong quá trình xác định $x^0$. Do đó, chúng ta cần đảm bảo rằng $x \neq 0$. Nói ngắn gọn, định nghĩa $\defMath{x^0 = 1}$ với $x \neq 0$. Không xác định giá trị với $0^0$.
+
+Từ những định nghĩa này, chúng ta có một vài phép biến đổi cơ bản. Với $n \in \mathbb{N}$ thì $1^n = 1$, và $0^n = 0$ với $n \neq 0$. Ngoài ra, để ý rằng
+\begin{align*}
+   (-1)^{2n} &= \left((-1)^2\right)^n = 1^n = 1 \\
+   (-1)^{2n+1} &= (-1)^{2n} \times (-1) = 1 \times (-1) = -1.
+\end{align*}
+Từ đây, chúng ta có những đẳng thức quen thuộc:
+\begin{align*}
+   (-x)^{2m} &= \left(-1 \times x\right)^{2m} = \left(-1\right)^{2m} x^{2m} \\ 
+      &= 1 \times x^{2m} = x^{2m} \\
+   (-x)^{2m+1} &= \left(-1 \times x\right)^{2m+1} = \left(-1\right)^{2m+1} x^{2m+1} \\ 
+      &= -1 \times x^{2m+1} = -x^{2m+1}.
+\end{align*}
 
 \exercise Sử dụng định nghĩa truy hồi, chứng minh rằng với mọi số thực $x$ số nguyên dương $m$ và $n$ thì $x^m x^n = x^{m+n}$ và $\frac{x^m}{x^n} = x^{m-n}$ nếu $x \neq 0$.
 
@@ -65,3 +78,4 @@ Chứng minh bằng quy nạp theo $n$. Điều cần chứng minh hiển nhiên
    &= x^{mk + m} = x^{m(k+1)}
 \end{align*}
 và qua đó chúng ta có giả thiết đúng với $k + 1$. Sử dụng nguyên lí quy nạp để có $\left(x^m\right)^n = x^{mn}$ luôn đúng.
+
