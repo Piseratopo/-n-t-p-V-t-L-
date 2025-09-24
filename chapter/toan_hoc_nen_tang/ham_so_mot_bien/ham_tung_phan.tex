@@ -40,6 +40,18 @@ Ví dụ:
 
 Và rõ ràng rằng không phải mọi giá trị trong tự nhiên và xã hội đều biểu diễn tốt nhất dưới dạng số thập phân. Chúng ta không mấy khi cắt nửa quả táo để bán cho nhau, hay không có bãi đỗ xe nào nhận đỗ $0{,}2$ cái xe (hoặc ít nhất tác giả chưa thấy bãi nào như vậy).
 
+Tương tự như hàm giá trị tuyệt đối, hàm sàn và hàm trần cũng có một số tính chất. Trong đó, phải kể đến tính chất hay được dùng nhất (theo góc nhìn chủ quan của tác giả) mà phục vụ việc xác định giá trị của hàm trần, hay hàm sàn là: Nếu $n$ là số nguyên và $x$ là số thực thì
+\begin{equation*}
+   \begin{cases}
+      n \leq x < n + 1 \iff \lfloor x \rfloor = n \\
+      n - 1 < x \leq n \iff \lceil x \rceil = n
+   \end{cases}.
+\end{equation*}
+
+Đầu tiên, chúng ta sẽ chứng minh $n \leq x < n + 1 \iff \lfloor x \rfloor = n$. Chứng minh chiều xuôi, giả sử $n \leq x < n + 1$. Gọi $M_m$ là tập hợp các số nguyên không vượt quá $x$. Rõ ràng rằng $M_m$ khác rỗng, do có $n$ làm phần tử. Ngoài ra, mọi số nguyên $a > n$ không làm phần tử của $M_m$ vì $a > n \iff a \geq n + 1 \implies a > x$. Kết hợp lại, mọi phần tử $b$ trong $M_m$ phải thỏa mãn $b \leq n$. Do đó, $n$ là số nguyên lớn nhất không vượt quá $x$, hay $\lfloor x \rfloor = n$.
+
+Để chứng minh chiều ngược lại, giả sử $\lfloor x \rfloor = n$. Từ định nghĩa, $n \leq x$. Ngoài ra, nếu $n + 1 \leq x$, có $n + 1 > n$, cho nên $n + 1$ sẽ vi phạm vai trò của $n$, tạo nên mâu thuẫn. Do đó, $x < n + 1$. Kết hợp hai chiều, chúng ta có chứng minh đầu tiên.
+
 Để giải những vấn đề với hàm xác định giá trị từng phần, tương tự như cái tên, chúng ta chủ yếu chia bài toán theo các trường hợp phù hợp với từng phần của hàm đầu vào.
 
 \exercise Giải các phương trình và bất phương trình sau trên ẩn $x$ thực:
