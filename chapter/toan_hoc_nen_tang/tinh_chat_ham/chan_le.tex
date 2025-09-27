@@ -179,8 +179,82 @@ Vậy $f(x)$ là hàm chẵn.
 \stepcounter{subexercise}
 \arabic{subexercise}. Tập xác định của hàm là $\mathbb{R}$.
 
-Nếu $x \in \mathbb{Z}$ thì $\begin{cases}
+Nếu \textcolor{colorEmphasisCyan}{$x \in \mathbb{Z}$} thì $\begin{cases}
    \left\lceil x \right\rceil = x \\ 
    \left\lfloor x \right\rfloor = x
-\end{cases}$
+\end{cases} \implies \left\lceil x \right\rceil - \left\lfloor x \right\rfloor = 0$.
 
+Trong trường hợp còn lại, \textcolor{colorEmphasis}{$x \notin \mathbb{Z}$}. Đặt $\lfloor x \rfloor = n$ với $n$ nguyên. Điều này tương đương với $n \leq x < n + 1$. Do $x$ không phải là số nguyên nên $n \neq x$, cho nên $n < x < n + 1 \implies n < x \leq n + 1 \iff \left\lceil x \right\rceil = n + 1$. Do đó, $$\left\lceil x \right\rceil - \left\lfloor x \right\rfloor = (n + 1) - n = 1.$$
+
+Cho nên, có thể viết lại hàm đã cho bằng
+
+\begin{equation*}
+   f(x) = \left\lceil x \right\rceil - \left\lfloor x \right\rfloor = \begin{cases}
+      0 & \text{ nếu } x \in \mathbb{Z} \\
+      1 & \text{ nếu } x \notin \mathbb{Z}
+   \end{cases}.
+\end{equation*}
+
+Hiển nhiên rằng $f(x) = f(-x)$ là hàm chẵn.
+
+{
+   \begin{minipageindent}{0.48\textwidth}
+      \begin{figure}[H]
+         \centering
+         \begin{tikzpicture}
+            \draw[->] (-3, 0) -- (3, 0) node[right] {$x$};
+            \draw[->] (0, -2) -- (0, 2)  node[above] {$f(x)$};
+            \draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-1.864:1.864] plot (\x, {(((\x)/1)^2 - (((\x)/1)^6)^(1/2) + 1) / 1});
+         \end{tikzpicture}
+         \caption{Đồ thị của $|x|^2 - \left|x^3\right| + 1$}
+      \end{figure}
+   \end{minipageindent}
+   \hfill
+   \begin{minipageindent}{0.48\textwidth}
+      \begin{figure}[H]
+         \centering
+         \begin{tikzpicture}
+            \draw[->] (-3.5, 0) -- (3.5, 0) node[right] {$x$};
+            \draw[->] (0, -1) -- (0, 3)  node[above] {$f(x)$};
+            \draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-3.5:3.5] plot (\x, 1);
+            \foreach \x in {-3,-2,-1,0,1,2,3} {
+               \draw[color=colorEmphasisCyan, hollow point] (\x, 1) circle (\pointSize);
+               \filldraw[color=colorEmphasisCyan] (\x, 0) circle (\pointSize);
+            }
+         \end{tikzpicture}
+         \caption{Đồ thị của $\left\lceil x \right\rceil - \left\lfloor x \right\rfloor$}
+      \end{figure}
+   \end{minipageindent}
+}
+
+\exercise Tìm một hàm $f$ xác định trên tập số thực sao cho $f$ vừa mang tính chẵn, vừa mang tính lẻ. Chứng minh tại sao hàm đó là hàm duy nhất thỏa mãn điều kiện này.
+
+\solution 
+
+Hàm $f(x) = 0$ với mọi $x$ là hàm duy nhất thỏa mãn điều kiện này. Thật vậy, giả sử $f$ là một hàm có tính chẵn và lẻ thì với mọi $x$: 
+\begin{align*}
+   f(x) &= f(-x) = -f(x) \\
+   \implies 2f(x) &= 0 \\
+   \implies f(x) &= 0.
+\end{align*}
+Bằng sự quy chiếu đơn giản với định nghĩa, chúng ta có hàm $f$ này thỏa mãn. Vậy, chúng ta có hàm \begin{align*}
+   f: \mathbb{R} &\to \{0\} \\
+         x &\mapsto 0
+\end{align*} thỏa mãn và đã được chứng minh là duy nhất.
+
+\exercise Cho hàm $f$ xác định trên đoạn $[-a; a]$. Chứng minh rằng tồn tại duy nhất một bộ hai hàm số $\left(\chanF; \leF\right)$ sao cho $\chanF$ là hàm chẵn, $\leF$ là hàm lẻ và $f(x) = \chanF(x) + \leF(x)$ với mọi $x \in [-a; a]$.
+
+\solution
+
+Giả sử bộ hai hàm số này tồn tại, khi này
+$$
+f(-x) = \chanF(-x) + \leF(-x) = \chanF(x) - \leF(x).
+$$
+Do đó, kết hợp với $f(x) = \chanF(x) + \leF(x)$, thực hiện một số biến đổi đại số để có \begin{equation*}
+   \begin{cases}
+      \chanF(x) = \frac{f(x) + f(-x)}{2} \\
+      \leF(x) = \frac{f(x) - f(-x)}{2}
+   \end{cases}.
+\end{equation*}
+
+Vậy, nếu bộ hai hàm số này tồn tại thì chỉ có thể nhận giá trị là 

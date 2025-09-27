@@ -23,8 +23,8 @@ $$
 |-x| = \left|(-1)x\right| = |-1||x| = |x|.
 $$
 
-Hai hàm từng phần khác cũng quan trọng nhưng ít khi được đề cập đến là \defText{hàm sàn} (hay \defText{hàm phần nguyên}, \defText{hàm làm tròn xuống}) và \defText{hàm trần} (hay \defText{hàm làm tròn lên}). Hàm sàn tác dụng lên $x$ sẽ làm tròn xuống $x$ đến số nguyên lớn nhất không vượt quá $x$ với kí hiệu là $\defMath{\lfloor x \rfloor}$.
-Tương tự, hàm trần của $x$ làm tròn lên $x$ đến số nguyên nhỏ nhất không vượt quá $x$ với kí hiệu là $\defMath{\lceil x \rceil}$.
+Hai hàm từng phần khác cũng quan trọng nhưng ít khi được đề cập đến là hàm sàn và hàm trần. \defText{Hàm sàn} (hay \defText{hàm phần nguyên}, \defText{hàm làm tròn xuống}) tác dụng lên $x$ sẽ làm tròn xuống $x$ đến số nguyên lớn nhất nhưng không nhỏ hơn $x$ với kí hiệu là $\defMath{\lfloor x \rfloor}$.
+Tương tự, \defText{hàm trần} (hay \defText{hàm làm tròn lên}) của $x$ làm tròn lên $x$ đến số nguyên nhỏ nhất nhưng không lớn hơn $x$ với kí hiệu là $\defMath{\lceil x \rceil}$.
 
 Ví dụ:
 \begin{multicols}{3}
@@ -48,9 +48,13 @@ Tương tự như hàm giá trị tuyệt đối, hàm sàn và hàm trần cũn
    \end{cases}.
 \end{equation*}
 
-Đầu tiên, chúng ta sẽ chứng minh $n \leq x < n + 1 \iff \lfloor x \rfloor = n$. Chứng minh chiều xuôi, giả sử $n \leq x < n + 1$. Gọi $M_m$ là tập hợp các số nguyên không vượt quá $x$. Rõ ràng rằng $M_m$ khác rỗng, do có $n$ làm phần tử. Ngoài ra, mọi số nguyên $a > n$ không làm phần tử của $M_m$ vì $a > n \iff a \geq n + 1 \implies a > x$. Kết hợp lại, mọi phần tử $b$ trong $M_m$ phải thỏa mãn $b \leq n$. Do đó, $n$ là số nguyên lớn nhất không vượt quá $x$, hay $\lfloor x \rfloor = n$.
+Đầu tiên, chúng ta sẽ chứng minh $n \leq x < n + 1 \iff \lfloor x \rfloor = n$. Chứng minh chiều xuôi, giả sử $n \leq x < n + 1$. Gọi $M_m$ là tập hợp các số nguyên nhỏ hơn hoặc bằng $x$. Rõ ràng rằng $M_m$ khác rỗng, do có $n$ làm phần tử. Ngoài ra, mọi số nguyên $a > n$ không làm phần tử của $M_m$ vì $a > n \iff a \geq n + 1 \implies a > x$. Kết hợp lại, mọi phần tử $b$ trong $M_m$ phải thỏa mãn $b \leq n$. Do đó, $n$ là số nguyên lớn nhất không vượt quá $x$, hay $\lfloor x \rfloor = n$.
 
 Để chứng minh chiều ngược lại, giả sử $\lfloor x \rfloor = n$. Từ định nghĩa, $n \leq x$. Ngoài ra, nếu $n + 1 \leq x$, có $n + 1 > n$, cho nên $n + 1$ sẽ vi phạm vai trò của $n$, tạo nên mâu thuẫn. Do đó, $x < n + 1$. Kết hợp hai chiều, chúng ta có chứng minh đầu tiên.
+
+Tiếp theo, cần phải chứng minh $n - 1 < x \leq n \iff \lceil x \rceil = n$. Chứng minh chiều xuôi, gọi $M_M$ là tập hợp các số nguyên lớn hơn hoặc bằng $x$. Có $n \in M_M$ nên $M_M$ khác rỗng. Ngoài ra, nếu $a < n$ thì $a \leq n - 1 \implies a < x$, cho nên $a \notin M_M$. Qua đó, $n$ là số nguyên nhỏ nhất không vượt quá $x$, hay $\lceil x \rceil = n$.
+
+Chứng minh chiều ngược lại, giả sử $\lceil x \rceil = n$. Từ định nghĩa, $n \geq x$. Ngoài ra, nếu $n - 1 \geq x$, có $n - 1 < n$, cho nên $n - 1$ sẽ vi phạm vai trò của $n$, tạo nên mâu thuẫn. Do đó, $x > n - 1$. Kết hợp hai chiều, chúng ta có điều phải chứng minh.
 
 Để giải những vấn đề với hàm xác định giá trị từng phần, tương tự như cái tên, chúng ta chủ yếu chia bài toán theo các trường hợp phù hợp với từng phần của hàm đầu vào.
 
@@ -575,7 +579,7 @@ Qua ba trường hợp, chúng ta có tập nghiệm của bất phương trình
 \solution
 
 \setcounter{subexercise}{1}
-\arabic{subexercise}.
+\arabic{subexercise}. Giống như tất cả các bài tập khác liên quan đến hàm xác định giá trị từng phần, chia bài toán thành các trường hợp phụ thuộc vào kết cấu của hàm số. Sau đó, bạn đọc có thể vẽ từng phần và chồng chúng lên nhau để tạo thành đồ thị cuối cùng.
 
 \begin{figure}[H]
 	\centering
@@ -596,8 +600,7 @@ Qua ba trường hợp, chúng ta có tập nghiệm của bất phương trình
 \end{figure}
 
 \stepcounter{subexercise}
-\arabic{subexercise}.
-
+\arabic{subexercise}. Để ý rằng $f(x)$ đứt đoạn tại giá trị $x = 0$. Cụ thể, $f(x)$ không nhận giá trị $x^3 + 4$ khi $x = 0$. Tuy nhiên, không thể vẽ điểm ngay liền trước nó (không có số âm lớn nhất), nên người ta hay dùng đường tròn rỗng để biểu thị điểm đứt đoạn này.
 \begin{figure}[H]
 	\centering
 	\begin{tikzpicture}
@@ -617,8 +620,6 @@ Qua ba trường hợp, chúng ta có tập nghiệm của bất phương trình
          -x^2 + 1 \text{ nếu } x \geq 0
       \end{cases}$}
 \end{figure}
-
-Để ý rằng $f(x)$ đứt đoạn tại giá trị $x = 0$. Cụ thể, $f(x)$ không nhận giá trị $x^3 + 4$ khi $x = 0$. Tuy nhiên, không thể vẽ điểm ngay liền trước nó (không có số âm lớn nhất), nên người ta hay dùng đường tròn rỗng để biểu thị điểm đứt đoạn này.
 
 \stepcounter{subexercise}
 \arabic{subexercise}. Trước hết, cần xác định các giá trị của $x \geq -2$ để $\frac{5}{x^2 + 1}$ là số nguyên. Do với mọi $x \in \mathbb{R}$ thì $$x^2 \geq 0 \iff x^2 + 1 \geq 1 > 0 \iff 5 \geq \frac{5}{x^2 + 1} > 0.$$ Mà cần phải để $\frac{5}{x^2 + 1} \in \mathbb{N}$ cho nên $\frac{5}{x^2 + 1} \in \left\{1; 2; 3; 4; 5\right\}$. Với để ý đến điều kiện $x \geq -2$, kẻ bảng để xác định các giá trị có thể của $x$:
@@ -851,7 +852,6 @@ Do $|a|$, $|b|$, $|a + b|$ đều không âm nên $|a| + |b| + |a + b| \geq 0$. 
 
 \begin{multicols}{2}
    \begin{enumerate}
-      \item $\lfloor x \rfloor = 4$;
       \item $\left\lceil \frac{x}{4} \right\rceil = -2$;
       \item $2\left\lfloor -2x - 3 \right\rfloor - 1 = 1$;
       \item $3\lceil x \rceil^2 - 4\lceil x \rceil - 4 = 0$;
@@ -863,16 +863,7 @@ Do $|a|$, $|b|$, $|a + b|$ đều không âm nên $|a| + |b| + |a + b| \geq 0$. 
 \solution
 
 \setcounter{subexercise}{1}
-\arabic{subexercise}. Giả sử $x \geq 5$. Khi đó, số nguyên lớn nhất không vượt quá $x$ sẽ phải đạt giá trị tối thiểu là $5$, và suy ra $\lfloor x \rfloor \geq 5$.
-
-Giả sử $x < 4$. Nếu như vậy, số nguyên lớn nhất không vượt quá $x$ cũng không thể từ $4$ trở lên. Do vậy, $\lfloor x \rfloor < 5$. 
-
-Ngoài ra, dễ thấy rằng nếu $4 \leq x < 5$ thì $\lfloor x \rfloor = 4$ theo định nghĩa. Vậy tập nghiệm của phương trình là $\left[4; 5\right)$.
-
-Tổng quát hóa, chúng ta sẽ có $\lfloor x \rfloor = a \iff a \leq x < a + 1$ với $a \in \mathbb{N}$.
-
-\stepcounter{subexercise}
-\arabic{subexercise}. Với một lập luận tương tự như phần trước, chúng ta có
+\arabic{subexercise}. Sử dụng kết quả đã có: $\lceil x \rceil = a \iff a - 1 < x \leq a$ với $a \in \mathbb{N}$; chúng ta có
 \begin{align*}
    &\left\lceil \frac{x}{4} \right\rceil = -2 \\
    \iff &-3 < \frac{x}{4} \leq -2 \\
@@ -912,9 +903,7 @@ Do kết quả của hàm trần luôn là số nguyên nên chỉ có một tr�
 Vậy tập nghiệm của phương trình là $\left(1; 2\right]$.
 
 \stepcounter{subexercise}
-\arabic{subexercise}.
-
-Đặt $y = \lfloor x \rfloor$ với $y \in \mathbb{N}$. Theo định nghĩa, $y$ là số nguyên lớn nhất không vượt quá $x$. Theo một cách nói khác, $y$ là số nguyên duy nhất thỏa mãn $y \leq x < y + 1$. Công $2$ vào tất cả các vế, chúng ta có $y + 2 \leq x + 2 < y + 3$. Nhận thấy rằng, $z = y + 2$ là số nguyên duy nhất thỏa mãn $z \leq x + 2 < z + 1$, hay $z$ là số nguyên lớn nhất không quá $x + 2$. Do vậy, 
+\arabic{subexercise}. Đặt $y = \lfloor x \rfloor$ với $y \in \mathbb{N}$. Theo định nghĩa, $y$ là số nguyên lớn nhất không vượt quá $x$. Theo một cách nói khác, $y$ là số nguyên duy nhất thỏa mãn $y \leq x < y + 1$. Công $2$ vào tất cả các vế, chúng ta có $y + 2 \leq x + 2 < y + 3$. Nhận thấy rằng, $z = y + 2$ là số nguyên duy nhất thỏa mãn $z \leq x + 2 < z + 1$, hay $z$ là số nguyên lớn nhất không quá $x + 2$. Do vậy, 
 \begin{equation}
    \lfloor x + 2 \rfloor = y + 2 = \lfloor x \rfloor + 2.
 \end{equation}
