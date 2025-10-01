@@ -228,6 +228,78 @@ Hiển nhiên rằng $f(x) = f(-x)$ là hàm chẵn.
    \end{minipageindent}
 }
 
+\exercise Vẽ đồ thị của hàm $f$ xác định trên tập số thực thỏa mãn điều kiện sau:
+\begin{enumerate}
+   \item $f(x) = |x - 1|$ với mọi $x \geq 0$ và $f$ là hàm chẵn;
+   \item $f(x) = x^2 - x - 1$ với mọi $x < 0$ và $f$ là hàm lẻ.
+\end{enumerate}
+
+\solution
+
+\setcounter{subexercise}{1}
+\arabic{subexercise}. Theo đúng định nghĩa của hàm chẵn, chúng ta xác định giá trị được giá trị của hàm $f$ tại $x$ âm như sau:
+$$
+   f(x) = f(-x) = \left|(-x) - 1\right| = \left|x + 1\right|.
+$$
+
+Vậy, hàm $f$ có biểu thức là
+$$
+   f(x) = \begin{cases}
+      |x + 1| & \text{ nếu } x \geq 0 \\
+      |x - 1| & \text{ nếu } x < 0
+   \end{cases}.
+$$
+Chúng ta có đồ thị của hàm số như sau:
+\begin{figure}[H]
+   \centering
+   \begin{tikzpicture}
+      \draw[->] (-4, 0) -- (4, 0) node[right] {$x$};
+      \draw[->] (0, -1) -- (0, 4)  node[above] {$f(x)$};
+      \draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=0.000:4.000] plot (\x, {((((\x)/1) - 1)^2)^(1/2)});
+      \draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-4.000:0.000] plot (\x, {((((\x)/1) + 1)^2)^(1/2)});
+   \end{tikzpicture}
+   \caption{Đồ thị cho phần $1$}
+\end{figure}
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Do $f$ là hàm lẻ, vói $x < 0$, chúng ta có
+\begin{align*}
+   f(x)  &= -f(-x) \\
+         &= -\left((-x)^2 - (-x) - 1\right) \\
+         &= -\left(x^2 + x - 1\right) \\
+         &= -x^2 - x + 1.
+\end{align*}
+
+Ngoài ra, có
+\begin{align*}
+   f(0) &= -f(-0) = f(0) \\
+   \implies f(0) &= 0.
+\end{align*}
+
+Vậy, hàm $f$ có biểu thức là
+$$
+   f(x) = \begin{cases}
+      -x^2 - x + 1 & \text{ nếu } x < 0 \\
+      0 & \text{ nếu } x = 0 \\
+      x^2 - x - 1 & \text{ nếu } x > 0
+   \end{cases}.
+$$
+Cuối cùng, chúng ta vẽ đồ thị:
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\draw[->] (-4, 0) -- (4, 0) node[right] {$x$};
+		\draw[->] (0, -4) -- (0, 4)  node[above] {$f(x)$};
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=0:2.791] plot (\x, {(((\x)/1)^2-((\x)/1)-1) / 1});
+      \draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-2.791:0] plot (\x, {(-((\x))^2-((\x)/1)+1) / 1});
+      \foreach \y in {-1,1} {
+         \draw[colorEmphasisCyan, hollow point] (0, \y) circle (\pointSize);
+      }
+      \filldraw[colorEmphasisCyan] (0, 0) circle (\pointSize);
+	\end{tikzpicture}
+	\caption{Đồ thị cho phần $2$}
+\end{figure}
+
 \exercise Tìm một hàm $f$ xác định trên tập số thực sao cho $f$ vừa mang tính chẵn, vừa mang tính lẻ. Chứng minh tại sao hàm đó là hàm duy nhất thỏa mãn điều kiện này.
 
 \solution 
