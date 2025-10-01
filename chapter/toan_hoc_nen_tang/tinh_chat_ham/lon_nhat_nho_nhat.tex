@@ -1,0 +1,18 @@
+\subsection{Giá trị lớn nhất, giá trị nhỏ nhất}
+
+\ % Lùi đầu dòng
+
+Khái niệm giá trị lớn nhất và giá trị nhỏ nhất không phải là một khái niệm mới. Đây là một khái niệm được sử dụng rộng rãi trong toán học, và chúng ta đã gặp qua nó rất nhiều trong chương trình học trung học phổ thông. Hơn nữa, bài toán tìm giá trị lớn nhất và nhỏ nhất luôn là bài toán mang tính thực tế cao. Phần này sẽ nhắc lại định nghĩa và sẽ đưa thêm một số bài tập để rèn luyện.
+
+Cho một hàm $f$ phụ thuộc vào biến $x$ với tập xác định là $D$. $y_M$ được gọi là \defText{giá trị lớn nhất} của $f$ nếu tồn tại $x_M \in D$ sao cho $\defMath{y_M = f(x_M)}$ và \defText{$\defMath{f(x) \leq y_M}$ với mọi $\defMath{x \in D}$}. Giá trị $x_M$ được gọi là \defText{điểm đạt giá trị lớn nhất} của $f$. 
+
+Một cách tương tự, chúng ta cũng định nghĩa được giá trị nhỏ nhất. $y_m$ được gọi là \defText{giá trị nhỏ nhất} của $f$ nếu tồn tại $x_m \in D$ sao cho $\defMath{y_m = f(x_m)}$ và \defText{$\defMath{f(x) \geq y_m}$ với mọi $\defMath{x \in D}$}. Giá trị $x_m$ được gọi là \defText{điểm đạt giá trị nhỏ nhất} của $f$.
+
+Thông thường, người ta sẽ coi như giá trị lớn nhất và giá trị nhỏ nhất là hàm và có kí hiệu như sau:
+$$
+\defMath{\max (f) = y_M}
+\qquad \text{ và } \qquad
+\defMath{\min (f) = y_m}.
+$$
+
+Sẽ có một vài hàm mà thông thường chúng ta sẽ nói rằng giá trị lớn nhất (hay giá trị nhỏ nhất) là vô cùng. Khi này, chúng ta sẽ cần phải có một định nghĩa đặc biệt. Có thể viết $$\defMath{\max (f) = \infty}$$ nếu với mọi $y \in \mathbb{R}$ thì tồn tại $x$ sao cho $f(x) > y$. Tương tự, $$\defMath{\min (f) = -\infty}$$ nếu với mọi $y \in \mathbb{R}$ thì tồn tại $x$ sao cho $f(x) < y$.
