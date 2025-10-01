@@ -1,0 +1,50 @@
+\subsection{Hàm đồng biến và nghịch biến}
+
+\ % Lùi đầu dòng
+
+Thông qua biểu diễn hình học của một hàm số, người ta sẽ thấy hàm số tăng và giảm theo giá trị đầu vào. Từ đó, xây dựng được hai khái niệm là hàm đồng biến và hàm nghịch biến. Cụ thể, $f$ được gọi là \defText{đồng biến} trên khoảng $\left(a; b\right)$ nếu với mọi $x_1, x_2 \in \left(a; b\right)$, có $$\defMath{x_1 < x_2 \implies f\left(x_1\right) < f\left(x_2\right)}.$$ Bằng một định nghĩa tương tự, $f$ được gọi là \defText{nghịch biến} trên khoảng $\left(a; b\right)$ nếu với mọi $x_1, x_2 \in \left(a; b\right)$, có $$\defMath{x_1 < x_2 \implies f\left(x_1\right) > f\left(x_2\right)}.$$ 
+
+{
+   \begin{minipageindent}{0.48\textwidth}
+      \begin{figure}[H]
+         \centering
+         \begin{tikzpicture}
+            \draw[->] (-2, 0) -- (4, 0) node[right] {$x$};
+            \draw[->] (0, -1) -- (0, 4)  node[above] {$f(x)$};
+            \foreach \x/\y in {-1/0.707106781, 3/2.838138064} {
+               \draw[dashed] (\x,\y) -- (\x,0);
+               \draw[dashed] (\x,\y) -- (0,\y);
+               \filldraw[color=colorEmphasisCyan] (\x, \y) circle (\pointSize);
+               }
+            \draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-2.000:4.000] plot (\x, {(2^((\x)/2)) / 1});
+            \node[right] at (0,0.707106781) {$y_1$};
+            \node[left] at (0,2.838138064) {$y_2$};
+            \node[below] at (-1,0) {$x_1$};
+            \node[below] at (3,0) {$x_2$};
+      \end{tikzpicture}
+      \caption{Ví dụ hàm $f$ đồng biến}
+   \end{figure}
+   \end{minipageindent}
+   \hfill
+   \begin{minipageindent}{0.48\textwidth}
+      \begin{figure}[H]
+         \centering
+         \begin{tikzpicture}
+            \draw[->] (-2, 0) -- (4, 0) node[right] {$x$};
+            \draw[->] (0, -1) -- (0, 4)  node[above] {$f(x)$};
+            \draw[dashed] (0.75, 0) -- (0.75, 1.155);
+            \draw[dashed] (3, 0) -- (3, 0.5773502691896257);
+            \draw[dashed] (0, 1.155) -- (0.75, 1.155);
+            \draw[dashed] (0, 0.5773502691896257) -- (3, 0.5773502691896257);
+            \filldraw[color=colorEmphasis] ({0.75}, { 1.155 }) circle (\pointSize);
+            \filldraw[color=colorEmphasis] ({3.0}, { 0.5773502691896257 }) circle (\pointSize);
+            \draw[graph thickness, samples=80, color=colorEmphasis, domain=0.062:4.000] plot (\x, {(1/(((\x)/1)^(1/2))) / 1});
+            \node[left] at (0,1.155) {$y_1$};
+            \node[left] at (0,0.5773502691896257) {$y_2$};
+            \node[below] at (0.75,0) {$x_1$};
+            \node[below] at (3,0) {$x_2$};
+         \end{tikzpicture}
+         \caption{Ví dụ hàm $f$ nghịch biến}
+      \end{figure}      
+   \end{minipageindent}
+}

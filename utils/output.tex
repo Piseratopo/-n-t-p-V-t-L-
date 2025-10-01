@@ -1,9 +1,11 @@
 \begin{figure}[H]
 	\centering
 	\begin{tikzpicture}
-		\draw[->] (-3, 0) -- (3, 0) node[right] {$x$};
-		\draw[->] (0, -1) -- (0, 3)  node[above] {$f(x)$};
-		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-3.000:3.000] plot (\x, {(((\x)/1) - ((\x)/1) + 1) / 1});
+		\draw[->] (-2, 0) -- (4, 0) node[right] {$x$};
+		\draw[->] (0, -1) -- (0, 4)  node[above] {$f(x)$};
+		\draw[graph thickness, samples=80, color=colorEmphasis, domain=0.062:4.000] plot (\x, {(1/(((\x)/1)^(1/2))) / 1});
+		\filldraw[color=colorEmphasis] ({1.0}, { 1.0 }) circle (\pointSize) node[above] {$\left(1{,}00;1{,}00\right)$};
+		\filldraw[color=colorEmphasis] ({3.0}, { 0.5773502691896257 }) circle (\pointSize) node[above] {$\left(3{,}00;0{,}58\right)$};
 	\end{tikzpicture}
-	\caption{Đồ thị của $1$}
+	\caption{Đồ thị của $x^{-0.5}$}
 \end{figure}

@@ -4,9 +4,9 @@
 
 Phần tính chất đầu tiên mà chúng ta quan tâm đến là tính đối xứng của hàm số trên đồ thị. Nhắc lại một chút kiến thức hình học, một hình có thể có hai kiểu đối xứng là đối xứng trục và đối xứng điểm. Tạm thời, chúng ta chỉ quan tâm đến những trường hợp đối xứng cụ thể. Với đồ thị của một hàm số, một cách khá tự nhiên, chúng ta sẽ xem xét tính đối xứng trục tung hoặc qua điểm gốc tọa độ. 
 
-Đầu tiên là đối xứng qua trục tung. Một hàm số có tính đối xứng như vậy được gọi là \defText{hàm chẵn}. Cụ thể, cho $f(x)$ là một hàm số xác định trên $A$. $f(x)$ là hàm chẵn nếu $\defMath{x \in A \implies -x \in A}$ và $$\defMath{f(-x) = f(x)}$$ với mọi $x \in A$. 
+Đầu tiên là đối xứng qua trục tung. Một hàm số có tính đối xứng như vậy được gọi là \defText{hàm chẵn}. Cụ thể, cho $f$ là một hàm số xác định trên $A$. $f$ là hàm chẵn nếu $\defMath{x \in A \implies -x \in A}$ và $$\defMath{f(-x) = f(x)}$$ với mọi $x \in A$. 
 
-Tương tự, $f(x)$ được gọi là \defText{hàm lẻ} nếu $\defMath{x \in A \implies -x \in A}$ và $$\defMath{f(-x) = -f(x)}$$ với mọi $x \in A$. Khi này, hàm sẽ đối xứng qua gốc tọa độ.
+Tương tự, $f$ được gọi là \defText{hàm lẻ} nếu $\defMath{x \in A \implies -x \in A}$ và $$\defMath{f(-x) = -f(x)}$$ với mọi $x \in A$. Khi này, hàm sẽ đối xứng qua gốc tọa độ.
 
 {
    \begin{minipageindent}{0.48\textwidth}
@@ -44,6 +44,7 @@ Tương tự, $f(x)$ được gọi là \defText{hàm lẻ} nếu $\defMath{x \i
    \end{minipageindent}
 }
 
+Bạn đọc, một cách rất tự nhiên, có thể đặt câu hỏi rằng liệu có hàm số nào đối xứng qua trục hoành không. Giả sử tồn tại hàm $f$ như vậy. Khi này, nếu một điểm có tọa độ $\left(x; y\right)$ trên đồ thị của $f$ thì đối xứng của nó qua trục hoành là $\left(x; -y\right)$. Tuy nhiên, do $f$ là hàm số nên chỉ tồn tại một điểm $\left(x; f(x)\right)$ trên đồ thị của $f$. Do đó, $f(x) = y = -y$ hay $f(x) = 0$ với mọi $x$ thuộc tập xác định. Vì chỉ tồn tại một hàm duy nhất đối xứng qua trục hoành và hàm này là hàm hằng cho nên chúng ta sẽ không đặt tên mới cho nó.
 
 \exercise Xác định xem những hàm sau có phải là hàm chẵn, hàm lẻ hay không. Sau đó, vẽ đồ thị của chúng.
 \begin{multicols}{2}
@@ -257,4 +258,34 @@ Do đó, kết hợp với $f(x) = \chanF(x) + \leF(x)$, thực hiện một s�
    \end{cases}.
 \end{equation*}
 
-Vậy, nếu bộ hai hàm số này tồn tại thì chỉ có thể nhận giá trị là 
+Vậy, nếu bộ hai hàm số này tồn tại thì chỉ có thể nhận giá trị là
+
+{
+   \begin{minipageindent}{0.45\textwidth}
+      \begin{equation*}
+         \begin{array}{rccc}
+            \chanF: &[-a; a] &\to &\mathbb{R} \\
+            &x &\mapsto &\frac{f(x) + f(-x)}{2}
+         \end{array};
+      \end{equation*}
+   \end{minipageindent}
+   và 
+   \begin{minipageindent}{0.45\textwidth}
+      \begin{equation*}
+         \begin{array}{rccc}
+            \leF: &[-a; a] &\to &\mathbb{R} \\
+            &x &\mapsto &\frac{f(x) - f(-x)}{2}
+         \end{array}.
+      \end{equation*}
+   \end{minipageindent}
+}
+
+Để hoàn thành chứng minh, chúng ta sẽ khẳng định rằng hai hàm này thỏa mãn. Hiển nhiên rằng, nếu $x \in [-a; a]$ thì $-x \in [-a; a]$. Ngoài ra, với mọi $x \in [-a; a]$,
+
+\begin{equation*}
+   \begin{cases}
+      \chanF(-x) &= \frac{f(-x) + f\left(-(-x)\right)}{2} = \frac{f(-x) + f(x)}{2} = \chanF(x) \\
+      \leF(-x) &= \frac{f(-x) - f\left(-(-x)\right)}{2} = \frac{f(-x) - f(x)}{2} = -\leF(x)
+   \end{cases}.
+\end{equation*}
+Qua đó, chúng ta có điều phải chứng minh.

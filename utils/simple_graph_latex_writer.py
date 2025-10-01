@@ -1,4 +1,4 @@
-from sympy import symbols, solve, Eq, Abs
+from sympy import symbols, solve, Eq
 import sympy
 
 
@@ -8,15 +8,15 @@ def write_line(opened_file, line, tab_count=0):
 
 def write_graph_code(
     file, functions, x_clip, y_clip, samples=None, decimal=False, x_scale=1, y_scale=1,
-    x_label="x", y_label="y"
+    x_label="x", y_label="y", colors=["colorEmphasisCyan", "colorEmphasis"]
 ):
-    color_order = ["colorEmphasisCyan", "colorEmphasis"]
-
     with open(file, "w", encoding="utf-8") as f:
+        # Initialize the figure
         write_line(f, r"begin{figure}[H]")
         write_line(f, "centering", 1)
         write_line(f, r"begin{tikzpicture}", 1)
 
+        # Draw the axis
         write_line(
             f,
             f"draw[->] ({x_clip[0]}, 0) -- ({x_clip[1]}, 0) node[right] " + "{$" + x_label + "$};",
@@ -32,17 +32,19 @@ def write_graph_code(
 
         for func_id, func in enumerate(functions):
             x = symbols("x")
-
-            # Get all the possible ending points
-            ends = []
+            
             pre_x_scale = func
             pre_expression = eval(pre_x_scale)
-            caption += "$" + sympy.latex(pre_expression) + "$"
             post_x_scale = func.replace("x", f"(x/{x_scale})")
             expression = eval(post_x_scale)
+                        
+            # Adding function names to caption
+            caption += "$" + sympy.latex(pre_expression) + "$"
             if func_id != len(functions) - 1:
                 caption += ","
 
+            # Get all the possible ending points by solving for the border cases
+            ends = []
             solutions = solve(Eq(expression, y_clip[0] * y_scale), x)
             solutions = [
                 sol.evalf().as_real_imag()[0]
@@ -69,12 +71,17 @@ def write_graph_code(
             for i in range(len(ends) - 1):
                 value = expression.subs(x, ends[i] + 0.05)
                 # print(value)
+                re_part, im_part = value.as_real_imag()
+                is_real = abs(float(im_part)) < 1e-10
+                if not is_real:
+                    continue
+                v = float(re_part) / float(y_scale)
 
-                if value / float(y_scale) < y_clip[1] and value / float(y_scale) > y_clip[0]:
+                if v < y_clip[1] and v > y_clip[0]:
                     func = post_x_scale.replace("x", r"(\x)").replace("**", "^")
                     write_line(
                         f,
-                        f"draw[graph thickness, samples=80, color={color_order[func_id]}, domain={ends[i]:.3f}:{ends[i + 1]:.3f}] plot "
+                        f"draw[graph thickness, samples=80, color={colors[func_id]}, domain={ends[i]:.3f}:{ends[i + 1]:.3f}] plot "
                         + r"(\x, {("
                         + func
                         + f") / {y_scale}"
@@ -97,7 +104,7 @@ def write_graph_code(
                     if value / y_scale < y_clip[1] and value / y_scale > y_clip[0]:
                         write_line(
                             f,
-                            f"filldraw[color={color_order[func_id]}] (" 
+                            f"filldraw[color={colors[func_id]}] (" 
                             + "{"
                             + f"{p * x_scale}" + "}" 
                             + f", {{ {value / y_scale} }}) circle (\pointSize) node[above] "
@@ -123,7 +130,7 @@ def write_graph_code(
                     if value / y_scale < y_clip[1] and value / y_scale > y_clip[0]:
                         write_line(
                             f,
-                            f"filldraw[color={color_order[func_id]}] ({{ {p * 1.0 * x_scale} }}, {{ {float(value / y_scale)} }}) circle (\pointSize) node[above] "
+                            f"filldraw[color={colors[func_id]}] ({{ {p * 1.0 * x_scale} }}, {{ {float(value / y_scale)} }}) circle (\pointSize) node[above] "
                             + r"{$\left({"
                             + p_latex
                             + "};{"
