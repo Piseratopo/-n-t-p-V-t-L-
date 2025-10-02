@@ -2,7 +2,7 @@
 
 \ % Lùi đầu dòng
 
-Thông qua biểu diễn hình học của một hàm số, người ta sẽ thấy hàm số tăng và giảm theo giá trị đầu vào. Từ đó, xây dựng được hai khái niệm là hàm đồng biến và hàm nghịch biến. Cụ thể, $f$ được gọi là \defText{đồng biến} trên khoảng $\left(a; b\right)$ nếu với mọi $x_1, x_2 \in \left(a; b\right)$, có $$\defMath{x_1 < x_2 \implies f\left(x_1\right) < f\left(x_2\right)}.$$ Bằng một định nghĩa tương tự, $f$ được gọi là \defText{nghịch biến} trên khoảng $\left(a; b\right)$ nếu với mọi $x_1, x_2 \in \left(a; b\right)$, có $$\defMath{x_1 < x_2 \implies f\left(x_1\right) > f\left(x_2\right)}.$$ 
+Thông qua biểu diễn hình học của một hàm số, người ta sẽ thấy hàm số tăng và giảm theo giá trị đầu vào. Từ đó, xây dựng được hai khái niệm là hàm đồng biến và hàm nghịch biến. Cụ thể, $f$ được gọi là \defText{đồng biến} trên tập $D$ nếu với mọi $x_1, x_2 \in D$, có $$\defMath{x_1 < x_2 \implies f\left(x_1\right) < f\left(x_2\right)}.$$ Bằng một định nghĩa tương tự, $f$ được gọi là \defText{nghịch biến} trên tập $D$ nếu với mọi $x_1, x_2 \in D$, có $$\defMath{x_1 < x_2 \implies f\left(x_1\right) > f\left(x_2\right)}.$$ 
 
 {
    \begin{minipageindent}{0.48\textwidth}
@@ -48,3 +48,38 @@ Thông qua biểu diễn hình học của một hàm số, người ta sẽ th�
       \end{figure}      
    \end{minipageindent}
 }
+
+Bạn đọc hoàn toàn có thể thu hẹp định nghĩa này từ tập $D$ thành một khoảng $\left(a; b\right)$. Lí do để chỉ xét trong một khoảng như vậy là từ ứng dụng trong thực tiễn, ít khi nào người ta xét sự tăng giảm của hàm số trên nhiều khoảng tách biệt với nhau.
+
+\exercise Chứng minh rằng
+\begin{enumerate}
+   \item $2x$ đồng biến trên $\mathbb{R}$;
+   \item $(x-1)^2$ nghịch biến trên $\left(-\infty; 1\right)$;
+   \item $|x|\cdot \left|\left|x - 1\right| - 1\right|$ đồng biến trên $(0; 1)$ và nghịch biến trên $(1; 2)$;
+   \item $x^2 - \left(x - \lfloor x \rfloor\right)$ đồng biến trên mỗi khoảng $(n; n + 1)$ với $n$ là số nguyên dương;
+   \item $x^2 - \left(x - \lfloor x \rfloor\right)$ đồng biến trên $\left(1; \infty\right)$.
+\end{enumerate}
+
+\solution
+
+\setcounter{subexercise}{1}
+\arabic{subexercise}. Xét hai giá trị $x_1, x_2 \in \mathbb{R}$ sao cho $x_1 < x_2$. Khi này, hiển nhiên có được $2x_1 < 2x_2$. Do đó, kết luận được $2x$ là đồng biến trên $\mathbb{R}$.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Xét hai giá trị $x_1, x_2 \in \left(-\infty; 1\right)$ sao cho $x_1 < x_2$. Thực hiện một số biến đổi:
+\begin{align*}
+   &x_1 - 1 < x_2 - 1 < 0 \\
+   \iff &x_1 - 1 > x_2 - 1 > 0 \\
+   \implies &\begin{cases}
+      \left(x_1 - 1\right)^2 > \left(x_1 - 1\right)\left(x_2 - 1\right) \equationexplanation{cùng nhân hai vế với $x_1 - 1$ dương}\\
+      \left(x_1 - 1\right)\left(x_2 - 1\right) > \left(x_2 - 1\right)^2 \equationexplanation{cùng nhân hai vế với $x_2 - 1$ dương}
+   \end{cases} \\
+   \implies &\left(x_1 - 1\right)^2 > \left(x_2 - 1\right)^2.
+\end{align*}
+Chúng ta dễ dàng thấy điều phải chứng minh.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Trên khoảng $(0; 1)$, $|x| = x$ và $\left|\left|x - 1\right| - 1\right| = \left|1 - x - 1\right| = \left|-x\right| = x$. Do đó, $|x|\cdot \left|\left|x - 1\right| - 1\right| = x^2$. Khi này, với $0 < x_1 < x_2 < 1$, dễ dàng có được $x_1^2 < x_2^2$. Do đó, $|x|\cdot \left|\left|x - 1\right| - 1\right|$ đồng biến trên $(0; 1)$.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. 
