@@ -2,4 +2,16 @@
 
 \ % Lùi đầu dòng
 
-Một tập số thường xuyên được đề cập ngoài tập số thực là tập \defText{số tự nhiên} $\defMath{\mathbb{N}}$. 
+Một tập số thường xuyên được đề cập ngoài tập số thực là tập \defText{số tự nhiên} $\defMath{\mathbb{N}}$. Chúng ta sẽ đồng nhất tập này với tập các số nguyên không âm $\left\{0; 1; 2; 3; \cdots\right\}$\footnote{Trong nhiều tài liệu nước ngoài, tập số tự nhiên không bao gồm số $0$.}. Ngoài những tính chất thừa hưởng từ tập số thực, tập số tự nhiên có tính chất sau mà tập số thực không có. Ví dụ, mỗi một tập không rỗng các sô tự nhiên luôn tồn tại phần tử nhỏ nhất.
+
+Về mặt chặt chẽ toán học, số tự nhiên là tập số đầu tiên được xây dựng, và chúng được dựa trên hệ tiên đề Pê-a-nô\footnote{Giuseppe Peano (1858–1932).}. Hệ tiên đề đó phát biểu rằng nếu tồn tại một tập hợp $P$ thỏa mãn
+\begin{itemize}
+   \item Tồn tại duy nhất một phần tử $0 \in P$;
+   \item Với mỗi $n \in P$ tồn tại duy nhất một số liền sau thuộc $P$, gọi là $s(n)$;
+   \item Với mọi $n \in P$ thì $s(n) \neq 0$;
+   \item Nếu $m$ và $n$ là hai số thuộc $P$, $s(m) = s(n) \implies m = n$;
+   \item Gọi $A$ là tập con của $P$, nếu $0 \in A$ và nếu có $n\in A \implies s(n) \in A$ thì $A = P$
+\end{itemize}
+thì $(P, s)$ là một \defText{mẫu} hay \defText{mô hình} cho số tự nhiên.
+
+Tiên đề cuối cùng là nền tảng cho phép chứng minh \defText{quy nạp}. Nếu $n = 0$ thỏa mãn một mệnh đề $Q(0)$ nào đó và nếu giả sử $Q(n)$ đúng suy ra $Q(s(n))$ cũng đúng thì $Q(n)$ đúng với mọi số tự nhiên $n$.
