@@ -1,16 +1,16 @@
-\subsection{Số mũ}
+\subsection{Phép mũ}
 
 \ % Lùi đầu dòng
 
-Một dạng hàm quen thuộc, được giới thiệu trong chương trình học trung học phổ thông, là đa thức. Nhưng trước khi chúng ta nhắc lại về đa thức, chúng ta sẽ nhắc lại về đơn thức. Hàm \defText{đơn thức}\footnote{Chúng ta sẽ đề cập đến đơn thức và đa thức nhiều biến khi đến phần hàm nhiều biến.} là một hàm được viết dưới dạng $$\defMath{f(x) = ax^n}$$ với $a$ là một số thực và biến $x$ được mũ lên một số nguyên không âm $n$. Trong tương lai, chúng ta sẽ đề cập về vấn đề hàm số mũ mà thay $n$ bằng số mũ thực. Tạm thời, chúng ta sẽ có định nghĩa \defText{số mũ} như sau: Với $x \in \mathbb{R}$ và $n \in \mathbb{Z}^+$ thì
+Khái niệm và kí hiệu cho phép nhân bắt đầu có tính ứng dụng cao khi việc lặp lại nhiều lần phép cộng trở nên tốn kém. Tương tự, khi mà viết phép nhân lặp lại nhiều lần chở nên không khả thi thì chúng ta cần một phép toán mới: \defText{phép mũ}. Định nghĩa phép mũ như sau: Với $x \in \mathbb{R}$ và $n \in \mathbb{Z}^+$ thì
 $$\defMath{x^n = \prod_{i=1}^n (x) = \underbrace{x \times x \times \cdots \times x}_{n \text{ \defText{lần}}}}.$$
-Một cách định nghĩa chặt chẽ hơn là sử dụng truy hồi: Với $x \in \mathbb{R}$ và $n \in \mathbb{Z}^+$ thì
+Gọi tên chuyên ngành của các thành phần trong phép mũ, $x$ là cơ số, và $n$ là số mũ. Một cách định nghĩa chặt chẽ hơn là sử dụng truy hồi: Với $x \in \mathbb{R}$ và $n \in \mathbb{Z}^+$ thì
 \begin{itemize}
    \item $\defMath{x^1 = x}$, và;
    \item $\defMath{x^{n+1} = x^n x}$ với mọi số nguyên dương $n$.
 \end{itemize}
 
-Số mũ có một số tính chất như nhau: Với $x$ và $y$ là hai số thực và $m$, $n$ là hai số nguyên dương thì
+Phép mũ có một số tính chất như nhau: Với $x$ và $y$ là hai số thực và $m$, $n$ là hai số nguyên dương thì
 \begin{multicols}{2}
    \begin{itemize}
       \item $\defMath{x^m x^n = x^{m+n}}$;
@@ -21,7 +21,7 @@ Số mũ có một số tính chất như nhau: Với $x$ và $y$ là hai số t
    \end{itemize}
 \end{multicols}
 
-Chúng ta sẽ mở rộng định nghĩa với số mũ bằng $0$. Coi như là các tính chất vẫn đúng, chúng ta có $$x^0 = x^{n-n} = \frac{x^n}{x^n} = 1.$$ Để ý rằng chúng ta đã thực hiện phép chia trong quá trình xác định $x^0$. Do đó, chúng ta cần đảm bảo rằng $x \neq 0$. Nói ngắn gọn, định nghĩa $\defMath{x^0 = 1}$ với $x \neq 0$. Không xác định giá trị với $0^0$.
+Chúng ta sẽ mở rộng định nghĩa với số mũ bằng $0$. Coi như là các tính chất vẫn đúng, chúng ta có $$x^0 = x^{n-n} = \frac{x^n}{x^n} = 1.$$ Để ý rằng chúng ta đã thực hiện phép chia trong quá trình xác định $x^0$. Do đó, chúng ta cần đảm bảo rằng $x \neq 0$. Nói ngắn gọn, định nghĩa $\defMath{x^0 = 1}$ với $x \neq 0$. Trong tài liệu này, không xác định giá trị với $0^0$.
 
 Từ những định nghĩa này, chúng ta có một vài phép biến đổi cơ bản. Với $n \in \mathbb{N}$ thì $1^n = 1$, và $0^n = 0$ với $n \neq 0$. Ngoài ra, để ý rằng
 \begin{align*}
@@ -35,6 +35,17 @@ Từ đây, chúng ta có những đẳng thức quen thuộc:
    (-x)^{2m+1} &= \left(-1 \times x\right)^{2m+1} = \left(-1\right)^{2m+1} x^{2m+1} \\ 
       &= -1 \times x^{2m+1} = -x^{2m+1}.
 \end{align*}
+
+Cũng có những tính chất liên quan đến số mũ mà không phải là đẳng thức. Nếu $x$ và $y$ là hai số thực dương thỏa mãn $x < y$ thì $x^m < y^m$ với mọi số nguyên dương $m$.
+
+Chúng ta sẽ chứng minh bằng quy nạp. Hiển nhiên rằng với $m = 1$, điều cần chứng minh đúng. Đến bước quy nạp, giả sử rằng $x^m < y^m$ đúng với số nguyên dương $m = k$. Khi đó, 
+\begin{align*}
+   x^{k+1} &= x^k x \\
+   \implies x^{k+1} &< y^k x < y^k y\\
+   \implies x^{k+1} &< y^{k+1}
+\end{align*}
+và qua đó chúng ta có giả thiết đúng với $k + 1$. Sử dụng nguyên lí quy nạp để có $x^m < y^m$ luôn đúng. Như một hệ quả, có định lí quen thuộc phát biểu như sau: Cho $x$ là số thực dương, $x < 1 \iff x^n < 1$ và $x > 1 \iff x^n > 1$ với mọi số nguyên dương $n$. 
+
 
 \exercise Sử dụng định nghĩa truy hồi, chứng minh rằng với mọi số thực $x$ số nguyên dương $m$ và $n$ thì $x^m x^n = x^{m+n}$ và $\frac{x^m}{x^n} = x^{m-n}$ nếu $x \neq 0$.
 

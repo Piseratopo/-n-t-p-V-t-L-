@@ -1,0 +1,58 @@
+\subsection{Hàm căn thức}
+
+\ % Lùi đầu dòng
+
+\defText{Hàm căn thức} là một trong những hàm số cơ bản trong toán học, được định nghĩa dựa trên phép căn thức của số thực như sau:
+$$\defMath{f(x) = \sqrt[n]{x}}$$
+trong đó $x \in \mathbb{R}^+ \cup \{0\}$ và $n \in \mathbb{Z}^+$. Nếu $n = 2k + 1 (k \in \mathbb{N})$ là số lẻ, thì chúng ta có mở rộng của hàm căn thức trên toàn bộ tập số thực:
+$$
+\defMath{f(x) = }\begin{cases}
+   \defMath{\sqrt[2k+1]{x} \defText{ nếu } x \geq 0} \\
+   \defMath{-\sqrt[2k+1]{-x} \defText{ nếu } x < 0}
+\end{cases}.
+$$
+Tối giản hóa định nghĩa trên, có thể viết $f(x) = \sqrt[2k+1]{x}$ trên toàn bộ $x$ thực.
+
+Khi hợp hai hàm số $f \circ g$ mà $f$ là hàm căn thức, có $f\circ g(x) = \sqrt[n]{g(x)}$. Khi này, $g(x)$ có thể được gọi là \defText{biểu thức dưới dấu căn} hay \defText{biểu thức lấy căn}.
+
+\exercise Giải các phương trình sau với ẩn $x$ thực
+
+\begin{multicols}{2}
+   \begin{enumerate}
+      \item $\sqrt{x} = 2$;
+      \item $\sqrt{x - 2} = -2$;
+      \item $\sqrt[3]{x^5 + 1} = -2$;
+      \item $\sqrt[4]{x^4 - 2x^2 + 8} = -x$;
+      \item $\sqrt{x^3-3x+1} = \sqrt{x^3+2x-6}$;
+      \item $\sqrt[4]{x^4 + 1} = \sqrt[4]{x^4-3x + 1}$;
+      \item $\sqrt{x+3} = \sqrt[3]{5x+3}$;
+      \item $2\sqrt{x^2 - 9} = (x + 5)\sqrt{\frac{x+3}{x-3}}$;
+      \item $\sqrt{x + 4} + \sqrt{x + 9} = 5$;
+      \item $\sqrt{x(x+1)} + \sqrt{x(x+2)} = \sqrt{x(x+4)}$.
+   \end{enumerate}
+\end{multicols}
+
+\solution
+
+\setcounter{subexercise}{1}
+\arabic{subexercise}. Tập xác định của phương trình là $\left[0; \infty\right)$. Theo định nghĩa của phép khai căn:
+\begin{align*}
+   \sqrt{x} &= 2 \\
+   \iff x &= 2^2 = 4.
+\end{align*}
+
+Vậy $x = 4$ là nghiệm duy nhất của phương trình.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Theo định nghĩa của phép khai căn, với căn bậc chẵn, chúng ta có $\sqrt{x - 2} \geq 0$. Do đó, phương trình vô nghiệm.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Thực hiện biến đổi đại số:
+\begin{align*}
+   \sqrt[3]{x^5 + 1} &= -2 \\
+   \iff x^5 + 1 &= (-2)^3 = -8 \\
+   \iff x^5 &= -9 \\
+   \iff x &= -\sqrt[5]{9}.
+\end{align*}
+
+Vậy tập nghiệm của phương trình là $\left\{-\sqrt[5]{9}\right\}$.
