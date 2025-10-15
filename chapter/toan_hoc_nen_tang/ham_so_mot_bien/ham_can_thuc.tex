@@ -25,10 +25,10 @@ Khi hợp hai hàm số $f \circ g$ mà $f$ là hàm căn thức, có $f\circ g(
       \item $\sqrt[4]{x^4 - 2x^2 + 8} = -x$;
       \item $\sqrt{x^3-3x+1} = \sqrt{x^3+2x-6}$;
       \item $\sqrt[4]{x^4 + 1} = \sqrt[4]{x^4-3x + 1}$;
-      \item $\sqrt{x+3} = \sqrt[3]{5x+3}$;
       \item $2\sqrt{x^2 - 9} = (x + 5)\sqrt{\frac{x+3}{x-3}}$;
       \item $\sqrt{x + 4} + \sqrt{x + 9} = 5$;
-      \item $\sqrt{x(x+1)} + \sqrt{x(x+2)} = \sqrt{x(x+4)}$.
+      \item $\sqrt{x(x+1)} + \sqrt{x(x+2)} = \sqrt{x(x-3)}$;
+      \item $\sqrt{x+3} = \sqrt[3]{5x+3}$;.
    \end{enumerate}
 \end{multicols}
 
@@ -75,4 +75,28 @@ Kiểm tra trực tiếp, thấy $x = -2$ là nghiệm duy nhất thỏa mãn. V
    \implies x^3-3x+1 &= x^3 + 2x - 6 \\
    \iff x &= \frac{7}{5}.
 \end{align*}
+Tuy nhiên, khi kiểm tra $x = \frac{7}{5}$ thì $x^3 - 3x + 1 = -\frac{57}{125}$ là một số âm, không thỏa mãn điều kiện xác định của $\sqrt{x^3-3x+1}$. Qua đó, chúng ta có tập nghiệm của phương trình là $\emptyset$.
+
+\stepcounter{subexercise}
+\arabic{subexercise}.
+\begin{align*}
+   \sqrt[4]{x^4 + 1} &= \sqrt[4]{x^4 - 3x + 1} \\
+   \implies x^4 + 1 &= x^4 - 3x + 1 \\
+   \iff x &= 0. 
+\end{align*}
+
+Kiểm tra lại, thấy cả hai vế đều bằng $1$ khi $x = 0$. Cho nên tập nghiệm của phương trình là $\{0\}$.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Giống như nhiều bài tập trước đó, bình phương lên hai vế để khử căn để được
+\begin{align*}
+   \left(2\sqrt{x^2 - 9}\right)^2 &= \left((x + 5)\sqrt{\frac{x+3}{x-3}}\right)^2 \\ 
+   \implies 4\left(x^2-9\right) &= (x + 5)^2\frac{x+3}{x-3}\\
+   \implies 4\left(x^2-9\right)(x - 3) &= (x + 5)^2(x + 3) \\
+   \implies 4x^3 - 12x^2 - 36x + 108 &= x^3 + 13x^2 + 55x + 75 \\
+   \iff 3x^3 - 25x^2 - 91x + 33 &= 0 \\
+   \iff 
+\end{align*}
+
+
 
