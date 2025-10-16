@@ -102,4 +102,26 @@ Kiểm tra lại, thấy cả hai vế đều bằng $1$ khi $x = 0$. Cho nên t
 Thử lại, chúng ta kết luận được các nghiệm của phương trình là $x \in \left\{11; -3\right\}$.
 
 \stepcounter{subexercise}
-\arabic{subexercise}. 
+\arabic{subexercise}. Nếu $x$ thỏa mãn phương trình $\sqrt{x + 4} + \sqrt{x + 9} = 5$, thì cần phải có $\begin{cases}
+   x + 4 \geq 0 \\
+   x + 9 \geq 0
+\end{cases}$. Ngoài ra, có $\begin{cases}
+   \sqrt{x + 4} \geq 0 \\
+   \sqrt{x + 9} \geq 0
+\end{cases}$ nên $\sqrt{x + 4} + \sqrt{x + 9} \geq 0$. Do đó, bình phương hai vế để có phương trình tương đương
+\begin{align*}
+   \left(\sqrt{x + 4} + \sqrt{x + 9}\right)^2 &= 5^2 \\
+   \iff x + 4 + 2\sqrt{x + 4}\sqrt{x + 9} + x + 9 &= 25 \\
+   \iff 2\sqrt{(x + 4)(x + 9)} &= 12 \equationexplanation{\parbox{0.4\textwidth}{$\sqrt{x + 4}\sqrt{x + 9} = \sqrt{(x + 4)(x + 9)}$ do cả hai biểu thức dưới căn đều không âm.}} \\
+   \displaybreak[2]
+   \iff \sqrt{(x + 4)(x + 9)} &= 6 \\
+   \iff (x + 4)(x + 9) &= 6^2 = 36 \\
+   \iff x^2 + 13x + 36 &= 0 \\
+   \iff x(x+13) &= 0 \\
+   \iff x &= 0 \equationexplanation{$x+13 > x + 4 \geq 0$.}.
+\end{align*}
+
+Vậy tập nghiệm của phương trình là $\{0\}$.
+
+\stepcounter{subexercise}
+\arabic{subexercise}.
