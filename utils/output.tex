@@ -1,9 +1,21 @@
 \begin{figure}[H]
 	\centering
 	\begin{tikzpicture}
-		\draw[->] (0, 0) -- (4, 0) node[right] {$x$};
-		\draw[->] (0, -1) -- (0, 4)  node[above] {$f(x)$};
-		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=1.000:2.791] plot (\x, {(((\x)/1)^2-((\x)/1)-1) / 1});
+		\draw[->] (-8, 0) -- (4, 0) node[right] {$x$};
+		\draw[->] (0, -4) -- (0, 4)  node[above] {$f(x)$};
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-8.000:-4.208] plot (\x, {((1 - 2 / (((\x)/1) + 4)) * (1 + 2 / (((\x)/1) + 1))) / 1});
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-3.860:-1.140] plot (\x, {((1 - 2 / (((\x)/1) + 4)) * (1 + 2 / (((\x)/1) + 1))) / 1});
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-0.792:4.000] plot (\x, {((1 - 2 / (((\x)/1) + 4)) * (1 + 2 / (((\x)/1) + 1))) / 1});
+		\filldraw[color=colorEmphasisCyan] ({-6.6}, { 1.1373626373626373 }) circle (\pointSize) node[above] {$\left(-6{,}60;1{,}14\right)$};
+		\filldraw[color=colorEmphasisCyan] ({-5.5}, { 1.2962962962962963 }) circle (\pointSize) node[above] {$\left(-5{,}50;1{,}30\right)$};
+		\filldraw[color=colorEmphasisCyan] ({-4.4}, { 2.4705882352941164 }) circle (\pointSize) node[above] {$\left(-4{,}40;2{,}47\right)$};
+		\filldraw[color=colorEmphasisCyan] ({-2.0}, { 0.0 }) circle (\pointSize) node[above] {$\left(-2{,}00;0{,}00\right)$};
+		\filldraw[color=colorEmphasisCyan] ({-2.5}, { 0.11111111111111106 }) circle (\pointSize) node[above] {$\left(-2{,}50;0{,}11\right)$};
+		\filldraw[color=colorEmphasisCyan] ({-3.0}, { 0.0 }) circle (\pointSize) node[above] {$\left(-3{,}00;0{,}00\right)$};
+		\filldraw[color=colorEmphasisCyan] ({0.0}, { 1.5 }) circle (\pointSize) node[above] {$\left(0{,}00;1{,}50\right)$};
+		\filldraw[color=colorEmphasisCyan] ({1.1}, { 1.1867413632119512 }) circle (\pointSize) node[above] {$\left(1{,}10;1{,}19\right)$};
+		\filldraw[color=colorEmphasisCyan] ({2.2}, { 1.1008064516129032 }) circle (\pointSize) node[above] {$\left(2{,}20;1{,}10\right)$};
+		\filldraw[color=colorEmphasisCyan] ({3.3}, { 1.0637145587766805 }) circle (\pointSize) node[above] {$\left(3{,}30;1{,}06\right)$};
 	\end{tikzpicture}
-	\caption{Đồ thị của $x^{2} - x - 1$}
+	\caption{Đồ thị của $\left(1 + \frac{2}{x + 1}\right) \left(1 - \frac{2}{x + 4}\right)$}
 \end{figure}

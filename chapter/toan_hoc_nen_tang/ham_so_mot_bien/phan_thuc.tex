@@ -693,6 +693,83 @@ $$
 $$
 Từ đây, kiểm tra giá trị của $x$ trên các khoảng $\left(-\infty; -2\right)$, $\left(-2; -1\right)$, $\left(-1; \infty\right)$ ($x \notin \left\{-1; -2\right\}$ do bất phương trình không xảy ra dấu bằng), thấy được rằng nghiệm của bất phương trình là $\left(-\infty; -2\right) \cup \left(-1; \infty\right)$.
 
+\stepcounter{subexercise}
+\arabic{subexercise}.
+
+\begin{align}
+   &\frac{x-2}{x^2+3x+2} \leq 0 \nonumber\\
+   \iff &\frac{x-2}{(x - 1)(x - 2)} \leq 0 \nonumber\\ 
+   \iff &\begin{cases}
+      \frac{1}{x - 1} \leq 0 \\
+      x - 2 \neq 0
+   \end{cases} \label{eq:toan_hoc_nen_tang:ham_so_mot_bien:phan_thuc:x-1x-2}
+\end{align}
+
+Xét $\frac{1}{x - 1} \leq 0$, giống như phần trước, có $x - 1 \neq 0$. Nhân cả hai vế với $(x - 1)^2$, kết hợp với $x - 1 \neq 0$, được $x - 1 > 0$ hay $x > 1$.
+
+Từ đó, chúng ta có:
+$$\refeq{eq:toan_hoc_nen_tang:ham_so_mot_bien:phan_thuc:x-1x-2} \iff \begin{cases}
+   x > 1 \\
+   x \neq 2
+\end{cases}.$$
+
+Vậy, tập nghiệm của bất phương trình là $\left(1; \infty\right) \setminus \{2\}$ hay $\left(1; 2\right) \cup \left(2; \infty\right)$.
+
+\stepcounter{subexercise}
+\arabic{subexercise}.
+
+\begin{align*}
+   &\frac{x^2 - 3x + 2}{x^2 - 4} \geq 1 \\
+   \iff &\frac{(x - 1)(x - 2)}{(x + 2)(x - 2)} \geq 1 \\
+   \iff &\begin{cases}
+      \frac{x - 1}{x + 2} \geq 1 \\
+      x - 2 \neq 0
+   \end{cases} 
+   \iff \begin{cases}
+      \frac{x - 1}{x + 2} - 1 \geq 0 \\
+      x \neq 2
+   \end{cases} 
+   \iff \begin{cases}
+      \frac{-3}{x + 2} \geq 0 \\
+      x \neq 2
+   \end{cases} \\
+   \iff &\begin{cases}
+      -3(x + 2) \geq 0 \\
+      x \neq 2
+   \end{cases} 
+   \iff \begin{cases}
+      x \leq -2\\
+      x \neq 2
+   \end{cases} \iff x \leq -2.
+\end{align*}
+
+Tập nghiệm của bất phương trình là $\left(-\infty; -2\right)$.
+
+Lỗi sai thường gặp: từ $\frac{x - 1}{x + 2} \geq 1$ suy ra $x - 1 \geq x + 2$ (nhân cả hai vế với $x + 2$). Điều này chỉ đúng khi $x + 2$ là số dương. Trong trường hợp $x + 2 < 0$, có thể thấy được rằng dấu đã đảo chiều:  $x - 1 \leq x + 2$.
+
+\stepcounter{subexercise}
+\arabic{subexercise}.
+
+\begin{align*}
+   x &\leq \frac{x^2 - 1}{x} \\
+   \iff 0 &\leq \frac{x^2 - 1}{x} - x \\
+   \iff 0 &\leq \frac{-1}{x} \\
+   \iff x &< 0.
+\end{align*}
+
+Tập nghiệm của bất phương trình là $\left(-\infty; 0\right)$. Khả năng cao là các bạn đọc đã sử dụng phương pháp chia trường hợp và nhân cả hai vế với $x$ thì sẽ không bao giờ đọc lời giải này.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. 
+
+\begin{align*}
+   &\frac{1}{x} + \frac{1}{x - 1} < \frac{2}{x - 2} \\
+   \iff &\frac{1}{x} + \frac{1}{x - 1} - \frac{2}{x - 2} < 0 \\
+   \iff &\frac{(x - 1)(x - 2) + x(x - 2) - 2x(x + 1)}{x(x - 1)(x - 2)} < 0 \\
+   \iff &\frac{-3x + 2}{x(x - 1)(x - 2)} < 0 \\
+   \iff &(2 - 3x)x(x - 1)(x - 2) < 0.
+\end{align*}
+
 
 \exercise Phác thảo đồ thị của những hàm sau:
 
@@ -702,7 +779,7 @@ Từ đây, kiểm tra giá trị của $x$ trên các khoảng $\left(-\infty; 
       \item $\displaystyle f(x) = \frac{x^4 + 1}{3x^2} - x$;
       \item $\displaystyle f(x) = \frac{15x^3 + x^2 - 22x - 8}{3x^2 + 3x + 8}$;
       \item $\displaystyle f(x) = \frac{x}{x + 2} + \frac{1}{x - 2}$;
-      \item $\displaystyle f(x) = \frac{x + 2}{x} \cdot \frac{x + 3}{x + 1}$;
+      \item $\displaystyle f(x) = \left(1 - \frac{2}{x + 4}\right) \left(1 + \frac{2}{x + 1}\right)$;
       \item $\displaystyle f(x) = \frac{\frac{x^3 + 3x^2 + 3x + 1}{x^4 + 4}}{\frac{2x^2 + 2}{3x^2 + 6x + 6}}$.
    \end{enumerate}
 \end{multicols}
@@ -796,23 +873,36 @@ Từ đây, kiểm tra giá trị của $x$ trên các khoảng $\left(-\infty; 
 \stepcounter{subexercise}
 \arabic{subexercise}.
 
+Để dễ nhận dạng hàm số này, thực hiện một số biến đổi như sau:
+
+\begin{align*}
+   f(x) &= \left(1 - \frac{2}{x + 4}\right) \left(1 + \frac{2}{x + 1}\right) \\
+   &= \frac{x + 2}{x + 4}\cdot \frac{x + 3}{x + 1} \\
+   &= \frac{(x + 2)(x + 3)}{(x + 4)(x + 1)}.
+\end{align*}
+
 \begin{figure}[H]
 	\centering
 	\begin{tikzpicture}
-		\draw[->] (-6, 0) -- (6, 0) node[right] {$x$};
-		\draw[->] (0, -1.5) -- (0, 5)  node[above] {$f(x)$};
-		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-6.000:-1.225] plot (\x, {((((\x)/1)+2)/((\x)/1) * (((\x)/1) + 3)/(((\x)/1) + 1)) / 1});
-		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=1.225:6.000] plot (\x, {((((\x)/1)+2)/((\x)/1) * (((\x)/1) + 3)/(((\x)/1) + 1)) / 1});
-		\filldraw[color=colorEmphasisCyan] (-2.0, 0.0) circle (\pointSize) node[below right] {$\left(-2;0\right)$};
-		\filldraw[color=colorEmphasisCyan] (-3.0, 0.0) circle (\pointSize) node[below left] {$\left(-3;0\right)$};
-      \filldraw[color=colorEmphasisCyan] (-1.3, 3.05128205128205) circle (\pointSize) node[right] {$\left(-1{,}30;3{,}05\right)$};
-		\filldraw[color=colorEmphasisCyan] (-4.2, 0.19642857142857145) circle (\pointSize) node[above] {$\left(-4{,}20;0{,}20\right)$};
-		\filldraw[color=colorEmphasisCyan] (2.7, 2.681681681681681) circle (\pointSize) node[below left] {$\left(2{,}70;2{,}68\right)$};
-		\filldraw[color=colorEmphasisCyan] (3.8, 2.1622807017543857) circle (\pointSize) node[below left] {$\left(3{,}80;2{,}16\right)$};
-		\filldraw[color=colorEmphasisCyan] (5.6, 1.7683982683982682) circle (\pointSize) node[below] {$\left(5{,}60;1{,}77\right)$};
+		\draw[->] (-8, 0) -- (4, 0) node[right] {$x$};
+		\draw[->] (0, -4) -- (0, 4)  node[above] {$f(x)$};
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-8.000:-4.208] plot (\x, {((1 - 2 / (((\x)/1) + 4)) * (1 + 2 / (((\x)/1) + 1))) / 1});
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-3.860:-1.140] plot (\x, {((1 - 2 / (((\x)/1) + 4)) * (1 + 2 / (((\x)/1) + 1))) / 1});
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-0.792:4.000] plot (\x, {((1 - 2 / (((\x)/1) + 4)) * (1 + 2 / (((\x)/1) + 1))) / 1});
+		\filldraw[color=colorEmphasisCyan] ({-6.6}, { 1.1373626373626373 }) circle (\pointSize) node[below] {$\left(-6{,}60;1{,}14\right)$};
+		\filldraw[color=colorEmphasisCyan] ({-5.5}, { 1.2962962962962963 }) circle (\pointSize) node[below right] {$\left(-5{,}50;1{,}30\right)$};
+		\filldraw[color=colorEmphasisCyan] ({-4.4}, { 2.4705882352941164 }) circle (\pointSize) node[right] {$\left(-4{,}40;2{,}47\right)$};
+		\filldraw[color=colorEmphasisCyan] ({-2.0}, { 0.0 }) circle (\pointSize) node[right, xshift=4pt, yshift=-3pt] {$\left(-2;0\right)$};
+		\filldraw[color=colorEmphasisCyan] ({-2.5}, { 0.11111111111111106 }) circle (\pointSize) node[above] {$\left(-2{,}50;0{,}11\right)$};
+		\filldraw[color=colorEmphasisCyan] ({-3.0}, { 0.0 }) circle (\pointSize) node[left, xshift=-4pt, yshift=-3pt] {$\left(-3;0\right)$};
+		\filldraw[color=colorEmphasisCyan] ({0.0}, { 1.5 }) circle (\pointSize) node[above right] {$\left(0{,}00;1{,}50\right)$};
+		\filldraw[color=colorEmphasisCyan] ({1.1}, { 1.1867413632119512 }) circle (\pointSize) node[below] {$\left(1{,}10;1{,}19\right)$};
+		\filldraw[color=colorEmphasisCyan] ({2.2}, { 1.1008064516129032 }) circle (\pointSize) node[above] {$\left(2{,}20;1{,}10\right)$};
+		\filldraw[color=colorEmphasisCyan] ({3.3}, { 1.0637145587766805 }) circle (\pointSize) node[below] {$\left(3{,}30;1{,}06\right)$};
 	\end{tikzpicture}
-	\caption{Đồ thị của $f(x) = \frac{x + 2}{x}\cdot\frac{x + 3}{x + 1}$}
+	\caption{Đồ thị của $f(x) = \left(1 - \frac{2}{x + 4}\right) \left(1 + \frac{2}{x + 1}\right)$}
 \end{figure}
+
 
 \stepcounter{subexercise}
 \arabic{subexercise}. Thực hiện một số biến đổi đơn giản:
