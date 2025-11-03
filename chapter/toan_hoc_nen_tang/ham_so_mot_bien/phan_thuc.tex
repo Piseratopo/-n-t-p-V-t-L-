@@ -791,7 +791,21 @@ Vẽ bảng xét dấu của $(2 - 3x)x(x - 1)(x - 2)$:
    \caption{Bảng xét dấu của $(2 - 3x)x(x - 1)(x - 2)$}
 \end{table}
 
+Tập nghiệm của bất phương trình là $\left(-\infty; 0\right) \cup \left(\frac{2}{3}; 1\right) \cup \left(2; \infty\right)$.
 
+\stepcounter{subexercise}
+\arabic{subexercise}. Để ý rằng, $\frac{x^2 - 3x + 2}{x^2 - 4x + 3} = \frac{(x - 1)(x - 2)}{(x - 1)(x - 3)} = \frac{x - 2}{x - 3}$ và $\frac{x^2 - 5x + 6}{x^2 - 6x + 8} = \frac{(x - 2)(x - 3)}{(x - 2)(x - 4)} = \frac{x - 3}{x - 4}$. Cho nên, với $x \notin \left\{1; 2\right\}$, có bất phương trình tương đương:
+\begin{align*}
+   &\frac{x - 2}{x - 3} \leq \frac{x - 3}{x - 4} \\
+   \iff &\frac{x - 2}{x - 3} - \frac{x - 3}{x - 4} \leq 0 \\
+   \iff &\frac{(x - 2)(x - 4) - (x - 3)^2}{(x - 3)(x - 4)} \leq 0 \\
+   \iff &\frac{x^2 - 6x + 8 - x^2 + 6x - 9}{(x - 3)(x - 4)} \leq 0 \\
+   \iff &\frac{-1}{(x - 3)(x - 4)} \leq 0 \\
+   \iff &(x - 3)(x - 4) > 0 \\
+   \iff &x \in \left(-\infty; 3\right) \cup \left(4; \infty\right).
+\end{align*}
+
+Kết hợp với điều kiện đã có, được nghiệm của phương trình này nằm trong tập $\left(-\infty; 1\right) \cup \left(1; 2\right) \cup \left(2; 3\right) \cup \left(4; \infty\right)$.
 
 \exercise Phác thảo đồ thị của những hàm sau:
 
