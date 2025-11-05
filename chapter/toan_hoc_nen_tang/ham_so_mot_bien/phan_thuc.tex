@@ -680,7 +680,7 @@ Do đó, $\text{\refeq{eq:ham_so_mot_bien:phan_thuc:ptpt7}} \iff x = 4$. Kiểm 
       \item $\frac {1}{x} + \frac{1}{x - 1} < \frac{2}{x - 2}$;
       \item $\frac{x^2 - 3x + 2}{x^2 - 4x + 3} \leq \frac{x^2 - 5x + 6}{x^2 - 6x + 8}$;
       \item $\frac{x^3-1}{x^2 - 1} > x - 1$;
-      \item $x^2 + \frac{x^2}{1+x^2} > x + \frac{x}{1+x}$.
+      \item $x^2 - \frac{x^2}{1+x^2} > x - \frac{x}{1+x}$.
    \end{enumerate}
 \end{multicols}
 
@@ -825,10 +825,22 @@ Tập nghiệm của bất phương trình là $\left(-\infty; -2\right) \cup \l
 \stepcounter{subexercise}
 \arabic{subexercise}. Với $x \neq -1$, có:
 \begin{align*}
-   &x^2 + \frac{x^2}{1+x^2} > x + \frac{x}{1+x} \\
-   \iff &x^2 - x + \frac{x^2}{1+x^2} - \frac{x}{1+x} > 0 \\
-   \iff &x^2 - x + \frac{x^2(1 + x) - x\left(1+x^2\right)}{\left(1+x^2\right)(1 + x)} > 0 \\
-   \iff &x^2 - x
+   &x^2 - \frac{x^2}{1+x^2} > x - \frac{x}{1+x}\\
+   \iff &x^2 - x - \frac{x^2}{1+x^2} + \frac{x}{1+x} > 0 \\
+   \iff &x^2 - x - \frac{x^2(1 + x) - x\left(1+x^2\right)}{\left(1+x^2\right)(1 + x)} > 0 \\
+   \iff &x^2 - x - \frac{x^2 - x}{\left(1 + x^2\right)(1 + x)} > 0 \\
+   \iff &\left(x^2 - x\right)\left(1 - \frac{1}{\left(1+x^2\right)(1 + x)}\right) > 0 \\
+   \iff &\left(x^2 - x\right)\left(\frac{x^3 + x^2 + x}{(1 + x^2)(1 + x)}\right) > 0 \\
+   \iff &\frac{x^2(x - 1)(x^2 + x + 1)}{(1 + x^2)(1 + x)} > 0.
+\end{align*}
+Có $x^2 + x + 1 = \left(x + \frac 12\right)^2 + \frac 34 > 0$, $x^2 \geq 0$ và $1 + x^2 > 0$ nên bất phương trình cuối cùng tương đương với
+\begin{align*}
+   &\frac{x - 1}{1 + x} > 0 \\
+   \iff &(x - 1)(x + 1) > 0 \\
+   \iff &\left[\begin{array}{c}
+      x > 1 \\
+      x < -1
+   \end{array}\right..
 \end{align*}
 
 \exercise Phác thảo đồ thị của những hàm sau:
