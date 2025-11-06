@@ -962,9 +962,9 @@ Qua hai trường hợp, chúng ta thấy không có $x$ để $\left\lfloor \fr
 \begin{multicols}{2}
    \begin{enumerate}
       \item $\left|\frac{x + 2}{x + 1}\right| \geq 3x - 3$;
-      \item $|ax + b| < |cx + d| + 1$ với $a$, $b$, $c$, $d$ là các tham số thực;
       \item $|x + 1| + |x + 2| + |x + 3| + |x + 4| \leq 400$;
       \item $|x + 1| + |x + 2| + |x + 3| + |x + 4| \geq 4$;
+      \item $|ax + b| < |cx + d| + 1$ với $a$, $b$, $c$, $d$ là các tham số thực;
    \end{enumerate}
 \end{multicols}
 
@@ -1019,7 +1019,7 @@ Có bảng xét dấu như sau:
    \centering
    \begin{tabular}{|c|ccccccccc|}
    \hline
-   $x$                  & $-\infty$ &     & $-\frac{\sqrt{61}}{6}+\frac{1}{6}$ &     & $-1$ &   & $\frac{1}{6}+\frac{\sqrt{61}}{6}$ &     & $+\infty$ \\
+   $x$                  & $-\infty$ &     & $\frac{1 - \sqrt{61}}{6}$ &     & $-1$ &   & $\frac{1 + \sqrt{61}}{6}$ &     & $\infty$ \\
    \hline
    $-3 x^{2}+x+5$       &           & $-$ &                 0                  &  +  &      & + &                 0                 & $-$ &           \\
    \hline
@@ -1030,3 +1030,10 @@ Có bảng xét dấu như sau:
    \end{tabular}
    \caption{Bảng xét dấu của $\left(-3x^{2}+x+5\right)(x+1)$}
 \end{table}
+
+Nghiệm của bất phương trình trong trường hợp này là $\left(-\infty; \frac{1 - \sqrt{61}}{6}\right] \cup \left(-1; \frac{1 + \sqrt{61}}{6}\right]$.
+
+Kết hợp hai trường hợp, chúng ta có tập nghiệm: $\left(-\infty; \frac{1 + \sqrt{61}}{6}\right] \setminus \{-1\}$.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. 
