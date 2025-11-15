@@ -820,9 +820,9 @@ Vậy $|a| \geq a$ với mọi $a$ thực.
 \end{align*}
 Chúng ta qua đó có điều phải chứng minh.
 
-\exercise Chứng minh rằng với $a$ và $b$ là hai số thực thì $|a| + |b| \geq |a + b|$.
+\exercise[bdttg] Chứng minh rằng với $a$ và $b$ là hai số thực thì $|a| + |b| \geq |a + b|$.
 
-\solution
+\solution[bdttg]
 
 Chúng ta có những đẳng thức và bất đẳng thức sau:
 \begin{equation*}
@@ -959,14 +959,17 @@ $$
 Qua hai trường hợp, chúng ta thấy không có $x$ để $\left\lfloor \frac{x}{3} \right\rfloor + \left\lfloor \frac{x}{5} \right\rfloor = 7$. Vậy phương trình vô nghiệm.
 
 \exercise Giải các bất phương trình sau trên ẩn $x$ thực:
-\begin{multicols}{2}
-   \begin{enumerate}
-      \item $\left|\frac{x + 2}{x + 1}\right| \geq 3x - 3$;
-      \item $|x + 1| + |x + 2| + |x + 3| + |x + 4| \leq 400$;
-      \item $|x + 1| + |x + 2| + |x + 3| + |x + 4| \geq 4$;
-      \item $|ax + b| < |cx + d| + 1$ với $a$, $b$, $c$, $d$ là các tham số thực;
-   \end{enumerate}
-\end{multicols}
+\begin{enumerate}
+   \item $\left|\frac{x + 2}{x + 1}\right| \geq 3x - 3$;
+   \item $|x + 1| + |x + 2| + |x + 3| + |x + 4| \leq 400$;
+   \item $|x + 1| + |x + 2| + |x + 3| + |x + 4| \geq 4$;
+   \item $f(x) > g(x)$, với $f(x) = \begin{cases}
+      2x &\ \text{với } -3 \leq x \leq 1 \\
+      -2 &\ \text{với } -1 \leq x < 0 \\
+      x^2 - 2 &\ \text{với } 0 \le x \le 2
+   \end{cases}$
+   \item $|ax + b| < |cx + d| + 1$ với $a$, $b$, $c$, $d$ là các tham số thực;
+\end{enumerate}
 
 \solution
 
@@ -1062,4 +1065,69 @@ Sử dụng bảng xét dấu để dễ dàng rút gọn vế trái của bất
    \caption{Bảng xét giá trị của $|x + 1| + |x + 2| + |x + 3| + |x + 4|$}
 \end{table}
 
-Kết hợp với đồ thị:
+Có thể nhìn trực quan qua đồ thị để có được là mọi giá trị của $x$ từ $-4$ đến $-1$ đều không vượt quá $400$.
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\draw[->] (-6, 0) -- (1, 0) node[right] {$x$};
+		\draw[->] (0, 0) -- (0, 8)  node[above] {$f(x)$};
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-6:-4.000] plot (\x, {(-4*((\x)/1) - 10) / 2});
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-4:-3] plot (\x, {-(\x) - 1});
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-3:-2] plot (\x, {2});
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-2:-1] plot (\x, {\x + 4});
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-1:1] plot (\x, {2*\x + 5});
+      \filldraw[color=colorEmphasisCyan] ({ -4 }, { 3 }) circle (\pointSize) node[below left] {$\left({-4};{6}\right)$};
+      \filldraw[color=colorEmphasisCyan] ({ -3 }, { 2 }) circle (\pointSize) node[below left] {$\left({-3};{4}\right)$};
+      \filldraw[color=colorEmphasisCyan] ({ -1 }, { 3 }) circle (\pointSize) node[below right] {$\left({-1};{6}\right)$};
+      \filldraw[color=colorEmphasisCyan] ({ -2 }, { 2 }) circle (\pointSize) node[below right] {$\left({-2};{4}\right)$};
+	\end{tikzpicture}
+	\caption{Đồ thị của $|x + 1| + |x + 2| + |x + 3| + |x + 4|$}
+   \label{fig:toan_hoc_nen_tang:ham_so_mot_bien:ham_tung_phan:bdtkho_2}
+\end{figure}
+
+Khi $x < -4$, bất phương trình tương đương:
+\begin{align*}
+   -4x - 10 &\leq 400 \\
+   \iff x &\geq -\frac{205}{2}.
+\end{align*} 
+
+Khi $x > -1$, bất phương trình tương đương:
+\begin{align*}
+   4x + 10 &\leq 400 \\
+   \iff x &\geq \frac{195}{2}.
+\end{align*}
+
+Kết hợp các trường hợp khác nhau, chúng ta có tập nghiệm của bất phương trình này là $\left[ -\frac{205}{2}; \frac{195}{2} \right]$.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Nếu chúng ta nhìn vào đồ thị hình \ref{fig:toan_hoc_nen_tang:ham_so_mot_bien:ham_tung_phan:bdtkho_2}, sẽ có được ngay bất phương trình này đúng với mọi $x$ thực. Bất đẳng thức này cũng có thể được chứng minh bằng phương pháp đại số như sau: Để ý rằng,
+$$
+   |x + 1| + |x + 2| + |x + 3| + |x + 4| = |x + 1| + |-x - 2| + |x + 3| + |-x - 4|.
+$$
+Ngoài ra, đã có $|a| + |b| \geq |a + b|$ đã được chứng minh ở bài \ref{ex:bdttg}, cho nên:
+\begin{align*}
+|x + 1| + |x + 2| + |x + 3| + |x + 4| &\geq \left|(x + 1) + (-x - 2)\right| + \left|(x + 3) + (-x - 4)\right| \\
+\iff |x + 1| + |x + 2| + |x + 3| + |x + 4| &\geq 4.
+\end{align*}
+
+Tập nghiệm của bất phương trình là $\mathbb{R}$.
+
+\stepcounter{subexercise}
+\arabic{subexercise}.
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\draw[->] (-5, 0) -- (2, 0) node[right] {$x$};
+		\draw[->] (0, -6) -- (0, 2)  node[above] {$f(x)$};
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-5.000:-1.000] plot (\x, {(2*((\x)/1)) / 2});
+		\filldraw[color=colorEmphasisCyan] ({ -5.0 }, { -5.0 }) circle (\pointSize) node[above] {$\left({-5};{-10}\right)$};
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-1.000:0.000] plot (\x, {(-2) / 2});
+		\filldraw[color=colorEmphasisCyan] ({ -1.0 }, { -1.0 }) circle (\pointSize) node[above] {$\left({-1};{-2{,}0}\right)$};
+		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=0.000:2.000] plot (\x, {(((\x)/1)^2 - 2) / 2});
+		\filldraw[color=colorEmphasisCyan] ({ 0.0 }, { -1.0 }) circle (\pointSize) node[above] {$\left({0};{-2}\right)$};
+		\filldraw[color=colorEmphasisCyan] ({ 2.0 }, { 1.0 }) circle (\pointSize) node[above] {$\left({2};{2}\right)$};
+	\end{tikzpicture}
+	\caption{Đồ thị của $2 x$,$-2$,$x^{2} - 2$}
+\end{figure}
