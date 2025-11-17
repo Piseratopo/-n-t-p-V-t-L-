@@ -46,46 +46,42 @@
 
 Với $a; b \in \mathbb{R}$ sao cho $a \leq b$, định nghĩa chín loại \defText{khoảng}:
 
-% \begin{tabular}{
-%    |>{\centering\arraybackslash}m{6cm}
-%    |>{\centering\arraybackslash}m{6cm}|
-% }
-% \hline
-% \textbf{Khoảng} & \textbf{Biểu diễn} \\
-% \hline
-% Dòng một có thể dài nên sẽ tự xuống dòng
-% & Nội dung cột hai cũng được căn giữa cả ngang và dọc \\
-% \hline
-% Nội dung hàng 2 & Cột 2 hàng 2 \\
-% \hline
-% \end{tabular}
+\newcommand{\rangeParbox}[1]{\parbox[c][1.5cm][c]{\linewidth / 2 - 15pt} {
+   \centering
+   #1
+}}
 
-   % \begin{tabular}{|m{6cm}|m{6cm}|}
-   %    \hline
-   %    \textbf{Khoảng} & \textbf{Biểu diễn} 
-      % \hline
-      % \begin{tabular}{c}
-      %    $\left[a; b\right] = \left\{x \in \mathbb{R} : a \leq x \leq b\right\}$\\
-      %    (\defText{khoảng đóng bị chặn} hay \defText{đoạn})
-      %    \end{tabular}
-      %    &
-      %    \begin{tikzpicture}
-      %       \draw[->] (-3, 0) -- (3, 0);
-      %       \filldraw[color=colorEmphasisCyan] (-1.2, 0) circle (\pointSize);
-      %       \filldraw[color=colorEmphasisCyan] (1.8, 0) circle (\pointSize);
-      %       \draw[graph thickness,color=colorEmphasisCyan] (-1.2, 0) -- (1.8, 0);
-      %    \end{tikzpicture}
-      %    \\
-      %    \hline
-      %    \defMath{\left[a; b\right) = \left[a; b\right[ = \left\{x \in \mathbb{R} : a \leq x < b\right\}}
-      %    & % second column empty for now
-      %    \\
-      %    \hline
-   % \end{tabular}
+\begin{table}[H]
+   \centering
+   \begin{tabular}{|c|c|}
+      \hline
+      \textbf{Khoảng} & \textbf{Biểu diễn} \\
+      \hline
+      \rangeParbox{
+         $\left[a; b\right] = \left\{x \in \mathbb{R} : a \leq x \leq b\right\}$\\
+         (\defText{khoảng đóng bị chặn} hay \defText{đoạn})
+      } & \rangeParbox{
+         \begin{tikzpicture}
+            \draw[->] (-3, 0) -- (3, 0);
+            \draw[graph thickness,color=colorEmphasisCyan] (-1.2, 0) -- (1.8, 0);
+            \filldraw[color=colorEmphasisCyan] (-1.2, 0) circle (\pointSize) node[below] {$a$};
+            \filldraw[color=colorEmphasisCyan] (1.8, 0) circle (\pointSize) node[below] {$b$};
+         \end{tikzpicture}
+      } \\
+      \hline
+      \rangeParbox{$\defMath{\left(a; b\right] = \left]a; b\right] = \left\{x \in \mathbb{R} : a < x \leq b\right\}}$} & \rangeParbox{
+         \begin{tikzpicture}
+            \draw[->] (-3, 0) -- (3, 0);
+            \draw[graph thickness,color=colorEmphasisCyan] (-1.2, 0) -- (1.8, 0);
+            \filldraw[color=colorEmphasisCyan, hollow point] (-1.2, 0) circle (\pointSize) node[below] {$a$};
+            \filldraw[color=colorEmphasisCyan] (1.8, 0) circle (\pointSize) node[below] {$b$};
+         \end{tikzpicture}
+      }
+   \end{tabular}
+\end{table}
+
 
 \begin{itemize}
-   \item ;
-   \item $\defMath{\left(a; b\right] = \left]a; b\right] = \left\{x \in \mathbb{R} : a < x \leq b\right\}}$;
    \item $\defMath{\left(a; b\right) = \left]a; b\right[ = \left\{x \in \mathbb{R} : a < x < b\right\}}$;
    \item $\defMath{\left(-\infty; a\right] = \left]-\infty; a\right] = \left\{x \in \mathbb{R} : x \leq a\right\}}$;
    \item $\defMath{\left(-\infty; a\right) = \left]-\infty; a\right[ = \left\{x \in \mathbb{R} : x < a\right\}}$;
