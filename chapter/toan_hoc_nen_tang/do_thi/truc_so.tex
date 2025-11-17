@@ -44,6 +44,41 @@
    \end{minipageindent}
 }
 
+Với $a; b \in \mathbb{R}$ sao cho $a \leq b$, định nghĩa chín loại \defText{khoảng}:
+
+\begin{table}[H]
+   \centering
+   \begin{tabular}{|c|c|}
+      \hline
+      \textbf{Khoảng} & \textbf{Biểu diễn} \\ 
+      \hline
+      \begin{tabular}{c}
+         $\left[a; b\right] = \left\{x \in \mathbb{R} : a \leq x \leq b\right\}$\\
+         (\defText{khoảng đóng bị chặn} hay \defText{đoạn})
+      \end{tabular}&
+      \begin{tikzpicture}
+         \draw[->] (-3, 0) -- (3, 0);
+         \filldraw[color=colorEmphasisCyan] (-1.2, 0) circle (\pointSize);
+         \filldraw[color=colorEmphasisCyan] (1.8, 0) circle (\pointSize);
+         \draw[graph thickness,color=colorEmphasisCyan] (-1.2, 0) -- (1.8, 0);
+      \end{tikzpicture}
+      \\
+      \hline
+   \end{tabular}
+\end{table}
+
+\begin{itemize}
+   \item $\defMath{\left[a; b\right] = \left\{x \in \mathbb{R} : a \leq x \leq b\right\}}$, còn có tên là ;
+   \item $\defMath{\left[a; b\right) = \left[a; b\right[ = \left\{x \in \mathbb{R} : a \leq x < b\right\}}$;
+   \item $\defMath{\left(a; b\right] = \left]a; b\right] = \left\{x \in \mathbb{R} : a < x \leq b\right\}}$;
+   \item $\defMath{\left(a; b\right) = \left]a; b\right[ = \left\{x \in \mathbb{R} : a < x < b\right\}}$;
+   \item $\defMath{\left(-\infty; a\right] = \left]-\infty; a\right] = \left\{x \in \mathbb{R} : x \leq a\right\}}$;
+   \item $\defMath{\left(-\infty; a\right) = \left]-\infty; a\right[ = \left\{x \in \mathbb{R} : x < a\right\}}$;
+   \item $\defMath{\left[a; +\infty\right) = \left[a; +\infty\right[ = \left\{x \in \mathbb{R} : x \geq a\right\}}$;
+   \item $\defMath{\left(a; +\infty\right) = \left]a; +\infty\right[ = \left\{x \in \mathbb{R} : x > a\right\}}$;
+   \item $\defMath{\left(-\infty; +\infty\right) = \left]-\infty; +\infty\right[ = \mathbb{R}}$;
+\end{itemize}
+
 \exercise[ex:0.1] Biểu diễn nhóm các điểm sau trên trục số. Tính khoảng cách giữa hai điểm phân biệt bất kì trong nhóm đó.
 \begin{enumerate}
    \item $A(2)$, $B(-3)$, và $C(4)$;
