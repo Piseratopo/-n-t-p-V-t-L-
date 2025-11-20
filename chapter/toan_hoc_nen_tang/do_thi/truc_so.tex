@@ -55,7 +55,7 @@ Với $a; b \in \mathbb{R}$ sao cho $a \leq b$, định nghĩa chín loại \def
    \centering
    \begin{tabular}{|c|c|}
       \hline
-      \textbf{Khoảng} & \textbf{Biểu diễn} \\
+      \textbf{Khoảng} & \textbf{Biểu diễn trên trục số} \\
       \hline
       \rangeParbox{
          $\left[a; b\right] = \left\{x \in \mathbb{R} : a \leq x \leq b\right\}$\\
@@ -76,15 +76,57 @@ Với $a; b \in \mathbb{R}$ sao cho $a \leq b$, định nghĩa chín loại \def
             \filldraw[color=colorEmphasisCyan, hollow point] (-1.2, 0) circle (\pointSize) node[below] {$a$};
             \filldraw[color=colorEmphasisCyan] (1.8, 0) circle (\pointSize) node[below] {$b$};
          \end{tikzpicture}
-      }
+      } \\
+      \hline
+      \rangeParbox{$\defMath{\left[a; b\right) = \left[a; b\right[ = \left\{x \in \mathbb{R} : a \leq x < b\right\}}$} & \rangeParbox{
+         \begin{tikzpicture}
+            \draw[->] (-3, 0) -- (3, 0);
+            \draw[graph thickness,color=colorEmphasisCyan] (-1.2, 0) -- (1.8, 0);
+            \filldraw[color=colorEmphasisCyan] (-1.2, 0) circle (\pointSize) node[below] {$a$};
+            \filldraw[color=colorEmphasisCyan, hollow point] (1.8, 0) circle (\pointSize) node[below] {$b$};
+         \end{tikzpicture}
+      } \\
+      \hline
+      \rangeParbox{$\defMath{\left(a; b\right) = \left]a; b\right[ = \left\{x \in \mathbb{R} : a < x < b\right\}}$} & \rangeParbox{
+         \begin{tikzpicture}
+            \draw[->] (-3, 0) -- (3, 0);
+            \draw[graph thickness,color=colorEmphasisCyan] (-1.2, 0) -- (1.8, 0);
+            \filldraw[color=colorEmphasisCyan, hollow point] (-1.2, 0) circle (\pointSize) node[below] {$a$};
+            \filldraw[color=colorEmphasisCyan, hollow point] (1.8, 0) circle (\pointSize) node[below] {$b$};
+         \end{tikzpicture}
+      } \\
+      \hline
+   \end{tabular}
+   \caption{Các khoảng có độ dài hữu hạn}
+\end{table}
+
+\begin{table}[H]
+   \centering
+   \begin{tabular}{|c|c|}
+      \hline
+      \textbf{Khoảng} & \textbf{Biểu diễn trên trục số} \\
+      \hline
+      \rangeParbox{$\defMath{\left(-\infty; a\right] = \left]-\infty; a\right] = \left\{x \in \mathbb{R} : x \leq a\right\}}$} & \rangeParbox{
+         \begin{tikzpicture}
+            \draw[->] (-3, 0) -- (3, 0);
+            \draw[graph thickness,color=colorEmphasisCyan] (-3, 0) -- (1.8, 0);
+            \filldraw[color=colorEmphasisCyan] (1.8, 0) circle (\pointSize) node[below] {$a$};
+         \end{tikzpicture}
+      } \\
+      \hline
+      \rangeParbox{$\defMath{\left(-\infty; a\right) = \left]-\infty; a\right[ = \left\{x \in \mathbb{R} : x < a\right\}}$} & \rangeParbox{
+         \begin{tikzpicture}
+            \draw[->] (-3, 0) -- (3, 0);
+            \draw[graph thickness,color=colorEmphasisCyan] (-3, 0) -- (1.8, 0);
+            \filldraw[color=colorEmphasisCyan, hollow point] (1.8, 0) circle (\pointSize) node[below] {$a$};
+         \end{tikzpicture}
+      } \\
+      \hline
    \end{tabular}
 \end{table}
 
 
 \begin{itemize}
-   \item $\defMath{\left(a; b\right) = \left]a; b\right[ = \left\{x \in \mathbb{R} : a < x < b\right\}}$;
-   \item $\defMath{\left(-\infty; a\right] = \left]-\infty; a\right] = \left\{x \in \mathbb{R} : x \leq a\right\}}$;
-   \item $\defMath{\left(-\infty; a\right) = \left]-\infty; a\right[ = \left\{x \in \mathbb{R} : x < a\right\}}$;
    \item $\defMath{\left[a; +\infty\right) = \left[a; +\infty\right[ = \left\{x \in \mathbb{R} : x \geq a\right\}}$;
    \item $\defMath{\left(a; +\infty\right) = \left]a; +\infty\right[ = \left\{x \in \mathbb{R} : x > a\right\}}$;
    \item $\defMath{\left(-\infty; +\infty\right) = \left]-\infty; +\infty\right[ = \mathbb{R}}$;
