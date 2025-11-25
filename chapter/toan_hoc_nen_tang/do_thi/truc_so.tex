@@ -44,7 +44,7 @@
    \end{minipageindent}
 }
 
-Với $a; b \in \mathbb{R}$ sao cho $a \leq b$, định nghĩa chín loại \defText{khoảng}:
+Trục số là công cụ hiệu quả để biểu diễn các cấu trúc hình học một chiều, trong đó có cấu trúc hay dùng là \defText{khoảng}. Với $a; b \in \mathbb{R}$ sao cho $a \leq b$, định nghĩa chín loại khoảng như sau:
 
 \newcommand{\rangeParbox}[1]{\parbox[c][1.5cm][c]{\linewidth / 2 - 15pt} {
    \centering
@@ -106,31 +106,48 @@ Với $a; b \in \mathbb{R}$ sao cho $a \leq b$, định nghĩa chín loại \def
       \hline
       \textbf{Khoảng} & \textbf{Biểu diễn trên trục số} \\
       \hline
-      \rangeParbox{$\defMath{\left(-\infty; a\right] = \left]-\infty; a\right] = \left\{x \in \mathbb{R} : x \leq a\right\}}$} & \rangeParbox{
+      \rangeParbox{$\defMath{\left(-\infty; b\right] = \left]-\infty; b\right] = \left\{x \in \mathbb{R} : x \leq b\right\}}$} & \rangeParbox{
          \begin{tikzpicture}
             \draw[->] (-3, 0) -- (3, 0);
             \draw[graph thickness,color=colorEmphasisCyan] (-3, 0) -- (1.8, 0);
-            \filldraw[color=colorEmphasisCyan] (1.8, 0) circle (\pointSize) node[below] {$a$};
+            \filldraw[color=colorEmphasisCyan] (1.8, 0) circle (\pointSize) node[below] {$b$};
          \end{tikzpicture}
       } \\
       \hline
-      \rangeParbox{$\defMath{\left(-\infty; a\right) = \left]-\infty; a\right[ = \left\{x \in \mathbb{R} : x < a\right\}}$} & \rangeParbox{
+      \rangeParbox{$\defMath{\left(-\infty; b\right) = \left]-\infty; b\right[ = \left\{x \in \mathbb{R} : x < b\right\}}$} & \rangeParbox{
          \begin{tikzpicture}
             \draw[->] (-3, 0) -- (3, 0);
             \draw[graph thickness,color=colorEmphasisCyan] (-3, 0) -- (1.8, 0);
-            \filldraw[color=colorEmphasisCyan, hollow point] (1.8, 0) circle (\pointSize) node[below] {$a$};
+            \filldraw[color=colorEmphasisCyan, hollow point] (1.8, 0) circle (\pointSize) node[below] {$b$};
+         \end{tikzpicture}
+      } \\
+      \hline
+      \rangeParbox{$\defMath{\left[a; +\infty\right) = \left[a; +\infty\right[ = \left\{x \in \mathbb{R} : x \geq a\right\}}$} & \rangeParbox{
+         \begin{tikzpicture}
+            \draw[->] (-3, 0) -- (3, 0);
+            \draw[graph thickness,color=colorEmphasisCyan] (-1.2, 0) -- (3, 0);
+            \filldraw[color=colorEmphasisCyan] (-1.2, 0) circle (\pointSize) node[below] {$a$};
+         \end{tikzpicture}
+      } \\
+      \hline
+      \rangeParbox{$\defMath{\left(a; +\infty\right) = \left]a; +\infty\right[ = \left\{x \in \mathbb{R} : x > a\right\}}$} & \rangeParbox{
+         \begin{tikzpicture}
+            \draw[->] (-3, 0) -- (3, 0);
+            \draw[graph thickness,color=colorEmphasisCyan] (-1.2, 0) -- (3, 0);
+            \filldraw[color=colorEmphasisCyan, hollow point] (-1.2, 0) circle (\pointSize) node[below] {$a$};
+         \end{tikzpicture}
+      } \\
+      \hline
+      \rangeParbox{$\defMath{\left(-\infty; +\infty\right) = \left]-\infty; +\infty\right[ = \mathbb{R}}$} & \rangeParbox{
+         \begin{tikzpicture}
+            \draw[->] (-3, 0) -- (3, 0);
+            \draw[graph thickness,color=colorEmphasisCyan] (-3, 0) -- (3, 0);
          \end{tikzpicture}
       } \\
       \hline
    \end{tabular}
 \end{table}
 
-
-\begin{itemize}
-   \item $\defMath{\left[a; +\infty\right) = \left[a; +\infty\right[ = \left\{x \in \mathbb{R} : x \geq a\right\}}$;
-   \item $\defMath{\left(a; +\infty\right) = \left]a; +\infty\right[ = \left\{x \in \mathbb{R} : x > a\right\}}$;
-   \item $\defMath{\left(-\infty; +\infty\right) = \left]-\infty; +\infty\right[ = \mathbb{R}}$;
-\end{itemize}
 
 \exercise[ex:0.1] Biểu diễn nhóm các điểm sau trên trục số. Tính khoảng cách giữa hai điểm phân biệt bất kì trong nhóm đó.
 \begin{enumerate}
