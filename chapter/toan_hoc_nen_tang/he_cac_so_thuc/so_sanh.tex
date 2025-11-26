@@ -25,4 +25,11 @@ Từ $\le$, chúng ta có thể định nghĩa các kí hiệu so sánh khác, b
    \item $\defMath{a > b \iff b < a}$.
 \end{itemize}
 
-Với $A$ là một tập con của $\mathbb{R}$
+Ngoài sự so sánh đơn lẻ, chúng ta còn có thể so sánh một cách toàn cục. Với $A$ là một tập con của $\mathbb{R}$ và $x$ là một phần tử trong $\mathbb{R}$, định nghĩa:
+\begin{itemize}
+   \item $x$ là \defText{chặn trên} của $A$ nếu $y \leq x$ với mọi $y$ trong $A$;
+   \item $x$ là \defText{chặn dưới} của $A$ nếu $x \leq y$ với mọi $y$ trong $A$.
+\end{itemize}
+Trong cả hai định nghĩa đó, nếu $x$ thuộc $A$ thì $x$ sẽ là \defText{phần tử lớn nhất} và \defText{phần tử nhỏ nhất} tương ứng. Chúng ta có thể kí hiệu phần tử lớn nhất là $\defMath{\ptln{(A)}}$, $\defMath{\Max{(A)}}$ hay $\defMath{\max{(A)}}$. Có thể nhận thấy rằng nếu $A$ có phần tử lớn nhất thì nó chỉ có đúng một phần tử như vậy. Thực vậy, nếu $x$ và $y$ cùng là phần tử lớn nhất của $A$, thì theo định nghĩa phần tử lớn nhất của $x$ và $y \in A$ nên $y \leq x$. Tương tự, có $x \leq y$. Theo tính phản xạ của $\le$, suy ra được $x = y$.
+
+Các số trong $\mathbb{R}$ làm chặn trên của $A$ tạo thành một tập hợp. Nếu tập hợp đó có phần tử nhỏ nhất thì phần tử đó có tên là \defText{biên trên} (hay \defText{cận trên đúng}) và được kí hiệu là $\defMath{\sup{(A)}}$, $\defMath{\Sup{(A)}}$ hoặc $\defMath{\Sup_{\mathbb{R}}{(A)}}$. Tương tự, số lớn nhất trong các chặn dưới của $A$ thì gọi là \defText{biên dưới}, hay \defText{chặn dưới đúng}.
