@@ -4,19 +4,33 @@
 
 Các ngành toán học đều có nhiều khái niệm, định lí, chứng minh trên các vật thể khác nhau, nhưng tổng quát trong đấy vẫn có nhiều điểm chung. Một cái chung như vậy là việc sử dụng \defText{dấu bằng}, $\defMath{=}$, để biểu diễn quan hệ giống nhau. Ở trong khuôn khổ cuốn sách này, chúng ta sẽ hiểu một cách nôm na rằng hai vế sẽ bằng nhau khi và chỉ khi hai vế có giá trị bằng nhau.
 
-Phần này đề cập các yếu tố đại số cơ bản của \defText{số thực}, cụ thể là những hệ thức mà trong đó số thực tương tác với một số hữu hạn các \defText{phép cộng} và \defText{phép nhân}. 
+Phần đầu tiên này đề cập các yếu tố đại số cơ bản của \defText{số thực}, cụ thể là những hệ thức mà trong đó số thực tương tác với một số hữu hạn các \defText{phép cộng} và \defText{phép nhân}. 
 
 Gọi $\defMath{\mathbb{R}}$ là tập hợp số thực. Nếu $a, b, c$ đều thuộc $\mathbb{R}$, với phép cộng và phép nhân mang ý nghĩa thông thường, có:
 \begin{itemize}
-   \item $a + b$ và $a\times b$ (hay $a\cdot b$, $ab$) đều thuộc $\mathbb{R}$;
-   \item $a+b=b+a$ và $ab=ba$ (\defText{tính giao hoán});
-   \item $a+(b+c)=(a+b)+c$ và $a(bc)=(ab)c$ (\defText{tính kết hợp});
-   \item $a(b+c)=ab+ac$ (\defText{tính phân phối});
-   \item $a\times 1 = a$ (\defText{đơn vị});
-   \item $a + 0 = a$ và $a\times 0 = 0$ (\defText{số không});
+   \item $a + b$ và $a\cdot b$ (hay $a \times b$, $ab$) đều thuộc $\mathbb{R}$;
+   \item $a+b=b+a$ và $a\cdot b=b\cdot a$ (\defText{tính giao hoán});
+   \item $a+(b+c)=(a+b)+c$ và $a\cdot (b\cdot c)=(a\cdot b)\cdot c$ (\defText{tính kết hợp});
+   \item $a\cdot (b+c)=a\cdot b+a\cdot c$ (\defText{tính phân phối});
+   \item $a\cdot 1 = a$ (\defText{đơn vị});
+   \item $a + 0 = a$ và $a\cdot 0 = 0$ (\defText{số không});
    \item $a + c = b + c \implies a = b$ (\defText{tính giản ước được});
-   \item Nếu $c \neq 0$, $ac = bc \implies a = b$ (\defText{tính giản ước được}).
+   \item Nếu $c \neq 0$, $a\cdot c = b\cdot c \implies a = b$ (\defText{tính giản ước được}).
 \end{itemize}
+Tính chất giao hoán và tính chất kết hợp cho phép viết $a + b + c$ và $a\cdot b\cdot c$ mà không phần phải quan tâm đến thứ tự tính toán hay vị trí của các phần tử trong biểu thức. Một điều cần lưu ý là không phải mọi thực thể trong toán học đều đơn giản như vậy. Lấy ví dụ, phép nhân hai ma trận (một thực thể tuy sẽ được đề cập sau nhưng rất có giá trị trong vật lí) không có tính giao hoán. 
 
-Mỗi $a$ chỉ tồn tại một \defText{số đối} $-a$ duy nhất sao cho $a + (-a) = 0$ và nếu $a\neq 0$, tồn tại một \defText{số nghịch đảo} $\frac{1}{a}$ duy nhất sao cho $a\times \frac{1}{a} = 1$. \defText{Phép trừ} được định nghĩa là $$\defMath{a-b = a + (-b)}$$ và \defText{phép chia} được định nghĩa là $$\defMath{\frac{a}{b} = a\times \frac{1}{b}}.$$ Trên tập số thực, không có nghịch đảo của $0$.
+Mỗi $a$ chỉ tồn tại một \defText{số đối} $-a$ duy nhất sao cho $a + (-a) = 0$ và nếu $a\neq 0$, tồn tại một \defText{số nghịch đảo} $\frac{1}{a}$ duy nhất sao cho $a\cdot \frac{1}{a} = 1$. Từ đó, chúng ta có được định nghĩa của hai phép tính cơ bản còn lại. \defText{Phép trừ} được định nghĩa là phép cộng với số đối: $$\defMath{a-b = a + (-b)};$$ và \defText{phép chia} được định nghĩa như phép nhân với số nghịch đảo $$\defMath{\frac{a}{b} = a\cdot \frac{1}{b}}.$$ Trên tập số thực, không có nghịch đảo của $0$.
 
+\exercise Sử dụng những thừa nhận đã có, khẳng định rằng $x\cdot (-1) = (-1) \cdot x = -x$.
+
+\solution
+
+$x\cdot (-1) = (-1) \cdot x$ là từ giao hoán. Để chứng minh hai biểu thức này đều biểu diễn số đối của $x$, sử dụng tính chất phân phối như sau:
+\begin{align*}
+   x \cdot 0 &= 0 \\
+   \iff x \cdot \left(1 + (-1)\right) &= 0 \\
+   \iff x \cdot 1 + x \cdot \left(-1\right) &= 0 \\
+   \iff x + x \cdot \left(-1\right) &= 0.
+\end{align*}
+
+Có số đối của $x$ là duy nhất nên $x \cdot \left(-1\right) = -x$.

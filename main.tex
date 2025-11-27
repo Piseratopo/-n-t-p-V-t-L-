@@ -4,14 +4,14 @@
 \usepackage[vietnamese]{babel}
 \usepackage[a4paper]{geometry}
 \usepackage[explicit]{titlesec}
-\usepackage{amsmath, amssymb, array, blindtext, bm, calc, caption, float, hyperref, icomma, lmodern, makecell, multicol, pgfplots, steinmetz, tikz, tikz-3dplot, varwidth, wrapfig2, xcolor, xparse, xeCJK, tabularx}
+\usepackage{amsmath, amssymb, blindtext, bm, calc, caption, float, hyperref, icomma, lmodern, makecell, multicol, pgfplots, steinmetz, tabularray, tikz, tikz-3dplot, varwidth, wrapfig2, xcolor, xparse, xeCJK}
 
 % Tinh chỉnh Tikz
 \usetikzlibrary{arrows.meta, calc, decorations.pathmorphing, intersections, positioning, pgfplots.fillbetween, shadings}
 
 % Căn lề và khoảng cách
 \geometry{bindingoffset=0.5cm, inner=2cm, outer=2cm, top=2cm, bottom=2cm}
-\setcellgapes{2pt}
+
 
 % Thêm khoảng cách giữa các đoạn trong minipage
 \newlength{\recordparindent}
@@ -39,6 +39,7 @@
 ]{DFKai-SB}
 
 % Tăng kích cỡ ô trong bảng
+\setcellgapes{2pt}
 \makegapedcells
 
 % Đánh dấu định nghĩa
@@ -71,7 +72,7 @@
    \refstepcounter{solution}
    \IfNoValueTF{#1}
       {\noindent\textbf{Lời giải bài~\ref{ex:ex\arabic{exercise}}:}}
-      {\noindent\textbf{Lời giải bài~\ref{#1}}:}
+      {\noindent\textbf{Lời giải bài~\ref{ex:#1}}:}
    \IfNoValueTF{#1}
       {\label{sol\arabic{solution}}}
       {\label{sol-#1}}

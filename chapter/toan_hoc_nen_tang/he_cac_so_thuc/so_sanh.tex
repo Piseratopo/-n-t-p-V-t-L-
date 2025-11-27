@@ -33,3 +33,23 @@ Ngoài sự so sánh đơn lẻ, chúng ta còn có thể so sánh một cách t
 Trong cả hai định nghĩa đó, nếu $x$ thuộc $A$ thì $x$ sẽ là \defText{phần tử lớn nhất} và \defText{phần tử nhỏ nhất} tương ứng. Chúng ta có thể kí hiệu phần tử lớn nhất là $\defMath{\ptln{(A)}}$, $\defMath{\Max{(A)}}$ hay $\defMath{\max{(A)}}$ và phần tử nhỏ nhất là $\defMath{\ptnn{(A)}}$, $\defMath{\min{(A)}}$ và $\defMath{\Min{(A)}}$. Có thể nhận thấy rằng nếu $A$ có phần tử lớn nhất thì nó chỉ có đúng một phần tử như vậy. Thực vậy, nếu $x$ và $y$ cùng là phần tử lớn nhất của $A$, thì theo định nghĩa phần tử lớn nhất của $x$ và $y \in A$ nên $y \leq x$. Tương tự, có $x \leq y$. Theo tính phản xạ của $\le$, suy ra được $x = y$.
 
 Các số trong $\mathbb{R}$ làm chặn trên của $A$ tạo thành một tập hợp. Nếu tập hợp đó có phần tử nhỏ nhất thì phần tử đó có tên là \defText{biên trên} (hay \defText{cận trên đúng}) và được kí hiệu là $\defMath{\sup{(A)}}$, $\defMath{\Sup{(A)}}$ hoặc $\defMath{\sup_{\mathbb{R}}{(A)}}$, $\defMath{\Sup_{\mathbb{R}}{(A)}}$. Tương tự, số lớn nhất trong các chặn dưới của $A$ thì gọi là \defText{biên dưới}, hay \defText{chặn dưới đúng} và kí hiệu là $\defMath{\inf{(A)}}$, $\defMath{\Inf{(A)}}$ hoặc $\defMath{\inf_{\mathbb{R}}{(A)}}$, $\defMath{\Inf_{\mathbb{R}}{(A)}}$\footnote{Phần lớn các kí hiệu hàm trong toán không phân biệt hoa thường. Tuy nhiên, có một vài tài liệu có sự phân biệt trong một số hàm đặc biệt như $\arg$ và $\Arg$. Cho nên, đừng lười và đừng lẫn lộn hoa thường!}.
+
+Những phép so sánh không bằng cũng có những tính chất đại số như những phép bằng. Cụ thể, với $x, y, z$ là các số thực,
+\begin{itemize}
+   \item $\defMath{x \le y \iff x + z \le y + z}$;
+   \item $\begin{cases}
+      \defMath{x \le y }\\
+      \defMath{z > 0}
+   \end{cases} \defMath{\iff xz \le yz}$.
+\end{itemize}
+
+\exercise Cho $w, x, y, z \in \mathbb{R}$ thỏa mãn $\begin{cases}
+   w \le y \\
+   x \le z
+\end{cases}$. Chứng minh rằng $w + x \le y + z$.
+
+\solution
+
+Có $w \le y$ nên $w + x \le y + x$. Tương tự, cũng có $x \le z \iff x + y \le z + y$. Theo tính chất bắc cầu, chúng ta có:
+$$w + x \le x + y \le y + z.$$
+Qua đó, chúng ta có điều phải chứng minh.
