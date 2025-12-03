@@ -40,7 +40,7 @@ Những phép so sánh không bằng cũng có những tính chất đại số 
    \item $\begin{cases}
       \defMath{x \le y }\\
       \defMath{z \ge 0}
-   \end{cases} \defMath{\iff xz \le yz}$.
+   \end{cases} \defMath{\iff x\cdot z \le y\cdot z}$.
 \end{itemize}
 
 \exercise Cho $w, x, y, z \in \mathbb{R}$ thỏa mãn $\begin{cases}
@@ -72,10 +72,23 @@ $$\begin{cases}
       w \geq 0
    \end{cases}
 \end{cases}\implies \begin{cases}
-   wx \leq yx \\
-   xy \leq zy
-\end{cases} \implies wx \le yz.$$ Chúng ta có điều phải chứng minh.
+   w\cdot x \leq y\cdot x \\
+   x\cdot y \leq z\cdot y
+\end{cases} \implies w\cdot x \le y\cdot z.$$ Chúng ta có điều phải chứng minh.
 
-\exercise Cho $x, y$ là số thực và $z$ là một số thực âm. Chứng minh nếu $x \leq y$ thì $xz \geq yz$.
+\exercise Cho $w, x, y, z \in \mathbb{R}$ thỏa mãn $\begin{cases}
+   w \le y \\
+   x < z
+\end{cases}$. Chứng minh rằng $w + x < y + z$.
+
+\solution
+
+Có $x < z \implies x \le z$, cho nên $w + x \le y + z$.
+
+Giả sử $w + x = y + z$. Có $w \le y$ nên $w + x \le x + y$. Từ đây, suy ra được $y + z \le x + y \iff z \le x$. 
+
+Tuy nhiên, nếu kết hợp kết luận này với điều kiện đã có $x < z$ hay $x \le z$ và $x \ne z$ thì sẽ xảy ra mâu thuẫn. Do đó, điều giả sử là sai. Theo chứng minh phản chứng, có $w + x < y + z$, điều phải chứng minh.
+
+\exercise Cho $x, y$ là số thực và $z$ là một số thực âm. Chứng minh nếu $x \leq y$ thì $x\cdot z \geq y\cdot z$.
 
 \solution
