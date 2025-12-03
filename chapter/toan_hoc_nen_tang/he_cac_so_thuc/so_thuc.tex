@@ -17,9 +17,24 @@ Gọi $\defMath{\mathbb{R}}$ là tập hợp số thực. Nếu $a, b, c$ đều
    \item $a + c = b + c \implies a = b$ (\defText{tính giản ước được});
    \item Nếu $c \neq 0$, $a\cdot c = b\cdot c \implies a = b$ (\defText{tính giản ước được}).
 \end{itemize}
-Tính chất giao hoán và tính chất kết hợp cho phép viết $a + b + c$ và $a\cdot b\cdot c$ mà không phần phải quan tâm đến thứ tự tính toán hay vị trí của các phần tử trong biểu thức. Một điều cần lưu ý là không phải mọi thực thể trong toán học đều đơn giản như vậy. Lấy ví dụ, phép nhân hai ma trận (một thực thể tuy sẽ được đề cập sau nhưng rất có giá trị trong vật lí) không có tính giao hoán. 
+Tính chất giao hoán cho phép viết $a + b + c$ và $a\cdot b\cdot c$ mà không phần phải quan tâm đến thứ tự tính toán của các phép tính trong hai biểu thức này. Một điều cần lưu ý là không phải mọi thực thể trong toán học đều đơn giản như vậy. Lấy ví dụ, phép nhân có hướng hai véc-tơ, một phép tính thường xuyên được sử dụng trong vật lí, vừa không có tính giao hoán, vừa không có tính kết hợp.
 
 Mỗi $a$ chỉ tồn tại một \defText{số đối} $-a$ duy nhất sao cho $a + (-a) = 0$ và nếu $a\neq 0$, tồn tại một \defText{số nghịch đảo} $\frac{1}{a}$ duy nhất sao cho $a\cdot \frac{1}{a} = 1$. Từ đó, chúng ta có được định nghĩa của hai phép tính cơ bản còn lại. \defText{Phép trừ} được định nghĩa là phép cộng với số đối: $$\defMath{a-b = a + (-b)};$$ và \defText{phép chia} được định nghĩa như phép nhân với số nghịch đảo $$\defMath{\frac{a}{b} = a\cdot \frac{1}{b}}.$$ Trên tập số thực, không có nghịch đảo của $0$.
 
-Khi nhân hai số mà có liên quan đến số âm, chúng ta thực hiện có kết quả dựa vào bảng như sau:
+Khi nhân hai số mà có liên quan đến số đối, chúng ta thực hiện có kết quả dựa vào bảng như sau:
+
+\begin{table}[H]
+   \centering
+   \caption{Bảng nhân hai số có sự tồn tại của số đối}
+   \begin{tblr}{
+      colspec={|c|c|c|},
+      hlines,
+      vlines
+   }
+      $\cdot$ & $m$   & $-m$  \\
+      $n$     & $mn$  & $-mn$ \\
+      $-n$    & $-mn$ & $mn$  \\
+   \end{tblr}
+\end{table}
+
 
