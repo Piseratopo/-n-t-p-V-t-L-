@@ -57,7 +57,7 @@ Qua đó, chúng ta có điều phải chứng minh.
 \exercise Cho $w, x, y, z \in \mathbb{R}$ thỏa mãn $\begin{cases}
    0 \le w \le y \\
    0\le x \le z
-\end{cases}$. Chứng minh rằng $wx \le yz$.
+\end{cases}$. Chứng minh rằng $w \cdot x \le y\cdot z$.
 
 \solution 
 
@@ -92,3 +92,21 @@ Tuy nhiên, nếu kết hợp kết luận này với điều kiện đã có $x
 \exercise Cho $x, y$ là số thực và $z$ là một số thực âm. Chứng minh nếu $x \leq y$ thì $x\cdot z \geq y\cdot z$.
 
 \solution
+
+Do $z$ là một số thực âm, cho nên:
+\begin{align}
+   z &< 0 \nonumber\\
+   \implies z &\leq 0 \nonumber\\
+   \iff z + (-z) &\leq -z \nonumber\\
+   \iff 0 &\leq -z. \label{eq:toan_hoc_nen_tang:he_cac_so_thuc:so_sanh:-z}
+\end{align}
+
+Giả sử $x \leq y$. Với $-z$ là số không âm theo \refeq{eq:toan_hoc_nen_tang:he_cac_so_thuc:so_sanh:-z}, nhân cả hai vế của $x \leq y$ với $-z$, chúng ta có:
+\begin{align*}
+   x\cdot (-z) &\leq y\cdot(-z) \\
+   \implies -x \cdot z &\leq -y\cdot z \\
+   \iff -x \cdot z + x\cdot z + y \cdot z &\leq -y\cdot z + \cdot z + y \cdot z \\
+   \iff y \cdot z &\leq x \cdot z.
+\end{align*}
+
+Chúng ta có điều phải chứng minh.
