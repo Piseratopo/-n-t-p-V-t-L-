@@ -133,6 +133,15 @@
 \tikzset{snake it/.style={decorate, decoration=snake, very thin}}
 
 % Làm đẹp tiêu đề
+\titleformat{\part}
+   {\normalfont\Huge\bfseries}
+   {}
+   {0pt}
+   {\centering\textcolor{colorEmphasisCyan}{
+      {\fontsize{60}{72}\selectfont Phần \arabic{part}}\\
+      #1}
+   }
+
 \titleformat{name=\chapter,numberless}
    {\normalfont\Huge\bfseries}
    {}
