@@ -4,7 +4,7 @@
 \usepackage[vietnamese]{babel}
 \usepackage[a4paper]{geometry}
 \usepackage[explicit]{titlesec}
-\usepackage{amsmath, amssymb, blindtext, bm, calc, caption, float, hyperref, icomma, lmodern, makecell, multicol, parskip, pgfplots, steinmetz, tabularray, tikz, tikz-3dplot, varwidth, wrapfig2, xcolor, xparse, xeCJK}
+\usepackage{amsmath, amssymb, blindtext, bm, calc, caption, float, hyperref, icomma, lmodern, makecell, multibib, multicol, parskip, pgfplots, steinmetz, tabularray, tikz, tikz-3dplot, varwidth, wrapfig2, xcolor, xparse, xeCJK}
 
 % Tinh chỉnh Tikz
 \pgfplotsset{compat=1.18}
@@ -42,8 +42,9 @@
 ]{DFKai-SB}
 
 % Tăng kích cỡ ô trong bảng
-\setcellgapes{2pt}
+\setcellgapes{4pt}
 \makegapedcells
+\newcommand{\headerDivider}{\noalign{\hrule height 1.5pt}}
 
 % Đánh dấu định nghĩa
 \newcommand{\defText}[1]{\textbf{#1}}
@@ -187,6 +188,10 @@
    {\bfseries}
    {\color{colorEmphasisCyan}\bfseries}
    {}{}
+\patchcmd{\l@part}
+   {\bfseries}
+   {\color{colorEmphasisCyan}\bfseries}
+   {}{}
 \makeatother
 
 \makeatletter
@@ -201,6 +206,10 @@
 \DeclareMathOperator{\Min}{Min}
 \DeclareMathOperator{\Inf}{Inf}
 \DeclareMathOperator{\Sup}{Sup}
+
+% Phân loại tài liệu tham khảo
+
+\newcites{Math,Phys}{Tài liệu tham khảo - Toán,Tài liệu tham khảo - Vật lí}
 
 
 \begin{document}
@@ -217,10 +226,16 @@
 % \input{\chapdir co_ban_xu_li_so_lieu.tex}
 % \input{\chapdir chuyen_dong.tex}
 
-\nocite{*}
 
-\bibliographystyle{unsrt}
-\bibliography{references}
+\nociteMath{*}
+\nocitePhys{*}
+\addcontentsline{toc}{chapter}{Tài liệu tham khảo - Toán}
+\bibliographystyleMath{plain}
+\bibliographyMath{ref_math}
+\addcontentsline{toc}{chapter}{Tài liệu tham khảo - Vật lí}
+\bibliographystylePhys{plain}
+\bibliographyPhys{ref_physics}
+
 
 \end{document}
 

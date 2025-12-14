@@ -1,0 +1,86 @@
+\section{Mệnh đề ghép và các phép nối mệnh đề}
+
+\ % Lùi đầu dòng
+
+Hãy xem xét câu sau:
+\begin{center}
+   ''Hôm nay trời mua \emph{và} hội thao đã phải lùi lịch.''.
+\end{center}
+Đây rõ ràng là một mệnh đề do chúng ta có thể dễ dàng xác định tính đúng sai của nó. Câu hỏi quan trọng hơn là chúng ta xác định tính chính xác của câu này như thế nào. Một cách tự nhiên, chúng ta sẽ xem xét từng phần ``hôm nay trời mưa'' và ``hội thao đã phải lùi lịch''. Từ tính đúng sai của hai vế, tính đúng sai của mệnh đề ban đầu được xác định. Đây là một ví dụ của \defText{mệnh đề phức hợp} (hay \defText{mệnh đề phức}), một mệnh đề được cấu tạo từ một hoặc một số \defText{mệnh đề thành phần} và các \defText{phép nối mệnh đề}.
+
+Chỉ có $5$ phép nối mệnh đề với tên tương ứng như sau:
+\begin{itemize}
+   \item $\defMath{\neg}$: phép \defText{đối},
+   \item $\defMath{\land}$: phép \defText{và} hoặc phép \defText{hội},
+   \item $\defMath{\lor}$: phép \defText{hoặc} hoặc phép \defText{tuyển},
+   \item $\defMath{\implies}$: \defText{kéo theo},
+   \item $\defMath{\iff}$: phép \defText{tương đương}.
+\end{itemize}
+Kết hợp với chúng là hai dấu ngoặc, ngoặc đơn đóng $)$ và ngoặc đơn mở $($, để xác định thứ tự giải giá trị lô-gích của mệnh đề phức hợp.
+
+\subsection{Phép đối}
+
+\ %
+
+Thông thường, để phủ định một câu khẳng định, chúng ta hay dùng từ ``không'' hay những từ gần nghĩa như ``chưa'' hay ``chẳng''. Ví dụ, có thể phủ định câu ``Cơm hôm nay ngon.'' thành ``Cơm hôm nay \emph{không} ngon.''. Tuy nhiên, với những câu phức tạp hơn như ví dụ về hội thao ở trước đó thì việc thêm các chữ ``không'' như
+\begin{center}
+   ``Hôm nay trời \emph{không} mưa \emph{\textcolor{colorEmphasis}{và}} hội thao đã \emph{không} phải lùi lịch.''
+\end{center}
+là không thỏa đáng. Cách viết đúng sẽ khá dài dòng:
+\begin{center}
+   ``\emph{Không phải trường hợp rằng} hôm nay trời mưa và hội thao đã phải lùi lịch.''.
+\end{center}
+Sử dụng kí hiệu thì sẽ dễ dàng hơn, tuy nhìn hơi kì, kiểu như:
+\begin{center}
+   ``$\neg \left(\text{cơm hôm nay ngon}\right)$''
+\end{center}
+hay
+\begin{center}
+   ``$\neg \left(\text{hôm nay trời mưa và hội thao đã phải lùi lịch}\right)$''.
+\end{center}
+Nhìn chung, nếu $P$ là một mệnh đề thì phủ định của nó sẽ có kí hiệu là $\defMath{\neg P}$ hoặc $\defMath{\overline{P}}$. Nếu $P$ đúng thì $\neg P$ sai và ngược lại, nếu $P$ sai thì $\neg P$ đúng.
+
+\subsection{Bảng giá trị chân lí}
+
+\ %
+
+Trước khi đi đến những phép nối phức tạp hơn, chúng ta sẽ đề cập đến khái niệm bảng giá trị chân lí. Khi sử dụng các phép toán lô-gích để tạo ra mệnh đề phức hợp thì chúng ta cần phải xem xét các trường hợp có thể của các \defText{giá trị chân lí}, một cách nói văn hoa hơn cho cụm từ ``tính đúng sai'', của từng mệnh đề thành phần. Khi mà số mệnh đề thành phần lớn lên thì số lượng trường hợp cũng tăng theo theo cấp số nhân. Để tránh việc phải viết nhiều, \defText{bảng giá trị chân lí} đã được khai sinh\footnote{Đây có vẻ là một khái niệm đơn giản, bởi vì lập bảng là một thao tác đã được thực hiện thường xuyên xuyên suốt lịch sử loài người, tuy nhiên, không có quá nhiều tài liệu lịch sử nói về bảng giá trị chân lí. Tài liệu sớm nhất mà tác giả tìm được cho thấy sự sử dụng của kiểu bảng này xuất phát từ thế kỉ XIX\cite{anellis2012peirce}. Có thể, trường hợp thứ nhất, người xưa thấy việc viết (hay nói, biết chữ là một thứ xa xỉ) các mệnh đề lô-gích phức hợp là bình thường, hoặc, trường hợp thứ hai với khả năng xảy ra cao hơn, kiến thức lịch sử của tác giả còn hạn hẹp.}.
+
+Chúng ta sẽ lấy ví dụ ngay trên phép nối mệnh đề chúng ta vừa được tiếp cận. Khi xây dựng bảng giá trị chân lí, tác giả sẽ viết tắt ``Đ'' và ``S'' lần lượt cho mệnh đề có giá trị chân lí đúng và sai.
+\begin{table}[H]
+   \centering
+   \caption{Bảng giá trị chân lí của phép đối}
+   \begin{tabular}{|c|c|}
+      \hline 
+      $P$ & $\neg P$ \\
+      \headerDivider
+      Đ & S \\
+      \hline
+      S & Đ \\
+      \hline
+   \end{tabular}
+\end{table}
+
+\subsection{Phép hội}
+
+\ %
+
+Cho hai mệnh đề $P$ và $Q$. Mệnh đề phức ``$P$ và $Q$'' là \defText{hội} của $P$ và $Q$ và có kí hiệu là $\defMath{P \land Q}$. Mệnh đề này chỉ đúng khi cả hai mệnh đề thành phần $P$ và $Q$ đều đúng, thể hiện dưới dạng bảng giá trị chân lí \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_hoi}.
+\begin{table}[H]
+   \centering
+   \caption{Bảng giá trị chân lí của phép hội}
+   \label{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_hoi}
+   \begin{tabular}{|c|c|c|}
+      \hline 
+      $P$ & $Q$ & $P \land Q$ \\
+      \headerDivider
+      Đ & Đ & Đ \\
+      \hline 
+      Đ & S & S \\
+      \hline
+      S & Đ & S \\
+      \hline
+      S & S & S \\
+      \hline
+   \end{tabular}
+\end{table}
