@@ -49,8 +49,8 @@ Trước khi đi đến những phép nối phức tạp hơn, chúng ta sẽ đ
 Chúng ta sẽ lấy ví dụ ngay trên phép nối mệnh đề chúng ta vừa được tiếp cận. Khi xây dựng bảng giá trị chân lí, tác giả sẽ viết tắt ``Đ'' và ``S'' lần lượt cho mệnh đề có giá trị chân lí đúng và sai.
 \begin{table}[H]
    \centering
-   \caption{Bảng giá trị chân lí của phép đối}
-   \begin{tabular}{|c|c|}
+   \caption{Bảng giá trị chân lí của mệnh đề với phép đối}
+   \begin{tabular}{|c!{\vrule width 1.5pt}c|}
       \hline 
       $P$ & $\neg P$ \\
       \headerDivider
@@ -68,9 +68,9 @@ Chúng ta sẽ lấy ví dụ ngay trên phép nối mệnh đề chúng ta vừ
 Cho hai mệnh đề $P$ và $Q$. Mệnh đề phức ``$P$ và $Q$'' là \defText{hội} của $P$ và $Q$ và có kí hiệu là $\defMath{P \land Q}$. Mệnh đề này chỉ đúng khi cả hai mệnh đề thành phần $P$ và $Q$ đều đúng, thể hiện dưới dạng bảng giá trị chân lí \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_hoi}.
 \begin{table}[H]
    \centering
-   \caption{Bảng giá trị chân lí của phép hội}
+   \caption{Bảng giá trị chân lí của mệnh đề với phép hội}
    \label{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_hoi}
-   \begin{tabular}{|c|c|c|}
+   \begin{tabular}{|c|c!{\vrule width 1.5pt}c|}
       \hline 
       $P$ & $Q$ & $P \land Q$ \\
       \headerDivider
@@ -84,3 +84,28 @@ Cho hai mệnh đề $P$ và $Q$. Mệnh đề phức ``$P$ và $Q$'' là \defTe
       \hline
    \end{tabular}
 \end{table}
+
+\subsection{Phép tuyển}
+
+Mệnh đề phức ``$P$ hoặc $Q$'' là \defText{tuyển} của hai mệnh đề $P$ và $Q$ và có kí hiệu $\defMath{P \lor Q}$. Mệnh đề này đúng khi tối thiểu một trong hai mệnh đề đầu vào đúng, và chỉ sai khi cả hai mệnh đề đầu vào đều sai. Bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_tuyen} cho giá trị chân lí của mệnh đề tuyển.
+\begin{table}[H]
+   \centering
+   \caption{Bảng giá trị chân lí của mệnh đề với phép tuyển}
+   \label{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_tuyen}
+   \begin{tabular}{|c|c!{\vrule width 1.5pt}c|}
+      \hline
+      $P$ & $Q$ & $P \lor Q$ \\
+      \headerDivider
+      Đ & Đ & Đ \\
+      \hline
+      Đ & S & Đ \\ 
+      \hline
+      S & Đ & Đ \\
+      \hline 
+      S & S & S \\
+      \hline
+   \end{tabular}
+\end{table}
+
+Phép ``hoặc'' hơi khác với ý nghĩa thông thường. Khi người ta nói ``hoặc'', người ta hay ám chỉ một trong số các trường hợp liệt kê ra là đúng. Trong lô-gích, cả hai mệnh đề đúng vẫn làm cho mệnh đề phức hợp đúng.
+
