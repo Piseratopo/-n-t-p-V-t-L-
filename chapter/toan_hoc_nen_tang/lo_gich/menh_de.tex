@@ -1,10 +1,12 @@
-\section{Mệnh đề}
+\section{Giới thiệu về lô-gích}
+
+\subsection{Đối tượng của lô-gích - Mệnh đề}
 
 \ % Lùi đầu dòng
 
-Lô-gích là ngành nghiên cứu về sự lập luận, là sự giao thoa giữa toán học và triết học. Không có một ngành nào của toán học hay khoa học nói chung mà không có sự tồn tại của các lập luận, chứng minh hay phản biện. Chúng ta sẽ bắt đầu với định nghĩa của mệnh đề lô-gích và những phép toán cho phép chúng ta kết hợp các mệnh đề.
+Lô-gích là ngành nghiên cứu về sự lập luận, là sự giao thoa giữa toán học và triết học. Không có một ngành nào của toán học hay khoa học nói chung mà không có sự tồn tại của các lập luận, chứng minh hay phản biện. Khi lập luận thì cần phải có đối tượng để có thể thực hiện lập luận trên, chúng được gọi là mệnh đề.
 
-\defText{Mệnh đề lô-gích} (gọi tắt là \defText{mệnh đề}) là một phát biểu hoặc đúng, hoặc sai, nhưng không thể cả hai cùng lúc. Một vài ví dụ của mệnh đề như sau:
+\defText{Mệnh đề lô-gích} (gọi tắt là \defText{mệnh đề}) là một phát biểu hoặc đúng, hoặc sai, nhưng không thể cả hai cùng lúc, và cũng không thể vừa không đúng vừa không sai. Một vài ví dụ của mệnh đề như sau:
 \begin{itemize}
   \item $2 + 3 = 5$  \hfill (Mệnh đề đúng);
   \item $4 < 1$ \hfill (Mệnh đề sai);
@@ -19,4 +21,27 @@ Còn những ví dụ sau không phải là mệnh đề:
   \item $x + 2 = 5$ \hfill (Biểu thức chứa biến, chưa xác định giá trị đúng/sai).
 \end{itemize}
 
-Có nhiểu kiểu lô-gích khác nhau, nhưng chủ yếu đều thuộc hai loại. Loại thứ nhất là \defText{lô-gích quy nạp} mà ở đó nếu như lập luận là tốt thì kết luận cũng 
+\subsection{Các loại lập luận lô-gích}
+
+\ % Lùi đầu dòng
+
+Có nhiểu kiểu lập luận lô-gích khác nhau, nhưng chủ yếu đều thuộc hai loại. Loại thứ nhất là lập luận theo \defText{lô-gích quy nạp} (gọi tắt là \defText{lập luận quy nạp} mà ở đó kết luận khái quát được đưa ra từ việc quan sát nhiều trường hợp cụ thể. Từ đó, chúng ta có cấu trúc của một lập luận bằng lô-gích quy nạp gồm hai phần: các mệnh đề \defText{quan sát}, liệt kê ra những dẫn chứng đã được thực nghiệm, và các mệnh đề \defText{kết luận} được đưa ra từ những quan sát. Một vài ví dụ cho lô-gích quy nạp được đưa ra ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de:vd_logic_quy_nap}.
+
+\begin{table}[H]
+   \centering
+   \caption{Ví dụ cho lô-gích quy nạp}
+   \label{tab:toan_hoc_nen_tang:lo_gich:menh_de:vd_logic_quy_nap}
+   \begin{tabular}{|c|c|}
+      \hline
+      Quan sát & Kết luận \\
+      \headerDivider
+      Mỗi sáng mặt trời đều mọc ở hướng Đông. & Mặt trời luôn mọc ở hướng Đông. \\
+      \hline
+      Nhiều kim loại (sắt, đồng, nhôm) đều nở ra khi nóng lên. & Kim loại nói chung sẽ nở ra khi nóng. \\
+      \hline
+      Một nhóm học sinh chăm chỉ đạt điểm cao. & Học sinh chăm chỉ thường sẽ đạt kết quả tốt. \\
+      \hline
+   \end{tabular}
+\end{table}
+
+Các lập luận này có lí hay không dựa vào sức thuyết phục của quá trình quan sát. Đây là nền tảng quan trọng trong khoa học, triết học, và nghiên cứu thực nghiệm. Tuy nhiên, lô-gích quy nạp không đảm bảo tuyệt đối đúng. Ví dụ, chúng ta không thể đưa ra kết luận ``mọi học sinh đều 6 tuổi'' bằng sự quan sát của một lớp học hay của một khối lớp\footnote{Việc chỉ lấy những quan sát thuận lợi cho mình mà bỏ qua những dẫn chứng bất lợi còn được gọi là ``chọn lọc thiên vị''.}. 
