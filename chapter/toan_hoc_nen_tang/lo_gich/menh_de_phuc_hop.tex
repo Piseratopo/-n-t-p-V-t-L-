@@ -113,4 +113,58 @@ Mệnh đề phức ``$P$ hoặc $Q$'' là \defText{tuyển} của hai mệnh đ
 
 \ % Lùi đầu dòng
 
-Đây lại là một phép nối nữa mà ý nghĩa của nó (có thể) khác với ý nghĩa thông thường. Đây là phép cũng gây nhiều lỗi lập luận lô-gích nhất. Mệnh đề $\defMath{P \implies Q}$ chỉ sai khi $P$ không suy ra $Q$, điều này tương đương với có $P$ mà không có $Q$. Bảng giá trị chân lí sẽ chỉ rõ.
+Đây lại là một phép nối nữa mà ý nghĩa của nó (có thể) khác với ý nghĩa thông thường. Đây là phép cũng gây nhiều lỗi lập luận lô-gích nhất. Mệnh đề với phép \defText{kéo theo} $\defMath{P \implies Q}$ chỉ sai khi $P$ không suy ra $Q$, điều này tương đương, và chỉ tương đương, với có $P$ mà không có $Q$. Bạn đọc nên để ý kĩ hai dòng cuối cùng của bảng giá trị chân lí \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_keo_theo}.
+\begin{table}[H]
+   \centering
+   \caption{Bảng giá trị chân lí của mệnh đề với phép kéo theo}
+   \label{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_keo_theo}
+   \begin{tabular}{|c|c|c|}
+      \hline
+      $P$ & $Q$ & $P \implies Q$ \\
+      \headerDivider 
+      Đ & Đ & Đ \\
+      \hline 
+      Đ & S & S \\
+      \hline
+      \emph{S} & \emph{Đ} & \emph{Đ} \\
+      \hline
+      \emph{S} & \emph{S} & \emph{Đ} \\
+      \hline
+   \end{tabular}
+\end{table}
+
+\subsection{Phép tương đương}
+
+\ % Lùi đầu dòng
+
+Thông thường, hai sự vật ``tương đương'' có nghĩa là hai sự vật có giá trị ngang nhau và có thể thay thế được cho nhau. Tương tự, trong lô-gích, hai mệnh đề \defText{tương đương} khi và chỉ khi cả hai luôn cùng đúng hoặc cùng sai.
+\begin{table}[H]
+   \centering
+   \caption{Bảng giá trị chân lí của mệnh đề với phép tương đương}
+   \label{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_tuong_duong}
+   \begin{tabular}{|c|c|c|}
+      \hline
+      $P$ & $Q$ & $P \iff Q$ \\
+      \headerDivider 
+      Đ & Đ & Đ \\
+      \hline 
+      Đ & S & S \\
+      \hline
+      S & Đ & S \\
+      \hline
+      S & S & Đ \\
+      \hline
+   \end{tabular}
+\end{table}
+
+\subsection{Thứ tự các phép nối}
+
+\ % Lùi đầu dòng
+
+Giống như thứ tự các phép tính số học\footnote{[\dots], thứ mà con người phát minh ra [\dots]}, các phép nối lô-gích cũng có sắp xếp thứ tự\footnote{[\dots]và vẫn chưa có sự thống nhất[\dots]} như sau
+
+\exercise Sử dụng bảng giá trị chân lí, chứng minh các mệnh đề sau luôn đúng với mọi giá trị chân lí của $P$, $Q$ và $R$.
+\begin{itemize}
+   \item $\neg\left(P \land \neg P\right)$;
+   \item $P \lor \neg P$;
+\end{itemize}
