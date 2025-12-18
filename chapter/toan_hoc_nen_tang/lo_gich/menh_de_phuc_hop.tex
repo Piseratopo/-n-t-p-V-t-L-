@@ -8,13 +8,13 @@ Hãy xem xét câu sau:
 \end{center}
 Đây rõ ràng là một mệnh đề do chúng ta có thể dễ dàng xác định tính đúng sai của nó. Câu hỏi quan trọng hơn là chúng ta xác định tính chính xác của câu này như thế nào. Một cách tự nhiên, chúng ta sẽ xem xét từng phần ``hôm nay trời mưa'' và ``hội thao đã phải lùi lịch''. Từ tính đúng sai của hai vế, tính đúng sai của mệnh đề ban đầu được xác định. Đây là một ví dụ của \defText{mệnh đề phức hợp} (hay \defText{mệnh đề phức}), một mệnh đề được cấu tạo từ một hoặc một số \defText{mệnh đề thành phần} và các \defText{phép nối mệnh đề}.
 
-Chỉ có $5$ phép nối mệnh đề với tên tương ứng như sau:
+Chỉ có $5$ phép nối mệnh đề như sau:
 \begin{itemize}
-   \item $\defMath{\neg}$: phép \defText{đối},
-   \item $\defMath{\land}$: phép \defText{và} hoặc phép \defText{hội},
-   \item $\defMath{\lor}$: phép \defText{hoặc} hoặc phép \defText{tuyển},
-   \item $\defMath{\implies}$: \defText{kéo theo},
-   \item $\defMath{\iff}$: phép \defText{tương đương}.
+   \item Phép \defText{đối} --- $\defMath{\neg}$,
+   \item Phép \defText{hội} hoặc phép \defText{và} --- $\defMath{\land}$,
+   \item Phép \defText{tuyển} hoặc phép \defText{hoặc} --- $\defMath{\lor}$,
+   \item Phép \defText{kéo theo} --- $\defMath{\implies}$ hoặc $\defMath{\Rightarrow}$,
+   \item Phép \defText{tương đương} --- $\defMath{\iff}$ hoặc $\defMath{\Leftrightarrow}$.
 \end{itemize}
 Kết hợp với chúng là hai dấu ngoặc, ngoặc đơn đóng $)$ và ngoặc đơn mở $($, để xác định thứ tự giải giá trị lô-gích của mệnh đề phức hợp.
 
@@ -157,14 +157,51 @@ Thông thường, hai sự vật ``tương đương'' có nghĩa là hai sự v�
    \end{tabular}
 \end{table}
 
-\subsection{Thứ tự các phép nối}
+\subsection{Thứ tự giải giá trị chân lí của mệnh đề của các phép nối}
 
 \ % Lùi đầu dòng
 
-Giống như thứ tự các phép tính số học\footnote{[\dots], thứ mà con người phát minh ra [\dots]}, các phép nối lô-gích cũng có sắp xếp thứ tự\footnote{[\dots]và vẫn chưa có sự thống nhất[\dots]} như sau
+Giống như thứ tự các phép tính số học\footnote{[\dots], thứ mà con người phát minh ra [\dots]}để tính giá trị các biểu thức số học, để xác định giá trị chân lí của mệnh đề có nhiều phép nối, các phép nối mệnh đề cũng có sắp xếp thứ tự\footnote{[\dots]và vẫn chưa có sự thống nhất[\dots]} từ mức ưu tiên cao đến ưu tiên thấp như sau:
+\begin{enumerate}
+   \item Phép đối --- $\neg$ (mức ưu tiên cao nhất);
+   \item Phép và --- $\land$;
+   \item Phép hoặc --- $\lor$;
+   \item Phép kéo theo và phép tương đương --- $\implies$ và $\iff$ (mức ưu tiên thấp nhất).
+\end{enumerate}
+Với các phép ở trên cùng một mức, có thể quy ước xử lí theo nhiều cách khác nhau: thứ tự xuất hiện (từ trái qua phải), kết hợp tính toán từ trái qua phải với thứ tự phép kéo theo đi trước phép tương đương, hoặc yêu cầu sử dụng các dấu ngoặc để sắp xếp thứ tự. Trong cuốn sách này, tác giả sẽ sử dụng quy ước \emph{từ trái qua phải} là chủ yếu, kèm với việc sử dấu ngoặc để giúp tăng khả năng đọc khi cần thiết.
 
+\exercise Xây dựng bảng giá trị chân lí của các mệnh đề sau:
+\begin{multicols}{2}
+   \begin{enumerate}
+      \item $\neg P \implies Q$;
+      \item $(P \iff Q) \lor \neg Q$;
+      \item $P \land (Q \implies R)$;
+      \item $P \land Q \lor Q \land \neg R$;
+      \item $Q \implies R \land R \lor \neg P$;
+      \item $(P \implies Q) \implies (R \implies Q \implies P)$.
+   \end{enumerate}
+\end{multicols}
+
+\solution
+   
 \exercise Sử dụng bảng giá trị chân lí, chứng minh các mệnh đề sau luôn đúng với mọi giá trị chân lí của $P$, $Q$ và $R$.
 \begin{itemize}
-   \item $\neg\left(P \land \neg P\right)$;
-   \item $P \lor \neg P$;
+   \item $P \lor \neg P$ (tính loại trừ trung gian\footnote{Một mệnh đề hoặc đúng, hoặc phủ định của nó đúng; không tồn tại khả năng trung gian.});
+   \item $\neg\left(P \land \neg P\right)$ (tính không mâu thuẫn\footnote{Không thể có một mệnh đề vừa đúng vừa sai cùng lúc và theo cùng một nghĩa.});
+   \item $\neg\left(\neg P\right) \iff P$ (tính phủ định kép);
+   \item $P \land P \iff P$ (tính khả nghịch với phép hội);
+   \item $P \lor P \iff P$ (tính khả nghịch với phép tuyển);
+   \item $P \land Q \iff Q \land P$ (tính giao hoán với phép hội);
+   \item $P \lor Q \iff Q \lor P$ (tính giao hoán với phép tuyển);
+   \item $\neg\left(P\lor Q\right) \iff \neg P \land \neg Q$ (định luật Đờ Moóc-gơn\footnote{Augustus De Morgan (1806 -- 1871)}, phần 1);
+   \item $\neg\left(P\land Q\right) \iff \neg P \lor \neg Q$ (định luật Đờ Moóc-gơn, phần 2);
+   \item $P \implies Q \iff \neg P \lor Q$;
+   \item $\neg\left(P \implies Q\right) \iff \left(\neg Q \implies \neg P\right)$ (phép đối trên phép kéo theo);
+   \item $\left(P \iff Q\right) \iff \left(P \implies Q\right) \land \left(Q \implies P\right)$;
+   \item $\left(P \land Q\right) \land R \iff P \land \left(Q \land R\right)$ (tính chất kết hợp với phép hội);
+   \item $\left(P \lor Q\right) \lor R \iff P \lor \left(Q \lor R\right)$ (tính chất kết hợp với phép tuyển);
+   \item $\left(P \lor Q\right) \land \left(P \lor R\right) \iff P \land (Q \lor R)$ (tính chất phân phối, phần 1);
+   \item $\left(P \land Q\right) \lor \left(P \land R\right) \iff P \lor (Q \land R)$ (tính chất phân phối, phần 2);
+   \item $\left(P \implies Q\right) \land \left(Q \implies R\right) \implies \left(P \implies R\right)$ (tính chất bắc cầu);
+   \item $\left(P \iff Q\right) \land \left(Q \iff R\right) \iff $
 \end{itemize}
