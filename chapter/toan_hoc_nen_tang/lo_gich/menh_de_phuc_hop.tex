@@ -201,9 +201,8 @@ Với các phép ở trên cùng một mức, có thể quy ước xử lí theo
 \begin{minipage}[c]{0.68\linewidth}
    \begin{table}[H]
       \centering
-      \caption{Bảng giá trị chân lí rút gọn cho bài 
-      \ref{ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li} 
-      phần \arabic{subexercise}}
+      \caption{Bảng giá trị chân lí rút gọn cho phần \arabic{subexercise} bài 
+      \ref{ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li}}
       \label{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li_1}
       \begin{tabular}{|c|c|cccc!{\vrule width 1.5pt}c|}
          \hline
@@ -223,10 +222,8 @@ Với các phép ở trên cùng một mức, có thể quy ước xử lí theo
 \arabic{subexercise}. 
 \begin{table}[H]
    \centering
-   \captionof{table}{Bảng giá trị chân lí rút gọn cho bài 
-   \ref{ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li} 
-   phần \arabic{subexercise}}
-   \label{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li_1}
+   \caption{Bảng giá trị chân lí rút gọn cho phần \arabic{subexercise} bài 
+   \ref{ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li}}
    \begin{tabular}{|c|c|cccccc!{\vrule width 1.5pt}c|}
       \hline
       $P$ & $Q$ & $(P$ & $\iff$ & $Q)$ & $\lor$ & $\neg$ & $Q$ & $(P \iff Q) \lor \neg Q$ \\
@@ -235,6 +232,31 @@ Với các phép ở trên cùng một mức, có thể quy ước xử lí theo
       Đ & S & Đ & S & S & \emphcolor{Đ} & Đ & S & Đ \\
       S & Đ & S & S & Đ & \emphcolor{S} & S & Đ & S \\
       S & S & S & S & S & \emphcolor{Đ} & Đ & S & Đ \\
+      \hline
+   \end{tabular}
+\end{table}
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Khi một mệnh đề phức hợp cho cùng giá trị chân lí ở nhiều trường hợp khác nhau, và trong các trường hợp đó một số mệnh đề thành phần có cùng giá trị chân lí, chúng ta có thể rút gọn bảng bằng cách:
+\begin{itemize}
+   \item Giữ nguyên những mệnh đề thành phần có giá trị giống nhau;
+   \item Thay những mệnh đề thành phần thay đổi bằng ký hiệu $X$.
+\end{itemize}
+Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li_3}, nhận thấy rằng khi $P$ sai thì mệnh đề phức hợp luôn sai, nên các cột $Q$ và $R$ và những cột có phần mệnh đề liên quan đến hai mệnh đề này ở hàng thứ năm được thay bởi những chữ $X$.
+\begin{table}[H]
+   \centering
+   \caption{Bảng giá trị chân lí rút gọn cho phần \arabic{subexercise} bài 
+   \ref{ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li}}
+   \label{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li_3}
+   \begin{tabular}{|c|c|c|ccccc!{\vrule width 1.5pt}c|}
+      \hline
+      $P$ & $Q$ & $R$ & $P$ & $\land$ & $(Q$ & $\implies$ & $R)$ & $P \land (Q \implies R)$ \\
+      \headerDivider
+      Đ & Đ & Đ & Đ & \emphcolor{Đ} & Đ & Đ & Đ & Đ \\
+      Đ & Đ & S & Đ & \emphcolor{S} & Đ & S & S & S \\
+      Đ & S & Đ & Đ & \emphcolor{Đ} & S & Đ & Đ & Đ \\
+      Đ & S & S & Đ & \emphcolor{Đ} & S & Đ & S & Đ \\
+      S & X & X & S & \emphcolor{S} & X & X & X & S \\
       \hline
    \end{tabular}
 \end{table}
