@@ -176,7 +176,7 @@ Với các phép ở trên cùng một mức, có thể quy ước xử lí theo
 Để ý đến thứ tự các phép nối, dấu $\neg$ sẽ được thực hiện trước $\implies$. Thực hiện xây dựng như ở bảng sau.
 \begin{table}[H]
    \centering
-   \caption{Bảng giá trị chân lí cho bài \ref{ex:ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li} phần \arabic{subexercise}}
+   \caption{Bảng giá trị chân lí cho bài \ref{ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li} phần \arabic{subexercise}}
    \begin{tabular}{|c|c|c!{\vrule width 1.5pt}c|}
       \hline
       $P$ & $Q$ & $\neg P$ & $\neg P \implies Q$ \\
@@ -199,21 +199,23 @@ Với các phép ở trên cùng một mức, có thể quy ước xử lí theo
 \end{minipage}%
 \hfill
 \begin{minipage}[c]{0.68\linewidth}
-   \centering
-   \captionof{table}{Bảng giá trị chân lí rút gọn cho bài 
-   \ref{ex:ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li} 
-   phần \arabic{subexercise}}
-   \label{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li_1}
-   \begin{tabular}{|c|c|cccc!{\vrule width 1.5pt}c|}
-      \hline
-      $P$ & $Q$ & $\neg$ & $P$ & $\implies$ & $Q$ & $\neg P \implies Q$ \\
-      \headerDivider 
-      Đ & Đ & S & Đ & \emphcolor{Đ} & Đ & Đ \\
-      Đ & S & S & Đ & \emphcolor{Đ} & Đ & Đ \\
-      S & Đ & Đ & S & \emphcolor{Đ} & Đ & Đ \\
-      S & S & Đ & S & \emphcolor{S} & S & S \\
-      \hline
-   \end{tabular}
+   \begin{table}[H]
+      \centering
+      \caption{Bảng giá trị chân lí rút gọn cho bài 
+      \ref{ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li} 
+      phần \arabic{subexercise}}
+      \label{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li_1}
+      \begin{tabular}{|c|c|cccc!{\vrule width 1.5pt}c|}
+         \hline
+         $P$ & $Q$ & $\neg$ & $P$ & $\implies$ & $Q$ & $\neg P \implies Q$ \\
+         \headerDivider 
+         Đ & Đ & S & Đ & \emphcolor{Đ} & Đ & Đ \\
+         Đ & S & S & Đ & \emphcolor{Đ} & Đ & Đ \\
+         S & Đ & Đ & S & \emphcolor{Đ} & Đ & Đ \\
+         S & S & Đ & S & \emphcolor{S} & S & S \\
+         \hline
+      \end{tabular}
+   \end{table}
 \end{minipage}
 }
 
@@ -222,20 +224,19 @@ Với các phép ở trên cùng một mức, có thể quy ước xử lí theo
 \begin{table}[H]
    \centering
    \captionof{table}{Bảng giá trị chân lí rút gọn cho bài 
-   \ref{ex:ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li} 
+   \ref{ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li} 
    phần \arabic{subexercise}}
    \label{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li_1}
-   \begin{tabular}{|c|c|cccc!{\vrule width 1.5pt}c|}
+   \begin{tabular}{|c|c|cccccc!{\vrule width 1.5pt}c|}
       \hline
-      $P$ & $Q$ & $\neg$ & $P$ & $\implies$ & $Q$ & $\neg P \implies Q$ \\
-      \headerDivider 
-      Đ & Đ & S & Đ & \emphcolor{Đ} & Đ & Đ \\
-      Đ & S & S & Đ & \emphcolor{Đ} & Đ & Đ \\
-      S & Đ & Đ & S & \emphcolor{Đ} & Đ & Đ \\
-      S & S & Đ & S & \emphcolor{S} & S & S \\
+      $P$ & $Q$ & $(P$ & $\iff$ & $Q)$ & $\lor$ & $\neg$ & $Q$ & $(P \iff Q) \lor \neg Q$ \\
+      \headerDivider
+      Đ & Đ & Đ & Đ & Đ & \emphcolor{Đ} & S & Đ & Đ \\
+      Đ & S & Đ & S & S & \emphcolor{Đ} & Đ & S & Đ \\
+      S & Đ & S & S & Đ & \emphcolor{S} & S & Đ & S \\
+      S & S & S & S & S & \emphcolor{Đ} & Đ & S & Đ \\
       \hline
    \end{tabular}
-
 \end{table}
    
 \exercise Sử dụng bảng giá trị chân lí, chứng minh các mệnh đề sau luôn đúng với mọi giá trị chân lí của $P$, $Q$ và $R$.

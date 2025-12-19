@@ -65,7 +65,7 @@
    \noindent\textbf{\textcolor{colorEmphasisCyan}{Bài \arabic{exercise}:}}
    \IfNoValueTF{#1}
       {\label{ex:ex\arabic{exercise}}}
-      {\label{ex:#1}}
+      {\label{#1}}
 }
 
 % Xử lí số đếm lời giải
@@ -75,7 +75,7 @@
    \refstepcounter{solution}
    \IfNoValueTF{#1}
       {\noindent\textbf{Lời giải bài~\ref{ex:ex\arabic{exercise}}:}}
-      {\noindent\textbf{Lời giải bài~\ref{ex:#1}}:}
+      {\noindent\textbf{Lời giải bài~\ref{#1}}:}
    \IfNoValueTF{#1}
       {\label{sol\arabic{solution}}}
       {\label{sol-#1}}
