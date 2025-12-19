@@ -55,7 +55,6 @@ Chúng ta sẽ lấy ví dụ ngay trên phép nối mệnh đề chúng ta vừ
       $P$ & $\neg P$ \\
       \headerDivider
       Đ & S \\
-      \hline
       S & Đ \\
       \hline
    \end{tabular}
@@ -75,11 +74,8 @@ Cho hai mệnh đề $P$ và $Q$. Mệnh đề phức ``$P$ và $Q$'' là \defTe
       $P$ & $Q$ & $P \land Q$ \\
       \headerDivider
       Đ & Đ & Đ \\
-      \hline 
       Đ & S & S \\
-      \hline
       S & Đ & S \\
-      \hline
       S & S & S \\
       \hline
    \end{tabular}
@@ -97,11 +93,8 @@ Mệnh đề phức ``$P$ hoặc $Q$'' là \defText{tuyển} của hai mệnh đ
       $P$ & $Q$ & $P \lor Q$ \\
       \headerDivider
       Đ & Đ & Đ \\
-      \hline
       Đ & S & Đ \\ 
-      \hline
       S & Đ & Đ \\
-      \hline 
       S & S & S \\
       \hline
    \end{tabular}
@@ -118,17 +111,14 @@ Mệnh đề phức ``$P$ hoặc $Q$'' là \defText{tuyển} của hai mệnh đ
    \centering
    \caption{Bảng giá trị chân lí của mệnh đề với phép kéo theo}
    \label{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_keo_theo}
-   \begin{tabular}{|c|c|c|}
+   \begin{tabular}{|c|c!{\vrule width 1.5pt}c|}
       \hline
       $P$ & $Q$ & $P \implies Q$ \\
       \headerDivider 
       Đ & Đ & Đ \\
-      \hline 
       Đ & S & S \\
-      \hline
-      \emph{S} & \emph{Đ} & \emph{Đ} \\
-      \hline
-      \emph{S} & \emph{S} & \emph{Đ} \\
+      \emphcolor{S} & \emphcolor{Đ} & \emphcolor{Đ} \\
+      \emphcolor{S} & \emphcolor{S} & \emphcolor{Đ} \\
       \hline
    \end{tabular}
 \end{table}
@@ -142,16 +132,13 @@ Thông thường, hai sự vật ``tương đương'' có nghĩa là hai sự v�
    \centering
    \caption{Bảng giá trị chân lí của mệnh đề với phép tương đương}
    \label{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_tuong_duong}
-   \begin{tabular}{|c|c|c|}
+   \begin{tabular}{|c|c!{\vrule width 1.5pt}c|}
       \hline
       $P$ & $Q$ & $P \iff Q$ \\
       \headerDivider 
       Đ & Đ & Đ \\
-      \hline 
       Đ & S & S \\
-      \hline
       S & Đ & S \\
-      \hline
       S & S & Đ \\
       \hline
    \end{tabular}
@@ -170,7 +157,7 @@ Giống như thứ tự các phép tính số học\footnote{[\dots], thứ mà 
 \end{enumerate}
 Với các phép ở trên cùng một mức, có thể quy ước xử lí theo nhiều cách khác nhau: thứ tự xuất hiện (từ trái qua phải), kết hợp tính toán từ trái qua phải với thứ tự phép kéo theo đi trước phép tương đương, hoặc yêu cầu sử dụng các dấu ngoặc để sắp xếp thứ tự. Trong cuốn sách này, tác giả sẽ sử dụng quy ước \emph{từ trái qua phải} là chủ yếu, kèm với việc sử dấu ngoặc để giúp tăng khả năng đọc khi cần thiết.
 
-\exercise Xây dựng bảng giá trị chân lí của các mệnh đề sau:
+\exercise[ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li] Xây dựng bảng giá trị chân lí của các mệnh đề sau:
 \begin{multicols}{2}
    \begin{enumerate}
       \item $\neg P \implies Q$;
@@ -182,7 +169,74 @@ Với các phép ở trên cùng một mức, có thể quy ước xử lí theo
    \end{enumerate}
 \end{multicols}
 
-\solution
+\solution[ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li]
+
+\setcounter{subexercise}{1}
+\arabic{subexercise}. 
+Để ý đến thứ tự các phép nối, dấu $\neg$ sẽ được thực hiện trước $\implies$. Thực hiện xây dựng như ở bảng sau.
+\begin{table}[H]
+   \centering
+   \caption{Bảng giá trị chân lí cho bài \ref{ex:ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li} phần \arabic{subexercise}}
+   \begin{tabular}{|c|c|c!{\vrule width 1.5pt}c|}
+      \hline
+      $P$ & $Q$ & $\neg P$ & $\neg P \implies Q$ \\
+      \headerDivider
+      Đ & Đ & S & Đ \\
+      Đ & S & S & Đ \\
+      S & Đ & S & Đ \\
+      S & S & Đ & S \\
+      \hline
+   \end{tabular}
+\end{table}
+
+{
+\begin{minipage}[c]{0.3\linewidth}
+   \raggedright
+   Có thể thực hiện viết bảng giá trị chân lí dưới dạng rút gọn như ở bảng 
+   \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li_1}. 
+   Sau khi thực hiện xong một phép nối, có thể viết ở ngay dưới mệnh đề cần tìm 
+   giá trị chân lí thay vì tách thành cột riêng để tiết kiệm giấy nếu như mệnh đề dài.
+\end{minipage}%
+\hfill
+\begin{minipage}[c]{0.68\linewidth}
+   \centering
+   \captionof{table}{Bảng giá trị chân lí rút gọn cho bài 
+   \ref{ex:ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li} 
+   phần \arabic{subexercise}}
+   \label{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li_1}
+   \begin{tabular}{|c|c|cccc!{\vrule width 1.5pt}c|}
+      \hline
+      $P$ & $Q$ & $\neg$ & $P$ & $\implies$ & $Q$ & $\neg P \implies Q$ \\
+      \headerDivider 
+      Đ & Đ & S & Đ & \emphcolor{Đ} & Đ & Đ \\
+      Đ & S & S & Đ & \emphcolor{Đ} & Đ & Đ \\
+      S & Đ & Đ & S & \emphcolor{Đ} & Đ & Đ \\
+      S & S & Đ & S & \emphcolor{S} & S & S \\
+      \hline
+   \end{tabular}
+\end{minipage}
+}
+
+\stepcounter{subexercise}
+\arabic{subexercise}. 
+\begin{table}[H]
+   \centering
+   \captionof{table}{Bảng giá trị chân lí rút gọn cho bài 
+   \ref{ex:ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li} 
+   phần \arabic{subexercise}}
+   \label{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li_1}
+   \begin{tabular}{|c|c|cccc!{\vrule width 1.5pt}c|}
+      \hline
+      $P$ & $Q$ & $\neg$ & $P$ & $\implies$ & $Q$ & $\neg P \implies Q$ \\
+      \headerDivider 
+      Đ & Đ & S & Đ & \emphcolor{Đ} & Đ & Đ \\
+      Đ & S & S & Đ & \emphcolor{Đ} & Đ & Đ \\
+      S & Đ & Đ & S & \emphcolor{Đ} & Đ & Đ \\
+      S & S & Đ & S & \emphcolor{S} & S & S \\
+      \hline
+   \end{tabular}
+
+\end{table}
    
 \exercise Sử dụng bảng giá trị chân lí, chứng minh các mệnh đề sau luôn đúng với mọi giá trị chân lí của $P$, $Q$ và $R$.
 \begin{itemize}
