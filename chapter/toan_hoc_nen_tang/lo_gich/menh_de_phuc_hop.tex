@@ -13,10 +13,10 @@ Chỉ có $5$ phép nối mệnh đề như sau:
    \item Phép \defText{đối} --- $\defMath{\neg}$,
    \item Phép \defText{hội} hoặc phép \defText{và} --- $\defMath{\land}$,
    \item Phép \defText{tuyển} hoặc phép \defText{hoặc} --- $\defMath{\lor}$,
-   \item Phép \defText{kéo theo} --- $\defMath{\implies}$ hoặc $\defMath{\Rightarrow}$,
-   \item Phép \defText{tương đương} --- $\defMath{\iff}$ hoặc $\defMath{\Leftrightarrow}$.
+   \item Phép \defText{kéo theo} --- $\defMath{\implies}$ hoặc $\defMath{\Rightarrow}$, $\defMath{\rightarrow}$,
+   \item Phép \defText{tương đương} --- $\defMath{\iff}$ hoặc $\defMath{\Leftrightarrow}$, $\defMath{\leftrightarrow}$.
 \end{itemize}
-Kết hợp với chúng là hai dấu ngoặc, ngoặc đơn đóng $)$ và ngoặc đơn mở $($, để xác định thứ tự giải giá trị lô-gích của mệnh đề phức hợp.
+Kết hợp với chúng là hai dấu ngoặc, ngoặc đơn đóng --- $)$ --- và ngoặc đơn mở --- $($\footnote{Có thể dùng thêm ngoặc vuông --- $[]$ --- hay ngoặc nhọn --- $\{\}$ --- nếu cần tăng khả năng nhận diện của mệnh đề phức hợp.} --- để xác định thứ tự giải giá trị lô-gích của mệnh đề phức hợp.
 
 \subsection{Phép đối}
 
@@ -82,6 +82,8 @@ Cho hai mệnh đề $P$ và $Q$. Mệnh đề phức ``$P$ và $Q$'' là \defTe
 \end{table}
 
 \subsection{Phép tuyển}
+
+\ % Lùi đầu dòng
 
 Mệnh đề phức ``$P$ hoặc $Q$'' là \defText{tuyển} của hai mệnh đề $P$ và $Q$ và có kí hiệu $\defMath{P \lor Q}$. Mệnh đề này đúng khi tối thiểu một trong hai mệnh đề đầu vào đúng, và chỉ sai khi cả hai mệnh đề đầu vào đều sai. Bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_tuyen} cho giá trị chân lí của mệnh đề tuyển.
 \begin{table}[H]
@@ -260,14 +262,85 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
       \hline
    \end{tabular}
 \end{table}
+
+\stepcounter{subexercise}
+\arabic{subexercise}. 
+\begin{table}[H]
+   \centering
+   \caption{Bảng giá trị chân lí rút gọn cho phần \arabic{subexercise} bài 
+   \ref{ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li}}
+   \begin{tabular}{|c|c|c|cccccccc!{\vrule width 1.5pt}c|}
+      \hline
+      $P$ & $Q$ & $R$ & $P$ & $\land$ & $Q$ & $\lor$ & $Q$ & $\land$ & $\neg$ & $R$ & $P \land Q \lor Q \land \neg R$ \\
+      \headerDivider
+      Đ & Đ & Đ & Đ & Đ & Đ & \emphcolor{Đ} & Đ & S & S & Đ & Đ \\
+      Đ & Đ & S & Đ & Đ & Đ & \emphcolor{Đ} & Đ & Đ & Đ & Đ & Đ \\
+      S & Đ & Đ & S & S & Đ & \emphcolor{S} & Đ & S & S & Đ & S \\
+      S & Đ & S & S & S & Đ & \emphcolor{Đ} & Đ & Đ & Đ & S & Đ \\
+      X & S & X & X & S & S & \emphcolor{S} & S & S & X & X & S \\
+      \hline
+   \end{tabular}
+\end{table}
+
+\stepcounter{subexercise}
+\arabic{subexercise}. 
+\begin{table}[H]
+   \centering
+   \caption{Bảng giá trị chân lí rút gọn cho phần \arabic{subexercise} bài 
+   \ref{ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li}}
+   \begin{tabular}{|c|c|c|cccccccc!{\vrule width 1.5pt}c|}
+      \hline
+      $P$ & $Q$ & $R$ & $Q$ & $\implies$ & $R$ & $\land$ & $R$ & $\lor$ & $\neg$ & $P$ & $Q \implies R \land R \lor \neg P$ \\
+      \headerDivider
+      Đ & Đ & Đ & Đ & \emphcolor{Đ} & Đ & Đ & Đ & Đ & S & Đ & Đ \\
+      Đ & Đ & S & Đ & \emphcolor{S} & S & S & S & S & S & Đ & S \\
+      S & Đ & Đ & Đ & \emphcolor{Đ} & Đ & Đ & Đ & Đ & Đ & S & Đ \\
+      S & Đ & S & Đ & \emphcolor{Đ} & S & S & S & Đ & Đ & S & Đ \\
+      X & S & X & S & \emphcolor{Đ} & X & X & X & X & X & X & Đ \\
+      \hline
+   \end{tabular}
+\end{table}
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Do giới hạn của khổ giấy, bảng giá trị chân lí sẽ được tách làm hai phần.
+\begin{table}[H]
+   \centering
+   \caption{Bảng giá trị chân lí rút gọn cho phần \arabic{subexercise} bài 
+   \ref{ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li}}
+   \label{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li_6}
+   \begin{tabular}{|c|c|c|ccccccccc|}
+      \hline
+      $P$ & $Q$ & $R$ & $(P$ & $\implies$ & $Q)$ & $\implies$ & $(R$ & $\implies$ & $Q$ & $\implies$ & $P)$ \\
+      \headerDivider
+      Đ & X & X & Đ & X & X & \emphcolor{Đ} & X & X & X & Đ & Đ \\
+      S & Đ & X & S & Đ & Đ & \emphcolor{S} & X & Đ & Đ & S & S \\
+      S & S & Đ & S & Đ & S & \emphcolor{Đ} & Đ & S & S & Đ & S \\
+      S & S & S & S & Đ & S & \emphcolor{S} & S & Đ & S & S & S \\
+      \hline
+   \end{tabular}
+   \begin{tabular}{|c|c|c!{\vrule width 1.5pt}c|}
+      \hline
+      $P$ & $Q$ & $R$ & $(P \implies Q) \implies (R \implies Q \implies R) $ \\
+      \headerDivider
+      Đ & X & X & Đ \\
+      S & Đ & X & S \\
+      S & S & Đ & Đ \\
+      S & S & S & S \\
+      \hline
+   \end{tabular}
+\end{table}
    
-\exercise Sử dụng bảng giá trị chân lí, chứng minh các mệnh đề sau luôn đúng với mọi giá trị chân lí của $P$, $Q$ và $R$.
+\exercise Gọi $V$ là một mệnh đề đúng và $M$ là một mệnh đề sai nào đó. Sử dụng bảng giá trị chân lí, chứng minh các mệnh đề sau luôn đúng với mọi giá trị chân lí của $P$, $Q$ và $R$.
 \begin{itemize}
-   \item $P \lor \neg P$ (tính loại trừ trung gian\footnote{Một mệnh đề hoặc đúng, hoặc phủ định của nó đúng; không tồn tại khả năng trung gian.});
-   \item $\neg\left(P \land \neg P\right)$ (tính không mâu thuẫn\footnote{Không thể có một mệnh đề vừa đúng vừa sai cùng lúc và theo cùng một nghĩa.});
-   \item $\neg\left(\neg P\right) \iff P$ (tính phủ định kép);
-   \item $P \land P \iff P$ (tính khả nghịch với phép hội);
-   \item $P \lor P \iff P$ (tính khả nghịch với phép tuyển);
+   \item $P \land V \iff P$ (tính chất\footnote{Các tính chất còn được gọi là \defText{luật}.} đồng nhất với phép hội);
+   \item $P \lor M \iff P$ (tính chất đồng nhất với phép tuyển);
+   \item $P \land M \iff M$ (tính chất thống trị với phép hội);
+   \item $P \lor V \iff V$ (tính chất thống trị với phép tuyển);
+   \item $P \lor \neg P$ (tính chất loại trừ trung gian\footnote{Một mệnh đề hoặc đúng, hoặc phủ định của nó đúng; không tồn tại khả năng trung gian.});
+   \item $\overline{P \land \neg P}$ (tính chất không mâu thuẫn\footnote{Không thể có một mệnh đề vừa đúng vừa sai cùng lúc và theo cùng một nghĩa.});
+   \item $\overline{\neg P} \iff P$ (tính chất phủ định kép);
+   \item $P \land P \iff P$ (tính chất lũy đẳng với phép hội);
+   \item $P \lor P \iff P$ (tính chất lũy đẳng với phép tuyển);
    \item $P \land Q \iff Q \land P$ (tính giao hoán với phép hội);
    \item $P \lor Q \iff Q \lor P$ (tính giao hoán với phép tuyển);
    \item $\neg\left(P\lor Q\right) \iff \neg P \land \neg Q$ (định luật Đờ Moóc-gơn\footnote{Augustus De Morgan (1806 -- 1871)}, phần 1);
