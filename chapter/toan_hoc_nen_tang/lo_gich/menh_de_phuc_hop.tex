@@ -332,10 +332,10 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
    
 \exercise Gọi $V$ là một mệnh đề đúng và $M$ là một mệnh đề sai nào đó. Sử dụng bảng giá trị chân lí, chứng minh các mệnh đề sau luôn đúng với mọi giá trị chân lí của $P$, $Q$ và $R$.
 \begin{itemize}
+   \item $\overline{P \land M}$ (tính chất thống trị với phép hội);
+   \item $P \lor V$ (tính chất thống trị với phép tuyển);
    \item $P \land V \iff P$ (tính chất\footnote{Các tính chất còn được gọi là \defText{luật}.} đồng nhất với phép hội);
    \item $P \lor M \iff P$ (tính chất đồng nhất với phép tuyển);
-   \item $P \land M \iff M$ (tính chất thống trị với phép hội);
-   \item $P \lor V \iff V$ (tính chất thống trị với phép tuyển);
    \item $P \lor \neg P$ (tính chất loại trừ trung gian\footnote{Một mệnh đề hoặc đúng, hoặc phủ định của nó đúng; không tồn tại khả năng trung gian.});
    \item $\overline{P \land \neg P}$ (tính chất không mâu thuẫn\footnote{Không thể có một mệnh đề vừa đúng vừa sai cùng lúc và theo cùng một nghĩa.});
    \item $\overline{\neg P} \iff P$ (tính chất phủ định kép);
@@ -355,3 +355,44 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
    \item $\left(P \implies Q\right) \land \left(Q \implies R\right) \implies \left(P \implies R\right)$ (tính chất bắc cầu);
    \item $\left(P \iff Q\right) \land \left(Q \iff R\right) \iff $
 \end{itemize}
+
+\solution
+
+\begin{table}[H]
+   \centering
+   \caption{Bảng giá trị chân lí của $\overline{P \lor M}$}
+   \begin{tabular}{|c|ccccc!{\vrule width 1.5pt}c|}
+      \hline
+      $P$ & $P$ & $\lor$ & $M$ & $\iff$ & $P$ & $P \lor M \iff P$ \\
+      \headerDivider
+      Đ & Đ & Đ & S & \emphcolor{Đ} & Đ & Đ \\
+      S & S & S & S & \emphcolor{Đ} & S & Đ \\
+      \hline
+   \end{tabular}
+\end{table}
+
+\begin{table}[H]
+   \centering
+   \caption{Bảng giá trị chân lí của $P \land V \iff P$}
+   \begin{tabular}{|c|ccccc!{\vrule width 1.5pt}c|}
+      \hline
+      $P$ & $P$ & $\land$ & $V$ & $\iff$ & $P$ & $P \land V \iff P$ \\
+      \headerDivider
+      Đ & Đ & Đ & Đ & \emphcolor{Đ} & Đ & Đ \\
+      S & S & S & Đ & \emphcolor{Đ} & S & Đ \\
+      \hline
+   \end{tabular}
+\end{table}
+
+\begin{table}[H]
+   \centering
+   \caption{Bảng giá trị chân lí của $P \lor M \iff P$}
+   \begin{tabular}{|c|ccccc!{\vrule width 1.5pt}c|}
+      \hline
+      $P$ & $P$ & $\lor$ & $M$ & $\iff$ & $P$ & $P \lor M \iff P$ \\
+      \headerDivider
+      Đ & Đ & Đ & S & \emphcolor{Đ} & Đ & Đ \\
+      S & S & S & S & \emphcolor{Đ} & S & Đ \\
+      \hline
+   \end{tabular}
+\end{table}
