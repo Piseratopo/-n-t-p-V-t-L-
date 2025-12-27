@@ -104,26 +104,28 @@ Mệnh đề phức ``$P$ hoặc $Q$'' là \defText{tuyển} của hai mệnh đ
 
 Ý nghĩa của từ ``hoặc'' trong toán học hơi khác với ý nghĩa thông thường. Khi người ta nói ``hoặc'', người ta hay ám chỉ một trong số các trường hợp liệt kê ra là đúng. Trong lô-gích, cả hai mệnh đề đúng vẫn làm cho mệnh đề phức hợp đúng.
 
-\subsection{Phép kéo theo}
+\subsection{Phép kéo theo và phép hệ quả}
 
 \ % Lùi đầu dòng
 
 Đây lại là một phép nối nữa mà ý nghĩa của nó (có thể) khác với ý nghĩa thông thường. Đây là phép cũng gây nhiều lỗi lập luận lô-gích nhất. Mệnh đề với phép \defText{kéo theo} $\defMath{P \implies Q}$ chỉ sai khi $P$ không suy ra $Q$, điều này tương đương, và chỉ tương đương, với có $P$ mà không có $Q$. Bạn đọc nên để ý kĩ hai dòng cuối cùng của bảng giá trị chân lí \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_keo_theo}.
 \begin{table}[H]
    \centering
-   \caption{Bảng giá trị chân lí của mệnh đề với phép kéo theo}
+   \caption{Bảng giá trị chân lí của mệnh đề với phép kéo theo và phép hệ quả}
    \label{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_keo_theo}
-   \begin{tabular}{|c|c!{\vrule width 1.5pt}c|}
+   \begin{tabular}{|c|c!{\vrule width 1.5pt}c!{\vrule width 1.5pt}c|}
       \hline
-      $P$ & $Q$ & $P \implies Q$ \\
-      \headerDivider 
-      Đ & Đ & Đ \\
-      Đ & S & S \\
-      \emphcolor{S} & \emphcolor{Đ} & \emphcolor{Đ} \\
-      \emphcolor{S} & \emphcolor{S} & \emphcolor{Đ} \\
+      $P$ & $Q$ & $P \implies Q$ & $Q \impliedby P$ \\
+      \headerDivider
+      Đ & Đ & Đ & Đ \\
+      Đ & S & S & S \\
+      \emphcolor{S} & \emphcolor{Đ} & \emphcolor{Đ} & \emphcolor{Đ} \\
+      \emphcolor{S} & \emphcolor{S} & \emphcolor{Đ} & \emphcolor{Đ} \\
       \hline
    \end{tabular}
 \end{table}
+
+Bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_keo_theo} cũng đề cập đến một phép lô-gích nữa, chính là phép \defText{hệ quả}. Khi nói ``$P$ suy ra $Q$'', cũng có thể nói ``$Q$ là hệ quả của $P$'' trong trường hợp đó.
 
 \subsection{Phép tương đương}
 
@@ -343,10 +345,10 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
    \item $P \lor P \iff P$ (tính chất lũy đẳng với phép tuyển);
    \item $P \land Q \iff Q \land P$ (tính giao hoán với phép hội);
    \item $P \lor Q \iff Q \lor P$ (tính giao hoán với phép tuyển);
-   \item $\neg\left(P\lor Q\right) \iff \neg P \land \neg Q$ (định luật Đờ Moóc-gơn\footnote{Augustus De Morgan (1806 -- 1871)}, phần 1);
-   \item $\neg\left(P\land Q\right) \iff \neg P \lor \neg Q$ (định luật Đờ Moóc-gơn, phần 2);
+   \item $\overline{P\lor Q} \iff \neg P \land \neg Q$ (định luật Đờ Moóc-gơn\footnote{Augustus De Morgan (1806 -- 1871)}, phần 1);
+   \item $\overline{P\land Q} \iff \neg P \lor \neg Q$ (định luật Đờ Moóc-gơn, phần 2);
    \item $P \implies Q \iff \neg P \lor Q$;
-   \item $\neg\left(P \implies Q\right) \iff \left(\neg Q \implies \neg P\right)$ (phép đối trên phép kéo theo);
+   \item $\overline{P \implies Q} \iff \left(\neg Q \implies \neg P\right)$ (phép đối trên phép kéo theo);
    \item $\left(P \iff Q\right) \iff \left(P \implies Q\right) \land \left(Q \implies P\right)$;
    \item $\left(P \land Q\right) \land R \iff P \land \left(Q \land R\right)$ (tính chất kết hợp với phép hội);
    \item $\left(P \lor Q\right) \lor R \iff P \lor \left(Q \lor R\right)$ (tính chất kết hợp với phép tuyển);
@@ -406,5 +408,101 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
       Đ & Đ & S & Đ & \emphcolor{Đ} & Đ & Đ \\
       S & S & Đ & S & \emphcolor{Đ} & S & Đ \\
       \hline
+   \end{tabular}
+\end{table}
+
+\begin{table}[H]
+   \centering
+   \caption{Bảng giá trị chân lí của $P \land P \iff P$ và $P \lor P \iff P$}
+   \begin{tabular}{|c|ccccc!{\vrule width 1.5pt}c|ccccc!{\vrule width 1.5pt}c|}
+      \hline
+      $P$ & $P$ & $\land$ & $P$ & $\iff$ & $P$ & $P \land P \iff P$ & $P$ & $\lor$ & $P$ & $\iff$ & $P$ & $P \lor P \iff P$ \\
+      \headerDivider
+      Đ & Đ & Đ & Đ & \emphcolor{Đ} & Đ & Đ & Đ & Đ & Đ & \emphcolor{Đ} & Đ & Đ \\
+      S & S & S & S & \emphcolor{Đ} & S & Đ & S & S & S & \emphcolor{Đ} & S & Đ \\
+      \hline
+   \end{tabular}
+\end{table}
+
+\begin{table}[H]
+   \centering
+   \caption{Bảng giá trị chân lí của $P \land Q \iff Q \land P$}
+   \begin{tabular}{|c|c|ccccccc!{\vrule width 1.5pt}c|}
+      \hline
+      $P$ & $Q$ & $P$ & $\land$ & $Q$ & $\iff$ & $Q$ & $\land$ & $P$ & $P \land Q \iff Q \land P$ \\
+      \headerDivider
+      Đ & Đ & Đ & Đ & Đ & \emphcolor{Đ} & Đ & Đ & Đ & Đ \\
+      Đ & S & Đ & S & S & \emphcolor{Đ} & S & S & Đ & Đ \\
+      S & Đ & S & S & Đ & \emphcolor{Đ} & Đ & S & S & Đ \\
+      S & S & S & S & S & \emphcolor{Đ} & S & S & S & Đ \\
+      \hline
+   \end{tabular}
+\end{table}
+
+\begin{table}[H]
+   \centering
+   \caption{Bảng giá trị chân lí của $P \lor Q \iff Q \lor P$}
+   \begin{tabular}{|c|c|ccccccc!{\vrule width 1.5pt}c|}
+      \hline
+      $P$ & $Q$ & $P$ & $\lor$ & $Q$ & $\iff$ & $Q$ & $\lor$ & $P$ & $P \lor Q \iff Q \lor P$ \\
+      \headerDivider
+      Đ & Đ & Đ & Đ & Đ & \emphcolor{Đ} & Đ & Đ & Đ & Đ \\
+      Đ & S & Đ & Đ & S & \emphcolor{Đ} & S & Đ & Đ & Đ \\
+      S & Đ & S & Đ & Đ & \emphcolor{Đ} & Đ & Đ & S & Đ \\
+      S & S & S & S & S & \emphcolor{Đ} & S & S & S & Đ \\
+      \hline
+   \end{tabular}
+\end{table}
+
+\begin{table}[H]
+   \centering
+   \caption{Bảng giá trị chân lí của $\overline{P \lor Q} \iff \neg P \land \neg Q$}
+   \begin{tabular}{|c|c|cccccccccc!{\vrule width 1.5pt}c|}
+      \hline
+      $P$ & $Q$ & $\neg$ & $(P$ & $\lor$ & $Q)$ & $\iff$ & $\neg$ & $P$ & $\land$ & $\neg$ & $Q$ & $\overline{P \lor Q} \iff \neg P \land \neg Q$ \\
+      \headerDivider
+      Đ & Đ & S & Đ & Đ & Đ & \emphcolor{Đ} & S & Đ & S & S & Đ & Đ \\
+      Đ & S & S & Đ & Đ & S & \emphcolor{Đ} & S & Đ & S & Đ & S & Đ \\
+      S & Đ & S & S & Đ & Đ & \emphcolor{Đ} & Đ & S & S & S & Đ & Đ \\
+      S & S & Đ & S & S & S & \emphcolor{Đ} & Đ & S & Đ & Đ & S & Đ \\
+      \hline
+   \end{tabular}
+\end{table}
+
+\begin{table}[H]
+   \centering
+   \caption{Bảng giá trị chân lí của $\overline{P \land Q} \iff \neg P \lor \neg Q$}
+   \begin{tabular}{|c|c|cccccccccc!{\vrule width 1.5pt}c|}
+      \hline
+      $P$ & $Q$ & $\neg$ & $(P$ & $\land$ & $Q)$ & $\iff$ & $\neg$ & $P$ & $\lor$ & $\neg$ & $Q$ & $\overline{P \land Q} \iff \neg P \lor \neg Q$ \\
+      \headerDivider
+      Đ & Đ & S & Đ & Đ & Đ & \emphcolor{Đ} & S & Đ & S & S & Đ & Đ \\
+      Đ & S & Đ & Đ & S & S & \emphcolor{Đ} & S & Đ & Đ & Đ & S & Đ \\
+      S & Đ & Đ & S & S & Đ & \emphcolor{Đ} & Đ & S & Đ & S & Đ & Đ \\
+      S & S & Đ & S & S & S & \emphcolor{Đ} & Đ & S & Đ & Đ & S & Đ \\
+      \hline
+   \end{tabular}
+\end{table}
+
+\begin{table}[H]
+   \centering
+   \caption{Bảng giá trị chân lí của $P \implies Q \iff \neg P \lor Q$}
+   \begin{tabular}{|c|c|cccccccc!{\vrule width 1.5pt}c|}
+      \hline
+      $P$ & $Q$ & $P$ & $\implies$ & $Q$ & $\iff$ & $\neg$ & $P$ & $\lor$ & $Q$ & $P \implies Q \iff \neg P \lor Q$ \\
+      \headerDivider
+      Đ & Đ & Đ & Đ & Đ & \emphcolor{Đ} & S & Đ & Đ & Đ & Đ \\
+      Đ & S & Đ & S & S & \emphcolor{Đ} & S & Đ & S & S & Đ \\
+      S & X & S & Đ & X & \emphcolor{Đ} & Đ & S & Đ & X & Đ \\
+      \hline
+   \end{tabular}
+\end{table}
+
+\begin{table}[H]
+   \centering
+   \caption{Bảng giá trị chân lí của $\overline{P \implies Q} \iff \left(\neg Q \implies \neg P\right)$}
+   \begin{tabular}{|c|c|cccccccccc!{\vrule width 1.5pt}c|}
+      \hline
+      $P$ & $Q$ & $\neg$ & $(P$ & $\implies$ & $Q)$ & $\iff$ & $\impliedby$
    \end{tabular}
 \end{table}
