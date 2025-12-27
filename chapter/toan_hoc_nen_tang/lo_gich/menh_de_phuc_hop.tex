@@ -125,7 +125,22 @@ Mệnh đề phức ``$P$ hoặc $Q$'' là \defText{tuyển} của hai mệnh đ
    \end{tabular}
 \end{table}
 
-Bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_keo_theo} cũng đề cập đến một phép lô-gích nữa, chính là phép \defText{hệ quả}. Khi nói ``$P$ suy ra $Q$'', cũng có thể nói ``$Q$ là hệ quả của $P$'' trong trường hợp đó.
+Bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_keo_theo} cũng đề cập đến một phép lô-gích nữa, chính là phép \defText{hệ quả}. Khi nói ``$P$ suy ra $Q$'', cũng có thể nói ``$Q$ là hệ quả của $P$'' trong trường hợp đó. Bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_he_qua} được đưa ra trong trường hợp bạn đọc muốn nhìn thấy phép hệ quả theo thứ tự bảng chữ cái.
+\begin{table}[H]
+   \centering
+   \caption{Bảng giá trị chân lí của mệnh đề với phép hệ quả}
+   \label{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_he_qua}
+   \begin{tabular}{|c|c!{\vrule width 1.5pt}c|}
+      \hline
+      $P$ & $Q$ & $P \impliedby Q$ \\
+      \headerDivider
+      Đ & Đ & Đ \\
+      Đ & S & Đ \\
+      S & Đ & S \\
+      S & S & Đ \\
+      \hline
+   \end{tabular}
+\end{table}
 
 \subsection{Phép tương đương}
 
@@ -348,7 +363,7 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
    \item $\overline{P\lor Q} \iff \neg P \land \neg Q$ (định luật Đờ Moóc-gơn\footnote{Augustus De Morgan (1806 -- 1871)}, phần 1);
    \item $\overline{P\land Q} \iff \neg P \lor \neg Q$ (định luật Đờ Moóc-gơn, phần 2);
    \item $P \implies Q \iff \neg P \lor Q$;
-   \item $\overline{P \implies Q} \iff \left(\neg Q \implies \neg P\right)$ (phép đối trên phép kéo theo);
+   \item $\left(P \implies Q\right) \iff \left(\neg P \impliedby \neg Q\right)$ (tính chất phản đảo);
    \item $\left(P \iff Q\right) \iff \left(P \implies Q\right) \land \left(Q \implies P\right)$;
    \item $\left(P \land Q\right) \land R \iff P \land \left(Q \land R\right)$ (tính chất kết hợp với phép hội);
    \item $\left(P \lor Q\right) \lor R \iff P \lor \left(Q \lor R\right)$ (tính chất kết hợp với phép tuyển);
@@ -500,9 +515,14 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
 
 \begin{table}[H]
    \centering
-   \caption{Bảng giá trị chân lí của $\overline{P \implies Q} \iff \left(\neg Q \implies \neg P\right)$}
-   \begin{tabular}{|c|c|cccccccccc!{\vrule width 1.5pt}c|}
+   \caption{Bảng giá trị chân lí của $\left(P \implies Q\right) \iff \left(\neg P \impliedby \neg Q\right)$}
+   \begin{tabular}{|c|c|ccccccccc!{\vrule width 1.5pt}c|}
       \hline
-      $P$ & $Q$ & $\neg$ & $(P$ & $\implies$ & $Q)$ & $\iff$ & $\impliedby$
+      $P$ & $Q$ & $(P$ & $\implies$ & $Q)$ & $\iff$ & $(\neg$ & $P$ & $\impliedby$ & $\neg$ & $Q)$ & $\left(P \implies Q\right) \iff \left(\neg P \impliedby \neg Q\right)$ \\
+      \headerDivider
+      Đ & Đ & Đ & Đ & Đ & \emphcolor{Đ} & S & Đ & Đ & S & Đ & Đ \\
+      Đ & S & Đ & S & S & \emphcolor{Đ} & S & Đ & S & Đ & S & Đ \\
+      S & X & S & Đ & X & \emphcolor{Đ} & Đ & S & Đ & X & X & Đ \\
+      \hline
    \end{tabular}
 \end{table}
