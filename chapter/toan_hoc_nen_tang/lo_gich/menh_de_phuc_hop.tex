@@ -172,7 +172,7 @@ Giống như thứ tự các phép tính số học\footnote{[\dots], thứ mà 
    \item Phép đối --- $\neg$ (mức ưu tiên cao nhất);
    \item Phép và --- $\land$;
    \item Phép hoặc --- $\lor$;
-   \item Phép kéo theo và phép tương đương --- $\implies$ và $\iff$ (mức ưu tiên thấp nhất).
+   \item Phép kéo theo --- $\implies$, phép hệ quả --- $\impliedby$ --- và phép tương đương --- $\iff$ (mức ưu tiên thấp nhất).
 \end{enumerate}
 Với các phép ở trên cùng một mức, có thể quy ước xử lí theo nhiều cách khác nhau: thứ tự xuất hiện (từ trái qua phải), kết hợp tính toán từ trái qua phải với thứ tự phép kéo theo đi trước phép tương đương, hoặc yêu cầu sử dụng các dấu ngoặc để sắp xếp thứ tự. Trong cuốn sách này, tác giả sẽ sử dụng quy ước \emph{từ trái qua phải} là chủ yếu, kèm với việc sử dấu ngoặc để giúp tăng khả năng đọc khi cần thiết.
 
@@ -362,9 +362,9 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
    \item $P \lor Q \iff Q \lor P$ (tính giao hoán với phép tuyển);
    \item $\overline{P\lor Q} \iff \neg P \land \neg Q$ (định luật Đờ Moóc-gơn\footnote{Augustus De Morgan (1806 -- 1871)}, phần 1);
    \item $\overline{P\land Q} \iff \neg P \lor \neg Q$ (định luật Đờ Moóc-gơn, phần 2);
-   \item $P \implies Q \iff \neg P \lor Q$;
+   \item $P \implies Q \iff \neg P \lor Q$ (định nghĩa phép kéo theo);
    \item $\left(P \implies Q\right) \iff \left(\neg P \impliedby \neg Q\right)$ (tính chất phản đảo);
-   \item $\left(P \iff Q\right) \iff \left(P \implies Q\right) \land \left(Q \implies P\right)$;
+   \item $\left(P \iff Q\right) \iff \left(P \implies Q\right) \land \left(P \impliedby Q\right)$ (định nghĩa phép tương đương);
    \item $\left(P \land Q\right) \land R \iff P \land \left(Q \land R\right)$ (tính chất kết hợp với phép hội);
    \item $\left(P \lor Q\right) \lor R \iff P \lor \left(Q \lor R\right)$ (tính chất kết hợp với phép tuyển);
    \item $\left(P \lor Q\right) \land \left(P \lor R\right) \iff P \land (Q \lor R)$ (tính chất phân phối, phần 1);
@@ -523,6 +523,31 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
       Đ & Đ & Đ & Đ & Đ & \emphcolor{Đ} & S & Đ & Đ & S & Đ & Đ \\
       Đ & S & Đ & S & S & \emphcolor{Đ} & S & Đ & S & Đ & S & Đ \\
       S & X & S & Đ & X & \emphcolor{Đ} & Đ & S & Đ & X & X & Đ \\
+      \hline
+   \end{tabular}
+\end{table}
+
+\begin{table}[H]
+   \centering
+   \caption{Bảng giá trị chân lí của $\left(P \iff Q\right) \iff \left(P \implies Q\right) \land \left(P \impliedby Q\right)$}
+   \begin{tabular}{|c|c|ccccccccccc|}
+      \hline
+      $P$ & $Q$ & $(P$ & $\iff$ & $Q)$ & $\iff$ & $(P$ & $\implies$ & $Q)$ & $\land$ & $(P$ & $\impliedby$ & $Q)$ \\
+      \headerDivider 
+      Đ & Đ & Đ & Đ & Đ & \emphcolor{Đ} & Đ & Đ & Đ & Đ & Đ & Đ & Đ \\
+      Đ & S & Đ & S & S & \emphcolor{Đ} & Đ & S & S & S & Đ & Đ & S \\
+      S & Đ & S & Đ & Đ & \emphcolor{Đ} & S & Đ & Đ & S & Đ & S & S \\
+      S & S & S & Đ & S & \emphcolor{Đ} & S & Đ & S & Đ & S & Đ & S \\
+      \hline
+   \end{tabular}
+   \begin{tabular}{|c|c!{\vrule width 1.5pt}c|}
+      \hline
+      $P$ & $Q$ & $\left(P \iff Q\right) \iff \left(P \implies Q\right) \land \left(P \impliedby Q\right)$ \\
+      \headerDivider
+      Đ & Đ & \multirow{4}{*}{\huge \vspace{-12pt} Đ} \\
+      Đ & S & \\
+      S & Đ & \\
+      S & S & \\
       \hline
    \end{tabular}
 \end{table}
