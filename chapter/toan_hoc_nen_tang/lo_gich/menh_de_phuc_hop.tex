@@ -363,14 +363,15 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
    \item $P \lor Q \iff Q \lor P$ (tính giao hoán với phép tuyển);
    \item $\overline{P\lor Q} \iff \neg P \land \neg Q$ (định luật Đờ Moóc-gơn\footnote{Augustus De Morgan (1806 -- 1871)}, phần 1);
    \item $\overline{P\land Q} \iff \neg P \lor \neg Q$ (định luật Đờ Moóc-gơn, phần 2);
-   \item $P \implies Q \iff \neg P \lor Q$ (định nghĩa phép kéo theo);
-   \item $\left(P \implies Q\right) \iff \left(\neg P \impliedby \neg Q\right)$ (tính chất phản đảo);
    \item $P \implies P \lor Q$ (tính chất cộng);
    \item $P \land Q \implies P$ (tính chất rút gọn);
+   \item $P \implies Q \iff \neg P \lor Q$ (định nghĩa phép kéo theo);
+   \item $\left(P \implies Q\right) \iff \left(\neg P \impliedby \neg Q\right)$ (tính chất phản đảo);
    \item $\left(P \implies Q\right) \land P \implies Q$ (quy tắc khẳng định\footnote{Modus ponens.});
    \item $\left(P \implies Q\right) \land \neg Q \implies \neg P$ (quy tắc phủ định\footnote{Modus tollens.});
    \item $\left(P \lor Q\right) \land \neg P \implies Q$ (tam đoạn luận tuyển);
-   \item $\left(P \iff Q\right) \iff \left(P \implies Q\right) \land \left(P \impliedby Q\right)$ (định nghĩa phép tương đương);
+   \item $P \iff Q \iff P \land Q \lor \neg P \land \neg Q$ (định nghĩa phép tương đương, phần 1);
+   \item $\left(P \iff Q\right) \iff \left(P \implies Q\right) \land \left(P \impliedby Q\right)$ (định nghĩa phép tương đương, phần 2);
    \item $\left(P \land Q\right) \land R \iff P \land \left(Q \land R\right)$ (tính chất kết hợp với phép hội);
    \item $\left(P \lor Q\right) \lor R \iff P \lor \left(Q \lor R\right)$ (tính chất kết hợp với phép tuyển);
    \item $\left(P \lor Q\right) \land \left(P \lor R\right) \iff P \land (Q \lor R)$ (tính chất phân phối, phần 1);
@@ -507,6 +508,32 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
 
 \begin{table}[H]
    \centering
+   \caption{Bảng giá trị chân lí của $P \implies P \lor Q$}
+   \begin{tabular}{|c|c|ccccc!{\vrule width 1.5pt}c|}
+      \hline
+      $P$ & $Q$ & $P$ & $\implies$ & $P$ & $\lor$ & $Q$ & $P \implies P \lor Q$ \\
+      \headerDivider
+      Đ & X & Đ & \emphcolor{Đ} & Đ & Đ & X & Đ \\
+      S & X & S & \emphcolor{Đ} & S & X & X & Đ \\
+      \hline 
+   \end{tabular}
+\end{table}
+
+\begin{table}[H]
+   \centering
+   \caption{Bảng giá trị chân lí của $P \land Q \implies P$}
+   \begin{tabular}{|c|c|ccccc!{\vrule width 1.5pt}c|}
+      \hline
+      $P$ & $Q$ & $P$ & $\land$ & $Q$ & $\implies$ & $P$ & $P \land Q \implies P$ \\
+      \headerDivider
+      Đ & X & Đ & X & X & \emphcolor{Đ} & Đ & Đ \\
+      S & X & S & S & X & \emphcolor{Đ} & S & Đ \\
+      \hline 
+   \end{tabular}
+\end{table}
+
+\begin{table}[H]
+   \centering
    \caption{Bảng giá trị chân lí của $P \implies Q \iff \neg P \lor Q$}
    \begin{tabular}{|c|c|cccccccc!{\vrule width 1.5pt}c|}
       \hline
@@ -530,32 +557,6 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
       Đ & S & Đ & S & S & \emphcolor{Đ} & S & Đ & S & Đ & S & Đ \\
       S & X & S & Đ & X & \emphcolor{Đ} & Đ & S & Đ & X & X & Đ \\
       \hline
-   \end{tabular}
-\end{table}
-
-\begin{table}[H]
-   \centering
-   \caption{Bảng giá trị chân lí của $P \implies P \lor Q$}
-   \begin{tabular}{|c|c|ccccc!{\vrule width 1.5pt}c|}
-      \hline
-      $P$ & $Q$ & $P$ & $\implies$ & $P$ & $\lor$ & $Q$ & $P \implies P \lor Q$ \\
-      \headerDivider
-      Đ & X & Đ & \emphcolor{Đ} & Đ & Đ & X & Đ \\
-      S & X & S & \emphcolor{Đ} & S & X & X & Đ \\
-      \hline 
-   \end{tabular}
-\end{table}
-
-\begin{table}[H]
-   \centering
-   \caption{Bảng giá trị chân lí của $P \land Q \implies P$}
-   \begin{tabular}{|c|c|ccccc!{\vrule width 1.5pt}c|}
-      \hline
-      $P$ & $Q$ & $P$ & $\land$ & $Q$ & $\implies$ & $P$ & $P \land Q \implies P$ \\
-      \headerDivider
-      Đ & X & Đ & X & X & \emphcolor{Đ} & Đ & Đ \\
-      S & X & S & S & X & \emphcolor{Đ} & S & Đ \\
-      \hline 
    \end{tabular}
 \end{table}
 
@@ -589,6 +590,45 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
 
 \begin{table}[H]
    \centering
+   \caption{Bảng giá trị chân lí của $\left(P \lor Q\right) \land \neg P \implies Q$}
+   \begin{tabular}{|c|c|cccccccc!{\vrule width 1.5pt}c|}
+      \hline
+      $P$ & $Q$ & $(P$ & $\lor$ & $Q)$ & $\land$ & $\neg$ & $P$ & $\implies$ & $Q$ & $\left(P \lor Q\right) \land \neg P \implies Q$ \\
+      \headerDivider
+      Đ & S & Đ & Đ & S & S & S & Đ & \emphcolor{Đ} & S & Đ \\
+      S & S & S & S & S & S & Đ & S & \emphcolor{Đ} & S & Đ \\
+      X & Đ & X & Đ & Đ & X & X & X & \emphcolor{Đ} & Đ & Đ \\
+      \hline
+  \end{tabular}
+\end{table}
+
+\begin{table}[H]
+   \centering
+   \caption{Bảng giá trị chân lí của $P \iff Q \iff P \land Q \lor \neg P \land \neg Q$}
+   \begin{tabular}{|c|c|ccccccccccccc|}
+      \hline
+      $P$ & $Q$ & $P$ & $\iff$ & $Q$ & $\iff$ & $P$ & $\land$ & $Q$ & $\lor$ & $\neg$ & $P$ & $\land$ & $\neg$ & $Q$ \\
+      \headerDivider 
+      Đ & Đ & Đ & Đ & Đ & \emphcolor{Đ} & Đ & Đ & Đ & Đ & S & Đ & S & S & Đ \\
+      Đ & S & Đ & S & S & \emphcolor{Đ} & Đ & S & S & S & S & Đ & S & Đ & S \\
+      S & Đ & S & S & Đ & \emphcolor{Đ} & S & S & Đ & S & Đ & S & S & S & Đ \\
+      S & S & S & Đ & S & \emphcolor{Đ} & S & S & S & Đ & S & Đ & Đ & S & Đ \\
+      \hline
+   \end{tabular}
+   \begin{tabular}{|c|c!{\vrule width 1.5pt}c|}
+      \hline
+      $P$ & $Q$ & $P \iff Q \iff P \land Q \lor \neg P \land \neg Q$ \\
+      \headerDivider
+      Đ & Đ & \multirow{4}{*}{\huge \vspace{-12pt} Đ} \\
+      Đ & S & \\
+      S & Đ & \\
+      S & S & \\
+      \hline
+   \end{tabular}
+\end{table}
+
+\begin{table}[H]
+   \centering
    \caption{Bảng giá trị chân lí của $\left(P \iff Q\right) \iff \left(P \implies Q\right) \land \left(P \impliedby Q\right)$}
    \begin{tabular}{|c|c|ccccccccccc|}
       \hline
@@ -596,7 +636,7 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
       \headerDivider 
       Đ & Đ & Đ & Đ & Đ & \emphcolor{Đ} & Đ & Đ & Đ & Đ & Đ & Đ & Đ \\
       Đ & S & Đ & S & S & \emphcolor{Đ} & Đ & S & S & S & Đ & Đ & S \\
-      S & Đ & S & Đ & Đ & \emphcolor{Đ} & S & Đ & Đ & S & Đ & S & S \\
+      S & Đ & S & S & Đ & \emphcolor{Đ} & S & Đ & Đ & S & Đ & S & S \\
       S & S & S & Đ & S & \emphcolor{Đ} & S & Đ & S & Đ & S & Đ & S \\
       \hline
    \end{tabular}
@@ -610,4 +650,9 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
       S & S & \\
       \hline
    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+   \centering
+
 \end{table}
