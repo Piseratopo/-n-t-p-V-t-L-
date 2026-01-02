@@ -654,5 +654,30 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
 
 \begin{table}[H]
    \centering
+   \caption{Bảng giá trị chân lí của $\left(P \land Q\right) \land R \iff P \land (Q \land R)$}
+   \begin{tabular}{|c|c|c|ccccccccccc!{\vrule width 1.5pt}c|}
+      \hline
+      $P$ & $Q$ & $R$ & $(P$ & $\land$ & $Q)$ & $\land$ & $R$ & $\iff$ & $P$ & $\land$ & $(Q$ & $\land$ & $R)$ & $\left(P \land Q\right) \land R \iff P \land (Q \land R)$\\
+      \headerDivider
+      Đ & Đ & Đ & Đ & Đ & Đ & Đ & Đ & \emphcolor{Đ} & Đ & Đ & Đ & Đ & Đ & Đ \\
+      S & X & X & S & S & X & S & X & \emphcolor{Đ} & S & S & X & X & X & Đ \\
+      X & S & X & X & S & S & S & X & \emphcolor{Đ} & X & S & S & S & X & Đ \\
+      X & X & S & X & X & X & S & S & \emphcolor{Đ} & X & S & X & S & S & Đ \\
+      \hline
+   \end{tabular}
+\end{table}
 
+\begin{table}[H]
+   \centering
+   \caption{Bảng giá trị chân lí của $\left(P \lor Q\right) \lor R \iff P \lor (Q \lor R)$}
+   \begin{tabular}{|c|c|c|ccccccccccc!{\vrule width 1.5pt}c|}
+      \hline
+      $P$ & $Q$ & $R$ & $(P$ & $\lor$ & $Q)$ & $\lor$ & $R$ & $\iff$ & $P$ & $\lor$ & $(Q$ & $\lor$ & $R)$ & $\left(P \lor Q\right) \lor R \iff P \lor (Q \lor R)$\\
+      \headerDivider
+      S & S & S & S & S & S & S & S & \emphcolor{Đ} & S & S & S & S & S & Đ \\
+      Đ & X & X & Đ & Đ & X & Đ & X & \emphcolor{Đ} & Đ & Đ & X & X & X & Đ \\
+      X & Đ & X & X & Đ & Đ & Đ & X & \emphcolor{Đ} & X & Đ & Đ & Đ & X & Đ \\
+      X & X & Đ & X & X & X & Đ & Đ & \emphcolor{Đ} & X & Đ & X & Đ & Đ & Đ \\
+      \hline
+   \end{tabular}
 \end{table}
