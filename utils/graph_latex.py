@@ -2,8 +2,7 @@ from sympy import symbols, solve, sqrt, Eq, Expr, Float
 import sympy
 
 
-def write_line(opened_file, line, tab_count=0):
-    opened_file.write("\t" * tab_count + "\\" + line + "\n")
+from util_latex_general import write_line
 
 def substitute_in_expression(expression, x, value):
     # If it's a SymPy expression, use subs

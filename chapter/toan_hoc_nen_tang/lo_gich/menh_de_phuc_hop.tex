@@ -6,7 +6,7 @@ Hãy xem xét câu sau:
 \begin{center}
    ''Hôm nay trời mua \emph{và} hội thao đã phải lùi lịch.''.
 \end{center}
-Đây rõ ràng là một mệnh đề do chúng ta có thể dễ dàng xác định tính đúng sai của nó. Câu hỏi quan trọng hơn là chúng ta xác định tính chính xác của câu này như thế nào. Một cách tự nhiên, chúng ta sẽ xem xét từng phần ``hôm nay trời mưa'' và ``hội thao đã phải lùi lịch''. Từ tính đúng sai của hai vế, tính đúng sai của mệnh đề ban đầu được xác định. Đây là một ví dụ của \defText{mệnh đề phức hợp} (hay \defText{mệnh đề phức}), một mệnh đề được cấu tạo từ một hoặc một số \defText{mệnh đề thành phần} và các \defText{phép nối mệnh đề}.
+Đây rõ ràng là một mệnh đề do chúng ta có thể dễ dàng xác định được tính đúng sai của nó. Câu hỏi quan trọng hơn cần được đặt ra là chúng ta đã xác định tính chính xác của câu này như thế nào. Một cách tự nhiên, chúng ta sẽ xem xét từng phần ``hôm nay trời mưa'' và ``hội thao đã phải lùi lịch''. Từ tính đúng sai của hai vế, tính đúng sai của mệnh đề ban đầu được xác định. Đây là một ví dụ của \defText{mệnh đề phức hợp} (hay \defText{mệnh đề phức}), một mệnh đề được cấu tạo từ một hoặc một số \defText{mệnh đề thành phần} và các \defText{phép nối mệnh đề}.
 
 Trong toán học, chúng ta hay sử dụng $6$ phép nối mệnh đề\footnote{``Tưởng là có $5$ phép nối mệnh đề thôi?''. Tác giả đã thêm phép nối mệnh đề $\impliedby$, trong trường hợp một vài bạn đọc đọc sách từ phải qua trái.} (lần đầu được đề xuất bởi Phrây-gơ\footnote{Friedrich Ludwig Gottlob Frege (1848 -- 1925)}):
 \begin{itemize}
@@ -372,8 +372,10 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
    \item $\left(P \lor Q\right) \land \neg P \implies Q$ (tam đoạn luận tuyển);
    \item $P \iff Q \iff P \land Q \lor \neg P \land \neg Q$ (định nghĩa phép tương đương, phần 1);
    \item $\left(P \iff Q\right) \iff \left(P \implies Q\right) \land \left(P \impliedby Q\right)$ (định nghĩa phép tương đương, phần 2);
+   \item $\left(P \iff Q\right) \iff \left(Q \iff P\right)$ (tính chất giao hoán với phép tương đương);
    \item $\left(P \land Q\right) \land R \iff P \land \left(Q \land R\right)$ (tính chất kết hợp với phép hội);
    \item $\left(P \lor Q\right) \lor R \iff P \lor \left(Q \lor R\right)$ (tính chất kết hợp với phép tuyển);
+   \item $\left(\left(P \iff Q\right) \iff R \right) \iff \left(P \iff \left(Q \iff R\right)\right)$ (tính chất kết hợp với phép tương đương);
    \item $\left(P \lor Q\right) \land \left(P \lor R\right) \iff P \land (Q \lor R)$ (tính chất phân phối, phần 1);
    \item $\left(P \land Q\right) \lor \left(P \land R\right) \iff P \lor (Q \land R)$ (tính chất phân phối, phần 2);
    \item $\left(P \implies Q\right) \land \left(Q \implies R\right) \implies \left(P \implies R\right)$ (tính chất bắc cầu);
@@ -654,6 +656,21 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
 
 \begin{table}[H]
    \centering
+   \caption{Bảng giá trị chân lí của $\left(P \iff Q\right) \iff \left(Q \iff P\right)$}
+   \begin{tabular}{|c|c|ccccccc!{\vrule width 1.5pt}c|}
+      \hline
+      $P$ & $Q$ & $(P$ & $\iff$ & $Q)$ & $\iff$ & $(Q$ & $\iff$ & $P)$ & $\left(P \iff Q\right) \iff \left(Q \iff P\right)$ \\
+      \headerDivider
+      Đ & Đ & Đ & Đ & Đ & \emphcolor{Đ} & Đ & Đ & Đ & Đ \\
+      Đ & S & Đ & S & S & \emphcolor{Đ} & S & S & Đ & Đ \\
+      S & Đ & S & S & Đ & \emphcolor{Đ} & Đ & S & S & Đ \\
+      S & S & S & Đ & S & \emphcolor{Đ} & S & Đ & S & Đ \\
+      \hline
+   \end{tabular}
+\end{table}
+
+\begin{table}[H]
+   \centering
    \caption{Bảng giá trị chân lí của $\left(P \land Q\right) \land R \iff P \land (Q \land R)$}
    \begin{tabular}{|c|c|c|ccccccccccc!{\vrule width 1.5pt}c|}
       \hline
@@ -678,6 +695,19 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
       Đ & X & X & Đ & Đ & X & Đ & X & \emphcolor{Đ} & Đ & Đ & X & X & X & Đ \\
       X & Đ & X & X & Đ & Đ & Đ & X & \emphcolor{Đ} & X & Đ & Đ & Đ & X & Đ \\
       X & X & Đ & X & X & X & Đ & Đ & \emphcolor{Đ} & X & Đ & X & Đ & Đ & Đ \\
+      \hline
+   \end{tabular}
+\end{table}
+
+\begin{table}[H]
+   \centering
+   \caption{Bảng giá trị chân lí của $\left(\left(P \iff Q\right) \iff R\right) \iff \left(P \iff (Q \iff R)\right)$}
+   \begin{tabular}{|c|c|c|ccccccccccc|}
+      \hline
+      $P$ & $Q$ & $R$ & $((P$ & $\iff$ & $Q)$ & $\iff$ & $R)$ & $\iff$ & $(P$ & $\iff$ & $(Q$ & $\iff$ & $R))$\\
+      \headerDivider
+      Đ & Đ & Đ & Đ & Đ & Đ & Đ & Đ & \emphcolor{Đ} & Đ & Đ & Đ & Đ & Đ \\
+      Đ & Đ & S & Đ & Đ & Đ & S & S & \emphcolor{Đ} & Đ & S & Đ & S & S \\
       \hline
    \end{tabular}
 \end{table}

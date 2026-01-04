@@ -1,15 +1,7 @@
-\begin{figure}[H]
+\begin{table}[H]
 	\centering
-	\begin{tikzpicture}
-		\draw[->] (-5, 0) -- (2, 0) node[right] {$x$};
-		\draw[->] (0, -6) -- (0, 2)  node[above] {$f(x)$};
-		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-5.000:-1.000] plot (\x, {(2*((\x)/1)) / 2});
-		\filldraw[color=colorEmphasisCyan] ({ -5.0 }, { -5.0 }) circle (\pointSize) node[above] {$\left({-5};{-10}\right)$};
-		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=-1.000:0.000] plot (\x, {(-2) / 2});
-		\filldraw[color=colorEmphasisCyan] ({ -1.0 }, { -1.0 }) circle (\pointSize) node[above] {$\left({-1};{-2{,}0}\right)$};
-		\draw[graph thickness, samples=80, color=colorEmphasisCyan, domain=0.000:2.000] plot (\x, {(((\x)/1)^2 - 2) / 2});
-		\filldraw[color=colorEmphasisCyan] ({ 0.0 }, { -1.0 }) circle (\pointSize) node[above] {$\left({0};{-2}\right)$};
-		\filldraw[color=colorEmphasisCyan] ({ 2.0 }, { 1.0 }) circle (\pointSize) node[above] {$\left({2};{2}\right)$};
-	\end{tikzpicture}
-	\caption{Đồ thị của $2 x$,$-2$,$x^{2} - 2$}
-\end{figure}
+	\caption{Bảng giá trị chân lí của $P \land Q$}
+	\begin{tabular}{|c|c|cccc|}
+		\hline
+	\end{tabular}
+\end{table}
