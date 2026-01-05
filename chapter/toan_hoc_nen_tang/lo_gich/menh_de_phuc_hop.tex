@@ -716,4 +716,38 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
 		S & S & S & S & Đ & S & S & S & \emphcolor{Đ} & S & S & S & Đ & S \\
 		\hline
 	\end{tabular}
+   \begin{tabular}{|c|c|c!{\vrule width 1.5pt}c|}
+		\hline
+		P & Q & R & $( ( P \iff Q ) \iff R ) \iff ( P \iff ( Q \iff R ) )$ \\
+		\headerDivider
+		Đ & Đ & Đ & \multirow{8}{*}{\huge \vspace{-24pt} Đ}\\
+		Đ & Đ & S & \\
+		Đ & S & Đ & \\
+		Đ & S & S & \\
+		S & Đ & Đ & \\
+		S & Đ & S & \\
+		S & S & Đ & \\
+		S & S & S & \\
+		\hline
+	\end{tabular}
 \end{table}
+
+\begin{table}[H]
+	\centering
+	\caption{Bảng giá trị chân lí của $( P \lor Q ) \land ( P \lor R ) \iff P \land ( Q \lor R )$}
+	\begin{tabular}{|c|c|c|ccccccccccccc|}
+		\hline
+		P & Q & R & $(P$ & $\lor$ & $Q)$ & $\land$ & $(P$ & $\lor$ & $R)$ & $\iff$ & $P$ & $\land$ & $(Q$ & $\lor$ & $R)$ \\
+		\headerDivider
+		Đ & Đ & Đ & Đ & Đ & Đ & \emphcolor{Đ} & Đ & Đ & Đ & Đ & Đ & Đ & Đ & Đ & Đ \\
+		Đ & Đ & S & Đ & Đ & Đ & \emphcolor{Đ} & Đ & Đ & S & Đ & Đ & Đ & Đ & Đ & S \\
+		Đ & S & Đ & Đ & Đ & S & \emphcolor{Đ} & Đ & Đ & Đ & Đ & Đ & Đ & S & Đ & Đ \\
+		Đ & S & S & Đ & Đ & S & \emphcolor{S} & Đ & Đ & S & S & Đ & S & S & S & S \\
+		S & Đ & Đ & S & Đ & Đ & \emphcolor{S} & S & Đ & Đ & S & S & S & Đ & Đ & Đ \\
+		S & Đ & S & S & Đ & Đ & \emphcolor{Đ} & S & S & S & Đ & S & S & Đ & Đ & S \\
+		S & S & Đ & S & S & S & \emphcolor{S} & S & Đ & Đ & S & S & S & S & Đ & Đ \\
+		S & S & S & S & S & S & \emphcolor{S} & S & S & S & Đ & S & S & S & S & S \\
+		\hline
+	\end{tabular}
+\end{table}
+
