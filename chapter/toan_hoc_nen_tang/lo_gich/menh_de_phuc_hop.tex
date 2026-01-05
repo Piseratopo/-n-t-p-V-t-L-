@@ -376,8 +376,9 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
    \item $\left(P \land Q\right) \land R \iff P \land \left(Q \land R\right)$ (tính chất kết hợp với phép hội);
    \item $\left(P \lor Q\right) \lor R \iff P \lor \left(Q \lor R\right)$ (tính chất kết hợp với phép tuyển);
    \item $\left(\left(P \iff Q\right) \iff R \right) \iff \left(P \iff \left(Q \iff R\right)\right)$ (tính chất kết hợp với phép tương đương);
-   \item $\left(P \lor Q\right) \land \left(P \lor R\right) \iff P \land (Q \lor R)$ (tính chất phân phối, phần 1);
-   \item $\left(P \land Q\right) \lor \left(P \land R\right) \iff P \lor (Q \land R)$ (tính chất phân phối, phần 2);
+   \item $\left(P \lor Q\right) \land \left(P \lor R\right) \iff P \lor (Q \land R)$ (tính chất phân phối, phần 1);
+   \item $\left(P \land Q\right) \lor \left(P \land R\right) \iff P \land (Q \lor R)$ (tính chất phân phối, phần 2);
+   \item $\left(P \implies Q\right) \land \left(P \implies R\right) \iff (P \implies (Q \land R))$ (tính chất phân phối, phần 3);
    \item $\left(P \implies Q\right) \land \left(Q \implies R\right) \implies \left(P \implies R\right)$ (tính chất bắc cầu);
    \item $\left(P \iff Q\right) \land \left(Q \iff R\right) \iff $
 \end{itemize}
@@ -734,19 +735,75 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
 
 \begin{table}[H]
 	\centering
-	\caption{Bảng giá trị chân lí của $( P \lor Q ) \land ( P \lor R ) \iff P \land ( Q \lor R )$}
+	\caption{Bảng giá trị chân lí của $( P \lor Q ) \land ( P \lor R ) \iff P \lor ( Q \land R )$}
 	\begin{tabular}{|c|c|c|ccccccccccccc|}
 		\hline
-		P & Q & R & $(P$ & $\lor$ & $Q)$ & $\land$ & $(P$ & $\lor$ & $R)$ & $\iff$ & $P$ & $\land$ & $(Q$ & $\lor$ & $R)$ \\
+		P & Q & R & $(P$ & $\lor$ & $Q)$ & $\land$ & $(P$ & $\lor$ & $R)$ & $\iff$ & $P$ & $\lor$ & $(Q$ & $\land$ & $R)$ \\
 		\headerDivider
-		Đ & Đ & Đ & Đ & Đ & Đ & \emphcolor{Đ} & Đ & Đ & Đ & Đ & Đ & Đ & Đ & Đ & Đ \\
-		Đ & Đ & S & Đ & Đ & Đ & \emphcolor{Đ} & Đ & Đ & S & Đ & Đ & Đ & Đ & Đ & S \\
-		Đ & S & Đ & Đ & Đ & S & \emphcolor{Đ} & Đ & Đ & Đ & Đ & Đ & Đ & S & Đ & Đ \\
-		Đ & S & S & Đ & Đ & S & \emphcolor{S} & Đ & Đ & S & S & Đ & S & S & S & S \\
-		S & Đ & Đ & S & Đ & Đ & \emphcolor{S} & S & Đ & Đ & S & S & S & Đ & Đ & Đ \\
-		S & Đ & S & S & Đ & Đ & \emphcolor{Đ} & S & S & S & Đ & S & S & Đ & Đ & S \\
-		S & S & Đ & S & S & S & \emphcolor{S} & S & Đ & Đ & S & S & S & S & Đ & Đ \\
-		S & S & S & S & S & S & \emphcolor{S} & S & S & S & Đ & S & S & S & S & S \\
+		Đ & X & X & Đ & Đ & X & Đ & Đ & Đ & X & \emphcolor{Đ} & Đ & Đ & X & X & X \\
+		S & S & X & S & S & S & S & S & X & X & \emphcolor{Đ} & S & S & S & S & X \\
+		S & Đ & Đ & S & Đ & Đ & Đ & S & Đ & Đ & \emphcolor{Đ} & S & Đ & Đ & Đ & Đ \\
+		S & Đ & S & S & Đ & Đ & S & S & S & S & \emphcolor{Đ} & S & S & Đ & S & S \\
+		\hline
+	\end{tabular}
+   \begin{tabular}{|c|c|c!{\vrule width 1.5pt}c|}
+		\hline
+		P & Q & R & $( P \lor Q ) \land ( P \lor R ) \iff P \lor ( Q \land R )$ \\
+		\headerDivider
+		Đ & X & X & \multirow{4}{*}{\huge \vspace{-12pt} Đ} \\
+		S & S & X & \\
+		S & Đ & Đ & \\
+		S & Đ & S & \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\caption{Bảng giá trị chân lí của $( P \land Q ) \lor ( P \land R ) \iff P \land ( Q \lor R )$}
+	\begin{tabular}{|c|c|c|ccccccccccccc|}
+		\hline
+		P & Q & R & $(P$ & $\land$ & $Q)$ & $\lor$ & $(P$ & $\land$ & $R)$ & $\iff$ & $P$ & $\land$ & $(Q$ & $\lor$ & $R)$ \\
+		\headerDivider
+		S & X & X & S & S & X & S & S & S & X & \emphcolor{Đ} & S & S & X & X & X \\
+		Đ & Đ & X & Đ & Đ & Đ & Đ & Đ & X & X & \emphcolor{Đ} & Đ & Đ & Đ & Đ & X \\
+		Đ & S & Đ & Đ & S & S & Đ & Đ & Đ & Đ & \emphcolor{Đ} & Đ & Đ & S & Đ & Đ \\
+		Đ & S & S & Đ & S & S & S & Đ & S & S & \emphcolor{Đ} & Đ & S & S & S & S \\
+		\hline
+	\end{tabular}
+   \begin{tabular}{|c|c|c!{\vrule width 1.5pt}c|}
+		\hline
+		P & Q & R & $( P \land Q ) \lor ( P \land R ) \iff P \land ( Q \lor R )$ \\
+		\headerDivider
+		S & X & X & \multirow{4}{*}{\huge \vspace{-12pt} Đ} \\
+		Đ & Đ & X & \\
+		Đ & S & Đ & \\
+		Đ & S & S & \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\caption{Bảng giá trị chân lí của $( P \implies Q ) \land ( P \implies R ) \iff ( P \implies ( Q \land R ) )$}
+	\begin{tabular}{|c|c|c|ccccccccccccc|}
+		\hline
+		P & Q & R & $(P$ & $\implies$ & $Q)$ & $\land$ & $(P$ & $\implies$ & $R)$ & $\iff$ & $(P$ & $\implies$ & $(Q$ & $\land$ & $R))$ \\
+		\headerDivider
+		S & X & X & S & Đ & X & Đ & S & Đ & X & \emphcolor{Đ} & S & Đ & X & X & X \\
+		Đ & S & X & Đ & S & S & S & Đ & X & X & \emphcolor{Đ} & Đ & S & S & S & X \\
+		Đ & Đ & Đ & Đ & Đ & Đ & Đ & Đ & Đ & Đ & \emphcolor{Đ} & Đ & Đ & Đ & Đ & Đ \\
+		Đ & Đ & S & Đ & Đ & Đ & S & Đ & S & S & \emphcolor{Đ} & Đ & S & Đ & S & S \\
+		\hline
+	\end{tabular}
+   \begin{tabular}{|c|c|c!{\vrule width 1.5pt}c|}
+		\hline
+		P & Q & R & $( P \implies Q ) \land ( P \implies R ) \iff ( P \implies ( Q \land R ) )$ \\
+		\headerDivider
+		Đ & X & X & \multirow{4}{*}{\huge \vspace{-12pt} Đ} \\
+		Đ & S & X & \\
+		Đ & Đ & Đ & \\
+		Đ & Đ & S & \\
 		\hline
 	\end{tabular}
 \end{table}

@@ -78,7 +78,7 @@ def convert_expression_to_postfix(expression):
     postfix = []
     for _id, token in parse_expression(expression):
         if token in order_of_operation:
-            while stack and stack[-1] in order_of_operation and order_of_operation[token] <= order_of_operation[stack[-1]]:
+            while stack and stack[-1][1] in order_of_operation and order_of_operation[token] <= order_of_operation[stack[-1][1]]:
                 postfix.append(stack.pop())
             stack.append((_id, token))
         elif token == "(":
@@ -91,6 +91,7 @@ def convert_expression_to_postfix(expression):
             postfix.append((_id, token))
     while stack:
         postfix.append(stack.pop())
+    print(postfix)
     return postfix
 
 replacement = {
