@@ -8,15 +8,20 @@ Hãy xem xét câu sau:
 \end{center}
 Đây rõ ràng là một mệnh đề do chúng ta có thể dễ dàng xác định được tính đúng sai của nó. Câu hỏi quan trọng hơn cần được đặt ra là chúng ta đã xác định tính chính xác của câu này như thế nào. Một cách tự nhiên, chúng ta sẽ xem xét từng phần ``hôm nay trời mưa'' và ``hội thao đã phải lùi lịch''. Từ tính đúng sai của hai vế, tính đúng sai của mệnh đề ban đầu được xác định. Đây là một ví dụ của \defText{mệnh đề phức hợp} (hay \defText{mệnh đề phức}), một mệnh đề được cấu tạo từ một hoặc một số \defText{mệnh đề thành phần} và các \defText{phép nối mệnh đề}.
 
-Trong toán học, chúng ta hay sử dụng $6$ phép nối mệnh đề\footnote{``Tưởng là có $5$ phép nối mệnh đề thôi?''. Tác giả đã thêm phép nối mệnh đề $\impliedby$, trong trường hợp một vài bạn đọc đọc sách từ phải qua trái.} (lần đầu được đề xuất bởi Phrây-gơ\footnote{Friedrich Ludwig Gottlob Frege (1848 -- 1925)}):
+Trong toán học, chúng ta hay sử dụng $5$ phép nối mệnh đề (lần đầu được đề xuất bởi Phrây-gơ\footnote{Friedrich Ludwig Gottlob Frege (1848 -- 1925)}):
 \begin{itemize}
-   \item Phép \defText{đối} --- $\defMath{\neg}$,
-   \item Phép \defText{hội} hoặc phép \defText{và} --- $\defMath{\land}$ hoặc $\defMath{\&}$,
-   \item Phép \defText{tuyển} hoặc phép \defText{hoặc} --- $\defMath{\lor}$,
-   \item Phép \defText{kéo theo} --- $\defMath{\implies}$ hoặc $\defMath{\Rightarrow}$, $\defMath{\rightarrow}$,
-   \item Phép \defText{hệ quả} --- $\defMath{\impliedby}$ hoặc $\defMath{\Leftarrow}$, $\defMath{\leftarrow}$,
-   \item Phép \defText{tương đương} --- $\defMath{\iff}$ hoặc $\defMath{\Leftrightarrow}$, $\defMath{\leftrightarrow}$.
+   \item Phép \defText{đối} --- $\defMath{\neg}$, $\defMath{\sim}$, $\defMath{'}$, $\defMath{!}$;
+   \item Phép \defText{hội} hoặc phép \defText{và} --- $\defMath{\land}$ hoặc $\defMath{\&}$, $\defMath{\cdot}$;
+   \item Phép \defText{tuyển} hoặc phép \defText{hoặc} --- $\defMath{\lor}$, $\defMath{\parallel}$, $\defMath{+}$;
+   \item Phép \defText{kéo theo} --- $\defMath{\implies}$ hoặc $\defMath{\Rightarrow}$, $\defMath{\rightarrow}$, $\defMath{\supset}$;
+   \item Phép \defText{đẳng giá} hoặc phép \defText{tương đương lô-gích} --- $\defMath{\iff}$ hoặc $\defMath{\Leftrightarrow}$, $\defMath{\leftrightarrow}$, $\defMath{\equiv}$.
 \end{itemize}
+Đi kèm với những phép nối này, với sự phát triển của điện tử số, người ta đề xuất thêm những phép nối mệnh đề khác:
+\begin{itemize}
+   \item Phép \defText{hệ quả} --- $\defMath{\impliedby}$ hoặc $\defMath{\Leftarrow}$, $\defMath{\leftarrow}$;
+   \item Phép \defText{tuyển chọn} --
+\end{itemize}
+
 Kết hợp với chúng là hai dấu ngoặc, ngoặc đơn đóng --- $)$ --- và ngoặc đơn mở --- $($\footnote{Có thể dùng thêm ngoặc vuông --- $[]$ --- hay ngoặc nhọn --- $\{\}$ --- nếu cần tăng khả năng nhận diện của mệnh đề phức hợp.} --- để xác định thứ tự giải giá trị lô-gích của mệnh đề phức hợp.
 
 \subsection{Phép đối}
@@ -143,11 +148,11 @@ Bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_keo_theo} cũng đ
    \end{tabular}
 \end{table}
 
-\subsection{Phép tương đương}
+\subsection{Phép đẳng giá}
 
 \ % Lùi đầu dòng
 
-Thông thường, hai sự vật ``tương đương'' có nghĩa là hai sự vật có giá trị ngang nhau và có thể thay thế được cho nhau. Tương tự, trong lô-gích, hai mệnh đề \defText{tương đương} khi và chỉ khi cả hai luôn cùng đúng hoặc cùng sai.
+Mệnh đề có chứa phép \defText{đẳng giá} $\defMath{P \iff Q}$ đúng khi và chỉ khi cả hai mệnh đề con cấu thành $P$ và $Q$ cúng đúng hoặc cùng sai.
 \begin{table}[H]
    \centering
    \caption{Bảng giá trị chân lí của mệnh đề với phép tương đương}
@@ -176,6 +181,8 @@ Giống như thứ tự các phép tính số học\footnote{[\dots], thứ mà 
    \item Phép kéo theo --- $\implies$, phép hệ quả --- $\impliedby$ --- và phép tương đương --- $\iff$ (mức ưu tiên thấp nhất).
 \end{enumerate}
 Với các phép ở trên cùng một mức, có thể quy ước xử lí theo nhiều cách khác nhau: thứ tự xuất hiện (từ trái qua phải), kết hợp tính toán từ trái qua phải với thứ tự phép kéo theo đi trước phép tương đương, hoặc yêu cầu sử dụng các dấu ngoặc để sắp xếp thứ tự. Trong cuốn sách này, tác giả sẽ sử dụng quy ước \emph{từ trái qua phải} là chủ yếu, kèm với việc sử dấu ngoặc để giúp tăng khả năng đọc khi cần thiết.
+
+Cần phải để ý rằng trong nhiều tài liệu, người ta hay lạm dụng kí hiệu (hay ngôn ngữ) khi viết $P \implies Q \implies R$ và $P \iff Q \iff R$ với ngầm hiểu rằng hai mệnh đề này lần lượt là $(P \implies Q) \land (Q \implies R)$ và $(P \iff Q) \land (Q \iff R)$ chứ không phải là $(P \implies Q) \implies R$ và $(P \iff Q) \iff R$ .
 
 \exercise[ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li] Xây dựng bảng giá trị chân lí của các mệnh đề sau:
 \begin{multicols}{2}
@@ -847,5 +854,3 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
 		\hline
 	\end{tabular}
 \end{table}
-
-
