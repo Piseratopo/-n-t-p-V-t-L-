@@ -12,14 +12,22 @@ Trong toán học, chúng ta hay sử dụng $5$ phép nối mệnh đề (lần
 \begin{itemize}
    \item Phép \defText{đối} --- $\defMath{\neg}$, $\defMath{\sim}$, $\defMath{'}$, $\defMath{!}$;
    \item Phép \defText{hội} hoặc phép \defText{và} --- $\defMath{\land}$ hoặc $\defMath{\&}$, $\defMath{\cdot}$;
-   \item Phép \defText{tuyển} hoặc phép \defText{hoặc} --- $\defMath{\lor}$, $\defMath{\parallel}$, $\defMath{+}$;
+   \item Phép \defText{tuyển} hoặc phép \defText{hoặc} --- $\defMath{\lor}$ hoặc $\defMath{\parallel}$, $\defMath{+}$;
    \item Phép \defText{kéo theo} --- $\defMath{\implies}$ hoặc $\defMath{\Rightarrow}$, $\defMath{\rightarrow}$, $\defMath{\supset}$;
-   \item Phép \defText{đẳng giá} hoặc phép \defText{tương đương lô-gích} --- $\defMath{\iff}$ hoặc $\defMath{\Leftrightarrow}$, $\defMath{\leftrightarrow}$, $\defMath{\equiv}$.
+   \item Phép \defText{đẳng giá} hoặc phép \defText{tương đương lô-gích} --- $\defMath{\iff}$ hoặc $\defMath{\Leftrightarrow}$, $\defMath{\leftrightarrow}$, $\defMath{\leftrightarrows}$, $\defMath{\equiv}$.
 \end{itemize}
+
+\newcommand{\notimplies}{\text{\ \  $\not$ \hspace{-1em}$\implies$}}
+\newcommand{\notimpliedby}{\text{\hspace{0.9em}$\not$\hspace{-0.9em}$\impliedby$}}
+
 Đi kèm với những phép nối này, với sự phát triển của điện tử số, người ta đề xuất thêm những phép nối mệnh đề khác:
 \begin{itemize}
-   \item Phép \defText{hệ quả} --- $\defMath{\impliedby}$ hoặc $\defMath{\Leftarrow}$, $\defMath{\leftarrow}$;
-   \item Phép \defText{tuyển chọn} --
+   \item Phép \defText{phủ định hội} -- $\defMath{\overline{\land}}$ hoặc $\defMath{\uparrow}$;
+   \item Phép \defText{phủ định tuyển} -- $\defMath{\overline{\lor}}$ hoặc $\defMath{\downarrow}$; 
+   \item Phép \defText{hệ quả} -- $\defMath{\impliedby}$ hoặc $\defMath{\Leftarrow}$, $\defMath{\leftarrow}$;
+   \item Phép \defText{phủ định kéo theo} -- \ \  $\defMath{\not}$ \hspace{-1em}$\defMath{\implies}$ hoặc $\defMath{\nRightarrow}$, $\defMath{\not\rightarrow}$;
+   \item Phép \defText{phủ định hệ quả} -- \ \  $\defMath{\not}$ \hspace{-1em}$\defMath{\impliedby}$ hoặc $\defMath{\nLeftarrow}$, $\defMath{\not\leftarrow}$;
+   \item Phép \defText{tuyển chọn} -- $\defMath{\oplus}$ hoặc $\defMath{\veebar}$, $\defMath{\not \leftrightarrow}$, $\defMath{\not\equiv}$.
 \end{itemize}
 
 Kết hợp với chúng là hai dấu ngoặc, ngoặc đơn đóng --- $)$ --- và ngoặc đơn mở --- $($\footnote{Có thể dùng thêm ngoặc vuông --- $[]$ --- hay ngoặc nhọn --- $\{\}$ --- nếu cần tăng khả năng nhận diện của mệnh đề phức hợp.} --- để xác định thứ tự giải giá trị lô-gích của mệnh đề phức hợp.
@@ -87,6 +95,23 @@ Cho hai mệnh đề $P$ và $Q$. Mệnh đề phức ``$P$ và $Q$'' là \defTe
    \end{tabular}
 \end{table}
 
+Ngược lại của mệnh đề hội $P \land Q$ là mệnh đề \defText{phủ định hội} $\defMath{P \uparrow Q}$. Mệnh đề này chỉ \emph{sai} khi và chỉ khi $P$ và $Q$ \emph{đều đúng}.
+\begin{table}[H]
+   \centering
+   \caption{Bảng giá trị chân lí của mệnh đề với phép phủ định hội}
+   \label{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_phu_dinh_hoi}
+   \begin{tabular}{|c|c!{\vrule width 1.5pt}c|}
+      \hline 
+      $P$ & $Q$ & $P \uparrow Q$ \\
+      \headerDivider
+      Đ & Đ & S \\
+      Đ & S & Đ \\
+      S & Đ & Đ \\
+      S & S & Đ \\
+      \hline
+   \end{tabular}
+\end{table}
+
 \subsection{Phép tuyển}
 
 \ % Lùi đầu dòng
@@ -110,6 +135,23 @@ Mệnh đề phức ``$P$ hoặc $Q$'' là \defText{tuyển} của hai mệnh đ
 
 Ý nghĩa của từ ``hoặc'' trong toán học hơi khác với ý nghĩa thông thường. Khi người ta nói ``hoặc'', người ta hay ám chỉ một trong số các trường hợp liệt kê ra là đúng. Trong lô-gích, cả hai mệnh đề đúng vẫn làm cho mệnh đề phức hợp đúng.
 
+Tương tự với phép tuyển, phép hội cũng có ``anh em'' phủ định tương ứng. Mệnh đề \defText{tuyển phủ định} $\defMath{P \downarrow Q}$ sai khi tồn tại một mệnh đề sai trong hai mệnh đề $P$ và $Q$.
+\begin{table}[H]
+   \centering
+   \caption{Bảng giá trị chân lí của mệnh đề với phép phủ định tuyển}
+   \label{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_phu_dinh_tuyen}
+   \begin{tabular}{|c|c!{\vrule width 1.5pt}c|}
+      \hline
+      $P$ & $Q$ & $P \downarrow Q$ \\
+      \headerDivider
+      Đ & Đ & S \\
+      Đ & S & S \\ 
+      S & Đ & S \\
+      S & S & Đ \\
+      \hline
+   \end{tabular}
+\end{table}
+
 \subsection{Phép kéo theo và phép hệ quả}
 
 \ % Lùi đầu dòng
@@ -117,21 +159,21 @@ Mệnh đề phức ``$P$ hoặc $Q$'' là \defText{tuyển} của hai mệnh đ
 Đây lại là một phép nối nữa mà ý nghĩa của nó (có thể) khác với ý nghĩa thông thường. Đây là phép cũng gây nhiều lỗi lập luận lô-gích nhất. Mệnh đề với phép \defText{kéo theo} $\defMath{P \implies Q}$ chỉ sai khi $P$ không suy ra $Q$, điều này tương đương, và chỉ tương đương, với có $P$ mà không có $Q$. Bạn đọc nên để ý kĩ hai dòng cuối cùng của bảng giá trị chân lí \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_keo_theo}.
 \begin{table}[H]
    \centering
-   \caption{Bảng giá trị chân lí của mệnh đề với phép kéo theo và phép hệ quả}
+   \caption{Bảng giá trị chân lí của mệnh đề với phép kéo theo}
    \label{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_keo_theo}
-   \begin{tabular}{|c|c!{\vrule width 1.5pt}c!{\vrule width 1.5pt}c|}
+   \begin{tabular}{|c|c!{\vrule width 1.5pt}c|}
       \hline
-      $P$ & $Q$ & $P \implies Q$ & $Q \impliedby P$ \\
+      $P$ & $Q$ & $P \implies Q$ \\
       \headerDivider
-      Đ & Đ & Đ & Đ \\
-      Đ & S & S & S \\
-      \emphcolor{S} & \emphcolor{Đ} & \emphcolor{Đ} & \emphcolor{Đ} \\
-      \emphcolor{S} & \emphcolor{S} & \emphcolor{Đ} & \emphcolor{Đ} \\
+      Đ & Đ & Đ \\
+      Đ & S & S \\
+      \emphcolor{S} & \emphcolor{Đ} & \emphcolor{Đ} \\
+      \emphcolor{S} & \emphcolor{S} & \emphcolor{Đ} \\
       \hline
    \end{tabular}
 \end{table}
 
-Bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_keo_theo} cũng đề cập đến một phép lô-gích nữa, chính là phép \defText{hệ quả}. Khi nói ``$P$ suy ra $Q$'', cũng có thể nói ``$Q$ là hệ quả của $P$'' trong trường hợp đó. Bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_he_qua} được đưa ra trong trường hợp bạn đọc muốn nhìn thấy phép hệ quả theo thứ tự bảng chữ cái.
+Bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_keo_theo} cũng đề cập đến một phép lô-gích nữa, chính là phép hệ quả. Tương tự như phép kéo theo, mệnh đề \defText{hệ quả} $\defMath{P \impliedby Q}$ chỉ sai khi $P$ không được kéo theo từ $Q$ như được thể hiện ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_he_qua}.
 \begin{table}[H]
    \centering
    \caption{Bảng giá trị chân lí của mệnh đề với phép hệ quả}
@@ -139,6 +181,23 @@ Bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_keo_theo} cũng đ
    \begin{tabular}{|c|c!{\vrule width 1.5pt}c|}
       \hline
       $P$ & $Q$ & $P \impliedby Q$ \\
+      \headerDivider
+      Đ & Đ & Đ \\
+      Đ & S & Đ \\
+      S & Đ & S \\
+      S & S & Đ \\
+      \hline
+   \end{tabular}
+\end{table}
+
+Đảo của phép kéo theo và phép hệ quả, \defText{phủ định kéo theo} $\defMath{P \notimplies Q}$ và \defText{phủ định hệ quả} $\defMath{P \notimpliedby Q}$ có bảng giá trị chân lí như 
+\begin{table}[H]
+   \centering
+   \caption{Bảng giá trị chân lí của mệnh đề với phép phủ định kéo theo và phủ định hệ quả}
+   \label{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_he_qua}
+   \begin{tabular}{|c|c!{\vrule width 1.5pt}c!{\vrule width 1.5pt}c|}
+      \hline
+      $P$ & $Q$ & $P \notimplies Q$ & $P \notimpliedby Q$ \\
       \headerDivider
       Đ & Đ & Đ \\
       Đ & S & Đ \\
