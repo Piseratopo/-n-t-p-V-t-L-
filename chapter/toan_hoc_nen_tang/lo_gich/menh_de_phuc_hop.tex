@@ -17,9 +17,6 @@ Trong toán học, chúng ta hay sử dụng $5$ phép nối mệnh đề (lần
    \item Phép \defText{đẳng giá} hoặc phép \defText{tương đương lô-gích} --- $\defMath{\iff}$ hoặc $\defMath{\Leftrightarrow}$, $\defMath{\leftrightarrow}$, $\defMath{\leftrightarrows}$, $\defMath{\equiv}$.
 \end{itemize}
 
-\newcommand{\notimplies}{\text{\ \  $\not$ \hspace{-1em}$\implies$}}
-\newcommand{\notimpliedby}{\text{\hspace{0.9em}$\not$\hspace{-0.9em}$\impliedby$}}
-
 Đi kèm với những phép nối này, với sự phát triển của điện tử số, người ta đề xuất thêm những phép nối mệnh đề khác:
 \begin{itemize}
    \item Phép \defText{phủ định hội} -- $\defMath{\overline{\land}}$ hoặc $\defMath{\uparrow}$;
@@ -27,7 +24,8 @@ Trong toán học, chúng ta hay sử dụng $5$ phép nối mệnh đề (lần
    \item Phép \defText{hệ quả} -- $\defMath{\impliedby}$ hoặc $\defMath{\Leftarrow}$, $\defMath{\leftarrow}$;
    \item Phép \defText{phủ định kéo theo} -- \ \  $\defMath{\not}$ \hspace{-1em}$\defMath{\implies}$ hoặc $\defMath{\nRightarrow}$, $\defMath{\not\rightarrow}$;
    \item Phép \defText{phủ định hệ quả} -- \ \  $\defMath{\not}$ \hspace{-1em}$\defMath{\impliedby}$ hoặc $\defMath{\nLeftarrow}$, $\defMath{\not\leftarrow}$;
-   \item Phép \defText{tuyển chọn} -- $\defMath{\oplus}$ hoặc $\defMath{\veebar}$, $\defMath{\not \leftrightarrow}$, $\defMath{\not\equiv}$.
+   \item Phép \defText{tuyển chọn} -- $\defMath{\oplus}$ hoặc $\defMath{\veebar}$, $\defMath{\not \leftrightarrow}$, $\defMath{\not\equiv}$;
+   \item Phép \defText{phủ định tuyển chọn} -- $\defMath{\odot}$.
 \end{itemize}
 
 Kết hợp với chúng là hai dấu ngoặc, ngoặc đơn đóng --- $)$ --- và ngoặc đơn mở --- $($\footnote{Có thể dùng thêm ngoặc vuông --- $[]$ --- hay ngoặc nhọn --- $\{\}$ --- nếu cần tăng khả năng nhận diện của mệnh đề phức hợp.} --- để xác định thứ tự giải giá trị lô-gích của mệnh đề phức hợp.
@@ -78,7 +76,12 @@ Chúng ta sẽ lấy ví dụ ngay trên phép nối mệnh đề chúng ta vừ
 
 \ %
 
-Cho hai mệnh đề $P$ và $Q$. Mệnh đề phức ``$P$ và $Q$'' là \defText{hội} của $P$ và $Q$ và có kí hiệu là $\defMath{P \land Q}$. Mệnh đề này chỉ đúng khi cả hai mệnh đề thành phần $P$ và $Q$ đều đúng, thể hiện dưới dạng bảng giá trị chân lí \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_hoi}.
+Trong hệ thống an ninh ngân hàng, thông thường, để đăng nhập vào tài khoản, có thể bạn đọc sẽ cần $P$: ``nhập đúng mật khẩu'' và $Q$: ``nhập đúng mã OTP\footnote{One Time Password --- Mật khẩu dùng một lần.}''. Chỉ khi \emphcolor{$P$ và $Q$} đúng thì bạn đọc mới được phép sử dụng các sản phẩm của ngân hàng.
+
+Trong ngôn ngữ tự nhiên, chúng ta thường dùng từ "và" để nối hai ý tưởng lại với nhau. Trong logic học, việc kết hợp hai mệnh đề $P$ và $Q$ để tạo thành một mệnh đề mới được gọi là phép hội. Mệnh đề này được biểu diễn bằng lời là ``$P$ và $Q$'', kí hiệu là
+$$\defMath{P \land Q}.$$
+
+Mệnh đề này có tính "khắt khe": nó chỉ đúng khi cả $P$ và $Q$ đồng thời cùng đúng. Nếu ít nhất một trong hai mệnh đề thành phần bị sai, kết quả của phép hội sẽ là sai, thể hiện dưới dạng bảng giá trị chân lí \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_hoi}.
 \begin{table}[H]
    \centering
    \caption{Bảng giá trị chân lí của mệnh đề với phép hội}
@@ -95,7 +98,9 @@ Cho hai mệnh đề $P$ và $Q$. Mệnh đề phức ``$P$ và $Q$'' là \defTe
    \end{tabular}
 \end{table}
 
-Ngược lại của mệnh đề hội $P \land Q$ là mệnh đề \defText{phủ định hội} $\defMath{P \uparrow Q}$. Mệnh đề này chỉ \emph{sai} khi và chỉ khi $P$ và $Q$ \emph{đều đúng}.
+Giả sử rằng bạn đọc thấy bữa ăn buổi hôm nay rất ngon, do sự nhiệt tình của bạn bồi bàn. Bạn đọc đã vào được phần mềm ngân hàng của mình và định cho bo cho bồ bàn một chút tiền. Tuy nhiên, bạn đọc lại nhìn thấy bảng ghi chính sách của quán: "Khách hàng không được phép đưa tiền bo cho nhân viên của quán". Nếu bạn đọc vừa $P$: là khách hàng của quán, và $Q$: đưa tiền bo cho nhân viên, thì bạn đọc đã vi phạm chính sách rằng \emphcolor{không $P$ và $Q$}. Bạn đọc đành đưa ra đề nghị với nhà hàng là bạn muốn được phục vụ lại bởi bồi bàn này trong những lần sau.
+
+Nếu phép hội đại diện cho sự ``đồng thuận tuyệt đối'', thì phép phủ định hội (còn gọi là phép toán Sép-phơ\footnote{Henry Maurice Sheffer (1882 -- 1964)}) lại đại diện cho sự phủ nhận của sự đồng thuận đó. Phủ định hội của $P$ và $Q$ được kí hiệu là $$\defMath{P \uparrow Q}.$$ Mệnh đề này chỉ sai trong trường hợp duy nhất là cả $P$ và $Q$ đều đúng.
 \begin{table}[H]
    \centering
    \caption{Bảng giá trị chân lí của mệnh đề với phép phủ định hội}
@@ -190,19 +195,19 @@ Bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_keo_theo} cũng đ
    \end{tabular}
 \end{table}
 
-Đảo của phép kéo theo và phép hệ quả, \defText{phủ định kéo theo} $\defMath{P \notimplies Q}$ và \defText{phủ định hệ quả} $\defMath{P \notimpliedby Q}$ có bảng giá trị chân lí như 
+Đảo của phép kéo theo và phép hệ quả, \defText{phủ định kéo theo} $\defMath{P \notimplies Q}$ và \defText{phủ định hệ quả} $\defMath{P \notimpliedby Q}$ có bảng giá trị chân lí như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_phu_dinh_keo_theo_he_qua}.
 \begin{table}[H]
    \centering
    \caption{Bảng giá trị chân lí của mệnh đề với phép phủ định kéo theo và phủ định hệ quả}
-   \label{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_he_qua}
+   \label{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_phu_dinh_keo_theo_he_qua}
    \begin{tabular}{|c|c!{\vrule width 1.5pt}c!{\vrule width 1.5pt}c|}
       \hline
       $P$ & $Q$ & $P \notimplies Q$ & $P \notimpliedby Q$ \\
       \headerDivider
-      Đ & Đ & Đ \\
-      Đ & S & Đ \\
-      S & Đ & S \\
-      S & S & Đ \\
+      Đ & Đ & S & S \\
+      Đ & S & Đ & S \\
+      S & Đ & S & Đ \\
+      S & S & S & S \\
       \hline
    \end{tabular}
 \end{table}
@@ -224,6 +229,30 @@ Mệnh đề có chứa phép \defText{đẳng giá} $\defMath{P \iff Q}$ đúng
       Đ & S & S \\
       S & Đ & S \\
       S & S & Đ \\
+      \hline
+   \end{tabular}
+\end{table}
+
+
+
+\subsection{Phép tuyển chọn}
+
+\ % Lùi đầu dòng
+
+Trong một trường hợp khác, hai mệnh đề $P$ và $Q$ có một và chỉ một mệnh đề đúng là đồng nghĩa với mệnh đề \defText{tuyển chọn} $\defMath{P \oplus Q}$ đúng.
+
+\begin{table}[H]
+   \centering
+   \caption{Bảng giá trị chân lí của mệnh đề với phép tuyển chọn}
+   \label{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_tuyen_chon}
+   \begin{tabular}{|c|c!{\vrule width 1.5pt}c|}
+      \hline
+      $P$ & $Q$ & $P \oplus Q$ \\
+      \headerDivider 
+      Đ & Đ & S \\
+      Đ & S & Đ \\
+      S & Đ & Đ \\
+      S & S & S \\
       \hline
    \end{tabular}
 \end{table}
