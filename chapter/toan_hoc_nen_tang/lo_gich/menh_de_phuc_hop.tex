@@ -10,7 +10,7 @@ Hãy xem xét câu sau:
 
 Trong toán học, chúng ta hay sử dụng $5$ phép nối mệnh đề (lần đầu được đề xuất bởi Phrây-gơ\footnote{Friedrich Ludwig Gottlob Frege (1848 -- 1925)}):
 \begin{itemize}
-   \item Phép \defText{đối} --- $\defMath{\neg}$, $\defMath{\sim}$, $\defMath{'}$, $\defMath{!}$;
+   \item Phép \defText{đối} --- $\defMath{\neg}$, $\defMath{'}$, $\defMath{!}$;
    \item Phép \defText{hội} hoặc phép \defText{và} --- $\defMath{\land}$ hoặc $\defMath{\&}$, $\defMath{\cdot}$;
    \item Phép \defText{tuyển} hoặc phép \defText{hoặc} --- $\defMath{\lor}$ hoặc $\defMath{\parallel}$, $\defMath{+}$;
    \item Phép \defText{kéo theo} --- $\defMath{\implies}$ hoặc $\defMath{\Rightarrow}$, $\defMath{\rightarrow}$, $\defMath{\supset}$;
@@ -19,13 +19,13 @@ Trong toán học, chúng ta hay sử dụng $5$ phép nối mệnh đề (lần
 
 Đi kèm với những phép nối này, với sự phát triển của điện tử số, người ta đề xuất thêm những phép nối mệnh đề khác:
 \begin{itemize}
-   \item Phép \defText{phủ định hội} -- $\defMath{\overline{\land}}$ hoặc $\defMath{\uparrow}$;
-   \item Phép \defText{phủ định tuyển} -- $\defMath{\overline{\lor}}$ hoặc $\defMath{\downarrow}$; 
-   \item Phép \defText{hệ quả} -- $\defMath{\impliedby}$ hoặc $\defMath{\Leftarrow}$, $\defMath{\leftarrow}$;
-   \item Phép \defText{phủ định kéo theo} -- $\defMath{\nRightarrow}$ hoặc $\defMath{\text{\hspace{0.6em}$\not$\hspace{-0.75em}$\implies$}}$, $\defMath{\not\rightarrow}$;
-   \item Phép \defText{phủ định hệ quả} -- $\defMath{\nLeftarrow}$ hoặc $\defMath{\defMath{\text{\hspace{0.8em}$\not$\hspace{-0.94em}$\impliedby$}}}$, $\defMath{\not\leftarrow}$;
-   \item Phép \defText{phủ định đẳng giá} -- $\defMath{\nLeftrightarrow}$ hoặc $\defMath{\text{\hspace{0.8em}$\not$\hspace{-0.94em}$\iff$}}$, $\defMath{\not\leftrightarrow}$; 
-   \item Phép \defText{tuyển chọn} hoặc phép \defText{tuyển lại trừ} -- $\defMath{\oplus}$ hoặc $\defMath{\veebar}$, $\defMath{\not \leftrightarrow}$, $\defMath{\not\equiv}$;
+   \item Phép \defText{phủ định hội} -- $\defMath{\uparrow}$ hoặc $\defMath{\overline{\land}}$;
+   \item Phép \defText{phủ định tuyển} -- $\defMath{\downarrow}$ hoặc $\defMath{\overline{\lor}}$; 
+   \item Phép \defText{hệ quả} -- $\defMath{\impliedby}$ hoặc $\defMath{\Leftarrow}$, $\defMath{\leftarrow}$, $\defMath{\subset}$;
+   \item Phép \defText{phủ định kéo theo} -- $\defMath{\nRightarrow}$ hoặc $\defMath{\nrightarrow}$, $\defMath{\text{\hspace{0.6em}$\not$\hspace{-0.75em}$\implies$}}$, \hspace{0.1em}$\defMath{\not}$\hspace{-0.1em}$\defMath{\rightarrow}$, $\defMath{\not\supset}$;
+   \item Phép \defText{phủ định hệ quả} -- $\defMath{\nLeftarrow}$ hoặc $\defMath{\nleftarrow}$, $\defMath{\defMath{\text{\hspace{0.8em}$\not$\hspace{-0.94em}$\impliedby$}}}$, \hspace{0.2em}$\defMath{\not}$\hspace{-0.2em}$\defMath{\leftarrow}$, $\defMath{\not\subset}$;
+   \item Phép \defText{phủ định đẳng giá} -- $\defMath{\nLeftrightarrow}$ hoặc $\defMath{\nleftrightarrow}$, $\defMath{\text{\hspace{0.8em}$\not$\hspace{-0.94em}$\iff$}}$, \hspace{0.13em}$\defMath{\not}$\hspace{-0.13em}$\defMath{\leftrightarrow}$; 
+   \item Phép \defText{tuyển chọn} hoặc phép \defText{tuyển lại trừ} -- $\defMath{\oplus}$ hoặc $\defMath{\veebar}$, \hspace{0.13em}$\defMath{\not}$\hspace{-0.13em}$\defMath{\leftrightarrow}$\footnote{Kí hiệu giống với phủ định đẳng giá không phải là do trùng hợp.}, $\defMath{\not\equiv}$;
    \item Phép \defText{phủ định tuyển chọn} -- $\defMath{\odot}$.
 \end{itemize}
 
@@ -35,15 +35,15 @@ Kết hợp với chúng là hai dấu ngoặc, ngoặc đơn đóng --- $)$ ---
 
 \ %
 
-Thông thường, để phủ định một câu khẳng định, chúng ta hay dùng từ ``không'' hay những từ gần nghĩa như ``chưa'' hay ``chẳng''. Ví dụ, có thể phủ định câu ``Cơm hôm nay ngon.'' thành ``Cơm hôm nay \emph{không} ngon.''. Tuy nhiên, với những câu phức tạp hơn như ví dụ về hội thao ở trước đó thì việc thêm các chữ ``không'' như
+Thông thường, để phủ định một câu khẳng định, chúng ta hay dùng từ ``không'' hay những từ gần nghĩa như ``chưa'' hay ``chẳng''. Ví dụ, có thể phủ định câu ``Cơm hôm nay ngon.'' thành ``Cơm hôm nay \emph{không} ngon.''. Cần phải để ý rằng, với những câu phức tạp hơn như ví dụ về hội thao ở trước đó thì việc thêm các chữ ``không'' như
 \begin{center}
    ``Hôm nay trời \emph{không} mưa \emph{\textcolor{colorEmphasis}{và}} hội thao đã \emph{không} phải lùi lịch.''
 \end{center}
-là không thỏa đáng. Cách viết đúng sẽ khá dài dòng:
+là không thỏa đáng. Cách viết đúng cần phải phủ định toàn bộ câu chứ không chỉ một vế. Có thể viết mệnh đề phủ định như sau, tuy sẽ khá dài dòng:
 \begin{center}
    ``\emph{Không phải trường hợp rằng} hôm nay trời mưa và hội thao đã phải lùi lịch.''.
 \end{center}
-Sử dụng kí hiệu thì sẽ dễ dàng hơn, tuy nhìn hơi kì, kiểu như:
+Để tăng tính khái quát hóa và rút gọn mệnh đề, chúng ta có thể sử dụng kí hiệu, tuy rằng câu sau đó nhìn sẽ hơi kì, kiểu như:
 \begin{center}
    ``$\neg \left(\text{cơm hôm nay ngon}\right)$''
 \end{center}
@@ -79,7 +79,7 @@ Chúng ta sẽ lấy ví dụ ngay trên phép nối mệnh đề chúng ta vừ
 
 Trong hệ thống an ninh ngân hàng, thông thường, để đăng nhập vào tài khoản, có thể bạn đọc sẽ cần $P$: ``nhập đúng mật khẩu'' và $Q$: ``nhập đúng mã OTP\footnote{One Time Password --- Mật khẩu dùng một lần.}''. Chỉ khi \emphcolor{$P$ và $Q$} đúng thì bạn đọc mới được phép sử dụng các sản phẩm của ngân hàng.
 
-Trong ngôn ngữ tự nhiên, chúng ta thường dùng từ "và" để nối hai ý tưởng lại với nhau. Trong logic học, việc kết hợp hai mệnh đề $P$ và $Q$ để tạo thành một mệnh đề mới được gọi là phép hội. Mệnh đề này được biểu diễn bằng lời là ``$P$ và $Q$'', kí hiệu là
+Trong ngôn ngữ tự nhiên, chúng ta thường dùng từ ``và'' để nối hai ý tưởng lại với nhau. Trong logic học, việc kết hợp hai mệnh đề $P$ và $Q$ để tạo thành một mệnh đề mới được gọi là phép hội. Mệnh đề này được biểu diễn bằng lời là ``$P$ và $Q$'', kí hiệu là
 $$\defMath{P \land Q}.$$
 
 Mệnh đề này có tính "khắt khe": nó chỉ đúng khi cả $P$ và $Q$ đồng thời cùng đúng. Nếu ít nhất một trong hai mệnh đề thành phần bị sai, kết quả của phép hội sẽ là sai, thể hiện dưới dạng bảng giá trị chân lí \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_hoi}.
@@ -166,7 +166,7 @@ Tương tự với phép tuyển, phép hội cũng có ``anh em'' phủ định
 
 \ % Lùi đầu dòng
 
-Đây lại là một phép nối nữa mà ý nghĩa của nó (có thể) khác với ý nghĩa thông thường. Đây là phép cũng gây nhiều lỗi lập luận lô-gích nhất. Mệnh đề với phép \defText{kéo theo} $\defMath{P \implies Q}$ chỉ sai khi $P$ không suy ra $Q$, điều này tương đương, và chỉ tương đương, với có $P$ mà không có $Q$. Bạn đọc nên để ý kĩ hai dòng cuối cùng của bảng giá trị chân lí \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_keo_theo}.
+Đây lại là một phép nối nữa mà ý nghĩa của nó (có thể) khác với ý nghĩa thông thường. Đây là phép cũng gây nhiều lỗi lập luận lô-gích nhất. Mệnh đề với phép kéo theo $\defMath{P \implies Q}$ chỉ sai khi $P$ không suy ra $Q$, điều này tương đương, và chỉ tương đương, với có $P$ mà không có $Q$. Bạn đọc nên để ý kĩ hai dòng cuối cùng của bảng giá trị chân lí \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_keo_theo}.
 \begin{table}[H]
    \centering
    \caption{Bảng giá trị chân lí của mệnh đề với phép kéo theo}
@@ -191,7 +191,7 @@ Hãy xem xét một ví dụ minh họa. Không biết rằng bạn đọc đã 
 \end{itemize}
 Vậy trường hợp duy nhất mà lời hứa bị phá vỡ --- \emphcolor{P kéo theo Q} sai --- là khi người con không được tặng sách mặc dù được điểm 10.
 
-Phép kết nối xét theo chiều ngược lại của phép kéo theo chính là phép hệ quả. Tương tự như phép kéo theo, mệnh đề \defText{hệ quả} $\defMath{P \impliedby Q}$ chỉ sai khi $P$ không được kéo theo từ $Q$ như được thể hiện ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_he_qua}.
+Phép kết nối xét theo chiều ngược lại của phép kéo theo chính là phép hệ quả. Tương tự như phép kéo theo, mệnh đề hệ quả $\defMath{P \impliedby Q}$ chỉ sai khi $P$ không được kéo theo từ $Q$ như được thể hiện ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_he_qua}.
 \begin{table}[H]
    \centering
    \caption{Bảng giá trị chân lí của mệnh đề với phép hệ quả}
@@ -210,7 +210,7 @@ Phép kết nối xét theo chiều ngược lại của phép kéo theo chính 
 
 Không phải lúc nào trong cuộc sống mà cũng có mối quan hệ kéo theo -- hệ quả rõ ràng. Ví dụ, nhiều người thường quan niệm rằng $P$: thành công là do $Q$: đọc sách tự cải thiện bản thân\footnote{Là sách self-help đó. Làm ơn đừng đọc.}. Tuy nhiên, Bác Hồ đã tự mình bôn ba năm châu bốn biển và sau đó thành công trong việc tìm xác định được đường lối phù hợp với đất nước Việt Nam lúc bấy giờ và dẫn dắt được đất nước qua quãng thời gian bế tắc. Rõ ràng là do Bác đọc những tác phẩm mang tính cách mạng cao (mà không phải sách tự cải thiện bản thân), cho nên có thể nói rằng Bác Hồ đã làm cho phản mệnh đề $P \impliedby Q$ đúng, hay nói cách khác, là ví dụ cho sự \emphcolor{phủ định hệ quả $P$ do $Q$}.
 
-Đảo của phép kéo theo và phép hệ quả, \defText{phủ định kéo theo} $\defMath{P \nRightarrow Q}$ và \defText{phủ định hệ quả} $\defMath{P \nLeftarrow Q}$ có bảng giá trị chân lí như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_phu_dinh_keo_theo_he_qua}.
+Đảo của phép kéo theo và phép hệ quả, phủ định kéo theo $\defMath{P \nRightarrow Q}$ và \defText{phủ định hệ quả} $\defMath{P \nLeftarrow Q}$ có bảng giá trị chân lí như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_phu_dinh_keo_theo_he_qua}.
 \begin{table}[H]
    \centering
    \caption{Bảng giá trị chân lí của mệnh đề với phép phủ định kéo theo và phủ định hệ quả}
@@ -233,10 +233,10 @@ Không phải lúc nào trong cuộc sống mà cũng có mối quan hệ kéo t
 
 Giống như các trường đại học khác, U-ni-véc-xi-ta-tô cũng xét tốt nghiệp sinh viên theo số tín chỉ tích lũy và các môn điều kiện. Sinh viên $P$: được công nhận tốt nghiệp khi và chỉ khi $Q$: Sinh viên tích lũy đủ số tín chỉ và đã qua các môn điều kiện. Nếu như có sinh viên xong các điều kiện môn mà không được xét bằng, hoặc chưa học xong mà đã có bằng, thì \emphcolor{P tương đương Q} sai, và có một sự nhầm lẫn/gian lận nào đó ở đây. 
 
-Phép này đại diện cho sự ``cùng tiến, cùng lùi''. Mệnh đề có chứa phép \defText{đẳng giá} $\defMath{P \iff Q}$ đúng khi và chỉ khi cả hai mệnh đề con cấu thành $P$ và $Q$ cúng đúng hoặc cùng sai.
+Phép này đại diện cho sự ``cùng tiến, cùng lùi''. Mệnh đề có chứa phép đẳng giá $\defMath{P \iff Q}$ đúng khi và chỉ khi cả hai mệnh đề con cấu thành $P$ và $Q$ cúng đúng hoặc cùng sai.
 \begin{table}[H]
    \centering
-   \caption{Bảng giá trị chân lí của mệnh đề với phép tương đương}
+   \caption{Bảng giá trị chân lí của mệnh đề với phép đẳng giá}
    \label{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_tuong_duong}
    \begin{tabular}{|c|c!{\vrule width 1.5pt}c|}
       \hline
@@ -250,7 +250,25 @@ Phép này đại diện cho sự ``cùng tiến, cùng lùi''. Mệnh đề có
    \end{tabular}
 \end{table}
 
+Lấy một ví dụ tương tự, Ê-mô-ri cần phải lập trình thông báo lỗi của một hệ thống cơ bản với quy định: ``$P$: Đèn tín hiệu xanh, khi và chỉ khi $Q$: hệ thống đang chạy.''. Hệ thống có lỗi, hay vi phạm quy định, đồng nghĩa với \emphcolor{$P$ không đẳng giá với $Q$}, đèn xanh mà hệ thống không chạy, hoặc đèn tắt mà hệ thống vẫn chạy. Đây là hệ thống có vai trò vô cùng quan trọng, do nó cho cái nhìn tổng quát về tổng thể hoạt động hệ thống và giúp nhanh chóng phát hiện sự cố.
 
+Phủ định đẳng giá $\defMath{P \nLeftrightarrow Q}$ thể hiện việc bác bỏ khẳng định rằng hai mệnh đề luôn cùng đúng hoặc cùng sai.
+
+\begin{table}[H]
+   \centering
+   \caption{Bảng giá trị chân lí của mệnh đề với phép đẳng giá}
+   \label{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_phu_dinh_dang_gia}
+   \begin{tabular}{|c|c!{\vrule width 1.5pt}c|}
+      \hline
+      $P$ & $Q$ & $P \nLeftrightarrow Q$ \\
+      \headerDivider 
+      Đ & Đ & S \\
+      Đ & S & Đ \\
+      S & Đ & Đ \\
+      S & S & S \\
+      \hline
+   \end{tabular}
+\end{table}
 
 \subsection{Phép tuyển chọn}
 
@@ -276,18 +294,38 @@ Khác với phép tuyển (hoặc sao cũng được), phép tuyển chọn $\de
    \end{tabular}
 \end{table}
 
+Phép đối của phép tuyển chọn có tên là phép phủ định tuyển chọn. Khi chúng ta cần biểu diễn không phải là chọn một trong hai thì chúng ta sự dụng phép nối lô-gích này. Hai phép tuyển chọn và phủ định tuyển chọn thường được ghép chung vào cùng một nhóm, cho nên chúng cũng có kí hiệu gần giống nhau. Nếu như phép tuyển chọn được kí hiệu bằng một vòng tròn bao một dấu cộng, phép phủ định tuyển chọn được kí hiệu là một vòng tròn nhưng bao dấu nhân chấm: $\defMath{P \odot Q}$.
+
+\begin{table}[H]
+   \centering
+   \caption{Bảng giá trị chân lí của mệnh đề với phép phủ định tuyển chọn}
+   \label{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:dn_phu_dinh_tuyen_chon}
+   \begin{tabular}{|c|c!{\vrule width 1.5pt}c|}
+      \hline
+      $P$ & $Q$ & $P \odot Q$ \\
+      \headerDivider 
+      Đ & Đ & Đ \\
+      Đ & S & S \\
+      S & Đ & S \\
+      S & S & Đ \\
+      \hline
+   \end{tabular}
+\end{table}
+
 \subsection{Thứ tự giải giá trị chân lí của mệnh đề của các phép nối}
 
 \ % Lùi đầu dòng
 
 Giống như thứ tự các phép tính số học\footnote{[\dots], thứ mà con người phát minh ra [\dots]}để tính giá trị các biểu thức số học, để xác định giá trị chân lí của mệnh đề có nhiều phép nối, các phép nối mệnh đề cũng có sắp xếp thứ tự\footnote{[\dots]và vẫn chưa có sự thống nhất[\dots]} từ mức ưu tiên cao đến ưu tiên thấp như sau:
-\begin{enumerate}
-   \item Phép đối --- $\neg$ (mức ưu tiên cao nhất);
-   \item Phép và --- $\land$;
-   \item Phép hoặc --- $\lor$;
-   \item Phép kéo theo --- $\implies$, phép hệ quả --- $\impliedby$ --- và phép tương đương --- $\iff$ (mức ưu tiên thấp nhất).
+\begin{enumerate}[start=0]
+   \item Thực hiện các phép bên trong cặp dấu ngoặc --- $()$ --- trước, ngoài ngoặc sau
+   \item Phủ định --- $\neg$ (mức ưu tiên cao nhất);
+   \item Nhóm hội --- Phép hội --- $\land$ --- và phép phủ định hội --- $\uparrow$;
+   \item Nhóm tuyển --- Phép tuyển --- $\lor$ --- và phép phủ định tuyển --- $\downarrow$;
+   \item Nhóm tuyển chọn --- Phép tuyển chọn --- $\oplus$ --- và phép phủ định tuyển chọn --- $\odot$;
+   \item Nhóm suy luận --- Phép kéo theo --- $\implies$, phép hệ quả --- $\impliedby$, phép phủ định kéo theo --- $\nRightarrow$, phép phủ định hệ quả --- $\nLeftarrow$, phép đẳng giá --- $\iff$ --- và phép phủ định đẳng giá --- $\nLeftrightarrow$ (mức ưu tiên thấp nhất).
 \end{enumerate}
-Với các phép ở trên cùng một mức, có thể quy ước xử lí theo nhiều cách khác nhau: thứ tự xuất hiện (từ trái qua phải), kết hợp tính toán từ trái qua phải với thứ tự phép kéo theo đi trước phép tương đương, hoặc yêu cầu sử dụng các dấu ngoặc để sắp xếp thứ tự. Trong cuốn sách này, tác giả sẽ sử dụng quy ước \emph{từ trái qua phải} là chủ yếu, kèm với việc sử dấu ngoặc để giúp tăng khả năng đọc khi cần thiết.
+Để xác định giá trị chân lí của một mệnh đề phức hợp gồm nhiều phép nối, thực hiện các phép từ mức ưu tiên cao nhất đến những phép có mức yêu tiên thấp hơn. Nếu các phép có cùng một mức độ ưu tiên thì thực hiện theo quy tắc \defText{kết hợp trái} --- thực hiện từ trái qua phải\footnote{}.
 
 Cần phải để ý rằng trong nhiều tài liệu, người ta hay lạm dụng kí hiệu (hay ngôn ngữ) khi viết $P \implies Q \implies R$ và $P \iff Q \iff R$ với ngầm hiểu rằng hai mệnh đề này lần lượt là $(P \implies Q) \land (Q \implies R)$ và $(P \iff Q) \land (Q \iff R)$ chứ không phải là $(P \implies Q) \implies R$ và $(P \iff Q) \iff R$ .
 
