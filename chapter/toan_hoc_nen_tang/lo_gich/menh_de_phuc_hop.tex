@@ -325,7 +325,11 @@ Giống như thứ tự các phép tính số học\footnote{[\dots], thứ mà 
    \item Nhóm tuyển chọn --- Phép tuyển chọn --- $\oplus$ --- và phép phủ định tuyển chọn --- $\odot$;
    \item Nhóm suy luận --- Phép kéo theo --- $\implies$, phép hệ quả --- $\impliedby$, phép phủ định kéo theo --- $\nRightarrow$, phép phủ định hệ quả --- $\nLeftarrow$, phép đẳng giá --- $\iff$ --- và phép phủ định đẳng giá --- $\nLeftrightarrow$ (mức ưu tiên thấp nhất).
 \end{enumerate}
-Để xác định giá trị chân lí của một mệnh đề phức hợp gồm nhiều phép nối, thực hiện các phép từ mức ưu tiên cao nhất đến những phép có mức yêu tiên thấp hơn. Nếu các phép có cùng một mức độ ưu tiên thì thực hiện theo quy tắc \defText{kết hợp trái} --- thực hiện từ trái qua phải\footnote{}.
+Để xác định giá trị chân lí của một mệnh đề phức hợp gồm nhiều phép nối, thực hiện các phép từ mức ưu tiên cao nhất đến những phép có mức yêu tiên thấp hơn. Nếu các phép có cùng một mức độ ưu tiên thì thực hiện theo quy tắc \defText{kết hợp trái} --- thực hiện từ trái qua phải, ngoại trừ phép đối tuân theo \defText{kết hợp phải} hay thực hiện từ phải qua trái\footnote{Không phải mọi tài liệu đều chấp nhận thứ tự tính toán này. Cụ thể, các tài liệu đó có thể có
+\begin{itemize}
+   \item nhóm suy luận hai chiều ($\iff$ và $\nLeftrightarrow$) có mức ưu tiên thấp hơn nhóm suy luận một chiều,
+   \item các phép kéo theo và phép tương đương có tính chất kết hợp phải.
+\end{itemize}}.
 
 Cần phải để ý rằng trong nhiều tài liệu, người ta hay lạm dụng kí hiệu (hay ngôn ngữ) khi viết $P \implies Q \implies R$ và $P \iff Q \iff R$ với ngầm hiểu rằng hai mệnh đề này lần lượt là $(P \implies Q) \land (Q \implies R)$ và $(P \iff Q) \land (Q \iff R)$ chứ không phải là $(P \implies Q) \implies R$ và $(P \iff Q) \iff R$ .
 
