@@ -1,22 +1,102 @@
 from enum import Flag
+from abc import ABC, abstractmethod
 
 
 def write_line(opened_file, line, tab_count=0):
     opened_file.write("\t" * tab_count + line + "\n")
 
-order_of_operation = {
-    "^": 3,
-    "*": 2,
-    "/": 2,
-    "+": 1,
-    "-": 1,
-    "~": 0,
-    "&": -1,
-    "V": -2,
-    "=>": -3,
-    "<=": -3,
-    "<=>": -3 
+
+class MathOperation(ABC):
+    def __init__(self, symbol, latex_symbol, precedence, input_count=2):
+        self.symbol = symbol
+        self.latex_symbol = latex_symbol
+        self.precedence = precedence
+        self.input_count = input_count
+    
+    @abstractmethod
+    def compute(self, *values):
+        pass
+
+
+class NotOperation(MathOperation):
+    def __init__(self):
+        super().__init__("~", r"\neg", 0, 1)
+    
+    def compute(self, value):
+        return not value
+
+
+class AndOperation(MathOperation):
+    def __init__(self):
+        super().__init__("&", r"\land", -1)
+    
+    def compute(self, a, b):
+        return a and b
+
+class NandOperation(MathOperation):
+    def __init__(self):
+        super().__init__("~&", r"\uparrow", -1)
+    
+    def compute(self, a, b):
+        return not(a and b)
+
+
+
+class OrOperation(MathOperation):
+    def __init__(self):
+        super().__init__("V", r"\lor", -2)
+    
+    def compute(self, a, b):
+        return a or b
+
+
+class NorOperation(MathOperation):
+    def __init__(self):
+        super().__init__(r"~\/", r"\downarrow", -2)
+    
+    def compute(self, a, b):
+        return not(a or b)
+
+
+class ImpliesOperation(MathOperation):
+    def __init__(self):
+        super().__init__("=>", r"\implies", -3)
+    
+    def compute(self, a, b):
+        return (not a) or b
+
+
+class ImpliedByOperation(MathOperation):
+    def __init__(self):
+        super().__init__("<=", r"\impliedby", -3)
+    
+    def compute(self, a, b):
+        return a or (not b)
+
+
+class IffOperation(MathOperation):
+    def __init__(self):
+        super().__init__("<=>", r"\iff", -3)
+    
+    def compute(self, a, b):
+        return a == b
+
+
+# Create operation instances
+operations = {
+    "~": NotOperation(),
+    "&": AndOperation(),
+    "\\/": OrOperation(),
+    "=>": ImpliesOperation(),
+    "<=": ImpliedByOperation(),
+    "<=>": IffOperation(),
+    "~&": NandOperation(),
+    "~\\/": NorOperation(),
 }
+
+# Maintain backward compatibility
+order_of_operation = {op.symbol: op.precedence for op in operations.values()}
+replacement = {op.symbol: op.latex_symbol for op in operations.values()}
 
 def add_token(token_list, current_pos, current_token):
     if current_token:
@@ -94,19 +174,10 @@ def convert_expression_to_postfix(expression):
     print(postfix)
     return postfix
 
-replacement = {
-    "~": r"\neg",
-    "&": r"\land",
-    "V": r"\lor",
-    "=>": r"\implies",
-    "<=": r"\impliedby",
-    "<=>": r"\iff" 
-}
-
 def convert_tokens_to_latex(tokens, need_math_mode=False):
     for id, token in enumerate(tokens):
-        if token in replacement:
-            tokens[id] = replacement[token]
+        if token in operations:
+            tokens[id] = operations[token].latex_symbol
         if need_math_mode:
             tokens[id] = f"${tokens[id]}$"
     return tokens

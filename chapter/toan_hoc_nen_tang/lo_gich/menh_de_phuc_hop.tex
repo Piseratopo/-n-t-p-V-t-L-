@@ -316,7 +316,13 @@ Phép đối của phép tuyển chọn có tên là phép phủ định tuyển
 
 \ % Lùi đầu dòng
 
-Giống như thứ tự các phép tính số học\footnote{[\dots], thứ mà con người phát minh ra [\dots]}để tính giá trị các biểu thức số học, để xác định giá trị chân lí của mệnh đề có nhiều phép nối, các phép nối mệnh đề cũng có sắp xếp thứ tự\footnote{[\dots]và vẫn chưa có sự thống nhất[\dots]} từ mức ưu tiên cao đến ưu tiên thấp như sau:
+Giống như thứ tự các phép tính số học để tính giá trị các biểu thức số học\footnote{Như các bạn sẽ thấy, thứ tự của phép tính chỉ mang tính chất gợi ý. Nó có tác dụng nhất khi nó được giới thiệu cho những người mới học toán làm quen với thứ tự tính toán thông dụng. Ngược lại, nó sẽ ít có tác dụng khi biểu thức bị viết mập mờ hay trái với trực giác của con người. Ví dụ:
+\begin{itemize}
+   \item $8 \div 2(1+1)$ (Bằng $2$ hay bằng $8$?),
+   \item $400 + 50 \div 9$ (Rất nhiều người sẽ bảo đáp số là $50$ chứ không phải $405\frac{5}{9}$, nhất là khi biểu thức được đọc ra.),
+   \item $9x^2 \div 3x$ (Sẽ không có ai bảo biểu thức này bằng $3x^3$, ngoại trừ\dots\ cố tình.).
+\end{itemize}
+}, để xác định giá trị chân lí của mệnh đề có nhiều phép nối, các phép nối mệnh đề cũng có sắp xếp thứ tự từ mức ưu tiên cao đến ưu tiên thấp như sau:
 \begin{enumerate}[start=0]
    \item Thực hiện các phép bên trong cặp dấu ngoặc --- $()$ --- trước, ngoài ngoặc sau
    \item Phủ định --- $\neg$ (mức ưu tiên cao nhất);
@@ -329,11 +335,17 @@ Giống như thứ tự các phép tính số học\footnote{[\dots], thứ mà 
 \begin{itemize}
    \item nhóm suy luận hai chiều ($\iff$ và $\nLeftrightarrow$) có mức ưu tiên thấp hơn nhóm suy luận một chiều,
    \item các phép kéo theo và phép tương đương có tính chất kết hợp phải.
-\end{itemize}}.
+\end{itemize} Cho nên, khi viết các mệnh để phức hợp dưới dạng biểu thức, không nên coi thứ tự được đưa ra ở đây như một chân lí và bỏ qua những dấu ngoặc cần thiết, nhưng cũng không nên lạm dụng dấu ngoặc tránh gây khó đọc.}. Ví dụ:
+\begin{itemize}
+   \item $P \lor Q \land R$ được giải giá trị chân lí như $P \lor (Q \land R)$,
+   \item $\neg \neg P$ được giải giá trị chân lí như $\neg (\neg P)$ (giống như $--3 = -(-3)$),
+   \item $P\odot Q \oplus R$ được giải giá trị chân lí như $(P \odot Q) \oplus R$,
+   \item $P \nRightarrow Q \uparrow R \nLeftarrow \neg S$ được giải giá trị chân lí như $(P \nRightarrow (Q \uparrow R)) \nLeftarrow (\neg S)$.
+\end{itemize}
 
-Cần phải để ý rằng trong nhiều tài liệu, người ta hay lạm dụng kí hiệu (hay ngôn ngữ) khi viết $P \implies Q \implies R$ và $P \iff Q \iff R$ với ngầm hiểu rằng hai mệnh đề này lần lượt là $(P \implies Q) \land (Q \implies R)$ và $(P \iff Q) \land (Q \iff R)$ chứ không phải là $(P \implies Q) \implies R$ và $(P \iff Q) \iff R$ .
+Ngoài ra, cần phải để ý rằng, có nhiều tài liệu hay lạm dụng kí hiệu (hoặc ngôn ngữ) khi viết $P \implies Q \implies R$ và $P \iff Q \iff R$ với ngầm hiểu rằng hai mệnh đề này lần lượt là $(P \implies Q) \land (Q \implies R)$ và $(P \iff Q) \land (Q \iff R)$ chứ không phải là $(P \implies Q) \implies R$ và $(P \iff Q) \iff R$. Để tiện cho bạn đọc theo dõi, tác giả sẽ tuân theo quy chuẩn đã được đưa ra.
 
-\exercise[ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li] Xây dựng bảng giá trị chân lí của các mệnh đề sau:
+\exercise Xây dựng bảng giá trị chân lí của các mệnh đề sau:
 \begin{multicols}{2}
    \begin{enumerate}
       \item $\neg P \implies Q$;
@@ -341,18 +353,20 @@ Cần phải để ý rằng trong nhiều tài liệu, người ta hay lạm d�
       \item $P \land (Q \implies R)$;
       \item $P \land Q \lor Q \land \neg R$;
       \item $Q \implies R \land R \lor \neg P$;
-      \item $(P \implies Q) \implies (R \implies Q \implies P)$.
+      \item $(P \implies Q) \implies (R \implies Q \implies P)$;
+      \item $P \uparrow ( Q \downarrow \neg P )$;
+      \item $Q \odot R \impliedby \neg P \land Q$;
    \end{enumerate}
 \end{multicols}
 
-\solution[ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li]
+\solution
 
 \setcounter{subexercise}{1}
 \arabic{subexercise}. 
 Để ý đến thứ tự các phép nối, dấu $\neg$ sẽ được thực hiện trước $\implies$. Thực hiện xây dựng như ở bảng sau.
 \begin{table}[H]
    \centering
-   \caption{Bảng giá trị chân lí cho bài \ref{ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li} phần \arabic{subexercise}}
+   \caption{Bảng giá trị chân lí của $\neg P \implies Q$}
    \begin{tabular}{|c|c|c!{\vrule width 1.5pt}c|}
       \hline
       $P$ & $Q$ & $\neg P$ & $\neg P \implies Q$ \\
@@ -366,19 +380,17 @@ Cần phải để ý rằng trong nhiều tài liệu, người ta hay lạm d�
 \end{table}
 
 {
-\begin{minipage}[c]{0.3\linewidth}
-   \raggedright
+\begin{minipage}[c]{0.35\linewidth}
    Có thể thực hiện viết bảng giá trị chân lí dưới dạng rút gọn như ở bảng 
    \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li_1}. 
    Sau khi thực hiện xong một phép nối, có thể viết ở ngay dưới mệnh đề cần tìm 
    giá trị chân lí thay vì tách thành cột riêng để tiết kiệm giấy nếu như mệnh đề dài.
-\end{minipage}%
+\end{minipage}
 \hfill
-\begin{minipage}[c]{0.68\linewidth}
+\begin{minipage}[c]{0.6\linewidth}
    \begin{table}[H]
       \centering
-      \caption{Bảng giá trị chân lí rút gọn cho phần \arabic{subexercise} bài 
-      \ref{ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li}}
+      \caption{Bảng giá trị chân lí (rút gọn) của $\neg P \implies Q$}
       \label{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li_1}
       \begin{tabular}{|c|c|cccc!{\vrule width 1.5pt}c|}
          \hline
@@ -398,8 +410,7 @@ Cần phải để ý rằng trong nhiều tài liệu, người ta hay lạm d�
 \arabic{subexercise}. 
 \begin{table}[H]
    \centering
-   \caption{Bảng giá trị chân lí rút gọn cho phần \arabic{subexercise} bài 
-   \ref{ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li}}
+   \caption{Bảng giá trị chân lí rút gọn của $(P \iff Q) \lor \neg Q$}
    \begin{tabular}{|c|c|cccccc!{\vrule width 1.5pt}c|}
       \hline
       $P$ & $Q$ & $(P$ & $\iff$ & $Q)$ & $\lor$ & $\neg$ & $Q$ & $(P \iff Q) \lor \neg Q$ \\
@@ -421,8 +432,7 @@ Cần phải để ý rằng trong nhiều tài liệu, người ta hay lạm d�
 Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li_3}, nhận thấy rằng khi $P$ sai thì mệnh đề phức hợp luôn sai, nên các cột $Q$ và $R$ và những cột có phần mệnh đề liên quan đến hai mệnh đề này ở hàng thứ năm được thay bởi những chữ $X$.
 \begin{table}[H]
    \centering
-   \caption{Bảng giá trị chân lí rút gọn cho phần \arabic{subexercise} bài 
-   \ref{ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li}}
+   \caption{Bảng giá trị chân lí của $P \land (Q \implies R)$}
    \label{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li_3}
    \begin{tabular}{|c|c|c|ccccc!{\vrule width 1.5pt}c|}
       \hline
@@ -441,8 +451,7 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
 \arabic{subexercise}. 
 \begin{table}[H]
    \centering
-   \caption{Bảng giá trị chân lí rút gọn cho phần \arabic{subexercise} bài 
-   \ref{ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li}}
+   \caption{Bảng giá trị chân lí của $P \land Q \lor Q \land \neg R$}
    \begin{tabular}{|c|c|c|cccccccc!{\vrule width 1.5pt}c|}
       \hline
       $P$ & $Q$ & $R$ & $P$ & $\land$ & $Q$ & $\lor$ & $Q$ & $\land$ & $\neg$ & $R$ & $P \land Q \lor Q \land \neg R$ \\
@@ -460,8 +469,7 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
 \arabic{subexercise}. 
 \begin{table}[H]
    \centering
-   \caption{Bảng giá trị chân lí rút gọn cho phần \arabic{subexercise} bài 
-   \ref{ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li}}
+   \caption{Bảng giá trị chân lí của $Q \implies R \land R \lor \neg P$}
    \begin{tabular}{|c|c|c|cccccccc!{\vrule width 1.5pt}c|}
       \hline
       $P$ & $Q$ & $R$ & $Q$ & $\implies$ & $R$ & $\land$ & $R$ & $\lor$ & $\neg$ & $P$ & $Q \implies R \land R \lor \neg P$ \\
@@ -476,11 +484,10 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
 \end{table}
 
 \stepcounter{subexercise}
-\arabic{subexercise}. Do giới hạn của khổ giấy, bảng giá trị chân lí sẽ được tách làm hai phần.
+\arabic{subexercise}. Do giới hạn của khổ giấy, bảng giá trị chân lí \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li_6} sẽ được tách làm hai phần.
 \begin{table}[H]
    \centering
-   \caption{Bảng giá trị chân lí rút gọn cho phần \arabic{subexercise} bài 
-   \ref{ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li}}
+   \caption{Bảng giá trị chân lí của $(P \implies Q) \implies (R \implies Q \implies R) $}
    \label{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_bang_gia_tri_chan_li_6}
    \begin{tabular}{|c|c|c|ccccccccc|}
       \hline
@@ -503,6 +510,25 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
       \hline
    \end{tabular}
 \end{table}
+
+\stepcounter{subexercise}
+\arabic{subexercise}.
+\begin{table}[H]
+	\centering
+	\caption{Bảng giá trị chân lí của $P \uparrow ( Q \downarrow \neg P )$}
+	\begin{tabular}{|c|c|cccccc!{\vrule width 1.5pt}c|}
+		\hline
+		P & Q & $P$ & $\uparrow$ & $(Q$ & $\downarrow$ & $\neg$ & $P)$ & $P \uparrow ( Q \downarrow \neg P )$\\
+		\headerDivider
+		Đ & Đ & Đ & \emphcolor{Đ} & Đ & S & S & Đ & Đ \\
+		Đ & S & Đ & \emphcolor{S} & S & Đ & S & Đ & S\\
+		S & Đ & S & \emphcolor{Đ} & Đ & S & Đ & S & Đ\\
+		S & S & S & \emphcolor{Đ} & S & S & Đ & S & Đ\\
+		\hline
+	\end{tabular}
+\end{table}
+
+
    
 \exercise Gọi $V$ là một mệnh đề đúng và $M$ là một mệnh đề sai nào đó. Sử dụng bảng giá trị chân lí, chứng minh các mệnh đề sau luôn đúng\footnote{Mệnh đề luôn đúng còn được gọi là \defText{mệnh đề hằng đúng}.} với mọi giá trị chân lí của $P$, $Q$ và $R$.
 \begin{itemize}

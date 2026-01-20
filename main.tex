@@ -1,5 +1,6 @@
+% !TeX program = xelatex
+
 \documentclass[a4paper, titlepage, openany]{book}
-\usepackage[utf8]{inputenc}
 \usepackage[T5]{fontenc}
 \usepackage[vietnamese]{babel}
 \usepackage[a4paper]{geometry}
@@ -84,7 +85,6 @@
 
 % Xử lí đánh số
 \newcommand\dblquote[1]{\textquotedblleft #1\textquotedblright}
-\newcommand{\chapdir}{chapter/}
 \renewcommand{\thefigure}{\thechapter.\arabic{figure}}
 \renewcommand{\thetable}{\thechapter.\arabic{table}}
 \numberwithin{equation}{chapter}
@@ -222,9 +222,9 @@
 
 \tableofcontents
 
-\input{\chapdir loi_gioi_thieu.tex}
+\input{chapter/loi_gioi_thieu.tex}
 % \input{\chapdir kiem_tra.tex}
-\input{\chapdir toan_hoc_nen_tang.tex}
+\input{chapter/toan_hoc_nen_tang.tex}
 % \input{\chapdir co_ban_xu_li_so_lieu.tex}
 % \input{\chapdir chuyen_dong.tex}
 
