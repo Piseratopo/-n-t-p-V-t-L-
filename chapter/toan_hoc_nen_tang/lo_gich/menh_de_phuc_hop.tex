@@ -355,7 +355,7 @@ Ngoài ra, cần phải để ý rằng, có nhiều tài liệu hay lạm dụn
       \item $Q \implies R \land R \lor \neg P$;
       \item $(P \implies Q) \implies (R \implies Q \implies P)$;
       \item $P \uparrow ( Q \downarrow \neg P )$;
-      \item $Q \odot R \impliedby \neg P \land Q$;
+      \item $Q \impliedby R \odot \neg P \land Q$;
    \end{enumerate}
 \end{multicols}
 
@@ -527,6 +527,28 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
 		\hline
 	\end{tabular}
 \end{table}
+
+\stepcounter{subexercise}
+\arabic{subexercise}.
+\begin{table}[H]
+	\centering
+	\caption{Bảng giá trị chân lí của $Q \impliedby R \odot \neg P \land Q$}
+	\begin{tabular}{|c|c|c|cccccccc!{\vrule width 1.5pt}c|}
+		\hline
+		P & Q & R & $Q$ & $\impliedby$ & $R$ & $\odot$ & $\neg$ & $P$ & $\land$ & $Q$ & $Q \impliedby R \odot \neg P \land Q$\\
+		\headerDivider
+		Đ & Đ & Đ & Đ & \emphcolor{Đ} & Đ & S & S & Đ & S & Đ & Đ \\
+		Đ & Đ & S & Đ & \emphcolor{Đ} & S & Đ & S & Đ & S & Đ & Đ \\
+		Đ & S & Đ & S & \emphcolor{Đ} & Đ & S & S & Đ & S & S & Đ \\
+		Đ & S & S & S & \emphcolor{S} & S & Đ & S & Đ & S & S & S \\
+		S & Đ & Đ & Đ & \emphcolor{Đ} & Đ & Đ & Đ & S & Đ & Đ & Đ \\
+		S & Đ & S & Đ & \emphcolor{Đ} & S & S & Đ & S & Đ & Đ & Đ \\
+		S & S & Đ & S & \emphcolor{Đ} & Đ & S & Đ & S & S & S & Đ \\
+		S & S & S & S & \emphcolor{S} & S & Đ & Đ & S & S & S & S \\
+		\hline
+	\end{tabular}
+\end{table}
+
 
 
    

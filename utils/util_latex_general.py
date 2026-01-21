@@ -1,3 +1,5 @@
+import unicodedata
+
 from enum import Flag
 from abc import ABC, abstractmethod
 
@@ -57,10 +59,23 @@ class NorOperation(MathOperation):
     def compute(self, a, b):
         return not(a or b)
 
+class XorOperation(MathOperation):
+    def __init__(self):
+        super().__init__("+@", r"\oplus", -3)
+    
+    def compute(self, a, b):
+        return a ^ b
+
+class NxorOperation(MathOperation):
+    def __init__(self):
+        super().__init__("*@", r"\odot", -3)
+    
+    def compute(self, a, b):
+        return not(a ^ b)
 
 class ImpliesOperation(MathOperation):
     def __init__(self):
-        super().__init__("=>", r"\implies", -3)
+        super().__init__("=>", r"\implies", -4)
     
     def compute(self, a, b):
         return (not a) or b
@@ -68,7 +83,7 @@ class ImpliesOperation(MathOperation):
 
 class ImpliedByOperation(MathOperation):
     def __init__(self):
-        super().__init__("<=", r"\impliedby", -3)
+        super().__init__("<=", r"\impliedby", -4)
     
     def compute(self, a, b):
         return a or (not b)
@@ -76,7 +91,7 @@ class ImpliedByOperation(MathOperation):
 
 class IffOperation(MathOperation):
     def __init__(self):
-        super().__init__("<=>", r"\iff", -3)
+        super().__init__("<=>", r"\iff", -4)
     
     def compute(self, a, b):
         return a == b
@@ -92,11 +107,12 @@ operations = {
     "<=>": IffOperation(),
     "~&": NandOperation(),
     "~\\/": NorOperation(),
+    "+@": XorOperation(),
+    "*@": NxorOperation()
 }
 
 # Maintain backward compatibility
 order_of_operation = {op.symbol: op.precedence for op in operations.values()}
-replacement = {op.symbol: op.latex_symbol for op in operations.values()}
 
 def add_token(token_list, current_pos, current_token):
     if current_token:
@@ -104,30 +120,67 @@ def add_token(token_list, current_pos, current_token):
         current_token = ""
     return current_token
 
+# def parse_expression(expression):
+#     tokens = []
+#     current_token = ""
+#     current_pos = 0
+#     current_is_digit = False
+#     for ch in expression:
+#         if ch == " ":
+#             if current_token:
+#                 current_token = add_token(tokens, current_pos, current_token)
+#                 current_pos += 1
+#             continue
+#         elif ch == "(" or ch == ")":
+#             if current_token:
+#                 current_token = add_token(tokens, current_pos, current_token)
+#                 current_pos += 1
+#             add_token(tokens, -1, ch)
+#             continue
+#         if ch.isalnum() != current_is_digit:
+#             if current_token:
+#                 current_token = add_token(tokens, current_pos, current_token)
+#                 current_pos += 1
+#             current_is_digit = ch.isalnum()
+#         current_token += ch
+#     add_token(tokens, current_pos, current_token)
+#     return tokens
+
+
 def parse_expression(expression):
     tokens = []
     current_token = ""
     current_pos = 0
-    current_is_digit = False
+    current_is_alnum = False
+
+    def is_alnum_or_unicode(ch):
+        # Treat letters, digits, and other Unicode categories as "alphanumeric"
+        return ch.isalnum() or unicodedata.category(ch).startswith(('L', 'N'))
+
     for ch in expression:
-        if ch == " ":
+        if ch.isspace():
             if current_token:
                 current_token = add_token(tokens, current_pos, current_token)
                 current_pos += 1
             continue
-        elif ch == "(" or ch == ")":
+        elif ch in ("(", ")"):
             if current_token:
                 current_token = add_token(tokens, current_pos, current_token)
                 current_pos += 1
             add_token(tokens, -1, ch)
             continue
-        if ch.isalnum() != current_is_digit:
+
+        if is_alnum_or_unicode(ch) != current_is_alnum:
             if current_token:
                 current_token = add_token(tokens, current_pos, current_token)
                 current_pos += 1
-            current_is_digit = ch.isalnum()
+            current_is_alnum = is_alnum_or_unicode(ch)
+
         current_token += ch
-    add_token(tokens, current_pos, current_token)
+
+    if current_token:
+        add_token(tokens, current_pos, current_token)
+
     return tokens
 
 def parse_expression_with_parentheses(expression):
