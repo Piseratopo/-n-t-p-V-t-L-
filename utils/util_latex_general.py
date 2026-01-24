@@ -80,6 +80,12 @@ class ImpliesOperation(MathOperation):
     def compute(self, a, b):
         return (not a) or b
 
+class NimpliesOperation(MathOperation):
+    def __init__(self):
+        super().__init__("~=>", r"\nRightarrow", -4)
+    
+    def compute(self, a, b):
+        return a and (not b)
 
 class ImpliedByOperation(MathOperation):
     def __init__(self):
@@ -87,6 +93,13 @@ class ImpliedByOperation(MathOperation):
     
     def compute(self, a, b):
         return a or (not b)
+
+class NimpliedByOperation(MathOperation):
+    def __init__(self):
+        super().__init__("~<=", r"\nLeftarrow", -4)
+    
+    def compute(self, a, b):
+        return (not a) and b
 
 
 class IffOperation(MathOperation):
@@ -108,7 +121,9 @@ operations = {
     "~&": NandOperation(),
     "~\\/": NorOperation(),
     "+@": XorOperation(),
-    "*@": NxorOperation()
+    "*@": NxorOperation(),
+    "~=>": NimpliesOperation(),
+    "~<=": NimpliedByOperation()
 }
 
 # Maintain backward compatibility

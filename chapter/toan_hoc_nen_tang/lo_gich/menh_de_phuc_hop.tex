@@ -354,8 +354,13 @@ Ngoài ra, cần phải để ý rằng, có nhiều tài liệu hay lạm dụn
       \item $P \land Q \lor Q \land \neg R$;
       \item $Q \implies R \land R \lor \neg P$;
       \item $(P \implies Q) \implies (R \implies Q \implies P)$;
+      \item $(P \implies Q) \iff (Q \implies P)$;
+      \item $\left((P \implies Q) \implies R\right)$ \\ 
+      $\iff \left(P \implies (Q \implies R)\right)$;
       \item $P \uparrow ( Q \downarrow \neg P )$;
       \item $Q \impliedby R \odot \neg P \land Q$;
+      \item $P \nLeftarrow Q \nRightarrow R \nLeftarrow Q \nRightarrow R$;
+      \item $P \oplus Q \lor R \nLeftrightarrow (Q \downarrow R) \land (P \downarrow R)$.
    \end{enumerate}
 \end{multicols}
 
@@ -515,15 +520,31 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
 \arabic{subexercise}.
 \begin{table}[H]
 	\centering
+	\caption{Bảng giá trị chân lí của $( P \implies Q ) \iff ( Q \implies P )$}
+	\begin{tabular}{|c|c|ccccccc!{\vrule width 1.5pt}c|}
+		\hline
+		P & Q & $(P$ & $\implies$ & $Q)$ & $\iff$ & $(Q$ & $\implies$ & $P)$ & $( P \implies Q ) \iff ( Q \implies P )$ \\
+		\headerDivider
+		Đ & Đ & Đ & Đ & Đ & \emphcolor{Đ} & Đ & Đ & Đ & Đ \\
+		Đ & S & Đ & S & S & \emphcolor{S} & S & Đ & Đ & S \\
+		S & Đ & S & Đ & Đ & \emphcolor{S} & Đ & S & S & S \\
+		S & S & S & Đ & S & \emphcolor{Đ} & S & Đ & S & Đ \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\stepcounter{subexercise}
+\arabic{subexercise}.
+\begin{table}[H]
+	\centering
 	\caption{Bảng giá trị chân lí của $P \uparrow ( Q \downarrow \neg P )$}
 	\begin{tabular}{|c|c|cccccc!{\vrule width 1.5pt}c|}
 		\hline
-		P & Q & $P$ & $\uparrow$ & $(Q$ & $\downarrow$ & $\neg$ & $P)$ & $P \uparrow ( Q \downarrow \neg P )$\\
+		P & Q & $P$ & $\uparrow$ & $(Q$ & $\downarrow$ & $\neg$ & $P)$ & $P \uparrow ( Q \downarrow \neg P )$ \\
 		\headerDivider
 		Đ & Đ & Đ & \emphcolor{Đ} & Đ & S & S & Đ & Đ \\
-		Đ & S & Đ & \emphcolor{S} & S & Đ & S & Đ & S\\
-		S & Đ & S & \emphcolor{Đ} & Đ & S & Đ & S & Đ\\
-		S & S & S & \emphcolor{Đ} & S & S & Đ & S & Đ\\
+		Đ & S & Đ & \emphcolor{S} & S & Đ & S & Đ & S \\
+		S & X & S & \emphcolor{Đ} & X & S & Đ & S & Đ \\
 		\hline
 	\end{tabular}
 \end{table}
@@ -535,22 +556,32 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
 	\caption{Bảng giá trị chân lí của $Q \impliedby R \odot \neg P \land Q$}
 	\begin{tabular}{|c|c|c|cccccccc!{\vrule width 1.5pt}c|}
 		\hline
-		P & Q & R & $Q$ & $\impliedby$ & $R$ & $\odot$ & $\neg$ & $P$ & $\land$ & $Q$ & $Q \impliedby R \odot \neg P \land Q$\\
+		P & Q & R & $Q$ & $\impliedby$ & $R$ & $\odot$ & $\neg$ & $P$ & $\land$ & $Q$ & $Q \impliedby R \odot \neg P \land Q$ \\
 		\headerDivider
-		Đ & Đ & Đ & Đ & \emphcolor{Đ} & Đ & S & S & Đ & S & Đ & Đ \\
-		Đ & Đ & S & Đ & \emphcolor{Đ} & S & Đ & S & Đ & S & Đ & Đ \\
-		Đ & S & Đ & S & \emphcolor{Đ} & Đ & S & S & Đ & S & S & Đ \\
-		Đ & S & S & S & \emphcolor{S} & S & Đ & S & Đ & S & S & S \\
-		S & Đ & Đ & Đ & \emphcolor{Đ} & Đ & Đ & Đ & S & Đ & Đ & Đ \\
-		S & Đ & S & Đ & \emphcolor{Đ} & S & S & Đ & S & Đ & Đ & Đ \\
-		S & S & Đ & S & \emphcolor{Đ} & Đ & S & Đ & S & S & S & Đ \\
-		S & S & S & S & \emphcolor{S} & S & Đ & Đ & S & S & S & S \\
+		X & S & Đ & S & \emphcolor{Đ} & Đ & S & X & X & S & S & Đ \\
+		X & S & S & S & \emphcolor{S} & S & Đ & X & X & S & S & S \\
+		X & Đ & X & Đ & \emphcolor{Đ} & X & X & X & X & X & Đ & Đ \\
 		\hline
 	\end{tabular}
 \end{table}
 
-
-
+\stepcounter{subexercise}
+\arabic{subexercise}.
+\begin{table}[H]
+	\centering
+	\caption{Bảng giá trị chân lí của $P \nLeftarrow Q \nRightarrow R \nLeftarrow Q \nRightarrow R$}
+	\begin{tabular}{|c|c|c|ccccccccc!{\vrule width 1.5pt}c|}
+		\hline
+		P & Q & R & $P$ & $\nLeftarrow$ & $Q$ & $\nRightarrow$ & $R$ & $\nLeftarrow$ & $Q$ & $\nRightarrow$ & $R$ & $P \nLeftarrow Q \nRightarrow R \nLeftarrow Q \nRightarrow R$\\
+		\headerDivider
+		Đ & Đ & S & Đ & S & Đ & S & S & Đ & Đ & \emphcolor{Đ} & S & Đ \\
+		S & Đ & S & S & Đ & Đ & Đ & S & S & Đ & \emphcolor{S} & S & S \\
+		X & S & S & X & S & S & S & S & S & S & \emphcolor{S} & S & S \\
+		X & X & Đ & X & X & X & S & Đ & X & X & \emphcolor{S} & Đ & S \\
+		\hline
+	\end{tabular}
+\end{table}
+ 
    
 \exercise Gọi $V$ là một mệnh đề đúng và $M$ là một mệnh đề sai nào đó. Sử dụng bảng giá trị chân lí, chứng minh các mệnh đề sau luôn đúng\footnote{Mệnh đề luôn đúng còn được gọi là \defText{mệnh đề hằng đúng}.} với mọi giá trị chân lí của $P$, $Q$ và $R$.
 \begin{itemize}
