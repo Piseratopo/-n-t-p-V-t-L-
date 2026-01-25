@@ -354,13 +354,10 @@ Ngoài ra, cần phải để ý rằng, có nhiều tài liệu hay lạm dụn
       \item $P \land Q \lor Q \land \neg R$;
       \item $Q \implies R \land R \lor \neg P$;
       \item $(P \implies Q) \implies (R \implies Q \implies P)$;
-      \item $(P \implies Q) \iff (Q \implies P)$;
-      \item $\left((P \implies Q) \implies R\right)$ \\ 
-      $\iff \left(P \implies (Q \implies R)\right)$;
       \item $P \uparrow ( Q \downarrow \neg P )$;
       \item $Q \impliedby R \odot \neg P \land Q$;
       \item $P \nLeftarrow Q \nRightarrow R \nLeftarrow Q \nRightarrow R$;
-      \item $P \oplus Q \lor R \nLeftrightarrow (Q \downarrow R) \land (P \downarrow R)$.
+      \item $P \oplus Q \lor R \nLeftrightarrow (Q \downarrow R) \land (P \downarrow \neg R)$.
    \end{enumerate}
 \end{multicols}
 
@@ -514,23 +511,6 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
       S & S & S & S \\
       \hline
    \end{tabular}
-\end{table}
-
-\stepcounter{subexercise}
-\arabic{subexercise}.
-\begin{table}[H]
-	\centering
-	\caption{Bảng giá trị chân lí của $( P \implies Q ) \iff ( Q \implies P )$}
-	\begin{tabular}{|c|c|ccccccc!{\vrule width 1.5pt}c|}
-		\hline
-		P & Q & $(P$ & $\implies$ & $Q)$ & $\iff$ & $(Q$ & $\implies$ & $P)$ & $( P \implies Q ) \iff ( Q \implies P )$ \\
-		\headerDivider
-		Đ & Đ & Đ & Đ & Đ & \emphcolor{Đ} & Đ & Đ & Đ & Đ \\
-		Đ & S & Đ & S & S & \emphcolor{S} & S & Đ & Đ & S \\
-		S & Đ & S & Đ & Đ & \emphcolor{S} & Đ & S & S & S \\
-		S & S & S & Đ & S & \emphcolor{Đ} & S & Đ & S & Đ \\
-		\hline
-	\end{tabular}
 \end{table}
 
 \stepcounter{subexercise}
@@ -1079,6 +1059,16 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
 		S & X & S & S & Đ & X & X & X & X & S & \emphcolor{Đ} & S & Đ & S \\
 		Đ & Đ & S & Đ & Đ & Đ & S & Đ & S & S & \emphcolor{Đ} & Đ & S & S \\
 		Đ & S & S & Đ & S & S & S & S & Đ & S & \emphcolor{Đ} & Đ & S & S \\
+		\hline
+	\end{tabular}
+   \begin{tabular}{|c|c|c!{\vrule width 1.5pt}c|}
+		\hline
+		P & Q & R & $( P \implies Q ) \land ( P \implies R ) \implies ( P \implies R )$ \\
+		\headerDivider
+		X & X & Đ & \multirow{4}{*}{\huge \vspace{-12pt} Đ} \\
+		S & X & S & \\
+		Đ & Đ & S & \\
+		Đ & S & S & \\
 		\hline
 	\end{tabular}
 \end{table}

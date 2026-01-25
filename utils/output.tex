@@ -1,14 +1,18 @@
 \begin{table}[H]
 	\centering
-	\caption{Bảng giá trị chân lí của $( P \implies Q ) \iff ( Q \implies P )$}
-	\begin{tabular}{|c|c|ccccccc|}
+	\caption{Bảng giá trị chân lí của $( ( P \implies Q ) \implies R ) \iff ( P \implies ( Q \implies R ) )$}
+	\begin{tabular}{|c|c|c|ccccccccccc|}
 		\hline
-		P & Q & $(P$ & $\implies$ & $Q)$ & $\iff$ & $(Q$ & $\implies$ & $P)$ \\
+		P & Q & R & $((P$ & $\implies$ & $Q)$ & $\implies$ & $R)$ & $\iff$ & $(P$ & $\implies$ & $(Q$ & $\implies$ & $R))$ \\
 		\headerDivider
-		Đ & Đ & Đ & Đ & Đ & \emphcolor{Đ} & Đ & Đ & Đ \\
-		Đ & S & Đ & S & S & \emphcolor{S} & S & Đ & Đ \\
-		S & Đ & S & Đ & Đ & \emphcolor{S} & Đ & S & S \\
-		S & S & S & Đ & S & \emphcolor{Đ} & S & Đ & S \\
+		Đ & Đ & Đ & Đ & Đ & Đ & Đ & Đ & \emphcolor{Đ} & Đ & Đ & Đ & Đ & Đ \\
+		Đ & Đ & S & Đ & Đ & Đ & S & S & \emphcolor{Đ} & Đ & S & Đ & S & S \\
+		Đ & S & Đ & Đ & S & S & Đ & Đ & \emphcolor{Đ} & Đ & Đ & S & Đ & Đ \\
+		Đ & S & S & Đ & S & S & Đ & S & \emphcolor{Đ} & Đ & Đ & S & Đ & S \\
+		S & Đ & Đ & S & Đ & Đ & Đ & Đ & \emphcolor{Đ} & S & Đ & Đ & Đ & Đ \\
+		S & Đ & S & S & Đ & Đ & S & S & \emphcolor{S} & S & Đ & Đ & S & S \\
+		S & S & Đ & S & Đ & S & Đ & Đ & \emphcolor{Đ} & S & Đ & S & Đ & Đ \\
+		S & S & S & S & Đ & S & S & S & \emphcolor{S} & S & Đ & S & Đ & S \\
 		\hline
 	\end{tabular}
 \end{table}
