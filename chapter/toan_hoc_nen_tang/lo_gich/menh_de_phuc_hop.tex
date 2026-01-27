@@ -520,7 +520,7 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
 	\caption{Bảng giá trị chân lí của $P \uparrow ( Q \downarrow \neg P )$}
 	\begin{tabular}{|c|c|cccccc!{\vrule width 1.5pt}c|}
 		\hline
-		P & Q & $P$ & $\uparrow$ & $(Q$ & $\downarrow$ & $\neg$ & $P)$ & $P \uparrow ( Q \downarrow \neg P )$ \\
+		$P$ & $Q$ & $P$ & $\uparrow$ & $(Q$ & $\downarrow$ & $\neg$ & $P)$ & $P \uparrow ( Q \downarrow \neg P )$ \\
 		\headerDivider
 		Đ & Đ & Đ & \emphcolor{Đ} & Đ & S & S & Đ & Đ \\
 		Đ & S & Đ & \emphcolor{S} & S & Đ & S & Đ & S \\
@@ -536,7 +536,7 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
 	\caption{Bảng giá trị chân lí của $Q \impliedby R \odot \neg P \land Q$}
 	\begin{tabular}{|c|c|c|cccccccc!{\vrule width 1.5pt}c|}
 		\hline
-		P & Q & R & $Q$ & $\impliedby$ & $R$ & $\odot$ & $\neg$ & $P$ & $\land$ & $Q$ & $Q \impliedby R \odot \neg P \land Q$ \\
+		$P$ & $Q$ & $R$ & $Q$ & $\impliedby$ & $R$ & $\odot$ & $\neg$ & $P$ & $\land$ & $Q$ & $Q \impliedby R \odot \neg P \land Q$ \\
 		\headerDivider
 		X & S & Đ & S & \emphcolor{Đ} & Đ & S & X & X & S & S & Đ \\
 		X & S & S & S & \emphcolor{S} & S & Đ & X & X & S & S & S \\
@@ -552,7 +552,7 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
 	\caption{Bảng giá trị chân lí của $P \nLeftarrow Q \nRightarrow R \nLeftarrow Q \nRightarrow R$}
 	\begin{tabular}{|c|c|c|ccccccccc!{\vrule width 1.5pt}c|}
 		\hline
-		P & Q & R & $P$ & $\nLeftarrow$ & $Q$ & $\nRightarrow$ & $R$ & $\nLeftarrow$ & $Q$ & $\nRightarrow$ & $R$ & $P \nLeftarrow Q \nRightarrow R \nLeftarrow Q \nRightarrow R$\\
+		$P$ & $Q$ & $R$ & $P$ & $\nLeftarrow$ & $Q$ & $\nRightarrow$ & $R$ & $\nLeftarrow$ & $Q$ & $\nRightarrow$ & $R$ & $P \nLeftarrow Q \nRightarrow R \nLeftarrow Q \nRightarrow R$\\
 		\headerDivider
 		Đ & Đ & S & Đ & S & Đ & S & S & Đ & Đ & \emphcolor{Đ} & S & Đ \\
 		S & Đ & S & S & Đ & Đ & Đ & S & S & Đ & \emphcolor{S} & S & S \\
@@ -561,6 +561,43 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
 		\hline
 	\end{tabular}
 \end{table}
+
+\stepcounter{subexercise}
+\arabic{subexercise}.
+\begin{table}[H]
+	\centering
+	\caption{Bảng giá trị chân lí của $P \oplus Q \lor R \nLeftrightarrow ( Q \downarrow R ) \land ( P \downarrow \neg R )$}
+	\begin{tabular}{|c|c|c|cccccccccccccc|}
+		\hline
+		$P$ & $Q$ & $R$ & $P$ & $\oplus$ & $Q$ & $\lor$ & $R$ & $\nLeftrightarrow$ & $(Q$ & $\downarrow$ & $R)$ & $\land$ & $(P$ & $\downarrow$ & $\neg$ & $R)$ \\
+		\headerDivider
+		Đ & Đ & Đ & Đ & S & Đ & Đ & Đ & \emphcolor{S} & Đ & S & Đ & S & Đ & S & S & Đ \\
+		Đ & Đ & S & Đ & S & Đ & Đ & S & \emphcolor{S} & Đ & S & S & S & Đ & S & Đ & S \\
+		Đ & S & Đ & Đ & S & S & Đ & Đ & \emphcolor{S} & S & S & Đ & S & Đ & S & S & Đ \\
+		Đ & S & S & Đ & Đ & S & S & S & \emphcolor{Đ} & S & Đ & S & S & Đ & S & Đ & S \\
+		S & Đ & Đ & S & Đ & Đ & Đ & Đ & \emphcolor{Đ} & Đ & S & Đ & S & S & Đ & S & Đ \\
+		S & Đ & S & S & Đ & Đ & Đ & S & \emphcolor{Đ} & Đ & S & S & S & S & S & Đ & S \\
+		S & S & Đ & S & Đ & S & Đ & Đ & \emphcolor{Đ} & S & S & Đ & S & S & Đ & S & Đ \\
+		S & S & S & S & S & S & S & S & \emphcolor{S} & S & Đ & S & S & S & S & Đ & S \\
+		\hline
+	\end{tabular}
+   \begin{tabular}{|c|c|c!{\vrule width 1.5pt}c|}
+      \hline
+      $P$ & $Q$ & $R$ & $P \oplus Q \lor R \nLeftrightarrow ( Q \downarrow R ) \land ( P \downarrow \neg R )$ \\
+      \headerDivider
+      Đ & Đ & Đ & S \\ 
+      Đ & Đ & S & S \\
+      Đ & S & Đ & S \\
+      Đ & S & S & Đ \\
+      S & Đ & Đ & Đ \\
+      S & Đ & S & Đ \\
+      S & S & Đ & Đ \\
+      S & S & S & S \\ 
+      \hline
+   \end{tabular}
+\end{table}
+
+
  
    
 \exercise Gọi $V$ là một mệnh đề đúng và $M$ là một mệnh đề sai nào đó. Sử dụng bảng giá trị chân lí, chứng minh các mệnh đề sau luôn đúng\footnote{Mệnh đề luôn đúng còn được gọi là \defText{mệnh đề hằng đúng}.} với mọi giá trị chân lí của $P$, $Q$ và $R$.
@@ -920,7 +957,7 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
 	\caption{Bảng giá trị chân lí của $( ( P \iff Q ) \iff R ) \iff ( P \iff ( Q \iff R ) )$}
 	\begin{tabular}{|c|c|c|ccccccccccc|}
 		\hline
-		P & Q & R & $((P$ & $\iff$ & $Q)$ & $\iff$ & $R)$ & $\iff$ & $(P$ & $\iff$ & $(Q$ & $\iff$ & $R))$ \\
+		$P$ & $Q$ & $R$ & $((P$ & $\iff$ & $Q)$ & $\iff$ & $R)$ & $\iff$ & $(P$ & $\iff$ & $(Q$ & $\iff$ & $R))$ \\
 		\headerDivider
 		Đ & Đ & Đ & Đ & Đ & Đ & Đ & Đ & \emphcolor{Đ} & Đ & Đ & Đ & Đ & Đ \\
 		Đ & Đ & S & Đ & Đ & Đ & S & S & \emphcolor{Đ} & Đ & S & Đ & S & S \\
@@ -934,7 +971,7 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
 	\end{tabular}
    \begin{tabular}{|c|c|c!{\vrule width 1.5pt}c|}
 		\hline
-		P & Q & R & $( ( P \iff Q ) \iff R ) \iff ( P \iff ( Q \iff R ) )$ \\
+		$P$ & $Q$ & $R$ & $( ( P \iff Q ) \iff R ) \iff ( P \iff ( Q \iff R ) )$ \\
 		\headerDivider
 		Đ & Đ & Đ & \multirow{8}{*}{\huge \vspace{-24pt} Đ}\\
 		Đ & Đ & S & \\
@@ -953,7 +990,7 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
 	\caption{Bảng giá trị chân lí của $( P \lor Q ) \land ( P \lor R ) \iff P \lor ( Q \land R )$}
 	\begin{tabular}{|c|c|c|ccccccccccccc|}
 		\hline
-		P & Q & R & $(P$ & $\lor$ & $Q)$ & $\land$ & $(P$ & $\lor$ & $R)$ & $\iff$ & $P$ & $\lor$ & $(Q$ & $\land$ & $R)$ \\
+		$P$ & $Q$ & $R$ & $(P$ & $\lor$ & $Q)$ & $\land$ & $(P$ & $\lor$ & $R)$ & $\iff$ & $P$ & $\lor$ & $(Q$ & $\land$ & $R)$ \\
 		\headerDivider
 		Đ & X & X & Đ & Đ & X & Đ & Đ & Đ & X & \emphcolor{Đ} & Đ & Đ & X & X & X \\
 		S & S & X & S & S & S & S & S & X & X & \emphcolor{Đ} & S & S & S & S & X \\
@@ -963,7 +1000,7 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
 	\end{tabular}
    \begin{tabular}{|c|c|c!{\vrule width 1.5pt}c|}
 		\hline
-		P & Q & R & $( P \lor Q ) \land ( P \lor R ) \iff P \lor ( Q \land R )$ \\
+		$P$ & $Q$ & $R$ & $( P \lor Q ) \land ( P \lor R ) \iff P \lor ( Q \land R )$ \\
 		\headerDivider
 		Đ & X & X & \multirow{4}{*}{\huge \vspace{-12pt} Đ} \\
 		S & S & X & \\
@@ -978,7 +1015,7 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
 	\caption{Bảng giá trị chân lí của $( P \land Q ) \lor ( P \land R ) \iff P \land ( Q \lor R )$}
 	\begin{tabular}{|c|c|c|ccccccccccccc|}
 		\hline
-		P & Q & R & $(P$ & $\land$ & $Q)$ & $\lor$ & $(P$ & $\land$ & $R)$ & $\iff$ & $P$ & $\land$ & $(Q$ & $\lor$ & $R)$ \\
+		$P$ & $Q$ & $R$ & $(P$ & $\land$ & $Q)$ & $\lor$ & $(P$ & $\land$ & $R)$ & $\iff$ & $P$ & $\land$ & $(Q$ & $\lor$ & $R)$ \\
 		\headerDivider
 		S & X & X & S & S & X & S & S & S & X & \emphcolor{Đ} & S & S & X & X & X \\
 		Đ & Đ & X & Đ & Đ & Đ & Đ & Đ & X & X & \emphcolor{Đ} & Đ & Đ & Đ & Đ & X \\
@@ -988,7 +1025,7 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
 	\end{tabular}
    \begin{tabular}{|c|c|c!{\vrule width 1.5pt}c|}
 		\hline
-		P & Q & R & $( P \land Q ) \lor ( P \land R ) \iff P \land ( Q \lor R )$ \\
+		$P$ & $Q$ & $R$ & $( P \land Q ) \lor ( P \land R ) \iff P \land ( Q \lor R )$ \\
 		\headerDivider
 		S & X & X & \multirow{4}{*}{\huge \vspace{-12pt} Đ} \\
 		Đ & Đ & X & \\
@@ -1003,7 +1040,7 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
 	\caption{Bảng giá trị chân lí của $( P \implies Q ) \land ( P \implies R ) \iff ( P \implies  Q \land R  )$}
 	\begin{tabular}{|c|c|c|ccccccccccccc|}
 		\hline
-		P & Q & R & $(P$ & $\implies$ & $Q)$ & $\land$ & $(P$ & $\implies$ & $R)$ & $\iff$ & $(P$ & $\implies$ & $Q$ & $\land$ & $R)$ \\
+		$P$ & $Q$ & $R$ & $(P$ & $\implies$ & $Q)$ & $\land$ & $(P$ & $\implies$ & $R)$ & $\iff$ & $(P$ & $\implies$ & $Q$ & $\land$ & $R)$ \\
 		\headerDivider
 		S & X & X & S & Đ & X & Đ & S & Đ & X & \emphcolor{Đ} & S & Đ & X & X & X \\
 		Đ & S & X & Đ & S & S & S & Đ & X & X & \emphcolor{Đ} & Đ & S & S & S & X \\
@@ -1013,7 +1050,7 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
 	\end{tabular}
    \begin{tabular}{|c|c|c!{\vrule width 1.5pt}c|}
 		\hline
-		P & Q & R & $( P \implies Q ) \land ( P \implies R ) \iff ( P \implies  Q \land R  )$ \\
+		$P$ & $Q$ & $R$ & $( P \implies Q ) \land ( P \implies R ) \iff ( P \implies  Q \land R  )$ \\
 		\headerDivider
 		Đ & X & X & \multirow{4}{*}{\huge \vspace{-12pt} Đ} \\
 		Đ & S & X & \\
@@ -1028,7 +1065,7 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
 	\caption{Bảng giá trị chân lí của $( P \implies Q ) \lor ( P \implies R ) \iff ( P \implies Q \lor R )$}
 	\begin{tabular}{|c|c|c|ccccccccccccc|}
 		\hline
-		P & Q & R & $(P$ & $\implies$ & $Q)$ & $\lor$ & $(P$ & $\implies$ & $R)$ & $\iff$ & $(P$ & $\implies$ & $Q$ & $\lor$ & $R)$ \\
+		$P$ & $Q$ & $R$ & $(P$ & $\implies$ & $Q)$ & $\lor$ & $(P$ & $\implies$ & $R)$ & $\iff$ & $(P$ & $\implies$ & $Q$ & $\lor$ & $R)$ \\
 		\headerDivider
 		S & X & X & S & Đ & X & Đ & S & Đ & X & \emphcolor{Đ} & S & Đ & X & X & X \\
 		Đ & Đ & X & Đ & Đ & Đ & Đ & Đ & X & X & \emphcolor{Đ} & Đ & Đ & Đ & Đ & X \\
@@ -1038,7 +1075,7 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
 	\end{tabular}
    \begin{tabular}{|c|c|c!{\vrule width 1.5pt}c|}
 		\hline
-		P & Q & R & $ ( P \implies Q ) \lor ( P \implies R )  \iff ( P \implies Q \lor R )$ \\
+		$P$ & $Q$ & $R$ & $ ( P \implies Q ) \lor ( P \implies R )  \iff ( P \implies Q \lor R )$ \\
 		\headerDivider
 		S & X & X & \multirow{4}{*}{\huge \vspace{-12pt} Đ} \\
 		Đ & Đ & X & \\
@@ -1053,7 +1090,7 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
 	\caption{Bảng giá trị chân lí của $( P \implies Q ) \land ( P \implies R ) \implies ( P \implies R )$}
 	\begin{tabular}{|c|c|c|ccccccccccc|}
 		\hline
-		P & Q & R & $(P$ & $\implies$ & $Q)$ & $\land$ & $(Q$ & $\implies$ & $R)$ & $\implies$ & $(P$ & $\implies$ & $R)$ \\
+		$P$ & $Q$ & $R$ & $(P$ & $\implies$ & $Q)$ & $\land$ & $(Q$ & $\implies$ & $R)$ & $\implies$ & $(P$ & $\implies$ & $R)$ \\
 		\headerDivider
 		X & X & Đ & X & X & X & Đ & X & Đ & Đ & \emphcolor{Đ} & X & Đ & Đ \\
 		S & X & S & S & Đ & X & X & X & X & S & \emphcolor{Đ} & S & Đ & S \\
@@ -1063,7 +1100,7 @@ Ví dụ như ở bảng \ref{tab:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:vd_
 	\end{tabular}
    \begin{tabular}{|c|c|c!{\vrule width 1.5pt}c|}
 		\hline
-		P & Q & R & $( P \implies Q ) \land ( P \implies R ) \implies ( P \implies R )$ \\
+		$P$ & $Q$ & $R$ & $( P \implies Q ) \land ( P \implies R ) \implies ( P \implies R )$ \\
 		\headerDivider
 		X & X & Đ & \multirow{4}{*}{\huge \vspace{-12pt} Đ} \\
 		S & X & S & \\

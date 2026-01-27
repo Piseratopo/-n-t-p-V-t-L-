@@ -41,7 +41,7 @@ def write_logic_table_latex(file, expression):
         column_format = "|" + "|".join("c" for _ in variables) + "|" + "c" * len(postfix_expression) + "|"
         write_line(f, r"\begin{tabular}{" + column_format + "}", 1)
         write_line(f, r"\hline", 2)
-        header_line = " & ".join(variables) + " & " + " & ".join([token for token in convert_tokens_to_latex([token for _, token in parse_expression_with_parentheses(expression)], need_math_mode=True)]) + " \\\\"
+        header_line = " & ".join([f"${v}$" for v in variables]) + " & " + " & ".join([token for token in convert_tokens_to_latex([token for _, token in parse_expression_with_parentheses(expression)], need_math_mode=True)]) + " \\\\"
         write_line(f, header_line, 2)
         write_line(f, r"\headerDivider", 2)
         for comb in product([True, False], repeat=len(variables)):

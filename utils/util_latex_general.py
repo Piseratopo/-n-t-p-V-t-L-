@@ -46,7 +46,7 @@ class NandOperation(MathOperation):
 
 class OrOperation(MathOperation):
     def __init__(self):
-        super().__init__("V", r"\lor", -2)
+        super().__init__(r"\/", r"\lor", -2)
     
     def compute(self, a, b):
         return a or b
@@ -109,6 +109,13 @@ class IffOperation(MathOperation):
     def compute(self, a, b):
         return a == b
 
+class NiffOperation(MathOperation):
+    def __init__(self):
+        super().__init__("~<=>", r"\nLeftrightarrow", -4)
+    
+    def compute(self, a, b):
+        return not(a == b)
+
 
 # Create operation instances
 operations = {
@@ -123,7 +130,8 @@ operations = {
     "+@": XorOperation(),
     "*@": NxorOperation(),
     "~=>": NimpliesOperation(),
-    "~<=": NimpliedByOperation()
+    "~<=": NimpliedByOperation(),
+    "~<=>": NiffOperation()
 }
 
 # Maintain backward compatibility

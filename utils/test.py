@@ -3,5 +3,5 @@ from util_latex_general import parse_expression
 
 latex_output_file = "output.tex"
 
-write_logic_table_latex(latex_output_file, r"((P => Q) => R) <=> (P => (Q => R))")
+write_logic_table_latex(latex_output_file, r"P +@ Q \/ R ~<=> (Q ~\/ R) & (P ~\/ ~R)")
 
