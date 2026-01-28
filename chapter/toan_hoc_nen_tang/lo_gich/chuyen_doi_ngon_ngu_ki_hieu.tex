@@ -1,0 +1,49 @@
+\section{Chuyển đổi từ dạng ngôn ngữ sang dạng kí hiệu}
+
+\ % Lùi đầu dòng
+
+Ngôn ngữ là kết quả của sự phát triển ý thức con người tới một trình độ nhất định. Nó cũng là một công cụ vô cùng cần thiết để các cá nhân, tập thể có thể trao đổi với nhau để từ đó xã hội có thể hoạt động. Ngôn ngữ, mặc dù là một sản phẩm mang trình độ cao, có sự phản ánh với nó và từ nó trong từng nhóm người, dân tộc, từng nền văn hóa khác nhau, vẫn tồn tại trong nó nhiều thiếu sót. Đó là khi, với ngôn ngữ, chúng ta cũng có thể tạo ra những lỗ hổng về lập luận hay những cạm bẫy về tư duy lô-gích. Và với lí do như vậy, để thực hiện phân tích lô-gích, mọi câu không chỉ cần được biểu diễn dưới dạng mệnh đề dưới dạng ngôn ngữ, mà còn cần phải biểu diễn dưới dạng kí hiệu.
+
+Để thực hiện việc chuyển đổi từ các mệnh đề sử dụng ngôn ngữ tự nhiên sang các mệnh đề kí hiệu một cách chính xác, từ một mệnh đề phức, cần phải xác định các mệnh đề nguyên tử mà không thể tách ra thành những mệnh đề con nữa. Từ đó, xác định các phép nối mệnh đề giữa chúng và thực hiện phân tích cấu trúc của mệnh đề ban đầu để có thể xây dựng được chính xác mệnh đề dưới dạng kí hiệu. Lấy ví dụ, cần chuyển đổi mệnh đề
+\begin{center}
+    ``Nếu nền kinh tế tăng trường và lạm phát thấp thì đời sống nhân dân được cải thiện.''    
+\end{center}
+sang dạng kí hiệu. Các mệnh đề nguyên tử bao gồm:
+\begin{itemize}
+    \item $P$: ``Nền kinh tế tăng trường.'';
+    \item $Q$: ``Lạm phát thấp'';
+    \item $R$: ``Đời sống nhân dân được cải thiện''.
+\end{itemize}
+Thêm vào đó, chúng ta có những phép nối:
+\begin{itemize}
+    \item $\land$ qua từ nối ``và'';
+    \item $\implies$ qua cặp từ nối ``Nếu\dots\ thì\dots''.
+\end{itemize}
+Qua đó, mệnh đề ban đầu đã được chuyển đổi thành
+$$
+P \land Q \implies R.
+$$
+
+Có thể bạn đọc nghĩ rằng chúng ta đã hoàn thành quá trình chuyển đổi. Tuy nhiên, có một vấn đề cần phải đề cập tới, đó là cần phải hiểu mệnh đề này như thế nào? Hiểu như
+``$
+(P \land Q) \implies R
+$''
+hay
+``$
+P \land (Q \implies R)
+$''? Với mệnh đề đơn giản như thế này, bạn đọc có thể nhìn ra ngay rằng cách hiểu đầu tiên sẽ là hợp lí nhất. Nó vừa tuân theo thứ tự các phép nối, vừa tuân theo cách hiểu tự nhiên. Mặc dù vậy, khi các mệnh đề trở nên phức tạp với nhiều điều kiện chồng chéo, ngôn ngữ tự nhiên thường bị "quá tải" trong việc phân định phạm vi của các từ nối. Chẳng hạn, trích quy chế của một trường đại học có thể là:
+\begin{center}
+    ``Để nhận học bổng, sinh viên phải có điểm trung bình từ $8,0$ \\và là hộ nghèo hoặc có bài báo nghiên cứu khoa học.''
+\end{center}
+Để phân tích câu này, đặt
+\begin{itemize}
+    \item $G$: ``Sinh viên có điểm trung bình từ $8,0$'';
+    \item $P$: ``Sinh viên thuộc diện hộ nghèo'';
+    \item $S$: ``Sinh viên có nghiên cứu khoa học''.
+\end{itemize}
+Khi này, mệnh đề trở thành $G \land P \lor S$. Cân nhắc lại rằng, ngôn ngữ tự nhiên không áp dụng quy tắc về thứ tự các phép nối. Hai cách kết hợp từ ``và'' và ``hoặc'' tạo ra hai cách hiểu khác nhau hoàn toàn về quyền lợi của một sinh viên $A$ có điểm số chưa tốt nhưng có bài báo khoa học.
+\begin{enumerate}
+    \item $(G \land P) \lor S$: $A$ thỏa mãn $S$, cho nên toàn bộ mệnh đề này đúng. $A$ được xét nhận học bổng;
+    \item $G \land (P \lor S)$: Mặc dù $A$ thỏa mãn $S$, $A$ chưa đạt điều kiện tiên quyết là $G$, cho nên $A$ không được xét học bổng.
+\end{enumerate}
+Đây, việc cần phải loại bỏ toàn bộ những hoài nghi và cách hiểu tối nghĩa về câu, cũng là lí do tại sao những tờ hợp đồng, bộ luật đều dùng những ngôn từ được phức tạp hóa mà tuy ẩn sâu trong đó là những ý tưởng đơn giản.
