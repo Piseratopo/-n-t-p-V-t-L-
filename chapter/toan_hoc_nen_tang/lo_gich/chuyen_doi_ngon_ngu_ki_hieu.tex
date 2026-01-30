@@ -43,7 +43,75 @@ $''? Với mệnh đề đơn giản như thế này, bạn đọc có thể nh�
 \end{itemize}
 Khi này, mệnh đề trở thành $G \land P \lor S$. Cân nhắc lại rằng, ngôn ngữ tự nhiên không áp dụng quy tắc về thứ tự các phép nối. Hai cách kết hợp từ ``và'' và ``hoặc'' tạo ra hai cách hiểu khác nhau hoàn toàn về quyền lợi của một sinh viên $A$ có điểm số chưa tốt nhưng có bài báo khoa học.
 \begin{enumerate}
-    \item $(G \land P) \lor S$: $A$ thỏa mãn $S$, cho nên toàn bộ mệnh đề này đúng. $A$ được xét nhận học bổng;
-    \item $G \land (P \lor S)$: Mặc dù $A$ thỏa mãn $S$, $A$ chưa đạt điều kiện tiên quyết là $G$, cho nên $A$ không được xét học bổng.
+    \item \textcolor{colorEmphasisCyan}{Trường hợp 1 --- $(G \land P) \lor S$}: $A$ thỏa mãn $S$, cho nên toàn bộ mệnh đề này đúng. $A$ được xét nhận học bổng;
+    \item \textcolor{colorEmphasis}{Trường hợp 2 --- $G \land (P \lor S)$}: Mặc dù $A$ có thành tích $S$, $A$ chưa đạt điều kiện tiên quyết là $G$, cho nên $A$ không được xét học bổng.
 \end{enumerate}
-Đây, việc cần phải loại bỏ toàn bộ những hoài nghi và cách hiểu tối nghĩa về câu, cũng là lí do tại sao những tờ hợp đồng, bộ luật đều dùng những ngôn từ được phức tạp hóa mà tuy ẩn sâu trong đó là những ý tưởng đơn giản.
+Từ ví dụ này, chúng ta có thể đưa ra được một phát hiện rằng việc cần phải loại bỏ toàn bộ những hoài nghi và cách hiểu tối nghĩa về câu cũng là lí do tại sao những tờ hợp đồng, bộ luật đều dùng những ngôn từ được phức tạp hóa mà tuy ẩn sâu trong đó là những ý tưởng đơn giản.
+
+\exercise Phiên dịch các mệnh đề sau thành dưới dạng kí hiệu. Nếu rút gọn mệnh đề thành kí hiệu chữ cái thì cần phải chú thích rõ mỗi chữ cái ứng với mệnh đề cấu thành tương ứng nào.
+\begin{enumerate}
+    \item ``Bạn đọc không thể vừa đi làm đúng giờ vừa ngủ nướng.'';
+    \item ``Nếu nước trong bể bơi được làm sạch, thì hoặc A-bi-cô có thể nhìn thấy đáy của bể bơi, hoặc mắt của A-bi-cô có vấn đề.'';
+    \item ``Da-đê-en sẽ đi dã ngoại, trừ khi ngày mai trời mưa.'';
+    \item ``Không đúng là tôi không không thích em.'';
+    \item ``Nếu không phải là bạn đọc nộp bài đúng hạn và bài tập làm là chính xác, thì nếu giáo viên không châm trước, bạn đọc sẽ bị trượt.'';
+    \item ``Chỉ khi cô bé quàng khăn đỏ không quàng khăn màu đỏ và Cám là một người em tốt của Tấm, thì lô-gích mới ngừng là một môn phức tạp và bộ não Ê-mô-ri mới được giải phóng.'';
+    \item ``Đế quốc Mĩ đã rất nhiều lần lên kế hoạch ngăn chặn Việt Nam thống nhất, nhưng, bởi vi dân tộc ta có một tinh thần đoàn kết vững mạnh, quân đội được xây dựng thành lực lượng hùng mạnh, và sự lãnh đạo của Đảng đầy sáng suốt, đất nước chúng ta đã có thống nhất, độc lập, tự do như ngày hôm nay.''.
+\end{enumerate}
+
+\solution
+
+\setcounter{subexercise}{1}
+\arabic{subexercise}. 
+Kí hiệu các mệnh đề con:
+\begin{itemize}
+    \item $O$: ``Bạn đọc đi làm đúng giờ.'';
+    \item $S$: ``Bạn đọc ngủ nướng.''.
+\end{itemize}
+Phép nối lô-gích: $\uparrow$, thông qua ``không thể\dots\ vừa\dots\ vừa\dots''. Vậy có mệnh đề dưới dạng kí hiệu là $O \uparrow S$.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Đặt biến:
+\begin{itemize}
+    \item $C$: ``Nước trong bể bơi được làm sạch.'';
+    \item $B$: ``A-bi-cô có thể nhìn thấy đáy của bể bơi.'';
+    \item $P$: ``Mắt của A-bi-cô có vấn đề.'';
+\end{itemize}
+Mệnh đề dưới dạng kí hiệu: $C \implies B \lor P$ hoặc $C \implies B \oplus P$ nếu hiểu ``hoặc\dots\ hoặc'' theo nghĩa loại trừ.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Viết lại câu với nghĩa không đổi\footnote{Không chỉ ở mỗi bài tập môn tiếng Anh mới phải làm điều này.}: 
+\begin{center}
+    ``Nếu ngày mai trời mua thì Da-đê-en không đi dã ngoại.''\footnote{Đây không phải là cách hiểu duy nhất. Nhắc lại, ngôn ngữ chỉ là phương tiện, không phải luật lệ chính xác.}.
+\end{center}
+Kí hiệu các mệnh đề con:
+\begin{itemize}
+    \item $P$: ``Ngài mai trời mưa.'';
+    \item $D$: ``Da-đê-en đi dã ngoại.''.
+\end{itemize}
+Mệnh đề dưới dạng kí hiệu: $P \implies \neg D$.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Đặt biến:
+\begin{itemize}
+    \item $A$: ``Tôi thích em.''.
+\end{itemize}
+Phân tích:
+\begin{itemize}
+    \item ``Tôi không không thích em.'': $\neg \neg A$;
+    \item ``Không phải là\dots'': dấu $\neg$ bao trùm.
+\end{itemize}
+Mệnh đề dưới dạng kí hiệu: $\neg (\neg \neg A)$.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Đặt biến:
+\begin{itemize}
+    \item $T$: ``Bạn đọc nộp bài đúng hạn.'';
+    \item $C$: ``Bài tập làm là chính xác.'';
+    \item $A$: ``Giáo viên châm trước.'';
+    \item $F$: ``Bạn đọc sẽ bị trượt.''.
+\end{itemize}
+Mệnh đề dưới dạng kí hiệu: $T \uparrow C \implies (\neg A \implies F)$.
+
+\stepcounter{subexercise}
+\arabic{subexercise}.
