@@ -1,0 +1,171 @@
+\section{Phương pháp lập luận lô-gích}
+
+\ % Lùi đầu dòng
+
+\subsection{Điều kiện cho lập luận lô-gích}
+
+\ % Lùi đầu dòng
+
+Quá trình lập luận lô-gích được kiểm soát bởi những bộ quy luật hết sức đơn giản, đơn giản tới mức mà cả tác giả và bạn đọc đều có thể và đã từng làm theo. Có rất nhiều yêu cầu về mặt kĩ thuật cần phải quan tâm khi xây dựng một bộ quy luật lập luận mà khuôn khổ cuốn sách này không có khả năng đề cập. Tác giả sẽ chỉ đưa ra các điều kiện cơ bản nhưng quan trọng nhất khi lập luận lô-gích diễn dịch:
+\begin{enumerate}
+    \item Điều kiện về \defText{tính ổn định}: Bộ quy luật lập luận không thể vừa chưng minh một mệnh đề và đồng thời là phủ định của nó. Hiểu theo cách khác, bộ quy luật không thể chứng minh đồng thời $P$ và $\neg P$ cùng đúng;
+    \item Điều kiện về \defText{tính hoàn thiện}: Bộ quy luật lập luận cần phải cho phép chứng minh \emph{tất cả} các kết luận có thể từ một nhóm các giả thiết nhất định.
+\end{enumerate}
+
+\subsection{Định nghĩa chứng minh}
+
+\ % Lùi đầu dòng
+
+Từ các điều kiện, chúng ta lại đặt câu hỏi, thế nào là chứng minh? Để tránh định nghĩa lặp ``chứng minh là một quá trình lập luận'', tác giả sẽ đưa ra một định nghĩa đơn giản như sau: Nếu như cho biết $W$, mệnh đề $X$ \defText{chứng minh} mệnh đề $Y$ khi và chỉ khi $X \implies Y$ (dưới điều kiện $W$)\footnote{Từ giờ trở đi, mỗi mệnh đề được đưa ra dưới dạng kí hiệu sẽ được mặc định là đúng.}.
+
+Nếu có nhiều mệnh đề cho giả thiết $X_1$, $X_2$,\dots, $X_n$, thì khi này mệnh đề giả thiết tổng là hợp của tất cả các giả thiết con
+$$X = X_1 \land X_2 \land \cdots \land X_n = \bigwedge_{i=1}^{n} X_i.$$
+Một cách tương tự, chúng ta cũng có thể định nghĩa điều kiện tổng $W$ và kết luận tổng $Y$.
+\begin{align*}
+    W &= W_1 \land W_2 \land \cdots \land W_n = \bigwedge_{i=1}^{n} W_i; \\
+    Y &= Y_1 \land Y_2 \land \cdots \land Y_n = \bigwedge_{i=1}^{n} Y_i.
+\end{align*}
+
+Do chúng ta chưa xây dựng hệ thống số cho nên việc kí hiệu bằng dấu $\cdots$ hay dấu $\bigwedge$ lớn sẽ là hơi lạm dụng. Do đó, với trường hợp xác định được số lượng các mệnh đề, nên viết đầy đủ và tường minh toàn bộ biểu thức thay vì viết tắt.
+
+Ngoài ra, bạn đọc cũng có thể đã để ý rằng tác giả tách một phần gọi là ``điều kiện'' mặc dù hoàn toàn có thể đưa điều kiện vào trong phần giả thiết. Sở dĩ tác giả làm như vậy là do thực tế, khi chứng minh phần lớn các bài toán, chúng ta cũng sẽ ngầm hiểu một số ``điều kiện'' --- định nghĩa, tính chất, hay kết quả đã có. Ví dụ, kể đến về một định lí quen thuộc:
+\begin{center}
+    ``Nếu $x$ là một số thực thì $x^2 \geq 0$.''
+\end{center} 
+Một học sinh khá của cấp trung học cơ sở hoàn toàn có thể hiểu và lí giải được điều này sử dụng các tính chất của số thực được cung cấp. Học sinh muốn chứng minh định lí đó sẽ không cần phải chép lại cả quyển sách giáo khoa và đưa toàn bộ lí thuyết vào phần giả thiết, mà sẽ chỉ tập trung vào ý tưởng cốt lõi nhất và sự hiểu biết rằng người đọc (chủ yếu là giáo viên) sẽ biết về các tính chất của số thực được sử dụng trong chứng minh.
+
+Xét một ví dụ cơ bản cho việc chứng minh, giả sử có giả thiết như sau:
+\begin{enumerate}
+    \item ``Nếu trời mưa thì sân vận động sẽ ướt.''.
+    \item ``Trời đang mưa.''
+\end{enumerate}
+và chứng minh kết luận ``Sân vận động thì ướt''. Để thực hiện chứng minh, chuyển sang dưới dạng kí hiệu
+\begin{itemize}
+    \item $P$: ``Trời mưa.''; 
+    \item $Q$: ``Sân vận động ướt.''.
+\end{itemize}
+Qua đó, chúng ta có thể viết lại lập luận này dưới dạng như sau:
+\begin{center}
+    \begin{tabular}{r|l}
+        Giả thiết   & $P \implies Q$ \\
+                    & $P$ \\
+        \headerDivider
+        Kết luận & $Q$
+    \end{tabular}.
+\end{center}
+Mệnh đề mà chúng ta cần khẳng định đúng để hoàn thành chứng minh là $(P \implies Q) \land P \implies Q$. Thực vậy, có bảng \ref{tab:toan_hoc_nen_tang:lo_gich:lap_luan:vd_chung_minh}.
+    
+\begin{table}[H]
+    \centering
+    \caption{Bảng giá trị chân lí của $( P \implies Q ) \land P \implies Q$}
+    \label{tab:toan_hoc_nen_tang:lo_gich:lap_luan:vd_chung_minh}
+    \begin{tabular}{|c|c|ccccccc|}
+        \hline
+        $P$ & $Q$ & $(P$ & $\implies$ & $Q)$ & $\land$ & $P$ & $\implies$ & $Q$ \\
+        \headerDivider
+        Đ & Đ & Đ & Đ & Đ & Đ & Đ & \emphcolor{Đ} & Đ \\
+        Đ & S & Đ & S & S & S & Đ & \emphcolor{Đ} & S \\
+        S & Đ & S & Đ & Đ & S & S & \emphcolor{Đ} & Đ \\
+        S & S & S & Đ & S & S & S & \emphcolor{Đ} & S \\
+        \hline
+    \end{tabular}
+\end{table}
+Vậy, từ giả thiết, chúng ta có kết được kết luận. Điều phải chứng minh.
+
+Từ định nghĩa chứng minh, chúng ta cũng có định nghĩa của \defText{không chứng minh}: $X$ không chứng minh $Y$ nếu tồn tại trường hợp để $\overline{X \implies Y}$.
+
+Ví dụ, một phép ngụy biện thường xuyên được sử dụng là ngụy biện khẳng định hệ quả:
+\begin{center}
+    \begin{tabular}{r|l}
+        Giả thiết   & $X \implies Y$ \\
+                    & $Y$ \\
+        \headerDivider
+        Kết luận & $X$
+    \end{tabular}.
+\end{center}
+
+Sử dụng bảng giá trị chân lí, chúng ta có ngay điều không chứng minh.
+\begin{table}[H]
+	\centering
+	\caption{Bảng giá trị chân lí của $( X \implies Y ) \land Y \implies X$}
+	\begin{tabular}{|c|c|ccccccc|}
+		\hline
+		$X$ & $Y$ & $(X$ & $\implies$ & $Y)$ & $\land$ & $Y$ & $\implies$ & $X$ \\
+		\headerDivider
+		Đ & Đ & Đ & Đ & Đ & Đ & Đ & \emph{Đ} & Đ \\
+		Đ & S & Đ & S & S & S & S & \emph{Đ} & Đ \\
+		S & Đ & S & Đ & Đ & Đ & Đ & \emphcolor{S} & S \\
+		S & S & S & Đ & S & S & S & \emph{Đ} & S \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\subsection{Quy tắc thay thế trong chứng minh lô-gích}
+
+\ % Lùi đầu dòng
+
+Nếu như mỗi lần chứng minh, chúng ta phải lôi bảng giá trị chân lí thì sẽ gặp vấn đề khi một mệnh đề lớn có quá nhiều mệnh đề con cấu thành. Trong tương lai, chúng ta sẽ xây dựng các kiến trúc toán học cơ bản. Để làm được điều đó, chúng ta sẽ cần rất nhiều các định nghĩa và tiên đề. Chúng ta cần một hệ thống quy tắc để lập luận hoặc chứng minh.
+
+\begin{itemize}
+    \item 
+    \textcolor{colorEmphasisCyan}{Quy tắc thứ nhất}: Cho $A \implies B$. Khi thay đồng thời các mệnh đề $A$ trong $\lonF$ bởi $B$ để có được mệnh đề $\lonG$ thì có được $\lonF \implies \lonG$ hay $\lonF$ chứng minh $\lonG$.
+    \item
+    \textcolor{colorEmphasis}{Quy tắc thứ hai}: Cho $A \iff B$. Khi thay đồng thời các mệnh đề $A$ trong $\lonF$ bởi $B$ để có được mệnh đề $\lonG$ thì có được $\lonF \iff \lonG$.
+    \item    
+    \textcolor{colorEmphasisGreen}{Quy tắc thứ ba}: Cho $\chungF$ có mệnh đề $A$ làm mệnh đề con. Nếu $\chungF$ đúng không phụ thuộc vào giá trị chân lí của $A$ thì mệnh đề $\chungF$ vẫn đúng khi thay đồng thời tất cả các mệnh đề $A$ trong $\chungF$ bằng mệnh đề $B$ bất kì.
+\end{itemize}
+
+Một lần nữa, do giới hạn của cấu trúc lô-gích hiện tại, chúng ta chưa thể có định nghĩa chặt chẽ cho và chứng minh các quy tắc trên đúng với tất cả các trường hợp. Cho dù là như vậy, vẫn có thể áp dụng chúng trên những trường hợp cụ thể, với ngầm hiểu rằng luôn có thể sử dụng bảng giá trị chân lí làm dẫn chứng.
+
+Để thuận tiện cho việc lập luận, sẽ sử dụng các kết quả đã có của bài \ref{ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:tc_lo_gich}.
+
+\exercise Chứng minh rằng $\overline{\neg A \lor B} \lor A \land \neg C \iff A \land \overline{B \land C}$ với $A$, $B$ và $C$ là các mệnh đề bất kì.
+
+\solution
+Có $\overline{P \lor Q} \iff \neg P \land \neg Q$ đúng với mọi mệnh đề $P$ và $Q$ theo định luật Đờ Moóc-gơn. Thay mệnh đề $P$ và $Q$ lần lượt bởi $A$ và $B$, chúng ta có
+$$\overline{\neg A \lor B} \iff \neg (\neg A) \land \neg B.$$
+Lại có $\overline{\neg P} \iff P$ với mọi $P$ theo tính chất phủ định kép cho nên $\neg(\neg A) \iff A$. Do đó
+$$\overline{\neg A \lor B} \iff A \land \neg B.$$
+Như một hệ quả,
+$$\overline{\neg A \lor B} \lor A \land \neg C \iff A \land \neg B \lor A \land \neg C.$$
+Theo tính chất phân phối, $P \land Q \lor P \land R \iff P \land (Q \lor R)$ với mọi $P$, $Q$, $R$,
+$$A \land \neg B \lor A \land \neg C \iff A \land (\neg B \lor \neg C).$$
+Suy ra, $\overline{\neg A \lor B} \lor A \land \neg C \iff A \land (\neg B \lor \neg C)$.
+
+Định luật Đờ Moóc-gơn vẫn còn một hệ thức nữa là $\neg P \lor \neg Q \iff \overline{P \land Q}$, dẫn đến $(\neg B \lor \neg C) \iff \overline{B \land C}$ nếu đổi $P$ bởi $B$ và $Q$ bởi $C$. Do đó $$A \land (\neg B \lor \neg C) \iff A \land \overline{B \land C}.$$
+
+Vậy $\overline{\neg A \lor B} \lor A \land \neg C \iff A \land \overline{B \land C}$. Chúng ta có điều cần phải chứng minh.
+
+\exercise Biết rằng, lô-gích khó hoặc nhiều người thích học nó, và nếu làm khoa học là dễ thì lô-gích là không khó. Sử dụng lập luận diễn dịch, chứng minh rằng nếu không phải rằng nhiều người thích học lô-gích, làm khoa học là không dễ dàng.
+
+\solution
+Đặt biến cho các mệnh đề:
+\begin{itemize}
+    \item $L$: ``Lô-gích khó.'';
+    \item $A$: ``Nhiều người thích học lô-gích.'';
+    \item $S$: ``Làm khoa học là dễ dàng.''.
+\end{itemize}
+Chúng ta có bộ giả thiết -- kết luận như sau:
+\begin{center}
+    \begin{tabular}{r|ll}
+        Giả thiết   & $L \lor A$ & (``Lô-gích khó hoặc nhiều người thích học nó.'')\\
+                    & $S \implies \neg L$ & (``Nếu làm khoa học là dễ thì lô-gích là không khó.'') \\
+        \headerDivider
+        Kết luận & $\neg A \implies \neg S$ & (``Nếu không phải rằng nhiều người thích học lô-gích,\\
+        & & làm khoa học là không dễ dàng.'')
+    \end{tabular}.
+\end{center}
+Viết lại dưới dạng kí hiệu, chúng ta cần chứng minh rằng
+$$(L \lor A) \land (S \implies \neg L) \implies (\neg A \implies \neg S).$$
+Trước hết, để ý rằng $A \implies \neg \neg A$ (theo tính chất phủ định kép) nên $$L \lor A \iff L \lor \neg (\neg A).$$
+Do tính chất giao hoán của phép tuyển, $$L \lor \neg(\neg A) \iff \neg(\neg A) \lor L.$$
+Theo định nghĩa phép kéo theo, $\neg P \lor Q \iff (P \implies Q)$ với mọi $P$ và $Q$ nên $$\neg(\neg A) \lor L \iff (\neg A \implies L).$$
+Kết hợp lại ba mệnh đề tương đương này, chúng ta có $$L \lor A \iff (\neg A \implies L).$$
+
+Theo tính chất phản đảo, $$(S \implies \neg L) \iff (\neg (\neg L) \implies \neg S).$$
+Kết hợp với tính chất phủ định kép, $$(S \implies \neg L) \iff (L \implies \neg S).$$
+
+Qua đó, xét vế giả thiết của mệnh đề cần chứng minh:
+$$(L \lor A) \land (S \implies \neg L) \iff (\neg A \implies L) \land (L \implies \neg S).$$
+Ngoài ra, theo tính chất bắc cầu, $$(\neg A \implies L) \land (L \implies \neg S) \iff (\neg A \implies \neg S).$$
+Do vậy, $$(L \lor A) \land (S \implies \neg L) \iff (\neg A \implies \neg S).$$ Điều phải chứng minh.

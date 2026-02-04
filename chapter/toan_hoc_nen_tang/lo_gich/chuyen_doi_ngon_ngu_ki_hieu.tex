@@ -1,4 +1,4 @@
-\section{Chuyển đổi từ dạng ngôn ngữ sang dạng kí hiệu}
+\section{Chuyển đổi mệnh đề lô-gích từ dạng ngôn ngữ sang dạng kí hiệu}
 
 \ % Lùi đầu dòng
 
@@ -114,4 +114,29 @@ Mệnh đề dưới dạng kí hiệu: $\overline{\neg \neg A}$.
 Mệnh đề dưới dạng kí hiệu: $T \uparrow C \implies (\neg A \implies F)$.
 
 \stepcounter{subexercise}
-\arabic{subexercise}.
+\arabic{subexercise}. Đặt biến:
+\begin{itemize}
+    \item $R$: ``Cô bé quàng khăn đỏ quàng khăn màu đỏ.'';
+    \item $S$: ``Cám là một người em tốt của Tấm.'';
+    \item $C$: ``Lô-gích ngừng là một môn phức tạp.'';
+    \item $E$: ``Bộ não của Ê-mô-ri mới được giải phóng.'';
+\end{itemize}
+Mệnh đề dưới dạng kí hiệu: $\neg R \land S \implies C \land E$. Từ ``mới'' là một từ mang tính nhấn mạnh, không có giá trị về mặt lô-gích.
+
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Kí hiệu các mệnh đề con:
+\begin{itemize}
+    \item $A$: ``Đế quốc Mĩ đã rất nhiều lần lên kế hoạch ngăn chặn Việt Nam thống nhất.'';
+    \item $B$: ``Dân tộc ta có một tinh thần đoàn kết vững mạnh.'';
+    \item $C$: ``Quân đội được xây dựng thành lực lượng hùng mạnh.'';
+    \item $D$: ``Sự lãnh đạo của Đảng đầy sáng suốt.'';
+    \item $E$: ``Đất nước chúng ta đã có thống nhất, độc lập, tự do như ngày hôm nay.''.
+\end{itemize}
+
+Từ ``nhưng'' không chỉ biểu diễn hai sự việc xảy ra, mà còn thể hiện một sự việc có tác động trái ngược đến kết quả của sự việc khác. Tuy nhiên, trong lô-gích diễn dịch, không có mối quan hệ phủ định lẫn nhau, cho nên chúng ta biểu diễn nhưng bằng phép nối $\land$.
+
+Xét cấu trúc ``bởi vì $X$ nên $Y$'', theo nghĩa thông thường, không chỉ biểu hiện mối quan hệ nhân quả giữa $X$ và $Y$, mà nó còn biểu hiện là $X$ và $Y$ đã xảy ra. Cho nên, cấu trúc này tương đương với ``có $X$ và $Y$, và ngoài ra $X$ là nguyên nhân của $Y$''.
+
+Vậy, mệnh đề dưới dạng kí hiệu sẽ là
+$$A \land (B \land C \land D \land E \land (B \land C \land D \implies E)).$$
