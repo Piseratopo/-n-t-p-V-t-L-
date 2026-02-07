@@ -182,7 +182,7 @@ Do vậy, $$(L \lor A) \land (S \implies \neg L) \iff (\neg A \implies \neg S).$
     \end{tabular}
     \item 
     \begin{tabular}{r|l}
-        Giả thiết & Âm nhạc làm cho Qua-di thư giãn, hoặc là tiếng ồn làm cho Qua-di đau đầu; \\
+        Giả thiết & Âm nhạc đang làm cho Qua-di thư giãn, hoặc là tiếng ồn làm cho Qua-di đau đầu; \\
         & Nếu Qua-di đeo tai nghe chống ồn, thì tiếng ồn không làm cho Qua-di đau đầu; \\
         & Thực tế là Qua-di đang đeo tai nghe chống ồn. \\
         \hline
@@ -211,12 +211,140 @@ Do vậy, $$(L \lor A) \land (S \implies \neg L) \iff (\neg A \implies \neg S).$
     \begin{tabular}{r|l}
         Giả thiết & Nếu Tu-ba-na thức khuya học bài và không uống cà phê, \\
         & Tu-ba-na sẽ mệt mỏi vào sáng ngày hôm sau; \\
-        & Nếu Ta-ba-na mệt mỏi vào sáng ngày hôm sau, bạn ấy sẽ không thể thi tốt \\
+        & Nếu Tu-ba-na mệt mỏi vào sáng ngày hôm sau, bạn ấy sẽ không thể thi tốt \\
         & hoặc sẽ ngủ gật trong giờ thi; \\
         & Ở giờ thi sáng nay, Ta-ba-na đã không ngủ gật nhưng bạn ấy vẫn không thi tốt.\\
         \hline
-        Kết luận & Ta-ba-na đã thức khuya học bài.
+        Kết luận & Tu-ba-na đã thức khuya học bài.
     \end{tabular}
 \end{enumerate}
 
 \solution
+
+\setcounter{subexercise}{1}
+\arabic{subexercise}. Đặt biến cho các mệnh đề:
+\begin{itemize}
+    \item $N$: ``Máy chủ hoạt động bình thường.'';
+    \item $C$: ``Đường truyền mạng ổn định.'';
+    \item $D$: ``Người dùng có thể truy cập được dữ liệu.''.
+\end{itemize}
+``Mảy chủ gặp sự cố.'' tương đương với ``Máy chủ đang không hoạt động bình thường.'', hay $\neg N$.
+
+Viết lại hệ thống giả thiết -- kết luận dưói dạng lô-gích:
+\begin{center}
+    \begin{tabular}{r|l}
+        Giả thiết & $ N \land C \implies D$ \\
+        & $\neg D$ \\
+        \hline
+        Kết luận & $\neg N$
+    \end{tabular}.
+\end{center}
+
+Lập luận này là không sắc đáng, do tồn tại bộ giá trị chân lí cho $C$, $D$, và $N$ khiến cho lập luận sai. Cụ thể, sau khi giải giá trị chân lí của mệnh đề $(N \land C \implies D) \land \neg D \implies \neg N$ với mệnh đề $C$ và $D$ sai và $N$ là mệnh đề đúng ---
+\begin{center}
+	\begin{tabular}{|c|c|c|ccccccccccc|}
+		\hline
+		$C$ & $D$ & $N$ & $(N$ & $\land$ & $C$ & $\implies$ & $D)$ & $\land$ & $\neg$ & $D$ & $\implies$ & $\neg$ & $N$ \\
+		\headerDivider
+		S & S & Đ & Đ & S & S & Đ & S & Đ & Đ & S & \emphcolor{S} & S & Đ \\
+		\hline
+	\end{tabular},
+\end{center}
+chúng ta có mệnh đề cần chứng minh sai. Do vậy, kết luận không suy ra được từ giả thiết.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Đặt biến:
+\begin{itemize}
+    \item $R$: ``Âm nhạc (đang) làm cho Qua-di thư giãn.'';
+    \item $B$: ``Tiếng ồn làm cho Qua-di đau đầu.'';
+    \item $H$: ``Qua-di (đang) đeo tai nghe chống ồn.''.
+\end{itemize}
+
+Kí hiệu hóa:
+\begin{center}
+    \begin{tabular}{r|l}
+        Giả thiết & $ R\lor B$ \\
+        & $H \implies \neg B$ \\
+        & $H$ \\
+        \hline
+        Kết luận & $R$
+    \end{tabular}.
+\end{center}
+
+Do tính chất kết hợp của phép hội nên
+$$(R \lor B) \land (H \implies \neg B) \land H \iff (R \lor B) \land ((H \implies \neg B) \land H).$$
+
+Có $(H \implies \neg B) \land H \implies \neg B$ ($(P \implies Q) \land P \implies Q $) nên 
+$$(R \lor B) \land ((H \implies \neg B) \land H) \implies (R \lor B) \land \neg B.$$
+
+Từ tính chất phân phối, chúng ta có
+$$(R \lor B) \land \neg B \iff R \land \neg B \lor B \land \neg B.$$
+
+Theo tính chất phủ định kép, $B \land \neg B \iff \overline{\neg(B \land \neg B)}$. Lại có $\neg(B \land \neg B)$ luôn đúng do tính chất không mâu thuẫn nên $\overline{\neg(B \land \neg B)}$ sai. Kết hợp lại, có được $B \land \neg B \iff \mathbf{M}$ với $\mathbf{M}$ là một mệnh đề sai nào đó.
+
+Do vậy $(R \lor B) \land \neg B \iff R \land \neg B \lor \mathbf{M}$. Thêm tính chất đồng nhất, có $R \land \neg B \lor \mathbf{M} \iff R \land \neg B$, và theo tính chất rút gọn, $R \land \neg B \implies R$.
+
+Kết hợp tất cả các kết quả đã có, chúng ta có thể có quá trình lập luận như sau:
+\begin{align*}
+    (R \lor B) \land (H \implies \neg B) \land H &\iff (R \lor B) \land ((H \implies \neg B) \land H) \\
+    (R \lor B) \land (H \implies \neg B) \land H &\implies (R \lor B) \land \neg B \\
+    (R \lor B) \land (H \implies \neg B) \land H &\implies R \land \neg B \lor B \land \neg B \\
+    (R \lor B) \land (H \implies \neg B) \land H &\implies R \land \neg B \\
+    (R \lor B) \land (H \implies \neg B) \land H &\implies R.
+\end{align*}
+
+Vậy, kết luận có thể suy ra được từ giả thiết.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Trông đáp án của câu này có vẻ hiển nhiên, nhưng thực chất không phải như vậy. Kí hiệu các mệnh đề:
+\begin{itemize}
+    \item $D$: ``Bây giờ (đang) là tháng 12.'';
+    \item $U$: ``Tháng (liền) trước là tháng 11.'';
+    \item $S$: ``6 tháng trước (bây giờ) là tháng 6.'';
+    \item $M$: ``Tháng (liền) sau là tháng 1.''.
+\end{itemize}
+
+Chuyển giả thiết và kết luận sang dưới dạng kí hiệu:
+\begin{center}
+    \begin{tabular}{r|l}
+        Giả thiết & $D \implies U$ \\
+        & $U \implies S$ \\
+        & $M \implies D$ \\
+        & $U$ \\
+        \hline
+        Kết luận & $D$
+    \end{tabular}.
+\end{center}
+
+Chỉ có một trường hợp khiến cho phép lập luận thất bại:
+\begin{center}
+    \begin{tabular}{|c|c|c|c|ccccccccccccc|}
+		\hline
+		$D$ & $M$ & $S$ & $U$ & $(D$ & $\implies$ & $U)$ & $\land$ & $(U$ & $\implies$ & $S)$ & $\land$ & $(M$ & $\implies$ & $D)$ & $\land$ & $U$ \\
+		\headerDivider
+		S & S & Đ & Đ & S & Đ & Đ & Đ & Đ & Đ & Đ & Đ & S & Đ & S & Đ & Đ \\
+		\hline
+	\end{tabular}
+    \begin{tabular}{|c|c|c|c|ccc|}
+        \hline
+        $D$ & $M$ & $S$ & $U$ & $(D \implies U) \land (U \implies S) \land (M \implies D) \land U$ & $\implies$ & $D$ \\
+        \headerDivider
+        S & S & Đ & Đ & Đ & \emphcolor{S} & S \\
+        \hline
+    \end{tabular}.
+\end{center}
+Nhưng chỉ cần một trường hợp là đủ để chứng minh không còn hợp lệ.
+
+Cũng có thể nhìn câu này theo một hướng khác. Lập luận này chỉ hợp lệ nếu có điều kiện đi kèm. Nếu như chúng ta không sử dụng lịch thông thường mà sử dụng một loại lịch đặc biệt mà trước tháng 12 lại có một tháng 11A thì sao? Bài tập này càng nhấn mạnh cần phải có một ``nền tảng'' chung trong việc giải quyết vấn đề trước khi đề cập đến những yếu tố chi tiết.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Đặt biến các mệnh đề:
+\begin{itemize}
+    \item $L$: ``Hoàng tử tiêu diệt được ma vương.'';
+    \item $P$: ``Hoàng tử cứu được công chúa.'';
+    \item $N$: ``Vương quốc mới thái bình.'';
+    \item $I$: ``Nhà vua băng hà.'';
+    \item $R$: ``Bầu trời có màu tím.''.
+\end{itemize}
+
+Kí hiệu hóa:
