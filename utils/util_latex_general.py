@@ -21,8 +21,8 @@ class MathOperation(ABC):
 
 
 class NotOperation(MathOperation):
-    def __init__(self):
-        super().__init__("~", r"\neg", 0, 1)
+    def __init__(self, symbol="~", latex=r"\neg", precedence=0, rank=1):
+        super().__init__(symbol, latex, precedence, rank)
     
     def compute(self, value):
         return not value
@@ -120,6 +120,7 @@ class NiffOperation(MathOperation):
 # Create operation instances
 operations = {
     "~": NotOperation(),
+    "(~": NotOperation(latex=r"(\neg"),
     "&": AndOperation(),
     "\\/": OrOperation(),
     "=>": ImpliesOperation(),
@@ -208,23 +209,28 @@ def parse_expression(expression):
 
 def parse_expression_with_parentheses(expression):
     def is_in_component(ch):
-        return ch.isalnum() or ch in "()"
+        return ch.isalnum()
 
     tokens = []
     current_token = ""
     current_pos = 0
     current_is_in_component = False
-    for ch in expression:
+    for pos, ch in enumerate(expression):
         if ch == " ":
             if current_token:
                 current_token = add_token(tokens, current_pos, current_token)
                 current_pos += 1
             continue
+        if ch == ")":
+            current_token += ")"
+            continue
         if is_in_component(ch) != current_is_in_component:
-            if current_token:
+            if current_token and current_token != "(":
                 current_token = add_token(tokens, current_pos, current_token)
                 current_pos += 1
             current_is_in_component = is_in_component(ch)
+            if pos and expression[pos - 1] == "(":
+                current_token = "("
         current_token += ch
     add_token(tokens, current_pos, current_token)
     return tokens

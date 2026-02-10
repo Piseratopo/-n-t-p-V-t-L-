@@ -177,7 +177,7 @@ Do vậy, $$(L \lor A) \land (S \implies \neg L) \iff (\neg A \implies \neg S).$
         Giả thiết & Nếu máy chủ hoạt động bình thường và đường truyền mạng ổn định \\
         & thì người dùng có thể truy cập dữ liệu; \\
         & Người dùng đang không truy cập được dữ liệu. \\
-        \hline
+        \headerDivider
         Kết luận & Máy chủ đang gặp sự cố.
     \end{tabular}
     \item 
@@ -185,7 +185,7 @@ Do vậy, $$(L \lor A) \land (S \implies \neg L) \iff (\neg A \implies \neg S).$
         Giả thiết & Âm nhạc đang làm cho Qua-di thư giãn, hoặc là tiếng ồn làm cho Qua-di đau đầu; \\
         & Nếu Qua-di đeo tai nghe chống ồn, thì tiếng ồn không làm cho Qua-di đau đầu; \\
         & Thực tế là Qua-di đang đeo tai nghe chống ồn. \\
-        \hline
+        \headerDivider
         Kết luận & Âm nhạc đang làm cho Qua-di thư giãn.
     \end{tabular}
     \item 
@@ -194,7 +194,7 @@ Do vậy, $$(L \lor A) \land (S \implies \neg L) \iff (\neg A \implies \neg S).$
         & Nếu tháng trước là tháng 11, thì 6 tháng trước (bây giờ) là tháng 6; \\
         & Nếu tháng sau là tháng 1, thì bây giờ là tháng 12; \\
         & Tháng liền trước là tháng 11. \\
-        \hline
+        \headerDivider
         Kết luận & Bây giờ đang là tháng 12.
     \end{tabular}
     \item 
@@ -204,7 +204,7 @@ Do vậy, $$(L \lor A) \land (S \implies \neg L) \iff (\neg A \implies \neg S).$
         & Nếu vương quốc thái bình hoặc nhà vua băng hà, bầu trời sẽ không có màu tím; \\
         & Nếu hoàng tử không cứu được công chúa, bầu trời sẽ có màu tím; \\
         & Nhà vua chưa băng hà và bầu trời không có màu tím. \\
-        \hline
+        \headerDivider
         Kết luận & Hoàng tử đã cứu được công chúa.
     \end{tabular}
     \item
@@ -213,9 +213,9 @@ Do vậy, $$(L \lor A) \land (S \implies \neg L) \iff (\neg A \implies \neg S).$
         & Tu-ba-na sẽ mệt mỏi vào sáng ngày hôm sau; \\
         & Nếu Tu-ba-na mệt mỏi vào sáng ngày hôm sau, bạn ấy sẽ không thể thi tốt \\
         & hoặc sẽ ngủ gật trong giờ thi; \\
-        & Ở giờ thi sáng nay, Ta-ba-na đã không ngủ gật nhưng bạn ấy vẫn không thi tốt.\\
-        \hline
-        Kết luận & Tu-ba-na đã thức khuya học bài.
+        & Ở giờ thi sáng nay, Tu-ba-na đã không quay cóp nhưng bạn ấy vẫn không thi tốt.\\
+        \headerDivider
+        Kết luận & Tu-ba-na đã thức khuya học bài vào ngày trước hôm thi.
     \end{tabular}
 \end{enumerate}
 
@@ -235,7 +235,7 @@ Viết lại hệ thống giả thiết -- kết luận dưói dạng lô-gích:
     \begin{tabular}{r|l}
         Giả thiết & $ N \land C \implies D$ \\
         & $\neg D$ \\
-        \hline
+        \headerDivider
         Kết luận & $\neg N$
     \end{tabular}.
 \end{center}
@@ -266,7 +266,7 @@ Kí hiệu hóa:
         Giả thiết & $ R\lor B$ \\
         & $H \implies \neg B$ \\
         & $H$ \\
-        \hline
+        \headerDivider
         Kết luận & $R$
     \end{tabular}.
 \end{center}
@@ -311,7 +311,7 @@ Chuyển giả thiết và kết luận sang dưới dạng kí hiệu:
         & $U \implies S$ \\
         & $M \implies D$ \\
         & $U$ \\
-        \hline
+        \headerDivider
         Kết luận & $D$
     \end{tabular}.
 \end{center}
@@ -348,3 +348,192 @@ Cũng có thể nhìn câu này theo một hướng khác. Lập luận này ch�
 \end{itemize}
 
 Kí hiệu hóa:
+
+\begin{center}
+    \begin{tabular}{r|l}
+        Giả thiết & $L \land P \implies N$ \\
+        & $N \lor I \implies \neg R$ \\
+        & $\neg P \implies R$ \\
+        & $\neg I \land \neg R$ \\
+        \headerDivider
+        Kết luận & $P$        
+    \end{tabular}
+\end{center}
+
+Viết tắt $(L \land P \implies N) \land (N \lor I \implies \neg R) \land (\neg P \implies R) \land (\neg I \land \neg R)$ bởi $M$. Thực hiện liên tiếp các phép ``biến đổi'' thông qua các tính chất, nhận xét:
+\begin{align*}
+    M \iff \big((L \land P \implies N) &\land (N \lor I \implies \neg R)\big) \land (\neg P \implies R) \land (\neg I \land \neg R) \equationexplanation{thứ tự tính toán}; \\
+    M \iff \big((L \land P \implies N) &\land (N \lor I \implies \neg R)\big) \\
+    &\land \big((\neg P \implies R) \land (\neg I \land \neg R)\big) \equationexplanation{tính chất kết hợp của phép hội}; \\
+    M \implies (\neg P \implies R) &\land (\neg I \land \neg R) \equationexplanation{tính chất rút gọn}.
+\end{align*}
+Áp dụng tính chất rút gọn một lần nữa để có $\neg I \land \neg R \implies \neg R$. Điều này dẫn đến
+\begin{align*}
+    M &\implies (\neg P \implies R) \land \neg R; \\
+    M &\implies \overline{\neg P} \equationexplanation{quy tắc phủ định}; \\
+    M & \implies P \equationexplanation{tính chất phủ định kép}.
+\end{align*}
+
+Qua đó, chúng ta có điều phải chứng minh. Bạn đọc cũng có thể thực hiện bài tập này thông qua bảng giá trị chân lí, nhưng khí đó, bạn đọc sẽ phải xét\dots\ mà thôi, bạn đọc có thể tham khảo bảng \ref{ex:toan_hoc_nen_tang:lo_gich:lap_luan:bai_2_phan_4} nếu bạn đọc không muốn phải ghét bản thân như tác giả đã từng khi thực hiện lập bảng này\footnote{Bạn đọc có thể kiểm tra lại bảng \ref{ex:toan_hoc_nen_tang:lo_gich:lap_luan:bai_2_phan_4} để trải nghiệm cảm giác của tác giả lúc viết đáp án. Khi càng tăng nhiều biến thì số trường hợp cần phải kiểm tra cũng tăng theo theo cấp số nhân.}. Ngoài ra, bạn đọc cũng sẽ mất đi cơ hội được thường thức nghệ thuật của sự lập luận do bị thay thế bởi sự cơ học của phương pháp.
+
+\begin{table}[H]
+    \centering
+	\caption{Bảng giá trị chân lí của $( L \land P \implies N ) \land ( N \lor I \implies \neg R ) \land ( \neg P \implies R ) \land ( \neg I \land \neg R ) \implies P$}
+    \label{ex:toan_hoc_nen_tang:lo_gich:lap_luan:bai_2_phan_4}
+	\begin{tabular}{|c|c|c|c|c|cccccccccccc|}
+		\hline
+		$I$ & $L$ & $N$ & $P$ & $R$ & $(L$ & $\land$ & $P$ & $\implies$ & $N)$ & $\land$ & $(N$ & $\lor$ & $I$ & $\implies$ & $\neg$ & $R)$ \\
+		\headerDivider
+		Đ & Đ & Đ & Đ & Đ & Đ & Đ & Đ & Đ & Đ & S & Đ & Đ & Đ & S & S & Đ \\
+		Đ & Đ & Đ & Đ & S & Đ & Đ & Đ & Đ & Đ & Đ & Đ & Đ & Đ & Đ & Đ & S \\
+		Đ & Đ & Đ & S & Đ & Đ & S & S & Đ & Đ & S & Đ & Đ & Đ & S & S & Đ \\
+		Đ & Đ & Đ & S & S & Đ & S & S & Đ & Đ & Đ & Đ & Đ & Đ & Đ & Đ & S \\
+		Đ & Đ & S & Đ & Đ & Đ & Đ & Đ & S & S & S & S & Đ & Đ & S & S & Đ \\
+		Đ & Đ & S & Đ & S & Đ & Đ & Đ & S & S & S & S & Đ & Đ & Đ & Đ & S \\
+		Đ & Đ & S & S & Đ & Đ & S & S & Đ & S & S & S & Đ & Đ & S & S & Đ \\
+		Đ & Đ & S & S & S & Đ & S & S & Đ & S & Đ & S & Đ & Đ & Đ & Đ & S \\
+		Đ & S & Đ & Đ & Đ & S & S & Đ & Đ & Đ & S & Đ & Đ & Đ & S & S & Đ \\
+		Đ & S & Đ & Đ & S & S & S & Đ & Đ & Đ & Đ & Đ & Đ & Đ & Đ & Đ & S \\
+		Đ & S & Đ & S & Đ & S & S & S & Đ & Đ & S & Đ & Đ & Đ & S & S & Đ \\
+		Đ & S & Đ & S & S & S & S & S & Đ & Đ & Đ & Đ & Đ & Đ & Đ & Đ & S \\
+		Đ & S & S & Đ & Đ & S & S & Đ & Đ & S & S & S & Đ & Đ & S & S & Đ \\
+		Đ & S & S & Đ & S & S & S & Đ & Đ & S & Đ & S & Đ & Đ & Đ & Đ & S \\
+		Đ & S & S & S & Đ & S & S & S & Đ & S & S & S & Đ & Đ & S & S & Đ \\
+		Đ & S & S & S & S & S & S & S & Đ & S & Đ & S & Đ & Đ & Đ & Đ & S \\
+		S & Đ & Đ & Đ & Đ & Đ & Đ & Đ & Đ & Đ & S & Đ & Đ & S & S & S & Đ \\
+		S & Đ & Đ & Đ & S & Đ & Đ & Đ & Đ & Đ & Đ & Đ & Đ & S & Đ & Đ & S \\
+		S & Đ & Đ & S & Đ & Đ & S & S & Đ & Đ & S & Đ & Đ & S & S & S & Đ \\
+		S & Đ & Đ & S & S & Đ & S & S & Đ & Đ & Đ & Đ & Đ & S & Đ & Đ & S \\
+		S & Đ & S & Đ & Đ & Đ & Đ & Đ & S & S & S & S & S & S & Đ & S & Đ \\
+		S & Đ & S & Đ & S & Đ & Đ & Đ & S & S & S & S & S & S & Đ & Đ & S \\
+		S & Đ & S & S & Đ & Đ & S & S & Đ & S & Đ & S & S & S & Đ & S & Đ \\
+		S & Đ & S & S & S & Đ & S & S & Đ & S & Đ & S & S & S & Đ & Đ & S \\
+		S & S & Đ & Đ & Đ & S & S & Đ & Đ & Đ & S & Đ & Đ & S & S & S & Đ \\
+		S & S & Đ & Đ & S & S & S & Đ & Đ & Đ & Đ & Đ & Đ & S & Đ & Đ & S \\
+		S & S & Đ & S & Đ & S & S & S & Đ & Đ & S & Đ & Đ & S & S & S & Đ \\
+		S & S & Đ & S & S & S & S & S & Đ & Đ & Đ & Đ & Đ & S & Đ & Đ & S \\
+		S & S & S & Đ & Đ & S & S & Đ & Đ & S & Đ & S & S & S & Đ & S & Đ \\
+		S & S & S & Đ & S & S & S & Đ & Đ & S & Đ & S & S & S & Đ & Đ & S \\
+		S & S & S & S & Đ & S & S & S & Đ & S & Đ & S & S & S & Đ & S & Đ \\
+		S & S & S & S & S & S & S & S & Đ & S & Đ & S & S & S & Đ & Đ & S \\
+		\hline
+	\end{tabular}
+\end{table}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|cccccc|}
+		\hline
+		$I$ & $L$ & $N$ & $P$ & $R$ & $( L \land P \implies N ) \land ( N \lor I \implies \neg R )$ & $\land$ & $(\neg$ & $P$ & $\implies$ & $R)$ \\
+		\headerDivider
+		Đ & Đ & Đ & Đ & Đ & S & \emphcolor{S} & S & Đ & Đ & Đ \\
+		Đ & Đ & Đ & Đ & S & Đ & \emphcolor{Đ} & S & Đ & Đ & S \\
+		Đ & Đ & Đ & S & Đ & S & \emphcolor{S} & Đ & S & Đ & Đ \\
+		Đ & Đ & Đ & S & S & Đ & \emphcolor{S} & Đ & S & S & S \\
+		Đ & Đ & S & Đ & Đ & S & \emphcolor{S} & S & Đ & Đ & Đ \\
+		Đ & Đ & S & Đ & S & S & \emphcolor{S} & S & Đ & Đ & S \\
+		Đ & Đ & S & S & Đ & S & \emphcolor{S} & Đ & S & Đ & Đ \\
+		Đ & Đ & S & S & S & Đ & \emphcolor{S} & Đ & S & S & S \\
+		Đ & S & Đ & Đ & Đ & S & \emphcolor{S} & S & Đ & Đ & Đ \\
+		Đ & S & Đ & Đ & S & Đ & \emphcolor{Đ} & S & Đ & Đ & S \\
+		Đ & S & Đ & S & Đ & S & \emphcolor{S} & Đ & S & Đ & Đ \\
+		Đ & S & Đ & S & S & Đ & \emphcolor{S} & Đ & S & S & S \\
+		Đ & S & S & Đ & Đ & S & \emphcolor{S} & S & Đ & Đ & Đ \\
+		Đ & S & S & Đ & S & Đ & \emphcolor{Đ} & S & Đ & Đ & S \\
+		Đ & S & S & S & Đ & S & \emphcolor{S} & Đ & S & Đ & Đ \\
+		Đ & S & S & S & S & Đ & \emphcolor{S} & Đ & S & S & S \\
+		S & Đ & Đ & Đ & Đ & S & \emphcolor{S} & S & Đ & Đ & Đ \\
+		S & Đ & Đ & Đ & S & Đ & \emphcolor{Đ} & S & Đ & Đ & S \\
+		S & Đ & Đ & S & Đ & S & \emphcolor{S} & Đ & S & Đ & Đ \\
+		S & Đ & Đ & S & S & Đ & \emphcolor{S} & Đ & S & S & S \\
+		S & Đ & S & Đ & Đ & S & \emphcolor{S} & S & Đ & Đ & Đ \\
+		S & Đ & S & Đ & S & S & \emphcolor{S} & S & Đ & Đ & S \\
+		S & Đ & S & S & Đ & Đ & \emphcolor{Đ} & Đ & S & Đ & Đ \\
+		S & Đ & S & S & S & Đ & \emphcolor{S} & Đ & S & S & S \\
+		S & S & Đ & Đ & Đ & S & \emphcolor{S} & S & Đ & Đ & Đ \\
+		S & S & Đ & Đ & S & Đ & \emphcolor{Đ} & S & Đ & Đ & S \\
+		S & S & Đ & S & Đ & S & \emphcolor{S} & Đ & S & Đ & Đ \\
+		S & S & Đ & S & S & Đ & \emphcolor{S} & Đ & S & S & S \\
+		S & S & S & Đ & Đ & Đ & \emphcolor{Đ} & S & Đ & Đ & Đ \\
+		S & S & S & Đ & S & Đ & \emphcolor{Đ} & S & Đ & Đ & S \\
+		S & S & S & S & Đ & Đ & \emphcolor{Đ} & Đ & S & Đ & Đ \\
+		S & S & S & S & S & Đ & \emphcolor{S} & Đ & S & S & S \\
+		\hline
+	\end{tabular}
+\end{table}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|ccccccccc|}
+		\hline
+		$I$ & $L$ & $N$ & $P$ & $R$ & $\begin{array}{c}
+            ( L \land P \implies N ) \land ( N \lor I \implies \neg R ) \\
+            \land ( \neg P \implies R )
+        \end{array}$ & $\land$ & $(\neg$ & $I$ & $\land$ & $\neg$ & $R)$ & $\implies$ & $P$ \\
+		\headerDivider
+		Đ & Đ & Đ & Đ & Đ & S & S & S & Đ & S & S & Đ & \emphcolor{Đ} & Đ \\
+		Đ & Đ & Đ & Đ & S & Đ & S & S & Đ & S & Đ & S & \emphcolor{Đ} & Đ \\
+		Đ & Đ & Đ & S & Đ & S & S & S & Đ & S & S & Đ & \emphcolor{Đ} & S \\
+		Đ & Đ & Đ & S & S & S & S & S & Đ & S & Đ & S & \emphcolor{Đ} & S \\
+		Đ & Đ & S & Đ & Đ & S & S & S & Đ & S & S & Đ & \emphcolor{Đ} & Đ \\
+		Đ & Đ & S & Đ & S & S & S & S & Đ & S & Đ & S & \emphcolor{Đ} & Đ \\
+		Đ & Đ & S & S & Đ & S & S & S & Đ & S & S & Đ & \emphcolor{Đ} & S \\
+		Đ & Đ & S & S & S & S & S & S & Đ & S & Đ & S & \emphcolor{Đ} & S \\
+		Đ & S & Đ & Đ & Đ & S & S & S & Đ & S & S & Đ & \emphcolor{Đ} & Đ \\
+		Đ & S & Đ & Đ & S & Đ & S & S & Đ & S & Đ & S & \emphcolor{Đ} & Đ \\
+		Đ & S & Đ & S & Đ & S & S & S & Đ & S & S & Đ & \emphcolor{Đ} & S \\
+		Đ & S & Đ & S & S & S & S & S & Đ & S & Đ & S & \emphcolor{Đ} & S \\
+		Đ & S & S & Đ & Đ & S & S & S & Đ & S & S & Đ & \emphcolor{Đ} & Đ \\
+		Đ & S & S & Đ & S & Đ & S & S & Đ & S & Đ & S & \emphcolor{Đ} & Đ \\
+		Đ & S & S & S & Đ & S & S & S & Đ & S & S & Đ & \emphcolor{Đ} & S \\
+		Đ & S & S & S & S & S & S & S & Đ & S & Đ & S & \emphcolor{Đ} & S \\
+		S & Đ & Đ & Đ & Đ & S & S & Đ & S & S & S & Đ & \emphcolor{Đ} & Đ \\
+		S & Đ & Đ & Đ & S & Đ & Đ & Đ & S & Đ & Đ & S & \emphcolor{Đ} & Đ \\
+		S & Đ & Đ & S & Đ & S & S & Đ & S & S & S & Đ & \emphcolor{Đ} & S \\
+		S & Đ & Đ & S & S & S & S & Đ & S & Đ & Đ & S & \emphcolor{Đ} & S \\
+		S & Đ & S & Đ & Đ & S & S & Đ & S & S & S & Đ & \emphcolor{Đ} & Đ \\
+		S & Đ & S & Đ & S & S & S & Đ & S & Đ & Đ & S & \emphcolor{Đ} & Đ \\
+		S & Đ & S & S & Đ & Đ & S & Đ & S & S & S & Đ & \emphcolor{Đ} & S \\
+		S & Đ & S & S & S & S & S & Đ & S & Đ & Đ & S & \emphcolor{Đ} & S \\
+		S & S & Đ & Đ & Đ & S & S & Đ & S & S & S & Đ & \emphcolor{Đ} & Đ \\
+		S & S & Đ & Đ & S & Đ & Đ & Đ & S & Đ & Đ & S & \emphcolor{Đ} & Đ \\
+		S & S & Đ & S & Đ & S & S & Đ & S & S & S & Đ & \emphcolor{Đ} & S \\
+		S & S & Đ & S & S & S & S & Đ & S & Đ & Đ & S & \emphcolor{Đ} & S \\
+		S & S & S & Đ & Đ & Đ & S & Đ & S & S & S & Đ & \emphcolor{Đ} & Đ \\
+		S & S & S & Đ & S & Đ & Đ & Đ & S & Đ & Đ & S & \emphcolor{Đ} & Đ \\
+		S & S & S & S & Đ & Đ & S & Đ & S & S & S & Đ & \emphcolor{Đ} & S \\
+		S & S & S & S & S & S & S & Đ & S & Đ & Đ & S & \emphcolor{Đ} & S \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Đặt biến:
+\begin{itemize}
+    \item $N$: ``Tu-ba-na thức khuya học bài.'';
+    \item $K$: ``Tu-ba-na uống cà phê.'';
+    \item $L$: ``Tu-ba-na mệt mỏi (vào sáng ngày thi).'';
+    \item $B$: ``Tu-ba-na thi tốt (vào sáng ngày thi).'';
+    \item $D$: ``Tu-ba-na ngủ gật trong giờ thi.'';
+    \item $Q$: ``Tu-ba-na đã quay cóp.''.
+\end{itemize}
+
+Kí hiệu hóa giả thiết và kết luận:
+
+\begin{center}
+    \begin{tabular}{r|l}
+        Giả thiết & $N \land \neg K \implies L$ \\
+        & $L \implies \neg B \lor D$ \\
+        & $\neg Q \land \neg B$ \\
+        \headerDivider
+        Kết luận & $N$
+    \end{tabular}.
+\end{center}
+
+Không có bất cứ lí do nào để chứng minh này có thể hợp lí được cả, bởi vì nếu chúng ta đặt giá trị chân lí như sau:
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|c|cccccc|}
+        \hline
+		$B$ & $D$ & $K$ & $L$ & $N$ & $Q$
+    \end{tabular}
+\end{center}
+
+\section{Mâu thuẫn và chứng minh bằng phản chứng minh}

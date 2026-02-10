@@ -30,14 +30,17 @@ def evaluate_postfix_logic_expression_with_steps(postfix_expression, variables_v
             add_to_stack(_id, variables_values.get(clean_token, False))
     return stack[0] if stack else False, processing_values
 
-def write_logic_table_latex(file, expression):
+def write_logic_table_latex(file, expression, variables=None):
     with open(file, "w", encoding="utf-8") as f:
         write_line(f, r"\begin{table}[H]")
         write_line(f, r"\centering", 1)
         write_line(f, r"\caption{Bảng giá trị chân lí của $" + convert_expression_to_latex(expression) + r"$}", 1)
 
         postfix_expression = convert_expression_to_postfix(expression)
-        variables = sorted(list(set([token for _id, token in postfix_expression if token not in list(operations.keys()) + ["(", ")"]])))
+        if not variables:
+            variables = sorted(list(set([token for _id, token in postfix_expression if token not in list(operations.keys()) + ["(", ")"]])))
+        else:
+            variables = sorted(list(set(variables.strip())))
         column_format = "|" + "|".join("c" for _ in variables) + "|" + "c" * len(postfix_expression) + "|"
         write_line(f, r"\begin{tabular}{" + column_format + "}", 1)
         write_line(f, r"\hline", 2)
