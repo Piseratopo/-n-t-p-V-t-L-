@@ -16,7 +16,7 @@ Quá trình lập luận lô-gích được kiểm soát bởi những bộ quy 
 
 \ % Lùi đầu dòng
 
-Từ các điều kiện, chúng ta lại đặt câu hỏi, thế nào là chứng minh? Để tránh định nghĩa lặp ``chứng minh là một quá trình lập luận'', tác giả sẽ đưa ra một định nghĩa đơn giản như sau: Nếu như cho biết $W$, mệnh đề $X$ \defText{chứng minh} mệnh đề $Y$ khi và chỉ khi $X \implies Y$ (dưới điều kiện $W$)\footnote{Từ giờ trở đi, mỗi mệnh đề được đưa ra dưới dạng kí hiệu sẽ được mặc định là đúng.}.
+Từ các điều kiện, chúng ta lại đặt câu hỏi, thế nào là chứng minh? Để tránh định nghĩa lặp ``chứng minh là một quá trình lập luận'', tác giả sẽ đưa ra một định nghĩa đơn giản như sau: Nếu như cho biết $W$, mệnh đề $X$ \defText{chứng minh} mệnh đề $Y$ khi và chỉ khi $\defMath{X \implies Y}$ (dưới điều kiện $W$)\footnote{Từ giờ trở đi, mỗi mệnh đề được đưa ra sẽ được mặc định là đúng.}.
 
 Nếu có nhiều mệnh đề cho giả thiết $X_1$, $X_2$,\dots, $X_n$, thì khi này mệnh đề giả thiết tổng là hợp của tất cả các giả thiết con
 $$X = X_1 \land X_2 \land \cdots \land X_n = \bigwedge_{i=1}^{n} X_i.$$
@@ -28,7 +28,7 @@ Một cách tương tự, chúng ta cũng có thể định nghĩa điều kiệ
 
 Do chúng ta chưa xây dựng hệ thống số cho nên việc kí hiệu bằng dấu $\cdots$ hay dấu $\bigwedge$ lớn sẽ là hơi lạm dụng. Do đó, với trường hợp xác định được số lượng các mệnh đề, nên viết đầy đủ và tường minh toàn bộ biểu thức thay vì viết tắt.
 
-Ngoài ra, bạn đọc cũng có thể đã để ý rằng tác giả tách một phần gọi là ``điều kiện'' mặc dù hoàn toàn có thể đưa điều kiện vào trong phần giả thiết. Sở dĩ tác giả làm như vậy là do thực tế, khi chứng minh phần lớn các bài toán, chúng ta cũng sẽ ngầm hiểu một số ``điều kiện'' --- định nghĩa, tính chất, hay kết quả đã có. Ví dụ, kể đến về một định lí quen thuộc:
+Ngoài ra, bạn đọc cũng có thể đã để ý rằng tác giả tách một phần gọi là ``điều kiện'' mặc dù hoàn toàn có thể đưa điều kiện vào trong phần giả thiết. Sở dĩ tác giả làm như vậy là do thực tế, khi chứng minh phần lớn các bài toán, chúng ta cũng sẽ ngầm hiểu một số điều kiện nhất định --- định nghĩa, tính chất, hay kết quả đã có. Ví dụ, kể đến về một định lí quen thuộc:
 \begin{center}
     ``Nếu $x$ là một số thực thì $x^2 \geq 0$.''
 \end{center} 
@@ -36,7 +36,7 @@ Một học sinh khá của cấp trung học cơ sở hoàn toàn có thể hi�
 
 Xét một ví dụ cơ bản cho việc chứng minh, giả sử có giả thiết như sau:
 \begin{enumerate}
-    \item ``Nếu trời mưa thì sân vận động sẽ ướt.''.
+    \item ``Nếu trời mưa thì sân vận động sẽ ướt.'';
     \item ``Trời đang mưa.''
 \end{enumerate}
 và chứng minh kết luận ``Sân vận động thì ướt''. Để thực hiện chứng minh, chuyển sang dưới dạng kí hiệu
@@ -72,7 +72,7 @@ Mệnh đề mà chúng ta cần khẳng định đúng để hoàn thành chứ
 \end{table}
 Vậy, từ giả thiết, chúng ta có kết được kết luận. Điều phải chứng minh.
 
-Từ định nghĩa chứng minh, chúng ta cũng có định nghĩa của \defText{không chứng minh}: $X$ không chứng minh $Y$ nếu tồn tại giá trị chân lí của $X$ và $Y$ để $\overline{X \implies Y}$.
+Từ định nghĩa chứng minh, chúng ta cũng có định nghĩa của \defText{không chứng minh}: $X$ không chứng minh $Y$ nếu tồn tại giá trị chân lí của $X$ và $Y$ để $X \implies Y$ sai.
 
 Ví dụ, một phép ngụy biện thường xuyên được sử dụng là ngụy biện khẳng định hệ quả:
 \begin{center}
@@ -100,6 +100,36 @@ Sử dụng bảng giá trị chân lí, chúng ta có ngay điều không chứ
 	\end{tabular}
 \end{table}
 
+\exercise Cho $X$ và $Y$ là hai mệnh đề thỏa mãn $X \iff Y$. Chứng minh rằng $X$ chứng minh $Y$ và $Y$ chứng minh $X$.
+
+\solution
+
+Viết lại đề bài dưới dạng giả thiết -- kết luận:
+\begin{center}
+    \begin{tabular}{r|l}
+        Giả thiết & $X \iff Y$ \\
+        \headerDivider
+        Kết luận & $X \implies Y \land Y \implies X$
+    \end{tabular}
+\end{center}
+
+Sử dụng bảng giá trị chân lí:
+\begin{table}[H]
+	\centering
+	\caption{Bảng giá trị chân lí của $( X \iff Y ) \implies ( X \implies Y ) \land ( Y \implies X )$}
+	\begin{tabular}{|c|c|ccccccccccc|}
+		\hline
+		$X$ & $Y$ & $(X$ & $\iff$ & $Y)$ & $\implies$ & $(X$ & $\implies$ & $Y)$ & $\land$ & $(Y$ & $\implies$ & $X)$ \\
+		\headerDivider
+		Đ & Đ & Đ & Đ & Đ & \emphcolor{Đ} & Đ & Đ & Đ & Đ & Đ & Đ & Đ \\
+		Đ & S & Đ & S & S & \emphcolor{Đ} & Đ & S & S & S & S & Đ & Đ \\
+		S & Đ & S & S & Đ & \emphcolor{Đ} & S & Đ & Đ & S & Đ & S & S \\
+		S & S & S & Đ & S & \emphcolor{Đ} & S & Đ & S & Đ & S & Đ & S \\
+		\hline
+	\end{tabular},
+\end{table}
+chúng ta có điều phải chứng minh.
+
 \subsection{Quy tắc thay thế trong chứng minh lô-gích}
 
 \ % Lùi đầu dòng
@@ -115,9 +145,7 @@ Nếu như mỗi lần chứng minh, chúng ta phải lôi bảng giá trị ch�
     \textcolor{colorEmphasisGreen}{Quy tắc thứ ba}: Cho $\chungF$ có mệnh đề $A$ làm mệnh đề con. Nếu $\chungF$ đúng không phụ thuộc vào giá trị chân lí của $A$ thì mệnh đề $\chungF$ vẫn đúng khi thay đồng thời tất cả các mệnh đề $A$ trong $\chungF$ bằng mệnh đề $B$ bất kì.
 \end{itemize}
 
-Một lần nữa, do giới hạn của cấu trúc lô-gích hiện tại, chúng ta chưa thể có định nghĩa chặt chẽ cho và chứng minh các quy tắc trên đúng với tất cả các trường hợp. Cho dù là như vậy, vẫn có thể áp dụng chúng trên những trường hợp cụ thể, với ngầm hiểu rằng luôn có thể sử dụng bảng giá trị chân lí làm dẫn chứng.
-
-Để thuận tiện cho việc lập luận, sẽ sử dụng các kết quả đã có của bài \ref{ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:tc_lo_gich}.
+Để thuận tiện cho việc lập luận, sẽ sử dụng các kết quả đã có của bài \ref{ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:tc_lo_gich} ở trang \pageref{ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:tc_lo_gich}.
 
 \exercise Chứng minh rằng $\overline{\neg A \lor B} \lor A \land \neg C \iff A \land \overline{B \land C}$ với $A$, $B$ và $C$ là các mệnh đề bất kì.
 
@@ -528,12 +556,80 @@ Kí hiệu hóa giả thiết và kết luận:
     \end{tabular}.
 \end{center}
 
-Không có bất cứ lí do nào để chứng minh này có thể hợp lí được cả, bởi vì nếu chúng ta đặt giá trị chân lí như sau:
+Không có bất cứ lí do nào để chứng minh này có thể hợp lí được cả, bởi vì nếu chúng ta đặt giá trị chân lí của tất cả các mệnh đề con là sai:
 \begin{center}
-    \begin{tabular}{|c|c|c|c|c|c|cccccc|}
-        \hline
-		$B$ & $D$ & $K$ & $L$ & $N$ & $Q$
+    \begin{tabular}{l}
+        \begin{tabular}{|c|c|c|c|c|c|cccccc|}
+            \hline
+            $B$ & $D$ & $K$ & $L$ & $N$ & $Q$ & $N$ & $\land$ & $\neg$ & $K$ & $\implies$ & $L$ \\
+            \headerDivider
+            S & S & S & S & S & S & S & S & Đ & S & Đ & S \\
+            \hline
+        \end{tabular} \\
+        \begin{tabular}{|c|c|c|c|c|c|cccccc|}
+            \hline
+            $B$ & $D$ & $K$ & $L$ & $N$ & $Q$ & $L$ & $\implies$ & $\neg$ & $B$ & $\lor$ & $D$ \\
+            \headerDivider
+            S & S & S & S & S & S & S & Đ & Đ & S & S & S \\
+            \hline
+        \end{tabular} \\
+        \begin{tabular}{|c|c|c|c|c|c|ccccc|}
+            \hline
+            $B$ & $D$ & $K$ & $L$ & $N$ & $Q$ & $\neg$ & $Q$ & $\land$ & $\neg$ & $B$ \\
+            \headerDivider
+            S & S & S & S & S & S & Đ & S & Đ & Đ & S \\
+            \hline
+        \end{tabular} \\
+        \begin{tabular}{|c|c|c|c|c|c|ccccccc|}
+            \hline
+            $B$ & $D$ & $K$ & $L$ & $N$ & $Q$ & $(N \land \neg K \implies L)$ & $\land$ & $(L \implies \neg B \lor D)$ & $\land$ & $(\neg Q \land \neg B)$ & $\implies$ & $N$ \\
+            \headerDivider
+            S & S & S & S & S & S & Đ & Đ & Đ & Đ & Đ & \emphcolor{S} & S \\
+            \hline
+        \end{tabular}
     \end{tabular}
 \end{center}
+thì chúng ta có thể thấy rằng kết luận $N$ không được suy ra từ giả thuyết.
 
-\section{Mâu thuẫn và chứng minh bằng phản chứng minh}
+Vậy, giả thiết không chứng minh được kết luận.
+
+\subsection{Mâu thuẫn}
+
+\ % Lùi đầu dòng
+
+Từ một số giả thiết cho trước, chúng ta có thể chứng minh các mệnh đề khác, nhưng không có nghĩa là nó thực sự ``đúng''. Hãy tưởng tượng rằng bạn đọc đang đi xem ảo thuật. Ảo thuật gia dẫn dắt bạn đọc thông qua một câu chuyện của một quả bóng mà trong đó có những hành động được miêu tả rất chi tiết. Chiếc cốc úp vào quả bóng, di chuyển trên bàn trực tiếp dưới con mắt của bạn đọc. Bạn đọc nửa tin vào lời của ảo thuật gia, nửa tin vào thị giác của mình rằng quả bóng vẫn ở dưới cái cốc, nhưng cuối cùng, kết quả là quả bóng lại biến mất mà lại xuất hiện trong tay của nhà ảo thuật gia. Đúng là kết luận bạn đọc đưa ra --- quả bóng nằm dưới cái cốc --- là hợp lí từ câu chuyện của nhà ảo thuật gia, nhưng nó chỉ ``đúng'' nếu như ảo thuật gia thực hiện hành động thật như lời nói mà không có sự dụng kĩ thuật tay. Nói cách khác, các giả thiết mà nhà ảo thuật gia đưa ra chứng minh được kết luận của bạn đọc, nhưng kết luận chỉ thật sự hợp lí nếu như giả thiết là không có mâu thuẫn.
+
+\defText{Mâu thuẫn} được định nghĩa là khi giả thiết không thể nhận giá trị chân lí đúng. Viết dưới dạng kí hiệu, $X$ bị mâu thuẫn nếu $X \implies \mathbf{M}$ với $M$ là một mệnh đề sai nào đó. Chúng ta không bao giờ muốn làm việc với giả thiết có mâu thuẫn, do nó có thể chứng minh mọi thứ. Thật vậy, gọi $Y$ là mệnh đề bất kì. Do $X$ luôn sai nên $X \implies Y$ luôn đúng do định nghĩa của phép kéo theo. Vậy $X$ chứng minh $Y$.
+
+``Thế không phải mong ước của con người là khám phá mọi thứ, chứng minh mọi thứ hay sao?'' --- Bạn đọc có thể hỏi. Đúng là như vậy, nhưng sẽ khá vô dụng nếu chúng ta chứng minh được một mệnh đề và cả phủ định của nó nữa. Để ý rằng lập luận trong chứng minh trên không phụ thuộc vào $Y$. Do đó, chúng ta hoàn toàn có thể có $X \implies \neg Y$. Điều này không có nghĩa $Y \land \neg Y$, chỉ là khẳng định rằng phép chứng minh là không có giá trị nếu như điều kiện đầu vào đã sai.
+
+Để chứng minh giả thiết $X$ bị mâu thuẫn, chúng ta chứng minh $X \implies \mathbf{M}$. Để chứng minh giả thiết $X$ không có mâu thuẫn, tương tự như chứng minh thông thường, chúng ta chỉ ra một trường hợp để $X \implies \mathbf{M}$ sai.
+
+\exercise Cho các giả thiết sau. Xét xem những giả thiết đó có bị mâu thuẫn hay không.
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item $P \lor Q$, $\neg P$, $\neg Q$;
+        \item $P \uparrow R$, $P$, $Q \land R$;
+        \item $P \implies Q \impliedby R$, $\neg P$, $\neg Q$, $\neg R$;
+        \item $P \oplus Q$, $P \odot Q$;
+        \item $P \oplus Q$, $Q \odot R$, $R \oplus P$;
+        \item $P_1 \oplus Q_1$, $Q_1 \odot P_2$, $P_2 \oplus Q_2$, $Q_2 \odot P_1$;
+        \item $R \impliedby (Q \impliedby P)$, $R \downarrow S$, $\neg Q$;
+        \item $A \odot B$, $B \oplus C$, $C \odot D$, $D \impliedby A$.
+    \end{enumerate}
+\end{multicols}
+
+\solution
+
+Với toàn bộ các phần, gọi $\mathbf{M}$ là mệnh đề sai nào đó.
+
+\setcounter{subexercise}{1}
+\arabic{subexercise}. Thực hiện biến đổi lên giả thiết:
+\begin{align*}
+    (P \lor Q) \land \neg P \land \neg Q &\iff (P \land \neg P \lor Q \land \neg P) \land \neg Q \equationexplanation{tính chất phân phối} \\
+    (P \lor Q) \land \neg P \land \neg Q &\iff (\mathbf{M} \lor \neg P \land Q) \land \neg Q \equationexplanation{tính không mâu thuẫn và tính giao hoán} \\
+    (P \lor Q) \land \neg P \land \neg Q &\iff (\neg P \land Q) \land \neg Q \equationexplanation{tính đồng nhất với phép tuyển} \\
+    (P \lor Q) \land \neg P \land \neg Q &\iff \neg P \land (Q \land \neg Q) \equationexplanation{tính chất kết hợp} \\
+    (P \lor Q) \land \neg P \land \neg Q &\iff \neg P \land \mathbf{M} \equationexplanation{tính chất không mâu thuẫn} \\
+    (P \lor Q) \land \neg P \land \neg Q &\iff \mathbf{M} \equationexplanation{tính chất thống trị}
+\end{align*}

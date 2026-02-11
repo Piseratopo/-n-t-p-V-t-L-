@@ -3,5 +3,5 @@ from util_latex_general import parse_expression_with_parentheses
 
 latex_output_file = "output.tex"
 
-write_logic_table_latex(latex_output_file, r"(N & ~K => L) & (L => ~B \/ D) & (~Q & ~R) => N", "NKLBDQ")
+write_logic_table_latex(latex_output_file, r"(X <=> Y) => (X => Y) & (Y => X)")
 
