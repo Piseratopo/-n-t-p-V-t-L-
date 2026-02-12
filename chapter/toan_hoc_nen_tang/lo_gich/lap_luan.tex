@@ -109,8 +109,8 @@ Viết lại đề bài dưới dạng giả thiết -- kết luận:
     \begin{tabular}{r|l}
         Giả thiết & $X \iff Y$ \\
         \headerDivider
-        Kết luận & $X \implies Y \land Y \implies X$
-    \end{tabular}
+        Kết luận & $(X \implies Y) \land (Y \implies X)$
+    \end{tabular}.
 \end{center}
 
 Sử dụng bảng giá trị chân lí:
@@ -126,7 +126,17 @@ Sử dụng bảng giá trị chân lí:
 		S & Đ & S & S & Đ & \emphcolor{Đ} & S & Đ & Đ & S & Đ & S & S \\
 		S & S & S & Đ & S & \emphcolor{Đ} & S & Đ & S & Đ & S & Đ & S \\
 		\hline
-	\end{tabular},
+	\end{tabular}
+        \begin{tabular}{|c|c!{\vrule width 1.5pt}c|}
+        \hline
+        $X$ & $Y$ & $( X \implies Y ) \land (Y \implies X)$ \\
+        \headerDivider
+        Đ & Đ & \multirow{4}{*}{\huge\vspace{-12pt}Đ} \\
+        Đ & S & \\
+        S & Đ & \\
+        S & S & \\
+        \hline
+    \end{tabular}
 \end{table}
 chúng ta có điều phải chứng minh.
 
@@ -613,8 +623,6 @@ Từ một số giả thiết cho trước, chúng ta có thể chứng minh cá
         \item $P \implies Q \impliedby R$, $\neg P$, $\neg Q$, $\neg R$;
         \item $P \oplus Q$, $P \odot Q$;
         \item $P \oplus Q$, $Q \odot R$, $R \oplus P$;
-        \item $P_1 \oplus Q_1$, $Q_1 \odot P_2$, $P_2 \oplus Q_2$, $Q_2 \odot P_1$;
-        \item $R \impliedby (Q \impliedby P)$, $R \downarrow S$, $\neg Q$;
         \item $A \odot B$, $B \oplus C$, $C \odot D$, $D \impliedby A$.
     \end{enumerate}
 \end{multicols}
@@ -626,10 +634,115 @@ Với toàn bộ các phần, gọi $\mathbf{M}$ là mệnh đề sai nào đó.
 \setcounter{subexercise}{1}
 \arabic{subexercise}. Thực hiện biến đổi lên giả thiết:
 \begin{align*}
-    (P \lor Q) \land \neg P \land \neg Q &\iff (P \land \neg P \lor Q \land \neg P) \land \neg Q \equationexplanation{tính chất phân phối} \\
-    (P \lor Q) \land \neg P \land \neg Q &\iff (\mathbf{M} \lor \neg P \land Q) \land \neg Q \equationexplanation{tính không mâu thuẫn và tính giao hoán} \\
-    (P \lor Q) \land \neg P \land \neg Q &\iff (\neg P \land Q) \land \neg Q \equationexplanation{tính đồng nhất với phép tuyển} \\
-    (P \lor Q) \land \neg P \land \neg Q &\iff \neg P \land (Q \land \neg Q) \equationexplanation{tính chất kết hợp} \\
-    (P \lor Q) \land \neg P \land \neg Q &\iff \neg P \land \mathbf{M} \equationexplanation{tính chất không mâu thuẫn} \\
-    (P \lor Q) \land \neg P \land \neg Q &\iff \mathbf{M} \equationexplanation{tính chất thống trị}
+    (P \lor Q) \land \neg P \land \neg Q &\iff (P \land \neg P \lor Q \land \neg P) \land \neg Q \equationexplanation{tính chất phân phối}; \\
+    (P \lor Q) \land \neg P \land \neg Q &\iff (\mathbf{M} \lor \neg P \land Q) \land \neg Q \equationexplanation{tính không mâu thuẫn và tính giao hoán}; \\
+    (P \lor Q) \land \neg P \land \neg Q &\iff (\neg P \land Q) \land \neg Q \equationexplanation{tính đồng nhất với phép tuyển}; \\
+    (P \lor Q) \land \neg P \land \neg Q &\iff \neg P \land (Q \land \neg Q) \equationexplanation{tính chất kết hợp}; \\
+    (P \lor Q) \land \neg P \land \neg Q &\iff \neg P \land \mathbf{M} \equationexplanation{tính chất không mâu thuẫn}; \\
+    (P \lor Q) \land \neg P \land \neg Q &\iff \mathbf{M} \equationexplanation{tính chất thống trị}.
 \end{align*}
+
+Có $(P \lor Q) \land \neg P \land \neg Q$ chứng minh một mệnh đề sai. Do đó, giả thiết có mâu thuẫn.
+
+\stepcounter{subexercise}
+\arabic{subexercise}.
+\begin{table}[H]
+	\centering
+	\caption{Bảng giá trị chân lí của $( P \uparrow R ) \land P \land ( Q \land R )$}
+	\begin{tabular}{|c|c|c|ccccccccc!{\vrule width 1.5pt}c|}
+		\hline
+		$P$ & $Q$ & $R$ & $(P$ & $\uparrow$ & $R)$ & $\land$ & $P$ & $\land$ & $(Q$ & $\land$ & $R)$ & $( P \uparrow R ) \land P \land ( Q \land R )$ \\
+		\headerDivider
+		Đ & Đ & Đ & Đ & S & Đ & S & Đ & \emphcolor{S} & Đ & Đ & Đ & \multirow{8}{*}{\huge\vspace{-24pt}S}\\
+		Đ & Đ & S & Đ & Đ & S & Đ & Đ & \emphcolor{S} & Đ & S & S & \\
+		Đ & S & Đ & Đ & S & Đ & S & Đ & \emphcolor{S} & S & S & Đ & \\
+		Đ & S & S & Đ & Đ & S & Đ & Đ & \emphcolor{S} & S & S & S & \\
+		S & Đ & Đ & S & Đ & Đ & S & S & \emphcolor{S} & Đ & Đ & Đ & \\
+		S & Đ & S & S & Đ & S & S & S & \emphcolor{S} & Đ & S & S & \\
+		S & S & Đ & S & Đ & Đ & S & S & \emphcolor{S} & S & S & Đ & \\
+		S & S & S & S & Đ & S & S & S & \emphcolor{S} & S & S & S & \\
+		\hline
+	\end{tabular}
+\end{table}
+
+Với mọi trường hợp, giả thiết đều có giá trị chân lí sai, cho nên giả thiết bị mâu thuẫn.
+
+Có thể sử dụng lập luận rằng để giả thiết $P \uparrow R$ đúng thì không thể $P$ và $R$ cùng đúng, nhưng giả thiết thứ hai cho $P$, và giả thiết thứ ba --- $Q \land R$ --- hiển nhiên chứng minh $R$. Chúng ta thấy được điều mâu thuẫn.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Giả thiết là không mâu thuẫn, dưới trường hợp sau:
+\begin{center}
+    \begin{tabular}{|c|c|c|cccccccccccccc|}
+		\hline
+		$P$ & $Q$ & $R$ & $(P$ & $\implies$ & $Q$ & $\impliedby$ & $R)$ & $\land$ & $\neg$ & $P$ & $\land$ & $\neg$ & $Q$ & $\land$ & $\neg$ & $R$ \\
+		\headerDivider
+		S & S & S & S & Đ & S & Đ & S & Đ & Đ & S & Đ & Đ & S & \emphcolor{Đ} & Đ & S \\
+		\hline
+	\end{tabular}.
+\end{center}
+Đây cũng là trường hợp duy nhất mà giả thiết không có mâu thuẫn.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Để $P \oplus Q$ đúng thì $P$ và $Q$ phải không cùng giá trị chân l, nhưng để $P \odot Q$ đúng thì $P$ và $Q$ phải giống nhau về giá trị chân lí. Vậy, mâu thuẫn.
+
+Lập luận được kiểm tra lại bằng bảng giá trị chân lí \ref{tab:toan_hoc_nen_tang:lo_gich:lap_luan:xor_va_nxor}.
+
+\begin{table}[H]
+	\centering
+	\caption{Bảng giá trị chân lí của $( P \oplus Q ) \land ( P \odot Q )$}
+    \label{tab:toan_hoc_nen_tang:lo_gich:lap_luan:xor_va_nxor}
+	\begin{tabular}{|c|c|ccccccc!{\vrule width 1.5pt}c|}
+		\hline
+		$P$ & $Q$ & $(P$ & $\oplus$ & $Q)$ & $\land$ & $(P$ & $\odot$ & $Q)$ & $( P \oplus Q ) \land ( P \odot Q )$\\
+		\headerDivider
+		Đ & Đ & Đ & S & Đ & \emphcolor{S} & Đ & Đ & Đ &\multirow{4}{*}{\huge\vspace{-12pt}S}\\
+		Đ & S & Đ & Đ & S & \emphcolor{S} & Đ & S & S & \\
+		S & Đ & S & Đ & Đ & \emphcolor{S} & S & S & Đ & \\
+		S & S & S & S & S & \emphcolor{S} & S & Đ & S & \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Giả thiết là không có mâu thuẫn. Ví dụ:
+\begin{center}
+    \begin{tabular}{|c|c|c|ccccccccccc|}
+		\hline
+		$P$ & $Q$ & $R$ & $(P$ & $\oplus$ & $Q)$ & $\land$ & $(Q$ & $\odot$ & $R)$ & $\land$ & $(R$ & $\oplus$ & $P)$ \\
+		\headerDivider
+		Đ & S & S & Đ & Đ & S & Đ & S & Đ & S & \emphcolor{Đ} & S & Đ & Đ \\
+		\hline
+	\end{tabular}.
+\end{center}
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Bảng \ref{tab:toan_hoc_nen_tang:lo_gich:lap_luan:xor_nxor_tuong_duong_hon_hop} cho thấy rằng giả thiết luôn mâu thuẫn.
+\begin{table}[H]
+	\centering
+	\caption{Bảng giá trị chân lí của $( A \odot B ) \land ( B \oplus C ) \land ( C \odot D ) \land ( D \iff A )$}
+    \label{tab:toan_hoc_nen_tang:lo_gich:lap_luan:xor_nxor_tuong_duong_hon_hop}
+	\begin{tabular}{|c|c|c|c|ccccccccccccccc|}
+		\hline
+		$A$ & $B$ & $C$ & $D$ & $(A$ & $\odot$ & $B)$ & $\land$ & $(B$ & $\oplus$ & $C)$ & $\land$ & $(C$ & $\odot$ & $D)$ & $\land$ & $(D$ & $\iff$ & $A)$ \\
+		\headerDivider
+		Đ & Đ & Đ & Đ & Đ & Đ & Đ & S & Đ & S & Đ & S & Đ & Đ & Đ & \emphcolor{S} & Đ & Đ & Đ \\
+		Đ & Đ & Đ & S & Đ & Đ & Đ & S & Đ & S & Đ & S & Đ & S & S & \emphcolor{S} & S & S & Đ \\
+		Đ & Đ & S & Đ & Đ & Đ & Đ & Đ & Đ & Đ & S & S & S & S & Đ & \emphcolor{S} & Đ & Đ & Đ \\
+		Đ & Đ & S & S & Đ & Đ & Đ & Đ & Đ & Đ & S & Đ & S & Đ & S & \emphcolor{S} & S & S & Đ \\
+		Đ & S & Đ & Đ & Đ & S & S & S & S & Đ & Đ & S & Đ & Đ & Đ & \emphcolor{S} & Đ & Đ & Đ \\
+		Đ & S & Đ & S & Đ & S & S & S & S & Đ & Đ & S & Đ & S & S & \emphcolor{S} & S & S & Đ \\
+		Đ & S & S & Đ & Đ & S & S & S & S & S & S & S & S & S & Đ & \emphcolor{S} & Đ & Đ & Đ \\
+		Đ & S & S & S & Đ & S & S & S & S & S & S & S & S & Đ & S & \emphcolor{S} & S & S & Đ \\
+		S & Đ & Đ & Đ & S & S & Đ & S & Đ & S & Đ & S & Đ & Đ & Đ & \emphcolor{S} & Đ & S & S \\
+		S & Đ & Đ & S & S & S & Đ & S & Đ & S & Đ & S & Đ & S & S & \emphcolor{S} & S & Đ & S \\
+		S & Đ & S & Đ & S & S & Đ & S & Đ & Đ & S & S & S & S & Đ & \emphcolor{S} & Đ & S & S \\
+		S & Đ & S & S & S & S & Đ & S & Đ & Đ & S & S & S & Đ & S & \emphcolor{S} & S & Đ & S \\
+		S & S & Đ & Đ & S & Đ & S & Đ & S & Đ & Đ & Đ & Đ & Đ & Đ & \emphcolor{S} & Đ & S & S \\
+		S & S & Đ & S & S & Đ & S & Đ & S & Đ & Đ & S & Đ & S & S & \emphcolor{S} & S & Đ & S \\
+		S & S & S & Đ & S & Đ & S & S & S & S & S & S & S & S & Đ & \emphcolor{S} & Đ & S & S \\
+		S & S & S & S & S & Đ & S & S & S & S & S & S & S & Đ & S & \emphcolor{S} & S & Đ & S \\
+		\hline
+	\end{tabular}
+\end{table}
+
+Để có thể sử dụng lập luận thông thường, có thể thấy là để $A \odot B$ và $C \odot D$ đúng thì mỗi mệnh đề trong cặp $A$ và $B$, $C$ và $D$ phải có giá trị chân lí giống nhau. Thêm vào đó, $B \oplus C$ dẫn đến $B$ và $C$ khác giá trị chân lí. Do vậy $A$ và $D$ khác giá trị chân lí. Tuy nhiên $D \iff A$ khi và chỉ khi $D$ và $A$ cùng đúng hoặc cùng sai, dẫn đến mâu thuẫn.
