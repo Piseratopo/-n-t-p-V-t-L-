@@ -2,14 +2,14 @@
 
 \ % Lùi đầu dòng
 
-\subsection{Điều kiện cho lập luận lô-gích}
+\subsection{Yêu cầu cho lập luận lô-gích}
 
 \ % Lùi đầu dòng
 
-Quá trình lập luận lô-gích được kiểm soát bởi những bộ quy luật hết sức đơn giản, đơn giản tới mức mà cả tác giả và bạn đọc đều có thể và đã từng làm theo. Có rất nhiều yêu cầu về mặt kĩ thuật cần phải quan tâm khi xây dựng một bộ quy luật lập luận mà khuôn khổ cuốn sách này không có khả năng đề cập. Tác giả sẽ chỉ đưa ra các điều kiện cơ bản nhưng quan trọng nhất khi lập luận lô-gích diễn dịch:
+Quá trình lập luận lô-gích được kiểm soát bởi những bộ quy luật hết sức đơn giản, đơn giản tới mức mà cả tác giả và bạn đọc đều có thể và đã từng làm theo. Mặc dù vậy, có rất nhiều yêu cầu về mặt kĩ thuật cần phải quan tâm khi xây dựng một bộ quy luật lập luận mà khuôn khổ cuốn sách này không có khả năng đề cập. Tác giả sẽ chỉ đưa ra các yêu cầu cơ bản nhưng quan trọng nhất khi lập luận lô-gích diễn dịch:
 \begin{enumerate}
-    \item Điều kiện về \defText{tính ổn định}: Bộ quy luật lập luận không thể vừa chưng minh một mệnh đề và đồng thời là phủ định của nó. Hiểu theo cách khác, bộ quy luật không thể chứng minh đồng thời $P$ và $\neg P$ cùng đúng;
-    \item Điều kiện về \defText{tính hoàn thiện}: Bộ quy luật lập luận cần phải cho phép chứng minh \emph{tất cả} các kết luận có thể từ một nhóm các giả thiết nhất định.
+    \item Yêu cầu về \defText{tính ổn định}: Bộ quy luật lập luận không thể vừa chứng minh một mệnh đề và đồng thời là phủ định của nó. Hiểu theo cách khác, bộ quy luật không thể chứng minh đồng thời $P$ và $\neg P$ cùng đúng;
+    \item Yêu cầu về \defText{tính hoàn thiện}: Bộ quy luật lập luận cần phải cho phép chứng minh \emph{tất cả} các kết luận có thể từ một nhóm các giả thiết nhất định.
 \end{enumerate}
 
 \subsection{Định nghĩa chứng minh}
@@ -53,12 +53,12 @@ Qua đó, chúng ta có thể viết lại lập luận này dưới dạng như
         Kết luận & $Q$
     \end{tabular}.
 \end{center}
-Mệnh đề mà chúng ta cần khẳng định đúng để hoàn thành chứng minh là $(P \implies Q) \land P \implies Q$. Thực vậy, có bảng \ref{tab:toan_hoc_nen_tang:giai_tich_menh_de:lap_luan:vd_chung_minh}.
+Mệnh đề mà chúng ta cần khẳng định đúng để hoàn thành chứng minh là $(P \implies Q) \land P \implies Q$. Thực vậy, có bảng \ref{tab:nen_tang_lo_gich:giai_tich_menh_de:lap_luan:vd_chung_minh}.
     
 \begin{table}[H]
     \centering
     \caption{Bảng giá trị chân lí của $( P \implies Q ) \land P \implies Q$}
-    \label{tab:toan_hoc_nen_tang:giai_tich_menh_de:lap_luan:vd_chung_minh}
+    \label{tab:nen_tang_lo_gich:giai_tich_menh_de:lap_luan:vd_chung_minh}
     \begin{tabular}{|c|c|ccccccc|}
         \hline
         $P$ & $Q$ & $(P$ & $\implies$ & $Q)$ & $\land$ & $P$ & $\implies$ & $Q$ \\
@@ -70,7 +70,7 @@ Mệnh đề mà chúng ta cần khẳng định đúng để hoàn thành chứ
         \hline
     \end{tabular}
 \end{table}
-Vậy, từ giả thiết, chúng ta có kết được kết luận. Điều phải chứng minh.
+Vậy, từ giả thiết, chúng ta có được kết luận. Điều phải chứng minh.
 
 Từ định nghĩa chứng minh, chúng ta cũng có định nghĩa của \defText{không chứng minh}: $X$ không chứng minh $Y$ nếu tồn tại giá trị chân lí của $X$ và $Y$ để $X \implies Y$ sai.
 
@@ -155,7 +155,7 @@ Nếu như mỗi lần chứng minh, chúng ta phải lôi bảng giá trị ch�
     \textcolor{colorEmphasisGreen}{Quy tắc thứ ba}: Cho $\chungF$ có mệnh đề $A$ làm mệnh đề con. Nếu $\chungF$ đúng không phụ thuộc vào giá trị chân lí của $A$ thì mệnh đề $\chungF$ vẫn đúng khi thay đồng thời tất cả các mệnh đề $A$ trong $\chungF$ bằng mệnh đề $B$ bất kì.
 \end{itemize}
 
-Để thuận tiện cho việc lập luận, sẽ sử dụng các kết quả đã có của bài \ref{ex:toan_hoc_nen_tang:giai_tich_menh_de:menh_de_phuc_hop:tc_giai_tich_menh_de} ở trang \pageref{ex:toan_hoc_nen_tang:giai_tich_menh_de:menh_de_phuc_hop:tc_giai_tich_menh_de}.
+Để thuận tiện cho việc lập luận, sẽ sử dụng các kết quả đã có của bài \ref{ex:nen_tang_lo_gich:giai_tich_menh_de:menh_de_phuc_hop:tc_giai_tich_menh_de} ở trang \pageref{ex:nen_tang_lo_gich:giai_tich_menh_de:menh_de_phuc_hop:tc_giai_tich_menh_de}.
 
 \exercise Chứng minh rằng $\overline{\neg A \lor B} \lor A \land \neg C \iff A \land \overline{B \land C}$ với $A$, $B$ và $C$ là các mệnh đề bất kì.
 
@@ -266,7 +266,7 @@ Do vậy, $$(L \lor A) \land (S \implies \neg L) \iff (\neg A \implies \neg S).$
     \item $C$: ``Đường truyền mạng ổn định.'';
     \item $D$: ``Người dùng có thể truy cập được dữ liệu.''.
 \end{itemize}
-``Mảy chủ gặp sự cố.'' tương đương với ``Máy chủ đang không hoạt động bình thường.'', hay $\neg N$.
+``Máy chủ gặp sự cố.'' tương đương với ``Máy chủ đang không hoạt động bình thường.'', hay $\neg N$.
 
 Viết lại hệ thống giả thiết -- kết luận dưới dạng lô-gích:
 \begin{center}
@@ -278,7 +278,7 @@ Viết lại hệ thống giả thiết -- kết luận dưới dạng lô-gích
     \end{tabular}.
 \end{center}
 
-Lập luận này là không sắc đáng, do tồn tại bộ giá trị chân lí cho $C$, $D$, và $N$ khiến cho lập luận sai. Cụ thể, sau khi giải giá trị chân lí của mệnh đề $(N \land C \implies D) \land \neg D \implies \neg N$ với mệnh đề $C$ và $D$ sai và $N$ là mệnh đề đúng ---
+Lập luận này là không xác đáng, do tồn tại bộ giá trị chân lí cho $C$, $D$, và $N$ khiến cho lập luận sai. Cụ thể, sau khi giải giá trị chân lí của mệnh đề $(N \land C \implies D) \land \neg D \implies \neg N$ với mệnh đề $C$ và $D$ sai và $N$ là mệnh đề đúng ---
 \begin{center}
 	\begin{tabular}{|c|c|c|ccccccccccc|}
 		\hline
@@ -412,12 +412,12 @@ Viết tắt $(L \land P \implies N) \land (N \lor I \implies \neg R) \land (\ne
     M & \implies P \equationexplanation{tính chất phủ định kép}.
 \end{align*}
 
-Qua đó, chúng ta có điều phải chứng minh. Bạn đọc cũng có thể thực hiện bài tập này thông qua bảng giá trị chân lí, nhưng khí đó, bạn đọc sẽ phải xét\dots\ mà thôi, bạn đọc có thể tham khảo bảng \ref{ex:toan_hoc_nen_tang:giai_tich_menh_de:lap_luan:bai_2_phan_4} nếu bạn đọc không muốn phải ghét bản thân như tác giả đã từng khi thực hiện lập bảng này\footnote{Bạn đọc có thể kiểm tra lại bảng \ref{ex:toan_hoc_nen_tang:giai_tich_menh_de:lap_luan:bai_2_phan_4} để trải nghiệm cảm giác của tác giả lúc viết đáp án. Khi càng tăng nhiều biến thì số trường hợp cần phải kiểm tra cũng tăng theo theo cấp số nhân.}. Ngoài ra, bạn đọc cũng sẽ mất đi cơ hội được thường thức nghệ thuật của sự lập luận do bị thay thế bởi sự cơ học của phương pháp.
+Qua đó, chúng ta có điều phải chứng minh. Bạn đọc cũng có thể thực hiện bài tập này thông qua bảng giá trị chân lí, nhưng khi đó, bạn đọc sẽ phải xét\dots\ mà thôi, bạn đọc có thể tham khảo bảng \ref{ex:nen_tang_lo_gich:giai_tich_menh_de:lap_luan:bai_2_phan_4} nếu bạn đọc không muốn phải ghét bản thân như tác giả đã từng khi thực hiện lập bảng này\footnote{Bạn đọc có thể kiểm tra lại bảng \ref{ex:nen_tang_lo_gich:giai_tich_menh_de:lap_luan:bai_2_phan_4} để trải nghiệm cảm giác của tác giả lúc viết đáp án. Khi càng tăng nhiều biến thì số trường hợp cần phải kiểm tra cũng tăng theo cấp số nhân.}. Ngoài ra, bạn đọc cũng sẽ mất đi cơ hội được thường thức nghệ thuật của sự lập luận do bị thay thế bởi sự cơ học của phương pháp.
 
 \begin{table}[H]
     \centering
 	\caption{Bảng giá trị chân lí của $( L \land P \implies N ) \land ( N \lor I \implies \neg R ) \land ( \neg P \implies R ) \land ( \neg I \land \neg R ) \implies P$}
-    \label{ex:toan_hoc_nen_tang:giai_tich_menh_de:lap_luan:bai_2_phan_4}
+    \label{ex:nen_tang_lo_gich:giai_tich_menh_de:lap_luan:bai_2_phan_4}
 	\begin{tabular}{|c|c|c|c|c|cccccccccccc|}
 		\hline
 		$I$ & $L$ & $N$ & $P$ & $R$ & $(L$ & $\land$ & $P$ & $\implies$ & $N)$ & $\land$ & $(N$ & $\lor$ & $I$ & $\implies$ & $\neg$ & $R)$ \\
@@ -599,7 +599,7 @@ Không có bất cứ lí do nào để chứng minh này có thể hợp lí đ
         \end{tabular}
     \end{tabular}
 \end{center}
-thì chúng ta có thể thấy rằng kết luận $N$ không được suy ra từ giả thuyết.
+thì chúng ta có thể thấy rằng kết luận $N$ không được suy ra từ giả thiết.
 
 Vậy, giả thiết không chứng minh được kết luận.
 
@@ -607,7 +607,7 @@ Vậy, giả thiết không chứng minh được kết luận.
 
 \ % Lùi đầu dòng
 
-Từ một số giả thiết cho trước, chúng ta có thể chứng minh các mệnh đề khác, nhưng không có nghĩa là nó thực sự ``đúng''. Hãy tưởng tượng rằng bạn đọc đang đi xem ảo thuật. Ảo thuật gia dẫn dắt bạn đọc thông qua một câu chuyện của một quả bóng mà trong đó có những hành động được miêu tả rất chi tiết. Chiếc cốc úp vào quả bóng, di chuyển trên bàn trực tiếp dưới con mắt của bạn đọc. Bạn đọc nửa tin vào lời của ảo thuật gia, nửa tin vào thị giác của mình rằng quả bóng vẫn ở dưới cái cốc, nhưng cuối cùng, kết quả là quả bóng lại biến mất mà lại xuất hiện trong tay của nhà ảo thuật gia. Đúng là kết luận bạn đọc đưa ra --- quả bóng nằm dưới cái cốc --- là hợp lí từ câu chuyện của nhà ảo thuật gia, nhưng nó chỉ ``đúng'' nếu như ảo thuật gia thực hiện hành động thật như lời nói mà không có sự dụng kĩ thuật tay. Nói cách khác, các giả thiết mà nhà ảo thuật gia đưa ra chứng minh được kết luận của bạn đọc, nhưng kết luận chỉ thật sự hợp lí nếu như giả thiết là không có mâu thuẫn.
+Từ một số giả thiết cho trước, chúng ta có thể chứng minh các mệnh đề khác, nhưng không có nghĩa là nó thực sự ``đúng''. Hãy tưởng tượng rằng bạn đọc đang đi xem ảo thuật. Ảo thuật gia dẫn dắt bạn đọc thông qua một câu chuyện của một quả bóng mà trong đó có những hành động được miêu tả rất chi tiết. Chiếc cốc úp vào quả bóng, di chuyển trên bàn trực tiếp dưới con mắt của bạn đọc. Bạn đọc nửa tin vào lời của ảo thuật gia, nửa tin vào thị giác của mình rằng quả bóng vẫn ở dưới cái cốc, nhưng cuối cùng, kết quả là quả bóng lại biến mất mà lại xuất hiện trong tay của nhà ảo thuật gia. Đúng là kết luận bạn đọc đưa ra --- quả bóng nằm dưới cái cốc --- là hợp lí từ câu chuyện của nhà ảo thuật gia, nhưng nó chỉ ``đúng'' nếu như ảo thuật gia thực hiện hành động thật như lời nói mà không có sử dụng kĩ thuật tay. Nói cách khác, các giả thiết mà nhà ảo thuật gia đưa ra chứng minh được kết luận của bạn đọc, nhưng kết luận chỉ thật sự hợp lí nếu như giả thiết là không có mâu thuẫn.
 
 \defText{Mâu thuẫn} được định nghĩa là khi giả thiết không thể nhận giá trị chân lí đúng. Viết dưới dạng kí hiệu, $X$ bị mâu thuẫn nếu $X \implies \mathbf{M}$ với $M$ là một mệnh đề sai nào đó. Chúng ta không bao giờ muốn làm việc với giả thiết có mâu thuẫn, do nó có thể chứng minh mọi thứ. Thật vậy, gọi $Y$ là mệnh đề bất kì. Do $X$ luôn sai nên $X \implies Y$ luôn đúng do định nghĩa của phép kéo theo. Vậy $X$ chứng minh $Y$.
 
@@ -683,14 +683,14 @@ Có thể sử dụng lập luận rằng để giả thiết $P \uparrow R$ đ�
 Đây cũng là trường hợp duy nhất mà giả thiết không có mâu thuẫn.
 
 \stepcounter{subexercise}
-\arabic{subexercise}. Để $P \oplus Q$ đúng thì $P$ và $Q$ phải không cùng giá trị chân l, nhưng để $P \odot Q$ đúng thì $P$ và $Q$ phải giống nhau về giá trị chân lí. Vậy, mâu thuẫn.
+\arabic{subexercise}. Để $P \oplus Q$ đúng thì $P$ và $Q$ phải không cùng giá trị chân lí, nhưng để $P \odot Q$ đúng thì $P$ và $Q$ phải giống nhau về giá trị chân lí. Vậy, mâu thuẫn.
 
-Lập luận được kiểm tra lại bằng bảng giá trị chân lí \ref{tab:toan_hoc_nen_tang:giai_tich_menh_de:lap_luan:xor_va_nxor}.
+Lập luận được kiểm tra lại bằng bảng giá trị chân lí \ref{tab:nen_tang_lo_gich:giai_tich_menh_de:lap_luan:xor_va_nxor}.
 
 \begin{table}[H]
 	\centering
 	\caption{Bảng giá trị chân lí của $( P \oplus Q ) \land ( P \odot Q )$}
-    \label{tab:toan_hoc_nen_tang:giai_tich_menh_de:lap_luan:xor_va_nxor}
+    \label{tab:nen_tang_lo_gich:giai_tich_menh_de:lap_luan:xor_va_nxor}
 	\begin{tabular}{|c|c|ccccccc!{\vrule width 1.5pt}c|}
 		\hline
 		$P$ & $Q$ & $(P$ & $\oplus$ & $Q)$ & $\land$ & $(P$ & $\odot$ & $Q)$ & $( P \oplus Q ) \land ( P \odot Q )$\\
@@ -716,11 +716,11 @@ Lập luận được kiểm tra lại bằng bảng giá trị chân lí \ref{t
 \end{center}
 
 \stepcounter{subexercise}
-\arabic{subexercise}. Bảng \ref{tab:toan_hoc_nen_tang:giai_tich_menh_de:lap_luan:xor_nxor_tuong_duong_hon_hop} cho thấy rằng giả thiết luôn mâu thuẫn.
+\arabic{subexercise}. Bảng \ref{tab:nen_tang_lo_gich:giai_tich_menh_de:lap_luan:xor_nxor_tuong_duong_hon_hop} cho thấy rằng giả thiết luôn mâu thuẫn.
 \begin{table}[H]
 	\centering
 	\caption{Bảng giá trị chân lí của $( A \odot B ) \land ( B \oplus C ) \land ( C \odot D ) \land ( D \iff A )$}
-    \label{tab:toan_hoc_nen_tang:giai_tich_menh_de:lap_luan:xor_nxor_tuong_duong_hon_hop}
+    \label{tab:nen_tang_lo_gich:giai_tich_menh_de:lap_luan:xor_nxor_tuong_duong_hon_hop}
 	\begin{tabular}{|c|c|c|c|ccccccccccccccc|}
 		\hline
 		$A$ & $B$ & $C$ & $D$ & $(A$ & $\odot$ & $B)$ & $\land$ & $(B$ & $\oplus$ & $C)$ & $\land$ & $(C$ & $\odot$ & $D)$ & $\land$ & $(D$ & $\iff$ & $A)$ \\
@@ -785,8 +785,52 @@ Có $X \land Y \implies Y$, qua đó có được điều phải chứng minh.
     \begin{tabular}{r|l}
         Giả thiết & $A \implies B$ \\
         & $C \lor \neg B$ \\
-        & $\overline{A \land C}$ \\
+        & $A \uparrow C$ \\
         \headerDivider
         Kết luận & $\neg A$
     \end{tabular}.
 \end{center}
+
+\solution
+
+Giả sử ngược lại, $\overline{\neg A}$ đúng, tức là $A$ đúng.
+
+Do có $A \implies B$ mà $A$ đúng, nên $B$ cũng phải đúng. Từ đây dẫn đến $\neg B$ sai. Qua đó, để cho giả thiết thứ hai --- $C \lor \neg B$ --- đúng, $C$ phải đúng. Tuy nhiên, nếu $A$ và $C$ đều đúng, $A \uparrow C$ sẽ sai, dẫn đến mâu thuẫn.
+
+Do vậy, theo phương pháp phản chứng, giả sử ban đầu sai, hay $\neg A$. Chúng ta có kết luận như yêu cầu.
+
+\exercise Không phải mọi cụm từ nối trong tiếng Việt đều có thể biểu diễn dưới dạng phép nối mệnh đề lô-gích. Chứng minh rằng ``Có thể rằng\dots'' là một ví dụ.
+
+\solution
+Giả sử ngược lại rằng ``Có thể rằng\dots'' có thể biểu diễn dưới dạng phép nối mệnh đề lô-gích. Đây là phép nối đơn ngôi, cho nên chúng ta có thể kí hiệu là ``$\diamondsuit P$'' với $P$ là mệnh đề thành phần.
+
+Gọi $P$ là mệnh đề ``Ngày mai trời mưa.''. Mệnh đề phức hợp:
+\begin{center}
+    $\diamondsuit P$: ``Có thể rằng ngày mai trời mưa.''
+\end{center}
+là đúng dưới bất cứ cách trình bày trung thực nào. Tương tự với
+\begin{center}
+    $\diamondsuit \overline{P}$: ``Có thể rằng ngày mai trời không mưa.''.
+\end{center}
+
+Tuy nhiên, nếu chúng ta đưa một câu luôn sai vào làm mệnh đề con, ví dụ:
+\begin{center}
+    $\diamondsuit \mathbf{M}$: ``Có thể rằng Việt Nam đã không thống nhất vào năm 1975.'',
+\end{center}
+thì mệnh đề phức hợp này sẽ luôn sai. Kẻ bảng \ref{tab:nen_tang_lo_gich:giai_tich_menh_de:lap_luan:co_the_cho} cho phép nối ``Có thể rằng\dots''.
+
+\begin{table}[H]
+    \centering
+    \caption{Bảng giá trị chân lí của phép nối ``Có thể rằng\dots''}
+    \label{tab:nen_tang_lo_gich:giai_tich_menh_de:lap_luan:co_the_cho}
+    \begin{tabular}{|c|c|c|c|c|c|}
+        \hline
+        $P$ & $\mathbf{M}$ &$\overline{P}$ & $\diamondsuit P$ & $\diamondsuit \overline{P}$ & $\diamondsuit \mathbf{M}$ \\
+        \headerDivider
+        Đ & S & S & Đ & Đ & S \\
+        S & S & Đ & Đ & Đ & S \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Từ sự phân tích giá trị chân lí của phép nối với $P$, chúng ta nhận thấy rằng cấu trúc $\diamondsuit P$ là luôn đúng. Tuy nhiên, điều này mâu thuẫn với mệnh đề $\diamondsuit \mathbf{M}$ luôn sai. Do đó, giả sử ban đầu sai, và ``Có thể rằng\dots'' không thể biểu diễn dưới dạng phép nối mệnh đề lô-gích.
