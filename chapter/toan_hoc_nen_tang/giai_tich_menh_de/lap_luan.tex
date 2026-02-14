@@ -53,12 +53,12 @@ Qua đó, chúng ta có thể viết lại lập luận này dưới dạng như
         Kết luận & $Q$
     \end{tabular}.
 \end{center}
-Mệnh đề mà chúng ta cần khẳng định đúng để hoàn thành chứng minh là $(P \implies Q) \land P \implies Q$. Thực vậy, có bảng \ref{tab:toan_hoc_nen_tang:lo_gich:lap_luan:vd_chung_minh}.
+Mệnh đề mà chúng ta cần khẳng định đúng để hoàn thành chứng minh là $(P \implies Q) \land P \implies Q$. Thực vậy, có bảng \ref{tab:toan_hoc_nen_tang:giai_tich_menh_de:lap_luan:vd_chung_minh}.
     
 \begin{table}[H]
     \centering
     \caption{Bảng giá trị chân lí của $( P \implies Q ) \land P \implies Q$}
-    \label{tab:toan_hoc_nen_tang:lo_gich:lap_luan:vd_chung_minh}
+    \label{tab:toan_hoc_nen_tang:giai_tich_menh_de:lap_luan:vd_chung_minh}
     \begin{tabular}{|c|c|ccccccc|}
         \hline
         $P$ & $Q$ & $(P$ & $\implies$ & $Q)$ & $\land$ & $P$ & $\implies$ & $Q$ \\
@@ -155,7 +155,7 @@ Nếu như mỗi lần chứng minh, chúng ta phải lôi bảng giá trị ch�
     \textcolor{colorEmphasisGreen}{Quy tắc thứ ba}: Cho $\chungF$ có mệnh đề $A$ làm mệnh đề con. Nếu $\chungF$ đúng không phụ thuộc vào giá trị chân lí của $A$ thì mệnh đề $\chungF$ vẫn đúng khi thay đồng thời tất cả các mệnh đề $A$ trong $\chungF$ bằng mệnh đề $B$ bất kì.
 \end{itemize}
 
-Để thuận tiện cho việc lập luận, sẽ sử dụng các kết quả đã có của bài \ref{ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:tc_lo_gich} ở trang \pageref{ex:toan_hoc_nen_tang:lo_gich:menh_de_phuc_hop:tc_lo_gich}.
+Để thuận tiện cho việc lập luận, sẽ sử dụng các kết quả đã có của bài \ref{ex:toan_hoc_nen_tang:giai_tich_menh_de:menh_de_phuc_hop:tc_giai_tich_menh_de} ở trang \pageref{ex:toan_hoc_nen_tang:giai_tich_menh_de:menh_de_phuc_hop:tc_giai_tich_menh_de}.
 
 \exercise Chứng minh rằng $\overline{\neg A \lor B} \lor A \land \neg C \iff A \land \overline{B \land C}$ với $A$, $B$ và $C$ là các mệnh đề bất kì.
 
@@ -217,7 +217,7 @@ Do vậy, $$(L \lor A) \land (S \implies \neg L) \iff (\neg A \implies \neg S).$
         & Người dùng đang không truy cập được dữ liệu. \\
         \headerDivider
         Kết luận & Máy chủ đang gặp sự cố.
-    \end{tabular}
+    \end{tabular};
     \item 
     \begin{tabular}{r|l}
         Giả thiết & Âm nhạc đang làm cho Qua-di thư giãn, hoặc là tiếng ồn làm cho Qua-di đau đầu; \\
@@ -225,7 +225,7 @@ Do vậy, $$(L \lor A) \land (S \implies \neg L) \iff (\neg A \implies \neg S).$
         & Thực tế là Qua-di đang đeo tai nghe chống ồn. \\
         \headerDivider
         Kết luận & Âm nhạc đang làm cho Qua-di thư giãn.
-    \end{tabular}
+    \end{tabular};
     \item 
     \begin{tabular}{r|l}
         Giả thiết & Nếu bây giờ là tháng 12, thì tháng liền trước là tháng 11; \\
@@ -234,7 +234,7 @@ Do vậy, $$(L \lor A) \land (S \implies \neg L) \iff (\neg A \implies \neg S).$
         & Tháng liền trước là tháng 11. \\
         \headerDivider
         Kết luận & Bây giờ đang là tháng 12.
-    \end{tabular}
+    \end{tabular};
     \item 
     \begin{tabular}{r|l}
         Giả thiết & Chỉ khi hoàng tử tiêu diệt được ma vương và cứu được công chúa \\
@@ -244,7 +244,7 @@ Do vậy, $$(L \lor A) \land (S \implies \neg L) \iff (\neg A \implies \neg S).$
         & Nhà vua chưa băng hà và bầu trời không có màu tím. \\
         \headerDivider
         Kết luận & Hoàng tử đã cứu được công chúa.
-    \end{tabular}
+    \end{tabular};
     \item
     \begin{tabular}{r|l}
         Giả thiết & Nếu Tu-ba-na thức khuya học bài và không uống cà phê, \\
@@ -254,7 +254,7 @@ Do vậy, $$(L \lor A) \land (S \implies \neg L) \iff (\neg A \implies \neg S).$
         & Ở giờ thi sáng nay, Tu-ba-na đã không quay cóp nhưng bạn ấy vẫn không thi tốt.\\
         \headerDivider
         Kết luận & Tu-ba-na đã thức khuya học bài vào ngày trước hôm thi.
-    \end{tabular}
+    \end{tabular}.
 \end{enumerate}
 
 \solution
@@ -268,7 +268,7 @@ Do vậy, $$(L \lor A) \land (S \implies \neg L) \iff (\neg A \implies \neg S).$
 \end{itemize}
 ``Mảy chủ gặp sự cố.'' tương đương với ``Máy chủ đang không hoạt động bình thường.'', hay $\neg N$.
 
-Viết lại hệ thống giả thiết -- kết luận dưói dạng lô-gích:
+Viết lại hệ thống giả thiết -- kết luận dưới dạng lô-gích:
 \begin{center}
     \begin{tabular}{r|l}
         Giả thiết & $ N \land C \implies D$ \\
@@ -395,7 +395,7 @@ Kí hiệu hóa:
         & $\neg I \land \neg R$ \\
         \headerDivider
         Kết luận & $P$        
-    \end{tabular}
+    \end{tabular}.
 \end{center}
 
 Viết tắt $(L \land P \implies N) \land (N \lor I \implies \neg R) \land (\neg P \implies R) \land (\neg I \land \neg R)$ bởi $M$. Thực hiện liên tiếp các phép ``biến đổi'' thông qua các tính chất, nhận xét:
@@ -412,12 +412,12 @@ Viết tắt $(L \land P \implies N) \land (N \lor I \implies \neg R) \land (\ne
     M & \implies P \equationexplanation{tính chất phủ định kép}.
 \end{align*}
 
-Qua đó, chúng ta có điều phải chứng minh. Bạn đọc cũng có thể thực hiện bài tập này thông qua bảng giá trị chân lí, nhưng khí đó, bạn đọc sẽ phải xét\dots\ mà thôi, bạn đọc có thể tham khảo bảng \ref{ex:toan_hoc_nen_tang:lo_gich:lap_luan:bai_2_phan_4} nếu bạn đọc không muốn phải ghét bản thân như tác giả đã từng khi thực hiện lập bảng này\footnote{Bạn đọc có thể kiểm tra lại bảng \ref{ex:toan_hoc_nen_tang:lo_gich:lap_luan:bai_2_phan_4} để trải nghiệm cảm giác của tác giả lúc viết đáp án. Khi càng tăng nhiều biến thì số trường hợp cần phải kiểm tra cũng tăng theo theo cấp số nhân.}. Ngoài ra, bạn đọc cũng sẽ mất đi cơ hội được thường thức nghệ thuật của sự lập luận do bị thay thế bởi sự cơ học của phương pháp.
+Qua đó, chúng ta có điều phải chứng minh. Bạn đọc cũng có thể thực hiện bài tập này thông qua bảng giá trị chân lí, nhưng khí đó, bạn đọc sẽ phải xét\dots\ mà thôi, bạn đọc có thể tham khảo bảng \ref{ex:toan_hoc_nen_tang:giai_tich_menh_de:lap_luan:bai_2_phan_4} nếu bạn đọc không muốn phải ghét bản thân như tác giả đã từng khi thực hiện lập bảng này\footnote{Bạn đọc có thể kiểm tra lại bảng \ref{ex:toan_hoc_nen_tang:giai_tich_menh_de:lap_luan:bai_2_phan_4} để trải nghiệm cảm giác của tác giả lúc viết đáp án. Khi càng tăng nhiều biến thì số trường hợp cần phải kiểm tra cũng tăng theo theo cấp số nhân.}. Ngoài ra, bạn đọc cũng sẽ mất đi cơ hội được thường thức nghệ thuật của sự lập luận do bị thay thế bởi sự cơ học của phương pháp.
 
 \begin{table}[H]
     \centering
 	\caption{Bảng giá trị chân lí của $( L \land P \implies N ) \land ( N \lor I \implies \neg R ) \land ( \neg P \implies R ) \land ( \neg I \land \neg R ) \implies P$}
-    \label{ex:toan_hoc_nen_tang:lo_gich:lap_luan:bai_2_phan_4}
+    \label{ex:toan_hoc_nen_tang:giai_tich_menh_de:lap_luan:bai_2_phan_4}
 	\begin{tabular}{|c|c|c|c|c|cccccccccccc|}
 		\hline
 		$I$ & $L$ & $N$ & $P$ & $R$ & $(L$ & $\land$ & $P$ & $\implies$ & $N)$ & $\land$ & $(N$ & $\lor$ & $I$ & $\implies$ & $\neg$ & $R)$ \\
@@ -685,12 +685,12 @@ Có thể sử dụng lập luận rằng để giả thiết $P \uparrow R$ đ�
 \stepcounter{subexercise}
 \arabic{subexercise}. Để $P \oplus Q$ đúng thì $P$ và $Q$ phải không cùng giá trị chân l, nhưng để $P \odot Q$ đúng thì $P$ và $Q$ phải giống nhau về giá trị chân lí. Vậy, mâu thuẫn.
 
-Lập luận được kiểm tra lại bằng bảng giá trị chân lí \ref{tab:toan_hoc_nen_tang:lo_gich:lap_luan:xor_va_nxor}.
+Lập luận được kiểm tra lại bằng bảng giá trị chân lí \ref{tab:toan_hoc_nen_tang:giai_tich_menh_de:lap_luan:xor_va_nxor}.
 
 \begin{table}[H]
 	\centering
 	\caption{Bảng giá trị chân lí của $( P \oplus Q ) \land ( P \odot Q )$}
-    \label{tab:toan_hoc_nen_tang:lo_gich:lap_luan:xor_va_nxor}
+    \label{tab:toan_hoc_nen_tang:giai_tich_menh_de:lap_luan:xor_va_nxor}
 	\begin{tabular}{|c|c|ccccccc!{\vrule width 1.5pt}c|}
 		\hline
 		$P$ & $Q$ & $(P$ & $\oplus$ & $Q)$ & $\land$ & $(P$ & $\odot$ & $Q)$ & $( P \oplus Q ) \land ( P \odot Q )$\\
@@ -716,11 +716,11 @@ Lập luận được kiểm tra lại bằng bảng giá trị chân lí \ref{t
 \end{center}
 
 \stepcounter{subexercise}
-\arabic{subexercise}. Bảng \ref{tab:toan_hoc_nen_tang:lo_gich:lap_luan:xor_nxor_tuong_duong_hon_hop} cho thấy rằng giả thiết luôn mâu thuẫn.
+\arabic{subexercise}. Bảng \ref{tab:toan_hoc_nen_tang:giai_tich_menh_de:lap_luan:xor_nxor_tuong_duong_hon_hop} cho thấy rằng giả thiết luôn mâu thuẫn.
 \begin{table}[H]
 	\centering
 	\caption{Bảng giá trị chân lí của $( A \odot B ) \land ( B \oplus C ) \land ( C \odot D ) \land ( D \iff A )$}
-    \label{tab:toan_hoc_nen_tang:lo_gich:lap_luan:xor_nxor_tuong_duong_hon_hop}
+    \label{tab:toan_hoc_nen_tang:giai_tich_menh_de:lap_luan:xor_nxor_tuong_duong_hon_hop}
 	\begin{tabular}{|c|c|c|c|ccccccccccccccc|}
 		\hline
 		$A$ & $B$ & $C$ & $D$ & $(A$ & $\odot$ & $B)$ & $\land$ & $(B$ & $\oplus$ & $C)$ & $\land$ & $(C$ & $\odot$ & $D)$ & $\land$ & $(D$ & $\iff$ & $A)$ \\
@@ -746,3 +746,47 @@ Lập luận được kiểm tra lại bằng bảng giá trị chân lí \ref{t
 \end{table}
 
 Để có thể sử dụng lập luận thông thường, có thể thấy là để $A \odot B$ và $C \odot D$ đúng thì mỗi mệnh đề trong cặp $A$ và $B$, $C$ và $D$ phải có giá trị chân lí giống nhau. Thêm vào đó, $B \oplus C$ dẫn đến $B$ và $C$ khác giá trị chân lí. Do vậy $A$ và $D$ khác giá trị chân lí. Tuy nhiên $D \iff A$ khi và chỉ khi $D$ và $A$ cùng đúng hoặc cùng sai, dẫn đến mâu thuẫn.
+
+\subsection{Chứng minh bằng phản chứng minh}
+
+\ % Lùi đầu dòng
+
+\defText{Chứng minh bằng phản chứng minh} (gọi tắt là \defText{phản chứng}) là một phương pháp hiệu quả khi chúng ta không nhìn ra được phương hướng lập luận trực tiếp để chứng minh một mệnh đề. Để thực hiện phương pháp này, chúng ta thực hiện các bước như sau:
+\begin{enumerate}
+    \item Giả sử phủ định của kết luận.
+    \item Coi hợp của giả thiết với phủ định của kết luận này là một nhóm giả thiết mới và lập luận đến khi chứng minh được một mệnh đề sai.
+    \item Qua đó có mâu thuẫn trong giả thiết mới, và kết luận rằng kết luận phải đúng.
+\end{enumerate}
+
+Dù chúng ta vẫn còn đang thiếu rất nhiều công cụ để thực hiện chứng minh nhiều định lí, nhưng chúng ta hoàn toàn có thể khẳng định được sự hợp lí của phương pháp phản chứng. Trước hết, mô hình hóa phương pháp này dưới dạng giả thiết -- kết luận. Gọi $X$ là giả thiết ban đầu được cho, $Y$ là kết quả cần được chứng minh và $\mathbf{M}$ là một mệnh đề sai nào đó. Ý tưởng của phản chứng được thể hiện quả giả thiết và kết luận mới như sau:
+\begin{center}
+    \begin{tabular}{r|l}
+    Giả thiết & $X$ \\
+    & $X \land \neg Y \implies \mathbf{M}$ \\
+    \headerDivider
+    Kết luận & $Y$
+    \end{tabular}.
+\end{center}
+
+Gọi $\mathbf{V}$ là một mệnh đề đúng. Theo tính chất thống trị, có $$X \iff X \land \mathbf{V}.$$
+Ngoài ra, do $P \lor \neg P \iff \mathbf{V}$ với mọi mệnh đề $P$, cho nên $$X \iff X \land (Y \lor \neg Y).$$
+Áp dụng tính chất phân phối để có
+$$X \iff (X \land Y) \lor (X \land \neg Y).$$
+Giả thiết thứ hai cho chúng ta $X \land \neg Y$ có mâu thuẫn. Do vậy, 
+\begin{align*}
+    X \land (X \land \neg Y) &\implies X; \\
+    X \land (X \land \neg Y) &\implies (X \land Y) \lor \mathbf{M}; \\
+    X \land (X \land \neg Y) &\implies X \land Y.
+\end{align*}
+Có $X \land Y \implies Y$, qua đó có được điều phải chứng minh.
+
+\exercise Sử dụng phản chứng, khẳng định sự đúng đắn của kết luận sau từ giả thiết đã cho:
+\begin{center}
+    \begin{tabular}{r|l}
+        Giả thiết & $A \implies B$ \\
+        & $C \lor \neg B$ \\
+        & $\overline{A \land C}$ \\
+        \headerDivider
+        Kết luận & $\neg A$
+    \end{tabular}.
+\end{center}

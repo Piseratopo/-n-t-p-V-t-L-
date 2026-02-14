@@ -6,7 +6,7 @@ Tài liệu "Ôn tập Vật Lí" cần được viết theo quy chuẩn chính 
 
 - Văn bản đúng quy tắc chính tả và ngữ pháp Việt Nam.
 
-- Sử dụng `\dblquote{}` hoặc cặp `\textquotedblleft` và `\textquotedblright` thay cho dấu  " \" " thông thường.
+- Sử dụng `\dblquote{}` hoặc cặp `\textquotedblleft` và `\textquotedblright` hoặc cặp `\`\` ` và `''` thay cho dấu  " \" " thông thường.
 
 - Đảm bảo kí hiệu thống nhất trong tài liệu, trong đó bao gồm tên, kiểu hoa/thường, kiểu phông, kích cỡ, ...
 
