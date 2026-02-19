@@ -1,0 +1,68 @@
+\section{Phương pháp lập luận diễn dịch (tiếp)}
+
+\
+
+Khi làm quen với giải tích mệnh đề, chúng ta đã sử dụng bảng giá trị chân lí và một vài quy tắc thay thế để lập luận. Những phương pháp này hoạt động hiệu quả do chúng ta chỉ có hữu hạn trường hợp để xem xét. Nhưng đối với giải tích vị từ, chúng ta phải mở rộng công cụ dùng để lập luận do không thể quét hết toàn bộ trường hợp được bao quát bởi một lượng từ.
+
+Dưới đây là một ví dụ về lập luận theo cấu trúc tam đoạn luận cổ điển:
+\begin{center}
+    \begin{tabular}{r|l}
+        Giả thiết & ``Mọi sinh viên ngành kĩ thuật đều phải học vật lí.''; \\
+        & ``Mọi sinh viên trường đại học Trăm khoa đều thuộc ngành kĩ thuật.''.\\
+        \headerDivider
+        Kết luận & ``Mọi sinh viên trường đại học Trăm khoa đều phải học vật lí.''
+    \end{tabular}.
+\end{center}
+Gọi biểu diễn $K()$ cho vị từ ``(sinh viên) ngành kĩ thuật'', $V()$ cho vị từ ``(sinh viên) phải học vật lí'', $T()$ cho ``(sinh viên) trường đại học Trăm khoa''. Chúng ta kí hiệu hóa lập luận được đưa ra như sau:
+\begin{center}
+    \begin{tabular}{r|l}
+        Giả thiết & $\forall x, (K(x) \implies V(x))$ \\
+        & $\forall x, (T(x) \implies K(x))$ \\
+        \headerDivider
+        Kết luận & $\forall x, (T(x) \implies V(x))$
+    \end{tabular}.
+\end{center}
+Kết hợp giả thiết thành một mệnh đề $G$:
+$$\forall x, (K(x) \implies V(x)) \land \forall x, (T(x) \implies K(x)).$$
+Để tiếp tục lập luận, chúng ta cần sự trợ giúp của một quy tắc lập luận mới: 
+\begin{quotation}
+    Nếu hai mệnh đề con có cùng lượng từ và được kết nối bởi phép nối hội thì có thể kết hợp hai công thức nằm trong tầm ảnh hưởng của lượng từ thành một công thức bởi phép hội để tạo thành một mệnh đề tương đương, hay
+    $$\forall x, A(x) \land \forall x, B(x) \iff \forall x, (A(x) \land B(x)).$$
+\end{quotation}
+    Sử dụng quy tắc thay thế, thay $A(x)$ và $B(x)$ lần lượt bởi $K(x) \implies V(x)$ và $T(x) \implies K(x)$, chúng ta có:
+$$G \iff \forall x, \big((K(x) \implies V(x)) \land (T(x) \implies K(x))\big).$$
+Có $(P \implies Q) \land (Q \implies R) \implies (P \implies R)$ đúng với mọi mệnh đề $P$, $Q$, $R$ cho nên
+$$G \implies \forall x, (T(x) \implies V(x)).$$
+Chúng ta đã kiểm chứng được kết luận.
+
+Bạn đọc có thể thấy sự thay thế là hơi khập khiễng, do quy tắc thay thế chỉ áp dụng được đối với mệnh đề, không phải công thức. Tuy nhiên, do các công thức như $A(x)$ và $K(x) \implies V(x)$ chỉ có một hạng thức $x$ phụ thuộc vào lượng từ $\forall x$, cho nên có thể coi hai công thức này là \defText{mệnh đề phụ thuộc vào lượng từ} và lập luận trên chúng như mệnh đề.
+
+Xét một lập luận khác mà chúng ta dễ dàng cảm nhận là đúng:
+\begin{center}
+    \begin{tabular}{r|l}
+        Giả thiết & ``Mọi sinh viên ngành kĩ thuật đều phải học vật lí.''; \\
+        & ``Ê-mô-ri là sinh viên ngành kĩ thuật.''.\\
+        \headerDivider
+        Kết luận & ``Ê-mô-ri phải học vật lí.''
+    \end{tabular}.
+\end{center}
+Với cách kí hiệu hóa tương tự, chúng ta có
+\begin{center}
+    \begin{tabular}{r|l}
+        Giả thiết & $\forall x, (K(x) \implies V(x))$ \\
+        & $K(e)$\\
+        \headerDivider
+        Kết luận & $V(e)$
+    \end{tabular}
+\end{center}
+với $e$ viết tắt cho ``Ê-mô-ri''. Việc lập luẫn dẫn một cách tự nhiên đến với quy tắc tiếp theo:
+\begin{quotation}
+    $\forall x, A(x) \implies A(e)$ với $e$ là một hạng thức đã xác định, hay nói xuồng xã hơn, nếu một tính chất đúng với toàn cục thì nó cũng đúng với bộ phận.  
+\end{quotation}
+
+Gọi hợp các giả thiết là $G$, với quy tắc này, chúng ta có
+\begin{align*}
+    G &\implies (K(e) \implies V(e)) \land (K(e)); \\
+    G &\implies V(e) \equationexplanation{quy tắc khẳng định}.
+\end{align*}
+Kết luận được khẳng định từ giả thiết.

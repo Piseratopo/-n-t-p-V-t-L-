@@ -60,7 +60,7 @@ Có mệnh đề sau với hạng thức $x$:
 \begin{center}
     ``$x$ là một thủ đô.''.
 \end{center}
-Đây không phải là mệnh đề, do chúng ta chưa xác định $x$ là nơi nào, hay $x$ còn có phải là nơi chốn hay không. Có thể thay thế $x$ bởi một đại từ cụ thể, nhưng chúng ta không cần phải làm thế bởi lô-gích cho phép rút ra các mệnh đề đúng hoặc sai bằng cách mở rộng mệnh đề về thủ đô đó. Chúng ta có thể thêm ``với mọi'':
+Đây không phải là mệnh đề, do chúng ta chưa xác định $x$ là nơi nào, hay $x$ có phải là nơi chốn hay không. Có thể thay thế $x$ bởi một đại từ cụ thể, nhưng chúng ta không cần phải làm thế bởi lô-gích cho phép rút ra các mệnh đề đúng hoặc sai bằng cách mở rộng mệnh đề về thủ đô đó. Chúng ta có thể thêm ``với mọi'':
 \begin{center}
     ``Với mọi $x$, $x$ là một thủ đô.''
 \end{center}
@@ -106,6 +106,30 @@ Một \defText{công thức nguyên tử} là một vị từ đi kèm với đ�
 \ 
 
 Như quy tắc thực hiện thứ tự các phép nối mệnh đề, chúng ta có một số quy tắc để giúp việc giải giá trị chân lí của các mệnh đề trong giải tích vị từ dễ dàng hơn.
+
+Trước hết, chúng ta đến với khái niệm \defText{tầm ảnh hưởng} của lượng từ. Theo một cách cơ học nhất có thể, tầm ảnh hưởng của một lượng từ là lượng từ đi kèm với công thức \emph{đầy đủ} nhỏ nhất liền sau lượng từ đó. Để hiểu thế nào là công thức đầy đủ, chúng ta đưa ra một vài ví dụ về tầm ảnh hưởng của $\exists x$:
+\begin{itemize}
+    \item $\forall y, \underbrace{\exists x, (x \neq y \land \forall z, z \text{ là một người bạn tốt})}_{\text{tầm ảnh hưởng}}$,
+    \item $\forall y, \underbrace{\exists x, x \neq y}_{\text{tầm ảnh hưởng}} \land \forall z, z \text{ là một người bạn tốt}$.
+\end{itemize}
+Mặc dù trong cả hai ví dụ được đưa ra, công thức $x \neq y$ đều thỏa mãn là công thức nhỏ nhất liền sau $\exists x$, công thức này không đầy đủ ở ví dụ thứ nhất do bị đặt trong dấu ngoặc đơn.
+
+Lượng từ có tầm ảnh hưởng đến hạng thức, có nghĩa là hạng thức bị phụ thuộc vào lượng từ. Hiểu theo cách cụ thể hơn, tại một vị trí nhất định, hạng thức \defText{bị phụ thuộc} vào lượng từ khi và chỉ khi chúng nằm trong tầm ảnh hưởng của lượng từ có sử dụng hạng thức đó. Hạng thức tại một vị trí được gọi là \defText{tự do} nếu và chỉ nếu chúng không bị phụ thuộc bởi bất cứ lượng từ nào. Chẳng hạn, trong công thức
+\begin{equation*}
+    \exists x, x \neq y, 
+\end{equation*}
+$x$ phụ thuộc vào lượng từ $\exists x$ và $y$ là hạng thức tự do.
+
+Tác giả sử dụng cụm từ ``tại một vị trí'' bởi vì một hạng thức có thể vừa tự do, vừa phụ thuộc tại các vị trí khác nhau trong công thức, như trong
+\begin{equation*}
+    v > 0 \land \forall v, v^2 > 0.
+\end{equation*}
+
+Sau khi chúng ta có thể phân biệt được sự tự do và phụ thuộc của hạng thức, chúng ta có cách định nghĩa về mặt cú pháp cho mệnh đề:
+\begin{quotation}
+    Một \defText{mệnh đề} là một công thức không có hạng thức tự do tại bất cứ vị trí nào trong công thức đó.
+\end{quotation}
+Định nghĩa này không chỉ đảm bảo tính chất vốn có của mệnh đề được đưa ra bởi định nghĩa cũ --- chỉ đúng hoặc sai --- mà còn thể hiện sự khác biệt cơ bản giữa mệnh đề và công thức.
 
 \exercise Phiên dịch các mệnh đề sau thành dưới dạng kí hiệu. Trình bày rõ các kí hiệu dành cho các hạng thức, vị từ và mệnh đề con nếu có.
 \begin{enumerate}
@@ -184,3 +208,6 @@ Kí hiệu hóa mệnh đề ban đầu là
 \begin{equation*}
     \forall v, (Q \implies L(v)).
 \end{equation*}
+
+\stepcounter{subexercise}
+\arabic{subexercise}.
