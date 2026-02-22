@@ -4,7 +4,35 @@
 
 Khi làm quen với giải tích mệnh đề, chúng ta đã sử dụng bảng giá trị chân lí và một vài quy tắc thay thế để lập luận. Những phương pháp này hoạt động hiệu quả do chúng ta chỉ có hữu hạn trường hợp để xem xét. Nhưng đối với giải tích vị từ, chúng ta phải mở rộng công cụ dùng để lập luận do không thể quét hết toàn bộ trường hợp được bao quát bởi một lượng từ.
 
-Dưới đây là một ví dụ về lập luận theo cấu trúc tam đoạn luận cổ điển:
+\subsection{Quy tắc đổi tên biến ràng buộc}
+
+\ 
+
+Chúng ta sẽ đi đến một quy tắc lập luận tuy trông tương đối hiển nhiên nhưng có một vai trò vô cùng quan trọng.
+\begin{quotation}
+    \defText{Quy tắc đổi tên biến ràng buộc}: Cho một mệnh đề có hạng thức. Sẽ nhận được mệnh đề tương đương nếu thay thế mọi sự xuất hiện của một hạng thức nhất định bằng hạng thức khác.
+\end{quotation}
+Ví dụ:
+\begin{equation*}
+    \forall x, A(x) \iff \forall y, A(y).
+\end{equation*}
+Sự khác biệt duy nhất giữa hai mệnh đề là sự thay thế hạng thức, hay chính xác hơn là cách kí hiệu hạng thức. Có thể thấy rõ ràng rằng về mặt ngữ nghĩa, hai mệnh đề là như nhau.
+
+\subsection{Tính chất giao hoán của lượng từ phổ quát}
+
+\
+
+Đối với giao tiếp thông thường, không ai quan trọng hóa thứ tự của các cụm ``với mọi'' với nhau. Nhiều khi, người ta sẽ tổng hợp thành một lần nói ``với mọi'' nếu cần tổng quát hóa nhiều thành phần. Do được xây dựng dựa trên nền tảng thế giới vật lí, lượng từ phổ quát trong lô-gích cũng có tính chất tương tự. Chúng ta luôn có \defText{tính chất giao hoán của lượng từ phổ quát} như sau
+\begin{equation*}
+    \defMath{\forall x, \forall y, L(x, y) \iff \forall y, \forall x, L(x, y)}.
+\end{equation*}
+Điều này cho phép viết $\defMath{\forall(x, y), L(x, y)}$ mà không làm mất nghĩa mệnh đề nhưng tác giả sẽ hạn chế viết như vậy do, thứ nhất, kí hiệu $\forall(x, y)$ trông khá giống kí hiệu vị từ, và thứ hai, ít sách có kí hiệu này.
+
+\subsection{Tính chất phân phối của lượng từ phổ quát đối với phép hội}
+
+\
+
+Chúng ta cần nhiều hơn những quy tắc trên để có thể nâng cao khả năng lập luận. Dưới đây là một ví dụ về lập luận theo cấu trúc tam đoạn luận cổ điển:
 \begin{center}
     \begin{tabular}{r|l}
         Giả thiết & ``Mọi sinh viên ngành kĩ thuật đều phải học vật lí.''; \\
@@ -24,7 +52,7 @@ Gọi biểu diễn $K()$ cho vị từ ``(sinh viên) ngành kĩ thuật'', $V(
 \end{center}
 Kết hợp giả thiết thành một mệnh đề $G$:
 $$\forall x, (K(x) \implies V(x)) \land \forall x, (T(x) \implies K(x)).$$
-Để tiếp tục lập luận, chúng ta cần sự trợ giúp của một quy tắc lập luận mới: 
+Để tiếp tục lập luận, chúng ta cần sự trợ giúp của một quy tắc lập luận mới --- \defText{tính chất phân phối của lượng từ phổ quát đối với phép hội}: 
 \begin{quotation}
     Nếu hai mệnh đề con có cùng lượng từ và được kết nối bởi phép nối hội thì có thể kết hợp hai công thức nằm trong tầm ảnh hưởng của lượng từ thành một công thức bởi phép hội để tạo thành một mệnh đề tương đương, hay
     $$\defMath{\forall x, A(x) \land \forall x, B(x) \iff \forall x, (A(x) \land B(x))}.$$
@@ -37,13 +65,15 @@ Chúng ta đã kiểm chứng được kết luận.
 
 Bạn đọc có thể thấy sự thay thế là hơi khập khiễng, do quy tắc thay thế chỉ áp dụng được đối với mệnh đề, không phải công thức. Tuy nhiên, do các công thức như $A(x)$ và $K(x) \implies V(x)$ chỉ có một hạng thức $x$ phụ thuộc vào lượng từ $\forall x$, cho nên có thể coi hai công thức này là \defText{mệnh đề phụ thuộc vào lượng từ} và lập luận trên chúng như mệnh đề.
 
+\subsection{Cụ thể hóa lượng từ phổ quát}
+
 Xét một lập luận khác mà chúng ta dễ dàng cảm nhận là đúng:
 \begin{center}
     \begin{tabular}{r|l}
         Giả thiết & ``Mọi sinh viên ngành kĩ thuật đều phải học vật lí.''; \\
-        & ``Ê-mô-ri là sinh viên ngành kĩ thuật.''.\\
+        & ``Ê-mô-ri-ô là sinh viên ngành kĩ thuật.''.\\
         \headerDivider
-        Kết luận & ``Ê-mô-ri phải học vật lí.''
+        Kết luận & ``Ê-mô-ri-ô phải học vật lí.''
     \end{tabular}.
 \end{center}
 Với cách kí hiệu hóa tương tự, chúng ta có
@@ -55,9 +85,9 @@ Với cách kí hiệu hóa tương tự, chúng ta có
         Kết luận & $V(e)$
     \end{tabular}
 \end{center}
-với $e$ viết tắt cho ``Ê-mô-ri''. Việc lập luẫn dẫn một cách tự nhiên đến với quy tắc tiếp theo:
+với $e$ viết tắt cho ``Ê-mô-ri-ô''. Việc lập luẫn dẫn một cách tự nhiên đến với quy tắc tiếp theo --- \defText{quy tắc cụ thể hóa biến phổ quát} hoặc \defText{phép loại bỏ lượng từ phổ quát}:
 \begin{quotation}
-    $\defMath{\forall x, A(x) \implies A(e)}$ với $e$ là một hạng thức đã xác định, hay nói xuồng xã hơn, nếu một tính chất đúng với toàn cục thì nó cũng đúng với bộ phận.  
+    $\defMath{\forall x, A(x) \implies A(e)}$ với $e$ là một hạng thức đã xác định, hay nói suồng sã hơn, nếu một tính chất đúng với toàn cục thì nó cũng đúng với bộ phận.  
 \end{quotation}
 
 Gọi hợp các giả thiết là $G$, với quy tắc này, chúng ta có
@@ -66,3 +96,125 @@ Gọi hợp các giả thiết là $G$, với quy tắc này, chúng ta có
     G &\implies V(e) \equationexplanation{quy tắc khẳng định}.
 \end{align*}
 Kết luận được khẳng định từ giả thiết.
+
+\subsection{Tính chất lượng từ rỗng}
+
+\ 
+
+Có bớt đi thì cũng sẽ phải có thêm vào. Với $A$ là một mệnh đề (không phụ thuộc vào hạng thức $x$),
+\begin{equation*}
+    \begin{cases}
+        \defMath{A \iff \forall x, A} \\
+        \defMath{A \iff \exists x, A}
+    \end{cases}.
+\end{equation*}
+Có thể thấy được tại sao tính chất này có tên là \defText{tính chất lượng từ rỗng}, bởi vì nếu $A$ không có hạng thức $x$, các lượng từ ảnh hưởng đến $x$ sẽ không có giá trị trên $A$.
+
+\exercise Dấu $\le$ là một dấu có nhiều ứng dụng quan trọng trong toán học, nhưng khái niệm so sánh xuất hiện trong gần như toàn bộ mọi lĩnh vực trong đời sống. Nếu như Ê-mô-ri-ô viết
+\begin{center}
+    ``Cam $\le$ táo.'', 
+\end{center}
+mọi người sẽ hiểu Ê-mô-ri-ô không thích cam hơn táo. Đưa về kí hiệu dưới dạng vị từ, Ê-mô-ri-ô có thể viết
+\begin{center}
+    $V_\le (\text{cam}, \text{táo})$.
+\end{center}
+Chúng ta có thể nhận thấy ngay một số tính chất của $\le$, mà chúng ta sẽ coi như là giả thiết trong bài tập này:
+\begin{itemize}
+    \item $\forall x, \forall y, \big(V_\le(x, y) \lor V_\le(y, x)\big)$;
+    \item $\forall x, \forall y, \forall z, \big(V_\le(x, y) \land V_\le(y, z) \implies V_\le(x, z)\big)$.
+\end{itemize}
+Dấu $\le$ là sự kết hợp của dấu $<$ với dấu $=$ mà chúng ta có thể định nghĩa chúng như sau (những định nghĩa này cũng được coi là giả thiết):
+\begin{itemize}
+    \item $\forall x, \forall y, \big(V_=(x, y) \iff V_\le(x, y) \land V_\le(y, x)\big)$;
+    \item $\forall x, \forall y, \big(V_<(x, y) \iff \neg V_\le(y, x)\big)$.
+\end{itemize}
+Chứng minh rằng
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item $\forall x, V_=(x, x)$;
+        \item $\forall x, \forall y, \big(V_=(x, y) \iff V_=(y, x)\big)$;
+        \item $\forall x, \forall y, \forall z, \big(V_=(x, y) \land V_=(y, z) \implies V_=(x, z)\big)$;
+        \item $\forall x, \forall y, \big(V_<(x, y) \uparrow V_<(y, x))$;
+        \item $\forall x, \forall y, \forall z, \big(V_<(x, y) \land V_<(y, z) \implies V_<(x, z)\big)$;
+        \item $\forall x, \forall y, \big(V_=(x, y) \iff V_<(x, y) \downarrow V_<(y, x)\big)$;
+        \item $\forall x, \forall y, \forall z, \big(V_=(x, y) \land V_<(y, z) \implies V_<(x, z)\big)$;
+        \item $\forall x, \forall y, \forall z, \big(V_<(x, y) \land V_=(y, z) \implies V_<(x, z)\big)$.
+    \end{enumerate}
+\end{multicols}
+
+\solution
+
+Gọi hợp của các giả thiết là $G$.
+
+\setcounter{subexercise}{1}
+\arabic{subexercise}. Kết hợp tính chất phân phối của lượng từ phổ quát với phép hội với tính chất rút gọn, có
+\begin{equation*}
+    G \implies \forall x, \forall y, \Big(\big(V_=(x, y) \iff V_\le(x, y) \land V_\le(y, x)\big) \land \big(V_\le(x, y) \lor V_\le(y, x)\big)\Big).
+\end{equation*}
+Loại bỏ lượng từ phổ quát $\forall y$ bằng việc thế $y$ bởi $x$,
+\begin{equation*}
+    G \implies \forall x, \Big(\big(V_=(x, x) \iff V_\le(x, x) \land V_\le(x, x)\big) \land \big(V_\le(x, x) \lor V_\le(x, x)\big)\Big).
+\end{equation*}
+Tiếp tục sử dụng các tính chất của giải tích mệnh đề,
+\begin{align*}
+    G \implies &\forall x, \Big(\big(V_=(x, x) \iff V_\le(x, x) \big) \land V_\le(x, x)\Big) \equationexplanation{tính chất lũy đẳng}; \\
+    G \implies &\forall x, \Big(\big(V_=(x, x) \implies V_\le(x, x) \big) \land \big(V_\le(x, x) \implies V_=(x, x)\big) \land V_\le(x, x)\Big) \\
+    &\equationexplanation{định nghĩa phép tương đương}; \\
+    G \implies &\forall x, \Big(\big(V_\le(x, x) \implies V_=(x, x)\big) \land V_\le(x, x)\Big) \equationexplanation{tính chất rút gọn}; \\
+    G \implies &\forall x, V_=(x, x) \equationexplanation{quy tắc khẳng định}.
+\end{align*}
+Điều phải chứng minh.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Từ giả thiết, có
+\begin{equation}
+    G \implies \forall x, \forall y, \big(V_=(x, y) \iff V_\le(x, y) \land V_\le(y, x)\big).
+    \label{eq:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:2.1}
+\end{equation}
+Với quy tắc đổi tên biến ràng buộc, đổi $x$ và $y$ lần lượt bởi $y$ và $x$ để được
+\begin{equation*}
+    G \implies \forall y, \forall x, \big(V_=(y, x) \iff V_\le(y, x) \land V_\le(x, y)\big).
+\end{equation*}
+Do tính chất giao hoán của lượng từ,
+\begin{equation*}
+    G \implies \forall x, \forall y, \big(V_=(y, x) \iff V_\le(y, x) \land V_\le(x, y)\big).
+\end{equation*}
+Kết hợp với tính chất giao hoán của phép tuyển để suy ra
+\begin{equation}
+    G \implies \forall x, \forall y, \big(V_=(y, x) \iff V_\le(x, y) \land V_\le(y, x)\big).
+    \label{eq:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:2.2}
+\end{equation}
+Hội giữa \refeq{eq:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:2.1} và \refeq{eq:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:2.2}, thông qua tính chất phân phối,
+\begin{equation*}
+    G \implies \forall x, \forall y, \Big(\big(V_=(x, y) \iff V_\le(x, y) \land V_\le(y, x)\big) \land \big(V_=(y, x) \iff V_\le(x, y) \land V_\le(y, x)\big)\Big).
+\end{equation*}
+Chúng ta có thể chứng minh bằng việc tích hợp thêm tính chất bắc cầu
+\begin{equation*}
+    G \implies \forall x, \forall y, \big(V_=(x, y) \iff V_=(y, x)\big).
+\end{equation*}
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Chúng ta có định nghĩa
+\begin{equation*}
+   G \implies \forall x, \forall y, \big(V_=(x, y) \iff V_\le(x, y) \land V_\le(y, x)\big).
+\end{equation*}
+Sử dụng quy tắc đổi biến,
+\begin{equation*}
+    \begin{cases}
+        G \implies \forall y, \forall z, \big(V_=(y, z) \iff V_\le(y, z) \land V_\le(z, y)\big) \\
+        G \implies \forall x, \forall z, \big(V_=(x, z) \iff V_\le(x, z) \land V_\le(z, x)\big) 
+    \end{cases}.
+\end{equation*}
+Sử dụng tính chất lượng từ rỗng và tính chất giao hoán của lượng từ để có các kết luận
+\begin{equation*}
+    \begin{cases}
+        G \implies \forall x, \forall y, \forall z, \big(V_=(x, y) \iff V_\le(x, y) \land V_\le(y, x)\big) \\
+        G \implies \forall x, \forall y, \forall z, \big(V_=(y, z) \iff V_\le(y, z) \land V_\le(z, y)\big) \\
+        G \implies \forall x, \forall y, \forall z, \big(V_=(x, z) \iff V_\le(x, z) \land V_\le(z, x)\big) 
+    \end{cases}.
+\end{equation*}
+
+Để tiện lợi cho việc viết, chúng ta sẽ phân tích riêng thành phần mệnh đề phụ thuộc. Từ các kết luận vừa đưa ra, với mọi $x$, $y$ và $z$, chúng ta có
+\begin{align*}
+    V_=(x, y) \land V_=(y, z) \iff (V_\le(x, y) \land V_\le(y, x)) \land (V_\le(y, z) \land V_\le(z, y)).
+\end{align*}
