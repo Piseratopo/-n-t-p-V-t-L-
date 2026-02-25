@@ -169,7 +169,7 @@ Tiếp tục sử dụng các tính chất của giải tích mệnh đề,
 \arabic{subexercise}. Từ giả thiết, có
 \begin{equation}
     G \implies \forall x, \forall y, \big(V_=(x, y) \iff V_\le(x, y) \land V_\le(y, x)\big).
-    \label{eq:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:2.1}
+    \label{eq:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:quy_tac_suy_luan:2.1}
 \end{equation}
 Với quy tắc đổi tên biến ràng buộc, đổi $x$ và $y$ lần lượt bởi $y$ và $x$ để được
 \begin{equation*}
@@ -182,9 +182,9 @@ Do tính chất giao hoán của lượng từ,
 Kết hợp với tính chất giao hoán của phép tuyển để suy ra
 \begin{equation}
     G \implies \forall x, \forall y, \big(V_=(y, x) \iff V_\le(x, y) \land V_\le(y, x)\big).
-    \label{eq:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:2.2}
+    \label{eq:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:quy_tac_suy_luan:2.2}
 \end{equation}
-Hội giữa \refeq{eq:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:2.1} và \refeq{eq:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:2.2}, thông qua tính chất phân phối,
+Hội giữa \refeq{eq:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:quy_tac_suy_luan:2.1} và \refeq{eq:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:quy_tac_suy_luan:2.2}, thông qua tính chất phân phối,
 \begin{equation*}
     G \implies \forall x, \forall y, \Big(\big(V_=(x, y) \iff V_\le(x, y) \land V_\le(y, x)\big) \land \big(V_=(y, x) \iff V_\le(x, y) \land V_\le(y, x)\big)\Big).
 \end{equation*}
@@ -206,15 +206,29 @@ Sử dụng quy tắc đổi biến,
     \end{cases}.
 \end{equation*}
 Sử dụng tính chất lượng từ rỗng và tính chất giao hoán của lượng từ để có các kết luận
-\begin{equation*}
+\begin{equation}
     \begin{cases}
         G \implies \forall x, \forall y, \forall z, \big(V_=(x, y) \iff V_\le(x, y) \land V_\le(y, x)\big) \\
         G \implies \forall x, \forall y, \forall z, \big(V_=(y, z) \iff V_\le(y, z) \land V_\le(z, y)\big) \\
         G \implies \forall x, \forall y, \forall z, \big(V_=(x, z) \iff V_\le(x, z) \land V_\le(z, x)\big) 
     \end{cases}.
-\end{equation*}
+    \label{eq:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:quy_tac_suy_luan:3_1}
+\end{equation}
 
 Để tiện lợi cho việc viết, chúng ta sẽ phân tích riêng thành phần mệnh đề phụ thuộc. Từ các kết luận vừa đưa ra, với mọi $x$, $y$ và $z$, chúng ta có
-\begin{align*}
+\begin{equation*}
     V_=(x, y) \land V_=(y, z) \iff (V_\le(x, y) \land V_\le(y, x)) \land (V_\le(y, z) \land V_\le(z, y)).
-\end{align*}
+\end{equation*}
+Sử dụng kết hợp các tính chất giao hoán và kết hợp,
+\begin{equation}
+    V_=(x, y) \land V_=(y, z) \iff (V_\le(x, y) \land V_\le(y, z)) \land (V_\le(z, y) \land V_\le(y, x)).
+\end{equation}
+Từ giả thiết, với mọi $x$, $y$, $z$,
+\begin{equation}
+    V_\le(x, y) \land V_\le(y, z) \implies V_\le(x, z).
+\end{equation}
+Thế $x$, $y$, $z$ lần lượt thành $z$, $y$, $x$, chúng ta có:
+\begin{equation*}
+    \forall z, \forall y, \forall x, (V_\le(z, y) \land V_\le(y, x) \implies V_\le(z, x)).
+\end{equation*}
+Từ tính chất giao hoán của các lượng từ toàn cục
