@@ -222,13 +222,29 @@ Sử dụng tính chất lượng từ rỗng và tính chất giao hoán của 
 Sử dụng kết hợp các tính chất giao hoán và kết hợp,
 \begin{equation}
     V_=(x, y) \land V_=(y, z) \iff (V_\le(x, y) \land V_\le(y, z)) \land (V_\le(z, y) \land V_\le(y, x)).
+    \label{eq:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:quy_tac_suy_luan:3_2}
 \end{equation}
 Từ giả thiết, với mọi $x$, $y$, $z$,
 \begin{equation}
     V_\le(x, y) \land V_\le(y, z) \implies V_\le(x, z).
+    \label{eq:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:quy_tac_suy_luan:3_3}
 \end{equation}
 Thế $x$, $y$, $z$ lần lượt thành $z$, $y$, $x$, chúng ta có:
 \begin{equation*}
     \forall z, \forall y, \forall x, (V_\le(z, y) \land V_\le(y, x) \implies V_\le(z, x)).
 \end{equation*}
 Từ tính chất giao hoán của các lượng từ toàn cục
+\begin{equation}
+    \forall x, \forall y, \forall z, (V_\le(z, y) \land V_\le(y, x) \implies V_\le(z, x)).
+    \label{eq:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:quy_tac_suy_luan:3_4}
+\end{equation}
+
+\refeq{eq:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:quy_tac_suy_luan:3_2}, \refeq{eq:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:quy_tac_suy_luan:3_3} và \refeq{eq:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:quy_tac_suy_luan:3_4} cho được với mọi $x$, $y$ và $z$:
+\begin{equation*}
+    V_=(x, y) \land V_=(y, z) \iff V_\le(x, z) \land V_\le(z, x).
+\end{equation*}
+Kết hợp với \refeq{eq:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:quy_tac_suy_luan:3_1} để có
+\begin{equation*}
+    \forall x, \forall y, \forall z, (V_=(x, y) \land V_=(y, z) \iff V_=(x, z)).
+\end{equation*}
+Điều phải chứng minh
