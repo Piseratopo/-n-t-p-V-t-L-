@@ -133,10 +133,10 @@ Chứng minh rằng
     \begin{enumerate}
         \item $\forall x, V_=(x, x)$;
         \item $\forall x, \forall y, \big(V_=(x, y) \iff V_=(y, x)\big)$;
-        \item $\forall x, \forall y, \forall z, \big(V_=(x, y) \land V_=(y, z) \implies V_=(x, z)\big)$;
         \item $\forall x, \forall y, \big(V_<(x, y) \uparrow V_<(y, x))$;
-        \item $\forall x, \forall y, \forall z, \big(V_<(x, y) \land V_<(y, z) \implies V_<(x, z)\big)$;
         \item $\forall x, \forall y, \big(V_=(x, y) \iff V_<(x, y) \downarrow V_<(y, x)\big)$;
+        \item $\forall x, \forall y, \forall z, \big(V_=(x, y) \land V_=(y, z) \implies V_=(x, z)\big)$;
+        \item $\forall x, \forall y, \forall z, \big(V_<(x, y) \land V_<(y, z) \implies V_<(x, z)\big)$;
         \item $\forall x, \forall y, \forall z, \big(V_=(x, y) \land V_<(y, z) \implies V_<(x, z)\big)$;
         \item $\forall x, \forall y, \forall z, \big(V_<(x, y) \land V_=(y, z) \implies V_<(x, z)\big)$.
     \end{enumerate}
@@ -194,6 +194,47 @@ Chúng ta có thể chứng minh bằng việc tích hợp thêm tính chất b�
 \end{equation*}
 
 \stepcounter{subexercise}
+\arabic{subexercise}.
+Chúng ta có
+\begin{equation*}
+    G \implies \forall x, \forall y, \big(V_\le(x, y) \lor V_\le(y, x)\big),
+\end{equation*}
+và bảng \ref{tab:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:quy_tac_suy_luan:4_tab}.
+\begin{table}[H]
+	\centering
+	\caption{Bảng giá trị chân lí của $ P \lor Q \implies \neg P \uparrow \neg Q$}
+    \label{tab:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:quy_tac_suy_luan:4_tab}
+	\begin{tabular}{|c|c|ccccccccc!{\vrule width 1.5pt}c|}
+		\hline
+		$P$ & $Q$ & $P$ & $\lor$ & $Q$ & $\implies$ & $\neg$ & $P$ & $\uparrow$ & $\neg$ & $Q$ & $ P \lor Q \implies \neg P \uparrow \neg Q$ \\
+		\headerDivider
+		Đ & Đ & Đ & Đ & Đ & \emphcolor{Đ} & S & Đ & Đ & S & Đ & \multirow{4}{*}{\huge\vspace{-12pt}Đ}\\
+		Đ & S & Đ & Đ & S & \emphcolor{Đ} & S & Đ & Đ & Đ & S & \\
+		S & Đ & S & Đ & Đ & \emphcolor{Đ} & Đ & S & Đ & S & Đ & \\
+		S & S & S & S & S & \emphcolor{Đ} & Đ & S & S & Đ & S & \\
+		\hline
+	\end{tabular}
+\end{table}
+Điều này chứng minh
+\begin{equation*}
+    G \implies \forall x, \forall y, \big(\neg V_\le(x, y) \uparrow \neg V_\le(y, x)\big).
+\end{equation*}
+
+Chúng ta cũng đã có
+\begin{equation*}
+    G \implies \forall x, \forall y, \big(\neg V_\le(y, x) \iff V_<(x, y)\big),
+\end{equation*}
+sử dụng quy tắc đổi tên biến rằng buộc và tính chất giao hoán của lượng từ $\forall$ để đảo vị trí $x$ và $y$ trong vị từ:
+\begin{equation*}
+    G \implies \forall x, \forall y, \big(\neg V_\le(x, y) \iff V_<(y, x)\big).
+\end{equation*}
+Từ các kết quả đã có, sử dụng thay thế tương đương để được
+\begin{equation*}
+    G \implies \forall x, \forall y, \big(V_<(y, x) \uparrow V_<(x, y)\big).
+\end{equation*}
+Dễ thấy điều phải chứng minh.
+
+\stepcounter{subexercise}
 \arabic{subexercise}. Chúng ta có định nghĩa
 \begin{equation*}
    G \implies \forall x, \forall y, \big(V_=(x, y) \iff V_\le(x, y) \land V_\le(y, x)\big).
@@ -247,4 +288,7 @@ Kết hợp với \refeq{eq:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:quy_tac_su
 \begin{equation*}
     \forall x, \forall y, \forall z, (V_=(x, y) \land V_=(y, z) \iff V_=(x, z)).
 \end{equation*}
-Điều phải chứng minh
+Điều phải chứng minh.
+
+\stepcounter{subexercise}
+\arabic{subexercise}.
