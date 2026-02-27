@@ -133,6 +133,7 @@ Chứng minh rằng
     \begin{enumerate}
         \item $\forall x, V_=(x, x)$;
         \item $\forall x, \forall y, \big(V_=(x, y) \iff V_=(y, x)\big)$;
+        \item $\forall x, \forall y, \big(V_<(x, y) \implies V_\le(x, y))$;
         \item $\forall x, \forall y, \big(V_<(x, y) \uparrow V_<(y, x))$;
         \item $\forall x, \forall y, \big(V_=(x, y) \iff V_<(x, y) \downarrow V_<(y, x)\big)$;
         \item $\forall x, \forall y, \forall z, \big(V_=(x, y) \land V_=(y, z) \implies V_=(x, z)\big)$;
@@ -195,6 +196,41 @@ Chúng ta có thể chứng minh bằng việc tích hợp thêm tính chất b�
 
 \stepcounter{subexercise}
 \arabic{subexercise}.
+Chúng ta có thể khẳng định sự hiển nhiên của $(P \lor Q) \land \neg P \implies Q$ cửa bảng giá trị chân lí \ref{tab:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:quy_tac_suy_luan:3.1}.
+\begin{table}[H]
+	\centering
+	\caption{Bảng giá trị chân lí của $( P \lor Q ) \land \neg Q \implies P$}
+    \label{tab:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:quy_tac_suy_luan:3.1}
+
+	\begin{tabular}{|c|c|cccccccc!{\vrule width 1.5pt}c|}
+		\hline
+		$P$ & $Q$ & $(P$ & $\lor$ & $Q)$ & $\land$ & $\neg$ & $Q$ & $\implies$ & $P$ & $( P \lor Q ) \land \neg Q \implies P$\\
+		\headerDivider
+		Đ & Đ & Đ & Đ & Đ & S & S & Đ & \emphcolor{Đ} & Đ & \multirow{4}{*}{\huge\vspace{-12pt}Đ}\\
+		Đ & S & Đ & Đ & S & Đ & Đ & S & \emphcolor{Đ} & Đ & \\
+		S & Đ & S & Đ & Đ & S & S & Đ & \emphcolor{Đ} & S & \\
+		S & S & S & S & S & S & Đ & S & \emphcolor{Đ} & S & \\
+		\hline
+	\end{tabular}
+\end{table}
+Sử dụng quy tắc thay thế, đổi $P$ và $Q$ lần lượt bởi $V_\le(x, y)$ và $V_\le(y, x)$, chúng ta có
+\begin{equation*}
+    G \implies \forall x, \forall y, \big((V_\le(x, y) \lor V_\le(y, x) )\land \neg V_\le(y, x) \implies V_\le(x, y)\big). 
+\end{equation*}
+
+Từ định nghĩa,
+\begin{equation*}
+    G \implies \forall x, \forall y, \big(V_<(x, y) \iff \neg V_\le(y, x)\big).
+\end{equation*}
+Qua đó, kết hợp hai mệnh đề, sử dụng thay thế cơ bản để có
+\begin{align*}
+    G &\implies \forall x, \forall y, \big((V_\le(x, y) \lor V_\le(y, x))\land V_<(x, y) \implies V_\le(x, y)\big); \\ 
+    G &\implies \forall x, \forall y, \big(V_<(x, y) \implies V_\le(x, y)\big) \equationexplanation{tính chất rút gọn}.
+\end{align*}
+Điều phải chứng minh.
+
+\stepcounter{subexercise}
+\arabic{subexercise}.
 Chúng ta có
 \begin{equation*}
     G \implies \forall x, \forall y, \big(V_\le(x, y) \lor V_\le(y, x)\big),
@@ -233,6 +269,29 @@ Từ các kết quả đã có, sử dụng thay thế tương đương để đ
     G \implies \forall x, \forall y, \big(V_<(y, x) \uparrow V_<(x, y)\big).
 \end{equation*}
 Dễ thấy điều phải chứng minh.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Trước khi thực hiện biến đổi, chúng ta sẽ thực hiện một vài phân tích. Từ giả thiết, chúng ta có:
+\begin{equation*}
+    \begin{cases}
+        G \implies \forall x, \forall y, \big(V_=(x, y) \iff V_\le(x, y) \land V_\le(y, x)\big) \\
+        G \implies \forall x, \forall y, \big(V_<(x, y) \iff \neg V_\le(y, x)\big)
+    \end{cases}.
+\end{equation*}
+Thay thế hạng thức phụ thuộc trên mệnh đề thứ hai và hoán đổi vị trí hai lượng từ để được
+\begin{equation*}
+    G \implies \forall x, \forall y, \big(V_<(y, x) \iff \neg V_\le(x, y)\big).
+\end{equation*}
+
+Sau khi có những điều cần thiết này, thực hiện biến đổi.
+\begin{align*}
+    G &\implies \forall x, \forall y, \big(V_=(x, y) \iff V_\le(y, x) \land V_\le(x, y)\big); \\
+    G &\implies \forall x, \forall y, \big(V_=(x, y) \iff \neg \neg V_\le(y, x) \land \neg \neg V_\le(x, y)\big) \equationexplanation{tính chất phủ định kép}; \\
+    G &\implies \forall x, \forall y, \big(V_=(x, y) \iff \neg V_<(x, y) \land \neg V_<(y, x)\big) \equationexplanation{thay thế tương đương}; \\
+    G &\implies \forall x, \forall y, \big(V_=(x, y) \iff \overline{V_<(x, y) \lor V_<(y, x)}\big) \equationexplanation{định luật Đờ Moóc-gơn}\\
+    G &\implies \forall x, \forall y, \big(V_=(x, y) \iff V_<(x, y) \downarrow V_<(y, x)\big) \equationexplanation{định nghĩa của phép phủ định hội}.
+\end{align*}
+Chúng ta có điều phải chứng minh.
 
 \stepcounter{subexercise}
 \arabic{subexercise}. Chúng ta có định nghĩa
