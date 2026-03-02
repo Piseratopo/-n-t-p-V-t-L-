@@ -205,16 +205,14 @@ Thực hiện biến đổi từ giả thiết
 chúng ta có
 \begin{align*}
     G &\implies \forall x, \forall y, \big(V_=(x, y) \lor V_<(x, y) \iff V_\le(x, y) \land V_\le(y, x) \lor \neg V_\le(y, x)\big); \\
-    G &\implies \forall x, \forall y, \\
-    & \big(V_=(x, y) \lor V_<(x, y) \iff (V_\le(x, y) \lor \neg V_\le(y, x)) \land (V_<(y, x) \land \neg V_\le(y, x))\big) \equationexplanation{tính chất phân phối};\\
-    G &\implies \forall x, \forall y, (V_=(x, y) \lor \neg V_\le(y, x)) \equationexplanation{tính chất không mâu thuẫn và đồng nhất với phép tuyển}.
+    G &\implies \forall x, \forall y,\big(V_=(x, y) \lor V_<(x, y) \iff (V_\le(x, y) \lor \neg V_\le(y, x)) \land (V_<(y, x) \lor \neg V_\le(y, x))\big)\\
+    &\equationexplanation{tính chất phân phối};\\
+    G &\implies \forall x, \forall y, \big(V_=(x, y) \lor V_<(x, y) \iff V_\le(x, y) \lor \neg V_\le(y, x)\big) \\
+    &\equationexplanation{tính chất không mâu thuẫn và đồng nhất với phép tuyển}.
 \end{align*}
 
-Giả thiết còn có
-$$
-G \implies \forall x, \forall y, \big(V_\le(x, y) \lor V_\le(y, x)\big),
-$$
-cho nên
+
+
 Điều phải chứng minh.
 
 \stepcounter{subexercise}
