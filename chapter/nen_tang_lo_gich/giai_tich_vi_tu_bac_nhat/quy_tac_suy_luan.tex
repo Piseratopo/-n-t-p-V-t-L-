@@ -203,17 +203,27 @@ Thực hiện biến đổi từ giả thiết
     \end{cases},
 \end{equation*}
 chúng ta có
+\begin{align}
+    G &\implies \forall x, \forall y, \big(V_=(x, y) \lor V_<(x, y) \iff V_\le(x, y) \land V_\le(y, x) \lor \neg V_\le(y, x)\big); \nonumber\\
+    G &\implies \forall x, \forall y,\big(V_=(x, y) \lor V_<(x, y) \iff (V_\le(x, y) \lor \neg V_\le(y, x)) \land (V_<(y, x) \lor \neg V_\le(y, x))\big) \nonumber\\
+    &\equationexplanation{tính chất phân phối}; \nonumber\\
+    G &\implies \forall x, \forall y, \big(V_=(x, y) \lor V_<(x, y) \iff V_\le(x, y) \lor \neg V_\le(y, x)\big) \nonumber \\
+    &\equationexplanation{tính chất không mâu thuẫn và đồng nhất với phép tuyển}. \label{eq:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:quy_tac_suy_luan:3.11}
+\end{align}
+
+Mặt khác, từ giả thiết
 \begin{align*}
-    G &\implies \forall x, \forall y, \big(V_=(x, y) \lor V_<(x, y) \iff V_\le(x, y) \land V_\le(y, x) \lor \neg V_\le(y, x)\big); \\
-    G &\implies \forall x, \forall y,\big(V_=(x, y) \lor V_<(x, y) \iff (V_\le(x, y) \lor \neg V_\le(y, x)) \land (V_<(y, x) \lor \neg V_\le(y, x))\big)\\
-    &\equationexplanation{tính chất phân phối};\\
-    G &\implies \forall x, \forall y, \big(V_=(x, y) \lor V_<(x, y) \iff V_\le(x, y) \lor \neg V_\le(y, x)\big) \\
-    &\equationexplanation{tính chất không mâu thuẫn và đồng nhất với phép tuyển}.
+    G &\implies \forall x, \forall y, \big(V_\le(y, x) \lor V_\le(x, y)\big); \\
+    G &\implies \forall x, \forall y, \big(\overline{\neg V_\le(y, x)} \lor V_\le(x, y)\big) \equationexplanation{tính chất phủ định kép}; \\
+    G &\implies \forall x, \forall y, \big(\neg V_\le(y, x) \implies V_\le(x, y) \big) \equationexplanation{định nghĩa phép kéo theo}.
 \end{align*}
 
-
-
-Điều phải chứng minh.
+Từ đó, chúng ta có thể kết luận được với mọi $x$ và $y$, $\neg V_\le(y, x)$ chứng minh $V_\le(x, y)$. Do vậy, chúng ta có thể suy luận từ \refeq{eq:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:quy_tac_suy_luan:3.11} rằng
+\begin{align*}
+    G &\implies \forall x, \forall y, \big(V_=(x, y) \lor V_<(x, y) \iff V_\le(x, y) \lor V_\le(x, y)\big); \\
+    G &\implies \forall x, \forall y, \big(V_=(x, y) \lor V_<(x, y) \iff V_\le(x, y)\big) \equationexplanation{tính chất đồng nhất}. 
+\end{align*}
+Áp dụng tính chất giao hoán trên phép tương đương để có điều phải chứng minh.
 
 \stepcounter{subexercise}
 \arabic{subexercise}.
@@ -337,3 +347,30 @@ Kết hợp với \refeq{eq:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:quy_tac_su
 
 \stepcounter{subexercise}
 \arabic{subexercise}.
+Trước khi chứng minh, chúng ta cần một số kết quả từ $G$:
+\begin{equation*}
+    \begin{cases}
+        \forall x, \forall y, \big(V_<(x, y) \iff \neg V_\le(y, x)\big) \\
+        \forall x, \forall y, \forall z, \big(V_\le(x, y) \land V_\le(y, z) \iff V_\le(z, x)\big)
+    \end{cases}.
+\end{equation*}
+Đổi hạng thức phụ thuộc,
+\begin{align*}
+    \begin{cases}
+        \forall y, \forall z, \big(V_<(y, z) \iff \neg V_\le(z, y)\big) \\
+        \forall z, \forall x, \forall y, \big(V_\le(z, x) \land V_\le(x, y) \implies V_\le(z, y)\big)
+    \end{cases}.
+\end{align*}
+Thêm lượng từ rỗng và sử dụng tính chất giao hoán trên lượng từ,
+\begin{align*}
+    \begin{cases}
+        \forall x, \forall y, \forall z, \big(V_<(y, z) \iff \neg V_\le(z, y)\big) \\
+        \forall x, \forall y, \forall z, \big(V_\le(z, x) \land V_\le(x, y) \implies V_\le(z, y)\big)
+    \end{cases}.
+\end{align*}
+
+Do đó, dưới điều kiện $G$, 
+\begin{align*}
+    \forall x, \forall y, \forall z, \big(V_\le(x, y) \land V_<(y, z) \land V_\le(z, x)\big) &\iff \forall x, \forall y, \forall z, \big((V_\le(x, y) \land V_\le(z, x)) \land V_<(y, z) \big) \\ &\equationexplanation{tính chất giao hoán và kết hợp của phép hội};\\
+    \forall x, \forall y, \forall z, \big(V_\le(x, y) \land V_<(y, z) \land V_\le(z, x)\big) &\implies 
+\end{align*}
