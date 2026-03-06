@@ -372,5 +372,28 @@ Thêm lượng từ rỗng và sử dụng tính chất giao hoán trên lượn
 Do đó, dưới điều kiện $G$, 
 \begin{align*}
     \forall x, \forall y, \forall z, \big(V_\le(x, y) \land V_<(y, z) \land V_\le(z, x)\big) &\iff \forall x, \forall y, \forall z, \big((V_\le(x, y) \land V_\le(z, x)) \land V_<(y, z) \big) \\ &\equationexplanation{tính chất giao hoán và kết hợp của phép hội};\\
-    \forall x, \forall y, \forall z, \big(V_\le(x, y) \land V_<(y, z) \land V_\le(z, x)\big) &\implies 
+    \forall x, \forall y, \forall z, \big(V_\le(x, y) \land V_<(y, z) \land V_\le(z, x)\big) &\implies \forall x, \forall y, \forall z, \big(V_\le(z, y) \land \neg V_\le(z, y)\big); \\
+    \forall x, \forall y, \forall z, \big(V_\le(x, y) \land V_<(y, z) \land V_\le(z, x)\big) &\implies \forall x, \forall y, \forall z, \mathbf{M} \equationexplanation{tính chất không mâu thuẫn}.
 \end{align*}
+
+Qua đó, chúng ta có mẫu thuẫn $V_\le(x, y) \land V_<(y, z) \land V_\le(z, x)$ với mọi $x$, $y$ và $z$. Theo chứng minh bằng phản chứng, chúng ta phải có $\neg V_\le(z, x)$ hay $V_<(x, z)$ nếu có giả thiết $V_\le(x, y) \land V_<(y,z)$. Nói cách khác, từ phản chứng,
+$$
+    \forall x, \forall y, \forall z, \big(V_\le(x, y) \land V_<(y,z) \implies V_<(x, z)\big).
+$$
+Chúng ta có điều phải chứng minh.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Lập luận tương tự như phần \the\numexpr\value{subexercise}-1\relax, chúng ta có
+$$
+    \begin{cases}
+        \forall x, \forall y, \forall z, \big(V_<(x, y) \iff \neg V_\le(y, x)\big) \\
+        \forall x, \forall y, \forall z, \big(V_<(x, z) \iff \neg V_\le(z, x)\big)
+    \end{cases}.
+$$
+Qua đó, có được liên tiếp các lập luận như sau:
+\begin{align*}
+    \forall x, \forall y, \forall z, \big(V_<(x, y) \land V_\le(y, z) \land \neg V_<(x, z)\big) &\iff \forall x, \forall y, \forall z, \big(\neg V_\le(y, x) \land V_\le(y, z) \land V_\le(z, x)\big) \\
+    \forall x, \forall y, \forall z, \big(V_<(x, y) \land V_\le(y, z) \land \neg V_<(x, z)\big) &\iff \forall x, \forall y, \forall z, \big(\neg V_\le(y, x) \land V_\le(y, x)\big) \\
+    \forall x, \forall y, \forall z, \big(V_<(x, y) \land V_\le(y, z) \land \neg V_<(x, z)\big) &\iff \forall x, \forall y, \forall z, \mathbf{M}.
+\end{align*}
+Theo chứng minh bẳng phản chứng, dễ thấy có điều phải chứng minh.
