@@ -22,11 +22,24 @@ Sự khác biệt duy nhất giữa hai mệnh đề là sự thay thế hạng 
 
 \
 
-Đối với giao tiếp thông thường, không ai quan trọng hóa thứ tự của các cụm ``với mọi'' với nhau. Nhiều khi, người ta sẽ tổng hợp thành một lần nói ``với mọi'' nếu cần tổng quát hóa nhiều thành phần. Do được xây dựng dựa trên nền tảng thế giới vật lí, lượng từ phổ quát trong lô-gích cũng có tính chất tương tự. Chúng ta luôn có \defText{tính chất giao hoán của lượng từ phổ quát} như sau
+Đối với giao tiếp thông thường, không ai quan trọng hóa thứ tự của các cụm ``với mọi'' với nhau. Nhiều khi, người ta sẽ tổng hợp thành một lần nói ``với mọi'' nếu cần tổng quát hóa nhiều thành phần. Thực vậy, giả sử trong một chiếc bình thủy tinh có một số hạt thóc, có thể có phát biểu rằng
+\begin{center}
+    ``Với mọi hạt thóc $x$ trong bình, khoảng cách từ nó tới mọi hạt thóc trong bình $y$ đều nhỏ hơn nửa mét.''.
+\end{center}
+Để kiểm tra mệnh đề này, chúng ta cần làm như thế nào? Chúng ta cần, trước hết, chọn một hạt thóc $x$, sau đó, chọn một hạt thóc $y$ để kiểm tra. Lặp lại cho đến khi hết thóc trong bình. Chúng ta có thể thay đổi thứ tự không, khi mà chọn hạt thóc để kiểm tra $y$ trước, rồi mới chọn hạt $x$? Hiển nhiên là hoàn toàn được. Điều này dẫn đến một mệnh đề tương đương:
+\begin{center}
+    ``Với mọi hạt thóc $y$ trong bình, khoảng cách từ nó tới mọi hạt thóc trong bình $x$ đều nhỏ hơn nửa mét.''
+\end{center}
+và qua đó, mệnh đề có thể viết lại là
+\begin{center}
+    ``Với mọi hạt thóc $x$ và $y$ ở trong bình, khoảng cách giữa chúng đều nhỏ hơn nửa mét.''.
+\end{center}
+
+Do được xây dựng dựa trên nền tảng thế giới vật lí, lượng từ phổ quát trong lô-gích cũng có tính chất tương tự. Chúng ta luôn có \defText{tính chất giao hoán của lượng từ phổ quát} có thể được phát biểu là: khi một mệnh đề có chứa nhiều lượng từ ``với mọi'' liên tiếp nhau, việc thay đổi thứ tự của các đối tượng được xét đến không làm thay đổi ý nghĩa hay giá trị đúng/sai của mệnh đề đó. Tính chất này có thể được viết dưới dạng kí hiệu như sau
 \begin{equation*}
-    \defMath{\forall x, \forall y, L(x; y) \iff \forall y, \forall x, L(x; y)}.
+    \defMath{\forall x, \forall y, L(x; y) \iff \forall y, \forall x, L(x; y)}
 \end{equation*}
-Điều này cho phép viết $\defMath{\forall(x; y), L(x; y)}$ mà không làm mất nghĩa mệnh đề nhưng tác giả sẽ hạn chế viết như vậy do, thứ nhất, kí hiệu $\forall(x; y)$ trông khá giống kí hiệu vị từ, và thứ hai, ít sách có kí hiệu này.
+với $L()$ là một vị từ bất kì. Điều này cho phép viết $\defMath{\forall(x; y), L(x; y)}$ mà không làm mất nghĩa mệnh đề nhưng tác giả sẽ hạn chế viết như vậy do, thứ nhất, kí hiệu $\forall(x; y)$ trông khá giống kí hiệu vị từ, và thứ hai, ít sách có kí hiệu này.
 
 \subsection{Tính chất phân phối của lượng từ phổ quát đối với phép hội}
 
@@ -55,7 +68,8 @@ $$\forall x, (K(x) \implies V(x)) \land \forall x, (T(x) \implies K(x)).$$
 Để tiếp tục lập luận, chúng ta cần sự trợ giúp của một quy tắc lập luận mới --- \defText{tính chất phân phối của lượng từ phổ quát đối với phép hội}: 
 \begin{quotation}
     Nếu hai mệnh đề con có cùng lượng từ và được kết nối bởi phép nối hội thì có thể kết hợp hai công thức nằm trong tầm ảnh hưởng của lượng từ thành một công thức bởi phép hội để tạo thành một mệnh đề tương đương, hay
-    $$\defMath{\forall x, A(x) \land \forall x, B(x) \iff \forall x, (A(x) \land B(x))}.$$
+    $$\defMath{\forall x, A(x) \land \forall x, B(x) \iff \forall x, (A(x) \land B(x))}$$
+    với vị từ $A()$ và $B()$ ngẫu nhiên.
 \end{quotation}
     Sử dụng quy tắc thay thế, thay $A(x)$ và $B(x)$ lần lượt bởi $K(x) \implies V(x)$ và $T(x) \implies K(x)$, chúng ta có:
 $$G \iff \forall x, \big((K(x) \implies V(x)) \land (T(x) \implies K(x))\big).$$
@@ -87,7 +101,7 @@ Với cách kí hiệu hóa tương tự, chúng ta có
 \end{center}
 với $e$ viết tắt cho ``Ê-mô-ri-ô''. Việc lập luẫn dẫn một cách tự nhiên đến với quy tắc tiếp theo --- \defText{quy tắc cụ thể hóa biến phổ quát} hoặc \defText{phép loại bỏ lượng từ phổ quát}:
 \begin{quotation}
-    $\defMath{\forall x, A(x) \implies A(e)}$ với $e$ là một hạng thức đã xác định, hay nói suồng sã hơn, nếu một tính chất đúng với toàn cục thì nó cũng đúng với bộ phận.  
+    $\defMath{\forall x, A(x) \implies A(e)}$ với $A()$ là một vị từ và $e$ là một hạng thức đã xác định, hay nói suồng sã hơn, nếu một tính chất đúng với toàn cục thì nó cũng đúng với bộ phận.  
 \end{quotation}
 
 Gọi hợp các giả thiết là $G$, với quy tắc này, chúng ta có
@@ -97,16 +111,17 @@ Gọi hợp các giả thiết là $G$, với quy tắc này, chúng ta có
 \end{align*}
 Kết luận được khẳng định từ giả thiết.
 
-\subsection{Quy tắc tồn tại hóa}
+\subsection{Quy tắc cụ thể hóa và quy tắc tồn tại hóa}
 
 \ 
 
-Bất cứ khi nào chúng ta nói rằng ``tồn tại một $x$ thỏa mãn một tính chất $A(x)$ nào đó'', điều đó có nghĩa rằng $x$ có thể là một $c$ nào đó có tính chất $A(c)$. Chúng ta không biết, và cũng không cần phải biết, $c$ có hình thù ra làm sao, tên tuổi như thế nào. Chúng ta chỉ cần biết là có một $c$, hay một $x$ thỏa mãn tính chất đã cho và chúng ta có thể tìm thêm những tính chất mới trên vật chất $c$ mới đó.
+Bất cứ khi nào chúng ta nói rằng ``tồn tại một $x$ thỏa mãn một tính chất $A(x)$ nào đó'', điều đó có nghĩa rằng $x$ có thể là một $c$ nào đó có tính chất $A(c)$. Chúng ta không biết, và cũng không cần phải biết, $c$ có hình thù ra làm sao, tên tuổi như thế nào. Điều hiển nhiên này được gọi là \defText{quy tắc cụ thể hóa}. Dù nghe có vẻ hiển nhiên, việc chính thống hóa nó là một bước ngoặt quan trọng trong lập luận. Nó cung cấp cho chúng ta một cái tên tạm để đặt nó vào bàn cân suy luận và từ đó liên kết thêm các định luật khác và khám phá ra những thuộc tính mới.
 
 Hãy nhìn theo chiều ngược lại, giả sử chúng ta có $A(x)$ đúng khi thay $x$ bởi $c$, điều này hiển nhiên cho chúng ta mệnh đề đúng là ``tồn tại một $x$ thỏa mãn tính chất $A(x)$''. Đây chính là \defText{quy tắc tồn tại hóa}:
 \begin{equation*}
     \defMath{A(c) \implies \exists x, A(x).}
 \end{equation*}
+Biểu diễn dưới dạng lời văn: nếu chúng ta tìm thấy một sự vật có tính chất nào đó, thì chúng ta có thể khẳng định rằng tồn tại một sự vật thỏa mãn tính chất đang được quan tâm đó.
 
 \subsection{Tính chất lượng từ rỗng}
 
@@ -120,6 +135,35 @@ Có bớt đi thì cũng sẽ phải có thêm vào. Với $A$ là một mệnh 
     \end{cases}.
 \end{equation*}
 Có thể thấy được tại sao tính chất này có tên là \defText{tính chất lượng từ rỗng}, bởi vì nếu $A$ không có hạng thức $x$, các lượng từ ảnh hưởng đến $x$ sẽ không có giá trị trên $A$.
+
+\exercise Cho hai vị từ $A()$ và $B()$. Chứng minh rằng, 
+\begin{enumerate}
+    \item $\exists x, \exists y, A(x; y) \iff \exists y, \exists x, A(x; y)$ (tính chất giao hoán của lượng từ tồn tại);
+    \item $\exists x, (A(x) \lor B(x)) \iff \exists x, A(x) \lor \exists x, B(x)$ (tính chất phân phối của lượng từ tồn tại);
+    \item $\exists x, \forall y, A(x;y) \implies \forall y, \exists x, A(x; y)$ (quy tắc trao đổi lượng từ).
+\end{enumerate}
+
+\solution
+
+\setcounter{subexercise}{1}
+\arabic{subexercise}. Do quy tắc cụ thể hóa, từ $\exists x, \exists y, A(x; y)$ chúng ta có thể gọi hạng thức $m$ thay thế cho $x$ sao cho $\exists y, A(m; y)$. Và cũng do quy tắc đó, có thể gọi $n$ thay cho $y$ để $A(m; n)$. Do tồn tại $m$ thỏa mãn $A(x; n)$ nên theo quy tắc tồn tại hóa, $\exists x, A(x; n)$. Và do $n$ làm $\exists x, A(x; y)$ đúng nên dẫn đến $\exists y, \exists x, A(x; y)$. Do vậy,
+\begin{equation*}
+    \exists x, \exists y, A(x; y) \implies \exists y, \exists x, A(x; y).
+\end{equation*}
+
+Tương tự, chúng ta cũng có thể có được $\exists x, \exists y, A(x; y) \impliedby \exists y, \exists x, A(x; y)$. Do định nghĩa của phép tương đương, $\exists x, \exists y, A(x; y) \iff \exists y, \exists x, A(x; y)$. Điều phải chứng minh.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Giả sử $\exists x, (A(x) \lor B(x))$. Theo quy tắc cụ thể hóa, tồn tại $c$ để $A(c) \lor B(c)$. Từ định nghĩa của phép tuyển, ít nhất một trong hai vị từ $A(c)$ và $B(c)$ đúng.
+\begin{itemize}
+    \item Nếu $A(c)$ đúng, thì theo quy tắc tồn tại hóa, $\exists x, A(x)$ đúng.
+    \item Tương tự, nếu $B(c)$ đúng thì $\exists x, B(x)$ cũng đúng.
+\end{itemize}
+Qua hai trường hợp như vậy, chúng ta có $\exists x, A(x) \lor \exists x, B(x)$. Như vậy, chúng ta đã khẳng định được $\exists x, (A(x) \lor B(x)) \implies \exists x, A(x) \lor \exists x, B(x)$.
+
+Ngược lại, giả sử chúng ta đã có $\exists x, A(x) \lor \exists x, B(x)$. Trong một trường hợp, chúng ta có $\exists x, A(x)$. Lấy $c$ thỏa mãn $A()$. Theo định nghĩa của phép tuyển, $A(c) \lor B(c)$. Do đó, theo quy tắc tồn tại hóa, $\exists x, (A(x) \lor B(x))$. Với một lập luận tương tự, chúng ta cũng có $\exists x, B(x) \implies \exists x, (A(x) \lor B(x))$. Do đó, $\exists x, A(x) \lor \exists x, B(x) \implies \exists x, (A(x) \lor B(x))$.
+
+Kết hợp hai chiều theo định nghĩa của phép tương đương, chúng ta có điều phải chứng minh.
 
 \exercise Dấu $\le$ là một dấu có nhiều ứng dụng quan trọng trong toán học, nhưng khái niệm so sánh xuất hiện trong gần như toàn bộ mọi lĩnh vực trong đời sống. Nếu như Ê-mô-ri-ô viết
 \begin{center}
@@ -324,11 +368,11 @@ Sử dụng tính chất lượng từ rỗng và tính chất giao hoán của 
 
 Để tiện lợi cho việc viết, chúng ta sẽ phân tích riêng thành phần mệnh đề phụ thuộc. Từ các kết luận vừa đưa ra, với mọi $x$, $y$ và $z$, chúng ta có
 \begin{equation*}
-    V_=(x; y) \land V_=(y; z) \iff (V_\le(x; y) \land V_\le(y; x)) \land (V_\le(y; z) \land V_\le(z; y)).
+    V_=(x; y) \land V_=(y; z) \iff \big(V_\le(x; y) \land V_\le(y; x)\big) \land \big(V_\le(y; z) \land V_\le(z; y)\big).
 \end{equation*}
 Sử dụng kết hợp các tính chất giao hoán và kết hợp,
 \begin{equation}
-    V_=(x; y) \land V_=(y; z) \iff (V_\le(x; y) \land V_\le(y; z)) \land (V_\le(z; y) \land V_\le(y; x)).
+    V_=(x; y) \land V_=(y; z) \iff \big(V_\le(x; y) \land V_\le(y; z)\big) \land \big(V_\le(z; y) \land V_\le(y; x)\big).
     \label{eq:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:quy_tac_suy_luan:3_2}
 \end{equation}
 Từ giả thiết, với mọi $x$, $y$, $z$,
@@ -338,11 +382,11 @@ Từ giả thiết, với mọi $x$, $y$, $z$,
 \end{equation}
 Thế $x$, $y$, $z$ lần lượt thành $z$, $y$, $x$, chúng ta có:
 \begin{equation*}
-    \forall z, \forall y, \forall x, (V_\le(z; y) \land V_\le(y; x) \implies V_\le(z; x)).
+    \forall z, \forall y, \forall x, \big(V_\le(z; y) \land V_\le(y; x) \implies V_\le(z; x)\big).
 \end{equation*}
 Từ tính chất giao hoán của các lượng từ toàn cục
 \begin{equation}
-    \forall x, \forall y, \forall z, (V_\le(z; y) \land V_\le(y; x) \implies V_\le(z; x)).
+    \forall x, \forall y, \forall z, \big(V_\le(z; y) \land V_\le(y; x) \implies V_\le(z; x)\big).
     \label{eq:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:quy_tac_suy_luan:3_4}
 \end{equation}
 
@@ -352,7 +396,7 @@ Từ tính chất giao hoán của các lượng từ toàn cục
 \end{equation*}
 Kết hợp với \refeq{eq:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:quy_tac_suy_luan:3_1} để có
 \begin{equation*}
-    \forall x, \forall y, \forall z, (V_=(x; y) \land V_=(y; z) \iff V_=(x; z)).
+    \forall x, \forall y, \forall z, \big(V_=(x; y) \land V_=(y; z) \iff V_=(x; z)\big).
 \end{equation*}
 Điều phải chứng minh.
 
