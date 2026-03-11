@@ -138,6 +138,7 @@ Có thể thấy được tại sao tính chất này có tên là \defText{tín
 
 \exercise Cho hai vị từ $A()$ và $B()$. Chứng minh rằng, 
 \begin{enumerate}
+    \item $\forall x, A(x) \lor \forall x, B(x) \implies \forall x, \left(A(x) \lor B(x)\right)$;
     \item $\exists x, \exists y, A(x; y) \iff \exists y, \exists x, A(x; y)$ (tính chất giao hoán của lượng từ tồn tại);
     \item $\exists x, (A(x) \lor B(x)) \iff \exists x, A(x) \lor \exists x, B(x)$ (tính chất phân phối của lượng từ tồn tại);
     \item $\exists x, \forall y, A(x;y) \implies \forall y, \exists x, A(x; y)$ (quy tắc trao đổi lượng từ).
@@ -146,6 +147,12 @@ Có thể thấy được tại sao tính chất này có tên là \defText{tín
 \solution
 
 \setcounter{subexercise}{1}
+\arabic{subexercise}. Khi có $\forall x, A(x) \lor \forall x, B(x)$, chúng ta xét hai trường hợp:
+\begin{itemize}
+    \item \textcolor{colorEmphasisCyan}{Trường hợp 1 --- $\forall x, A(x)$}: Do có $P \implies P \lor Q$ đúng với mọi mệnh đề $P$ và $Q$ theo tính chất cộng, cho nên $\forall x, A(x) \implies \forall x, \left(A(x) \lor B(x)\right)$.
+\end{itemize}
+
+\stepcounter{subexercise}
 \arabic{subexercise}. Do quy tắc cụ thể hóa, từ $\exists x, \exists y, A(x; y)$ chúng ta có thể gọi hạng thức $m$ thay thế cho $x$ sao cho $\exists y, A(m; y)$. Và cũng do quy tắc đó, có thể gọi $n$ thay cho $y$ để $A(m; n)$. Do tồn tại $m$ thỏa mãn $A(x; n)$ nên theo quy tắc tồn tại hóa, $\exists x, A(x; n)$. Và do $n$ làm $\exists x, A(x; y)$ đúng nên dẫn đến $\exists y, \exists x, A(x; y)$. Do vậy,
 \begin{equation*}
     \exists x, \exists y, A(x; y) \implies \exists y, \exists x, A(x; y).
