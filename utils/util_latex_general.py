@@ -220,18 +220,21 @@ def parse_expression_with_parentheses(expression):
             if current_token:
                 current_token = add_token(tokens, current_pos, current_token)
                 current_pos += 1
-            continue
-        if ch == ")":
+        elif ch == ")":
             current_token += ")"
-            continue
-        if is_in_component(ch) != current_is_in_component:
-            if current_token and current_token != "(":
+        elif ch == "(":
+            if current_token and not all(c == "(" for c in current_token):
+                current_token = add_token(tokens, current_pos, current_token)
+                current_token = ""
+            current_token += "("
+        elif is_in_component(ch) != current_is_in_component:
+            if current_token and not all(c == "(" for c in current_token):
                 current_token = add_token(tokens, current_pos, current_token)
                 current_pos += 1
             current_is_in_component = is_in_component(ch)
-            if pos and expression[pos - 1] == "(":
-                current_token = "("
-        current_token += ch
+            current_token += ch
+        else:
+            current_token += ch
     add_token(tokens, current_pos, current_token)
     return tokens
 
