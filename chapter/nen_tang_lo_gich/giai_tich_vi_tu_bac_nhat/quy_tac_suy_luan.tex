@@ -138,7 +138,8 @@ Có thể thấy được tại sao tính chất này có tên là \defText{tín
 
 \exercise Cho hai vị từ $A()$ và $B()$. Chứng minh rằng, 
 \begin{enumerate}
-    \item $\forall x, A(x) \lor \forall x, B(x) \implies \forall x, \left(A(x) \lor B(x)\right)$ (tính chất phân phối một chiều);
+    \item $\forall x, A(x) \lor \forall x, B(x) \implies \forall x, \left(A(x) \lor B(x)\right)$ (tính chất phân phối một chiều của lượng từ, phần 1);
+    \item $\exists x, \left(A(x) \land B(x)\right) \implies \exists x, A(x) \land \exists x, B(x)$ (tính chất phân phối một chiều của lượng từ, phần 2);
     \item $\exists x, \exists y, A(x; y) \iff \exists y, \exists x, A(x; y)$ (tính chất giao hoán của lượng từ tồn tại);
     \item $\exists x, (A(x) \lor B(x)) \iff \exists x, A(x) \lor \exists x, B(x)$ (tính chất phân phối của lượng từ tồn tại);
     \item $\exists x, \forall y, A(x;y) \implies \forall y, \exists x, A(x; y)$ (quy tắc trao đổi lượng từ).
@@ -158,6 +159,19 @@ Kết hợp hai trường hợp, chúng ta có
     \forall x, A(x) \lor \forall x, B(x)  \implies \forall x, \left(A(x) \lor B(x)\right).
 \end{equation*}
 Vậy, chúng ta có điều phải chứng minh.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Theo quy tắc cụ thể hóa, nếu có $\exists x, \left(A(x) \land B(x)\right)$, thì tồn tại $c$ để
+\begin{equation*}
+    A(c) \land B(c).
+\end{equation*}
+Hiển nhiên, theo tính chất rút gọn, chúng ta có
+\begin{equation*}
+    \begin{cases}
+        A(c) \land B(c) \implies A(c) \\
+        A(c) \land B(c) \implies B(c)
+    \end{cases}
+\end{equation*}
 
 \stepcounter{subexercise}
 \arabic{subexercise}. Do quy tắc cụ thể hóa, từ $\exists x, \exists y, A(x; y)$ chúng ta có thể gọi hạng thức $m$ thay thế cho $x$ sao cho $\exists y, A(m; y)$. Và cũng do quy tắc đó, có thể gọi $n$ thay cho $y$ để $A(m; n)$. Do tồn tại $m$ thỏa mãn $A(x; n)$ nên theo quy tắc tồn tại hóa, $\exists x, A(x; n)$. Và do $n$ làm $\exists x, A(x; y)$ đúng nên dẫn đến $\exists y, \exists x, A(x; y)$. Do vậy,
