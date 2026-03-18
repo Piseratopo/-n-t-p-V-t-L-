@@ -174,7 +174,7 @@ Như vậy, chúng ta cũng có một phép phủ định tương đương với
     \item $\exists x, \exists y, A(x; y) \iff \exists y, \exists x, A(x; y)$ (tính chất giao hoán của lượng từ tồn tại);
     \item $\exists x, (A(x) \lor B(x)) \iff \exists x, A(x) \lor \exists x, B(x)$ (tính chất phân phối của lượng từ tồn tại);
     \item $\forall x, A(x) \lor \forall y, B(y) \iff \forall x, \forall y, \left(A(x) \lor B(y)\right)$ (quy tắc chuyển đổi lượng từ phổ quát);
-    \item $\exists x, A(x) \land \exists y, B(y) \iff \exists x, \exists y, (A(x) \land B(x))$ (quy tắc chuyển đổi lượng từ tồn tại);
+    \item $\exists x, A(x) \land \exists y, B(y) \iff \exists x, \exists y, (A(x) \land B(y))$ (quy tắc chuyển đổi lượng từ tồn tại);
 \end{enumerate}
 
 \solution
@@ -239,9 +239,26 @@ Qua đó, theo chứng minh bằng phản chứng,
 Hai chiều của mệnh đề đều đã được khẳng định. Vậy, chúng ta có điều phải chứng minh.
 
 \stepcounter{subexercise}
-\arabic{subexercise}. 
+\arabic{subexercise}. Chứng minh chiều xuôi, giả sử có $\exists x, A(x) \land \exists y, B(y)$. Điều này dẫn đến có hai hạng thức $c$ và $d$ thỏa mãn $A(c) \land B(d)$. Và đương nhiên, theo quy tắc tồn tại hóa
+\begin{align*}
+    A(c) \land B(d) &\implies \exists x, (A(x) \land B(d)); \\
+    A(c) \land B(d) &\implies \exists x, \exists y, (A(x) \land B(y)).
+\end{align*}
 
-Vậy, điều phải chứng minh.
+Chiều xuôi đã được khẳng định. Để khẳng định được chiều ngược lại, chúng ta cũng đưa ra nhận định rằng phải có $c$ và $d$ thỏa mãn $A(c) \land B(d)$ nếu có $\exists x, \exists y, (A(x) \land B(y))$. Và khi đó, hiển nhiên có
+\begin{equation*}
+    \begin{cases}
+        A(c) \\
+        B(d)
+    \end{cases} \implies 
+    \begin{cases}
+        \exists x, A(x) \\
+        \exists y, B(y)
+    \end{cases}
+\end{equation*}
+theo quy tắc tồn tại hóa. Do vậy $\exists x, \exists y, (A(x) \land B(y)) \implies \exists x, A(x) \land \exists y, B(y)$.
+
+Kết hợp hai chiều, theo định nghĩa của phép tương đương, chúng ta có điều phải chứng minh.
 
 \exercise Dấu $\le$ là một dấu có nhiều ứng dụng quan trọng trong toán học, nhưng khái niệm so sánh xuất hiện trong gần như toàn bộ mọi lĩnh vực trong đời sống. Nếu như Ê-mô-ri-ô viết
 \begin{center}
