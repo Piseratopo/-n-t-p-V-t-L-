@@ -69,7 +69,7 @@ $$\forall x, (K(x) \implies V(x)) \land \forall x, (T(x) \implies K(x)).$$
 \begin{quotation}
     Nếu hai mệnh đề con có cùng lượng từ và được kết nối bởi phép nối hội thì có thể kết hợp hai công thức nằm trong tầm ảnh hưởng của lượng từ thành một công thức bởi phép hội để tạo thành một mệnh đề tương đương, hay
     $$\defMath{\forall x, A(x) \land \forall x, B(x) \iff \forall x, (A(x) \land B(x))}$$
-    với vị từ $A()$ và $B()$ ngẫu nhiên.
+    với vị từ $A()$ và $B()$ bất kì.
 \end{quotation}
     Sử dụng quy tắc thay thế, thay $A(x)$ và $B(x)$ lần lượt bởi $K(x) \implies V(x)$ và $T(x) \implies K(x)$, chúng ta có:
 $$G \iff \forall x, \big((K(x) \implies V(x)) \land (T(x) \implies K(x))\big).$$
@@ -99,7 +99,7 @@ Với cách kí hiệu hóa tương tự, chúng ta có
         Kết luận & $V(e)$
     \end{tabular}
 \end{center}
-với $e$ viết tắt cho ``Ê-mô-ri-ô''. Việc lập luẫn dẫn một cách tự nhiên đến với quy tắc tiếp theo --- \defText{quy tắc cụ thể hóa biến phổ quát} hoặc \defText{phép loại bỏ lượng từ phổ quát}:
+với $e$ viết tắt cho ``Ê-mô-ri-ô''. Việc lập luận dẫn một cách tự nhiên đến với quy tắc tiếp theo --- \defText{quy tắc cụ thể hóa biến phổ quát} hoặc \defText{phép loại bỏ lượng từ phổ quát}:
 \begin{quotation}
     $\defMath{\forall x, A(x) \implies A(e)}$ với $A()$ là một vị từ và $e$ là một hạng thức đã xác định, hay nói suồng sã hơn, nếu một tính chất đúng với toàn cục thì nó cũng đúng với bộ phận.  
 \end{quotation}
@@ -173,8 +173,10 @@ Như vậy, chúng ta cũng có một phép phủ định tương đương với
 \begin{enumerate}
     \item $\exists x, \exists y, A(x; y) \iff \exists y, \exists x, A(x; y)$ (tính chất giao hoán của lượng từ tồn tại);
     \item $\exists x, (A(x) \lor B(x)) \iff \exists x, A(x) \lor \exists x, B(x)$ (tính chất phân phối của lượng từ tồn tại);
-    \item $\forall x, A(x) \lor \forall y, B(y) \iff \forall x, \forall y, \left(A(x) \lor B(y)\right)$ (quy tắc chuyển đổi lượng từ phổ quát);
-    \item $\exists x, A(x) \land \exists y, B(y) \iff \exists x, \exists y, (A(x) \land B(x))$ (quy tắc chuyển đổi lượng từ tồn tại);
+    \item $\forall x, A(x) \lor \forall y, B(y) \iff \forall x, \forall y, \left(A(x) \lor B(y)\right)$ (quy tắc chuyển đổi lượng từ, phần 1);
+    \item $\exists x, A(x) \land \exists y, B(y) \iff \exists x, \exists y, (A(x) \land B(y))$ (quy tắc chuyển đổi lượng từ, phần 2);
+    \item $\forall x, A(x) \land \exists y, B(y) \iff \forall x, \exists y, (A(x) \land B(y))$ (quy tắc chuyển đổi lượng từ, phần 3);
+    \item $\exists x, A(x) \lor \forall y, B(y) \iff \exists x, \forall y, (A(x) \lor B(y))$ (quy tắc chuyển đổi lượng từ, phần 4).
 \end{enumerate}
 
 \solution
@@ -239,9 +241,83 @@ Qua đó, theo chứng minh bằng phản chứng,
 Hai chiều của mệnh đề đều đã được khẳng định. Vậy, chúng ta có điều phải chứng minh.
 
 \stepcounter{subexercise}
-\arabic{subexercise}. 
+\arabic{subexercise}. Giả thiết rằng chúng ta có $\exists x, A(x) \land \exists y, B(y)$. 
+Theo quy tắc cụ thể hóa, có thể gọi hạng thức $c$ và $d$ để $A(c)$ và $B(d)$ đúng. 
+Với sự tồn tại của hạng thức $d$, áp dụng quy tắc tồn tại hóa, thu được $\exists y, (A(c) \land B(y))$.
+Với sự tồn tại của hạng thức $c$ thỏa mãn, tiếp tục sử dụng quy tắc tồn tại hóa đối với mệnh đề vừa nhận được, chúng ta đi đến $\exists x, \exists y, (A(x) \land B(y))$.
+Như vậy,
+\begin{equation*}
+    \exists x, A(x) \land \exists y, B(y) \implies \exists x, \exists y, (A(x) \land B(y)).
+\end{equation*}
 
-Vậy, điều phải chứng minh.
+Theo chiều ngược lại, giả sử đã có $\exists x, \exists y, (A(x) \land B(y))$. 
+Tương tự, gọi $c$ và $d$ thay cho $x$ và $y$ để $A(c) \land B(d)$ đúng. Từ đó, chúng ta tách ra được $A(c)$ và $B(d)$. Do có $A(c)$, theo quy tắc tồn tại hóa, củng cố rằng $\exists x, A(x)$. Tương tự, $B(d)$, $\exists y, B(y)$ cũng được khẳng định. 
+Hội của hai kết luận này mang lại $\exists x, A(x) \land \exists y, B(y)$, qua đó chúng ta làm rõ được chiều suy luận ngược:
+\begin{equation*}
+    \exists x, \exists y, (A(x) \land B(y)) \implies \exists x, A(x) \land \exists y, B(y).
+\end{equation*}
+Kết hợp hai chiều theo định nghĩa của phép tương đương, chúng ta có điều phải chứng minh.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Giả sử $\forall x, A(x) \land \exists y, B(y)$. Từ $\exists y, B(y)$, có thể gọi một hạng thức $d$ thỏa mãn $B(d)$ theo quy tắc cụ thể hóa. Để ý rằng $B(d)$ đã trở thành mệnh đề và không phụ thuộc vào $x$, theo quy tắc lượng từ rỗng, chúng ta có
+$$B(d) \iff \forall x, B(d).$$
+Qua đó, chúng ta có $\forall x, A(x) \land \forall x, B(d)$. Sử dụng tính chất phân phối để có $\forall x, (A(x) \land B(d))$. Tồn tại hóa để có $\forall x, \exists y, (A(x) \land B(y))$. Do vậy,
+\begin{equation*}
+    \forall x, A(x) \land \exists y, B(y) \implies \forall x, \exists y, (A(x) \land B(y)).
+\end{equation*}
+
+Ngược lại, giả sử đã có $\forall x, \exists y, (A(x) \land B(y))$. Theo quy tắc cụ thể hóa, có thể gọi một hạng thức $c$ thỏa mãn $\forall x, (A(x) \land B(c))$. Tiếp tục làm ngược lại quá trình giải trước, chúng ta có
+\begin{align*}
+   \forall x, (A(x) \land B(c)) &\implies \forall x, A(x) \land \forall x, B(c) \equationexplanation{tính chất phân phối}; \\
+   \forall x, (A(x) \land B(c)) &\implies \forall x, A(x) \land B(c) \equationexplanation{tính chất lượng từ rỗng}; \\
+   \forall x, (A(x) \land B(c)) &\implies \forall x, A(x) \land \exists y, B(y) \equationexplanation{tính chất tồn tại hóa}.
+\end{align*}
+Do đó, $\forall x, \exists y, (A(x) \land B(y)) \implies \forall x, A(x) \land \exists y, B(y)$.
+
+Vậy, kết hợp hai chiều, điều phải chứng minh.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Giả sử đã có $\exists x, A(x) \lor \forall y, B(y)$. Xét hai trường hợp.
+
+\textcolor{colorEmphasisCyan}{Trường hợp 1 --- $\exists x, A(x)$}. Theo tính chất lượng từ rỗng (do $A()$ không phụ thuộc vào $y$), $\exists x, \forall y, A(x)$. Theo tính chất cộng, $P \implies P \lor Q$, cho nên
+\begin{equation*}
+    \exists x, \forall y, A(x) \implies \exists x, \forall y, (A(x) \lor B(y)).
+\end{equation*}
+
+\textcolor{colorEmphasis}{Trường hợp 2 --- $\forall y, B(y)$}. Tương tự, có:
+\begin{align*}
+    \forall y, B(y) &\implies \exists x, \forall y, B(y) \equationexplanation{tính chất lượng từ rỗng}; \\
+    \forall y, B(y) &\implies \exists x, \forall y, (A(x) \lor B(y)) \equationexplanation{tính chất cộng}.
+\end{align*}
+
+Kết hợp hai trường hợp, chúng ta có:
+\begin{equation*}
+    \begin{cases}
+        \exists x, A(x) \implies \exists x, \forall y, (A(x) \lor B(y)) \\
+        \forall y, B(y) \implies \exists x, \forall y, (A(x) \lor B(y))
+    \end{cases}.
+\end{equation*}
+Điều này hiển nhiên cho chúng ta:
+\begin{equation*}
+    \exists x, A(x) \lor \forall y, B(y) \implies \exists x, \forall y, (A(x) \lor B(y)).
+\end{equation*}
+
+Để chứng minh cho chiều còn lại, giả sử $\exists x, \forall y, (A(x) \lor B(y))$. Bằng chứng minh phản chứng, giả thiết thêm rằng $\overline{\exists x, A(x) \lor \forall y, B(y)}$, dẫn đến:
+\begin{align*}
+    \overline{\exists x, A(x) \lor \forall y, B(y)} &\iff \overline{\exists x, A(x)} \land \overline{\forall y, B(y)} \equationexplanation{định luật Đờ Moóc-gơn}; \\
+    \overline{\exists x, A(x) \lor \forall y, B(y)} &\iff \forall x, \neg A(x) \land \exists y, \neg B(y) \equationexplanation{phủ định của lượng từ}.
+\end{align*}
+
+Từ giả thiết gốc $\exists x, \forall y, (A(x) \lor B(y))$, theo quy tắc cụ thể hóa, có một hạng thức $c$ sao cho $\forall y, (A(c) \lor B(y))$ là đúng. 
+Do mệnh đề $\forall x, \neg A(x)$ đúng với mọi hạng thức, nó hiển nhiên đúng với $c$, tức $\neg A(c)$ đúng. 
+Với $\forall y, (A(c) \lor B(y))$, mà $A(c)$ lại sai, nên buộc $B(y)$ phải luôn đúng. Từ lập luận này có được khẳng định $\forall y, B(y)$.
+
+Tuy nhiên, kết quả này mâu thuẫn với mệnh đề $\exists y, \neg B(y)$ (vốn là dạng tương đương của $\overline{\forall y, B(y)}$). Qua đó, phủ quyết sự sai lệch từ giả thiết phản chứng, khẳng định:
+\begin{equation*}
+    \exists x, \forall y, (A(x) \lor B(y)) \implies \exists x, A(x) \lor \forall y, B(y).
+\end{equation*}
+
+Hai chiều của mệnh đề đều đã được khẳng định. Vậy, chúng ta hoàn toàn có điều phải chứng minh.
 
 \exercise Dấu $\le$ là một dấu có nhiều ứng dụng quan trọng trong toán học, nhưng khái niệm so sánh xuất hiện trong gần như toàn bộ mọi lĩnh vực trong đời sống. Nếu như Ê-mô-ri-ô viết
 \begin{center}
@@ -484,7 +560,7 @@ Trước khi chứng minh, chúng ta cần một số kết quả từ $G$:
 \begin{equation*}
     \begin{cases}
         \forall x, \forall y, \big(V_<(x; y) \iff \neg V_\le(y; x)\big) \\
-        \forall x, \forall y, \forall z, \big(V_\le(x; y) \land V_\le(y; z) \iff V_\le(z; x)\big)
+        \forall x, \forall y, \forall z, \big(V_\le(x; y) \land V_\le(y; z) \iff V_\le(x; z)\big)
     \end{cases}.
 \end{equation*}
 Đổi hạng thức phụ thuộc,
@@ -509,7 +585,7 @@ Do đó, dưới điều kiện $G$,
     \forall x, \forall y, \forall z, \big(V_\le(x; y) \land V_<(y; z) \land V_\le(z; x)\big) &\implies \forall x, \forall y, \forall z, \mathbf{M} \equationexplanation{tính chất không mâu thuẫn}.
 \end{align*}
 
-Qua đó, chúng ta có mẫu thuẫn $V_\le(x; y) \land V_<(y; z) \land V_\le(z; x)$ với mọi $x$, $y$ và $z$. Theo chứng minh bằng phản chứng, chúng ta phải có $\neg V_\le(z; x)$ hay $V_<(x; z)$ nếu có giả thiết $V_\le(x; y) \land V_<(y,z)$. Nói cách khác, từ phản chứng,
+Qua đó, chúng ta có mâu thuẫn $V_\le(x; y) \land V_<(y; z) \land V_\le(z; x)$ với mọi $x$, $y$ và $z$. Theo chứng minh bằng phản chứng, chúng ta phải có $\neg V_\le(z; x)$ hay $V_<(x; z)$ nếu có giả thiết $V_\le(x; y) \land V_<(y,z)$. Nói cách khác, từ phản chứng,
 $$
     \forall x, \forall y, \forall z, \big(V_\le(x; y) \land V_<(y,z) \implies V_<(x; z)\big).
 $$
@@ -529,4 +605,45 @@ Qua đó, có được liên tiếp các lập luận như sau:
     \forall x, \forall y, \forall z, \big(V_<(x; y) \land V_\le(y; z) \land \neg V_<(x; z)\big) &\iff \forall x, \forall y, \forall z, \big(\neg V_\le(y; x) \land V_\le(y; x)\big) \\
     \forall x, \forall y, \forall z, \big(V_<(x; y) \land V_\le(y; z) \land \neg V_<(x; z)\big) &\iff \forall x, \forall y, \forall z, \mathbf{M}.
 \end{align*}
-Theo chứng minh bẳng phản chứng, dễ thấy có điều phải chứng minh.
+Theo chứng minh bằng phản chứng, dễ thấy có điều phải chứng minh.
+
+\exercise 
+\begin{enumerate}
+   \item Chứng minh rằng \begin{equation*}
+      \exists x, \forall y, A(x; y) \implies \forall y, \exists x, A(x; y)
+   \end{equation*}
+   với mọi vị từ $A()$.
+   \item Chọn một vị từ $A()$ để mệnh đề sau sai
+   \begin{equation*}
+      \exists x, \forall y, A(x; y) \impliedby \forall y, \exists x, A(x; y).
+   \end{equation*}
+   \item Xét một giả chứng minh cho $\exists x, \forall y, A(x, y) \impliedby \forall y, \exists x, A(x, y)$ như sau: \begin{quotation}
+      Giả sử $\forall y, \exists x, A(x; y)$. Chọn hạng thức $c$ để $A(c; y)$ đúng với mọi $y$. Từ đó, ta có $\exists x, \forall y, A(x; y)$ theo quy tắc tồn tại hóa.
+   \end{quotation}
+   Tìm lỗi sai trong chứng minh này.
+\end{enumerate}
+
+\solution
+
+\setcounter{subexercise}{1}
+\arabic{subexercise}. Giả sử $\exists x, \forall y, A(x; y)$. Theo quy tắc cụ thể hóa đối với lượng từ tồn tại, có thể gọi một hạng thức $c$ sao cho $\forall y, A(c; y)$ đúng.
+
+Theo quy tắc tồn tại hóa, $A(c; y)$ dẫn đến $\exists x, A(x; y)$. Do đó, có được $\forall y, A(c; y) \implies \forall y, \exists x, A(x; y)$. Vậy, kéo theo:
+\begin{equation*}
+    \exists x, \forall y, A(x; y) \implies \forall y, \exists x, A(x; y).
+\end{equation*}
+Điều phải chứng minh.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Giả sử đang xét các số tự nhiên. Chọn vị từ $A(x; y)$ biểu diễn cho quan hệ ``$x > y$''.
+
+Phân tích vế đóng vai trò giả thiết $\forall y, \exists x, A(x; y)$, được phát biểu dạng ngôn ngữ tự nhiên là: ``Với mọi số tự nhiên $y$, luôn tồn tại một số tự nhiên $x$ lớn hơn nó.'' Điều này luôn luôn \emph{ĐÚNG} (bởi vì luôn có thể chọn thủ công $x = y + 1$).
+
+Tuy nhiên, ở chiều kết luận $\exists x, \forall y, A(x; y)$ lại mang hàm ý khác: ``Tồn tại một số tự nhiên $x$ sao cho nó lớn hơn tất thảy mọi số tự nhiên $y$''. Mệnh đề này \emph{SAI} bởi vì với mọi $x$, ta luôn có thể chọn $y = x + 1$ để $A(x; y)$ sai. (Để ý rằng $\overline{\exists x, \forall y, A(x; y)} \iff \forall x, \exists y, \neg A(x; y)$.)
+
+Theo luật của phép kéo theo, từ một giả thiết đúng làm nảy sinh ra một kết luận sai sẽ khiến toàn bộ phép kéo theo đó sai hoàn toàn. Vậy, vị từ $A(x; y)$ biểu thị cho quan hệ ``$x > y$'' (trên tập các số tự nhiên) có thể bác bỏ mệnh đề được cho.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Từ mệnh đề khởi điểm $\forall y, \exists x, A(x; y)$, theo thứ tự tác động của các lượng từ, thì ứng với mỗi một giá trị tùy biến của $y$, chúng ta mới bắt đầu tìm kiếm được sự tồn tại của $x$ tương ứng. Vì lẽ đó, thực chất hạng thức dùng để thay thế biến $x$ chắc chắn phải là một giá trị bị \emph{phụ thuộc} vào $y$ (tức là $c$ đóng vai trò như $c(y)$ thay đổi linh hoạt mỗi khi $y$ thay đổi).
+
+Tác giả của giả chứng minh này đã bỏ qua tính tuần tự, ngang nhiên gọi luôn một hằng số $c$ tĩnh duy nhất. Hành động này vô tình mang lượng từ tồn tại từ bề trong vượt qua lượng từ phổ quát ở ngoài, cưỡng ép hoán đổi bản chất của mệnh đề gốc thành $\exists x, \forall y, A(x; y)$. Đó là một ngụy biện lô-gích nghiêm trọng.
