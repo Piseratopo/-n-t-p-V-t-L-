@@ -204,7 +204,7 @@ Kết hợp hai chiều theo định nghĩa của phép tương đương, chúng
 \stepcounter{subexercise}
 \arabic{subexercise}. Giả sử đã có $\forall x, A(x) \lor \forall y, B(y)$. Xét hai trường hợp.
 
-\textcolor{colorEmphasisCyan}{Trường hợp 1 --- $\forall x, A(x)$}. Theo tính chất lượng từ rỗng, điều này suy ra $\forall y, \forall x, A(x)$. Đảo vị trí hai lượng bằng tính chất giao hoán, có được $\forall x, \forall y, A(x)$. Theo tính chất cộng từ giải tích mệnh đề, $P \implies P \lor Q$ đúng với mọi mệnh đề $P$ và $Q$ nên điều này cho kết luận
+\textcolor{colorEmphasisCyan}{Trường hợp 1 --- $\forall x, A(x)$}. Theo tính chất lượng từ rỗng, điều này suy ra $\forall y, \forall x, A(x)$. Đảo vị trí hai lượng từ bằng tính chất giao hoán, có được $\forall x, \forall y, A(x)$. Theo tính chất cộng từ giải tích mệnh đề, $P \implies P \lor Q$ đúng với mọi mệnh đề $P$ và $Q$ nên điều này cho kết luận
 $$\forall x, \forall y, (A(x) \lor B(y)).$$
 
 \textcolor{colorEmphasis}{Trường hợp 2 --- $\forall y, B(y)$}. Với một lập luận tương tự, chúng ta có
@@ -395,29 +395,29 @@ Kết hợp với tính chất giao hoán của phép tuyển để suy ra
 \end{equation}
 Hội giữa \refeq{eq:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:quy_tac_suy_luan:2.1} và \refeq{eq:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:quy_tac_suy_luan:2.2}, thông qua tính chất phân phối,
 \begin{equation*}
-    G \implies \forall x, \forall y, \Big(\big(V_=(x; y) \iff V_\le(x; y) \land V_\le(y; x)\big) \land \big(V_=(y; x) \iff V_\le(x; y) \land V_\le(y; x)\big)\Big).
+   G \implies \forall x, \forall y, \Big(\big(V_=(x; y) \iff V_\le(x; y) \land V_\le(y; x)\big) \land \big(V_=(y; x) \iff V_\le(x; y) \land V_\le(y; x)\big)\Big).
 \end{equation*}
 Chúng ta có thể chứng minh bằng việc tích hợp thêm tính chất bắc cầu
 \begin{equation*}
-    G \implies \forall x, \forall y, \big(V_=(x; y) \iff V_=(y; x)\big).
+   G \implies \forall x, \forall y, \big(V_=(x; y) \iff V_=(y; x)\big).
 \end{equation*}
 
 \stepcounter{subexercise}
 \arabic{subexercise}.
 Thực hiện biến đổi từ giả thiết
 \begin{equation*}
-    \begin{cases}
-        G &\implies \forall x, \forall y, \big(V_=(x; y)  \iff V_\le(x; y) \land V_\le(y; x)\big) \\
-        G &\implies \forall x, \forall y, \big(V_<(x; y) \iff \neg V_\le(y; x)\big)
-    \end{cases},
+   \begin{cases}
+      G &\implies \forall x, \forall y, \big(V_=(x; y)  \iff V_\le(x; y) \land V_\le(y; x)\big) \\
+      G &\implies \forall x, \forall y, \big(V_<(x; y) \iff \neg V_\le(y; x)\big)
+   \end{cases},
 \end{equation*}
 chúng ta có
 \begin{align}
-    G &\implies \forall x, \forall y, \big(V_=(x; y) \lor V_<(x; y) \iff V_\le(x; y) \land V_\le(y; x) \lor \neg V_\le(y; x)\big); \nonumber\\
-    G &\implies \forall x, \forall y,\big(V_=(x; y) \lor V_<(x; y) \iff (V_\le(x; y) \lor \neg V_\le(y; x)) \land (V_<(y; x) \lor \neg V_\le(y; x))\big) \nonumber\\
-    &\equationexplanation{tính chất phân phối}; \nonumber\\
-    G &\implies \forall x, \forall y, \big(V_=(x; y) \lor V_<(x; y) \iff V_\le(x; y) \lor \neg V_\le(y; x)\big) \nonumber \\
-    &\equationexplanation{tính chất không mâu thuẫn và đồng nhất với phép tuyển}. \label{eq:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:quy_tac_suy_luan:3.11}
+   G &\implies \forall x, \forall y, \big(V_=(x; y) \lor V_<(x; y) \iff V_\le(x; y) \land V_\le(y; x) \lor \neg V_\le(y; x)\big); \nonumber\\
+   G &\implies \forall x, \forall y,\big(V_=(x; y) \lor V_<(x; y) \iff (V_\le(x; y) \lor \neg V_\le(y; x)) \land (V_\le(y; x) \lor \neg V_\le(y; x))\big) \nonumber\\
+   &\equationexplanation{tính chất phân phối}; \nonumber\\
+   G &\implies \forall x, \forall y, \big(V_=(x; y) \lor V_<(x; y) \iff V_\le(x; y) \lor \neg V_\le(y; x)\big) \nonumber \\
+   &\equationexplanation{tính chất không mâu thuẫn và đồng nhất với phép tuyển}. \label{eq:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:quy_tac_suy_luan:3.11}
 \end{align}
 
 Mặt khác, từ giả thiết
@@ -430,7 +430,7 @@ Mặt khác, từ giả thiết
 Từ đó, chúng ta có thể kết luận được với mọi $x$ và $y$, $\neg V_\le(y; x)$ chứng minh $V_\le(x; y)$. Do vậy, chúng ta có thể suy luận từ \refeq{eq:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:quy_tac_suy_luan:3.11} rằng
 \begin{align*}
     G &\implies \forall x, \forall y, \big(V_=(x; y) \lor V_<(x; y) \iff V_\le(x; y) \lor V_\le(x; y)\big); \\
-    G &\implies \forall x, \forall y, \big(V_=(x; y) \lor V_<(x; y) \iff V_\le(x; y)\big) \equationexplanation{tính chất đồng nhất}. 
+    G &\implies \forall x, \forall y, \big(V_=(x; y) \lor V_<(x; y) \iff V_\le(x; y)\big) \equationexplanation{tính chất lũy đẳng}. 
 \end{align*}
 Áp dụng tính chất giao hoán trên phép tương đương để có điều phải chứng minh.
 
@@ -465,7 +465,7 @@ Chúng ta cũng đã có
 \begin{equation*}
     G \implies \forall x, \forall y, \big(\neg V_\le(y; x) \iff V_<(x; y)\big),
 \end{equation*}
-sử dụng quy tắc đổi tên biến rằng buộc và tính chất giao hoán của lượng từ $\forall$ để đảo vị trí $x$ và $y$ trong vị từ:
+sử dụng quy tắc đổi tên biến ràng buộc và tính chất giao hoán của lượng từ $\forall$ để đảo vị trí $x$ và $y$ trong vị từ:
 \begin{equation*}
     G \implies \forall x, \forall y, \big(\neg V_\le(x; y) \iff V_<(y; x)\big).
 \end{equation*}
@@ -493,8 +493,8 @@ Sau khi có những điều cần thiết này, thực hiện biến đổi.
     G &\implies \forall x, \forall y, \big(V_=(x; y) \iff V_\le(y; x) \land V_\le(x; y)\big); \\
     G &\implies \forall x, \forall y, \big(V_=(x; y) \iff \neg \neg V_\le(y; x) \land \neg \neg V_\le(x; y)\big) \equationexplanation{tính chất phủ định kép}; \\
     G &\implies \forall x, \forall y, \big(V_=(x; y) \iff \neg V_<(x; y) \land \neg V_<(y; x)\big) \equationexplanation{thay thế tương đương}; \\
-    G &\implies \forall x, \forall y, \big(V_=(x; y) \iff \overline{V_<(x; y) \lor V_<(y; x)}\big) \equationexplanation{định luật Đờ Moóc-gơn}\\
-    G &\implies \forall x, \forall y, \big(V_=(x; y) \iff V_<(x; y) \downarrow V_<(y; x)\big) \equationexplanation{định nghĩa của phép phủ định hội}.
+    G &\implies \forall x, \forall y, \big(V_=(x; y) \iff \overline{V_<(x; y) \lor V_<(y; x)}\big) \equationexplanation{định luật Đờ Moóc-gơn};\\
+    G &\implies \forall x, \forall y, \big(V_=(x; y) \iff V_<(x; y) \downarrow V_<(y; x)\big) \equationexplanation{định nghĩa của phép phủ định tuyển}.
 \end{align*}
 Chúng ta có điều phải chứng minh.
 
@@ -560,7 +560,7 @@ Trước khi chứng minh, chúng ta cần một số kết quả từ $G$:
 \begin{equation*}
     \begin{cases}
         \forall x, \forall y, \big(V_<(x; y) \iff \neg V_\le(y; x)\big) \\
-        \forall x, \forall y, \forall z, \big(V_\le(x; y) \land V_\le(y; z) \iff V_\le(x; z)\big)
+        \forall x, \forall y, \forall z, \big(V_\le(x; y) \land V_\le(y; z) \implies V_\le(x; z)\big)
     \end{cases}.
 \end{equation*}
 Đổi hạng thức phụ thuộc,
@@ -585,9 +585,9 @@ Do đó, dưới điều kiện $G$,
     \forall x, \forall y, \forall z, \big(V_\le(x; y) \land V_<(y; z) \land V_\le(z; x)\big) &\implies \forall x, \forall y, \forall z, \mathbf{M} \equationexplanation{tính chất không mâu thuẫn}.
 \end{align*}
 
-Qua đó, chúng ta có mâu thuẫn $V_\le(x; y) \land V_<(y; z) \land V_\le(z; x)$ với mọi $x$, $y$ và $z$. Theo chứng minh bằng phản chứng, chúng ta phải có $\neg V_\le(z; x)$ hay $V_<(x; z)$ nếu có giả thiết $V_\le(x; y) \land V_<(y,z)$. Nói cách khác, từ phản chứng,
+Qua đó, chúng ta có mâu thuẫn $V_\le(x; y) \land V_<(y; z) \land V_\le(z; x)$ với mọi $x$, $y$ và $z$. Theo chứng minh bằng phản chứng, chúng ta phải có $\neg V_\le(z; x)$ hay $V_<(x; z)$ nếu có giả thiết $V_\le(x; y) \land V_<(y; z)$. Nói cách khác, từ phản chứng,
 $$
-    \forall x, \forall y, \forall z, \big(V_\le(x; y) \land V_<(y,z) \implies V_<(x; z)\big).
+    \forall x, \forall y, \forall z, \big(V_\le(x; y) \land V_<(y; z) \implies V_<(x; z)\big).
 $$
 Chúng ta có điều phải chứng minh.
 

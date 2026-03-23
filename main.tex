@@ -137,12 +137,14 @@
 \tikzset{snake it/.style={decorate, decoration=snake, very thin}}
 
 % Làm đẹp tiêu đề
+% \titleclass{\part}{straight}
+
 \titleformat{\part}
    {\normalfont\Huge\bfseries}
    {}
    {0pt}
    {\centering\textcolor{colorEmphasisCyan}{
-      {\fontsize{60}{72}\selectfont Phần \arabic{part}}\\
+      {\fontsize{60}{72}\selectfont Phần \Roman{part}}\\
       #1}
    }
 
@@ -227,7 +229,8 @@
 
 % \input{chapter/loi_gioi_thieu.tex}
 % \input{chapter/kiem_tra.tex}
-\input{chapter/nen_tang_lo_gich.tex}
+% \input{chapter/nen_tang_lo_gich.tex}
+\input{chapter/li_thuyet_tap_hop.tex}
 % \input{chapter/co_ban_xu_li_so_lieu.tex}
 % \input{chapter/chuyen_dong.tex}
 

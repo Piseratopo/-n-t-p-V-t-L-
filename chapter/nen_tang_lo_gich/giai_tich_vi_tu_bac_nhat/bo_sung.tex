@@ -1,0 +1,22 @@
+\section{Một số lời bình và bổ sung}
+
+\ % Lùi đầu dòng
+
+Bạn đọc đã có thể cảm nhận rằng lập luận trong phần trước khá là dài dòng. Điều này là hiển nhiên, khi chúng ta đang chuẩn tắc hóa các lập luận thông thường. Tuy nhiên, vẫn còn nhiều điều có thể được cải thiện.
+
+Quay trở lại tính chất phân phối của lượng từ phổ quát đối với phép hội, 
+\begin{equation*}
+   \forall x, A(x) \land \forall x, B(x) \iff \forall x, (A(x) \land B(x)).
+\end{equation*}
+Có thể đưa ra lập luận như sau để chứng minh chiều xuôi tính chất này:
+\begin{quotation}
+   Giả sử $\forall x, A(x) \land \forall x, B(x)$ là đúng. Khi đó, với mọi $x$, $A(x)$ đúng và $B(x)$ đúng. Do đó, với mọi $x$, $A(x) \land B(x)$ đúng. Suy ra $\forall x, (A(x) \land B(x))$ đúng.
+\end{quotation}
+Theo tác giả, lập luận này đã mặc định chính nó khi thực hiện chứng minh. Nhưng nếu chúng ta cho phép xây dựng các quy tắc cụ thể hóa và tổng quát hóa theo một cách tương đương với lượng từ tồn tại, thì lập luận này hoàn toàn hợp lí\footnote{Các quy tắc này có tên tiếng Anh là \emph{Universal Specification / Universal Instantiation} và \emph{Universal Generalization}. Bạn đọc có thể đọc thêm trong \cite{suppes2012introduction}.}.
+
+Một vài nhận xét khác cần phải để ý là chúng ta đang kí hiệu $\forall$ và $\exists$ tương đối tự do. Chẳng hạn, ở phương trình \refeq{eq:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:thanh_to_cau_tao:ex-1} trên trang \pageref{eq:nen_tang_lo_gich:giai_tich_vi_tu_bac_nhat:thanh_to_cau_tao:ex-1}, chúng ta đã viết $\forall n$ với ý nghĩa ``\textit{với mọi người}''. Chúng ta đã sử dụng ngữ cảnh để xác định phạm vi của lượng từ, nhưng điều này không phải lúc nào cũng được hưởng ứng. Để chặt chẽ hóa vấn đề này, một số tài liệu (như \cite{suppes2012introduction}) sẽ đưa thêm các luật chứng minh. Nó được gọi là \emph{luật} cũng không sai vì riêng việc viết và hiểu các luật này cũng tương đối vòng vo và trong đó cũng bao gồm nhiều hiểu biết ngầm định cơ bản hơn.
+
+Vấn đề về sự chặt chẽ là một chuyến hành trình không có điểm đầu rõ ràng và không có hồi kết. Không có điểm đầu có nghĩa là không ai biết nguồn gốc sâu thẳm nhất của lập luận. Chương tiếp theo mà bạn đọc sẽ tìm hiểu sẽ thuộc về phạm trù của lí thuyết tập hợp. Có trường phái cho rằng tập hợp là nền tảng của toán học, và xây dựng lô-gích từ đó. Tuy nhiên, điều này cũng không hoàn toàn được công nhận, do việc xây dựng này yêu cầu một số khái niệm lô-gích không tường minh. Một số trường phái khác, khi đã đề cập đến lô-gích, sẽ đi kèm luôn với việc xây dựng song song hệ thống tiên đề cho lí thuyết tập hợp. Kể cả trong cùng một trường phái, không có nghĩa là mọi người sẽ có hệ tư tưởng như nhau. Kể như, một số tài liệu cho phép sử dụng bảng giá trị chân lí để xét tính đúng sai của các mệnh đề, nhưng một số tài liệu chỉ cho phép sử dụng một số luật lập luận nhất định do cho rằng bảng giá trị chân lí là chưa đủ tính chặt chẽ. Cũng có thể hiểu được tại sao người ta lại quan niệm vậy. Bảng giá trị chân lí chỉ cho phép xét tính đúng sai của các mệnh đề trên một lượng hữu hạn các trường hợp, mà không chứng minh được rằng tại sao số trường hợp đó đã bao quát đủ tất cả các khả năng có thể của mệnh đề.
+
+Tại sao lại cũng không có hồi kết? Để ý rằng, chúng ta mới xây dựng các quy tắc và phương pháp lập luận trên một phạm vi toán học rộng nhất có thể. Chúng ta chưa đề cập tới bất kì tính chất nào của số hay hình. Chúng ta còn chưa có định nghĩa để khẳng định $$x = x.$$
+Không có một bộ tiên đề, quy luật hay chỉ dẫn nào có thể bao quát hết tất cả các tính chất của toán học. Hơn nữa, kể cả trong một chuyên đề nhỏ, miễn là chúng ta có sử dụng lô-gích vị tự bậc nhất, thì sẽ không có phương pháp cố định nào để khẳng định tính chính xác của một lập luận.
