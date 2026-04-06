@@ -650,7 +650,8 @@ Ví dụ như ở bảng \ref{tab:nen_tang_lo_gich:giai_tich_menh_de:menh_de_phu
    \item $\left(P \land Q\right) \lor \left(P \land R\right) \iff P \land (Q \lor R)$ (tính chất phân phối, phần 2);
    \item $\left(P \implies Q\right) \land \left(P \implies R\right) \iff (P \implies Q \land R)$ (tính chất phân phối, phần 3);
    \item $\left(P \implies Q\right) \lor \left(P \implies R\right) \iff (P \implies Q \lor R)$ (tính chất phân phối, phần 4);
-   \item $\left(P \implies Q\right) \land \left(Q \implies R\right) \implies \left(P \implies R\right)$ (tính chất bắc cầu);
+   \item $\left(P \implies Q\right) \land \left(Q \implies R\right) \implies \left(P \implies R\right)$ (tính chất bắc cầu với phép kéo theo);
+   \item $\left(P \iff Q\right) \land \left(Q \iff R\right) \implies \left(P \iff R\right)$ (tính chất bắc cầu với phép tương đương);
    \item $\left(P \implies R\right) \land \left(Q \implies R\right) \iff \left(P \lor Q \implies R\right)$ (quy tắc chia trường hợp).
 \end{itemize}
 
@@ -1144,6 +1145,25 @@ Ví dụ như ở bảng \ref{tab:nen_tang_lo_gich:giai_tich_menh_de:menh_de_phu
 		S & X & S & \\
 		Đ & Đ & S & \\
 		Đ & S & S & \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\caption{Bảng giá trị chân lí của $( P \iff Q ) \land ( Q \iff R ) \implies ( P \iff R )$}
+	\begin{tabular}{|c|c|c|ccccccccccc|}
+		\hline
+		$P$ & $Q$ & $R$ & $(P$ & $\iff$ & $Q)$ & $\land$ & $(Q$ & $\iff$ & $R)$ & $\implies$ & $(P$ & $\iff$ & $R)$ \\
+		\headerDivider
+		Đ & Đ & Đ & Đ & Đ & Đ & Đ & Đ & Đ & Đ & \emphcolor{Đ} & Đ & Đ & Đ \\
+		Đ & Đ & S & Đ & Đ & Đ & S & Đ & S & S & \emphcolor{Đ} & Đ & S & S \\
+		Đ & S & Đ & Đ & S & S & S & S & S & Đ & \emphcolor{Đ} & Đ & Đ & Đ \\
+		Đ & S & S & Đ & S & S & S & S & Đ & S & \emphcolor{Đ} & Đ & S & S \\
+		S & Đ & Đ & S & S & Đ & S & Đ & Đ & Đ & \emphcolor{Đ} & S & S & Đ \\
+		S & Đ & S & S & S & Đ & S & Đ & S & S & \emphcolor{Đ} & S & Đ & S \\
+		S & S & Đ & S & Đ & S & S & S & S & Đ & \emphcolor{Đ} & S & S & Đ \\
+		S & S & S & S & Đ & S & Đ & S & Đ & S & \emphcolor{Đ} & S & Đ & S \\
 		\hline
 	\end{tabular}
 \end{table}
