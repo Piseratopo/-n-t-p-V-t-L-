@@ -2,9 +2,25 @@
 
 \ 
 
-Tiên đề này cho phép chúng ta tạo ra một tập hợp mới từ hai tập hợp đã cho. Nó phát biểu rằng với mọi tập hợp $x$ và $y$, tồn tại một tập hợp $z$ sao cho $z$ chỉ chứa $x$ và $y$ làm phần tử của nó. Có thể thấy chỉ tồn tại một $z$ duy nhất theo tiên đề ngoại diên như khi chúng ta đã chứng minh về tính duy nhất của $\emptyset$. Kí hiệu tập $z$ này là $\defMath{\{x; y\}}$. 
+Tiên đề này cho phép chúng ta tạo ra một tập hợp mới từ hai tập hợp đã cho. Nó phát biểu rằng với mọi tập hợp $x$ và $y$, tồn tại một tập hợp $z$ sao cho $z$ chỉ chứa $x$ và $y$ làm phần tử của nó. Phát biểu dưới dạng ngôn ngữ lô-gích:
+\begin{equation*}
+    \defMath{\forall x, \forall y, \exists z, \forall w \left( w \in z \iff (w = x \lor w = y) \right)}.
+\end{equation*}
 
-Dễ dàng thấy rằng $\defMath{\{x; y\} = \{y; x\}}$. Khi này, chúng ta có một \defText{đôi không thứ tự}. Một điểm nữa cần phải để ý, tiên đề không yêu cầu $x \neq y$, nên chúng ta hoàn toàn có thể xây dựng tập $\{x; x\}$ mà chỉ có một phần tử $x$. Đây là \defText{tập hợp đơn}, và có thể viết tắt tập này là $\defMath{\{x\}}$.
+Có thể thấy chỉ tồn tại một $z$ duy nhất theo tiên đề ngoại diên như khi chúng ta đã chứng minh về tính duy nhất của $\emptyset$. Giả sử tồn tại $z_1$ và $z_2$ thỏa mãn tiên đề cặp, theo chính tiên đề này:
+\begin{equation*}
+    \begin{cases}
+        a \in z_1 \iff (a = x \lor a = y) \\
+        a \in z_2 \iff (a = x \lor a = y)
+    \end{cases}.
+\end{equation*}
+Theo tính chất bắc cầu của phép đẳng giá, chúng ta có:
+$$
+a \in z_1 \iff a \in z_2
+$$
+đúng với mọi $a$. Theo tiên đề ngoại diên, $z_1 = z_2$.
+
+Kí hiệu tập này là $\defMath{\{x; y\}}$. Với một lập luận tương đương, dễ dàng thấy rằng $\defMath{\{x; y\} = \{y; x\}}$. Khi này, chúng ta có một \defText{đôi không thứ tự}. Một điểm nữa cần phải để ý, tiên đề không yêu cầu $x \neq y$, nên chúng ta hoàn toàn có thể xây dựng tập $\{x; x\}$ mà chỉ có một phần tử $x$. Đây là \defText{tập hợp đơn}, và có thể viết tắt tập này là $\defMath{\{x\}}$.
 
 Từ một đôi không thứ tự, chúng ta có thể xây dựng được \defText{đôi có thứ tự} theo định nghĩa của Ku-ra-tốp-xki\footnote{Kazimierz Kuratowski (1896 -- 1980).} vào năm 1921: $$\forall x, \forall y,\defMath{(x; y) = \{\{x; y\}; \{x\}\}}.$$
 Ku-ra-tốp-xki không phải là người đầu tiên đưa định nghĩa về đôi có thứ tự, nhưng là định nghĩa này trở nên phổ biến do tính đơn giản và hiệu quả của nó. Cụ thể, định nghĩa này đảm bảo rằng:
