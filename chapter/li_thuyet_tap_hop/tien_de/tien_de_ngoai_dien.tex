@@ -75,7 +75,7 @@ $$
 Ngoài kí hiệu $\subseteq$, chúng ta còn có các định nghĩa sau: Với mọi tập hợp $x$ và $y$,
    \begin{itemize}
       \item $\defMath{x \supseteq y \iff y \subseteq x}$,
-      \item $\defMath{x \subset y \iff x \subseteq y \land x \neq y}$\footnote{Trong nhiều tại liệu, $\subset$ có ý nghĩa tương đương với $\subseteq$.},
+      \item $\defMath{x \subset y \iff x \subseteq y \land x \neq y}$\footnote{Trong nhiều tài liệu, $\subset$ có ý nghĩa tương đương với $\subseteq$.},
       \item $\defMath{x \subsetneq y \iff x \subset y}$,
       \item $\defMath{x \supset y \iff x \supseteq y \land x \neq y}$,
       \item $\defMath{x \supsetneq y \iff x \supset y}$.
@@ -162,3 +162,9 @@ Và qua đó,
    \defMath{\forall w, \forall x, \forall y, \left( x = w \land w = y \implies x = y \right)}.
 \end{equation*}
 Đây là tính chất còn lại, \defText{tính bắc cầu}.
+
+Cuối cùng, khi tác giả dùng từ ``phép'' bằng nhau, tác giả đã ngầm hiểu đây không chỉ là kí hiệu của một vị từ mà cũng là một phép toán, giống như các phép $\land$ hay $\lor$ đã được làm quen từ trước. Thực tế, chúng ta có thể thêm các định nghĩa để có thể biến câu sau thành mệnh đề có nghĩa:
+\begin{equation*}
+   \exists w, \exists x, \exists y, \exists z, \big((w = x) = (y = z)\big).
+\end{equation*}
+Nhưng, để bám sát với thực tế, tác giả sẽ bỏ qua việc xây dựng các định nghĩa bậc cao hơn. Điều đó cũng cho phép chúng ta lạm dụng kí hiệu. Chẳng hạn, chúng ta có thể viết $x = y = z$ với nghĩa $x = y \land y = z$, chứ không phải $(x = y) = z$ hay $x = (y = z)$.
