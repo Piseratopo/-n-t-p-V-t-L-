@@ -1,0 +1,164 @@
+\section{Tiên đề ngoại diên}
+
+\ 
+
+Mặc dù cái tên có vẻ lạ, ý nghĩa của nó là một tính chất vô cùng quen thuộc của tập hợp: hai tập hợp cùng phần tử thì \defText{bằng nhau}. Chúng ta phát biểu nó như sau:
+$$
+\defMath{\forall x, \forall y, \left( x = y \iff  \forall z, \left( z \in x \iff z \in y \right) \right)}.
+$$
+Nếu không bằng nhau, kí hiệu $\defMath{x \neq y}$ được phát biểu là ``$x$ không bằng $y$''.
+\begin{figure}[H]
+   \begin{center}
+      \begin{tikzpicture}[>=stealth]
+         % Vẽ hai tập hợp
+         \draw[thick] (-2,0) ellipse (1.2cm and 2cm);
+         \node at (-2, 2.4) {Tập hợp $x$};
+         
+         \draw[thick] (2,0) ellipse (1.2cm and 2cm);
+         \node at (2, 2.4) {Tập hợp $y$};
+         
+         % Các phần tử trong tập x
+         \node[circle, fill, inner sep=1.2pt, label=left:$z_1$] (x1) at (-2, 1) {};
+         \node[circle, fill, inner sep=1.2pt, label=left:$z_2$] (x2) at (-2, 0) {};
+         \node[circle, fill, inner sep=1.2pt, label=left:$z_3$] (x3) at (-2, -1) {};
+         
+         % Các phần tử trong tập y
+         \node[circle, fill, inner sep=1.2pt, label=right:$z_1$] (y1) at (2, 1) {};
+         \node[circle, fill, inner sep=1.2pt, label=right:$z_3$] (y2) at (2, 0) {};
+         \node[circle, fill, inner sep=1.2pt, label=right:$z_2$] (y3) at (2, -1) {};
+         
+         % Nối mũi tên hai chiều
+         \draw[<->, thick, shorten >= 3pt, shorten <= 3pt] (x1) to[bend left=20] (y1);
+         \draw[<->, thick, shorten >= 3pt, shorten <= 3pt] (x2) to (y3);
+         \draw[<->, thick, shorten >= 3pt, shorten <= 3pt] (x3) to[bend left=10] (y2);
+      \end{tikzpicture}
+   \end{center}
+   \caption{Minh họa hai tập hợp bằng nhau $x = y = \{z_1; z_2; z_3\}$}
+\end{figure}
+   
+Trình bày bằng lời, chúng ta coi hai tập hợp là bằng nhau nếu mỗi phần tử trong một tập hợp thì đều thuộc tập hợp còn lại, và ngược lại. Trong trường hợp mà chúng ta chỉ có một chiều, thì chúng ta có định nghĩa \defText{tập con}:
+$$
+\defMath{\forall x, \forall y, \left( x \subseteq y \iff  \forall z, \left( z \in x \implies z \in y \right) \right)}.
+$$
+
+\begin{figure}[H]
+   \begin{center}
+      \begin{tikzpicture}[>=stealth]
+         % Vẽ tập hợp x
+         \draw[thick] (-2,0) ellipse (1.2cm and 2cm);
+         \node at (-2, 2.4) {Tập hợp $x$};
+         
+         % Vẽ tập hợp y nghiêng và to hơn
+         \draw[thick, rotate around={-20:(2.5,0)}] (2.5,0) ellipse (1.6cm and 2.5cm);
+         \node at (2.5, 2.8) {Tập hợp $y$};
+         
+         % Các phần tử trong tập x
+         \node[circle, fill, inner sep=1.2pt, label=left:$z_1$] (x1) at (-2, 1) {};
+         \node[circle, fill, inner sep=1.2pt, label=left:$z_2$] (x2) at (-2, 0) {};
+         \node[circle, fill, inner sep=1.2pt, label=left:$z_3$] (x3) at (-2, -1) {};
+         
+         % Các phần tử trong tập y (nhiều phần tử hơn, phân bố bên trong elip nghiêng)
+         \node[circle, fill, inner sep=1.2pt, label=right:$z_1$] (y1) at (1.8, 1) {};
+         \node[circle, fill, inner sep=1.2pt, label=right:$z_2$] (y2) at (1.8, -0.2) {};
+         \node[circle, fill, inner sep=1.2pt, label=right:$z_3$] (y3) at (2.5, -1.2) {};
+         \node[circle, fill, inner sep=1.2pt, label=right:$z_4$] (y4) at (3.2, 0.5) {};
+         \node[circle, fill, inner sep=1.2pt, label=right:$z_5$] (y5) at (2.8, 1.6) {};
+         
+         % Nối mũi tên một chiều từ x sang y
+         \draw[->, thick, shorten >= 3pt, shorten <= 3pt] (x1) to[bend left=15] (y1);
+         \draw[->, thick, shorten >= 3pt, shorten <= 3pt] (x2) to (y2);
+         \draw[->, thick, shorten >= 3pt, shorten <= 3pt] (x3) to[bend right=15] (y3);
+      \end{tikzpicture}
+   \end{center}
+   \caption{Minh họa tập con $x \subseteq y$ hay $y \supseteq x$}
+\end{figure}
+Ngoài kí hiệu $\subseteq$, chúng ta còn có các định nghĩa sau: Với mọi tập hợp $x$ và $y$,
+   \begin{itemize}
+      \item $\defMath{x \supseteq y \iff y \subseteq x}$,
+      \item $\defMath{x \subset y \iff x \subseteq y \land x \neq y}$\footnote{Trong nhiều tại liệu, $\subset$ có ý nghĩa tương đương với $\subseteq$.},
+      \item $\defMath{x \subsetneq y \iff x \subset y}$,
+      \item $\defMath{x \supset y \iff x \supseteq y \land x \neq y}$,
+      \item $\defMath{x \supsetneq y \iff x \supset y}$.
+   \end{itemize}
+
+Nếu $x$ không phải là tập con của $y$ thì sao? Chúng ta có biến đổi như sau: Với mọi tập hợp $x$ và $y$,
+\begin{align*}
+   x \not \subseteq y &\iff \overline{\forall z, \left( z \in x \implies z \in y \right)}; \\
+   x \not \subseteq y &\iff \exists z, \overline{\left( z \in x \implies z \in y \right)}; \\
+   x \not \subseteq y &\iff \exists z, \left( z \in x \land z \not \in y \right).
+\end{align*}
+Tương tự với định nghĩa $\supseteq$, chúng ta cũng có $\forall x, \forall y, (x \not \supseteq y \iff y \not \subseteq x)$. Hình \ref{fig:li_thuyet_tap_hop:tien_de:khong_la_tap_con} minh họa cho $x \not \subseteq y$.
+
+\begin{figure}[H]
+   \begin{center}
+      \begin{tikzpicture}[>=stealth]
+         % Vẽ tập hợp x
+         \draw[thick] (-2,0) ellipse (1.2cm and 2cm);
+         \node at (-2, 2.4) {Tập hợp $x$};
+         
+         % Vẽ tập hợp y
+         \draw[thick, rotate around={20:(2.5,0)}] (2.5,0) ellipse (1.6cm and 2.5cm);
+         \node at (2.5, 2.8) {Tập hợp $y$};
+         
+         % Các phần tử trong tập x
+         \node[circle, fill, inner sep=1.2pt, label=left:$z_1$] (x1) at (-2, 1) {};
+         \node[circle, fill, inner sep=1.2pt, label=left:$z_2$] (x2) at (-2, 0) {};
+         \node[circle, fill=red, inner sep=1.5pt, label={[red]left:$z_3$}] (x3) at (-2, -1) {};
+         
+         % Các phần tử trong tập y
+         \node[circle, fill, inner sep=1.2pt, label=right:$z_1$] (y1) at (1.8, 1) {};
+         \node[circle, fill, inner sep=1.2pt, label=right:$z_4$] (y2) at (1.8, 0) {};
+         \node[circle, fill, inner sep=1.2pt, label=right:$z_2$] (y4) at (3.2, 0.5) {};
+         \node[circle, fill, inner sep=1.2pt, label=right:$z_5$] (y5) at (2.8, -1.0) {};
+         
+         % Nối mũi tên một chiều từ x sang y cho z_1, z_2
+         \draw[->, thick, shorten >= 3pt, shorten <= 3pt] (x1) to[bend left=15] (y1);
+         \draw[->, thick, shorten >= 3pt, shorten <= 3pt] (x2) to[bend left=15] (y4);
+         
+         % Làm nổi bật rằng z không có tương ứng trong y
+         \node[red] (text) at (0.25, -1) {$z_3 \notin y$};
+         \draw[->, thick, red, densely dashed, shorten >= 2pt] (x3) -- (text);
+      \end{tikzpicture}
+   \end{center}
+   \caption{Minh họa $x \not \subseteq y$ (tồn tại $z_3 \in x$ nhưng $z_3 \notin y$)}
+   \label{fig:li_thuyet_tap_hop:tien_de:khong_la_tap_con}
+\end{figure}
+
+Trước khi đi đến với những tiên đề tiếp theo, chúng ta sẽ cùng tìm hiểu về các tính chất của phép bằng nhau. Thứ nhất, để ý rằng, do $A \iff A$ đúng với mọi $A$ từ giải tích vị từ cho nên, với 
+\begin{equation*}
+   \forall z, z \in x \iff z \in x.
+\end{equation*}
+Do đó, chúng ta có \defText{tính phản xạ}: 
+\begin{equation*}
+   \defMath{\forall x, x = x}.
+\end{equation*}
+
+Ngoài ra, phép $=$ cũng có \defText{tính đối xứng}. Để ý rằng, do tính giao hoán của phép đẳng giá, chúng ta có với mọi $x$ và $y$.
+\begin{equation*}
+   (\forall z, z \in x \iff z \in y) \iff (\forall z, z \in y \iff z \in x).
+\end{equation*}
+Sử dụng định nghĩa của phép bằng nhau để được
+\begin{equation*}
+   \defMath{\forall x, \forall y, x = y \iff y = x}.
+\end{equation*}
+
+Một tính chất cũng quan trọng khác, với mọi $w, x, y$, chúng ta có khẳng định sau theo định nghĩa:
+\begin{equation*}
+   x = w \land w = y \iff \begin{cases}
+      \forall z, z \in x \iff z \in w \\
+      \forall z, z \in w \iff z \in y
+   \end{cases}.
+\end{equation*}
+Theo tính chất phân phối của lượng từ toàn cục, 
+\begin{align*}
+   x = w \land w = y \iff\forall z, \big((z \in x \iff z \in w) \land (z \in w \iff z \in y)\big).
+\end{align*}
+Tính chất bắc cầu của phép đẳng giá cho
+\begin{equation*}
+   x = w \land w = y \implies \forall z, z \in x \iff z \in y.
+\end{equation*}
+Và qua đó,
+\begin{equation*}
+   \defMath{\forall w, \forall x, \forall y, \left( x = w \land w = y \implies x = y \right)}.
+\end{equation*}
+Đây là tính chất còn lại, \defText{tính bắc cầu}.
