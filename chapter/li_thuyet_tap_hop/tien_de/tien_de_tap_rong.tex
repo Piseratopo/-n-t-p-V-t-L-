@@ -1,0 +1,50 @@
+\section{Tiên đề tập rỗng}
+
+\ 
+
+Tiên đề này phát biểu rằng tồn tại một tập hợp mà không có phần tử nào. Trình bày dưới dạng kí hiệu:
+$$
+\defMath{\exists x, \forall y, y \not \in x}.
+$$
+
+Tập này được gọi là \defText{tập rỗng} và được kí hiệu là $\defMath{\emptyset}$. Tập này là duy nhất, do nếu giả sử tồn tại hai tập rỗng $\emptyset \neq \emptyset '$. Chúng ta có một số phân tích với phép $\neq$ như sau: Với $x$ và $y$ là hai tập hợp,
+\begin{align*}
+   x = y &\iff \forall z, (z \in x \iff z \in y); \\
+   x \neq y &\iff \overline{\forall z, (z \in x \iff z \in y)}; \\
+   x \neq y &\iff \exists z, \overline{(z \in x \iff z \in y)}.
+\end{align*}
+Sử dụng bảng giá trị chân lí, chúng ta có $\neg(P \iff Q) \iff (P \land \neg Q) \lor (\neg P \land Q)$.
+
+\begin{table}[H]
+	\centering
+	\caption{Bảng giá trị chân lí của $\neg ( P \iff Q ) \iff ( P \land \neg Q ) \lor ( \neg P \land Q )$}
+	\begin{tabular}{|c|c|cccccccccccccc|}
+		\hline
+		$P$ & $Q$ & $\neg$ & $(P$ & $\iff$ & $Q)$ & $\iff$ & $(P$ & $\land$ & $\neg$ & $Q)$ & $\lor$ & $(\neg$ & $P$ & $\land$ & $Q)$ \\
+		\headerDivider
+		Đ & Đ & S & Đ & Đ & Đ & \emphcolor{Đ} & Đ & S & S & Đ & S & S & Đ & S & Đ \\
+		Đ & S & Đ & Đ & S & S & \emphcolor{Đ} & Đ & Đ & Đ & S & Đ & S & Đ & S & S \\
+		S & Đ & Đ & S & S & Đ & \emphcolor{Đ} & S & S & S & Đ & Đ & Đ & S & Đ & Đ \\
+		S & S & S & S & Đ & S & \emphcolor{Đ} & S & S & Đ & S & S & Đ & S & S & S \\
+		\hline
+	\end{tabular}
+\end{table}
+Sử dụng kết quả này để có
+\begin{equation*}
+   x \neq y \iff \exists z, (z \in x \land z \notin y) \lor (z \notin x \land z \in y).
+\end{equation*}
+Qua đó, từ $\emptyset \neq \emptyset '$, chúng ta cần phải có
+$$
+   \exists z, (z \in \emptyset \land z \notin \emptyset ') \lor (z \notin \emptyset \land z \in \emptyset ').
+$$
+Tuy nhiên, $z \in \emptyset$ luôn sai, và $z \in \emptyset '$ cũng luôn sai theo định nghĩa của tập rỗng. Do đó, cả hai phần của mệnh đề trên đều sai, dẫn đến một mâu thuẫn. Từ đó, chúng ta có chứng minh bằng phản chứng và mọi tập rỗng đều bằng nhau.
+
+Nó có một tính chất mà có cảm giác như một nghịch lí: một tập rỗng là tập con của mọi tập hợp. Thật vậy, theo định nghĩa tập con,
+$$
+\forall y, (\emptyset \subseteq y \iff \forall z, (z \in \emptyset \implies z \in y)).
+$$
+Tuy nhiên, $z \notin \emptyset$ đúng với mọi $z$, cho nên vế giả thiết của $z \in \emptyset \implies z \in y$ luôn sai. Do đó, mệnh đề kéo theo này luôn đúng. Từ đó, hiển nhiên dẫn đến $\forall y, (\emptyset \subseteq y)$ đúng.
+
+Liên quan một chút đến vấn đề triết học, người ta có thể đặt câu hỏi: ``Cần tối thiểu bao nhiêu phần tử cơ bản để tạo thành một thế giới?''. Với lí thuyết tập hợp, một tập rỗng là đủ. Trong những phần tiếp theo, bạn đọc sẽ thấy rằng tất cả các cấu trúc toán học đều có thể được xây dựng từ tập hợp. Tuy nhiên (và cũng tương đối hiển nhiên), một thế giới chỉ có một tập rỗng thì sẽ không có gì xảy ra cả, và cũng không có ai để nhận thức về nó. Do đó, mặc dù một tập rỗng là đủ để tạo ra một thế giới toán học, nhưng về mặt thực tế vật lí, chúng ta cần nhiều hơn thế.
+
+Quay trở lại về các vấn đề liên quan đến tập hợp, chúng ta đã có điểm khởi đầu --- $\emptyset$. Những tiên đề tiếp theo sẽ cho phép xây dựng các tập hợp phức tạp hơn từ điểm khởi đầu này.
