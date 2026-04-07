@@ -20,5 +20,6 @@
                 "xelatexmk"
             ]
         }
-    ]
+    ],
+    "latex-workshop.formatting.latex": "latexindent"
 }
