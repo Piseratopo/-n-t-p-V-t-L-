@@ -67,16 +67,62 @@ Tập hợp này được gọi là \defText{hợp} của $x$ và kí hiệu là
    \defMath{A \cup B = \bigcup \{A; B\}}.
 \end{equation*}
 
-\exercise Cho $A$, $B$ là các tập hợp. Chứng minh rằng
+\exercise Cho $A$, $B$, $C$ là các tập hợp. Chứng minh rằng
 \begin{multicols}{2}
    \begin{enumerate}
       \item $\bigcup \{A\} = A$;
       \item $\bigcup \emptyset = \emptyset$;
-      \item $\bigcup (A; B) = \{A; B\}$.
+      \item $A \cup B \supseteq A$;
+      \item $\bigcup (A; B) = \{A; B\}$;
+      \item $A = B \implies A \cup C = B \cup C$;
+      \item $(A \cup B) \cup C = A \cup (B \cup C) = \bigcup \{A; B; C\}$.
    \end{enumerate}
 \end{multicols}
 
 \solution
 
 \setcounter{subexercise}{1}
-\arabic{subexercise}.
+\arabic{subexercise}. Đặt $u = \bigcup \{A\}$. Gọi $x$ là một phần tử bất kì thuộc $A$. Hiển nhiên $A \in \{A\}$. Kết hợp với $x \in A$ để có
+$$
+   \exists z, (z \in \{A\} \land x \in z).
+$$
+Điều trên là đúng với mọi $x$. Từ đó, suy ra $\forall x, (x \in A \implies x \in u)$, dẫn đến $A \subseteq u$.
+
+Ngược lại, gọi $y$ là một phần tử bất kì thuộc $u$. Theo định nghĩa của tiên đề hợp, chúng ta có
+$$
+   \exists z, (z \in \{A\} \land y \in z).
+$$
+Tuy nhiên, $\{A\}$ là một tập hợp chỉ có một phần tử duy nhất là $A$. Do đó, $z = A$ và $y \in A$. Tóm lại, với mọi $y$, nếu $y \in u$ thì $y \in A$, cho chúng ta $u \subseteq A$.
+
+Từ hai điều trên, chúng ta có điều phải chứng minh.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Chúng ta chứng minh bằng phương pháp phản chứng. Giả sử $\bigcup \emptyset \neq \emptyset$, mà $x \notin \emptyset$ với mọi $x$, khi đó phải tồn tại ít nhất một phần tử $x \in \bigcup \emptyset$. Theo định nghĩa của hợp, sẽ tồn tại một $y \in \emptyset$ sao cho $x \in y$. Tuy nhiên điều này là vô lý, vì tập hợp rỗng $\emptyset$ không có chứa phần tử nào. Sự mâu thuẫn này chứng tỏ giả thiết phản chứng là sai. Vậy $\bigcup \emptyset = \emptyset$. Chúng ta có điều phải chứng minh.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Gọi $x \in A$. Nhắc lại rằng, $A \cup B = \bigcup \{A; B\}$. Khi đó, có $A \in \{A; B\}$ và giả sử ban đầu của $x$ để có $x \in A \cup B$ với mọi $x$. Vậy $A \cup B \supseteq A$. Điều phải chứng minh.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Trước tiên, nhắc lại định nghĩa đôi có thứ tự: $(A; B) = \big\{ \{A\}; \{A; B\} \big\}$. Lấy tùy ý $x \in \bigcup (A; B)$. Theo định nghĩa của hợp, tồn tại tập hợp $y \in \big\{ \{A\}; \{A; B\} \big\}$ sao cho $x \in y$. Do đó, $y = \{A\}$ hoặc $y = \{A; B\}$.
+\begin{itemize}
+   \item \textcolor{colorEmphasis}{Trường hợp $y = \{A\}$}: Chúng ta có $x \in \{A\}$ kéo theo $x = A$. Dẫn đến $x \in \{A; B\}$.
+   \item \textcolor{colorEmphasisCyan}{Trường hợp $y = \{A; B\}$}: Chúng ta có ngay $x \in \{A; B\}$.
+\end{itemize}
+Cả hai trường hợp đều cho $\bigcup (A; B) \subseteq \{A; B\}$.
+
+Ngược lại, lấy tùy ý $x \in \{A; B\}$. Có $\{A; B\} \in \big\{\{A\}; \{A; B\}\big\}$, nên $x \in \bigcup (A; B)$. Do vậy, $\{A; B\} \subseteq \bigcup (A; B)$.
+
+Từ hai điều trên, chúng ta có điều phải chứng minh.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Giả sử $A = B$. Lấy tùy ý $x \in A \cup C$, theo định nghĩa, tồn tại tập hợp $y \in \{A; C\}$ sao cho $x \in y$. Khi này, $\left[\begin{array}{l}
+      y = A \\
+      y = C
+   \end{array}\right.$.
+\begin{itemize}
+   \item \textcolor{colorEmphasis}{Trường hợp $y = A$}: Chúng ta có $x \in A$. Vì $A = B$, suy ra $x \in B$. Lại có $B \in \{B; C\}$, nên kéo theo $x$ là một phần tử của $B \cup C$.
+   \item \textcolor{colorEmphasisCyan}{Trường hợp $y = C$}: Chúng ta có $x \in C$. Tương tự, có $x \in B \cup C$.
+\end{itemize}
+Cả hai trường hợp đều cho kết quả $x \in B \cup C$. Do đó, $A \cup C \subseteq B \cup C$.
+
+Bằng lập luận tương tự, do vai trò của $A$ và $B$ là như nhau, chúng ta cũng xuất phát được với $x \in B \cup C$ và nhận về $B \cup C \subseteq A \cup C$. Từ hai kết quả trên, suy ra $A \cup C = B \cup C$. Điều phải chứng minh.

@@ -1,7 +1,24 @@
 \section{Đối tượng của lí thuyết tập hợp}
 
-\ 
+\
 
-Từ cái tên, chúng ta cũng đã biết lí thuyết tập hợp sẽ tìm hiểu về tính chất của các \defText{tập hợp} (hay \defText{tập}). Chúng ta không định nghĩa tập hợp mà mặc nhiên cho nó tự tồn tại. Thêm vào đó, chúng ta cấp vị từ $\defMath{\in}\hspace{-0.25em}()$ nhận hạng thức là hai tập hợp $x$ và $y$ bất kì. Điều này có nghĩa $\defMath{\in}\hspace{-0.25em}\defMath{(x; y)}$ hay $\defMath{x \in y}$ là một mệnh đề có thể đúng hoặc sai. Nếu sai, chúng ta kí hiệu $\defMath{x \notin y}$. Nếu $x \in y$, chúng ta viết bằng lời ``$x$ thuộc $y$'' hay ``$x$ là một \defText{phần tử} của $y$''. Ngược lại, chúng ta viết ``$x$ không thuộc $y$''. 
+Từ cái tên, chúng ta cũng đã biết lí thuyết tập hợp sẽ tìm hiểu về tính chất của các \defText{tập hợp} (hay \defText{tập}). Chúng ta không định nghĩa tập hợp mà mặc nhiên cho nó tự tồn tại. Thêm vào đó, chúng ta cấp vị từ $\defMath{\in}\hspace{-0.25em}()$ nhận hạng thức là hai tập hợp $x$ và $y$ bất kì. Điều này có nghĩa $\defMath{\in}\hspace{-0.25em}\defMath{(x; y)}$ hay $\defMath{x \in y}$ là một mệnh đề có thể đúng hoặc sai. Nếu sai, chúng ta kí hiệu $\defMath{x \notin y}$. Nếu $x \in y$, chúng ta viết bằng lời ``$x$ thuộc $y$'' hay ``$x$ là một \defText{phần tử} của $y$''. Ngược lại, chúng ta viết ``$x$ không thuộc $y$''.
 
 Nếu bạn đọc không thích kí hiệu xuôi, bạn đọc có thể viết là $\defMath{y \ni x}$ hay $\defMath{y \not}\hspace{0.05em}\defMath{\ni x}$\footnote{Tác giả chưa bao giờ thấy một tài liệu nào có kiểu viết ngược như thế này. Bạn đọc chỉ nên viết như thế này nếu như nghi vấn rằng người đọc sẽ cầm ngược cuốn sách.} và phát biểu bằng lời lần lượt là ``$y$ chứa phần tử $x$'' hay ``$y$ không chứa phần tử $x$''.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \draw[set boundary] (0,0) ellipse (1.5cm and 2cm);
+        \node[above=2.1cm] at (0,0) {Tập hợp $y$};
+
+        \node[element, label=left:$x$] (x_in) at (-0.3, 0.5) {};
+
+        \node[element] at (0.5, -0.8) {};
+        \node[element] at (-0.2, -1.2) {};
+        \node[element alert, label={[red]left:$z$}] (x_out) at (3.5, 1.5) {};
+        \draw[thick, red, dashed] (x_out) to[bend left=135] (2.5, 0);
+        \draw[guide arrow, red, dashed] (2.5, 0) to[bend left=-45] (1.5, 0);
+    \end{tikzpicture}
+    \caption{Minh họa quan hệ thuộc --- $x \in y$ --- và không thuộc --- $z \notin y$}
+\end{figure}
