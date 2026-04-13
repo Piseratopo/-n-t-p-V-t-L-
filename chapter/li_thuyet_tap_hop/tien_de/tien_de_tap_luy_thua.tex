@@ -2,7 +2,17 @@
 
 \
 
-Tiên đề tập lũy thừa phát biểu rằng với mọi tập hợp $x$, tồn tại một tập hợp $z$ mà nó chứa tất cả và chỉ chứa các phần tử của các tập hợp con của $x$. Viết dưới dạng kí hiệu:
+Tiên đề tập lũy thừa phát biểu rằng với mọi tập hợp $x$, tồn tại một tập hợp $p$ mà nó chứa tất cả và chỉ chứa các phần tử của các tập hợp con của $x$. Viết dưới dạng kí hiệu:
 \begin{equation*}
-    \defMath{\forall x, \exists z, \forall y \left( y \in z \iff y \subseteq x \right)}.
+    \defMath{\forall x, \exists p, \forall y \left( y \in p \iff y \subseteq x \right)}.
 \end{equation*}
+Tập $p$ thỏa mãn điều này được gọi là \defText{tập lũy thừa} của $x$, kí hiệu là $\defMath{\mathfrak{P}(x)}$, $\defMath{\mathcal{P}(x)}$, hay $\defMath{2^x}$\footnote{Cần phải để ý, các kí hiệu ở đây là một sự lạm dụng. Kí hiệu $\mathfrak{P}(x)$ không phải để biểu diễn vị từ, và $2^x$ không biểu diễn phép lũy thừa.}.
+
+Cho trước tập hợp $x$, giả sử tồn tại hai tập lũy thừa của $x$ là $\mathfrak{P}(x)$ và $\mathfrak{B}(x)$. Chúng ta sẽ chứng minh rằng $\mathfrak{P}(x) = \mathfrak{B}(x)$. Giống như các chứng minh trước, chúng ta xuất phát từ định nghĩa để đưa ra:
+\begin{equation*}
+    \begin{cases}
+        \forall y \left( y \in \mathfrak{P}(x) \iff y \subseteq x \right) \\
+        \forall y \left( y \in \mathfrak{B}(x) \iff y \subseteq x \right)
+    \end{cases}.
+\end{equation*}
+Từ đó, có được ngay, $\forall y, (y \in \mathfrak{P}(x) \iff y \in \mathfrak{B}(x))$, suy ra $\mathfrak{P}(x) = \mathfrak{B}(x)$.
