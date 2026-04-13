@@ -126,3 +126,24 @@ Từ hai điều trên, chúng ta có điều phải chứng minh.
 Cả hai trường hợp đều cho kết quả $x \in B \cup C$. Do đó, $A \cup C \subseteq B \cup C$.
 
 Bằng lập luận tương tự, do vai trò của $A$ và $B$ là như nhau, chúng ta cũng xuất phát được với $x \in B \cup C$ và nhận về $B \cup C \subseteq A \cup C$. Từ hai kết quả trên, suy ra $A \cup C = B \cup C$. Điều phải chứng minh.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Trước tiên, chúng ta đi chứng minh $(A \cup B) \cup C = \bigcup \{A; B; C\}$.
+
+Lấy tùy ý $x \in (A \cup B) \cup C$. Theo định nghĩa, $x \in A \cup B$ hoặc $x \in C$. Nếu $x \in A \cup B$, thì tiếp tục áp dụng định nghĩa để có $x \in A$ hoặc $x \in B$. Tóm lại, $x \in A$, $x \in B$ hoặc $x \in C$; có nghĩa là tồn tại tập hợp $y \in \{A; B; C\}$ sao cho $x \in y$. Điều này chứng tỏ $x \in \bigcup \{A; B; C\}$, và kéo theo $(A \cup B) \cup C \subseteq \bigcup \{A; B; C\}$.
+
+Ngược lại, lấy tùy ý $x \in \bigcup \{A; B; C\}$. Theo định nghĩa, tồn tại tập hợp $y \in \{A; B; C\}$ sao cho $x \in y$. Khi này, $\left[\begin{array}{l}
+      y = A \\
+      y = B \\
+      y = C
+   \end{array}\right.$. Xét ba trường hợp:
+\begin{itemize}
+   \item \textcolor{colorEmphasis}{Trường hợp $y = A$}: Chúng ta có $x \in A$. Từ đó suy ra $x \in A \cup B$, dẫn đến $x \in (A \cup B) \cup C$.
+   \item \textcolor{colorEmphasisCyan}{Trường hợp $y = B$}: Chúng ta có $x \in B$. Tương tự, cũng có $x \in A \cup B$, kéo theo $x \in (A \cup B) \cup C$.
+   \item \textcolor{colorEmphasisGreen}{Trường hợp $y = C$}: Chúng ta có $x \in C$. Từ đó trực tiếp suy ra $x \in (A \cup B) \cup C$.
+\end{itemize}
+Tất cả ba trường hợp đều cho kết quả $x \in (A \cup B) \cup C$. Do đó, $\bigcup \{A; B; C\} \subseteq (A \cup B) \cup C$.
+
+Từ hai điều trên, suy ra $(A \cup B) \cup C = \bigcup \{A; B; C\}$.
+
+Áp dụng lập luận biến đổi hoàn toàn tương tự, chúng ta cũng có được $A \cup (B \cup C) = \bigcup \{A; B; C\}$. Do đó, kéo theo $(A \cup B) \cup C = A \cup (B \cup C) = \bigcup \{A; B; C\}$. Chúng ta có điều phải chứng minh.
