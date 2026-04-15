@@ -4,15 +4,41 @@
 
 Tiên đề tập lũy thừa phát biểu rằng với mọi tập hợp $x$, tồn tại một tập hợp $p$ mà nó chứa tất cả và chỉ chứa các phần tử của các tập hợp con của $x$. Viết dưới dạng kí hiệu:
 \begin{equation*}
-    \defMath{\forall x, \exists p, \forall y \left( y \in p \iff y \subseteq x \right)}.
+    \defMath{\forall x, \exists p, \forall y, \left( y \in p \iff y \subseteq x \right)}.
 \end{equation*}
 Tập $p$ thỏa mãn điều này được gọi là \defText{tập lũy thừa} của $x$, kí hiệu là $\defMath{\mathfrak{P}(x)}$, $\defMath{\mathcal{P}(x)}$, hay $\defMath{2^x}$\footnote{Cần phải để ý, các kí hiệu ở đây là một sự lạm dụng. Kí hiệu $\mathfrak{P}(x)$ không phải để biểu diễn vị từ, và $2^x$ không biểu diễn phép lũy thừa.}.
 
 Cho trước tập hợp $x$, giả sử tồn tại hai tập lũy thừa của $x$ là $\mathfrak{P}(x)$ và $\mathfrak{B}(x)$. Chúng ta sẽ chứng minh rằng $\mathfrak{P}(x) = \mathfrak{B}(x)$. Giống như các chứng minh trước, chúng ta xuất phát từ định nghĩa để đưa ra:
 \begin{equation*}
     \begin{cases}
-        \forall y \left( y \in \mathfrak{P}(x) \iff y \subseteq x \right) \\
-        \forall y \left( y \in \mathfrak{B}(x) \iff y \subseteq x \right)
+        \forall y, \left( y \in \mathfrak{P}(x) \iff y \subseteq x \right) \\
+        \forall y, \left( y \in \mathfrak{B}(x) \iff y \subseteq x \right)
     \end{cases}.
 \end{equation*}
 Từ đó, có được ngay, $\forall y, (y \in \mathfrak{P}(x) \iff y \in \mathfrak{B}(x))$, suy ra $\mathfrak{P}(x) = \mathfrak{B}(x)$.
+
+\exercise Cho $X$ và $Y$ là hai tập hợp. Chứng minh rằng,
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item $\mathfrak{P}(\emptyset) = \{\emptyset\}$;
+        \item $\mathfrak{P}(\{X; Y\}) = \{\emptyset; \{X\}; \{Y\}; \{X; Y\}\}$;
+        \item $X \subseteq Y \implies \mathfrak{P}(X) \subseteq \mathfrak{P}(Y)$;
+        \item $\mathfrak{P}(X \cup Y) \supseteq \mathfrak{P}(X) \cup \mathfrak{P}(Y)$.
+    \end{enumerate}
+\end{multicols}
+
+\solution
+
+\setcounter{subexercise}{1}
+\arabic{subexercise}. Dễ thấy $\emptyset = \emptyset$, nên $\emptyset \subseteq \emptyset$. Theo định nghĩa của tập lũy thừa, chúng ta có $\emptyset \in \mathfrak{P}(\emptyset)$. Do vậy, $\{\emptyset\} \subseteq \mathfrak{P}(\emptyset)$.
+
+Mặt khác, với mọi $y \in \mathfrak{P}(\emptyset)$, có $y \subseteq \emptyset$. Giả sử phản chứng, $y \neq \emptyset$. Do $\emptyset$ là tập duy nhất không có phần tử, $y$ cần phải có một phần tử $z \in y$ nào đó. Nhưng do $y \subseteq \emptyset$, nên $z \in \emptyset$. Điều này là vô lý. Vậy, $y = \emptyset$. Do đó, $\mathfrak{P}(\emptyset) \subseteq \{\emptyset\}$.
+
+Kết hợp hai kết quả, chúng ta có $\mathfrak{P}(\emptyset) = \{\emptyset\}$. Điều phải chứng minh.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Tập rỗng là tập con của mọi tập hợp, nên $\emptyset \subseteq \{X; Y\}$, dẫn đến $\emptyset \in \mathfrak{P}(\{X; Y\})$.
+
+Theo cách xây dựng của đôi không thứ tự, $X \in \{X; Y\}$. Tập hợp đơn $\{X\}$ chỉ có phần tử là $X$. Do vậy, $\{X\} \subseteq \{X; Y\}$, dẫn đến $\{X\} \in \mathfrak{P}(\{X; Y\})$. Tương tự, $\{Y\} \in \mathfrak{P}(\{X; Y\})$.
+
+Hiển nhiên $\{X; Y\} = \{X; Y\}$. Do vậy, $\{X; Y\} \in \mathfrak{P}(\{X; Y\})$.

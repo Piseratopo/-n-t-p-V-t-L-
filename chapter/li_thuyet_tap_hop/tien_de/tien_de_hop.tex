@@ -4,7 +4,7 @@
 
 Như đã khẳng định, nếu $x$ là một tập hợp thì bên trong $x$ có thể chứa các tập hợp khác. Tiên đề hợp phát biểu rằng tồn tại một tập hợp mà nó chứa tất cả và chỉ chứa các phần tử của các tập hợp trong $x$. Viết dưới dạng kí hiệu:
 \begin{equation*}
-   \defMath{\forall x, \exists u, \forall y \left( y \in u \iff \exists z (z \in x \land y \in z) \right)}.
+   \defMath{\forall x, \exists u, \forall y, \left( y \in u \iff \exists z (z \in x \land y \in z) \right)}.
 \end{equation*}
 
 \begin{figure}[H]
@@ -147,3 +147,37 @@ Tất cả ba trường hợp đều cho kết quả $x \in (A \cup B) \cup C$. 
 Từ hai điều trên, suy ra $(A \cup B) \cup C = \bigcup \{A; B; C\}$.
 
 Áp dụng lập luận biến đổi hoàn toàn tương tự, chúng ta cũng có được $A \cup (B \cup C) = \bigcup \{A; B; C\}$. Do đó, kéo theo $(A \cup B) \cup C = A \cup (B \cup C) = \bigcup \{A; B; C\}$. Chúng ta có điều phải chứng minh.
+
+\exercise Có các tập hợp $A$, $B$ và $C$. Chứng minh rằng tồn tại duy nhất một tập hợp $S$ thỏa mãn $\forall x, (x \in S \iff x = A \lor x = B \lor x = C)$.
+
+\solution 
+
+Áp dụng liên tiếp tiên đề cặp, chúng ta có thể xây dựng được tập $\big\{\{A; B\}; \{C\}\big\}$. Thêm tiên đề hợp, chúng ta có $\bigcup \big\{\{A; B\}; \{C\}\big\}$. Chúng ta sẽ chứng minh $$S = \bigcup \big\{\{A; B\}; \{C\}\big\}$$ và đây là tập duy nhất thỏa mãn.
+
+Lấy tùy ý $x \in S$. Theo định nghĩa của hợp, tồn tại tập hợp $y \in \big\{\{A; B\}; \{C\}\big\}$ sao cho $x \in y$. Khi này, $\left[\begin{array}{l}
+      y = \{A; B\} \\
+      y = \{C\}
+   \end{array}\right.$. Xét hai trường hợp:
+\begin{itemize}
+   \item \textcolor{colorEmphasis}{Trường hợp $y = \{A; B\}$}: Chúng ta có $x \in \{A; B\}$, dẫn đến $x = A$ hoặc $x = B$.
+   \item \textcolor{colorEmphasisCyan}{Trường hợp $y = \{C\}$}: Chúng ta có $x \in \{C\}$, dẫn đến $x = C$.
+\end{itemize}
+Cả hai trường hợp đều cho kết quả $x = A$ hoặc $x = B$ hoặc $x = C$. Do đó, $\forall x, (x \in S \implies x = A \lor x = B \lor x = C)$.
+
+Ngược lại, lấy tùy ý $x$ sao cho $\left[\begin{array}{l}
+      x = A \\
+      x = B \\
+      x = C
+   \end{array}\right.$. Xét ba trường hợp:
+\begin{itemize}
+   \item \textcolor{colorEmphasis}{Trường hợp $x = A$}: Chúng ta có $A \in \{A; B\}$. Ngoài ra, $\{A; B\} \in \big\{\{A; B\}; \{C\}\big\}$, dẫn đến $A \in \bigcup \big\{\{A; B\}; \{C\}\big\}$. Suy ra $x \in S$.
+   \item \textcolor{colorEmphasisCyan}{Trường hợp $x = B$}: Tương tự với trường hợp trước, chúng ta cũng có $x \in S$.
+   \item \textcolor{colorEmphasisGreen}{Trường hợp $x = C$}: Chúng ta có $C \in \{C\}$ và $\{C\} \in \big\{\{A; B\}; \{C\}\big\}$, dẫn đến $C \in \bigcup \big\{\{A; B\}; \{C\}\big\}$. Suy ra $x \in S$.
+\end{itemize}
+Tất cả ba trường hợp đều cho kết quả $x \in S$. Do đó, $\forall x, (x = A \lor x = B \lor x = C \implies x \in S)$.
+
+Từ hai điều trên, chúng ta được $\forall x, (x \in S \iff x = A \lor x = B \lor x = C)$.
+
+Tiếp theo, giả sử tồn tại một tập hợp $S'$ khác cũng có tính chất $\forall x, (x \in S' \iff x = A \lor x = B \lor x = C)$. Từ đó suy ra $\forall x, (x \in S \iff x \in S')$, dẫn đến $S = S'$. Điều này chứng tỏ $S$ là tập duy nhất. Chúng ta có điều phải chứng minh.
+
+Chúng ta đặt $S$ bởi một kí hiệu quen thuộc hơn là $\{A; B; C\}$. Ngoài ra, chúng ta có thể mở rộng định nghĩa này cho nhiều phần tử hơn. Cụ thể, giả sử chúng ta có một tập $\{A_1; A_2; \ldots; A_n\}$. Chúng ta có thể thêm một phần tử vào tập này bằng cách đặt $$\defMath{\{A_1; A_2; \ldots; A_n; A_{n+1}\} = \bigcup \left\{\{A_1; A_2; \ldots; A_n\}; \{A_{n+1}\}\right\}}.$$
