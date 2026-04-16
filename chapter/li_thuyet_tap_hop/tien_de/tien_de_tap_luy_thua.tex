@@ -59,3 +59,14 @@ Mặt khác, với mọi $y \in \mathfrak{P}(\{X; Y\})$, theo định nghĩa có
 Qua bốn trường hợp, có $y \in \{\emptyset; \{X\}; \{Y\}; \{X; Y\}\}$. Do đó, $\mathfrak{P}(\{X; Y\}) \subseteq \{\emptyset; \{X\}; \{Y\}; \{X; Y\}\}$.
 
 Kết hợp hai kết quả bao hàm, suy ra $\mathfrak{P}(\{X; Y\}) = \{\emptyset; \{X\}; \{Y\}; \{X; Y\}\}$. Điều phải chứng minh.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Giả sử $X \subseteq Y$. Gọi $w \in \mathfrak{P}(X)$. Theo định nghĩa, $w \subseteq X$. Theo tính chất bắc cầu của quan hệ bao hàm, có $w \subseteq Y$. Do đó, $w \in \mathfrak{P}(Y)$.
+
+Từ đó, có $X \subseteq Y \implies \mathfrak{P}(X) \subseteq \mathfrak{P}(Y)$. Điều phải chứng minh.
+
+\stepcounter{subexercise}
+\arabic{subexercise}. Gọi $w$ là một phần tử bất kì thuộc $\mathfrak{P}(X) \cup \mathfrak{P}(Y)$. Theo định nghĩa của phép hợp, có $w \in \mathfrak{P}(X)$ hoặc $w \in \mathfrak{P}(Y)$.
+Nếu $w \in \mathfrak{P}(X)$, theo định nghĩa tập lũy thừa ta có $w \subseteq X$. Mặt khác, hiển nhiên $X \subseteq X \cup Y$. Theo tính chất bắc cầu, $w \subseteq X \cup Y$, dẫn đến $w \in \mathfrak{P}(X \cup Y)$.
+Chứng minh hoàn toàn tương tự cho trường hợp $w \in \mathfrak{P}(Y)$, chúng ta cũng thu được $w \in \mathfrak{P}(X \cup Y)$.
+Vậy, trong cả hai trường hợp, đều có $w \in \mathfrak{P}(X \cup Y)$. Do đó $\mathfrak{P}(X) \cup \mathfrak{P}(Y) \subseteq \mathfrak{P}(X \cup Y)$. Điều phải chứng minh.
