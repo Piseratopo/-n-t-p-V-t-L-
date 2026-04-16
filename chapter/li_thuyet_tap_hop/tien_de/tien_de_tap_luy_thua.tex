@@ -42,3 +42,20 @@ Kết hợp hai kết quả, chúng ta có $\mathfrak{P}(\emptyset) = \{\emptyse
 Theo cách xây dựng của đôi không thứ tự, $X \in \{X; Y\}$. Tập hợp đơn $\{X\}$ chỉ có phần tử là $X$. Do vậy, $\{X\} \subseteq \{X; Y\}$, dẫn đến $\{X\} \in \mathfrak{P}(\{X; Y\})$. Tương tự, $\{Y\} \in \mathfrak{P}(\{X; Y\})$.
 
 Hiển nhiên $\{X; Y\} = \{X; Y\}$. Do vậy, $\{X; Y\} \in \mathfrak{P}(\{X; Y\})$.
+
+Từ ba kết luận trên, chúng ta có $\mathfrak{P}(\{X; Y\}) \supseteq \{\emptyset; \{X\}; \{Y\}; \{X; Y\}\}$.
+
+Mặt khác, với mọi $y \in \mathfrak{P}(\{X; Y\})$, theo định nghĩa có $y \subseteq \{X; Y\}$, hiểu theo một cách khác, $y$ chỉ nhận $X$ và $Y$ làm phần tử. Do một phần tử chỉ có thể thuộc hoặc không thuộc một tập hợp bất kì, nên các khả năng có thể xảy ra bao gồm:
+
+\begin{itemize}
+    \item \textcolor{colorEmphasis}{$X \in y$ và $Y \in y$}. Điều này cho chúng ta $\{X; Y\} \subseteq y$. Suy ra, $y = \{X; Y\}$.
+    \item \textcolor{colorEmphasisCyan}{$X \in y$ và $Y \notin y$}. Gọi $w$ là một phần tử thuộc $y$. Có $\left[\begin{array}{l} w = X \\ w = Y \end{array}\right.$. Nhưng do $Y \notin y$ nên $w \neq Y$. Vậy $w = X$. Tóm lại, chúng ta có
+          $$\forall w, \left(w \in y \iff w = X\right)$$
+          và điều này cho $y = \{X\}$.
+    \item \textcolor{colorEmphasisGreen}{$X \notin y$ và $Y \in y$}. Tương tự, có thể kết luận $y = \{Y\}$.
+    \item \textcolor{colorEmphasisPurple}{$X \notin y$ và $Y \notin y$}. Giả sử tồn tại $w \in y$. Khí đó, cần phải có $w = X \lor w = Y$. Nhưng do $X \notin y$ và $Y \notin y$, nên điều này là vô lý. Vậy, $\forall w, w \notin y$. Suy ra, $y = \emptyset$ theo định nghĩa tập rỗng.
+\end{itemize}
+
+Qua bốn trường hợp, có $y \in \{\emptyset; \{X\}; \{Y\}; \{X; Y\}\}$. Do đó, $\mathfrak{P}(\{X; Y\}) \subseteq \{\emptyset; \{X\}; \{Y\}; \{X; Y\}\}$.
+
+Kết hợp hai kết quả bao hàm, suy ra $\mathfrak{P}(\{X; Y\}) = \{\emptyset; \{X\}; \{Y\}; \{X; Y\}\}$. Điều phải chứng minh.

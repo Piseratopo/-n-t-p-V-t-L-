@@ -169,10 +169,11 @@ Cuối cùng, khi tác giả dùng từ ``phép'' bằng nhau, tác giả đã n
 \end{equation*}
 Nhưng, để bám sát với thực tế, tác giả sẽ bỏ qua việc xây dựng các định nghĩa bậc cao hơn. Điều đó cũng cho phép chúng ta lạm dụng kí hiệu. Chẳng hạn, chúng ta có thể viết $x = y = z$ với nghĩa $x = y \land y = z$, chứ không phải $(x = y) = z$ hay $x = (y = z)$.
 
-\exercise Cho $A$ và $B$ là hai tập hợp. Chứng minh rằng
+\exercise Cho $A$, $B$ và $C$ là các tập hợp. Chứng minh rằng
 \begin{enumerate}
     \item $A = B \iff A \subseteq B \land B \subseteq A$;
     \item $A \neq B \iff \exists z, (z \in A \land z \notin B) \lor (z \notin A \land z \in B)$.
+    \item $A \subseteq B \land B \subseteq C \implies A \subseteq C$.
 \end{enumerate}
 
 \solution
@@ -201,5 +202,22 @@ Do đó,
     A \neq B & \iff \overline{\forall z, z \in A \iff z \in B};                                                      \\
     A \neq B & \iff \exists z, \overline{z \in A \iff z \in B};                                                      \\
     A \neq B & \iff \exists z, \left( z \in A \land z \notin B \right) \lor \left( z \notin A \land z \in B \right).
+\end{align*}
+Điều phải chứng minh.
+
+\stepcounter{subexercise}
+\arabic{subexercise}.
+\begin{equation*}
+    \begin{cases}
+        A \subseteq B \iff \forall z, (z \in A \implies z \in B) \\
+        B \subseteq C \iff \forall z, (z \in B \implies z \in C)
+    \end{cases}.
+\end{equation*}
+Do đó,
+\begin{align*}
+    A \subseteq B \land B \subseteq C & \iff \forall z, (z \in A \implies z \in B) \land \forall z, (z \in B \implies z \in C);    \\
+    A \subseteq B \land B \subseteq C & \iff \forall z, \left( (z \in A \implies z \in B) \land (z \in B \implies z \in C)\right); \\
+    A \subseteq B \land B \subseteq C & \implies \forall z, \left(z \in A \implies z \in C\right);                                 \\
+    A \subseteq B \land B \subseteq C & \implies A \subseteq C.
 \end{align*}
 Điều phải chứng minh.

@@ -9,7 +9,24 @@
             "args": [
                 "-xelatex",
                 "-interaction=nonstopmode",
-                "main.tex"
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
             ]
         }
     ],
@@ -18,6 +35,15 @@
             "name": "latexmk (xelatex)",
             "tools": [
                 "xelatexmk"
+            ]
+        },
+        {
+            "name": "xelatex ➞ bibtex ➞ xelatex × 2",
+            "tools": [
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex"
             ]
         }
     ],
