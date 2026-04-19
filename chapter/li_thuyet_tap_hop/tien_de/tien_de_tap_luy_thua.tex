@@ -2,7 +2,7 @@
 
 \
 
-Tiên đề tập lũy thừa phát biểu rằng với mọi tập hợp $x$, tồn tại một tập hợp $p$ mà nó chứa tất cả và chỉ chứa các phần tử của các tập hợp con của $x$. Viết dưới dạng kí hiệu:
+Tiên đề tập lũy thừa phát biểu rằng với mọi tập hợp $x$, tồn tại một tập hợp $p$ mà nó chứa tất cả và chỉ chứa các phần tử là các tập hợp con của $x$. Viết dưới dạng kí hiệu:
 \begin{equation*}
     \defMath{\forall x, \exists p, \forall y, \left( y \in p \iff y \subseteq x \right)}.
 \end{equation*}
@@ -20,7 +20,7 @@ Từ đó, có được ngay, $\forall y, (y \in \mathfrak{P}(x) \iff y \in \mat
 \exercise Cho $X$ và $Y$ là hai tập hợp. Chứng minh rằng,
 \begin{multicols}{2}
     \begin{enumerate}
-        \item $\mathfrak{P}(\emptyset) = \{\emptyset\}$;
+        \item $\emptyset \in \mathfrak{P}(X)$;
         \item $\mathfrak{P}(\{X; Y\}) = \{\emptyset; \{X\}; \{Y\}; \{X; Y\}\}$;
         \item $X \subseteq Y \implies \mathfrak{P}(X) \subseteq \mathfrak{P}(Y)$;
         \item $\mathfrak{P}(X \cup Y) \supseteq \mathfrak{P}(X) \cup \mathfrak{P}(Y)$.
@@ -30,11 +30,12 @@ Từ đó, có được ngay, $\forall y, (y \in \mathfrak{P}(x) \iff y \in \mat
 \solution
 
 \setcounter{subexercise}{1}
-\arabic{subexercise}. Dễ thấy $\emptyset = \emptyset$, nên $\emptyset \subseteq \emptyset$. Theo định nghĩa của tập lũy thừa, chúng ta có $\emptyset \in \mathfrak{P}(\emptyset)$. Do vậy, $\{\emptyset\} \subseteq \mathfrak{P}(\emptyset)$.
+\arabic{subexercise}. Có tập rỗng là tập con của mọi tập hợp. Cho nên $\emptyset \subseteq X$. Nhắc lại định nghĩa của tập lũy thừa, $\mathfrak{P}(X)$ là tập chứa tất cả các tập con của $X$. Do đó, $\emptyset \in \mathfrak{P}(X)$. Điều phải chứng minh.
 
-Mặt khác, với mọi $y \in \mathfrak{P}(\emptyset)$, có $y \subseteq \emptyset$. Giả sử phản chứng, $y \neq \emptyset$. Do $\emptyset$ là tập duy nhất không có phần tử, $y$ cần phải có một phần tử $z \in y$ nào đó. Nhưng do $y \subseteq \emptyset$, nên $z \in \emptyset$. Điều này là vô lý. Vậy, $y = \emptyset$. Do đó, $\mathfrak{P}(\emptyset) \subseteq \{\emptyset\}$.
-
-Kết hợp hai kết quả, chúng ta có $\mathfrak{P}(\emptyset) = \{\emptyset\}$. Điều phải chứng minh.
+Một hệ quả tự nhiên của tính chất này đó là tập lũy thừa thì không rỗng. Biểu diễn dưới dạng kí hiệu:
+$$
+    \forall w, \mathfrak{P}(w) \neq \emptyset.
+$$
 
 \stepcounter{subexercise}
 \arabic{subexercise}. Tập rỗng là tập con của mọi tập hợp, nên $\emptyset \subseteq \{X; Y\}$, dẫn đến $\emptyset \in \mathfrak{P}(\{X; Y\})$.
@@ -45,7 +46,7 @@ Hiển nhiên $\{X; Y\} = \{X; Y\}$. Do vậy, $\{X; Y\} \in \mathfrak{P}(\{X; Y
 
 Từ ba kết luận trên, chúng ta có $\mathfrak{P}(\{X; Y\}) \supseteq \{\emptyset; \{X\}; \{Y\}; \{X; Y\}\}$.
 
-Mặt khác, với mọi $y \in \mathfrak{P}(\{X; Y\})$, theo định nghĩa có $y \subseteq \{X; Y\}$, hiểu theo một cách khác, $y$ chỉ nhận $X$ và $Y$ làm phần tử. Do một phần tử chỉ có thể thuộc hoặc không thuộc một tập hợp bất kì, nên các khả năng có thể xảy ra bao gồm:
+Mặt khác, với mọi $y \in \mathfrak{P}(\{X; Y\})$, theo định nghĩa có $y \subseteq \{X; Y\}$, hiểu theo một cách khác, $y$ chỉ nhận $X$ và $Y$ làm phần tử. Do mỗi phần tử $X$ và $Y$ chỉ có thể thuộc hoặc không thuộc $y$, nên các khả năng có thể xảy ra bao gồm\footnote{Tác giả sử dụng mở rộng của quy tắc chia trường hợp từ giải tích mệnh đề: ``Cho $P$ và $Q$ là hai mệnh đề, khi này, chúng ta có $P \land Q \lor P \land \neg Q \lor \neg P \land Q \lor \neg P \land \neg Q$.''.}:
 
 \begin{itemize}
     \item \textcolor{colorEmphasis}{$X \in y$ và $Y \in y$}. Điều này cho chúng ta $\{X; Y\} \subseteq y$. Suy ra, $y = \{X; Y\}$.
@@ -53,7 +54,7 @@ Mặt khác, với mọi $y \in \mathfrak{P}(\{X; Y\})$, theo định nghĩa có
           $$\forall w, \left(w \in y \iff w = X\right)$$
           và điều này cho $y = \{X\}$.
     \item \textcolor{colorEmphasisGreen}{$X \notin y$ và $Y \in y$}. Tương tự, có thể kết luận $y = \{Y\}$.
-    \item \textcolor{colorEmphasisPurple}{$X \notin y$ và $Y \notin y$}. Giả sử tồn tại $w \in y$. Khí đó, cần phải có $w = X \lor w = Y$. Nhưng do $X \notin y$ và $Y \notin y$, nên điều này là vô lý. Vậy, $\forall w, w \notin y$. Suy ra, $y = \emptyset$ theo định nghĩa tập rỗng.
+    \item \textcolor{colorEmphasisPurple}{$X \notin y$ và $Y \notin y$}. Giả sử tồn tại $w \in y$. Khi đó, cần phải có $w = X \lor w = Y$. Nhưng do $X \notin y$ và $Y \notin y$, nên điều này là vô lý. Vậy, $\forall w, w \notin y$. Suy ra, $y = \emptyset$ theo định nghĩa tập rỗng.
 \end{itemize}
 
 Qua bốn trường hợp, có $y \in \{\emptyset; \{X\}; \{Y\}; \{X; Y\}\}$. Do đó, $\mathfrak{P}(\{X; Y\}) \subseteq \{\emptyset; \{X\}; \{Y\}; \{X; Y\}\}$.
@@ -87,24 +88,24 @@ Kết hợp hai kết quả bao hàm, suy ra $\mathfrak{P}(\{X; Y\}) = \{\emptys
             \node at (5.5, 3.9) {Tập lũy thừa $\mathfrak{P}\left(\{a; b\}\right)$};
 
             % Tập rỗng
-            \draw[thick, dashed, colorEmphasis] (5.5, 2) circle (0.7cm);
+            \draw[thick, colorEmphasis] (5.5, 2) circle (0.7cm);
             \node[colorEmphasis] at (5.5, 2) {$\emptyset$};
             \draw[->, thick, colorEmphasis, dashed, shorten >= 5pt, shorten <= 5pt] (-2.2, 1.7) to[bend left=15] (4.85, 2);
 
             % Tập {a}
-            \draw[thick, dashed, colorEmphasisCyan] (3.6, 0) ellipse (0.8cm and 0.6cm);
+            \draw[thick, colorEmphasisCyan] (3.6, 0) ellipse (0.8cm and 0.6cm);
             \node[circle, fill, inner sep=1.2pt, label=below:$a$] (a_right1) at (3.6, 0) {};
             \node[colorEmphasisCyan] at (3.6, 0.9) {$\{a\}$};
             \draw[->, thick, colorEmphasisCyan, dashed, shorten >= 5pt, shorten <= 5pt] (-3.6, 0) to[bend right=25] (3.2, -0.5);
 
             % Tập {b}
-            \draw[thick, dashed, colorEmphasisGreen] (7.4, 0) ellipse (0.6cm and 0.8cm);
+            \draw[thick, colorEmphasisGreen] (7.4, 0) ellipse (0.6cm and 0.8cm);
             \node[circle, fill, inner sep=1.2pt, label=below:$b$] (b_right1) at (7.4, 0) {};
             \node[colorEmphasisGreen] at (8.3, 0) {$\{b\}$};
             \draw[->, thick, colorEmphasisGreen, dashed, shorten >= 8pt, shorten <= 8pt] (-2.4, -1.5) to[out=-60, in=180] (7, -0.1);
 
             % Tập {a, b}
-            \draw[thick, dashed, colorEmphasisPurple, rotate around={-40:(5.5, -2)}] (5.5, -2) ellipse (1.2cm and 0.8cm);
+            \draw[thick, colorEmphasisPurple, rotate around={-40:(5.5, -2)}] (5.5, -2) ellipse (1.2cm and 0.8cm);
             \node[circle, fill, inner sep=1.2pt, label=left:$a$] (a_right2) at (5.1, -1.7) {};
             \node[circle, fill, inner sep=1.2pt, label=right:$b$] (b_right2) at (5.9, -2.3) {};
             \node[colorEmphasisPurple] at (6.5, -1.2) {$\{a; b\}$};
@@ -123,6 +124,9 @@ Từ đó, có $X \subseteq Y \implies \mathfrak{P}(X) \subseteq \mathfrak{P}(Y)
 
 \stepcounter{subexercise}
 \arabic{subexercise}. Gọi $w$ là một phần tử bất kì thuộc $\mathfrak{P}(X) \cup \mathfrak{P}(Y)$. Theo định nghĩa của phép hợp, có $w \in \mathfrak{P}(X)$ hoặc $w \in \mathfrak{P}(Y)$.
-Nếu $w \in \mathfrak{P}(X)$, theo định nghĩa tập lũy thừa ta có $w \subseteq X$. Mặt khác, hiển nhiên $X \subseteq X \cup Y$. Theo tính chất bắc cầu, $w \subseteq X \cup Y$, dẫn đến $w \in \mathfrak{P}(X \cup Y)$.
-Chứng minh hoàn toàn tương tự cho trường hợp $w \in \mathfrak{P}(Y)$, chúng ta cũng thu được $w \in \mathfrak{P}(X \cup Y)$.
-Vậy, trong cả hai trường hợp, đều có $w \in \mathfrak{P}(X \cup Y)$. Do đó $\mathfrak{P}(X) \cup \mathfrak{P}(Y) \subseteq \mathfrak{P}(X \cup Y)$. Điều phải chứng minh.
+Nếu $w \in \mathfrak{P}(X)$, theo định nghĩa tập lũy thừa, $w \subseteq X$. Mặt khác, $X \subseteq X \cup Y$, nên theo tính chất bắc cầu, $w \subseteq X \cup Y$, dẫn đến $w \in \mathfrak{P}(X \cup Y)$. Chứng minh hoàn toàn tương tự cho trường hợp $w \in \mathfrak{P}(Y)$, chúng ta cũng thu được $w \in \mathfrak{P}(X \cup Y)$.
+
+Vậy, nhìn chung, chúng ta có
+$$\forall w, \left( w \in \mathfrak{P}(X) \cup \mathfrak{P}(Y) \implies w \in \mathfrak{P}(X \cup Y) \right)$$
+và do đó $\mathfrak{P}(X \cup Y) \supseteq \mathfrak{P}(X) \cup \mathfrak{P}(Y)$. Điều phải chứng minh.
+
