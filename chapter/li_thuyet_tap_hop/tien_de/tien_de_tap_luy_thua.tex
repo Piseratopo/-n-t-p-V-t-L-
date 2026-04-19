@@ -63,14 +63,14 @@ Kết hợp hai kết quả bao hàm, suy ra $\mathfrak{P}(\{X; Y\}) = \{\emptys
 \begin{figure}[H]
     \begin{center}
         \begin{tikzpicture}[>=stealth]
-            \draw[thick] (-3,0) ellipse (2.1cm and 2.5cm);
-            \node at (-3, 2.9) {Tập hợp $\{a; b\}$};
+            \draw[thick] (-3,0) ellipse (2.1cm and 3cm);
+            \node at (-3, 3.3) {Tập hợp $\{a; b\}$};
 
             \node[circle, fill, inner sep=1.2pt, label=left:$a$] (a_left) at (-4, 0) {};
             \node[circle, fill, inner sep=1.2pt, label=left:$b$] (b_left) at (-2.5, -1.2) {};
 
-            \draw[thick, dashed, colorEmphasis] (-2.5, 1) circle (0.4cm);
-            \node[colorEmphasis] at (-2.5, 1) {$\emptyset$};
+            \draw[thick, dashed, colorEmphasis] (-2.5, 1.5) circle (0.4cm);
+            \node[colorEmphasis] at (-2.5, 1.5) {$\emptyset$};
 
             \draw[thick, dashed, colorEmphasisCyan] (-4, 0) ellipse (0.5cm and 0.4cm);
             \node[colorEmphasisCyan] at (-4, 0.7) {$\{a\}$};
@@ -89,7 +89,7 @@ Kết hợp hai kết quả bao hàm, suy ra $\mathfrak{P}(\{X; Y\}) = \{\emptys
             % Tập rỗng
             \draw[thick, dashed, colorEmphasis] (5.5, 2) circle (0.7cm);
             \node[colorEmphasis] at (5.5, 2) {$\emptyset$};
-            \draw[->, thick, colorEmphasis, dashed, shorten >= 5pt, shorten <= 5pt] (-2.2, 1.2) to[bend left=15] (4.85, 2);
+            \draw[->, thick, colorEmphasis, dashed, shorten >= 5pt, shorten <= 5pt] (-2.2, 1.7) to[bend left=15] (4.85, 2);
 
             % Tập {a}
             \draw[thick, dashed, colorEmphasisCyan] (3.6, 0) ellipse (0.8cm and 0.6cm);
