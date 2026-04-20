@@ -35,6 +35,11 @@
 \definecolor{colorEmphasisGreen}{RGB}{0, 171, 77}
 \definecolor{colorEmphasisPurple}{RGB}{139, 66, 141}
 
+% Hàm định dạng
+
+\newcommand{\emphcolor}[1]{\textcolor{colorEmphasis}{\emph{#1}}}
+\newcommand{\emphcyanbf}[1]{\textcolor{colorEmphasisCyan}{\textbf{#1}}}
+
 % Chỉnh phông chữ
 \setCJKmainfont[
    Path= fonts/,
@@ -50,6 +55,7 @@
 % Đánh dấu định nghĩa
 \newcommand{\defText}[1]{\textbf{#1}}
 \newcommand{\defMath}[1]{\bm{#1}}
+\newcommand{\cauF}{\textit{勾}}
 \newcommand{\chungF}{\textit{壿}}
 \newcommand{\theF}{\textit{世}}
 \newcommand{\chanF}{\textit{振}}
@@ -59,7 +65,8 @@
 
 \DeclareMathOperator{\Arg}{Arg}
 
-\title{\Huge Ôn tập Vật Lí}
+\title{{\fontsize{72}{84}\selectfont \emphcyanbf{PFÉIV} \\ \huge La \emphcyanbf{P}hysique \emphcyanbf{F}ondamentale pour les \emphcyanbf{É}tudiants \emphcyanbf{I}diots au \emphcyanbf{V}ietnam}}
+
 \author{Bùi Nhật Minh}
 
 % Xử lí số đếm của bài tập
@@ -218,10 +225,6 @@
 \DeclareMathOperator{\Min}{Min}
 \DeclareMathOperator{\Inf}{Inf}
 \DeclareMathOperator{\Sup}{Sup}
-
-% Hàm định dạng
-
-\newcommand{\emphcolor}[1]{\textcolor{colorEmphasis}{\emph{#1}}}
 
 % Phân loại tài liệu tham khảo
 

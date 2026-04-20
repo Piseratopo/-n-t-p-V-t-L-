@@ -1,0 +1,59 @@
+\section{Tiên đề tách}
+
+\
+
+Giả sử $x$ là một tập hợp và $\cauF()$ nhận các phần tử của $x$ làm đối số. Khi đó, tiên đề tách khẳng định rằng tồn tại một tập hợp $y$ bao gồm tất cả các phần tử $z \in x$ thỏa mãn $\cauF(z)$ và chỉ những phần tử đó. Nói cách khác,
+$$
+    \defMath{\forall x, \exists y, \forall z, \left( z \in x \implies \left( z \in y \iff \textbf{\cauF}(z) \right) \right)}.
+$$
+
+Tiên đề ngoại diên khẳng định tập hợp $y$ là duy nhất. Thực vậy, giả sử tồn tại hai tập hợp $y_1$ và $y_2$ thỏa mãn điều kiện của tiên đề tách với cùng tập hợp $x$ và vị từ $\cauF$. Khi đó, với mọi $z \in x$, điều kiện của tiên đề cho chúng ta
+\begin{equation*}
+    \begin{cases}
+        z \in y_1 \iff \cauF(z) \\
+        z \in y_2 \iff \cauF(z)
+    \end{cases}.
+\end{equation*}
+Theo tính bắc cầu của phép đẳng giá, chúng ta thu được $z \in y_1 \iff z \in y_2$. Trong khi đó, nếu $z \notin x$, vì cả $y_1$ lẫn $y_2$ đều chỉ bao gồm các phần tử của $x$, chúng ta có $z \notin y_1$ và $z \notin y_2$. Lúc này $z \in y_1 \iff z \in y_2$ hiển nhiên đúng. Từ hai trường hợp trên,
+\begin{equation*}
+    \forall z, \left( z \in y_1 \iff z \in y_2 \right).
+\end{equation*}
+Theo tiên đề ngoại diên, $y_1 = y_2$.
+
+Trước khi đi vào những vấn đề khác, chúng ta sẽ trình bày về một cách viết tắt các mệnh đề trong giải tích vị từ bậc nhất. Bạn đọc có thể để ý, trong định nghĩa, chúng ta có một mệnh đề dạng
+$$
+    \forall z, \left(z \in x \implies V(x)\right)
+$$
+với $V$ là vị từ. Dưới dạng ngôn ngữ tự nhiên, chúng ta sẽ nói:
+\begin{center}
+    ``Với mọi, nếu $z$ thuộc $x$ thì $V(z)$.'',
+\end{center}
+nhưng một cách phát biểu tự nhiên hơn sẽ là:
+\begin{center}
+    ``Với mọi $z$ thuộc $x$, $V(z)$.''
+\end{center}
+Từ cách nói đó, chúng ta có cách viết rút gọn với định nghĩa như sau:
+\begin{equation*}
+    \defMath{\forall z \in x, V(z)} \iff \forall z, \left(z \in x \implies V(z)\right).
+\end{equation*}
+
+Quay trở lại với tập hợp $y$ trong tiên đề tách, chúng ta không thể kí hiệu bằng việc thêm một kí tự duy nhất như trước được nữa, mà do mỗi tập $y$ đều cần được xác định từ một vị từ $\cauF$, vì thế, chúng ta sẽ kí hiệu tập hợp $y$ như sau:
+\begin{equation*}
+    y = \defMath{\{ z \in x \mid \cauF(z) \}} = \defMath{\{ z \in x : \cauF(z) \}}.
+\end{equation*}
+
+Liệu bạn đọc còn nhớ về nghịch lý Rất-xen, liên quan đến một tập bao gồm tất cả các tập hợp không chứa chính nó. Có một cách đơn giản để đi vòng qua vấn đề này. Đó chính là không cho nó tồn tại. Để làm như vậy, chúng ta sẽ chứng minh không tồn tại tập hợp $\Omega$ sao cho $\forall x, x \in \Omega$. Thực vậy, giả sử tồn tại tập hợp $\Omega$ như vậy. Khi đó, theo tiên đề tách, tồn tại tập hợp $y = \{x \in \Omega \mid x \notin x \}$. Đặt câu hỏi, $y$ có thuộc $y$ không?
+\begin{itemize}
+    \item Nếu $y \in y$, thì theo định nghĩa của $y$, chúng ta có $y \notin y$, do $y$ chỉ chứa các tập không chứa chính nó, một mâu thuẫn.
+    \item Nếu $y \notin y$, thì tương tự, theo định nghĩa của $y$, chúng ta có $y \in y$, một mâu thuẫn.
+\end{itemize}
+Nhìn chung, cả hai trường hợp đều đưa ra một điều vô lí. Sử dụng chứng minh bằng phản chứng, chúng ta có thể kết luận rằng không tồn tại tập hợp $\Omega$ sao cho $x \in \Omega$ với mọi $x$.
+
+Giờ là lúc để làm một số ví dụ. Giả sử $x$ và $y$ là hai tập hợp. Nhận thấy rằng, $z \in y$ là một vị từ theo hạng thức $z$. Áp dụng tiên đề tách, chúng ta có tập
+\begin{equation*}
+    \defMath{\{ z \in x \mid z \in y \}}.
+\end{equation*}
+Đây được gọi là \defText{giao} của $x$ và $y$, kí hiệu $\defMath{x \cap y}$. Có $z \in y$, thì chúng ta cũng có thể có \defText{hiệu} giữa $x$ và $y$ như sau:
+\begin{equation*}
+    \defMath{x \setminus y} = \defMath{\{ z \in x \mid z \notin y \}}.
+\end{equation*}
