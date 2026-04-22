@@ -1,11 +1,28 @@
-% !TeX program = xelatex
-
 \documentclass[a4paper, titlepage, openany]{book}
 \usepackage[T5]{fontenc}
 \usepackage[vietnamese]{babel}
 \usepackage[a4paper]{geometry}
 \usepackage[explicit]{titlesec}
-\usepackage{amsmath, amssymb, blindtext, bm, calc, caption, enumitem, float, hyperref, icomma, lmodern, longtable, makecell, multibib, multicol, multirow, pgfplots, steinmetz, tabularray, tikz, tikz-3dplot, varwidth, wrapfig2, xcolor, xparse, xeCJK}
+\usepackage[backend=biber, style=numeric, maxbibnames=99]{biblatex}
+\usepackage{amsmath, amssymb, blindtext, bm, calc, caption, enumitem, float, hyperref, icomma, lmodern, longtable, makecell, multicol, multirow, pgfplots, steinmetz, tabularray, tikz, tikz-3dplot, varwidth, wrapfig2, xcolor, xparse, xeCJK}
+
+% Tài liệu tham khảo
+\DeclareDelimFormat{multinamedelim}{\addcomma\space}
+\DeclareDelimFormat{finalnamedelim}{\space và\space}
+\renewbibmacro{in:}{\addsemicolon\space}
+
+\DeclareFieldFormat{pages}{#1}
+
+\DeclareFieldFormat{volume}{\textbf{#1}}
+\DeclareFieldFormat{number}{(#1)}
+\renewbibmacro*{volume+number+eid}{%
+  \printfield{volume}%
+  \printfield{number}%
+  \setunit{\addcomma\space}%
+}
+
+
+\addbibresource{references.bib}
 
 % Tinh chỉnh Tikz
 \pgfplotsset{compat=1.18}
@@ -55,6 +72,9 @@
 % Đánh dấu định nghĩa
 \newcommand{\defText}[1]{\textbf{#1}}
 \newcommand{\defMath}[1]{\bm{#1}}
+
+\newcommand{\totalpartial}{\textit{ð}}
+
 \newcommand{\cauF}{\textit{勾}}
 \newcommand{\chungF}{\textit{壿}}
 \newcommand{\theF}{\textit{世}}
@@ -226,11 +246,6 @@
 \DeclareMathOperator{\Inf}{Inf}
 \DeclareMathOperator{\Sup}{Sup}
 
-% Phân loại tài liệu tham khảo
-
-\newcites{Math,Phys}{Tài liệu tham khảo - Toán,Tài liệu tham khảo - Vật lí}
-
-
 \begin{document}
 
 \maketitle
@@ -239,19 +254,14 @@
 
 % \input{chapter/loi_gioi_thieu.tex}
 % \input{chapter/kiem_tra.tex}
+\input{chapter/khoa_hoc.tex}
 % \input{chapter/nen_tang_lo_gich.tex}
-\input{chapter/li_thuyet_tap_hop.tex}
+% \input{chapter/li_thuyet_tap_hop.tex}
 % \input{chapter/co_ban_xu_li_so_lieu.tex}
 % \input{chapter/chuyen_dong.tex}
 
-
-\nociteMath{*}
-\nocitePhys{*}
-\addcontentsline{toc}{chapter}{Tài liệu tham khảo}
-\bibliographystyleMath{plain}
-\bibliographyMath{ref_math}
-\bibliographystylePhys{plain}
-\bibliographyPhys{ref_physics}
+\nocite{*}
+\printbibliography[heading=bibintoc]
 
 
 \end{document}

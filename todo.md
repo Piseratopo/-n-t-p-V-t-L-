@@ -1,10 +1,13 @@
 # Những việc cần làm
 
+## Khoa học
+
+- Thêm phần giới thiệu về khoa học.
+
 ## Toán học
 
-- Hoàn thành phần giới thiệu về các tập số: số tự nhiên, số hữu tỉ
-- Thêm tính chất của hàm số môt biến: đồng biến và nghịch biến, hàm bị chặn, giá trị lớn nhất và nhỏ nhất
+- Hoàn thành giới thiệu các ví dụ của tiên đề tách.
 
 ## Vật lí
 
-- Thêm lí thuyết về phần chuyển động
+- 
