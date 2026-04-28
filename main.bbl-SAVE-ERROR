@@ -1,0 +1,209 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{agarwal2011introduction}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=165aee8eb7d82d1bdc2afa6236546420}{%
+           family={Agarwal},
+           familyi={A\bibinitperiod},
+           given={Ravi\bibnamedelima P},
+           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=1e570aa47fd082e61ea48c2a11f0ac77}{%
+           family={Perera},
+           familyi={P\bibinitperiod},
+           given={Kanishka},
+           giveni={K\bibinitperiod}}}%
+        {{hash=74c11f2449c5f7b7bf44c1cfb7e4d572}{%
+           family={Pinelas},
+           familyi={P\bibinitperiod},
+           given={Sandra},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Science \& Business Media}%
+      }
+      \strng{namehash}{797eebbbe8e3facba816929076450ab4}
+      \strng{fullhash}{797eebbbe8e3facba816929076450ab4}
+      \strng{fullhashraw}{797eebbbe8e3facba816929076450ab4}
+      \strng{bibnamehash}{797eebbbe8e3facba816929076450ab4}
+      \strng{authorbibnamehash}{797eebbbe8e3facba816929076450ab4}
+      \strng{authornamehash}{797eebbbe8e3facba816929076450ab4}
+      \strng{authorfullhash}{797eebbbe8e3facba816929076450ab4}
+      \strng{authorfullhashraw}{797eebbbe8e3facba816929076450ab4}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{An introduction to complex analysis}
+      \field{year}{2011}
+      \true{nocite}
+    \endentry
+    \entry{anellis2012peirce}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=24b5d338521430de2195b3fc34dd7ed2}{%
+           family={Anellis},
+           familyi={A\bibinitperiod},
+           given={Irving\bibnamedelima H},
+           giveni={I\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{24b5d338521430de2195b3fc34dd7ed2}
+      \strng{fullhash}{24b5d338521430de2195b3fc34dd7ed2}
+      \strng{fullhashraw}{24b5d338521430de2195b3fc34dd7ed2}
+      \strng{bibnamehash}{24b5d338521430de2195b3fc34dd7ed2}
+      \strng{authorbibnamehash}{24b5d338521430de2195b3fc34dd7ed2}
+      \strng{authornamehash}{24b5d338521430de2195b3fc34dd7ed2}
+      \strng{authorfullhash}{24b5d338521430de2195b3fc34dd7ed2}
+      \strng{authorfullhashraw}{24b5d338521430de2195b3fc34dd7ed2}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{History and Philosophy of Logic}
+      \field{number}{1}
+      \field{title}{Peirce's Truth-functional Analysis and the Origin of the Truth Table}
+      \field{volume}{33}
+      \field{year}{2012}
+      \true{nocite}
+      \field{pages}{87\bibrangedash 97}
+      \range{pages}{11}
+    \endentry
+    \entry{cunningham2012logical}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=9de2031a9276a6de7d4eb935a897e7a9}{%
+           family={Cunningham},
+           familyi={C\bibinitperiod},
+           given={Daniel\bibnamedelima W},
+           giveni={D\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Science \& Business Media}%
+      }
+      \strng{namehash}{9de2031a9276a6de7d4eb935a897e7a9}
+      \strng{fullhash}{9de2031a9276a6de7d4eb935a897e7a9}
+      \strng{fullhashraw}{9de2031a9276a6de7d4eb935a897e7a9}
+      \strng{bibnamehash}{9de2031a9276a6de7d4eb935a897e7a9}
+      \strng{authorbibnamehash}{9de2031a9276a6de7d4eb935a897e7a9}
+      \strng{authornamehash}{9de2031a9276a6de7d4eb935a897e7a9}
+      \strng{authorfullhash}{9de2031a9276a6de7d4eb935a897e7a9}
+      \strng{authorfullhashraw}{9de2031a9276a6de7d4eb935a897e7a9}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A logical introduction to proof}
+      \field{year}{2012}
+      \true{nocite}
+    \endentry
+    \entry{korn2000mathematical}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=35c0d010bfcd228f3971177791219acc}{%
+           family={Korn},
+           familyi={K\bibinitperiod},
+           given={Granino\bibnamedelima Arthur},
+           giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=22e45f28db41610f289ce55fe1d4b92e}{%
+           family={Korn},
+           familyi={K\bibinitperiod},
+           given={Theresa\bibnamedelima M},
+           giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Courier Corporation}%
+      }
+      \strng{namehash}{c50c05f1c564b073fa394a63a8a55bd6}
+      \strng{fullhash}{c50c05f1c564b073fa394a63a8a55bd6}
+      \strng{fullhashraw}{c50c05f1c564b073fa394a63a8a55bd6}
+      \strng{bibnamehash}{c50c05f1c564b073fa394a63a8a55bd6}
+      \strng{authorbibnamehash}{c50c05f1c564b073fa394a63a8a55bd6}
+      \strng{authornamehash}{c50c05f1c564b073fa394a63a8a55bd6}
+      \strng{authorfullhash}{c50c05f1c564b073fa394a63a8a55bd6}
+      \strng{authorfullhashraw}{c50c05f1c564b073fa394a63a8a55bd6}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Mathematical handbook for scientists and engineers: definitions, theorems, and formulas for reference and review}
+      \field{year}{2000}
+      \true{nocite}
+    \endentry
+    \entry{hoangphe2022tudientienviet}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=3378c79828f82975346e490f4d553df3}{%
+           family={Phê},
+           familyi={P\bibinitperiod},
+           given={Hoàng},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hà Nội}%
+      }
+      \list{publisher}{1}{%
+        {Nhà xuất bản Hồng Đức}%
+      }
+      \strng{namehash}{3378c79828f82975346e490f4d553df3}
+      \strng{fullhash}{3378c79828f82975346e490f4d553df3}
+      \strng{fullhashraw}{3378c79828f82975346e490f4d553df3}
+      \strng{bibnamehash}{3378c79828f82975346e490f4d553df3}
+      \strng{authorbibnamehash}{3378c79828f82975346e490f4d553df3}
+      \strng{authornamehash}{3378c79828f82975346e490f4d553df3}
+      \strng{authorfullhash}{3378c79828f82975346e490f4d553df3}
+      \strng{authorfullhashraw}{3378c79828f82975346e490f4d553df3}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Từ điển tiếng Việt}
+      \field{year}{2022}
+    \endentry
+    \entry{suppes2012introduction}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=3b66681098bdb00813903e279a08ec0d}{%
+           family={Suppes},
+           familyi={S\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Courier Corporation}%
+      }
+      \strng{namehash}{3b66681098bdb00813903e279a08ec0d}
+      \strng{fullhash}{3b66681098bdb00813903e279a08ec0d}
+      \strng{fullhashraw}{3b66681098bdb00813903e279a08ec0d}
+      \strng{bibnamehash}{3b66681098bdb00813903e279a08ec0d}
+      \strng{authorbibnamehash}{3b66681098bdb00813903e279a08ec0d}
+      \strng{authornamehash}{3b66681098bdb00813903e279a08ec0d}
+      \strng{authorfullhash}{3b66681098bdb00813903e279a08ec0d}
+      \strng{authorfullhashraw}{3b66681098bdb00813903e279a08ec0d}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Introduction to logic}
+      \field{year}{2012}
+      \true{nocite}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
