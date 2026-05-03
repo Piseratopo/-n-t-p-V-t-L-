@@ -4,7 +4,7 @@
 \usepackage[a4paper]{geometry}
 \usepackage[explicit]{titlesec}
 \usepackage[backend=biber, style=numeric, maxbibnames=99]{biblatex}
-\usepackage{amsmath, amssymb, blindtext, bm, calc, caption, enumitem, float, hyperref, icomma, lmodern, longtable, makecell, multicol, multirow, pgfplots, steinmetz, tabularray, tikz, tikz-3dplot, varwidth, wrapfig2, xcolor, xparse, xeCJK}
+\usepackage{amsmath, amssymb, blindtext, bm, calc, caption, enumitem, float, hyperref, icomma, lmodern, longtable, makecell, multicol, multirow, pgfplots, siunitx, steinmetz, tabularray, tikz, tikz-3dplot, varwidth, wrapfig2, xcolor, xparse, xeCJK}
 
 % Tài liệu tham khảo
 \DeclareDelimFormat{multinamedelim}{\addcomma\space}
@@ -85,10 +85,21 @@
 
 \DeclareMathOperator{\Arg}{Arg}
 
+% Thông tin tài liệu
 \title{{\fontsize{72}{84}\selectfont \emphcyanbf{PFÉIV} \\ \huge La \emphcyanbf{P}hysique \emphcyanbf{F}ondamentale pour les \emphcyanbf{É}tudiants \emphcyanbf{I}diots au \emphcyanbf{V}ietnam}}
 
 \author{Bùi Nhật Minh}
 
+% Định dạng số
+\sisetup{
+    output-decimal-marker = {,}, % Dấu phẩy thập phân (kiểu VN/Pháp)
+    group-minimum-digits = 4,     % Chỉ phân cách khi có từ 4 chữ số trở lên
+    list-final-separator = { và },
+    range-phrase = { đến }
+}
+
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\uppercase\expandafter{\romannumeral #1}}
 % Xử lí số đếm của bài tập
 \newcounter{exercise}
 
