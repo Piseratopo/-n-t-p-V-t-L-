@@ -24,7 +24,7 @@
         {{hash=165aee8eb7d82d1bdc2afa6236546420}{%
            family={Agarwal},
            familyi={A\bibinitperiod},
-           given={Ravi\bibnamedelima P},
+           given={Ravi\bibnamedelima P.},
            giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
         {{hash=1e570aa47fd082e61ea48c2a11f0ac77}{%
            family={Perera},
@@ -38,7 +38,7 @@
            giveni={S\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
-        {Springer Science \& Business Media}%
+        {Springer New York, NY}%
       }
       \strng{namehash}{797eebbbe8e3facba816929076450ab4}
       \strng{fullhash}{797eebbbe8e3facba816929076450ab4}
@@ -52,9 +52,13 @@
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{An introduction to complex analysis}
+      \field{isbn}{978-1-4614-0194-0}
+      \field{title}{An Introduction to Complex Analysis}
       \field{year}{2011}
       \true{nocite}
+      \verb{doi}
+      \verb 10.1007/978-1-4614-0195-7
+      \endverb
     \endentry
     \entry{anellis2012peirce}{article}{}{}
       \name{author}{1}{}{%
@@ -87,17 +91,58 @@
       \true{nocite}
       \field{pages}{87\bibrangedash 97}
       \range{pages}{11}
+      \verb{doi}
+      \verb 10.1080/01445340.2011.621702
+      \endverb
+    \endentry
+    \entry{baum1997search}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=fb883157abbeb6a00c721ae0305888ba}{%
+           family={Baum},
+           familyi={B\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+        {{hash=b3e5b60efbcd588eafbfe4553a95b5cb}{%
+           family={Sheehan},
+           familyi={S\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer New York, NY}%
+      }
+      \strng{namehash}{1166434db196e705b83660d2b54202c1}
+      \strng{fullhash}{1166434db196e705b83660d2b54202c1}
+      \strng{fullhashraw}{1166434db196e705b83660d2b54202c1}
+      \strng{bibnamehash}{1166434db196e705b83660d2b54202c1}
+      \strng{authorbibnamehash}{1166434db196e705b83660d2b54202c1}
+      \strng{authornamehash}{1166434db196e705b83660d2b54202c1}
+      \strng{authorfullhash}{1166434db196e705b83660d2b54202c1}
+      \strng{authorfullhashraw}{1166434db196e705b83660d2b54202c1}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-306-45567-4}
+      \field{title}{In Search of Planet Vulcan: The Ghost in Newton's Clockwork Universe}
+      \field{year}{1997}
+      \verb{doi}
+      \verb 10.1007/978-1-4899-6100-6
+      \endverb
     \endentry
     \entry{cunningham2012logical}{book}{}{}
       \name{author}{1}{}{%
         {{hash=9de2031a9276a6de7d4eb935a897e7a9}{%
            family={Cunningham},
            familyi={C\bibinitperiod},
-           given={Daniel\bibnamedelima W},
+           given={Daniel\bibnamedelima W.},
            giveni={D\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
       }
+      \list{location}{1}{%
+        {New York, NY}%
+      }
       \list{publisher}{1}{%
-        {Springer Science \& Business Media}%
+        {Springer New York}%
       }
       \strng{namehash}{9de2031a9276a6de7d4eb935a897e7a9}
       \strng{fullhash}{9de2031a9276a6de7d4eb935a897e7a9}
@@ -111,9 +156,13 @@
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{A logical introduction to proof}
+      \field{isbn}{978-1-4614-3630-0}
+      \field{title}{A Logical Introduction to Proof}
       \field{year}{2012}
       \true{nocite}
+      \verb{doi}
+      \verb 10.1007/978-1-4614-3631-7
+      \endverb
     \endentry
     \entry{korn2000mathematical}{book}{}{}
       \name{author}{2}{}{%
@@ -143,6 +192,7 @@
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{isbn}{978-0-486-41147-7}
       \field{title}{Mathematical handbook for scientists and engineers: definitions, theorems, and formulas for reference and review}
       \field{year}{2000}
       \true{nocite}
@@ -173,8 +223,9 @@
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{isbn}{978-604-338-113-9}
       \field{title}{Từ điển tiếng Việt}
-      \field{year}{2022}
+      \field{year}{2021}
     \endentry
     \entry{suppes2012introduction}{book}{}{}
       \name{author}{1}{}{%
@@ -199,6 +250,7 @@
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{isbn}{978-0-486-40687-9}
       \field{title}{Introduction to logic}
       \field{year}{2012}
       \true{nocite}
